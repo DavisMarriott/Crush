@@ -3,7 +3,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
     public Rigidbody2D rb;
     public float speed;
     private Vector2 _moveDirection;
