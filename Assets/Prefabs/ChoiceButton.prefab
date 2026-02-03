@@ -256,9 +256,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundEffect1: {fileID: 8300000, guid: ef98a47d13f604020950efd721cb4dcc, type: 3}
-  soundEffect2: {fileID: 8300000, guid: 579dab3ca24724b9b9e7e5939907db44, type: 3}
-  soundEffect3: {fileID: 8300000, guid: 5a62154885b23488cb3bda16905f67a2, type: 3}
+  soundEffect2: {fileID: 8300000, guid: 132f4bafc5a5e4f93b317f92db0c5a75, type: 3}
+  soundEffect3: {fileID: 8300000, guid: cdae8214f812f4415b7744cd78c4fb6f, type: 3}
   soundEffect4: {fileID: 0}
+  soundEffect5: {fileID: 0}
+  soundEffect6: {fileID: 0}
 --- !u!114 &5395333031753349711
 MonoBehaviour:
   m_ObjectHideFlags: 0

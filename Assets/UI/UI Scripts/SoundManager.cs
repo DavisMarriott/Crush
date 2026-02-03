@@ -7,6 +7,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip soundEffect2;
     public AudioClip soundEffect3;
     public AudioClip soundEffect4;
+    public AudioClip soundEffect5;
+    public AudioClip soundEffect6;
 
     void Start()
     {
@@ -39,6 +41,16 @@ public class SoundManager : MonoBehaviour
     public void PlaySoundEffect4()
     {
         audioSource.PlayOneShot(soundEffect4);
+    }
+    
+    public void PlaySoundEffect5()
+    {
+        audioSource.PlayOneShot(soundEffect5);
+    }
+    
+    public void PlaySoundEffect6()
+    {
+        audioSource.PlayOneShot(soundEffect6);
     }
     
 }
