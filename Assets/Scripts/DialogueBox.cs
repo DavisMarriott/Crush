@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using TMPro;
 using System.Collections;
@@ -6,45 +5,53 @@ using UnityEngine.InputSystem;
 
 public class DialogueBox : MonoBehaviour
 {
-   [SerializeField] private GameObject dialogueBox;
-   [SerializeField] private InputActionReference nextLineAction;
-   [SerializeField] private TMP_Text textLabel;
-   [SerializeField] private DialogueObject testDialogue;
-   private DialogueTiming dialogueTiming;
+    [SerializeField] private GameObject dialogueBox;
+    [SerializeField] private InputActionReference nextLineAction;
+    [SerializeField] private TMP_Text dialogueText;
+    [SerializeField] private ConfidenceState confidenceState; 
+    private DialogueTiming _dialogueTiming;
 
-   public void Start()
-   {
-      dialogueTiming = GetComponent<DialogueTiming>();
-      CloseDialogueBox();
-      ShowDialogue(testDialogue);
-   }
+    public void Start()
+    {
+        _dialogueTiming = GetComponent<DialogueTiming>();
+        CloseDialogueBox();
+    }
    
-   private void OnEnable()  => nextLineAction.action.Enable();
-   private void OnDisable() => nextLineAction.action.Disable();
+    private void OnEnable()  => nextLineAction.action.Enable();
+    private void OnDisable() => nextLineAction.action.Disable();
    
 
-   public void ShowDialogue(DialogueObject dialogueObject)
-   {
-      dialogueBox.SetActive(true);
-      StartCoroutine(StepTrhoughDialogue(dialogueObject));
-   }
+    public void ShowDialogue(DialogueCard dialogueCard)
+    {
+        //this is where we get the dialogue branch that fits current confidence
+        var branch = dialogueCard.GetBranchForConfidence(confidenceState.confidence);
+      
+        if (branch == null || branch.dialogue == null || branch.dialogue.Length == 0)
+        {
+            Debug.LogWarning($"No valid branch found for confidence {confidenceState.confidence} on card {dialogueCard.previewText}");
+            return;
+        }
+      
+        dialogueBox.SetActive(true);
+        StartCoroutine(StepThroughDialogue(branch));
+    }
    
-   private IEnumerator StepTrhoughDialogue(DialogueObject dialogueObject)
-   {
-      foreach (string dialogue in dialogueObject.Dialogue)
-      {
-         yield return dialogueTiming.Run(dialogue, textLabel);
+    // this is where we get and play the dialogue lines
+    private IEnumerator StepThroughDialogue(DialogueCard.DialogueBranch branch)
+    {
+        foreach (DialogueCard.DialogueLine line in branch.dialogue)
+        {
+            yield return _dialogueTiming.Run(line.line, dialogueText);  // ← use line.line directly
 
-         // wait for Space / "Next Line" action
-         yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
-      }
+            yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
+        }
 
-      CloseDialogueBox();
-   }
+        CloseDialogueBox();
+    }
 
-   private void CloseDialogueBox()
-   {
-      dialogueBox.SetActive(false);
-      textLabel.text = string.Empty;
-   }
+    private void CloseDialogueBox()
+    {
+        dialogueBox.SetActive(false);
+        dialogueText.text = string.Empty;
+    }
 }

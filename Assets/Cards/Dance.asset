@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
-  m_Name: Card_Weekend
+  m_Name: Dance
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
-  previewText: Weekend
-  dialogue: {fileID: 11400000, guid: 1856c074b44ed44acb6ab218bfd772c2, type: 2}
+  previewText: Dance?
+  _dialogue:
+  - character: 0
+    dialogue: []
