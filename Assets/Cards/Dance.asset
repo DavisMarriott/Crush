@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: Dance
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   previewText: Dance?
-  _dialogue:
-  - character: 0
-    dialogue: []
+  branches:
+  - branchName: Dance - Low Confidence
+    minConfidence: 0
+    maxConfidence: 20
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      line: do you- uhhhh....ummmmm
+    - character: 0
+      confidenceImpact: 0
+      line: wanna go to the dance?

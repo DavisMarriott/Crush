@@ -41,7 +41,7 @@ public class DialogueBox : MonoBehaviour
     {
         foreach (DialogueCard.DialogueLine line in branch.dialogue)
         {
-            yield return _dialogueTiming.Run(line.line, dialogueText);  // ← use line.line directly
+            yield return _dialogueTiming.Run(line.line, dialogueText);
 
             yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
         }
@@ -54,4 +54,6 @@ public class DialogueBox : MonoBehaviour
         dialogueBox.SetActive(false);
         dialogueText.text = string.Empty;
     }
+    
+    
 }

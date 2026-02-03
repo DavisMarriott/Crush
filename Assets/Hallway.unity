@@ -336,7 +336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   rb: {fileID: 189462894}
   speed: 3
-  move: {fileID: 1322279885}
+  move: {fileID: 537243962}
 --- !u!50 &189462894
 Rigidbody2D:
   serializedVersion: 5
@@ -678,6 +678,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 20, y: 14.47}
   m_EdgeRadius: 0
+--- !u!114 &537243962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Player/Move
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: 2d02366ed1b4841af995c250bb20b501, type: 3}
+  m_ActionId: e3ce4024-a2f0-4d0c-9ca7-9cf21c12d107
 --- !u!1 &605868007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,8 +1150,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueBox
   dialogueBox: {fileID: 995168357}
-  nextLineAction: {fileID: 1801743047}
-  dialogueText: {fileID: 0}
+  nextLineAction: {fileID: 2044746622}
+  dialogueText: {fileID: 2066478201}
+  confidenceState: {fileID: 801422817}
 --- !u!114 &995168360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1319,20 +1334,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1322279885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: Player/Move
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: 2d02366ed1b4841af995c250bb20b501, type: 3}
-  m_ActionId: e3ce4024-a2f0-4d0c-9ca7-9cf21c12d107
 --- !u!1 &1654356437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,20 +1467,6 @@ MonoBehaviour:
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
   FollowOffset: {x: 0, y: 0, z: -10}
---- !u!114 &1801743047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
-  m_Name: Player/Next Line
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
-  m_Asset: {fileID: -944628639613478452, guid: 2d02366ed1b4841af995c250bb20b501, type: 3}
-  m_ActionId: 8de5723b-2357-49ba-8111-02e07fa6a5db
 --- !u!1 &1905110409
 GameObject:
   m_ObjectHideFlags: 0
@@ -1682,6 +1669,20 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &2044746622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Player/Next Line
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: 2d02366ed1b4841af995c250bb20b501, type: 3}
+  m_ActionId: 8de5723b-2357-49ba-8111-02e07fa6a5db
 --- !u!1 &2066478199
 GameObject:
   m_ObjectHideFlags: 0

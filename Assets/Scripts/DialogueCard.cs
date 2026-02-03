@@ -54,6 +54,9 @@ public class DialogueCard : ScriptableObject
         [Header("Character")] 
         public DialogueCharacter character;
 
+        [Header("Confidence Impact (in thirds)")]
+        public int confidenceImpact;
+
         [Header("Dialogue Line")] public string line;
     }
     
