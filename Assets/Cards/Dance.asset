@@ -14,13 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   previewText: Dance?
   branches:
-  - branchName: Dance - Low Confidence
+  - branchName: Dance
     minConfidence: 0
     maxConfidence: 20
     dialogue:
     - character: 0
-      confidenceImpact: 0
-      line: do you- uhhhh....ummmmm
+      confidenceImpact: -1
+      line: 'I was- umm.... wondering... if..... '
     - character: 0
-      confidenceImpact: 0
-      line: wanna go to the dance?
+      confidenceImpact: -1
+      line: uhhh... if you would... uhh- maybe
+    - character: 0
+      confidenceImpact: -1
+      line: be interested.....
+    - character: 0
+      confidenceImpact: -1
+      line: in go- uhhh.....
+    - character: 0
+      confidenceImpact: -1
+      line: sorry... ummm- do you wanna.....
+    - character: 0
+      confidenceImpact: -1
+      line: go to the dance....
+    - character: 0
+      confidenceImpact: -1
+      line: with me?
+    - character: 1
+      confidenceImpact: 20
+      line: Yes. I'd love to go to the dance with you.

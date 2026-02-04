@@ -625,7 +625,20 @@ MonoBehaviour:
         m_CallState: 2
   onTriggerExit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1972248630}
+        m_TargetAssemblyTypeName: CameraManager, Assembly-CSharp
+        m_MethodName: SwitchCamera
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1654356439}
+          m_ObjectArgumentAssemblyTypeName: Unity.Cinemachine.CinemachineCamera,
+            Unity.Cinemachine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &545362225
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -837,8 +850,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b8289ac1a5244a2aab38eead345346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConfidenceState
+  boyTransform: {fileID: 189462892}
+  spawnPoint: {fileID: 1728572745}
+  dialogueBox: {fileID: 995168359}
   label: {fileID: 801422818}
-  confidence: 9
+  thoughtSpawner: {fileID: 2107800652}
+  startingConfidence: 3
+  confidence: 3
 --- !u!114 &801422818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1568,13 +1586,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728572744}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.31, y: -4.52, z: 0}
+  m_LocalRotation: {x: 0.011134332, y: -0, z: -0, w: 0.9999381}
+  m_LocalPosition: {x: -3.29, y: -2.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.276, y: 0, z: 0}
 --- !u!1 &1905110409
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,7 +1760,7 @@ Transform:
   m_GameObject: {fileID: 1972248623}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5281575, y: -0.6001167, z: -10}
+  m_LocalPosition: {x: -3.5333178, y: -0.6001167, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1818,6 +1836,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: 2d02366ed1b4841af995c250bb20b501, type: 3}
   m_ActionId: 8de5723b-2357-49ba-8111-02e07fa6a5db
+--- !u!114 &2107800652 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8814679360630638671, guid: f86d777d059fd4efbbed581f54393c1c, type: 3}
+  m_PrefabInstance: {fileID: 6555275891781457809}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d303665b443e4885b37bc8a43e1c1f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThoughtListPopulator
 --- !u!1001 &6555275891781457809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1888,7 +1917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 671104596760632567, guid: f86d777d059fd4efbbed581f54393c1c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -297
+      value: -97
       objectReference: {fileID: 0}
     - target: {fileID: 671104596760632567, guid: f86d777d059fd4efbbed581f54393c1c, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1914,6 +1943,14 @@ PrefabInstance:
       propertyPath: dialogueBox
       value: 
       objectReference: {fileID: 995168359}
+    - target: {fileID: 8814679360630638671, guid: f86d777d059fd4efbbed581f54393c1c, type: 3}
+      propertyPath: 'cards.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f17a5925afc144f519d9736cf5594d5b, type: 2}
+    - target: {fileID: 8814679360630638671, guid: f86d777d059fd4efbbed581f54393c1c, type: 3}
+      propertyPath: 'cards.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e0daa4f92aa6e4a58a4a277aa4182840, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

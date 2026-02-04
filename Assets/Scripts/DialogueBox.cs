@@ -34,6 +34,7 @@ public class DialogueBox : MonoBehaviour
       
         dialogueBox.SetActive(true);
         StartCoroutine(StepThroughDialogue(branch));
+        
     }
    
     // this is where we get and play the dialogue lines
@@ -42,6 +43,7 @@ public class DialogueBox : MonoBehaviour
         foreach (DialogueCard.DialogueLine line in branch.dialogue)
         {
             yield return _dialogueTiming.Run(line.line, dialogueText);
+            confidenceState.confidence += line.confidenceImpact;
 
             yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
         }
@@ -49,7 +51,7 @@ public class DialogueBox : MonoBehaviour
         CloseDialogueBox();
     }
 
-    private void CloseDialogueBox()
+    public void CloseDialogueBox()
     {
         dialogueBox.SetActive(false);
         dialogueText.text = string.Empty;
