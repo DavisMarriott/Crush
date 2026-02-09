@@ -316,7 +316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197029622935798949, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1326.8
+      value: 782
       objectReference: {fileID: 0}
     - target: {fileID: 6197029622935798949, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -398,7 +398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914059464699277768, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Protagonist_Happy02
+      value: Player_Happy02
       objectReference: {fileID: 0}
     - target: {fileID: 2914059464699277768, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -616,7 +616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197029622935798949, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1326.8
+      value: 782
       objectReference: {fileID: 0}
     - target: {fileID: 6197029622935798949, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -845,7 +845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197029622935798949, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1326.8
+      value: 782
       objectReference: {fileID: 0}
     - target: {fileID: 6197029622935798949, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1139,7 +1139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197029622935798949, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1326.8
+      value: 782
       objectReference: {fileID: 0}
     - target: {fileID: 6197029622935798949, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1225,7 +1225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914059464699277768, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Protagonist_Embarrassed02
+      value: Player_Embarrassed02
       objectReference: {fileID: 0}
     - target: {fileID: 2914059464699277768, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1448,7 +1448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197029622935798949, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1326.8
+      value: 782
       objectReference: {fileID: 0}
     - target: {fileID: 6197029622935798949, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1530,7 +1530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914059464699277768, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Protagonist_Happy01
+      value: Player_Happy01
       objectReference: {fileID: 0}
     - target: {fileID: 2914059464699277768, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1684,7 +1684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914059464699277768, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Protagonist_Embarrassed01
+      value: Player_Embarrassed01
       objectReference: {fileID: 0}
     - target: {fileID: 2914059464699277768, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2044,7 +2044,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197029622935798949, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1326.8
+      value: 782
       objectReference: {fileID: 0}
     - target: {fileID: 6197029622935798949, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2244,7 +2244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914059464699277768, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Protagonist_Sad01
+      value: Player_Sad01
       objectReference: {fileID: 0}
     - target: {fileID: 2914059464699277768, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2596,7 +2596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197029622935798949, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1326.8
+      value: 782
       objectReference: {fileID: 0}
     - target: {fileID: 6197029622935798949, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2738,7 +2738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197029622935798949, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1326.8
+      value: 782
       objectReference: {fileID: 0}
     - target: {fileID: 6197029622935798949, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2820,7 +2820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914059464699277768, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Protagonist_Die
+      value: Player_Die
       objectReference: {fileID: 0}
     - target: {fileID: 2914059464699277768, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2962,7 +2962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914059464699277768, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Protagonist_Surprised01
+      value: Player_Surprised01
       objectReference: {fileID: 0}
     - target: {fileID: 2914059464699277768, guid: fa85fbffd03d54230bc63b946bb86bdc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -3141,7 +3141,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 288216823463544167, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
       propertyPath: m_Name
-      value: Character_Protagonist
+      value: Character_Player
       objectReference: {fileID: 0}
     - target: {fileID: 620228534680445879, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -3232,6 +3232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcdc221bd59a04bd1912e4dd21dc51bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  confidenceIncrementer: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
