@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -9,6 +10,11 @@ public class ConfidenceState : MonoBehaviour
     [SerializeField] private DialogueBox dialogueBox;
     [SerializeField] private TMP_Text label;
     [SerializeField] private ThoughtSpawner thoughtSpawner;
+    [SerializeField] private GameObject deathScreen;
+    [SerializeField] private float deathScreenTimer;
+    [SerializeField] private DraftUI draftUI;
+    private bool _isDead = false;
+    public bool Dead => _isDead;
     
     //confidence is in thirds, 45 = 15 full hearts
     const int MinConfidenceFullGame = 0;
@@ -23,6 +29,7 @@ public class ConfidenceState : MonoBehaviour
     void Start()
     {
     confidence = startingConfidence;
+    deathScreen.SetActive(false);
     }
     
     
@@ -37,15 +44,36 @@ public class ConfidenceState : MonoBehaviour
         ClampConfidence();
         label.text = $"{confidence}";
 
-        if (confidence <= 0)
+        if (confidence <= 0 && !_isDead)
         {
-            boyTransform.position = spawnPoint.position;
-            confidence = startingConfidence;
-            dialogueBox.CloseDialogueBox();
-            thoughtSpawner.SpawnButtons();
+            _isDead = true;
+            StartCoroutine(SpawnDeathScreen());
         }
     }
-
+    
+    
+    private IEnumerator SpawnDeathScreen()
+    {
+        yield return new WaitForSeconds(1f);
+        deathScreen.SetActive(true); 
+        dialogueBox.CloseDialogueBox();
+        yield return new WaitForSeconds(deathScreenTimer);
+        deathScreen.SetActive(false);
+    
+        // Show draft UI
+        draftUI.ShowDraftOptions();
+    
+        // Player drafts a dialogue card
+        yield return new WaitUntil(() => !draftUI.gameObject.activeSelf || !draftUI.enabled);
+        
+        
+        
+        //respawn with new drafted card
+        thoughtSpawner.SpawnButtons();
+        boyTransform.position = spawnPoint.position;
+        confidence = startingConfidence;
+        _isDead = false;
+    }
     void ClampConfidence()
     {
         confidence = Mathf.Clamp(confidence, MinConfidenceFullGame, MaxConfidenceFullGame);

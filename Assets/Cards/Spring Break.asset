@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
-  m_Name: Soccer
+  m_Name: Spring Break
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
-  previewText: Soccer
+  previewText: Spring Break
   branches: []

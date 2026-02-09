@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Music
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
-  previewText: 
+  previewText: Music
   branches: []

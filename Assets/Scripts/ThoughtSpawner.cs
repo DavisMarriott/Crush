@@ -1,25 +1,34 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class ThoughtSpawner : MonoBehaviour
 {
     [SerializeField] private Transform thoughtListContainer;
     [SerializeField] private Button thoughtButtonPrefab;
     [SerializeField] private DialogueBox dialogueBox;
-    [SerializeField] private DialogueCard[] cards;
+    [SerializeField] private DeckManager deckManager;
+    private List<DialogueCard> _hand;
+    
 
     private void Start()
     {
-       SpawnButtons();
+        _hand = new List<DialogueCard>(deckManager.Deck);
+        SpawnButtons();
     }
 
+    public void AddCardToHand(DialogueCard card)
+    {
+        _hand.Add(card);
+    }
+    
     public void SpawnButtons()
     {
         for (int i = thoughtListContainer.childCount - 1; i >= 0; i--)
             Destroy(thoughtListContainer.GetChild(i).gameObject);
 
-        foreach (var card in cards)
+        foreach (var card in _hand)
         {
             Debug.Log($"Spawning button for: {card.previewText}");
             var btn = Instantiate(thoughtButtonPrefab, thoughtListContainer);
