@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Movies
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   previewText: Movies
+  buttonColor: {r: 1, g: 1, b: 1, a: 1}
   branches:
   - branchName: Movies_Low
     minConfidence: 0

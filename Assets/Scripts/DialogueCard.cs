@@ -6,6 +6,9 @@ public class DialogueCard : ScriptableObject
     [Header("Display text on bubble")]
     public string previewText;
     
+    [Header("Button BG Color")]
+    public Color buttonColor = Color.black;
+    
     [Header("Card Branches")]
     [SerializeField] private DialogueBranch[] branches;
     public DialogueBranch[] Branches => branches;

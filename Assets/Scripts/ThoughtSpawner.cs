@@ -32,6 +32,11 @@ public class ThoughtSpawner : MonoBehaviour
         {
             Debug.Log($"Spawning button for: {card.previewText}");
             var btn = Instantiate(thoughtButtonPrefab, thoughtListContainer);
+            
+            // Set button bg color from Dialogue Card
+            var btnImage = btn.GetComponent<Image>();
+            if (btnImage != null)
+                btnImage.color = card.buttonColor;
 
             var label = btn.GetComponentInChildren<TMP_Text>();
             label.text = card.previewText;

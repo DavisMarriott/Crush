@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Dance
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   previewText: Dance?
+  buttonColor: {r: 1, g: 1, b: 1, a: 1}
   branches:
   - branchName: Dance
     minConfidence: 0

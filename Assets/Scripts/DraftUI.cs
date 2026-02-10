@@ -9,8 +9,9 @@ public class DraftUI : MonoBehaviour
     [SerializeField] private DeckManager deckManager;
     [SerializeField] private Button thoughtButtonPrefab;
     [SerializeField] private GameObject draftUI;
-    [SerializeField] private Transform draftContainer;
     [SerializeField] private ThoughtSpawner thoughtSpawner;
+    [SerializeField] private Transform[] draftSlots;
+    [SerializeField] private Vector2 draftButtonSize = new Vector2(200, 60);
 
     private void Start()
     {
@@ -20,8 +21,11 @@ public class DraftUI : MonoBehaviour
     public void ShowDraftOptions()
     {
         // Clear old buttons
-        for (int i = draftContainer.childCount - 1; i >= 0; i--)
-            Destroy(draftContainer.GetChild(i).gameObject);
+        foreach (var slot in draftSlots)
+        {
+            for (int i = slot.childCount - 1; i >= 0; i--)
+                Destroy(slot.GetChild(i).gameObject);
+        }
         
         // Show the draft screen
         draftUI.SetActive(true);
@@ -29,19 +33,34 @@ public class DraftUI : MonoBehaviour
         // Get random cards and spawn buttons
         List<DialogueCard> options = deckManager.GetDraftOptions(3);
         
-        foreach (var card in options)
+        for (int i = 0; i < options.Count && i < draftSlots.Length; i++)
         {
-            var btn = Instantiate(thoughtButtonPrefab, draftContainer);
+            var btn = Instantiate(thoughtButtonPrefab, draftSlots[i]);
             
+            // button is centered in draft slot
+            var rectTransform = btn.GetComponent<RectTransform>();
+            rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
+            rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
+            rectTransform.anchoredPosition = Vector2.zero;
+            //set size of button
+            rectTransform.sizeDelta = draftButtonSize;
+            
+            // Get button color from dialogue card
+            var btnImage = btn.GetComponent<Image>();
+            if (btnImage != null)
+                btnImage.color = options[i].buttonColor;
+        
             var label = btn.GetComponentInChildren<TMP_Text>();
-            label.text = card.previewText;
-            
+            label.text = options[i].previewText;
+        
+            var card = options[i];
             btn.onClick.AddListener(() =>
             {
                 deckManager.AddCardToDeck(card);
                 thoughtSpawner.AddCardToHand(card);
                 CloseDraftUI();
             });
+
         }
     }
 

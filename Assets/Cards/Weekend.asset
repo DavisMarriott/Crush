@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Weekend
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   previewText: Weekend
+  buttonColor: {r: 1, g: 1, b: 1, a: 1}
   branches:
   - branchName: Weekend_Low
     minConfidence: 0

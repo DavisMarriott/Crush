@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Hi
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   previewText: Hi Daisy
+  buttonColor: {r: 1, g: 1, b: 1, a: 1}
   branches:
   - branchName: Hi - Basic
     minConfidence: 0
