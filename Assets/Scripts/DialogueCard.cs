@@ -11,6 +11,7 @@ public class DialogueCard : ScriptableObject
     
     [Header("Card Branches")]
     [SerializeField] private DialogueBranch[] branches;
+    
     public DialogueBranch[] Branches => branches;
     
 
@@ -27,11 +28,12 @@ public class DialogueCard : ScriptableObject
         public string branchName;
         public int minConfidence;
         public int maxConfidence;
+        public bool requiresIntroFalse = false;
         public DialogueLine[] dialogue = new DialogueLine[0];
 
     }
 
-    public DialogueBranch GetBranchForConfidence(int confidence)
+    public DialogueBranch GetBranchForConfidence(int confidence, bool introMade)
     {
         if (branches == null || branches.Length == 0)
             return null;
@@ -39,12 +41,14 @@ public class DialogueCard : ScriptableObject
         for (int i = 0; i < branches.Length; i++)
         {
             var b = branches[i];
-            if (b == null) continue;
             
             bool aboveMin = confidence >= b.minConfidence;
             bool belowMax = confidence <= b.maxConfidence || confidence < 0;
+            
+            bool introValid = !b.requiresIntroFalse || !introMade;
 
-            if (aboveMin && belowMax)
+            if (aboveMin && belowMax && introValid)
+                //higher branch in array plays
                 return b;
         }
         return null;

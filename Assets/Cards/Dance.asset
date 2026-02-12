@@ -18,6 +18,7 @@ MonoBehaviour:
   - branchName: Dance
     minConfidence: 0
     maxConfidence: 20
+    requiresIntroFalse: 0
     dialogue:
     - character: 0
       confidenceImpact: -1
@@ -42,4 +43,7 @@ MonoBehaviour:
       line: with me?
     - character: 1
       confidenceImpact: 20
-      line: Yes. I'd love to go to the dance with you.
+      line: Yeah!
+    - character: 1
+      confidenceImpact: 20
+      line: Uhh - Sorry. I mean, sure. I'd really like that.

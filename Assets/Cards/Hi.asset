@@ -15,9 +15,10 @@ MonoBehaviour:
   previewText: Hi Daisy
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   branches:
-  - branchName: Hi - Basic
+  - branchName: Hi_Intro
     minConfidence: 0
     maxConfidence: 45
+    requiresIntroFalse: 1
     dialogue:
     - character: 0
       confidenceImpact: 0
@@ -25,3 +26,14 @@ MonoBehaviour:
     - character: 1
       confidenceImpact: 3
       line: 'Oh. Hey Luke! What''s up? '
+  - branchName: Hi_Later
+    minConfidence: 0
+    maxConfidence: 45
+    requiresIntroFalse: 0
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      line: Uhh.. Hi Daisy (later)
+    - character: 1
+      confidenceImpact: -2
+      line: Uhh hi? haha why are you being such a weirdo?!?

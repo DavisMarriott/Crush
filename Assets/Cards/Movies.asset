@@ -15,13 +15,48 @@ MonoBehaviour:
   previewText: Movies
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   branches:
-  - branchName: Movies_Low
+  - branchName: Movies_Intro
     minConfidence: 0
-    maxConfidence: 9
+    maxConfidence: 20
+    requiresIntroFalse: 1
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      line: do... uhh you like movies?
+    - character: 1
+      confidenceImpact: 2
+      line: What? Uhh hey.
+    - character: 1
+      confidenceImpact: 1
+      line: Umm.. sure. I like movies.
+  - branchName: Movies_Low
+    minConfidence: 1
+    maxConfidence: 5
+    requiresIntroFalse: 0
     dialogue:
     - character: 0
       confidenceImpact: -1
-      line: So.. do you..umm.. have any plans this weekend?
+      line: do... uhh you like movies?
     - character: 1
-      confidenceImpact: -2
-      line: Ummm... No, not really.
+      confidenceImpact: -1
+      line: ha. do I like movies? Yeah, sure I guess.
+  - branchName: Movies_High
+    minConfidence: 6
+    maxConfidence: 20
+    requiresIntroFalse: 0
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      line: have you seen any good movies lately?
+    - character: 1
+      confidenceImpact: 2
+      line: Yes! Last night I watched this one about these two guys
+    - character: 1
+      confidenceImpact: 1
+      line: who are cops but have to go back to undercover as high schoolers!
+    - character: 1
+      confidenceImpact: 1
+      line: It was so funny. What was it called...?
+    - character: 1
+      confidenceImpact: 1
+      line: Doesn't matter. It was totally awesome though!

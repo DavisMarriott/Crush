@@ -14,4 +14,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   previewText: Music
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
-  branches: []
+  branches:
+  - branchName: Music_Low
+    minConfidence: 1
+    maxConfidence: 4
+    requiresIntroFalse: 0
+    dialogue:
+    - character: 0
+      confidenceImpact: -1
+      line: Have you heard of band?
+    - character: 1
+      confidenceImpact: -1
+      line: Nope, never heard it. Not once.
+    - character: 1
+      confidenceImpact: -1
+      line: Weirdo. haha.
+  - branchName: Music_High
+    minConfidence: 5
+    maxConfidence: 20
+    requiresIntroFalse: 0
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      line: Who's your favorite band?
+    - character: 1
+      confidenceImpact: 1
+      line: omg I've been obsessed with this one band called The Marias! Have you
+        heard of them?
+    - character: 1
+      confidenceImpact: 1
+      line: Have you heard of them? They're so cool. They're like this emo rock band
+        with a badass chick for a lead singer. I so wanna be her when I'm older.

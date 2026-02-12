@@ -18,6 +18,7 @@ MonoBehaviour:
   - branchName: Weekend_Low
     minConfidence: 0
     maxConfidence: 9
+    requiresIntroFalse: 0
     dialogue:
     - character: 0
       confidenceImpact: -1
@@ -25,9 +26,10 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: -2
       line: Ummm... No, not really.
-  - branchName: Weekend_Medium
+  - branchName: Weekend_High
     minConfidence: 9
     maxConfidence: 15
+    requiresIntroFalse: 0
     dialogue:
     - character: 0
       confidenceImpact: 0

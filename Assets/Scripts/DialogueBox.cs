@@ -10,6 +10,12 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private ConfidenceState confidenceState; 
     private DialogueTiming _dialogueTiming;
+    [Header("Speaker Indicators")]
+    [SerializeField] private GameObject leftArrow;
+    [SerializeField] private GameObject rightArrow;
+    [SerializeField] private Color boyTextColor = Color.white;
+    [SerializeField] private Color girlTextColor = new Color(1f, 0.7f, 0.8f);  // pinkish
+    [SerializeField] private Color boyInternalTextColor = Color.gray;
 
     public void Start()
     {
@@ -24,7 +30,7 @@ public class DialogueBox : MonoBehaviour
     public void ShowDialogue(DialogueCard dialogueCard)
     {
         //this is where we get the dialogue branch that fits current confidence
-        var branch = dialogueCard.GetBranchForConfidence(confidenceState.confidence);
+        var branch = dialogueCard.GetBranchForConfidence(confidenceState.confidence, confidenceState.introMade);
       
         if (branch == null || branch.dialogue == null || branch.dialogue.Length == 0)
         {
@@ -42,13 +48,40 @@ public class DialogueBox : MonoBehaviour
     {
         foreach (DialogueCard.DialogueLine line in branch.dialogue)
         {
+            SetSpeakerIndicator(line.character);
+    
             yield return _dialogueTiming.Run(line.line, dialogueText);
             confidenceState.confidence += line.confidenceImpact;
-
             yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
         }
+        confidenceState.introMade = true;
 
         CloseDialogueBox();
+    }
+    
+    private void SetSpeakerIndicator(DialogueCard.DialogueCharacter character)
+    {
+        switch (character)
+        {
+            case DialogueCard.DialogueCharacter.Boy:
+                dialogueText.alignment = TMPro.TextAlignmentOptions.TopLeft;
+                dialogueText.color = boyTextColor;
+                leftArrow.SetActive(true);
+                rightArrow.SetActive(false);
+                break;
+            case DialogueCard.DialogueCharacter.Girl:
+                dialogueText.alignment = TMPro.TextAlignmentOptions.TopRight;
+                dialogueText.color = girlTextColor;
+                leftArrow.SetActive(false);
+                rightArrow.SetActive(true);
+                break;
+            case DialogueCard.DialogueCharacter.BoyInternal:
+                dialogueText.alignment = TMPro.TextAlignmentOptions.Left;
+                dialogueText.color = boyInternalTextColor;
+                leftArrow.SetActive(true);
+                rightArrow.SetActive(false);
+                break;
+        }
     }
 
     public void CloseDialogueBox()

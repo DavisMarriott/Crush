@@ -12,6 +12,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
-  previewText: Test
+  previewText: Math Test
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
-  branches: []
+  branches:
+  - branchName: Test_Intro
+    minConfidence: 0
+    maxConfidence: 20
+    requiresIntroFalse: 1
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      line: "So- uhhhhh\u2026. How did that math test go?"
+    - character: 1
+      confidenceImpact: 0
+      line: "Oh- hi. Umm\u2026. it was okay, I guess."
+  - branchName: Test_Low
+    minConfidence: 0
+    maxConfidence: 5
+    requiresIntroFalse: 1
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      line: "So- uhhhhh\u2026. How did that math test go?"
+    - character: 1
+      confidenceImpact: 0
+      line: "It was okay. Didn\u2019t study as much as I should have."
+  - branchName: Test_High
+    minConfidence: 6
+    maxConfidence: 20
+    requiresIntroFalse: 1
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      line: How did you do on Ms. Parsons test?
+    - character: 1
+      confidenceImpact: 0
+      line: "It was okay. Didn\u2019t study as much as I should have."
+    - character: 1
+      confidenceImpact: 0
+      line: "Same! I didn\u2019t get home from volleyball until like 8."
+    - character: 1
+      confidenceImpact: 0
+      line: I rushed to study without even showering. I was so gross.
+    - character: 1
+      confidenceImpact: 0
+      line: "But I think I did alright. If I get a B I\u2019ll be happy."

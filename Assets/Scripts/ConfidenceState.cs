@@ -13,6 +13,11 @@ public class ConfidenceState : MonoBehaviour
     [SerializeField] private GameObject deathScreen;
     [SerializeField] private float deathScreenTimer;
     [SerializeField] private DraftUI draftUI;
+    
+    [Header("Conversation State")]
+    public bool introMade = false;
+    public bool inConversation = false;
+    
     private bool _isDead = false;
     public bool Dead => _isDead;
     
@@ -54,11 +59,12 @@ public class ConfidenceState : MonoBehaviour
     
     private IEnumerator SpawnDeathScreen()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         deathScreen.SetActive(true); 
         dialogueBox.CloseDialogueBox();
         yield return new WaitForSeconds(deathScreenTimer);
         deathScreen.SetActive(false);
+        
     
         // Show draft UI
         draftUI.ShowDraftOptions();
@@ -73,9 +79,23 @@ public class ConfidenceState : MonoBehaviour
         boyTransform.position = spawnPoint.position;
         confidence = startingConfidence;
         _isDead = false;
+        introMade = false;
     }
     void ClampConfidence()
     {
         confidence = Mathf.Clamp(confidence, MinConfidenceFullGame, MaxConfidenceFullGame);
     }
+    
+    //these methods are for the animator to point to for pose setup
+    public void EnterConversation()
+    {
+        inConversation = true;
+    }
+
+    public void ExitConversation()
+    {
+        inConversation = false;
+    }
+    
+    
 }
