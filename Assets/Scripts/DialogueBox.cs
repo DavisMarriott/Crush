@@ -10,6 +10,7 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private ConfidenceState confidenceState; 
     private DialogueTiming _dialogueTiming;
+    [SerializeField] private GameObject thoughtBubble;
     [Header("Speaker Indicators")]
     [SerializeField] private GameObject leftArrow;
     [SerializeField] private GameObject rightArrow;
@@ -39,6 +40,7 @@ public class DialogueBox : MonoBehaviour
         }
       
         dialogueBox.SetActive(true);
+        thoughtBubble.SetActive(false);
         StartCoroutine(StepThroughDialogue(branch));
         
     }
@@ -55,7 +57,7 @@ public class DialogueBox : MonoBehaviour
             yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
         }
         confidenceState.introMade = true;
-
+        thoughtBubble.SetActive(true);
         CloseDialogueBox();
     }
     

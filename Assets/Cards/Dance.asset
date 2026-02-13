@@ -42,8 +42,8 @@ MonoBehaviour:
       confidenceImpact: -1
       line: with me?
     - character: 1
-      confidenceImpact: 20
+      confidenceImpact: 5
       line: Yeah!
     - character: 1
-      confidenceImpact: 20
+      confidenceImpact: 5
       line: Uhh - Sorry. I mean, sure. I'd really like that.

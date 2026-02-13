@@ -14,4 +14,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   previewText: Soccer
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
-  branches: []
+  branches:
+  - branchName: Soccer_Intro
+    minConfidence: 0
+    maxConfidence: 20
+    requiresIntroFalse: 1
+    dialogue:
+    - character: 0
+      confidenceImpact: -1
+      line: I- uhhhh have a soccer game on Saturday.
+    - character: 1
+      confidenceImpact: -1
+      line: "Oh, uh\u2026 hey."
+    - character: 1
+      confidenceImpact: -1
+      line: "uh\u2026. That\u2019s cool. Good luck\u2026?"
+  - branchName: Soccer_Low
+    minConfidence: 0
+    maxConfidence: 4
+    requiresIntroFalse: 0
+    dialogue:
+    - character: 0
+      confidenceImpact: -1
+      line: I- uhhhh have a soccer game on Saturday.
+    - character: 1
+      confidenceImpact: 0
+      line: "That\u2019s cool. I didn\u2019t know you played soccer."
+  - branchName: Soccer_High
+    minConfidence: 5
+    maxConfidence: 20
+    requiresIntroFalse: 0
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      line: I have a soccer game on Saturday.
+    - character: 0
+      confidenceImpact: 1
+      line: "It\u2019s actually the championship game."
+    - character: 1
+      confidenceImpact: 1
+      line: "Luke, that\u2019s so cool! I didn\u2019t realize you play soccer."
+    - character: 1
+      confidenceImpact: 1
+      line: Score a goal for me

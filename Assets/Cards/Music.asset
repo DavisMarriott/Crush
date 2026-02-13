@@ -15,6 +15,17 @@ MonoBehaviour:
   previewText: Music
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   branches:
+  - branchName: Music_Intro
+    minConfidence: 0
+    maxConfidence: 20
+    requiresIntroFalse: 0
+    dialogue:
+    - character: 0
+      confidenceImpact: -1
+      line: Have you heard of band?
+    - character: 1
+      confidenceImpact: -3
+      line: What? Are you talking to me?
   - branchName: Music_Low
     minConfidence: 1
     maxConfidence: 4
@@ -25,10 +36,10 @@ MonoBehaviour:
       line: Have you heard of band?
     - character: 1
       confidenceImpact: -1
-      line: Nope, never heard it. Not once.
+      line: hahah have I heard of band? Like the word band?!
     - character: 1
-      confidenceImpact: -1
-      line: Weirdo. haha.
+      confidenceImpact: -2
+      line: Nope, never heard it. Not once.
   - branchName: Music_High
     minConfidence: 5
     maxConfidence: 20
@@ -44,4 +55,7 @@ MonoBehaviour:
     - character: 1
       confidenceImpact: 1
       line: Have you heard of them? They're so cool. They're like this emo rock band
-        with a badass chick for a lead singer. I so wanna be her when I'm older.
+        with a badass chick for a lead singer.
+    - character: 1
+      confidenceImpact: 1
+      line: I so wanna be her when I'm older.

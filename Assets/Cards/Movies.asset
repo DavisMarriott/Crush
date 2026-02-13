@@ -21,13 +21,13 @@ MonoBehaviour:
     requiresIntroFalse: 1
     dialogue:
     - character: 0
-      confidenceImpact: 0
+      confidenceImpact: -1
       line: do... uhh you like movies?
     - character: 1
-      confidenceImpact: 2
+      confidenceImpact: -1
       line: What? Uhh hey.
     - character: 1
-      confidenceImpact: 1
+      confidenceImpact: -1
       line: Umm.. sure. I like movies.
   - branchName: Movies_Low
     minConfidence: 1
@@ -49,10 +49,10 @@ MonoBehaviour:
       confidenceImpact: 0
       line: have you seen any good movies lately?
     - character: 1
-      confidenceImpact: 2
+      confidenceImpact: 1
       line: Yes! Last night I watched this one about these two guys
     - character: 1
-      confidenceImpact: 1
+      confidenceImpact: 0
       line: who are cops but have to go back to undercover as high schoolers!
     - character: 1
       confidenceImpact: 1

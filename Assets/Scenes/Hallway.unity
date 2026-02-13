@@ -453,7 +453,6 @@ MonoBehaviour:
   startingDeck:
   - {fileID: 11400000, guid: f17a5925afc144f519d9736cf5594d5b, type: 2}
   - {fileID: 11400000, guid: 347ca79f63e4f483382745c2cf1852df, type: 2}
-  - {fileID: 11400000, guid: ea012e923232f4198ab985c89473a4ee, type: 2}
 --- !u!4 &491759820
 Transform:
   m_ObjectHideFlags: 0
@@ -2017,7 +2016,7 @@ Transform:
   m_GameObject: {fileID: 1728572744}
   serializedVersion: 2
   m_LocalRotation: {x: 0.011134332, y: -0, z: -0, w: 0.9999381}
-  m_LocalPosition: {x: -3.29, y: -2.9, z: 0}
+  m_LocalPosition: {x: -3.46, y: -4.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2042,6 +2041,10 @@ PrefabInstance:
     - target: {fileID: 288216823463544167, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
       propertyPath: m_Name
       value: Character_Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516352212143081565, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4400308429686677114, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2875,6 +2878,10 @@ PrefabInstance:
       propertyPath: rightArrow
       value: 
       objectReference: {fileID: 492850166}
+    - target: {fileID: 3985097242674001143, guid: 8f22cec600c2f48d5800a9c7b0538689, type: 3}
+      propertyPath: thoughtBubble
+      value: 
+      objectReference: {fileID: 2108338973}
     - target: {fileID: 3985097242674001143, guid: 8f22cec600c2f48d5800a9c7b0538689, type: 3}
       propertyPath: boyTextColor.b
       value: 0.7254902

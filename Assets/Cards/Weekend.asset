@@ -15,6 +15,17 @@ MonoBehaviour:
   previewText: Weekend
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   branches:
+  - branchName: Weekend_Intro
+    minConfidence: 0
+    maxConfidence: 15
+    requiresIntroFalse: 1
+    dialogue:
+    - character: 0
+      confidenceImpact: -1
+      line: So.. do you..umm.. have any plans this weekend?
+    - character: 0
+      confidenceImpact: -1
+      line: "what? Oh, hey Luke. Umm\u2026 No, not really. "
   - branchName: Weekend_Low
     minConfidence: 0
     maxConfidence: 9
@@ -35,6 +46,6 @@ MonoBehaviour:
       confidenceImpact: 0
       line: Any fun plans this weekend?
     - character: 0
-      confidenceImpact: 3
+      confidenceImpact: 2
       line: 'Ugh I wish. My parents are throwing this big 10th birthday party for
         my little brother. They said I have to be there.   '
