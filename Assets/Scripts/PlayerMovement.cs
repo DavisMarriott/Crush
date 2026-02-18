@@ -10,20 +10,42 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     private Vector2 _moveDirection;
     public InputActionReference move;
+    [SerializeField] private AnimationTriggerPlayer animTrigger;
+    private bool _wasMoving = false;
+    private string _lastPose = "";
+
     
-    // Update is called once per frame
     void Update()
     {
         if (confidenceState.Dead == false)
         {
+            //moves player on x axis
             _moveDirection = move.action.ReadValue<Vector2>();
+            bool isMoving = _moveDirection.x != 0;
         
-            if (_moveDirection.x != 0)
-                animator.Play("Player_Walk");
-            else if (confidenceState.inConversation)
-                animator.Play(GetConfidencePose());
-            else
-                animator.Play("Player_Default");
+            //animation control
+                //if player is pressing a or d, enter walk state
+            if (isMoving && !_wasMoving)
+                animTrigger.Walk();
+            else if (!isMoving && _wasMoving)
+            {
+                //if player is in conversation mode, enter confdence pose state
+                if (confidenceState.inConversation)
+                    animator.Play(GetConfidencePose());
+                else
+                    animTrigger.Default();
+            }
+            else if (!isMoving && confidenceState.inConversation)
+            {
+                string pose = GetConfidencePose();
+                if (pose != _lastPose)
+                {
+                    animator.Play(pose);
+                    _lastPose = pose;
+                }
+            }
+    
+            _wasMoving = isMoving;
         }
     }
 

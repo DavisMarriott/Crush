@@ -57,7 +57,6 @@ public class DraftUI : MonoBehaviour
             btn.onClick.AddListener(() =>
             {
                 deckManager.AddCardToDeck(card);
-                thoughtSpawner.AddCardToHand(card);
                 CloseDraftUI();
             });
 

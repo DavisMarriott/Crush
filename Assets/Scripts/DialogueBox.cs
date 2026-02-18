@@ -9,13 +9,15 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private InputActionReference nextLineAction;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private ConfidenceState confidenceState; 
+    [SerializeField] private DeckManager deckManager;
+    [SerializeField] private ThoughtSpawner thoughtSpawner;
     private DialogueTiming _dialogueTiming;
     [SerializeField] private GameObject thoughtBubble;
     [Header("Speaker Indicators")]
     [SerializeField] private GameObject leftArrow;
     [SerializeField] private GameObject rightArrow;
     [SerializeField] private Color boyTextColor = Color.white;
-    [SerializeField] private Color girlTextColor = new Color(1f, 0.7f, 0.8f);  // pinkish
+    [SerializeField] private Color girlTextColor = new Color(1f, 0.7f, 0.8f);
     [SerializeField] private Color boyInternalTextColor = Color.gray;
 
     public void Start()
@@ -30,7 +32,6 @@ public class DialogueBox : MonoBehaviour
 
     public void ShowDialogue(DialogueCard dialogueCard)
     {
-        //this is where we get the dialogue branch that fits current confidence
         var branch = dialogueCard.GetBranchForConfidence(confidenceState.confidence, confidenceState.introMade);
       
         if (branch == null || branch.dialogue == null || branch.dialogue.Length == 0)
@@ -42,10 +43,8 @@ public class DialogueBox : MonoBehaviour
         dialogueBox.SetActive(true);
         thoughtBubble.SetActive(false);
         StartCoroutine(StepThroughDialogue(branch));
-        
     }
    
-    // this is where we get and play the dialogue lines
     private IEnumerator StepThroughDialogue(DialogueCard.DialogueBranch branch)
     {
         foreach (DialogueCard.DialogueLine line in branch.dialogue)
@@ -56,7 +55,13 @@ public class DialogueBox : MonoBehaviour
             confidenceState.confidence += line.confidenceImpact;
             yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
         }
+        
         confidenceState.introMade = true;
+        
+        // Draw new card and refresh buttons
+        deckManager.DrawCard();
+        thoughtSpawner.SpawnButtons();
+        
         thoughtBubble.SetActive(true);
         CloseDialogueBox();
     }
@@ -91,6 +96,4 @@ public class DialogueBox : MonoBehaviour
         dialogueBox.SetActive(false);
         dialogueText.text = string.Empty;
     }
-    
-    
 }

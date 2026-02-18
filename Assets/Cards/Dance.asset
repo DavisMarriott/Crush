@@ -21,25 +21,25 @@ MonoBehaviour:
     requiresIntroFalse: 0
     dialogue:
     - character: 0
-      confidenceImpact: -1
+      confidenceImpact: -2
       line: 'I was- umm.... wondering... if..... '
     - character: 0
-      confidenceImpact: -1
+      confidenceImpact: -2
       line: uhhh... if you would... uhh- maybe
     - character: 0
-      confidenceImpact: -1
+      confidenceImpact: -2
       line: be interested.....
     - character: 0
-      confidenceImpact: -1
+      confidenceImpact: -2
       line: in go- uhhh.....
     - character: 0
-      confidenceImpact: -1
+      confidenceImpact: -2
       line: sorry... ummm- do you wanna.....
     - character: 0
-      confidenceImpact: -1
+      confidenceImpact: -2
       line: go to the dance....
     - character: 0
-      confidenceImpact: -1
+      confidenceImpact: -2
       line: with me?
     - character: 1
       confidenceImpact: 5

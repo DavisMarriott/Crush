@@ -29,7 +29,7 @@ MonoBehaviour:
   - branchName: Test_Low
     minConfidence: 0
     maxConfidence: 5
-    requiresIntroFalse: 1
+    requiresIntroFalse: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
@@ -40,20 +40,20 @@ MonoBehaviour:
   - branchName: Test_High
     minConfidence: 6
     maxConfidence: 20
-    requiresIntroFalse: 1
+    requiresIntroFalse: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
       line: How did you do on Ms. Parsons test?
-    - character: 1
+    - character: 0
       confidenceImpact: 0
-      line: "It was okay. Didn\u2019t study as much as I should have."
+      line: I had soccer practice last night so I barely got to study.
     - character: 1
-      confidenceImpact: 0
+      confidenceImpact: 1
       line: "Same! I didn\u2019t get home from volleyball until like 8."
     - character: 1
       confidenceImpact: 0
       line: I rushed to study without even showering. I was so gross.
     - character: 1
-      confidenceImpact: 0
+      confidenceImpact: 2
       line: "But I think I did alright. If I get a B I\u2019ll be happy."

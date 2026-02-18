@@ -18,7 +18,7 @@ MonoBehaviour:
   - branchName: Music_Intro
     minConfidence: 0
     maxConfidence: 20
-    requiresIntroFalse: 0
+    requiresIntroFalse: 1
     dialogue:
     - character: 0
       confidenceImpact: -1
@@ -50,8 +50,7 @@ MonoBehaviour:
       line: Who's your favorite band?
     - character: 1
       confidenceImpact: 1
-      line: omg I've been obsessed with this one band called The Marias! Have you
-        heard of them?
+      line: omg I've been obsessed with this one band called The Marias!
     - character: 1
       confidenceImpact: 1
       line: Have you heard of them? They're so cool. They're like this emo rock band

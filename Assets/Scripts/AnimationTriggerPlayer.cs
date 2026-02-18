@@ -6,7 +6,7 @@ public class AnimationTriggerPlayer : MonoBehaviour
     private Animator animator;
     // This lets us assign a ConfidenceIncrementer through inspector. This was a temp solution to demo the concept.
     // We'll probably want to replace this with our health/confidence script.
-    public ConfidenceIncrementer confidenceIncrementer;
+    //public ConfidenceIncrementer confidenceIncrementer;
 
     void Start()
     {
@@ -15,47 +15,47 @@ public class AnimationTriggerPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        // Everything in Udpate() is looking for a current confidence score and playing the associated animation.
-        // The confidenceIncrementer is script I'd made, triggered by buttons in the scene. You can see that in the scene CharacterHealth_Test.
-        
-        if (confidenceIncrementer.confidence == 0)
-        {
-            animator.Play("PlayerConfidence_00", 0);
-        }
-        
-        if (confidenceIncrementer.confidence == 1)
-        {
-            animator.Play("PlayerConfidence_01", 0);
-        }
-        
-        if (confidenceIncrementer.confidence == 2)
-        {
-            animator.Play("PlayerConfidence_02", 0);
-        }
-        
-        if (confidenceIncrementer.confidence == 3)
-        {
-            animator.Play("PlayerConfidence_03", 0);
-        }
-
-        if (confidenceIncrementer.confidence == 4)
-        {
-            animator.Play("PlayerConfidence_04", 0);
-        }
-        
-        if (confidenceIncrementer.confidence == 5)
-        {
-            animator.Play("PlayerConfidence_05", 0);
-        }
-        
-        if (confidenceIncrementer.confidence == 6)
-        {
-            animator.Play("PlayerConfidence_06", 0);
-        }
-        
-    }
+    // void Update()
+    // {
+    //     // Everything in Udpate() is looking for a current confidence score and playing the associated animation.
+    //     // The confidenceIncrementer is script I'd made, triggered by buttons in the scene. You can see that in the scene CharacterHealth_Test.
+    //     
+    //     if (confidenceIncrementer.confidence == 0)
+    //     {
+    //         animator.Play("PlayerConfidence_00", 0);
+    //     }
+    //     
+    //     if (confidenceIncrementer.confidence == 1)
+    //     {
+    //         animator.Play("PlayerConfidence_01", 0);
+    //     }
+    //     
+    //     if (confidenceIncrementer.confidence == 2)
+    //     {
+    //         animator.Play("PlayerConfidence_02", 0);
+    //     }
+    //     
+    //     if (confidenceIncrementer.confidence == 3)
+    //     {
+    //         animator.Play("PlayerConfidence_03", 0);
+    //     }
+    //
+    //     if (confidenceIncrementer.confidence == 4)
+    //     {
+    //         animator.Play("PlayerConfidence_04", 0);
+    //     }
+    //     
+    //     if (confidenceIncrementer.confidence == 5)
+    //     {
+    //         animator.Play("PlayerConfidence_05", 0);
+    //     }
+    //     
+    //     if (confidenceIncrementer.confidence == 6)
+    //     {
+    //         animator.Play("PlayerConfidence_06", 0);
+    //     }
+    //     
+    // }
 
     
     // Below is the start of writing custom methods to trigger animations with custom transition animations.
