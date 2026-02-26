@@ -13,47 +13,97 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   previewText: Math Test
+  cost: 2
+  revealed: 1
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
-  branches:
-  - branchName: Test_Intro
-    minConfidence: 0
-    maxConfidence: 20
-    requiresIntroFalse: 1
-    dialogue:
-    - character: 0
-      confidenceImpact: 0
-      line: "So- uhhhhh\u2026. How did that math test go?"
-    - character: 1
-      confidenceImpact: 0
-      line: "Oh- hi. Umm\u2026. it was okay, I guess."
-  - branchName: Test_Low
-    minConfidence: 0
-    maxConfidence: 5
+  lukeBranches:
+  - branchName: Afford
+    minValue: 0
+    maxValue: 45
     requiresIntroFalse: 0
+    charmState: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
-      line: "So- uhhhhh\u2026. How did that math test go?"
-    - character: 1
-      confidenceImpact: 0
-      line: "It was okay. Didn\u2019t study as much as I should have."
-  - branchName: Test_High
-    minConfidence: 6
-    maxConfidence: 20
-    requiresIntroFalse: 0
-    dialogue:
-    - character: 0
-      confidenceImpact: 0
+      charmImpact: 0
       line: How did you do on Ms. Parsons test?
     - character: 0
       confidenceImpact: 0
+      charmImpact: 0
       line: I had soccer practice last night so I barely got to study.
-    - character: 1
-      confidenceImpact: 1
-      line: "Same! I didn\u2019t get home from volleyball until like 8."
+  - branchName: Death
+    minValue: 0
+    maxValue: 45
+    requiresIntroFalse: 0
+    charmState: 0
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "So- uhhhhh\u2026. How did that math test go?"
+  charmImpacts:
+  - state: 1
+    impact: 0
+  - state: 2
+    impact: 0
+  - state: 3
+    impact: 0
+  - state: 4
+    impact: -2
+  daisyBranches:
+  - branchName: Death
+    minValue: 0
+    maxValue: 0
+    requiresIntroFalse: 0
+    charmState: 0
+    dialogue:
     - character: 1
       confidenceImpact: 0
-      line: I rushed to study without even showering. I was so gross.
+      charmImpact: 0
+      line: '*walks away*'
+  - branchName: Low
+    minValue: 0
+    maxValue: 0
+    requiresIntroFalse: 0
+    charmState: 1
+    dialogue:
+    - character: 1
+      confidenceImpact: -1
+      charmImpact: 0
+      line: uhhh... it was okay
+  - branchName: Neutral
+    minValue: 0
+    maxValue: 0
+    requiresIntroFalse: 0
+    charmState: 2
+    dialogue:
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: I think I did okay. Same, I had volleyball practice and didn't get home
+        until like 8.
+    - character: 1
+      confidenceImpact: 3
+      charmImpact: 0
+      line: I started studying before even taking a shower. I was so gross.
+  - branchName: Positive
+    minValue: 0
+    maxValue: 0
+    requiresIntroFalse: 0
+    charmState: 3
+    dialogue:
     - character: 1
       confidenceImpact: 2
-      line: "But I think I did alright. If I get a B I\u2019ll be happy."
+      charmImpact: 0
+      line: It was pretty good! I didn't know you still played soccer. That's awesome!
+  - branchName: High
+    minValue: 0
+    maxValue: 0
+    requiresIntroFalse: 0
+    charmState: 4
+    dialogue:
+    - character: 1
+      confidenceImpact: -1
+      charmImpact: 0
+      line: Oh.. the test. Ummm, I think I did pretty good. I wasn't able to study
+        much either

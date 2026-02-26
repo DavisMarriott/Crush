@@ -3,6 +3,7 @@ using TMPro;
 using System.Collections;
 using UnityEngine.InputSystem;
 
+
 public class DialogueBox : MonoBehaviour
 {
     [SerializeField] private GameObject dialogueBox;
@@ -11,6 +12,7 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private ConfidenceState confidenceState; 
     [SerializeField] private DeckManager deckManager;
     [SerializeField] private ThoughtSpawner thoughtSpawner;
+    [SerializeField] private CharmState charmState;
     private DialogueTiming _dialogueTiming;
     [SerializeField] private GameObject thoughtBubble;
     [Header("Speaker Indicators")]
@@ -19,6 +21,7 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private Color boyTextColor = Color.white;
     [SerializeField] private Color girlTextColor = new Color(1f, 0.7f, 0.8f);
     [SerializeField] private Color boyInternalTextColor = Color.gray;
+    
 
     public void Start()
     {
@@ -32,36 +35,51 @@ public class DialogueBox : MonoBehaviour
 
     public void ShowDialogue(DialogueCard dialogueCard)
     {
-        var branch = dialogueCard.GetBranchForConfidence(confidenceState.confidence, confidenceState.introMade);
-      
-        if (branch == null || branch.dialogue == null || branch.dialogue.Length == 0)
+        var lukeBranch = dialogueCard.GetLukeBranch(confidenceState.confidence, confidenceState.introMade);
+  
+        if (lukeBranch == null || lukeBranch.dialogue == null || lukeBranch.dialogue.Length == 0)
         {
-            Debug.LogWarning($"No valid branch found for confidence {confidenceState.confidence} on card {dialogueCard.previewText}");
+            Debug.LogWarning($"No valid Luke branch for confidence {confidenceState.confidence} on card {dialogueCard.previewText}");
             return;
         }
-      
+  
         dialogueBox.SetActive(true);
         thoughtBubble.SetActive(false);
-        StartCoroutine(StepThroughDialogue(branch));
+        StartCoroutine(StepThroughDialogue(dialogueCard, lukeBranch));
     }
-   
-    private IEnumerator StepThroughDialogue(DialogueCard.DialogueBranch branch)
+
+    private IEnumerator StepThroughDialogue(DialogueCard dialogueCard, DialogueCard.DialogueBranch lukeBranch)
     {
-        foreach (DialogueCard.DialogueLine line in branch.dialogue)
+        // Phase 1: Luke's lines
+        foreach (DialogueCard.DialogueLine line in lukeBranch.dialogue)
         {
             SetSpeakerIndicator(line.character);
-    
             yield return _dialogueTiming.Run(line.line, dialogueText);
             confidenceState.confidence += line.confidenceImpact;
+            charmState.charm += line.charmImpact;
             yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
         }
-        
+    
+        // Phase 2: Daisy's response (based on current charm)
+        var daisyBranch = dialogueCard.GetDaisyBranch(charmState.charm);
+    
+        if (daisyBranch != null && daisyBranch.dialogue != null && daisyBranch.dialogue.Length > 0)
+        {
+            foreach (DialogueCard.DialogueLine line in daisyBranch.dialogue)
+            {
+                SetSpeakerIndicator(line.character);
+                yield return _dialogueTiming.Run(line.line, dialogueText);
+                confidenceState.confidence += line.confidenceImpact;
+                charmState.charm += line.charmImpact;
+                yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
+            }
+        }
+    
         confidenceState.introMade = true;
-        
-        // Draw new card and refresh buttons
+    
         deckManager.DrawCard();
         thoughtSpawner.SpawnButtons();
-        
+    
         thoughtBubble.SetActive(true);
         CloseDialogueBox();
     }

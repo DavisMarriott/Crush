@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
-  m_Name: Soccer
+  m_Name: Compliment
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
-  previewText: Soccer
-  cost: 4
-  revealed: 1
-  buttonColor: {r: 1, g: 1, b: 1, a: 1}
+  previewText: You look nice
+  cost: 9
+  revealed: 0
+  buttonColor: {r: 0, g: 0, b: 0, a: 1}
   lukeBranches:
   - branchName: Afford
     minValue: 0
@@ -26,11 +26,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: I have a soccer game on Saturday.
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: "It\u2019s actually the championship game."
+      line: You look really nice today
   - branchName: Death
     minValue: 0
     maxValue: 45
@@ -40,16 +36,16 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: I'm in the championship match on Sa...-
+      line: God you're so hot
   charmImpacts:
   - state: 1
-    impact: 0
+    impact: -3
   - state: 2
-    impact: 1
+    impact: -1
   - state: 3
-    impact: 2
+    impact: 0
   - state: 4
-    impact: 3
+    impact: 0
   daisyBranches:
   - branchName: Death
     minValue: 0
@@ -58,9 +54,9 @@ MonoBehaviour:
     charmState: 0
     dialogue:
     - character: 1
-      confidenceImpact: 0
+      confidenceImpact: -4
       charmImpact: 0
-      line: Oh, nice. I gotta go to class now. See you later.
+      line: Yeah right loser
   - branchName: Low
     minValue: 0
     maxValue: 0
@@ -70,7 +66,7 @@ MonoBehaviour:
     - character: 1
       confidenceImpact: -1
       charmImpact: 0
-      line: Oh... you play soccer? That's pretty cool.
+      line: ohh... ummm. thanks (blush)
   - branchName: Neutral
     minValue: 0
     maxValue: 0
@@ -78,9 +74,9 @@ MonoBehaviour:
     charmState: 2
     dialogue:
     - character: 1
-      confidenceImpact: 1
+      confidenceImpact: -2
       charmImpact: 0
-      line: I forgot you play soccer. That's really cool though!
+      line: Ohhh stop... you don't mean that.
   - branchName: Positive
     minValue: 0
     maxValue: 0
@@ -88,9 +84,9 @@ MonoBehaviour:
     charmState: 3
     dialogue:
     - character: 1
-      confidenceImpact: 4
+      confidenceImpact: 3
       charmImpact: 0
-      line: That is so cool. Good luck. Score a goal for me :)
+      line: Thanks! I really appreciate that
   - branchName: High
     minValue: 0
     maxValue: 0
@@ -98,6 +94,7 @@ MonoBehaviour:
     charmState: 4
     dialogue:
     - character: 1
-      confidenceImpact: 4
+      confidenceImpact: 6
       charmImpact: 0
-      line: OMG you're definitely gonna win. That is so cool. I wish I could be there.
+      line: Really?! You think so?! You too... I mean - thank you. You look nice
+        today too :)

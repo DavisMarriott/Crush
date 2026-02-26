@@ -13,48 +13,91 @@ MonoBehaviour:
   m_Name: Music
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   previewText: Music
+  cost: 3
+  revealed: 1
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
-  branches:
-  - branchName: Music_Intro
-    minConfidence: 0
-    maxConfidence: 20
-    requiresIntroFalse: 1
-    dialogue:
-    - character: 0
-      confidenceImpact: -1
-      line: Have you heard of band?
-    - character: 1
-      confidenceImpact: -3
-      line: What? Are you talking to me?
-  - branchName: Music_Low
-    minConfidence: 1
-    maxConfidence: 4
+  lukeBranches:
+  - branchName: Afford
+    minValue: 0
+    maxValue: 45
     requiresIntroFalse: 0
-    dialogue:
-    - character: 0
-      confidenceImpact: -1
-      line: Have you heard of band?
-    - character: 1
-      confidenceImpact: -1
-      line: hahah have I heard of band? Like the word band?!
-    - character: 1
-      confidenceImpact: -2
-      line: Nope, never heard it. Not once.
-  - branchName: Music_High
-    minConfidence: 5
-    maxConfidence: 20
-    requiresIntroFalse: 0
+    charmState: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
-      line: Who's your favorite band?
+      charmImpact: 0
+      line: Have you heard the new Penny Farthing song yet?
+  - branchName: Death
+    minValue: 0
+    maxValue: 45
+    requiresIntroFalse: 0
+    charmState: 0
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: IS MUSIC GOOD?!?
+  charmImpacts:
+  - state: 1
+    impact: 4
+  - state: 2
+    impact: 4
+  - state: 3
+    impact: 4
+  - state: 4
+    impact: 5
+  daisyBranches:
+  - branchName: Death
+    minValue: 0
+    maxValue: 0
+    requiresIntroFalse: 0
+    charmState: 0
+    dialogue:
     - character: 1
-      confidenceImpact: 1
-      line: omg I've been obsessed with this one band called The Marias!
+      confidenceImpact: 0
+      charmImpact: 0
+      line: 
+  - branchName: Low
+    minValue: 0
+    maxValue: 0
+    requiresIntroFalse: 0
+    charmState: 1
+    dialogue:
     - character: 1
-      confidenceImpact: 1
-      line: Have you heard of them? They're so cool. They're like this emo rock band
-        with a badass chick for a lead singer.
+      confidenceImpact: 3
+      charmImpact: 0
+      line: Oh you like them too?? Yeah it's really good. I've been playing it a
+        bunch.
+  - branchName: Neutral
+    minValue: 0
+    maxValue: 0
+    requiresIntroFalse: 0
+    charmState: 2
+    dialogue:
     - character: 1
-      confidenceImpact: 1
-      line: I so wanna be her when I'm older.
+      confidenceImpact: 4
+      charmImpact: 0
+      line: It's soooo good! OMG I didn't know you liked them.
+  - branchName: Positive
+    minValue: 0
+    maxValue: 0
+    requiresIntroFalse: 0
+    charmState: 3
+    dialogue:
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "OMG I\u2019m obsessed with the new song. It has like 2 million plays
+        on spotify but at least a million are me."
+  - branchName: High
+    minValue: 0
+    maxValue: 0
+    requiresIntroFalse: 0
+    charmState: 4
+    dialogue:
+    - character: 1
+      confidenceImpact: 6
+      charmImpact: 0
+      line: They're so good. I totally knew about them like 3 years ago before they
+        blew up. That's cool you like them too! We should listen to the new album
+        togehter

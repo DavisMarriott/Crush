@@ -13,6 +13,8 @@ public class ConfidenceState : MonoBehaviour
     [SerializeField] private GameObject deathScreen;
     [SerializeField] private float deathScreenTimer;
     [SerializeField] private DraftUI draftUI;
+    [SerializeField] private CharmState charmState;
+    [SerializeField] private DeckManager deckManager;
     
     [Header("Conversation State")]
     public bool introMade = false;
@@ -76,8 +78,13 @@ public class ConfidenceState : MonoBehaviour
         
         //respawn with new drafted card
         thoughtSpawner.SpawnButtons();
+        
+        //resets that happen each loop
         boyTransform.position = spawnPoint.position;
         confidence = startingConfidence;
+        confidence = startingConfidence;
+        charmState.ResetCharm();
+        deckManager.ResetDeck();
         _isDead = false;
         introMade = false;
     }

@@ -13,50 +13,21 @@ MonoBehaviour:
   m_Name: Movies
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   previewText: Movies
+  cost: 1
+  revealed: 0
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
-  branches:
-  - branchName: Movies_Intro
-    minConfidence: 0
-    maxConfidence: 20
-    requiresIntroFalse: 1
-    dialogue:
-    - character: 0
-      confidenceImpact: -1
-      line: do... uhh you like movies?
-    - character: 1
-      confidenceImpact: -1
-      line: What? Uhh hey.
-    - character: 1
-      confidenceImpact: -1
-      line: Umm.. sure. I like movies.
-  - branchName: Movies_Low
-    minConfidence: 1
-    maxConfidence: 5
+  lukeBranches:
+  - branchName: 
+    minValue: 0
+    maxValue: 0
     requiresIntroFalse: 0
-    dialogue:
-    - character: 0
-      confidenceImpact: -1
-      line: do... uhh you like movies?
-    - character: 1
-      confidenceImpact: -1
-      line: ha. do I like movies? Yeah, sure I guess.
-  - branchName: Movies_High
-    minConfidence: 6
-    maxConfidence: 20
+    charmState: 0
+    dialogue: []
+  charmImpacts: []
+  daisyBranches:
+  - branchName: 
+    minValue: 0
+    maxValue: 0
     requiresIntroFalse: 0
-    dialogue:
-    - character: 0
-      confidenceImpact: 0
-      line: have you seen any good movies lately?
-    - character: 1
-      confidenceImpact: 1
-      line: Yes! Last night I watched this one about these two guys
-    - character: 1
-      confidenceImpact: 0
-      line: who are cops but have to go back to undercover as high schoolers!
-    - character: 1
-      confidenceImpact: 1
-      line: It was so funny. What was it called...?
-    - character: 1
-      confidenceImpact: 1
-      line: Doesn't matter. It was totally awesome though!
+    charmState: 0
+    dialogue: []

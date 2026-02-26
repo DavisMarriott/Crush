@@ -1,0 +1,25 @@
+Card Name,Test,,,
+Preview Text,Math Test,,,
+Cost,2,,,
+,Luke,Afford,,
+,,Boy,How did you do on Ms. Parsons test?,
+,,Boy,I had soccer practice last night so I barely got to study.,
+,Luke,Death,,
+,,Boy,So- uhhhhh…. How did that math test go?,
+,,,,
+,CharmImpact,Low,0,
+,CharmImpact,Neutral,0,
+,CharmImpact,Positive,0,
+,CharmImpact,High,-2,
+,,,,
+,Daisy,Death,,
+,,Girl,*walks away*,
+,Daisy,Low,,
+,,Girl,uhhh... it was okay,-1
+,Daisy,Neutral,,
+,,Girl,"I think I did okay. Same, I had volleyball practice and didn't get home until like 8.",
+,,Girl,I started studying before even taking a shower. I was so gross.,3
+,Daisy,Positive,,
+,,Girl,It was pretty good! I didn't know you still played soccer. That's awesome!,2
+,Daisy,High,,
+,,Girl,"Oh.. the test. Ummm, I think I did pretty good. I wasn't able to study much either",-1

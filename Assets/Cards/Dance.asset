@@ -13,37 +13,21 @@ MonoBehaviour:
   m_Name: Dance
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   previewText: Dance?
+  cost: 1
+  revealed: 0
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
-  branches:
-  - branchName: Dance
-    minConfidence: 0
-    maxConfidence: 20
+  lukeBranches:
+  - branchName: 
+    minValue: 0
+    maxValue: 0
     requiresIntroFalse: 0
-    dialogue:
-    - character: 0
-      confidenceImpact: -2
-      line: 'I was- umm.... wondering... if..... '
-    - character: 0
-      confidenceImpact: -2
-      line: uhhh... if you would... uhh- maybe
-    - character: 0
-      confidenceImpact: -2
-      line: be interested.....
-    - character: 0
-      confidenceImpact: -2
-      line: in go- uhhh.....
-    - character: 0
-      confidenceImpact: -2
-      line: sorry... ummm- do you wanna.....
-    - character: 0
-      confidenceImpact: -2
-      line: go to the dance....
-    - character: 0
-      confidenceImpact: -2
-      line: with me?
-    - character: 1
-      confidenceImpact: 5
-      line: Yeah!
-    - character: 1
-      confidenceImpact: 5
-      line: Uhh - Sorry. I mean, sure. I'd really like that.
+    charmState: 0
+    dialogue: []
+  - branchName: 
+    minValue: 0
+    maxValue: 0
+    requiresIntroFalse: 0
+    charmState: 0
+    dialogue: []
+  charmImpacts: []
+  daisyBranches: []
