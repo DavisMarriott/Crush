@@ -431,23 +431,6 @@ RectTransform:
   m_AnchoredPosition: {x: -45, y: -20}
   m_SizeDelta: {x: 341.17847, y: 139.35327}
   m_Pivot: {x: 1, y: 1}
---- !u!1 &283601466 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 288216823463544167, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-  m_PrefabInstance: {fileID: 1748535992}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &283601467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283601466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcdc221bd59a04bd1912e4dd21dc51bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AnimationTriggerPlayer
 --- !u!1 &399920985
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,28 +2229,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2050336747}
     - target: {fileID: 13397708809891304, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-      propertyPath: animTrigger
-      value: 
-      objectReference: {fileID: 283601467}
-    - target: {fileID: 13397708809891304, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
       propertyPath: confidenceState
       value: 
       objectReference: {fileID: 801422817}
     - target: {fileID: 288216823463544167, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
       propertyPath: m_Name
       value: Character_Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1516352212143081565, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4400308429686677114, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4400308429686677114, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4400308429686677114, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2309,17 +2276,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4400308429686677114, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 288216823463544167, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 283601467}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
 --- !u!1 &1905110409
 GameObject:
@@ -2488,7 +2448,7 @@ Transform:
   m_GameObject: {fileID: 1972248623}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5324075, y: -0.6001167, z: -10}
+  m_LocalPosition: {x: -3.5246127, y: -0.6001167, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

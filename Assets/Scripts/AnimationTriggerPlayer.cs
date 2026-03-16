@@ -72,15 +72,15 @@ public class AnimationTriggerPlayer : MonoBehaviour
         // If we're in Default, Walk() will play the transition animation "Player_Default_to_Walk".
         // The way the animator is set up, Player_Walk will automatically play after.
         // We can use this method for all transition animations. 
-        if (stateInfo.IsName("Player_Default"))
+        if (stateInfo.IsName("Player_Start_CYCLE"))
         {
-            animator.Play("Player_Default_to_Walk", 0);
+            animator.Play("Player_Start_to_Walk", 0);
         }
 
         // If we're not in Default, just play Walk directly.
         else
         {
-            animator.Play("Player_Walk", 0);
+            animator.Play("Player_Walk_CYCLE", 0);
         }
     }
     
@@ -89,14 +89,14 @@ public class AnimationTriggerPlayer : MonoBehaviour
     {
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         
-        if (stateInfo.IsName("Player_Walk"))
+        if (stateInfo.IsName("Player_Walk_CYCLE"))
         {
-            animator.Play("Player_Walk_to_Default", 0);
+            animator.Play("Player_Walk_to_State01", 0);
         }
 
         else
         {
-            animator.Play("Player_Default", 0);
+            animator.Play("Player_State01_CYCLE", 0);
         }
     }
     
