@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AnimationTriggerPlayer : MonoBehaviour
 {
-    // I think this just let's us access the animator attached to the game object (our character)
+    // I think this just lets us access the animator attached to the game object (our character)
     private Animator animator;
     // This lets us assign a ConfidenceIncrementer through inspector. This was a temp solution to demo the concept.
     // We'll probably want to replace this with our health/confidence script.
@@ -17,7 +17,7 @@ public class AnimationTriggerPlayer : MonoBehaviour
     // Update is called once per frame
     // void Update()
     // {
-    //     // Everything in Udpate() is looking for a current confidence score and playing the associated animation.
+    //     // Everything in Update() is looking for a current confidence score and playing the associated animation.
     //     // The confidenceIncrementer is script I'd made, triggered by buttons in the scene. You can see that in the scene CharacterHealth_Test.
     //     
     //     if (confidenceIncrementer.confidence == 0)
@@ -75,6 +75,11 @@ public class AnimationTriggerPlayer : MonoBehaviour
         if (stateInfo.IsName("Player_Start_CYCLE"))
         {
             animator.Play("Player_Start_to_Walk", 0);
+        }
+        
+        if (stateInfo.IsName("Player_State01_CYCLE"))
+        {
+            animator.Play("Player_State01_to_Walk", 0);
         }
 
         // If we're not in Default, just play Walk directly.

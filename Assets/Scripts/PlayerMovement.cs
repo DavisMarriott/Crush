@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private ConfidenceState confidenceState;
     public Rigidbody2D rb;
     public float speed;
+    private float horizontalInput;
+    public float accelerationRate; // How fast the character reaches max speed
+    public float decelerationRate; // How fast the character stops
     private Vector2 _moveDirection;
     public InputActionReference move;
     [SerializeField] private AnimationTriggerPlayer animTrigger;
@@ -29,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
                 animTrigger.Walk();
             else if (!isMoving && _wasMoving)
             {
-                //if player is in conversation mode, enter confdence pose state
+                //if player is in conversation mode, enter confidence pose state
                 if (confidenceState.inConversation)
                     animator.Play(GetConfidencePose());
                 else
@@ -47,6 +50,10 @@ public class PlayerMovement : MonoBehaviour
     
             _wasMoving = isMoving;
         }
+        
+        // {
+        //     horizontalInput = Input.GetAxisRaw("Horizontal"); // Get raw input (-1, 0, or 1)
+        // }
     }
 
     //this method controls the boy's confidence poses
@@ -65,7 +72,6 @@ public class PlayerMovement : MonoBehaviour
         return "PlayerConfidence_06";
     }
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void FixedUpdate()
     {
         if (confidenceState.Dead == false)
