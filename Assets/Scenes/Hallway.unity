@@ -2229,10 +2229,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2050336747}
     - target: {fileID: 13397708809891304, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-      propertyPath: speed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 13397708809891304, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
       propertyPath: confidenceState
       value: 
       objectReference: {fileID: 801422817}

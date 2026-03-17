@@ -308,8 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   animator: {fileID: 6203604935891903430}
   confidenceState: {fileID: 0}
-  rb: {fileID: 1516352212143081565}
-  speed: 6
+  maxSpeed: 4
   move: {fileID: 0}
   animTrigger: {fileID: 5565487545552166279}
 --- !u!114 &5565487545552166279
@@ -848,7 +847,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1322301257615937078}
   - component: {fileID: 5685241421993134915}
-  - component: {fileID: 4627078189798996119}
   m_Layer: 0
   m_Name: Spritesheet_PLAYER
   m_TagString: Untagged
@@ -930,25 +928,3 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!95 &4627078189798996119
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8451630411453932094}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 854806260e902473b97547da69691f93, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

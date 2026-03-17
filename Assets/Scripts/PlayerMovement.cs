@@ -6,25 +6,30 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private Animator animator;
     [SerializeField] private ConfidenceState confidenceState;
-    public Rigidbody2D rb;
-    public float speed;
-    private float horizontalInput;
-    public float accelerationRate; // How fast the character reaches max speed
-    public float decelerationRate; // How fast the character stops
-    private Vector2 _moveDirection;
+    private Rigidbody2D rb;
+    public float maxSpeed;
+    private float accelerationTime; // Time to reach max speed
+    private Vector2 moveInput;
+    private Vector2 currentVelocity; // Velocity tracked by SmoothDamp
+    private Vector2 smoothDampVelocity; // Reference velocity for SmoothDamp
+    // private float delayTime;
     public InputActionReference move;
     [SerializeField] private AnimationTriggerPlayer animTrigger;
     private bool _wasMoving = false;
     private string _lastPose = "";
 
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     
     void Update()
     {
         if (confidenceState.Dead == false)
         {
             //moves player on x axis
-            _moveDirection = move.action.ReadValue<Vector2>();
-            bool isMoving = _moveDirection.x != 0;
+            moveInput = move.action.ReadValue<Vector2>();
+            bool isMoving = moveInput.x != 0;
         
             //animation control
                 //if player is pressing a or d, enter walk state
@@ -72,11 +77,36 @@ public class PlayerMovement : MonoBehaviour
         return "PlayerConfidence_06";
     }
     
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        if (confidenceState.Dead == false)
+        // Set accelerationTime based on current state
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        
+        if (stateInfo.IsName("Player_Start_CYCLE"))
         {
-            rb.linearVelocity = new Vector2(_moveDirection.x * speed,0);
+            accelerationTime = 0.40f;
+            // delayTime = .25f;
         }
+        if (stateInfo.IsName("Player_State01_CYCLE"))
+        {
+            accelerationTime = 0.30f;
+            // delayTime = .15f;
+        }
+        else
+        {
+            accelerationTime = 0.12f;
+            // delayTime = .25f;
+        }
+        
+        
+        // Calculate the target velocity based on input and max speed
+        Vector2 targetVelocity = moveInput * maxSpeed;
+
+        // Use Vector2.SmoothDamp to gradually change current velocity towards the target velocity
+        
+        currentVelocity.x = Mathf.SmoothDamp(currentVelocity.x, targetVelocity.x, ref smoothDampVelocity.x, accelerationTime);
+
+        // Apply the smoothed velocity to the Rigidbody
+        rb.linearVelocity = currentVelocity;
     }
 }
