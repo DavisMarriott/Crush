@@ -3382,10 +3382,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5685241421993134915, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3812,7 +3808,7 @@ Transform:
   m_GameObject: {fileID: 1972248623}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5278533, y: -0.6001167, z: -10}
+  m_LocalPosition: {x: -3.5365493, y: -0.6001167, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
