@@ -1,4 +1,5 @@
 using UnityEngine;
+using Unity.Cinemachine;
 
 // Add this to a GameObject in the Test Environment scene.
 // It overrides the normal game flow:
@@ -12,6 +13,9 @@ public class TestSceneManager : MonoBehaviour
     [SerializeField] private GameObject dialogueUI;
     [SerializeField] private ThoughtSpawner thoughtSpawner;
 
+    [Header("Camera")]
+    [SerializeField] private CinemachineCamera conversationCamera;
+
     [Header("Objects to disable in test mode")]
     [SerializeField] private GameObject playerMovementObject;
     [SerializeField] private GameObject talkApproachTrigger;
@@ -20,9 +24,13 @@ public class TestSceneManager : MonoBehaviour
 
     void Start()
     {
-        // Disable the walk-up — go straight to conversation
+        // Disable movement but keep the character visible
         if (playerMovementObject != null)
-            playerMovementObject.SetActive(false);
+        {
+            var movement = playerMovementObject.GetComponent<PlayerMovement>();
+            if (movement != null)
+                movement.enabled = false;
+        }
         if (talkApproachTrigger != null)
             talkApproachTrigger.SetActive(false);
 
@@ -32,6 +40,10 @@ public class TestSceneManager : MonoBehaviour
 
         // Tell ConfidenceState we're in test mode (skips draft UI on death)
         confidenceState.testMode = true;
+
+        // Switch to conversation camera immediately
+        if (conversationCamera != null)
+            CameraManager.SwitchCamera(conversationCamera);
 
         // Conversation state
         confidenceState.inConversation = true;
