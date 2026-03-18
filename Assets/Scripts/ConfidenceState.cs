@@ -19,6 +19,9 @@ public class ConfidenceState : MonoBehaviour
     [Header("Conversation State")]
     public bool introMade = false;
     public bool inConversation = false;
+
+    [Header("Test Mode")]
+    public bool testMode = false;
     
     private bool _isDead = false;
     public bool Dead => _isDead;
@@ -62,23 +65,27 @@ public class ConfidenceState : MonoBehaviour
     private IEnumerator SpawnDeathScreen()
     {
         yield return new WaitForSeconds(2f);
-        deathScreen.SetActive(true); 
+        deathScreen.SetActive(true);
         dialogueBox.CloseDialogueBox();
         yield return new WaitForSeconds(deathScreenTimer);
         deathScreen.SetActive(false);
-        
-    
+
+        if (testMode)
+        {
+            // In test mode, stop here. DebugMenu handles the rest.
+            _isDead = false;
+            yield break;
+        }
+
         // Show draft UI
         draftUI.ShowDraftOptions();
-    
+
         // Player drafts a dialogue card
         yield return new WaitUntil(() => !draftUI.gameObject.activeSelf || !draftUI.enabled);
-        
-        
-        
+
         //respawn with new drafted card
         thoughtSpawner.SpawnButtons();
-        
+
         //resets that happen each loop
         boyTransform.position = spawnPoint.position;
         confidence = startingConfidence;

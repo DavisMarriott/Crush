@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #1a1a2e; font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+
+  .screen { width: 960px; height: 600px; background: rgba(0,0,0,0.9); border: 2px solid #444; border-radius: 8px; padding: 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto 1fr auto; gap: 16px; color: #eee; position: relative; }
+
+  .title { grid-column: 1 / -1; text-align: center; font-size: 24px; font-weight: bold; color: #ffd700; padding-bottom: 8px; border-bottom: 1px solid #444; }
+
+  .section { background: rgba(255,255,255,0.05); border: 1px solid #555; border-radius: 6px; padding: 12px; display: flex; flex-direction: column; }
+
+  .section-title { font-size: 14px; font-weight: bold; color: #aaa; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+
+  .field { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .field label { font-size: 13px; color: #ccc; }
+  .field .input { background: #2a2a3e; border: 1px solid #666; border-radius: 4px; padding: 4px 8px; color: #fff; width: 60px; text-align: center; font-size: 13px; }
+
+  .scroll-area { flex: 1; background: #1a1a2e; border: 1px solid #444; border-radius: 4px; padding: 6px; overflow-y: auto; margin-top: 4px; }
+
+  .card-btn { background: #2a2a3e; border: 1px solid #666; border-radius: 4px; padding: 6px 8px; margin-bottom: 4px; font-size: 12px; color: #ddd; cursor: pointer; display: flex; justify-content: space-between; }
+  .card-btn:hover { background: #3a3a5e; }
+  .card-btn .action { color: #888; font-size: 11px; }
+
+  .card-editor { display: flex; flex-direction: column; }
+  .card-editor .card-name { font-size: 16px; font-weight: bold; color: #ffd700; margin-bottom: 12px; }
+
+  .charm-grid { display: grid; grid-template-columns: auto 1fr; gap: 4px 8px; align-items: center; margin-top: 8px; }
+  .charm-grid label { font-size: 12px; color: #aaa; }
+  .charm-grid .input { background: #2a2a3e; border: 1px solid #666; border-radius: 4px; padding: 3px 6px; color: #fff; width: 50px; text-align: center; font-size: 12px; }
+
+  .save-btn { margin-top: auto; background: #2a5a2a; border: 1px solid #4a8a4a; border-radius: 4px; padding: 8px; color: #8f8; font-size: 13px; font-weight: bold; cursor: pointer; text-align: center; }
+  .save-btn:hover { background: #3a7a3a; }
+
+  .start-btn { grid-column: 1 / -1; background: #5a3a8a; border: 1px solid #7a5aaa; border-radius: 6px; padding: 12px; color: #d4b4ff; font-size: 18px; font-weight: bold; cursor: pointer; text-align: center; }
+  .start-btn:hover { background: #6a4a9a; }
+
+  .note { font-size: 10px; color: #666; text-align: center; margin-top: 4px; }
+
+  .divider { border: none; border-top: 1px solid #444; margin: 8px 0; }
+</style>
+</head>
+<body>
+
+<div class="screen">
+  <div class="title">DEBUG MENU</div>
+
+  <!-- LEFT COLUMN: Global Settings + Your Deck -->
+  <div class="section">
+    <div class="section-title">Settings</div>
+    <div class="field"><label>Starting Confidence</label><div class="input">12</div></div>
+    <div class="field"><label>Starting Charm</label><div class="input">4</div></div>
+    <div class="field"><label>Hand Size</label><div class="input">4</div></div>
+
+    <hr class="divider">
+
+    <div class="section-title">Your Deck</div>
+    <div class="scroll-area">
+      <div class="card-btn">Hi Daisy <span class="action">click to edit</span></div>
+      <div class="card-btn" style="background:#3a3a5e;">Math Test <span class="action">click to edit</span></div>
+      <div class="card-btn">Weekend Plans <span class="action">click to edit</span></div>
+      <div class="card-btn">Soccer <span class="action">click to edit</span></div>
+      <div class="card-btn">Music <span class="action">click to edit</span></div>
+    </div>
+    <div class="note">Click a card to edit it</div>
+  </div>
+
+  <!-- MIDDLE COLUMN: Card Editor -->
+  <div class="section card-editor">
+    <div class="section-title">Card Editor</div>
+    <div class="card-name">📝 Math Test</div>
+
+    <div class="field"><label>Cost</label><div class="input">2</div></div>
+
+    <hr class="divider">
+
+    <div class="section-title" style="font-size:12px;">Charm Impact by State</div>
+    <div class="charm-grid">
+      <label>😤 Low</label><div class="input">0</div>
+      <label>🙂 Neutral</label><div class="input">0</div>
+      <label>🥰 Positive</label><div class="input">0</div>
+      <label>🔥 High</label><div class="input">-2</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="section-title" style="font-size:12px;">Remove from Deck</div>
+    <div class="card-btn" style="border-color:#833; color:#f88; text-align:center; justify-content:center;">Remove Card</div>
+
+    <div style="flex:1;"></div>
+    <div class="save-btn">💾 Save Changes</div>
+  </div>
+
+  <!-- RIGHT COLUMN: Available Cards -->
+  <div class="section">
+    <div class="section-title">Available Cards</div>
+    <div class="scroll-area">
+      <div class="card-btn" style="opacity:0.7;">Dance? <span class="action">+ add</span></div>
+      <div class="card-btn" style="opacity:0.7;">Movies <span class="action">+ add</span></div>
+      <div class="card-btn" style="opacity:0.7;">Volleyball <span class="action">+ add</span></div>
+      <div class="card-btn" style="opacity:0.7;">Homework <span class="action">+ add</span></div>
+      <div class="card-btn" style="opacity:0.7;">Lunch Plans <span class="action">+ add</span></div>
+      <div class="card-btn" style="opacity:0.7;">Summer Break <span class="action">+ add</span></div>
+    </div>
+    <div class="note">Click to add to your deck</div>
+  </div>
+
+  <div class="start-btn">▶ START GAME</div>
+</div>
+
+</body>
+</html>
