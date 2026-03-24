@@ -20,8 +20,8 @@ public class ConfidenceState : MonoBehaviour
     public bool introMade = false;
     public bool inConversation = false;
 
-    [Header("Test Mode")]
-    public bool testMode = false;
+    [HideInInspector] public bool testMode = false;
+    [HideInInspector] public DebugMenu debugMenu;
     
     private bool _isDead = false;
     public bool Dead => _isDead;
@@ -72,8 +72,11 @@ public class ConfidenceState : MonoBehaviour
 
         if (testMode)
         {
-            // In test mode, stop here. DebugMenu handles the rest.
-            _isDead = false;
+            // In test mode, open debug menu directly after death screen.
+            // Don't reset _isDead — the debug menu will reset it
+            // when the player starts a new game.
+            if (debugMenu != null)
+                debugMenu.OpenMenu();
             yield break;
         }
 
@@ -109,6 +112,13 @@ public class ConfidenceState : MonoBehaviour
     public void ExitConversation()
     {
         inConversation = false;
+    }
+
+    public void ResetForNewGame(int newConfidence)
+    {
+        confidence = newConfidence;
+        _isDead = false;
+        introMade = false;
     }
     
     

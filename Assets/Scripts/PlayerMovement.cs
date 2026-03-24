@@ -29,6 +29,12 @@ public class PlayerMovement : MonoBehaviour
         {
             //moves player on x axis
             moveInput = move.action.ReadValue<Vector2>();
+
+            // Block leftward movement (A key) but still read the input
+            // so we can use it later for self-talk triggers
+            if (moveInput.x < 0)
+                moveInput.x = 0;
+
             bool isMoving = moveInput.x != 0;
         
             //animation control
@@ -37,20 +43,7 @@ public class PlayerMovement : MonoBehaviour
                 animTrigger.Walk();
             else if (!isMoving && _wasMoving)
             {
-                //if player is in conversation mode, enter confidence pose state
-                if (confidenceState.inConversation)
-                    animator.Play(GetConfidencePose());
-                else
-                    animTrigger.Default();
-            }
-            else if (!isMoving && confidenceState.inConversation)
-            {
-                string pose = GetConfidencePose();
-                if (pose != _lastPose)
-                {
-                    animator.Play(pose);
-                    _lastPose = pose;
-                }
+                animTrigger.Default();
             }
     
             _wasMoving = isMoving;

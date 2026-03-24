@@ -77,8 +77,10 @@ public class DialogueCardImporter : EditorWindow
 
         // Tracks what section we're in (Luke, CharmImpact, Daisy)
         string section = "";
-        // Tracks the current branch we're adding lines to
-        BranchData currentBranch = null;
+        // Tracks the current Luke branch (charm impacts and Daisy branches nest under this)
+        BranchData currentLukeBranch = null;
+        // Tracks the current dialogue branch we're adding lines to
+        BranchData currentDialogueBranch = null;
 
         for (int i = 0; i < lines.Length; i++)
         {
@@ -102,7 +104,8 @@ public class DialogueCardImporter : EditorWindow
                         current = new CardData { cardName = colB };
                         cards.Add(current);
                         section = "";
-                        currentBranch = null;
+                        currentLukeBranch = null;
+                        currentDialogueBranch = null;
                         break;
                     case "Preview Text":
                         if (current != null) current.previewText = colB;
@@ -122,38 +125,49 @@ public class DialogueCardImporter : EditorWindow
                 if (colB == "Luke")
                 {
                     section = "Luke";
-                    currentBranch = new BranchData { branchName = colC };
-                    current.lukeBranches.Add(currentBranch);
+                    currentLukeBranch = new BranchData { branchName = colC };
+                    currentDialogueBranch = currentLukeBranch;
+                    current.lukeBranches.Add(currentLukeBranch);
                     continue;
                 }
 
                 if (colB == "Daisy")
                 {
                     section = "Daisy";
-                    currentBranch = new BranchData { branchName = colC };
-                    current.daisyBranches.Add(currentBranch);
+                    var daisyBranch = new BranchData { branchName = colC };
+                    currentDialogueBranch = daisyBranch;
+
+                    // Daisy branches nest under the current Luke branch
+                    if (currentLukeBranch != null)
+                        currentLukeBranch.daisyBranches.Add(daisyBranch);
+
                     continue;
                 }
 
                 if (colB == "CharmImpact")
                 {
                     section = "CharmImpact";
-                    currentBranch = null;
+                    currentDialogueBranch = null;
 
                     // colC = state name, colD = impact value
                     int impact = 0;
                     int.TryParse(colD, out impact);
-                    current.charmImpacts.Add(new CharmImpactData
+
+                    // Charm impacts nest under the current Luke branch
+                    if (currentLukeBranch != null)
                     {
-                        stateName = colC,
-                        impact = impact
-                    });
+                        currentLukeBranch.charmImpacts.Add(new CharmImpactData
+                        {
+                            stateName = colC,
+                            impact = impact
+                        });
+                    }
                     continue;
                 }
             }
 
             // ── Dialogue lines (Column C has a character name) ──
-            if (!string.IsNullOrEmpty(colC) && currentBranch != null)
+            if (!string.IsNullOrEmpty(colC) && currentDialogueBranch != null)
             {
                 if (colC == "Boy" || colC == "Girl" || colC == "BoyInternal")
                 {
@@ -172,7 +186,7 @@ public class DialogueCardImporter : EditorWindow
                             int.TryParse(colE, out line.confidenceImpact);
                     }
 
-                    currentBranch.lines.Add(line);
+                    currentDialogueBranch.lines.Add(line);
                 }
             }
         }
@@ -287,41 +301,35 @@ public class DialogueCardImporter : EditorWindow
             bool reqIntro = branch.branchName.Contains("NoIntro");
             branchProp.FindPropertyRelative("requiresIntroFalse").boolValue = reqIntro;
 
-            // Luke branches use full confidence range by default
-            branchProp.FindPropertyRelative("minValue").intValue = 0;
-            branchProp.FindPropertyRelative("maxValue").intValue = 45;
-
             WriteBranchDialogue(branchProp, branch, false);
-        }
 
-        // ── Charm impacts ──
-        SerializedProperty charmProp = so.FindProperty("charmImpacts");
-        charmProp.arraySize = data.charmImpacts.Count;
+            // ── Charm impacts (nested under this Luke branch) ──
+            SerializedProperty charmProp = branchProp.FindPropertyRelative("charmImpacts");
+            charmProp.arraySize = branch.charmImpacts.Count;
 
-        for (int i = 0; i < data.charmImpacts.Count; i++)
-        {
-            SerializedProperty entry = charmProp.GetArrayElementAtIndex(i);
-            DialogueCard.CharmState state = ParseCharmState(data.charmImpacts[i].stateName);
-            entry.FindPropertyRelative("state").enumValueIndex = (int)state;
-            entry.FindPropertyRelative("impact").intValue = data.charmImpacts[i].impact;
-        }
+            for (int j = 0; j < branch.charmImpacts.Count; j++)
+            {
+                SerializedProperty entry = charmProp.GetArrayElementAtIndex(j);
+                DialogueCard.CharmState state = ParseCharmState(branch.charmImpacts[j].stateName);
+                entry.FindPropertyRelative("state").enumValueIndex = (int)state;
+                entry.FindPropertyRelative("impact").intValue = branch.charmImpacts[j].impact;
+            }
 
-        // ── Daisy branches ──
-        SerializedProperty daisyProp = so.FindProperty("daisyBranches");
-        daisyProp.arraySize = data.daisyBranches.Count;
+            // ── Daisy branches (nested under this Luke branch) ──
+            SerializedProperty daisyProp = branchProp.FindPropertyRelative("daisyBranches");
+            daisyProp.arraySize = branch.daisyBranches.Count;
 
-        for (int i = 0; i < data.daisyBranches.Count; i++)
-        {
-            var branch = data.daisyBranches[i];
-            SerializedProperty branchProp = daisyProp.GetArrayElementAtIndex(i);
+            for (int j = 0; j < branch.daisyBranches.Count; j++)
+            {
+                var daisyBranch = branch.daisyBranches[j];
+                SerializedProperty daisyBranchProp = daisyProp.GetArrayElementAtIndex(j);
 
-            branchProp.FindPropertyRelative("branchName").stringValue = branch.branchName;
+                // Set charm state from branch name
+                DialogueCard.CharmState daisyState = ParseCharmState(daisyBranch.branchName);
+                daisyBranchProp.FindPropertyRelative("charmState").enumValueIndex = (int)daisyState;
 
-            // Set charm state from branch name (Death, Low, Neutral, Positive, High)
-            DialogueCard.CharmState state = ParseCharmState(branch.branchName);
-            branchProp.FindPropertyRelative("charmState").enumValueIndex = (int)state;
-
-            WriteBranchDialogue(branchProp, branch, true);
+                WriteBranchDialogue(daisyBranchProp, daisyBranch, true);
+            }
         }
 
         so.ApplyModifiedProperties();
@@ -381,14 +389,14 @@ public class DialogueCardImporter : EditorWindow
         public string previewText = "";
         public int cost = 1;
         public List<BranchData> lukeBranches = new List<BranchData>();
-        public List<CharmImpactData> charmImpacts = new List<CharmImpactData>();
-        public List<BranchData> daisyBranches = new List<BranchData>();
     }
 
     private class BranchData
     {
         public string branchName = "";
         public List<LineData> lines = new List<LineData>();
+        public List<CharmImpactData> charmImpacts = new List<CharmImpactData>();
+        public List<BranchData> daisyBranches = new List<BranchData>();
     }
 
     private class CharmImpactData

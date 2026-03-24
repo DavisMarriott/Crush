@@ -20,26 +20,15 @@ public class TestSceneManager : MonoBehaviour
     [SerializeField] private GameObject playerMovementObject;
     [SerializeField] private GameObject talkApproachTrigger;
 
-    private bool wasDead = false;
-
     void Start()
     {
-        // Disable movement but keep the character visible
-        if (playerMovementObject != null)
-        {
-            var movement = playerMovementObject.GetComponent<PlayerMovement>();
-            if (movement != null)
-                movement.enabled = false;
-        }
-        if (talkApproachTrigger != null)
-            talkApproachTrigger.SetActive(false);
-
         // Show dialogue UI immediately (normally triggered by walking up)
         if (dialogueUI != null)
             dialogueUI.SetActive(true);
 
         // Tell ConfidenceState we're in test mode (skips draft UI on death)
         confidenceState.testMode = true;
+        confidenceState.debugMenu = debugMenu;
 
         // Switch to conversation camera immediately
         if (conversationCamera != null)
@@ -47,28 +36,5 @@ public class TestSceneManager : MonoBehaviour
 
         // Conversation state
         confidenceState.inConversation = true;
-    }
-
-    void Update()
-    {
-        // Watch for death — redirect to debug menu instead of draft UI
-        if (confidenceState.Dead && !wasDead)
-        {
-            wasDead = true;
-            // The debug menu will open after the death screen plays
-            // We use Invoke to give the death screen time to show
-            Invoke(nameof(OpenDebugOnDeath), 2.5f);
-        }
-
-        // Reset death tracker when player is alive again
-        if (!confidenceState.Dead && wasDead)
-        {
-            wasDead = false;
-        }
-    }
-
-    private void OpenDebugOnDeath()
-    {
-        debugMenu.OpenMenu();
     }
 }

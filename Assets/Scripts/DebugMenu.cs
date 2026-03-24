@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using Unity.Cinemachine;
 using TMPro;
 using System.Collections.Generic;
 
@@ -10,12 +11,27 @@ using UnityEditor;
 
 public class DebugMenu : MonoBehaviour
 {
+    // ─── TEST MODE ───────────────────────────────────────────────
+    // Check this box to skip the walk-up and go straight to conversation.
+    // When unchecked, the debug menu still works (B key) but doesn't
+    // override the normal game flow.
+    [Header("Test Mode")]
+    [SerializeField] private bool testMode = false;
+    [SerializeField] private CinemachineCamera conversationCamera;
+    [SerializeField] private CinemachineCamera hallwayCamera;
+    [SerializeField] private GameObject dialogueUI;
+    [SerializeField] private Transform testSpawnPoint;
+    [SerializeField] private Transform normalSpawnPoint;
+    [SerializeField] private Transform playerTransform;
+
     // ─── SYSTEM REFERENCES (drag in Inspector) ─────────────────
     [Header("System References")]
     [SerializeField] private ConfidenceState confidenceState;
     [SerializeField] private CharmState charmState;
     [SerializeField] private DeckManager deckManager;
     [SerializeField] private ThoughtSpawner thoughtSpawner;
+    [SerializeField] private DialogueBox dialogueBox;
+    [SerializeField] private GameObject thoughtBubble;
 
     // ─── UI PANELS ─────────────────────────────────────────────
     [Header("UI Panels")]
@@ -38,10 +54,6 @@ public class DebugMenu : MonoBehaviour
     [SerializeField] private GameObject cardEditorPanel;
     [SerializeField] private TMP_Text cardEditorTitle;
     [SerializeField] private TMP_InputField costInput;
-    [SerializeField] private TMP_InputField charmImpactLowInput;
-    [SerializeField] private TMP_InputField charmImpactNeutralInput;
-    [SerializeField] private TMP_InputField charmImpactPositiveInput;
-    [SerializeField] private TMP_InputField charmImpactHighInput;
     [SerializeField] private Button saveCardButton;
 
     // ─── START BUTTON ──────────────────────────────────────────
@@ -51,6 +63,7 @@ public class DebugMenu : MonoBehaviour
     private DialogueCard[] allCards;
     private DialogueCard selectedCard;
     private bool isOpen = false;
+    private bool firstOpen = true;
 
     void Awake()
     {
@@ -86,16 +99,18 @@ public class DebugMenu : MonoBehaviour
 
     void Start()
     {
-        OpenMenu();
+        if (testMode)
+        {
+            // Open the debug menu immediately so you can configure before playing
+            // (EnterMode will run when you hit Start in the menu)
+            confidenceState.testMode = true;
+            confidenceState.debugMenu = this;
+            OpenMenu();
+        }
     }
 
     void Update()
     {
-        if (Keyboard.current.bKey.wasPressedThisFrame)
-        {
-            if (isOpen) CloseMenu();
-            else OpenMenu();
-        }
     }
 
     // ─── OPEN / CLOSE ──────────────────────────────────────────
@@ -106,11 +121,16 @@ public class DebugMenu : MonoBehaviour
         debugMenuPanel.SetActive(true);
         Time.timeScale = 0f;
 
-        // Populate fields with current values
-        if (startingConfidenceInput != null)
-            startingConfidenceInput.text = confidenceState.confidence.ToString();
-        if (startingCharmInput != null)
-            startingCharmInput.text = charmState.charm.ToString();
+        // Only populate starting values on first open;
+        // after death, keep whatever the player last typed in
+        if (firstOpen)
+        {
+            if (startingConfidenceInput != null)
+                startingConfidenceInput.text = confidenceState.confidence.ToString();
+            if (startingCharmInput != null)
+                startingCharmInput.text = charmState.charm.ToString();
+            firstOpen = false;
+        }
         if (handSizeInput != null)
             handSizeInput.text = deckManager.Hand.Count.ToString();
 
@@ -129,11 +149,36 @@ public class DebugMenu : MonoBehaviour
 
     private void StartGame()
     {
-        // Apply global settings
-        if (int.TryParse(startingConfidenceInput.text, out int conf))
-            confidenceState.confidence = conf;
+        // Apply global settings and reset death state
+        int conf = 3;
+        if (int.TryParse(startingConfidenceInput.text, out int parsedConf))
+            conf = parsedConf;
+        confidenceState.ResetForNewGame(conf);
+
         if (int.TryParse(startingCharmInput.text, out int chrm))
             charmState.charm = chrm;
+
+        // Reset deck and redraw hand
+        deckManager.ResetDeck();
+        charmState.ResetCharm();
+
+        // Clean up any stuck dialogue state
+        if (dialogueBox != null)
+            dialogueBox.CloseDialogueBox();
+        if (thoughtBubble != null)
+            thoughtBubble.SetActive(true);
+
+        // Test mode: skip walk-up, jump straight to conversation
+        if (testMode)
+        {
+            if (testSpawnPoint != null && playerTransform != null)
+                playerTransform.position = testSpawnPoint.position;
+            if (dialogueUI != null)
+                dialogueUI.SetActive(true);
+            if (conversationCamera != null)
+                CameraManager.SwitchCamera(conversationCamera);
+            confidenceState.inConversation = true;
+        }
 
         CloseMenu();
 
@@ -155,6 +200,7 @@ public class DebugMenu : MonoBehaviour
         List<DialogueCard> owned = new List<DialogueCard>();
         if (deckManager.Deck != null) owned.AddRange(deckManager.Deck);
         if (deckManager.Hand != null) owned.AddRange(deckManager.Hand);
+        if (deckManager.Discard != null) owned.AddRange(deckManager.Discard);
 
         foreach (var card in owned)
         {
@@ -185,6 +231,7 @@ public class DebugMenu : MonoBehaviour
         List<DialogueCard> owned = new List<DialogueCard>();
         if (deckManager.Deck != null) owned.AddRange(deckManager.Deck);
         if (deckManager.Hand != null) owned.AddRange(deckManager.Hand);
+        if (deckManager.Discard != null) owned.AddRange(deckManager.Discard);
 
         foreach (var card in allCards)
         {
@@ -216,18 +263,6 @@ public class DebugMenu : MonoBehaviour
 
         if (cardEditorTitle != null) cardEditorTitle.text = card.previewText;
         if (costInput != null) costInput.text = card.cost.ToString();
-
-        // Populate charm impact fields
-        SetCharmImpactField(charmImpactLowInput, card, DialogueCard.CharmState.Low);
-        SetCharmImpactField(charmImpactNeutralInput, card, DialogueCard.CharmState.Neutral);
-        SetCharmImpactField(charmImpactPositiveInput, card, DialogueCard.CharmState.Positive);
-        SetCharmImpactField(charmImpactHighInput, card, DialogueCard.CharmState.High);
-    }
-
-    private void SetCharmImpactField(TMP_InputField field, DialogueCard card, DialogueCard.CharmState state)
-    {
-        if (field == null) return;
-        field.text = card.GetCharmImpact(state).ToString();
     }
 
     private void SaveSelectedCard()
@@ -238,12 +273,6 @@ public class DebugMenu : MonoBehaviour
         if (int.TryParse(costInput.text, out int newCost))
             selectedCard.cost = newCost;
 
-        // Update charm impacts
-        UpdateCharmImpact(selectedCard, DialogueCard.CharmState.Low, charmImpactLowInput);
-        UpdateCharmImpact(selectedCard, DialogueCard.CharmState.Neutral, charmImpactNeutralInput);
-        UpdateCharmImpact(selectedCard, DialogueCard.CharmState.Positive, charmImpactPositiveInput);
-        UpdateCharmImpact(selectedCard, DialogueCard.CharmState.High, charmImpactHighInput);
-
         // Save to asset file so changes persist
         #if UNITY_EDITOR
         EditorUtility.SetDirty(selectedCard);
@@ -251,25 +280,6 @@ public class DebugMenu : MonoBehaviour
         #endif
 
         RefreshDeckList();
-    }
-
-    private void UpdateCharmImpact(DialogueCard card, DialogueCard.CharmState state, TMP_InputField field)
-    {
-        if (field == null) return;
-        if (!int.TryParse(field.text, out int value)) return;
-
-        // Find the matching entry and update it
-        if (card.CharmImpacts != null)
-        {
-            for (int i = 0; i < card.CharmImpacts.Length; i++)
-            {
-                if (card.CharmImpacts[i].state == state)
-                {
-                    card.CharmImpacts[i].impact = value;
-                    return;
-                }
-            }
-        }
     }
 
     // ─── REMOVE CARD FROM DECK ─────────────────────────────────

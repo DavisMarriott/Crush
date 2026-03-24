@@ -50,7 +50,7 @@ public class DialogueBox : MonoBehaviour
 
     private IEnumerator StepThroughDialogue(DialogueCard dialogueCard, DialogueCard.DialogueBranch lukeBranch)
     {
-        // Phase 1: Luke's lines
+        // Phase 1-2: Luke's lines (Execution)
         foreach (DialogueCard.DialogueLine line in lukeBranch.dialogue)
         {
             SetSpeakerIndicator(line.character);
@@ -59,10 +59,15 @@ public class DialogueBox : MonoBehaviour
             charmState.charm += line.charmImpact;
             yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
         }
-    
-        // Phase 2: Daisy's response (based on current charm)
-        var daisyBranch = dialogueCard.GetDaisyBranch(charmState.charm);
-    
+
+        // Phase 4: Apply charm impact from this Luke branch
+        DialogueCard.CharmState currentCharmState = GetCurrentCharmState(charmState.charm);
+        int charmImpact = lukeBranch.GetCharmImpact(currentCharmState);
+        charmState.charm += charmImpact;
+
+        // Phase 5-6: Daisy's response (from this Luke branch, based on new charm)
+        var daisyBranch = lukeBranch.GetDaisyBranch(charmState.charm);
+
         if (daisyBranch != null && daisyBranch.dialogue != null && daisyBranch.dialogue.Length > 0)
         {
             foreach (DialogueCard.DialogueLine line in daisyBranch.dialogue)
@@ -74,14 +79,26 @@ public class DialogueBox : MonoBehaviour
                 yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
             }
         }
-    
+
         confidenceState.introMade = true;
-    
+
         deckManager.DrawCard();
         thoughtSpawner.SpawnButtons();
-    
+
         thoughtBubble.SetActive(true);
         CloseDialogueBox();
+    }
+
+    private DialogueCard.CharmState GetCurrentCharmState(int charm)
+    {
+        // Check each state's range to find which one the charm value falls into
+        foreach (DialogueCard.CharmState state in System.Enum.GetValues(typeof(DialogueCard.CharmState)))
+        {
+            DialogueCard.GetCharmRange(state, out int min, out int max);
+            if (charm >= min && charm <= max)
+                return state;
+        }
+        return DialogueCard.CharmState.Neutral;
     }
     
     private void SetSpeakerIndicator(DialogueCard.DialogueCharacter character)
@@ -111,6 +128,7 @@ public class DialogueBox : MonoBehaviour
 
     public void CloseDialogueBox()
     {
+        StopAllCoroutines();
         dialogueBox.SetActive(false);
         dialogueText.text = string.Empty;
     }

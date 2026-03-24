@@ -42,15 +42,14 @@ public class ThoughtSpawner : MonoBehaviour
 
             btn.onClick.AddListener(() =>
             {
-                if (!card.revealed || confidenceState.confidence >= card.cost)
-                {
-                    confidenceState.confidence -= card.cost;
-                    card.revealed = true;
-                    deckManager.DiscardCard(card);
-                    dialogueBox.ShowDialogue(card);
-                    btn.gameObject.SetActive(false);
-                }
-               
+                // Always deduct cost and play the card.
+                // GetLukeBranch picks Death/Awkward/Normal based on
+                // what confidence looks like AFTER cost is paid.
+                confidenceState.confidence -= card.cost;
+                card.revealed = true;
+                deckManager.DiscardCard(card);
+                dialogueBox.ShowDialogue(card);
+                btn.gameObject.SetActive(false);
             });
         }
     }

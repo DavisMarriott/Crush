@@ -13,6 +13,7 @@ public class DeckManager : MonoBehaviour
     
     public List<DialogueCard> Deck => deck;
     public List<DialogueCard> Hand => hand;
+    public List<DialogueCard> Discard => discard;
 
     void Start()
     {

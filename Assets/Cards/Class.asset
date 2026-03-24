@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
+  m_Name: Class
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
+  previewText: Class was boring
+  cost: 1
+  revealed: 0
+  buttonColor: {r: 0, g: 0, b: 0, a: 1}
+  lukeBranches:
+  - branchName: Death
+    minValue: 0
+    maxValue: 45
+    requiresIntroFalse: 0
+    charmState: 0
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Class was uhhh\u2026 pretty\u2026."
+    charmImpacts: []
+    daisyBranches: []
+  - branchName: Normal
+    minValue: 0
+    maxValue: 45
+    requiresIntroFalse: 0
+    charmState: 0
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Class was pretty boring huh? I was fighting to stay awake when Mr. Miller
+        started talking about the Roman Empire.
+    charmImpacts:
+    - state: 1
+      impact: 2
+    - state: 2
+      impact: 3
+    - state: 3
+      impact: 1
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - branchName: Death
+      minValue: 0
+      maxValue: 0
+      requiresIntroFalse: 0
+      charmState: 0
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: yeah that class sucked gotta go see ya later
+      charmImpacts: []
+      daisyBranches: []
+    - branchName: Low
+      minValue: 0
+      maxValue: 0
+      requiresIntroFalse: 0
+      charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: haha yeah. Not exactly the most exciting class I've ever been to.
+      charmImpacts: []
+      daisyBranches: []
+    - branchName: Neutral
+      minValue: 0
+      maxValue: 0
+      requiresIntroFalse: 0
+      charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: Seriously haha. Ugh 5th period is the absolute worst.
+      charmImpacts: []
+      daisyBranches: []
+    - branchName: Positive
+      minValue: 0
+      maxValue: 0
+      requiresIntroFalse: 0
+      charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: I know right. It's like all that guy thinks about is the Roman Empire
+          haha. He needs some new hobbies.
+      charmImpacts: []
+      daisyBranches: []
+    - branchName: High
+      minValue: 0
+      maxValue: 0
+      requiresIntroFalse: 0
+      charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 0
+        line: HAHAH right?! He is so boring I want to DIE every time 5th period rolls
+          around. HAHA you're hilarious!
+      charmImpacts: []
+      daisyBranches: []
