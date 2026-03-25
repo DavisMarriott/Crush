@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     public InputActionReference move;
     [SerializeField] private AnimationTriggerPlayer animTrigger;
     private bool _wasMoving = false;
-    private string _lastPose = "";
 
     void Awake()
     {
@@ -38,31 +37,18 @@ public class PlayerMovement : MonoBehaviour
             bool isMoving = moveInput.x != 0;
         
             //animation control
-                //if player is pressing a or d, enter walk state
+            //if player is pressing a or d, enter walk state
             if (isMoving && !_wasMoving)
                 animTrigger.Walk();
             else if (!isMoving && _wasMoving)
             {
                 animTrigger.Default();
             }
-            
-            if (confidenceState.inConversation) // This is not triggering at the moment
-            {
-                //tweak these numbers to edit confidence range/pose pairing
-                //grabs first true condition
-                if (confidenceState.confidence <= 0) 
-                    animTrigger.EnterDeathOne();
-                if (confidenceState.confidence <= 3) 
-                    animTrigger.EnterStateThree();
-                if (confidenceState.confidence <= 6) 
-                    animTrigger.EnterStateTwo();
-                if (confidenceState.confidence <= 9) 
-                    animTrigger.EnterStateTwo();
-                if (confidenceState.confidence <= 12) 
-                    animTrigger.EnterStateOne();
-                if (confidenceState.confidence <= 15) 
-                    animTrigger.EnterStateOne();
-            }
+
+            // Calls the GetConfidencePose method defined below, but not currently working correctly.
+            // Don't think that calling this method in Update() is the right place for it, but unsure where to move it.
+            if (confidenceState.inConversation)
+                GetConfidencePose();
             
             else
                 _wasMoving = isMoving;
@@ -72,27 +58,35 @@ public class PlayerMovement : MonoBehaviour
         //     horizontalInput = Input.GetAxisRaw("Horizontal"); // Get raw input (-1, 0, or 1)
         // }
     }
+    
+    // Set InConversation to true
+    public void InConversation()
+    {
+        confidenceState.inConversation = true;
+        maxSpeed = 0;
+        moveInput = Vector2.zero;
+    }
+    
 
     // this method controls the boy's confidence poses - calls methods define in AnimationTriggerPlayer.
-    // moved this all into Update to test
-     // public void GetConfidencePose()
-     // {
-     //     int c = confidenceState.confidence;
-     //     //tweak these numbers to edit confidence range/pose pairing
-     //     //grabs first true condition
-     //     if (c <= 0) 
-     //         animTrigger.EnterDeathOne();
-     //     if (c <= 3) 
-     //         animTrigger.EnterStateThree();
-     //     if (c <= 6) 
-     //         animTrigger.EnterStateTwo();
-     //     if (c <= 9) 
-     //         animTrigger.EnterStateTwo();
-     //     if (c <= 12) 
-     //         animTrigger.EnterStateOne();
-     //     if (c <= 15) 
-     //         animTrigger.EnterStateOne();
-     // }
+    // Not currently working correctly.
+     public void GetConfidencePose()
+     {
+         //tweak these numbers to edit confidence range/pose pairing
+         //grabs first true condition
+         if (confidenceState.confidence <= 0) 
+             animTrigger.EnterDeathOne();
+         if (confidenceState.confidence <= 3) 
+             animTrigger.EnterStateThree();
+         if (confidenceState.confidence <= 6) 
+             animTrigger.EnterStateTwo();
+         if (confidenceState.confidence <= 9) 
+             animTrigger.EnterStateTwo();
+         if (confidenceState.confidence <= 12) 
+             animTrigger.EnterStateOne();
+         if (confidenceState.confidence <= 15) 
+             animTrigger.EnterStateOne();
+     }
     
     void FixedUpdate()
     {
