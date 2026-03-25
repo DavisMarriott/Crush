@@ -65,6 +65,11 @@ public class AnimationTriggerPlayer : MonoBehaviour
         
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         
+        if ( stateInfo.IsName("Player_State01_CYCLE") )
+        {
+            animator.Play("Player_State01_CYCLE", 0);
+        }
+        
         if ( stateInfo.IsName("Player_State02_CYCLE") )
         {
             animator.Play("Player_State02_to_State01", 0);
@@ -81,6 +86,11 @@ public class AnimationTriggerPlayer : MonoBehaviour
     {
         
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        
+        if ( stateInfo.IsName("Player_State02_CYCLE") )
+        {
+            animator.Play("Player_State02_CYCLE", 0);
+        }
         
         if ( stateInfo.IsName("Player_State01_CYCLE") )
         {
@@ -99,6 +109,11 @@ public class AnimationTriggerPlayer : MonoBehaviour
         
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         
+        if ( stateInfo.IsName("Player_State03_CYCLE") )
+        {
+            animator.Play("Player_State03_CYCLE", 0);
+        }
+        
         if ( stateInfo.IsName("Player_State01_CYCLE") )
         {
             animator.Play("Player_State01_to_State03", 0);
@@ -115,6 +130,11 @@ public class AnimationTriggerPlayer : MonoBehaviour
     {
         
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        
+        if ( stateInfo.IsName("Player_Death01_CYCLE") )
+        {
+            animator.Play("Player_Death01_CYCLE", 0);
+        }
         
         if ( stateInfo.IsName("Player_State01_CYCLE") )
         {

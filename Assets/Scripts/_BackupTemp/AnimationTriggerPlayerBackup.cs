@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AnimationTriggerPlayer : MonoBehaviour
+public class AnimationTriggerPlayerBackup : MonoBehaviour
 {
     // I think this just lets us access the animator attached to the game object (our character)
     private Animator animator;

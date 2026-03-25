@@ -45,8 +45,27 @@ public class PlayerMovement : MonoBehaviour
             {
                 animTrigger.Default();
             }
-    
-            _wasMoving = isMoving;
+            
+            if (confidenceState.inConversation) // This is not triggering at the moment
+            {
+                //tweak these numbers to edit confidence range/pose pairing
+                //grabs first true condition
+                if (confidenceState.confidence <= 0) 
+                    animTrigger.EnterDeathOne();
+                if (confidenceState.confidence <= 3) 
+                    animTrigger.EnterStateThree();
+                if (confidenceState.confidence <= 6) 
+                    animTrigger.EnterStateTwo();
+                if (confidenceState.confidence <= 9) 
+                    animTrigger.EnterStateTwo();
+                if (confidenceState.confidence <= 12) 
+                    animTrigger.EnterStateOne();
+                if (confidenceState.confidence <= 15) 
+                    animTrigger.EnterStateOne();
+            }
+            
+            else
+                _wasMoving = isMoving;
         }
         
         // {
@@ -54,25 +73,26 @@ public class PlayerMovement : MonoBehaviour
         // }
     }
 
-    // this method controls the boy's confidence poses
-     private void GetConfidencePose()
-     {
-         int c = confidenceState.confidence;
-         //tweak these numbers to edit confidence range/pose pairing
-         //grabs first true condition
-         if (c <= 0) 
-             animTrigger.EnterDeathOne();
-         if (c <= 3) 
-             animTrigger.EnterStateThree();
-         if (c <= 6) 
-             animTrigger.EnterStateTwo();
-         if (c <= 9) 
-             animTrigger.EnterStateTwo();
-         if (c <= 12) 
-             animTrigger.EnterStateOne();
-         if (c <= 15) 
-             animTrigger.EnterStateOne();
-     }
+    // this method controls the boy's confidence poses - calls methods define in AnimationTriggerPlayer.
+    // moved this all into Update to test
+     // public void GetConfidencePose()
+     // {
+     //     int c = confidenceState.confidence;
+     //     //tweak these numbers to edit confidence range/pose pairing
+     //     //grabs first true condition
+     //     if (c <= 0) 
+     //         animTrigger.EnterDeathOne();
+     //     if (c <= 3) 
+     //         animTrigger.EnterStateThree();
+     //     if (c <= 6) 
+     //         animTrigger.EnterStateTwo();
+     //     if (c <= 9) 
+     //         animTrigger.EnterStateTwo();
+     //     if (c <= 12) 
+     //         animTrigger.EnterStateOne();
+     //     if (c <= 15) 
+     //         animTrigger.EnterStateOne();
+     // }
     
     void FixedUpdate()
     {
