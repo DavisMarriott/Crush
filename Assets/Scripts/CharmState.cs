@@ -26,7 +26,7 @@ public class CharmState : MonoBehaviour
         if (label != null)
             label.text = $"{charm}";
         
-        // you die if death hits 0
+        // you die if death hits 0ƒ
         if (charm <= 0)
         {
             confidenceState.confidence = 0;

@@ -11,10 +11,7 @@ using UnityEditor;
 
 public class DebugMenu : MonoBehaviour
 {
-    // ─── TEST MODE ───────────────────────────────────────────────
-    // Check this box to skip the walk-up and go straight to conversation.
-    // When unchecked, the debug menu still works (B key) but doesn't
-    // override the normal game flow.
+    // test mode - check this to skip the hallway walk and jump to conversation
     [Header("Test Mode")]
     [SerializeField] private bool testMode = false;
     [SerializeField] private CinemachineCamera conversationCamera;
@@ -24,7 +21,6 @@ public class DebugMenu : MonoBehaviour
     [SerializeField] private Transform normalSpawnPoint;
     [SerializeField] private Transform playerTransform;
 
-    // ─── SYSTEM REFERENCES (drag in Inspector) ─────────────────
     [Header("System References")]
     [SerializeField] private ConfidenceState confidenceState;
     [SerializeField] private CharmState charmState;
@@ -33,30 +29,25 @@ public class DebugMenu : MonoBehaviour
     [SerializeField] private DialogueBox dialogueBox;
     [SerializeField] private GameObject thoughtBubble;
 
-    // ─── UI PANELS ─────────────────────────────────────────────
     [Header("UI Panels")]
     [SerializeField] private GameObject debugMenuPanel;
 
-    // ─── GLOBAL SETTINGS UI ────────────────────────────────────
     [Header("Global Settings")]
     [SerializeField] private TMP_InputField startingConfidenceInput;
     [SerializeField] private TMP_InputField startingCharmInput;
     [SerializeField] private TMP_InputField handSizeInput;
 
-    // ─── DECK MANAGEMENT UI ────────────────────────────────────
     [Header("Deck Management")]
     [SerializeField] private Transform deckListContainer;
     [SerializeField] private Transform availableCardsContainer;
     [SerializeField] private Button cardButtonPrefab;
 
-    // ─── CARD EDITOR UI ────────────────────────────────────────
     [Header("Card Editor")]
     [SerializeField] private GameObject cardEditorPanel;
     [SerializeField] private TMP_Text cardEditorTitle;
     [SerializeField] private TMP_InputField costInput;
     [SerializeField] private Button saveCardButton;
 
-    // ─── START BUTTON ──────────────────────────────────────────
     [Header("Start")]
     [SerializeField] private Button startButton;
 
@@ -67,11 +58,10 @@ public class DebugMenu : MonoBehaviour
 
     void Awake()
     {
-        // Find all DialogueCard assets in the project
+        // grab all card assets
         allCards = Resources.LoadAll<DialogueCard>("");
 
-        // If Resources.LoadAll finds nothing, try finding them manually
-        // Cards need to be in a Resources folder, OR we load them in editor
+        // fallback for editor - cards aren't in a Resources folder so grab them manually
         #if UNITY_EDITOR
         if (allCards == null || allCards.Length == 0)
         {
@@ -101,8 +91,7 @@ public class DebugMenu : MonoBehaviour
     {
         if (testMode)
         {
-            // Open the debug menu immediately so you can configure before playing
-            // (EnterMode will run when you hit Start in the menu)
+            // tell confidence state we're in test mode so death opens this menu instead of draft UI
             confidenceState.testMode = true;
             confidenceState.debugMenu = this;
             OpenMenu();
@@ -113,16 +102,13 @@ public class DebugMenu : MonoBehaviour
     {
     }
 
-    // ─── OPEN / CLOSE ──────────────────────────────────────────
-
     public void OpenMenu()
     {
         isOpen = true;
         debugMenuPanel.SetActive(true);
         Time.timeScale = 0f;
 
-        // Only populate starting values on first open;
-        // after death, keep whatever the player last typed in
+        // only set defaults on first open - after death, keep whatever was typed in
         if (firstOpen)
         {
             if (startingConfidenceInput != null)
@@ -145,30 +131,31 @@ public class DebugMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    // ─── START GAME ────────────────────────────────────────────
-
     private void StartGame()
     {
-        // Apply global settings and reset death state
+        // read and apply settings from input fields
         int conf = 3;
+        charmState.ResetCharm();
         if (int.TryParse(startingConfidenceInput.text, out int parsedConf))
             conf = parsedConf;
         confidenceState.ResetForNewGame(conf);
 
         if (int.TryParse(startingCharmInput.text, out int chrm))
             charmState.charm = chrm;
-
-        // Reset deck and redraw hand
+        
+        if (int.TryParse(handSizeInput.text, out int parsedHand))
+            deckManager.startingHandSize = parsedHand;
         deckManager.ResetDeck();
-        charmState.ResetCharm();
 
-        // Clean up any stuck dialogue state
+        
+
+        // close dialogue if it's stuck open from last round
         if (dialogueBox != null)
             dialogueBox.CloseDialogueBox();
         if (thoughtBubble != null)
             thoughtBubble.SetActive(true);
 
-        // Test mode: skip walk-up, jump straight to conversation
+        // in test mode, skip the walk and go straight to conversation
         if (testMode)
         {
             if (testSpawnPoint != null && playerTransform != null)
@@ -181,22 +168,18 @@ public class DebugMenu : MonoBehaviour
         }
 
         CloseMenu();
-
-        // Rebuild the hand UI
         thoughtSpawner.SpawnButtons();
     }
-
-    // ─── DECK LIST (cards currently in your deck) ──────────────
 
     private void RefreshDeckList()
     {
         if (deckListContainer == null || cardButtonPrefab == null) return;
 
-        // Clear old buttons
+        // clear old buttons
         for (int i = deckListContainer.childCount - 1; i >= 0; i--)
             Destroy(deckListContainer.GetChild(i).gameObject);
 
-        // Combine deck + hand + discard to show all owned cards
+        // deck + hand + discard = all owned cards
         List<DialogueCard> owned = new List<DialogueCard>();
         if (deckManager.Deck != null) owned.AddRange(deckManager.Deck);
         if (deckManager.Hand != null) owned.AddRange(deckManager.Hand);
@@ -211,23 +194,18 @@ public class DebugMenu : MonoBehaviour
             var capturedCard = card;
             btn.onClick.AddListener(() =>
             {
-                // Click to edit, long explanation: opens the card editor panel
                 OpenCardEditor(capturedCard);
             });
         }
     }
 
-    // ─── AVAILABLE CARDS (all cards not in deck) ───────────────
-
     private void RefreshAvailableCards()
     {
         if (availableCardsContainer == null || cardButtonPrefab == null) return;
 
-        // Clear old buttons
         for (int i = availableCardsContainer.childCount - 1; i >= 0; i--)
             Destroy(availableCardsContainer.GetChild(i).gameObject);
 
-        // Get all owned cards
         List<DialogueCard> owned = new List<DialogueCard>();
         if (deckManager.Deck != null) owned.AddRange(deckManager.Deck);
         if (deckManager.Hand != null) owned.AddRange(deckManager.Hand);
@@ -254,8 +232,6 @@ public class DebugMenu : MonoBehaviour
         }
     }
 
-    // ─── CARD EDITOR ───────────────────────────────────────────
-
     private void OpenCardEditor(DialogueCard card)
     {
         selectedCard = card;
@@ -269,11 +245,10 @@ public class DebugMenu : MonoBehaviour
     {
         if (selectedCard == null) return;
 
-        // Update cost
         if (int.TryParse(costInput.text, out int newCost))
             selectedCard.cost = newCost;
 
-        // Save to asset file so changes persist
+        // mark dirty so Unity saves the change to the asset file
         #if UNITY_EDITOR
         EditorUtility.SetDirty(selectedCard);
         AssetDatabase.SaveAssets();
@@ -282,13 +257,10 @@ public class DebugMenu : MonoBehaviour
         RefreshDeckList();
     }
 
-    // ─── REMOVE CARD FROM DECK ─────────────────────────────────
-
     public void RemoveSelectedCardFromDeck()
     {
         if (selectedCard == null) return;
 
-        // Remove from deck list
         if (deckManager.Deck != null)
             deckManager.Deck.Remove(selectedCard);
         if (deckManager.Hand != null)

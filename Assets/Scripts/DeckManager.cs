@@ -5,7 +5,7 @@ public class DeckManager : MonoBehaviour
 {
     [SerializeField] private DialogueCard[] draftPool;
     [SerializeField] private DialogueCard[] startingDeck;
-    [SerializeField] private int startingHandSize = 4;
+    public int startingHandSize = 4;
     
     private List<DialogueCard> deck;
     private List<DialogueCard> hand;

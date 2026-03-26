@@ -9,7 +9,7 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private InputActionReference nextLineAction;
     [SerializeField] private TMP_Text dialogueText;
-    [SerializeField] private ConfidenceState confidenceState; 
+    [SerializeField] private ConfidenceState confidenceState;
     [SerializeField] private DeckManager deckManager;
     [SerializeField] private ThoughtSpawner thoughtSpawner;
     [SerializeField] private CharmState charmState;
@@ -21,28 +21,28 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private Color boyTextColor = Color.white;
     [SerializeField] private Color girlTextColor = new Color(1f, 0.7f, 0.8f);
     [SerializeField] private Color boyInternalTextColor = Color.gray;
-    
+
 
     public void Start()
     {
         _dialogueTiming = GetComponent<DialogueTiming>();
         CloseDialogueBox();
     }
-   
+
     private void OnEnable()  => nextLineAction.action.Enable();
     private void OnDisable() => nextLineAction.action.Disable();
-   
+
 
     public void ShowDialogue(DialogueCard dialogueCard)
     {
         var lukeBranch = dialogueCard.GetLukeBranch(confidenceState.confidence, confidenceState.introMade);
-  
+
         if (lukeBranch == null || lukeBranch.dialogue == null || lukeBranch.dialogue.Length == 0)
         {
             Debug.LogWarning($"No valid Luke branch for confidence {confidenceState.confidence} on card {dialogueCard.previewText}");
             return;
         }
-  
+
         dialogueBox.SetActive(true);
         thoughtBubble.SetActive(false);
         StartCoroutine(StepThroughDialogue(dialogueCard, lukeBranch));
@@ -50,7 +50,7 @@ public class DialogueBox : MonoBehaviour
 
     private IEnumerator StepThroughDialogue(DialogueCard dialogueCard, DialogueCard.DialogueBranch lukeBranch)
     {
-        // Phase 1-2: Luke's lines (Execution)
+        // Luke's lines
         foreach (DialogueCard.DialogueLine line in lukeBranch.dialogue)
         {
             SetSpeakerIndicator(line.character);
@@ -60,12 +60,12 @@ public class DialogueBox : MonoBehaviour
             yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
         }
 
-        // Phase 4: Apply charm impact from this Luke branch
+        // apply charm impact based on current charm state
         DialogueCard.CharmState currentCharmState = GetCurrentCharmState(charmState.charm);
         int charmImpact = lukeBranch.GetCharmImpact(currentCharmState);
         charmState.charm += charmImpact;
 
-        // Phase 5-6: Daisy's response (from this Luke branch, based on new charm)
+        // Daisy's response (picked by charm score after Luke's impact)
         var daisyBranch = lukeBranch.GetDaisyBranch(charmState.charm);
 
         if (daisyBranch != null && daisyBranch.dialogue != null && daisyBranch.dialogue.Length > 0)
@@ -89,9 +89,9 @@ public class DialogueBox : MonoBehaviour
         CloseDialogueBox();
     }
 
+    // figure out which charm state bucket the current charm value falls into
     private DialogueCard.CharmState GetCurrentCharmState(int charm)
     {
-        // Check each state's range to find which one the charm value falls into
         foreach (DialogueCard.CharmState state in System.Enum.GetValues(typeof(DialogueCard.CharmState)))
         {
             DialogueCard.GetCharmRange(state, out int min, out int max);
@@ -100,7 +100,7 @@ public class DialogueBox : MonoBehaviour
         }
         return DialogueCard.CharmState.Neutral;
     }
-    
+
     private void SetSpeakerIndicator(DialogueCard.DialogueCharacter character)
     {
         switch (character)

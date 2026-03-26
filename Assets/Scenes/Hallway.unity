@@ -324,7 +324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1161810281762307539, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.5313756
+      value: -3.5333178
       objectReference: {fileID: 0}
     - target: {fileID: 1476055540710017529, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: Target.TrackingTarget
@@ -1987,7 +1987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7117061288056274065, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: testMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7117061288056274065, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: costInput
@@ -2069,6 +2069,42 @@ PrefabInstance:
       propertyPath: startingConfidenceInput
       value: 
       objectReference: {fileID: 1878438991}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: draftPool.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'draftPool.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e182db554c0c04c2f87cbd7eddc052a5, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'draftPool.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 63cf0a1e1e3e542eead305087b5d8f23, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'draftPool.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 63cf0a1e1e3e542eead305087b5d8f23, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: startingDeck.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'startingDeck.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e0daa4f92aa6e4a58a4a277aa4182840, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'startingDeck.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 347ca79f63e4f483382745c2cf1852df, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'startingDeck.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: ea012e923232f4198ab985c89473a4ee, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'startingDeck.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 02cbdcd2e9af542fab79834ff67a3ae4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2324,6 +2360,18 @@ PrefabInstance:
       propertyPath: deckManager
       value: 
       objectReference: {fileID: 1875503650}
+    - target: {fileID: 5593529959279649573, guid: c8824b2de97e247cebeb6cc86a06bea9, type: 3}
+      propertyPath: boyTextColor.b
+      value: 0.88235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5593529959279649573, guid: c8824b2de97e247cebeb6cc86a06bea9, type: 3}
+      propertyPath: boyTextColor.g
+      value: 0.9529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 5593529959279649573, guid: c8824b2de97e247cebeb6cc86a06bea9, type: 3}
+      propertyPath: boyTextColor.r
+      value: 0.46666667
+      objectReference: {fileID: 0}
     - target: {fileID: 5593529959279649573, guid: c8824b2de97e247cebeb6cc86a06bea9, type: 3}
       propertyPath: nextLineAction
       value: 

@@ -15,22 +15,21 @@ public class ConfidenceState : MonoBehaviour
     [SerializeField] private DraftUI draftUI;
     [SerializeField] private CharmState charmState;
     [SerializeField] private DeckManager deckManager;
-    
+
     [Header("Conversation State")]
     public bool introMade = false;
     public bool inConversation = false;
 
     [HideInInspector] public bool testMode = false;
     [HideInInspector] public DebugMenu debugMenu;
-    
+
     private bool _isDead = false;
     public bool Dead => _isDead;
-    
-    //confidence is in thirds, 45 = 15 full hearts
+
+    // confidence is in thirds, 45 = 15 full hearts
     const int MinConfidenceFullGame = 0;
     const int MaxConfidenceFullGame = 45;
 
-    
     [Header("Starting Confidence (in thirds)")]
     [SerializeField] private int startingConfidence = 3;
 
@@ -38,19 +37,16 @@ public class ConfidenceState : MonoBehaviour
 
     void Start()
     {
-    confidence = startingConfidence;
-    deathScreen.SetActive(false);
+        confidence = startingConfidence;
+        deathScreen.SetActive(false);
     }
-    
-    
-    
-    
+
     private void Update()
     {
-       //displays confidence (in thirds)
         if (label != null)
             label.text = $"{confidence}";
-        //applies clamp to confidence score. Todo: change to only clamp on score change
+
+        // todo: only clamp when score actually changes
         ClampConfidence();
         label.text = $"{confidence}";
 
@@ -60,8 +56,7 @@ public class ConfidenceState : MonoBehaviour
             StartCoroutine(SpawnDeathScreen());
         }
     }
-    
-    
+
     private IEnumerator SpawnDeathScreen()
     {
         yield return new WaitForSeconds(2f);
@@ -72,24 +67,17 @@ public class ConfidenceState : MonoBehaviour
 
         if (testMode)
         {
-            // In test mode, open debug menu directly after death screen.
-            // Don't reset _isDead — the debug menu will reset it
-            // when the player starts a new game.
+            // in test mode, skip draft and reopen debug menu
             if (debugMenu != null)
                 debugMenu.OpenMenu();
             yield break;
         }
 
-        // Show draft UI
         draftUI.ShowDraftOptions();
-
-        // Player drafts a dialogue card
         yield return new WaitUntil(() => !draftUI.gameObject.activeSelf || !draftUI.enabled);
 
-        //respawn with new drafted card
+        // respawn
         thoughtSpawner.SpawnButtons();
-
-        //resets that happen each loop
         boyTransform.position = spawnPoint.position;
         confidence = startingConfidence;
         confidence = startingConfidence;
@@ -98,12 +86,12 @@ public class ConfidenceState : MonoBehaviour
         _isDead = false;
         introMade = false;
     }
+
     void ClampConfidence()
     {
         confidence = Mathf.Clamp(confidence, MinConfidenceFullGame, MaxConfidenceFullGame);
     }
-    
-    //these methods are for the animator to point to for pose setup
+
     public void EnterConversation()
     {
         inConversation = true;
@@ -120,6 +108,4 @@ public class ConfidenceState : MonoBehaviour
         _isDead = false;
         introMade = false;
     }
-    
-    
 }

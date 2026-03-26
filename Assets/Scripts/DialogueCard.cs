@@ -18,8 +18,6 @@ public class DialogueCard : ScriptableObject
 
     public DialogueBranch[] LukeBranches => lukeBranches;
 
-    // ─── ENUMS ──────────────────────────────────────────────────
-
     public enum DialogueCharacter
     {
         Boy,
@@ -44,7 +42,6 @@ public class DialogueCard : ScriptableObject
         High        // 10+
     }
 
-    // ─── RANGE LOOKUPS ──────────────────────────────────────────
 
     public static void GetCharmRange(CharmState state, out int min, out int max)
     {
@@ -73,14 +70,13 @@ public class DialogueCard : ScriptableObject
 
     public static ConfidenceLevel GetConfidenceLevel(int confidence)
     {
-        if (confidence <= 0) return ConfidenceLevel.Low; // shouldn't happen (Death handles <= 0)
+        if (confidence <= 0) return ConfidenceLevel.Low;
         if (confidence <= 3) return ConfidenceLevel.Low;
         if (confidence <= 6) return ConfidenceLevel.Neutral;
         if (confidence <= 9) return ConfidenceLevel.Positive;
         return ConfidenceLevel.High;
     }
 
-    // ─── DATA CLASSES ───────────────────────────────────────────
 
     [System.Serializable]
     public class CharmImpactEntry
@@ -89,9 +85,8 @@ public class DialogueCard : ScriptableObject
         public int impact;
     }
 
-    // DaisyBranch is separate from DialogueBranch to avoid recursive
-    // serialization (DialogueBranch containing DialogueBranch[] would
-    // cause Unity's serializer to hit the depth limit).
+    // separate class from DialogueBranch so Unity's serializer doesn't hit a
+    // recursive depth limit (DialogueBranch used to contain DialogueBranch[])
     [System.Serializable]
     public class DaisyBranch
     {
@@ -112,7 +107,6 @@ public class DialogueCard : ScriptableObject
         [Header("Daisy's Response (charm-based, for this branch)")]
         public DaisyBranch[] daisyBranches;
 
-        // Get the charm impact for a given state from this branch
         public int GetCharmImpact(CharmState currentState)
         {
             if (charmImpacts == null) return 0;
@@ -124,7 +118,7 @@ public class DialogueCard : ScriptableObject
             return 0;
         }
 
-        // Get the Daisy branch that matches the current charm value
+        // find the daisy branch that matches the current charm score
         public DaisyBranch GetDaisyBranch(int charm)
         {
             if (daisyBranches == null || daisyBranches.Length == 0)
@@ -142,22 +136,19 @@ public class DialogueCard : ScriptableObject
         }
     }
 
-    // ─── LUKE BRANCH SELECTION ──────────────────────────────────
     // confidence here is AFTER cost has been deducted by ThoughtSpawner
-
     public DialogueBranch GetLukeBranch(int confidence, bool introMade)
     {
         if (lukeBranches == null || lukeBranches.Length == 0)
             return null;
 
-        // Death: confidence <= 0 after paying cost
+        // dead
         if (confidence <= 0)
             return FindBranchByName("Death", introMade);
 
-        // Check confidence level after cost
         ConfidenceLevel level = GetConfidenceLevel(confidence);
 
-        // Awkward: confidence is Low (1-3) after cost, and an Awkward branch exists
+        // awkward (only if the card has one)
         if (level == ConfidenceLevel.Low)
         {
             DialogueBranch awkward = FindBranchByName("Awkward", introMade);
@@ -165,12 +156,12 @@ public class DialogueCard : ScriptableObject
                 return awkward;
         }
 
-        // Normal: confidence is Neutral+ after cost, OR no Awkward branch exists
+        // normal (or fallback if no awkward)
         DialogueBranch normal = FindBranchByName("Normal", introMade);
         if (normal != null)
             return normal;
 
-        // Fallback: return first branch that passes intro check
+        // last resort - first branch that passes intro check
         for (int i = 0; i < lukeBranches.Length; i++)
         {
             var b = lukeBranches[i];
