@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class DialogueBox : MonoBehaviour
 {
+    [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private InputActionReference nextLineAction;
     [SerializeField] private TMP_Text dialogueText;
@@ -21,6 +22,7 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private Color boyTextColor = Color.white;
     [SerializeField] private Color girlTextColor = new Color(1f, 0.7f, 0.8f);
     [SerializeField] private Color boyInternalTextColor = Color.gray;
+    
 
 
     public void Start()
@@ -57,6 +59,7 @@ public class DialogueBox : MonoBehaviour
             yield return _dialogueTiming.Run(line.line, dialogueText);
             confidenceState.confidence += line.confidenceImpact;
             charmState.charm += line.charmImpact;
+            playerMovement.GetConfidencePose();
             yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
         }
 
@@ -76,6 +79,7 @@ public class DialogueBox : MonoBehaviour
                 yield return _dialogueTiming.Run(line.line, dialogueText);
                 confidenceState.confidence += line.confidenceImpact;
                 charmState.charm += line.charmImpact;
+                playerMovement.GetConfidencePose();
                 yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
             }
         }

@@ -79,6 +79,10 @@ public class AnimationTriggerPlayer : MonoBehaviour
         {
             animator.Play("Player_State03_to_State01", 0);
         }
+        else
+        {
+            animator.Play("Player_State01_CYCLE");
+        }
         
     }
     
@@ -101,14 +105,15 @@ public class AnimationTriggerPlayer : MonoBehaviour
         {
             animator.Play("Player_State03_to_State02", 0);
         }
-        
+        else
+        {
+            animator.Play("Player_State02_CYCLE");
+        }
     }
     
     public void EnterStateThree()
     {
-        
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        
         // if ( stateInfo.IsName("Player_State03_CYCLE") )
         // {
         //     animator.Play("Player_State03_CYCLE", 0);
@@ -122,6 +127,10 @@ public class AnimationTriggerPlayer : MonoBehaviour
         if ( stateInfo.IsName("Player_State02_CYCLE") )
         {
             animator.Play("Player_State02_to_State03", 0);
+        }
+        else
+        {
+            animator.Play("Player_State03_CYCLE");
         }
         
     }

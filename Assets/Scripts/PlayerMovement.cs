@@ -1,5 +1,7 @@
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Debug = UnityEngine.Debug;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -31,6 +33,10 @@ public class PlayerMovement : MonoBehaviour
             // block left movement but keep reading the input for future self-talk triggers
             if (moveInput.x < 0)
                 moveInput.x = 0;
+            
+            
+            if (confidenceState.inConversation)
+                moveInput.x = 0;
 
             bool isMoving = moveInput.x != 0;
 
@@ -40,16 +46,11 @@ public class PlayerMovement : MonoBehaviour
             // stop walking
             else if (!isMoving && _wasMoving)
             {
-                animTrigger.Default();
+                if(!confidenceState.inConversation)
+                    animTrigger.Default();
             }
 
-            // Calls the GetConfidencePose method defined below, but not currently working correctly.
-            // Don't think that calling this method in Update() is the right place for it, but unsure where to move it.
-            if (confidenceState.inConversation)
-                GetConfidencePose();
-
-            else
-                _wasMoving = isMoving;
+            _wasMoving = isMoving;
         }
 
         // {
@@ -61,8 +62,7 @@ public class PlayerMovement : MonoBehaviour
     public void InConversation()
     {
         confidenceState.inConversation = true;
-        maxSpeed = 0;
-        moveInput = Vector2.zero;
+        GetConfidencePose();
     }
 
 
@@ -74,15 +74,14 @@ public class PlayerMovement : MonoBehaviour
          //grabs first true condition
          if (confidenceState.confidence <= 0)
              animTrigger.EnterDeathOne();
-         if (confidenceState.confidence <= 3)
+         else if (confidenceState.confidence <= 3)
+         {
              animTrigger.EnterStateThree();
-         if (confidenceState.confidence <= 6)
+         }
+             
+         else if (confidenceState.confidence <= 9)
              animTrigger.EnterStateTwo();
-         if (confidenceState.confidence <= 9)
-             animTrigger.EnterStateTwo();
-         if (confidenceState.confidence <= 12)
-             animTrigger.EnterStateOne();
-         if (confidenceState.confidence <= 15)
+         else
              animTrigger.EnterStateOne();
      }
 

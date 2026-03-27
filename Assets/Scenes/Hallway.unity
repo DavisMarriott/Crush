@@ -1987,7 +1987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7117061288056274065, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: testMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7117061288056274065, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: costInput
@@ -2087,20 +2087,20 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 63cf0a1e1e3e542eead305087b5d8f23, type: 2}
     - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: startingDeck.Array.size
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: 'startingDeck.Array.data[3]'
       value: 
-      objectReference: {fileID: 11400000, guid: e0daa4f92aa6e4a58a4a277aa4182840, type: 2}
+      objectReference: {fileID: 11400000, guid: 02cbdcd2e9af542fab79834ff67a3ae4, type: 2}
     - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: 'startingDeck.Array.data[4]'
       value: 
-      objectReference: {fileID: 11400000, guid: 347ca79f63e4f483382745c2cf1852df, type: 2}
+      objectReference: {fileID: 11400000, guid: 02cbdcd2e9af542fab79834ff67a3ae4, type: 2}
     - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: 'startingDeck.Array.data[5]'
       value: 
-      objectReference: {fileID: 11400000, guid: ea012e923232f4198ab985c89473a4ee, type: 2}
+      objectReference: {fileID: 11400000, guid: 02cbdcd2e9af542fab79834ff67a3ae4, type: 2}
     - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: 'startingDeck.Array.data[6]'
       value: 
@@ -2272,10 +2272,26 @@ PrefabInstance:
       propertyPath: boyTransform
       value: 
       objectReference: {fileID: 122801679}
+    - target: {fileID: 1950854381248938284, guid: c8824b2de97e247cebeb6cc86a06bea9, type: 3}
+      propertyPath: startingConfidence
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2574323628166432841, guid: c8824b2de97e247cebeb6cc86a06bea9, type: 3}
       propertyPath: deckManager
       value: 
       objectReference: {fileID: 1875503650}
+    - target: {fileID: 3101779896991857052, guid: c8824b2de97e247cebeb6cc86a06bea9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -28.624268
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652576523842003087, guid: c8824b2de97e247cebeb6cc86a06bea9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 40.135254
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652576523842003087, guid: c8824b2de97e247cebeb6cc86a06bea9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -35.624268
+      objectReference: {fileID: 0}
     - target: {fileID: 4942417032453421881, guid: c8824b2de97e247cebeb6cc86a06bea9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2376,6 +2392,10 @@ PrefabInstance:
       propertyPath: nextLineAction
       value: 
       objectReference: {fileID: 2109906521}
+    - target: {fileID: 5593529959279649573, guid: c8824b2de97e247cebeb6cc86a06bea9, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 2036124710}
     - target: {fileID: 6170896716637804265, guid: c8824b2de97e247cebeb6cc86a06bea9, type: 3}
       propertyPath: m_Name
       value: HUD
