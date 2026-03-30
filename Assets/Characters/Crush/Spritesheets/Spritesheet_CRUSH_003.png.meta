@@ -1,0 +1,1159 @@
+fileFormatVersion: 2
+guid: e74b2b99b4ea445989d68ffcc8b48650
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5353159055896056419
+    second: Spritesheet_CRUSH_003_0
+  - first:
+      213: 328952617990541691
+    second: Spritesheet_CRUSH_003_1
+  - first:
+      213: -6806090539219061029
+    second: Spritesheet_CRUSH_003_2
+  - first:
+      213: 4722349654552839887
+    second: Spritesheet_CRUSH_003_3
+  - first:
+      213: -4044556637522537737
+    second: Spritesheet_CRUSH_003_4
+  - first:
+      213: 1971353061610249644
+    second: Spritesheet_CRUSH_003_5
+  - first:
+      213: -6723642752394166544
+    second: Spritesheet_CRUSH_003_6
+  - first:
+      213: 2420523646900883192
+    second: Spritesheet_CRUSH_003_7
+  - first:
+      213: -6495065571602354729
+    second: Spritesheet_CRUSH_003_8
+  - first:
+      213: -2845626706849585355
+    second: Spritesheet_CRUSH_003_9
+  - first:
+      213: 5483685227589879457
+    second: Spritesheet_CRUSH_003_10
+  - first:
+      213: 1491239357998903976
+    second: Spritesheet_CRUSH_003_11
+  - first:
+      213: 5678428818214653692
+    second: Spritesheet_CRUSH_003_12
+  - first:
+      213: 2413662416054133585
+    second: Spritesheet_CRUSH_003_13
+  - first:
+      213: 2249798287053004435
+    second: Spritesheet_CRUSH_003_14
+  - first:
+      213: 4311586203702343372
+    second: Spritesheet_CRUSH_003_15
+  - first:
+      213: -2933964076990974239
+    second: Spritesheet_CRUSH_003_16
+  - first:
+      213: -5615542487247279621
+    second: Spritesheet_CRUSH_003_17
+  - first:
+      213: 2998469553570026115
+    second: Spritesheet_CRUSH_003_18
+  - first:
+      213: -1928553604255660831
+    second: Spritesheet_CRUSH_003_19
+  - first:
+      213: 570860400427275164
+    second: Spritesheet_CRUSH_003_20
+  - first:
+      213: 4836022333430537449
+    second: Spritesheet_CRUSH_003_21
+  - first:
+      213: 2884609472711602912
+    second: Spritesheet_CRUSH_003_22
+  - first:
+      213: 2749268324564352037
+    second: Spritesheet_CRUSH_003_23
+  - first:
+      213: 2742086401745711044
+    second: Spritesheet_CRUSH_003_24
+  - first:
+      213: -9012762694433652534
+    second: Spritesheet_CRUSH_003_25
+  - first:
+      213: 1096227762612607064
+    second: Spritesheet_CRUSH_003_26
+  - first:
+      213: -2957692519859101792
+    second: Spritesheet_CRUSH_003_27
+  - first:
+      213: -1900549668351637859
+    second: Spritesheet_CRUSH_003_28
+  - first:
+      213: -8022628763721397822
+    second: Spritesheet_CRUSH_003_29
+  - first:
+      213: -6019577693774182010
+    second: Spritesheet_CRUSH_003_30
+  - first:
+      213: 1424754515138021209
+    second: Spritesheet_CRUSH_003_31
+  - first:
+      213: 5441870080751468290
+    second: Spritesheet_CRUSH_003_32
+  - first:
+      213: -9156153840039787321
+    second: Spritesheet_CRUSH_003_33
+  - first:
+      213: 3926204911805434286
+    second: Spritesheet_CRUSH_003_34
+  - first:
+      213: -1153734118387111141
+    second: Spritesheet_CRUSH_003_35
+  - first:
+      213: -4663043705468224212
+    second: Spritesheet_CRUSH_003_36
+  - first:
+      213: -2413836490464938686
+    second: Spritesheet_CRUSH_003_37
+  - first:
+      213: -9095770463804535206
+    second: Spritesheet_CRUSH_003_38
+  - first:
+      213: -4210873615724827762
+    second: Spritesheet_CRUSH_003_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3277
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36299d09ccd3a4a40800000000000000
+      internalID: 5353159055896056419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3277
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b71d247c9aca09400800000000000000
+      internalID: 328952617990541691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3277
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd673bcf6b8eb81a0800000000000000
+      internalID: -6806090539219061029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3277
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc68fc0adf7298140800000000000000
+      internalID: 4722349654552839887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3277
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f2558aca29ded7c0800000000000000
+      internalID: -4044556637522537737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3277
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cad58243a27ab5b10800000000000000
+      internalID: 1971353061610249644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3277
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fe7ae24a82d0b2a0800000000000000
+      internalID: -6723642752394166544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_7
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 3277
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fec5ffae6d679120800000000000000
+      internalID: 2420523646900883192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2458
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dda5c36644ecd5a0800000000000000
+      internalID: -6495065571602354729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2458
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 537adde369d4288d0800000000000000
+      internalID: -2845626706849585355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2458
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a64d8229a6f91c40800000000000000
+      internalID: 5483685227589879457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_11
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2458
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a23b909b42f1b410800000000000000
+      internalID: 1491239357998903976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_12
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2458
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe8600bce4ddce40800000000000000
+      internalID: 5678428818214653692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_13
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2458
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1532e94ed2d0f7120800000000000000
+      internalID: 2413662416054133585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_14
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2458
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e93144f93e83f10800000000000000
+      internalID: 2249798287053004435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_15
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 2458
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc6372afec4d5db30800000000000000
+      internalID: 4311586203702343372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1639
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e6323f77377847d0800000000000000
+      internalID: -2933964076990974239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_17
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1639
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf9238a3cd59112b0800000000000000
+      internalID: -5615542487247279621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_18
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1639
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3829d522c24bc9920800000000000000
+      internalID: 2998469553570026115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_19
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1639
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e4ca0007b66c35e0800000000000000
+      internalID: -1928553604255660831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_20
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1639
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c931ec7728a1ce700800000000000000
+      internalID: 570860400427275164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_21
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1639
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ec9bfd90b00d1340800000000000000
+      internalID: 4836022333430537449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_22
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1639
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2b3b83801380820800000000000000
+      internalID: 2884609472711602912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_23
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1639
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52c34e599fc572620800000000000000
+      internalID: 2749268324564352037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 820
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cf6b7fdd09dd0620800000000000000
+      internalID: 2742086401745711044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_25
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 820
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac0c361c41c3ce280800000000000000
+      internalID: -9012762694433652534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_26
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 820
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 858127f8755963f00800000000000000
+      internalID: 1096227762612607064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_27
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 820
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0afd7fed25a24f6d0800000000000000
+      internalID: -2957692519859101792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_28
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 820
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d960aeb6524ef95e0800000000000000
+      internalID: -1900549668351637859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_29
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 820
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c90e8525a5e9a090800000000000000
+      internalID: -8022628763721397822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_30
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 820
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68989b80bf9267ca0800000000000000
+      internalID: -6019577693774182010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_31
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 820
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9578feeceaeb5c310800000000000000
+      internalID: 1424754515138021209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20f74059108658b40800000000000000
+      internalID: 5441870080751468290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_33
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c48997089ecee080800000000000000
+      internalID: -9156153840039787321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_34
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea98e8bb09eac7630800000000000000
+      internalID: 3926204911805434286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_35
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1ba94c9eec1dffe0800000000000000
+      internalID: -1153734118387111141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_36
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2df17ba47a894fb0800000000000000
+      internalID: -4663043705468224212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_37
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24536ff3084508ed0800000000000000
+      internalID: -2413836490464938686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_38
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5ec07264f455c180800000000000000
+      internalID: -9095770463804535206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_CRUSH_003_39
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1
+        width: 512
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b28a4b1c8ff85c0800000000000000
+      internalID: -4210873615724827762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 630641ae1fd504a0cabe77816c482cfe
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":512.0,"y":819.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Spritesheet_CRUSH_003_0: 5353159055896056419
+      Spritesheet_CRUSH_003_1: 328952617990541691
+      Spritesheet_CRUSH_003_10: 5483685227589879457
+      Spritesheet_CRUSH_003_11: 1491239357998903976
+      Spritesheet_CRUSH_003_12: 5678428818214653692
+      Spritesheet_CRUSH_003_13: 2413662416054133585
+      Spritesheet_CRUSH_003_14: 2249798287053004435
+      Spritesheet_CRUSH_003_15: 4311586203702343372
+      Spritesheet_CRUSH_003_16: -2933964076990974239
+      Spritesheet_CRUSH_003_17: -5615542487247279621
+      Spritesheet_CRUSH_003_18: 2998469553570026115
+      Spritesheet_CRUSH_003_19: -1928553604255660831
+      Spritesheet_CRUSH_003_2: -6806090539219061029
+      Spritesheet_CRUSH_003_20: 570860400427275164
+      Spritesheet_CRUSH_003_21: 4836022333430537449
+      Spritesheet_CRUSH_003_22: 2884609472711602912
+      Spritesheet_CRUSH_003_23: 2749268324564352037
+      Spritesheet_CRUSH_003_24: 2742086401745711044
+      Spritesheet_CRUSH_003_25: -9012762694433652534
+      Spritesheet_CRUSH_003_26: 1096227762612607064
+      Spritesheet_CRUSH_003_27: -2957692519859101792
+      Spritesheet_CRUSH_003_28: -1900549668351637859
+      Spritesheet_CRUSH_003_29: -8022628763721397822
+      Spritesheet_CRUSH_003_3: 4722349654552839887
+      Spritesheet_CRUSH_003_30: -6019577693774182010
+      Spritesheet_CRUSH_003_31: 1424754515138021209
+      Spritesheet_CRUSH_003_32: 5441870080751468290
+      Spritesheet_CRUSH_003_33: -9156153840039787321
+      Spritesheet_CRUSH_003_34: 3926204911805434286
+      Spritesheet_CRUSH_003_35: -1153734118387111141
+      Spritesheet_CRUSH_003_36: -4663043705468224212
+      Spritesheet_CRUSH_003_37: -2413836490464938686
+      Spritesheet_CRUSH_003_38: -9095770463804535206
+      Spritesheet_CRUSH_003_39: -4210873615724827762
+      Spritesheet_CRUSH_003_4: -4044556637522537737
+      Spritesheet_CRUSH_003_5: 1971353061610249644
+      Spritesheet_CRUSH_003_6: -6723642752394166544
+      Spritesheet_CRUSH_003_7: 2420523646900883192
+      Spritesheet_CRUSH_003_8: -6495065571602354729
+      Spritesheet_CRUSH_003_9: -2845626706849585355
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
