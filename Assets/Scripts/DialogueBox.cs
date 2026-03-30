@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class DialogueBox : MonoBehaviour
 {
     [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private AnimationTriggerCrush animationTriggerCrush;
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private InputActionReference nextLineAction;
     [SerializeField] private TMP_Text dialogueText;
@@ -61,6 +62,7 @@ public class DialogueBox : MonoBehaviour
             charmState.charm += line.charmImpact;
             Debug.Log(confidenceState.confidence);
             playerMovement.GetConfidencePose();
+            animationTriggerCrush.GetCharmPose();
             yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
         }
 

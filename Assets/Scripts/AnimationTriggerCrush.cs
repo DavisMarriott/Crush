@@ -4,13 +4,26 @@ public class AnimationTriggerCrush : MonoBehaviour
 {
 
     private Animator animator;
+    [SerializeField] private CharmState charmState;
+    [SerializeField] private ConfidenceState confidenceState;
 
     void Start()
     {
         animator = GetComponent<Animator>();
     }
+
+
+    // void Update()
+    // {
+    //     // Check inConversation - if true, run call GetCharmPose()
+    //     // DAVIS - I Don't think this should be running here.
+    //     if (confidenceState.inConversation)
+    //     {
+    //         GetCharmPose();
+    //     }  
+    // }
     
-    // STARTING ANIMATION //
+    // BEGINNING ANIMATION //
     public void Begin()
     {
             animator.Play("Crush_Start_CYCLE", 0);
@@ -26,20 +39,20 @@ public class AnimationTriggerCrush : MonoBehaviour
             animator.Play("Crush_Start_to_Neutral", 0);
         }
 
-        if (stateInfo.IsName("Crush_Negative01_CYCLE"))
+        else if (stateInfo.IsName("Crush_Negative01_CYCLE"))
         {
             animator.Play("Crush_Negative01_to_Neutral", 0);
         }
 
-        if (stateInfo.IsName("Crush_Positive01_CYCLE"))
+        else if (stateInfo.IsName("Crush_Positive01_CYCLE"))
         {
             animator.Play("Crush_Positive01_to_Neutral", 0);
         }
 
-        // else
-        // {
-        // animator.Play("Crush_Neutral_CYCLE", 0);
-        // }
+        else
+        {
+        animator.Play("Crush_Neutral_CYCLE", 0);
+        }
 }
     
     public void NegativeOne()
@@ -51,15 +64,15 @@ public class AnimationTriggerCrush : MonoBehaviour
             animator.Play("Crush_Neutral_to_Negative01", 0);
         }
         
-        if (stateInfo.IsName("Crush_Negative02_CYCLE")) 
+        else if (stateInfo.IsName("Crush_Negative02_CYCLE")) 
         {
             animator.Play("Crush_Negative02_to_Negative01", 0);
         }
 
-        // else
-        // {
-        //     animator.Play("Crush_Negative01_CYCLE", 0); 
-        // }
+        else
+        {
+            animator.Play("Crush_Negative01_CYCLE", 0); 
+        }
 
     }
     
@@ -72,10 +85,10 @@ public class AnimationTriggerCrush : MonoBehaviour
             animator.Play("Crush_Negative01_to_Negative02", 0);
         }
         
-        // else
-        // {
-        //     animator.Play("Crush_Negative02_CYCLE", 0);
-        // }
+        else
+        {
+            animator.Play("Crush_Negative02_CYCLE", 0);
+        }
     }
     
     public void PositiveOne()
@@ -87,15 +100,15 @@ public class AnimationTriggerCrush : MonoBehaviour
             animator.Play("Crush_Neutral_to_Positive01", 0);
         }
         
-        if (stateInfo.IsName("Crush_Positive02_CYCLE")) 
+        else if (stateInfo.IsName("Crush_Positive02_CYCLE")) 
         {
             animator.Play("Crush_Positive02_to_Positive01", 0);
         }
         
-        // else
-        // {
-        //     animator.Play("Crush_Positive01_CYCLE", 0);
-        // }
+        else
+        {
+            animator.Play("Crush_Positive01_CYCLE", 0);
+        }
     }
     
     public void PositiveTwo()
@@ -107,11 +120,32 @@ public class AnimationTriggerCrush : MonoBehaviour
             animator.Play("Crush_Positive01_to_Positive02", 0);
         }
         
-        // else
-        // {
-        //     animator.Play("Crush_Positive02_CYCLE", 0);
-        // }
+        else
+        {
+            animator.Play("Crush_Positive02_CYCLE", 0);
+        }
     }
     
+    
+    // CHARM POSE //
+    
+    public void GetCharmPose()
+    {
+        //tweak these numbers to edit charm range/pose pairing
+        //grabs first true condition
+        if (charmState.charm <= 0)
+            NegativeTwo();
+            
+        else if (charmState.charm <= 3)
+            NegativeOne();
+        
+        else if (charmState.charm <= 6)
+            Neutral();
+             
+        else if (charmState.charm <= 9)
+            PositiveOne();
+        else
+            PositiveTwo();
+    }
     
 }

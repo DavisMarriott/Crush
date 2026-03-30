@@ -4,9 +4,6 @@ public class AnimationTriggerPlayer : MonoBehaviour
 {
     // I think this just lets us access the animator attached to the game object (our character)
     private Animator animator;
-    // This lets us assign a ConfidenceIncrementer through inspector. This was a temp solution to demo the concept.
-    // We'll probably want to replace this with our health/confidence script.
-    //public ConfidenceIncrementer confidenceIncrementer;
 
     void Start()
     {
@@ -14,20 +11,12 @@ public class AnimationTriggerPlayer : MonoBehaviour
         animator = GetComponent<Animator>();
     }
     
-    // Below is the start of writing custom methods to trigger animations with custom transition animations.
-    // In the demo scene "CharacterSetup_Protagonist" only WALK and DEFAULT buttons use these methods.
-    // The other buttons use standard Unity method "Animator.Play (String)" and the animation name is then typed into inspector.
-    // That should ultimately be replaced with this new method.
-    
     // WALK //
     public void Walk()
     {
-        // This gets the current animation state info
+
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         
-        // If we're in Default, Walk() will play the transition animation "Player_Default_to_Walk".
-        // The way the animator is set up, Player_Walk will automatically play after.
-        // We can use this method for all transition animations. 
         if (stateInfo.IsName("Player_Start_CYCLE"))
         {
             animator.Play("Player_Start_to_Walk", 0);
@@ -159,7 +148,6 @@ public class AnimationTriggerPlayer : MonoBehaviour
         {
             animator.Play("Player_State03_to_Death01", 0);
         }
-        
         
     }
     

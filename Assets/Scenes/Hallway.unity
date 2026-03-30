@@ -315,12 +315,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1066025724806284937, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066025724806284937, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2036124710}
+    - target: {fileID: 1066025724806284937, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066025724806284937, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066025724806284937, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AnimationTriggerCrush, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1161810281762307539, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.5313942
+      value: -3.5347636
       objectReference: {fileID: 0}
     - target: {fileID: 1476055540710017529, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: Target.TrackingTarget
@@ -1349,6 +1365,17 @@ Transform:
   - {fileID: 804353985}
   m_Father: {fileID: 1403284933}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1561869875 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6841466225628003991, guid: d016b84d0091a4db6aeb957c9a023e3f, type: 3}
+  m_PrefabInstance: {fileID: 7932166120207510685}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0237be4666b4e4eb6a05d16d65261e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!114 &1610376219 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 938573746943008826, guid: 3e9db6356aa654891a41cef1c7232bf0, type: 3}
@@ -1516,6 +1543,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
+--- !u!1 &1748535993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1418214156265520326, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
+  m_PrefabInstance: {fileID: 1748535992}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1804901508
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,6 +1784,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1870375414 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8487344155764405582, guid: 624e488fe14e646838c9376c7c24b162, type: 3}
+  m_PrefabInstance: {fileID: 1726535310502954220}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d303665b443e4885b37bc8a43e1c1f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThoughtListPopulator
 --- !u!1001 &1875503648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2612,6 +2655,10 @@ PrefabInstance:
       value: CharmLabel
       objectReference: {fileID: 0}
     - target: {fileID: 3893864421657992136, guid: e9d3d89ced4b742eab69db4e00bef4d3, type: 3}
+      propertyPath: startingCharm
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893864421657992136, guid: e9d3d89ced4b742eab69db4e00bef4d3, type: 3}
       propertyPath: confidenceState
       value: 
       objectReference: {fileID: 1056035271448750366}
@@ -2887,18 +2934,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2343263600544527131, guid: d016b84d0091a4db6aeb957c9a023e3f, type: 3}
-      propertyPath: m_Offset.y
-      value: 6.53
-      objectReference: {fileID: 0}
     - target: {fileID: 5329792842566111081, guid: d016b84d0091a4db6aeb957c9a023e3f, type: 3}
       propertyPath: DialogueUI
       value: 
       objectReference: {fileID: 1165197825}
-    - target: {fileID: 5329792842566111081, guid: d016b84d0091a4db6aeb957c9a023e3f, type: 3}
-      propertyPath: hallwaySelfTalk
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6811545619324586095, guid: d016b84d0091a4db6aeb957c9a023e3f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.13
@@ -2939,6 +2978,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6841466225628003991, guid: d016b84d0091a4db6aeb957c9a023e3f, type: 3}
+      propertyPath: charmState
+      value: 
+      objectReference: {fileID: 1056035271448750364}
+    - target: {fileID: 6841466225628003991, guid: d016b84d0091a4db6aeb957c9a023e3f, type: 3}
+      propertyPath: confidenceState
+      value: 
+      objectReference: {fileID: 1056035271448750366}
     - target: {fileID: 7637342411976346074, guid: d016b84d0091a4db6aeb957c9a023e3f, type: 3}
       propertyPath: m_Name
       value: Character_Crush
@@ -3059,7 +3106,7 @@ PrefabInstance:
     - target: {fileID: 3985097242674001143, guid: 8f22cec600c2f48d5800a9c7b0538689, type: 3}
       propertyPath: thoughtBubble
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1748535993}
     - target: {fileID: 3985097242674001143, guid: 8f22cec600c2f48d5800a9c7b0538689, type: 3}
       propertyPath: nextLineAction
       value: 
@@ -3069,9 +3116,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2036124710}
     - target: {fileID: 3985097242674001143, guid: 8f22cec600c2f48d5800a9c7b0538689, type: 3}
+      propertyPath: thoughtSpawner
+      value: 
+      objectReference: {fileID: 1870375414}
+    - target: {fileID: 3985097242674001143, guid: 8f22cec600c2f48d5800a9c7b0538689, type: 3}
       propertyPath: confidenceState
       value: 
       objectReference: {fileID: 1056035271448750366}
+    - target: {fileID: 3985097242674001143, guid: 8f22cec600c2f48d5800a9c7b0538689, type: 3}
+      propertyPath: animationTriggerCrush
+      value: 
+      objectReference: {fileID: 1561869875}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
