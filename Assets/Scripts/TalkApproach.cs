@@ -6,21 +6,24 @@ public class TalkApproach : MonoBehaviour
 {
 
     public GameObject DialogueUI;
+    [SerializeField] private HallwaySelfTalk hallwaySelfTalk;
 
-    private void Start() 
+    private void Start()
     {
         // Hide UI at the beginning
         DialogueUI.SetActive(false);
     }
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {
+            if (hallwaySelfTalk != null)
+                hallwaySelfTalk.EndHallwayTimer();
             DialogueUI.SetActive(true);
         }
     }
-    
+
     private void OnTriggerExit2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
@@ -28,5 +31,5 @@ public class TalkApproach : MonoBehaviour
             DialogueUI.SetActive(false);
         }
     }
-    
+
 }

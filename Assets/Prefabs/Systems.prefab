@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a88ebe1d69a54164af2a61c787a11cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DebugMenu
-  testMode: 1
+  testMode: 0
   conversationCamera: {fileID: 0}
   hallwayCamera: {fileID: 0}
   dialogueUI: {fileID: 0}
@@ -316,14 +316,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92f68ed49e1914ead9007b7113ac985e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeckManager
-  draftPool:
-  - {fileID: 11400000, guid: ea012e923232f4198ab985c89473a4ee, type: 2}
-  - {fileID: 11400000, guid: 02cbdcd2e9af542fab79834ff67a3ae4, type: 2}
-  - {fileID: 11400000, guid: 63cf0a1e1e3e542eead305087b5d8f23, type: 2}
+  draftPool: []
   startingDeck:
   - {fileID: 11400000, guid: e182db554c0c04c2f87cbd7eddc052a5, type: 2}
   - {fileID: 11400000, guid: c85b7427876af4a97b941a547235f673, type: 2}
   - {fileID: 11400000, guid: 909c0158e545e413fa62b210a7ddef0a, type: 2}
+  - {fileID: 11400000, guid: 02cbdcd2e9af542fab79834ff67a3ae4, type: 2}
   startingHandSize: 4
 --- !u!1 &8602980090176966497
 GameObject:

@@ -164,5 +164,5 @@ MonoBehaviour:
   inConversation: 0
   testMode: 0
   debugMenu: {fileID: 0}
-  startingConfidence: 3
+  startingConfidence: 5
   confidence: 3

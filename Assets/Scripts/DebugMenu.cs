@@ -142,12 +142,12 @@ public class DebugMenu : MonoBehaviour
 
         if (int.TryParse(startingCharmInput.text, out int chrm))
             charmState.charm = chrm;
-        
+
         if (int.TryParse(handSizeInput.text, out int parsedHand))
             deckManager.startingHandSize = parsedHand;
         deckManager.ResetDeck();
 
-        
+
 
         // close dialogue if it's stuck open from last round
         if (dialogueBox != null)
