@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     // private float delayTime;
     public InputActionReference move;
     [SerializeField] private AnimationTriggerPlayer animTrigger;
+    [SerializeField] private AnimationTriggerCrush animationTriggerCrush;
     private bool _wasMoving = false;
 
     void Awake()
@@ -63,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
     {
         confidenceState.inConversation = true;
         GetConfidencePose();
+        animationTriggerCrush.GetCharmPose();
     }
 
 

@@ -79,6 +79,7 @@ public class DialogueBox : MonoBehaviour
             foreach (DialogueCard.DialogueLine line in daisyBranch.dialogue)
             {
                 SetSpeakerIndicator(line.character);
+                animationTriggerCrush.GetCharmPose();
                 yield return _dialogueTiming.Run(line.line, dialogueText);
                 confidenceState.confidence += line.confidenceImpact;
                 charmState.charm += line.charmImpact;

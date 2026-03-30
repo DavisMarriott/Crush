@@ -66,7 +66,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.62, y: 0.62, z: 0.62}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 620228534680445879}
@@ -312,6 +312,7 @@ MonoBehaviour:
   maxSpeed: 4
   move: {fileID: 0}
   animTrigger: {fileID: 5565487545552166279}
+  animationTriggerCrush: {fileID: 0}
 --- !u!114 &5565487545552166279
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1494,6 +1494,10 @@ PrefabInstance:
       propertyPath: confidenceState
       value: 
       objectReference: {fileID: 1056035271448750366}
+    - target: {fileID: 13397708809891304, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
+      propertyPath: animationTriggerCrush
+      value: 
+      objectReference: {fileID: 1561869875}
     - target: {fileID: 288216823463544167, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
       propertyPath: m_Name
       value: Character_Player

@@ -11,17 +11,6 @@ public class AnimationTriggerCrush : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
-
-
-    // void Update()
-    // {
-    //     // Check inConversation - if true, run call GetCharmPose()
-    //     // DAVIS - I Don't think this should be running here.
-    //     if (confidenceState.inConversation)
-    //     {
-    //         GetCharmPose();
-    //     }  
-    // }
     
     // BEGINNING ANIMATION //
     public void Begin()
