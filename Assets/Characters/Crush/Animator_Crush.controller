@@ -1,13 +1,13 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1102 &-5085005279895628419
+--- !u!1102 &-7264088372074583503
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Crush_Angry01
+  m_Name: Crush_Neutral_to_Negative01
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -20,33 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d31cff7419e69454aad38d3486cfe163, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &-4714428148141748876
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Crush_Default
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 13e4f1b80a55c415d91428550c196792, type: 2}
+  m_Motion: {fileID: 7400000, guid: a6f8835aa03f049b7a84b767aa5f3c2c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -62,29 +36,23 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: -4714428148141748876}
-    m_Position: {x: 220, y: -30, z: 0}
+    m_State: {fileID: -641330582070884312}
+    m_Position: {x: 200, y: 0, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: -5085005279895628419}
-    m_Position: {x: 520, y: -90, z: 0}
+    m_State: {fileID: -3085534050713445767}
+    m_Position: {x: 569, y: 422.5, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: -1046779556265347696}
-    m_Position: {x: 520, y: -30, z: 0}
+    m_State: {fileID: 4799865879586195895}
+    m_Position: {x: 326, y: 443.5, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: -2809022984212812211}
-    m_Position: {x: 520, y: 30, z: 0}
+    m_State: {fileID: -7264088372074583503}
+    m_Position: {x: 233, y: 595.5, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 8246628303602692077}
-    m_Position: {x: 520, y: 90, z: 0}
+    m_State: {fileID: -3034885593247627853}
+    m_Position: {x: 747, y: -55.5, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 6456001122185118012}
-    m_Position: {x: 520, y: 150, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -3210359200378774290}
-    m_Position: {x: 520, y: 210, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 3609627496067379579}
-    m_Position: {x: 520, y: 270, z: 0}
+    m_State: {fileID: 6047720030464095315}
+    m_Position: {x: 560, y: -79.5, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -94,15 +62,15 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 260, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -4714428148141748876}
---- !u!1102 &-3210359200378774290
+  m_DefaultState: {fileID: -641330582070884312}
+--- !u!1102 &-3085534050713445767
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Crush_Sad01
+  m_Name: Crush_Start_to_Neutral
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -115,20 +83,20 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2d0b8cac304994e17ac9073f2d155e57, type: 2}
+  m_Motion: {fileID: 7400000, guid: 371a672bcd0834c68898c8b35d13aa3e, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &-2809022984212812211
+--- !u!1102 &-3034885593247627853
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Crush_Happy01
+  m_Name: Crush_Negative01_CYCLE
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -141,20 +109,20 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 558afd789e6454bd18b7ca1fd2e86c93, type: 2}
+  m_Motion: {fileID: 7400000, guid: ccf8ceb757f414ecdac0d05eef567f02, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &-1046779556265347696
+--- !u!1102 &-641330582070884312
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Crush_Confused01
+  m_Name: Crush_Start_CYCLE
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -167,7 +135,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 13ec77036be01400681fe84dc769f490, type: 2}
+  m_Motion: {fileID: 7400000, guid: a91250885cf184b03b7f7ca3e37e58ef, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -195,14 +163,14 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &3609627496067379579
+--- !u!1102 &4799865879586195895
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Crush_Surprised01
+  m_Name: Crush_Neutral_CYCLE
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -215,20 +183,20 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6cdb13c7a1e7a4b91b581ba5dfaa8b71, type: 2}
+  m_Motion: {fileID: 7400000, guid: f5b90e54296ce41b6a7d68eb61bb50e0, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1102 &6456001122185118012
+--- !u!1102 &6047720030464095315
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Crush_Happy03
+  m_Name: Crush_Negative01_to_Negative02
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -241,33 +209,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 65fe85cb5ba6a4b4bba2ff1e103cbd67, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &8246628303602692077
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Crush_Happy02
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 1f154f273cf1e4b6cb3de403a5fe085e, type: 2}
+  m_Motion: {fileID: 7400000, guid: 434dcc5979b234a969d3272819c8821d, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
