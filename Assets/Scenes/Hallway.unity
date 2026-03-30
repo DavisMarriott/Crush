@@ -2887,6 +2887,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2343263600544527131, guid: d016b84d0091a4db6aeb957c9a023e3f, type: 3}
+      propertyPath: m_Offset.y
+      value: 6.53
+      objectReference: {fileID: 0}
     - target: {fileID: 5329792842566111081, guid: d016b84d0091a4db6aeb957c9a023e3f, type: 3}
       propertyPath: DialogueUI
       value: 
