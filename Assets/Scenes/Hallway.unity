@@ -331,6 +331,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2050336747}
     - target: {fileID: 13397708809891304, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
+      propertyPath: cardContainer
+      value: 
+      objectReference: {fileID: 1165197825}
+    - target: {fileID: 13397708809891304, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
       propertyPath: confidenceState
       value: 
       objectReference: {fileID: 1056035271448750366}
@@ -392,6 +396,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1418214156265520326, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
   m_PrefabInstance: {fileID: 1748535992}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1748535994 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4939069903984910589, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
+  m_PrefabInstance: {fileID: 1748535992}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 384c6653546064681b4365f9e7584109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HallwaySelfTalk
 --- !u!1 &1804901508
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,6 +731,38 @@ PrefabInstance:
       propertyPath: startingConfidenceInput
       value: 
       objectReference: {fileID: 1878438991}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: startingHandSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: draftPool.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'draftPool.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f2948faa612d34f3cb05eb9b58d5ef05, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'draftPool.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 28082c635fd3d487db56d4875a6a1d01, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'draftPool.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c319d7ce095094a2382de3ea28c03f8a, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'draftPool.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: ea012e923232f4198ab985c89473a4ee, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'startingDeck.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 492db9a2c56774bfa862b4d9117db4f3, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'startingDeck.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e0daa4f92aa6e4a58a4a277aa4182840, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1746,6 +1793,10 @@ PrefabInstance:
       propertyPath: DialogueUI
       value: 
       objectReference: {fileID: 1165197825}
+    - target: {fileID: 5329792842566111081, guid: d016b84d0091a4db6aeb957c9a023e3f, type: 3}
+      propertyPath: hallwaySelfTalk
+      value: 
+      objectReference: {fileID: 1748535994}
     - target: {fileID: 6811545619324586095, guid: d016b84d0091a4db6aeb957c9a023e3f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.13
@@ -1911,6 +1962,10 @@ PrefabInstance:
       propertyPath: deckManager
       value: 
       objectReference: {fileID: 1875503650}
+    - target: {fileID: 3985097242674001143, guid: 8f22cec600c2f48d5800a9c7b0538689, type: 3}
+      propertyPath: cardContainer
+      value: 
+      objectReference: {fileID: 1165197825}
     - target: {fileID: 3985097242674001143, guid: 8f22cec600c2f48d5800a9c7b0538689, type: 3}
       propertyPath: thoughtBubble
       value: 
