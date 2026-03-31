@@ -13,39 +13,82 @@ MonoBehaviour:
   m_Name: Weekend
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   previewText: Weekend
+  cost: 3
+  revealed: 1
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
-  branches:
-  - branchName: Weekend_Intro
-    minConfidence: 0
-    maxConfidence: 15
-    requiresIntroFalse: 1
-    dialogue:
-    - character: 0
-      confidenceImpact: -1
-      line: So.. do you..umm.. have any plans this weekend?
-    - character: 0
-      confidenceImpact: -1
-      line: "what? Oh, hey Luke. Umm\u2026 No, not really. "
-  - branchName: Weekend_Low
-    minConfidence: 0
-    maxConfidence: 9
-    requiresIntroFalse: 0
-    dialogue:
-    - character: 0
-      confidenceImpact: -1
-      line: So.. do you..umm.. have any plans this weekend?
-    - character: 0
-      confidenceImpact: -2
-      line: Ummm... No, not really.
-  - branchName: Weekend_High
-    minConfidence: 9
-    maxConfidence: 15
+  lukeBranches:
+  - branchName: Death
     requiresIntroFalse: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
-      line: Any fun plans this weekend?
+      charmImpact: 0
+      line: "Soooo\u2026. what are you up t-"
+    charmImpacts: []
+    daisyBranches: []
+  - branchName: Normal
+    requiresIntroFalse: 0
+    dialogue:
     - character: 0
-      confidenceImpact: 2
-      line: 'Ugh I wish. My parents are throwing this big 10th birthday party for
-        my little brother. They said I have to be there.   '
+      confidenceImpact: 0
+      charmImpact: 0
+      line: So.. do you..umm.. have any plans this weekend?
+    charmImpacts:
+    - state: 1
+      impact: -2
+    - state: 2
+      impact: 1
+    - state: 3
+      impact: 2
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Ummm\u2026. no - nott really\u2026.."
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Ohh you know - just the usual stuff
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: Not too much. My little brother turns 10 on Saturday so he's having
+          a birthday party.
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: 0
+        line: It's Star Wars themed, I think. Or something nerdy like that haha.
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Ugh I wish. My parents are throwing this big 10th birthday party for
+          my little brother.
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 0
+        line: They said I have to be there.
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Ugh I wish. My parents are throwing this big 10th birthday party for
+          my little brother.
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 0
+        line: They said I have to be there.
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 0
+        line: But that's it though! I'm totally free outside of that.

@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     [SerializeField] private Animator animator;
+    public GameObject cardContainer;
     [SerializeField] private ConfidenceState confidenceState;
     private Rigidbody2D rb;
     public float maxSpeed;
@@ -63,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
     public void InConversation()
     {
         confidenceState.inConversation = true;
+        cardContainer.SetActive(true);
         GetConfidencePose();
         animationTriggerCrush.GetCharmPose();
     }

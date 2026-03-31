@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
-  m_Name: Movies
+  m_Name: Book
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
-  previewText: Movies
-  cost: 2
+  previewText: Book?
+  cost: 3
   revealed: 1
-  buttonColor: {r: 1, g: 1, b: 1, a: 1}
+  buttonColor: {r: 0, g: 0, b: 0, a: 1}
   lukeBranches:
   - branchName: Death
     requiresIntroFalse: 0
@@ -23,11 +23,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "So\u2026. ummmm\u2026\u2026"
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: Seen any good mov-
+      line: "What book are you\u2026\u2026."
     charmImpacts: []
     daisyBranches: []
   - branchName: Normal
@@ -36,80 +32,68 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: Have you watched any good movies lately?
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: I haven't seen anything in a while. I could use a good recommendation.
+      line: What book is that you're reading?
     charmImpacts:
     - state: 1
-      impact: 1
+      impact: 2
     - state: 2
       impact: 2
     - state: 3
-      impact: 1
+      impact: 0
     - state: 4
-      impact: -1
+      impact: -2
     daisyBranches:
     - charmState: 0
       dialogue: []
     - charmState: 1
       dialogue:
       - character: 1
-        confidenceImpact: -2
+        confidenceImpact: 1
         charmImpact: 0
-        line: "Nooo\u2026. not that I can remember."
+        line: Oh this? It's ummm this fantasy series.
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: This is the fourth one.
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: They're just okay.
     - charmState: 2
       dialogue:
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
-        line: Yeah I did actually!
+        line: It's a fantasy series I've been reading for a while.
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
-        line: It was this really old movie about these two cops.
+        line: This is actually the fourth one.
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 2
         charmImpact: 0
-        line: It was pretty funny.
+        line: "It's kinda dorky though\u2026."
     - charmState: 3
       dialogue:
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
-        line: Yeah I did actually!
+        line: It's just a fantasy series I've been reading for a while.
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
-        line: It was this really old movie about these two cops.
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: It was soooo funnyyyy!
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: You need to see it!
-    - charmState: 4
-      dialogue:
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: Yeah I did actually!
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: It was this really old movie about these two cops.
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: It was soooo funnyyyy!
+        line: This is actually the fourth one.
       - character: 1
         confidenceImpact: 3
         charmImpact: 0
-        line: We should watch it together!
+        line: "It's dorky\u2026 but I like it."
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: 0
+        line: Oh it's nothing.
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "I mean - if you want to\u2026"
+        line: Just this fantasy series I've been reading.

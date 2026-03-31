@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
-  m_Name: Class
+  m_Name: Notes
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
-  previewText: Class was boring
+  previewText: I took notes
   cost: 1
   revealed: 1
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
@@ -23,7 +23,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "Class was uhhh\u2026 pretty\u2026."
+      line: Do you want my n-
     charmImpacts: []
     daisyBranches: []
   - branchName: Normal
@@ -32,59 +32,45 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: Class was pretty boring huh?
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: I was fighting to stay awake when Mr. Miller started talking about the
-        Roman Empire.
+      line: You were out on Monday right? I took notes in Ms. Greene's class if you
+        need them.
     charmImpacts:
     - state: 1
       impact: 2
     - state: 2
-      impact: 3
+      impact: 2
     - state: 3
-      impact: 1
-    - state: 4
       impact: 0
+    - state: 4
+      impact: -2
     daisyBranches:
     - charmState: 0
-      dialogue:
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: yeah that class sucked gotta go see ya later
+      dialogue: []
     - charmState: 1
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: -1
         charmImpact: 0
-        line: haha yeah. Not exactly the most exciting class I've ever been to.
+        line: "Oh thanks. I'll uhhh\u2026. let you know if I need them."
     - charmState: 2
       dialogue:
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
-        line: Seriously haha. Ugh 5th period is the absolute worst.
+        line: Thank you! I've been meaning to find someone to get those notes from.
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: That would be really helpful.
     - charmState: 3
       dialogue:
       - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: I know right. It's like all that guy thinks about is the Roman Empire
-          haha.
-      - character: 1
         confidenceImpact: 2
         charmImpact: 0
-        line: He needs some new hobbies.
+        line: You're the best! That would be awesome! You are such a life saver.
     - charmState: 4
       dialogue:
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
-        line: HAHAH right?! He is so boring I want to DIE every time 5th period rolls
-          around.
-      - character: 1
-        confidenceImpact: 2
-        charmImpact: 0
-        line: HAHA you're hilarious!
+        line: You're the best! That would be awesome! You are such a life saver.

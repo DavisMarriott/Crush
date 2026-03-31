@@ -1,0 +1,214 @@
+Card Name,Look Nice
+Preview Text,Look Nice
+Cost,6
+,Luke,Death
+,,Boy,You are soooo hot
+,Luke,Normal
+,,Boy,"You uhhh…. You look really nice today."
+,CharmImpact,Low,-3
+,CharmImpact,Neutral,-1
+,CharmImpact,Positive,3
+,CharmImpact,High,0
+,Daisy,Death
+,,Girl,"Ohh - ummm…. thanks? I guess…",-6
+,Daisy,Low
+,,Girl,"Ohh - ummm…. thanks. ",-1
+,Daisy,Neutral
+,,Girl,"Thanks… that's nice of you.",0
+,Daisy,Positive
+,,Girl,Aww thanks!,3
+,,Girl,"That umm… means a lot",1
+,Daisy,High
+,,Girl,Really?! You think so???,0
+,,Girl,"I mean - thanks! That's really nice.",1
+,,Girl,"You look go- uhh… nice.. too",4
+Card Name,Movies
+Preview Text,Movies
+Cost,2
+,Luke,Death
+,,Boy,"So…. ummmm……"
+,,Boy,Seen any good mov-
+,Luke,Normal
+,,Boy,Have you watched any good movies lately?
+,,Boy,"I haven't seen anything in a while. I could use a good recommendation."
+,CharmImpact,Low,1
+,CharmImpact,Neutral,2
+,CharmImpact,Positive,1
+,CharmImpact,High,-1
+,Daisy,Death
+,Daisy,Low
+,,Girl,"Nooo…. not that I can remember.",-2
+,Daisy,Neutral
+,,Girl,Yeah I did actually!,1
+,,Girl,"It was this really old movie about these two cops.",1
+,,Girl,It was pretty funny.,
+,Daisy,Positive
+,,Girl,Yeah I did actually!,1
+,,Girl,"It was this really old movie about these two cops.",1
+,,Girl,It was soooo funnyyyy!,1
+,,Girl,You need to see it!,1
+,Daisy,High
+,,Girl,Yeah I did actually!,1
+,,Girl,"It was this really old movie about these two cops.",1
+,,Girl,It was soooo funnyyyy!,1
+,,Girl,We should watch it together!,3
+,,Girl,"I mean - if you want to…",0
+Card Name,Book
+Preview Text,Book?
+Cost,3
+,Luke,Death
+,,Boy,What book are you…….
+,Luke,Normal
+,,Boy,What book is that you're reading?
+,CharmImpact,Low,2
+,CharmImpact,Neutral,2
+,CharmImpact,Positive,0
+,CharmImpact,High,-2
+,Daisy,Death
+,Daisy,Low
+,,Girl,"Oh this? It's ummm this fantasy series.",1
+,,Girl,This is the fourth one.,1
+,,Girl,They're just okay.,1
+,Daisy,Neutral
+,,Girl,"It's a fantasy series I've been reading for a while.",1
+,,Girl,This is actually the fourth one.,1
+,,Girl,It's kinda dorky though….,2
+,Daisy,Positive
+,,Girl,"It's just a fantasy series I've been reading for a while.",1
+,,Girl,This is actually the fourth one.,1
+,,Girl,"It's dorky… but I like it.",3
+,Daisy,High
+,,Girl,Oh it's nothing.,-1
+,,Girl,Just this fantasy series I've been reading.,
+Card Name,Weekend
+Preview Text,Weekend
+Cost,3
+,Luke,Death
+,,Boy,"Soooo…. what are you up t-"
+,Luke,Normal
+,,Boy,"So.. do you..umm.. have any plans this weekend?"
+,CharmImpact,Low,-2
+,CharmImpact,Neutral,1
+,CharmImpact,Positive,2
+,CharmImpact,High,0
+,Daisy,Death
+,,Girl,"Ummm…. no - nott really…..",
+,Daisy,Low
+,,Girl,Ohh you know - just the usual stuff,
+,Daisy,Neutral
+,,Girl,"Not too much. My little brother turns 10 on Saturday so he's having a birthday party.",2
+,,Girl,"It's Star Wars themed, I think. Or something nerdy like that haha.",-1
+,Daisy,Positive
+,,Girl,"Ugh I wish. My parents are throwing this big 10th birthday party for my little brother.",
+,,Girl,They said I have to be there.,3
+,Daisy,High
+,,Girl,"Ugh I wish. My parents are throwing this big 10th birthday party for my little brother.",
+,,Girl,They said I have to be there.,3
+,,Girl,But that's it though! I'm totally free outside of that.,3
+Card Name,Music
+Preview Text,Music
+Cost,3
+,Luke,Death
+,,Boy,"Any, uhhhh……."
+,,Boy,good musi-
+,Luke,Awkward
+,,Boy,So have you listened to that Farthing Penny song yet?
+,CharmImpact,Low,-3
+,CharmImpact,Neutral,-1
+,CharmImpact,Positive,-2
+,CharmImpact,High,-4
+,Daisy,Death
+,,Girl,"HAHA Farthing Penny? You mean Penny Farthing? Some fan you are hahaha",
+,Daisy,Low
+,,Girl,"HAHA that's not their name. It's Penny Farthing. But yeah I love that song.",-1
+,Daisy,Neutral
+,,Girl,"I think you mean Penny Farthing. But of course I've listened to it!",0
+,Daisy,Positive
+,,Girl,"Ohhh Luke…. It's Penny Farthing. And duhhhh I've listened to it like a thousand times already.",1
+,Daisy,High
+,,Girl,"Uhhh…. they're called Penny Farthing, not Farthing Penny. But close enough. Don't worry, I won't tell anyone.",2
+,Luke,Normal
+,,Boy,Have you heard that new Penny Farthing song yet?
+,CharmImpact,Low,4
+,CharmImpact,Neutral,3
+,CharmImpact,Positive,2
+,CharmImpact,High,1
+,Daisy,Death
+,Daisy,Low
+,,Girl,"Oh you like them too?? Yeah it's really good. I've been playing it a bunch",3
+,Daisy,Neutral
+,,Girl,"It's soooo good! OMG I didn't know you liked them.",4
+,Daisy,Positive
+,,Girl,"OMG I'm obsessed with the new song. It has like 2 million plays already.",2
+,,Girl,but at least a million are me.,2
+,Daisy,High
+,,Girl,"They're so good. I totally knew about them like 3 years ago before they blew up.",2
+,,Girl,"That's cool you like them too! We should listen to the new album together",4
+Card Name,Notes
+Preview Text,I took notes
+Cost,1
+,Luke,Death
+,,Boy,Do you want my n-
+,Luke,Normal
+,,Boy,"You were out on Monday right? I took notes in Ms. Greene's class if you need them."
+,CharmImpact,Low,2
+,CharmImpact,Neutral,2
+,CharmImpact,Positive,0
+,CharmImpact,High,-2
+,Daisy,Death
+,Daisy,Low
+,,Girl,"Oh thanks. I'll uhhh…. let you know if I need them.",-1
+,Daisy,Neutral
+,,Girl,"Thank you! I've been meaning to find someone to get those notes from.",2
+,,Girl,That would be really helpful.,
+,Daisy,Positive
+,,Girl,You're the best! That would be awesome! You are such a life saver.,2
+,Daisy,High
+,,Girl,You're the best! That would be awesome! You are such a life saver.,2
+Card Name,Class
+Preview Text,Class was boring
+Cost,1
+,Luke,Death
+,,Boy,"Class was uhhh… pretty…."
+,Luke,Normal
+,,Boy,"Class was pretty boring huh?"
+,,Boy,"I was fighting to stay awake when Mr. Miller started talking about the Roman Empire."
+,CharmImpact,Low,2
+,CharmImpact,Neutral,3
+,CharmImpact,Positive,1
+,CharmImpact,High,0
+,Daisy,Death
+,,Girl,yeah that class sucked gotta go see ya later,
+,Daisy,Low
+,,Girl,"haha yeah. Not exactly the most exciting class I've ever been to.",0
+,Daisy,Neutral
+,,Girl,"Seriously haha. Ugh 5th period is the absolute worst.",2
+,Daisy,Positive
+,,Girl,"I know right. It's like all that guy thinks about is the Roman Empire haha.",1
+,,Girl,He needs some new hobbies.,2
+,Daisy,High
+,,Girl,"HAHAH right?! He is so boring I want to DIE every time 5th period rolls around.",2
+,,Girl,HAHA you're hilarious!,2
+Card Name,Math Test
+Preview Text,Math Test
+Cost,2
+,Luke,Death
+,,Boy,"So- uhhhhh…. How did that math te-"
+,Luke,Normal
+,,Boy,How did you do on Ms. Parsons test?
+,,Boy,"I had soccer practice last night so I barely got to study."
+,CharmImpact,Low,0
+,CharmImpact,Neutral,0
+,CharmImpact,Positive,0
+,CharmImpact,High,-2
+,Daisy,Death
+,,Girl,walks away,
+,Daisy,Low
+,,Girl,"uhhh... it was okay",-1
+,Daisy,Neutral
+,,Girl,"I think I did okay. Same, I had volleyball practice and didn't get home until like 8.",
+,,Girl,I started studying before even taking a shower. I was so gross.,3
+,Daisy,Positive
+,,Girl,It was pretty good! I didn't know you still played soccer. That's awesome!,2
+,Daisy,High
+,,Girl,"Oh.. the test. Ummm, I think I did pretty good. I wasn't able to study much either",-1

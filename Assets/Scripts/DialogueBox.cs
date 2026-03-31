@@ -16,7 +16,7 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private ThoughtSpawner thoughtSpawner;
     [SerializeField] private CharmState charmState;
     private DialogueTiming _dialogueTiming;
-    [SerializeField] private GameObject thoughtBubble;
+    [SerializeField] private GameObject cardContainer;
     [Header("Speaker Indicators")]
     [SerializeField] private GameObject leftArrow;
     [SerializeField] private GameObject rightArrow;
@@ -47,7 +47,7 @@ public class DialogueBox : MonoBehaviour
         }
 
         dialogueBox.SetActive(true);
-        thoughtBubble.SetActive(false);
+        cardContainer.SetActive(false);
         StartCoroutine(StepThroughDialogue(dialogueCard, lukeBranch));
     }
 
@@ -60,7 +60,6 @@ public class DialogueBox : MonoBehaviour
             yield return _dialogueTiming.Run(line.line, dialogueText);
             confidenceState.confidence += line.confidenceImpact;
             charmState.charm += line.charmImpact;
-            Debug.Log(confidenceState.confidence);
             playerMovement.GetConfidencePose();
             animationTriggerCrush.GetCharmPose();
             yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
@@ -72,6 +71,7 @@ public class DialogueBox : MonoBehaviour
         charmState.charm += charmImpact;
 
         // Daisy's response (picked by charm score after Luke's impact)
+        Debug.Log($"Charm after impact: {charmState.charm}, picking Daisy branch");
         var daisyBranch = lukeBranch.GetDaisyBranch(charmState.charm);
 
         if (daisyBranch != null && daisyBranch.dialogue != null && daisyBranch.dialogue.Length > 0)
@@ -93,7 +93,7 @@ public class DialogueBox : MonoBehaviour
         deckManager.DrawCard();
         thoughtSpawner.SpawnButtons();
 
-        thoughtBubble.SetActive(true);
+        cardContainer.SetActive(true);
         CloseDialogueBox();
     }
 

@@ -17,87 +17,119 @@ MonoBehaviour:
   revealed: 1
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   lukeBranches:
-  - branchName: Afford
-    minValue: 0
-    maxValue: 45
+  - branchName: Death
     requiresIntroFalse: 0
-    charmState: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: Have you heard the new Penny Farthing song yet?
-  - branchName: Death
-    minValue: 0
-    maxValue: 45
+      line: "Any, uhhhh\u2026\u2026."
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: good musi-
+    charmImpacts: []
+    daisyBranches: []
+  - branchName: Awkward
     requiresIntroFalse: 0
-    charmState: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: IS MUSIC GOOD?!?
-  charmImpacts:
-  - state: 1
-    impact: 4
-  - state: 2
-    impact: 4
-  - state: 3
-    impact: 4
-  - state: 4
-    impact: 5
-  daisyBranches:
-  - branchName: Death
-    minValue: 0
-    maxValue: 0
+      line: So have you listened to that Farthing Penny song yet?
+    charmImpacts:
+    - state: 1
+      impact: -3
+    - state: 2
+      impact: -1
+    - state: 3
+      impact: -2
+    - state: 4
+      impact: -4
+    daisyBranches:
+    - charmState: 0
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: HAHA Farthing Penny? You mean Penny Farthing? Some fan you are hahaha
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: 0
+        line: HAHA that's not their name. It's Penny Farthing. But yeah I love that
+          song.
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: I think you mean Penny Farthing. But of course I've listened to it!
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: "Ohhh Luke\u2026. It's Penny Farthing. And duhhhh I've listened to
+          it like a thousand times already."
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: "Uhhh\u2026. they're called Penny Farthing, not Farthing Penny. But
+          close enough. Don't worry, I won't tell anyone."
+  - branchName: Normal
     requiresIntroFalse: 0
-    charmState: 0
     dialogue:
-    - character: 1
+    - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: 
-  - branchName: Low
-    minValue: 0
-    maxValue: 0
-    requiresIntroFalse: 0
-    charmState: 1
-    dialogue:
-    - character: 1
-      confidenceImpact: 3
-      charmImpact: 0
-      line: Oh you like them too?? Yeah it's really good. I've been playing it a
-        bunch.
-  - branchName: Neutral
-    minValue: 0
-    maxValue: 0
-    requiresIntroFalse: 0
-    charmState: 2
-    dialogue:
-    - character: 1
-      confidenceImpact: 4
-      charmImpact: 0
-      line: It's soooo good! OMG I didn't know you liked them.
-  - branchName: Positive
-    minValue: 0
-    maxValue: 0
-    requiresIntroFalse: 0
-    charmState: 3
-    dialogue:
-    - character: 1
-      confidenceImpact: 0
-      charmImpact: 0
-      line: "OMG I\u2019m obsessed with the new song. It has like 2 million plays
-        on spotify but at least a million are me."
-  - branchName: High
-    minValue: 0
-    maxValue: 0
-    requiresIntroFalse: 0
-    charmState: 4
-    dialogue:
-    - character: 1
-      confidenceImpact: 6
-      charmImpact: 0
-      line: They're so good. I totally knew about them like 3 years ago before they
-        blew up. That's cool you like them too! We should listen to the new album
-        togehter
+      line: Have you heard that new Penny Farthing song yet?
+    charmImpacts:
+    - state: 1
+      impact: 4
+    - state: 2
+      impact: 3
+    - state: 3
+      impact: 2
+    - state: 4
+      impact: 1
+    daisyBranches:
+    - charmState: 0
+      dialogue: []
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 0
+        line: Oh you like them too?? Yeah it's really good. I've been playing it
+          a bunch
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 4
+        charmImpact: 0
+        line: It's soooo good! OMG I didn't know you liked them.
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: OMG I'm obsessed with the new song. It has like 2 million plays already.
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: but at least a million are me.
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: They're so good. I totally knew about them like 3 years ago before
+          they blew up.
+      - character: 1
+        confidenceImpact: 4
+        charmImpact: 0
+        line: That's cool you like them too! We should listen to the new album together

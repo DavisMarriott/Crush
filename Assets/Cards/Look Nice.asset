@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
-  m_Name: Class
+  m_Name: Look Nice
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
-  previewText: Class was boring
-  cost: 1
+  previewText: Look Nice
+  cost: 6
   revealed: 1
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   lukeBranches:
@@ -23,7 +23,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "Class was uhhh\u2026 pretty\u2026."
+      line: You are soooo hot
     charmImpacts: []
     daisyBranches: []
   - branchName: Normal
@@ -32,59 +32,56 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: Class was pretty boring huh?
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: I was fighting to stay awake when Mr. Miller started talking about the
-        Roman Empire.
+      line: "You uhhh\u2026. You look really nice today."
     charmImpacts:
     - state: 1
-      impact: 2
+      impact: -3
     - state: 2
-      impact: 3
+      impact: -1
     - state: 3
-      impact: 1
+      impact: 3
     - state: 4
       impact: 0
     daisyBranches:
     - charmState: 0
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: -6
         charmImpact: 0
-        line: yeah that class sucked gotta go see ya later
+        line: "Ohh - ummm\u2026. thanks? I guess\u2026"
     - charmState: 1
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: -1
         charmImpact: 0
-        line: haha yeah. Not exactly the most exciting class I've ever been to.
+        line: "Ohh - ummm\u2026. thanks."
     - charmState: 2
       dialogue:
       - character: 1
-        confidenceImpact: 2
+        confidenceImpact: 0
         charmImpact: 0
-        line: Seriously haha. Ugh 5th period is the absolute worst.
+        line: "Thanks\u2026 that's nice of you."
     - charmState: 3
       dialogue:
       - character: 1
+        confidenceImpact: 3
+        charmImpact: 0
+        line: Aww thanks!
+      - character: 1
         confidenceImpact: 1
         charmImpact: 0
-        line: I know right. It's like all that guy thinks about is the Roman Empire
-          haha.
-      - character: 1
-        confidenceImpact: 2
-        charmImpact: 0
-        line: He needs some new hobbies.
+        line: "That umm\u2026 means a lot"
     - charmState: 4
       dialogue:
       - character: 1
-        confidenceImpact: 2
+        confidenceImpact: 0
         charmImpact: 0
-        line: HAHAH right?! He is so boring I want to DIE every time 5th period rolls
-          around.
+        line: Really?! You think so???
       - character: 1
-        confidenceImpact: 2
+        confidenceImpact: 1
         charmImpact: 0
-        line: HAHA you're hilarious!
+        line: I mean - thanks! That's really nice.
+      - character: 1
+        confidenceImpact: 4
+        charmImpact: 0
+        line: "You look go- uhh\u2026 nice.. too"

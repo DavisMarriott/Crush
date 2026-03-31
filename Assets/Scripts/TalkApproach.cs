@@ -18,9 +18,7 @@ public class TalkApproach : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            if (hallwaySelfTalk != null)
-                hallwaySelfTalk.EndHallwayTimer();
-            DialogueUI.SetActive(true);
+            hallwaySelfTalk.EndHallwayTimer();
         }
     }
 

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
-  m_Name: Class
+  m_Name: Math Test
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
-  previewText: Class was boring
-  cost: 1
+  previewText: Math Test
+  cost: 2
   revealed: 1
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   lukeBranches:
@@ -23,7 +23,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "Class was uhhh\u2026 pretty\u2026."
+      line: "So- uhhhhh\u2026. How did that math te-"
     charmImpacts: []
     daisyBranches: []
   - branchName: Normal
@@ -32,59 +32,54 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: Class was pretty boring huh?
+      line: How did you do on Ms. Parsons test?
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: I was fighting to stay awake when Mr. Miller started talking about the
-        Roman Empire.
+      line: I had soccer practice last night so I barely got to study.
     charmImpacts:
     - state: 1
-      impact: 2
-    - state: 2
-      impact: 3
-    - state: 3
-      impact: 1
-    - state: 4
       impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: -2
     daisyBranches:
     - charmState: 0
       dialogue:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: yeah that class sucked gotta go see ya later
+        line: walks away
     - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: 0
+        line: uhhh... it was okay
+    - charmState: 2
       dialogue:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: haha yeah. Not exactly the most exciting class I've ever been to.
-    - charmState: 2
-      dialogue:
+        line: I think I did okay. Same, I had volleyball practice and didn't get
+          home until like 8.
       - character: 1
-        confidenceImpact: 2
+        confidenceImpact: 3
         charmImpact: 0
-        line: Seriously haha. Ugh 5th period is the absolute worst.
+        line: I started studying before even taking a shower. I was so gross.
     - charmState: 3
       dialogue:
       - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: I know right. It's like all that guy thinks about is the Roman Empire
-          haha.
-      - character: 1
         confidenceImpact: 2
         charmImpact: 0
-        line: He needs some new hobbies.
+        line: It was pretty good! I didn't know you still played soccer. That's awesome!
     - charmState: 4
       dialogue:
       - character: 1
-        confidenceImpact: 2
+        confidenceImpact: -1
         charmImpact: 0
-        line: HAHAH right?! He is so boring I want to DIE every time 5th period rolls
-          around.
-      - character: 1
-        confidenceImpact: 2
-        charmImpact: 0
-        line: HAHA you're hilarious!
+        line: Oh.. the test. Ummm, I think I did pretty good. I wasn't able to study
+          much either
