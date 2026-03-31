@@ -1523,7 +1523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3893864421657992136, guid: e9d3d89ced4b742eab69db4e00bef4d3, type: 3}
       propertyPath: startingCharm
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3893864421657992136, guid: e9d3d89ced4b742eab69db4e00bef4d3, type: 3}
       propertyPath: confidenceState
@@ -2010,6 +2010,22 @@ PrefabInstance:
       propertyPath: animationTriggerCrush
       value: 
       objectReference: {fileID: 1561869875}
+    - target: {fileID: 6023034779519707709, guid: 8f22cec600c2f48d5800a9c7b0538689, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -10.999939
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023034779519707709, guid: 8f22cec600c2f48d5800a9c7b0538689, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -37
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090144431323514114, guid: 8f22cec600c2f48d5800a9c7b0538689, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090144431323514114, guid: 8f22cec600c2f48d5800a9c7b0538689, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -34
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2150,6 +2166,10 @@ PrefabInstance:
       propertyPath: boyTransform
       value: 
       objectReference: {fileID: 122801679}
+    - target: {fileID: 7808991336363666016, guid: fcf526b0583ca49519115b49bf144d72, type: 3}
+      propertyPath: startingConfidence
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8452146002133591373, guid: fcf526b0583ca49519115b49bf144d72, type: 3}
       propertyPath: m_Name
       value: ConfidenceLabel
