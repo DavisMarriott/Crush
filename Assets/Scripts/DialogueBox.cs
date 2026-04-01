@@ -53,7 +53,6 @@ public class DialogueBox : MonoBehaviour
 
     private IEnumerator StepThroughDialogue(DialogueCard dialogueCard, DialogueCard.DialogueBranch lukeBranch)
     {
-        // Luke's lines
         foreach (DialogueCard.DialogueLine line in lukeBranch.dialogue)
         {
             SetSpeakerIndicator(line.character);

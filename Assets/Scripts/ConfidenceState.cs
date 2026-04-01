@@ -15,6 +15,7 @@ public class ConfidenceState : MonoBehaviour
     [SerializeField] private DraftUI draftUI;
     [SerializeField] private CharmState charmState;
     [SerializeField] private DeckManager deckManager;
+    [SerializeField] private GameProgression gameProgression;
 
     [Header("Conversation State")]
     public bool introMade = false;
@@ -73,8 +74,11 @@ public class ConfidenceState : MonoBehaviour
             yield break;
         }
 
-        draftUI.ShowDraftOptions();
-        yield return new WaitUntil(() => !draftUI.gameObject.activeSelf || !draftUI.enabled);
+        if (deckManager.draftPool.Length >0)
+        {
+            draftUI.ShowDraftOptions();
+            yield return new WaitUntil(() => !draftUI.gameObject.activeSelf || !draftUI.enabled);
+        }
 
         // respawn
         thoughtSpawner.SpawnButtons();
@@ -85,6 +89,7 @@ public class ConfidenceState : MonoBehaviour
         deckManager.ResetDeck();
         _isDead = false;
         introMade = false;
+        gameProgression.NextLoop();
     }
 
     void ClampConfidence()

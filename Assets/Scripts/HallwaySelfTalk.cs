@@ -15,8 +15,6 @@ public class HallwaySelfTalk : MonoBehaviour
     private Coroutine hallwayRoutine;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-
-
     
 
     void Start()
@@ -41,6 +39,5 @@ public class HallwaySelfTalk : MonoBehaviour
             StopCoroutine(hallwayRoutine);
         selfTalkText.text = "";
     }
-
-
+    
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class DeckManager : MonoBehaviour
 {
-    [SerializeField] private DialogueCard[] draftPool;
+    [SerializeField] public DialogueCard[] draftPool;
     [SerializeField] private DialogueCard[] startingDeck;
     public int startingHandSize = 4;
     
