@@ -150,5 +150,10 @@ public class AnimationTriggerPlayer : MonoBehaviour
         }
         
     }
-    
+
+    public void EnterStart()
+    {
+        animator.Play("Player_Start_CYCLE", 0);
+    }
+
 }
