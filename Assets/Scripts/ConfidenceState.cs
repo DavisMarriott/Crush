@@ -81,7 +81,7 @@ public class ConfidenceState : MonoBehaviour
         }
 
         // respawn
-        thoughtSpawner.SpawnButtons();
+        thoughtSpawner.gameObject.SetActive(false);
         boyTransform.position = spawnPoint.position;
         confidence = startingConfidence;
         confidence = startingConfidence;
