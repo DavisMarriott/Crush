@@ -6,6 +6,7 @@ using Debug = UnityEngine.Debug;
 public class PlayerMovement : MonoBehaviour
 {
 
+    [SerializeField] private DeathRespawn deathRespawn;
     [SerializeField] private Animator animator;
     public GameObject cardContainer;
     [SerializeField] private ConfidenceState confidenceState;
@@ -28,7 +29,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (confidenceState.Dead == false)
+        
+        //movement IF player is alive
+        if (deathRespawn.isDead == false)
         {
             moveInput = move.action.ReadValue<Vector2>();
 
@@ -54,15 +57,12 @@ public class PlayerMovement : MonoBehaviour
 
             _wasMoving = isMoving;
         }
-
-        // {
-        //     horizontalInput = Input.GetAxisRaw("Horizontal"); // Get raw input (-1, 0, or 1)
-        // }
     }
 
     // Set InConversation to true
     public void InConversation()
     {
+        Debug.Log("In Conversation");
         confidenceState.inConversation = true;
         cardContainer.SetActive(true);
         GetConfidencePose();

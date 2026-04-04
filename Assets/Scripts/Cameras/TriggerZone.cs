@@ -8,12 +8,14 @@ public class TriggerZone : MonoBehaviour
    private void OnTriggerEnter2D(Collider2D collision)
    {
       //checks if collision is with object tagged player
+      Debug.Log("Trigger Entered");
       if(collision.CompareTag("Player"))
          onTriggerEnter.Invoke();
    }
    private void OnTriggerExit2D(Collider2D collision)
    {
       //checks if collision is with object tagged player
+      Debug.Log("Trigger Exited");
       if(collision.CompareTag("Player"))
          onTriggerExit.Invoke();
    }
