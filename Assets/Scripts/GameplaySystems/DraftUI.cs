@@ -9,8 +9,7 @@ public class DraftUI : MonoBehaviour
     [SerializeField] private DeckManager deckManager;
     [SerializeField] private Button thoughtButtonPrefab;
     [SerializeField] private GameObject draftUI;
-    [SerializeField] private ThoughtSpawner thoughtSpawner;
-    [SerializeField] private Transform[] draftSlots;
+    [SerializeField] private Transform draftContainer;
     [SerializeField] private Vector2 draftButtonSize = new Vector2(200, 60);
 
     private void Start()
@@ -21,11 +20,8 @@ public class DraftUI : MonoBehaviour
     public void ShowDraftOptions()
     {
         // Clear old buttons
-        foreach (var slot in draftSlots)
-        {
-            for (int i = slot.childCount - 1; i >= 0; i--)
-                Destroy(slot.GetChild(i).gameObject);
-        }
+        for (int i = draftContainer.childCount - 1; i >= 0; i--)
+            Destroy(draftContainer.GetChild(i).gameObject);
         
         // Show the draft screen
         draftUI.SetActive(true);
@@ -33,9 +29,9 @@ public class DraftUI : MonoBehaviour
         // Get random cards and spawn buttons
         List<DialogueCard> options = deckManager.GetDraftOptions(3);
         
-        for (int i = 0; i < options.Count && i < draftSlots.Length; i++)
+        for (int i = 0; i < options.Count; i++)
         {
-            var btn = Instantiate(thoughtButtonPrefab, draftSlots[i]);
+            var btn = Instantiate(thoughtButtonPrefab, draftContainer);
             
             // button is centered in draft slot
             var rectTransform = btn.GetComponent<RectTransform>();

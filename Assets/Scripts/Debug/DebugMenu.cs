@@ -20,6 +20,7 @@ public class DebugMenu : MonoBehaviour
     [SerializeField] private Transform testSpawnPoint;
     [SerializeField] private Transform normalSpawnPoint;
     [SerializeField] private Transform playerTransform;
+    [SerializeField] private DeathRespawn deathRespawn;
 
     [Header("System References")]
     [SerializeField] private ConfidenceState confidenceState;
@@ -92,8 +93,8 @@ public class DebugMenu : MonoBehaviour
         if (testMode)
         {
             // tell confidence state we're in test mode so death opens this menu instead of draft UI
-            confidenceState.testMode = true;
-            confidenceState.debugMenu = this;
+            deathRespawn.testMode = true;
+            deathRespawn.debugMenu = this;
             OpenMenu();
         }
     }
@@ -138,7 +139,6 @@ public class DebugMenu : MonoBehaviour
         charmState.ResetCharm();
         if (int.TryParse(startingConfidenceInput.text, out int parsedConf))
             conf = parsedConf;
-        confidenceState.ResetForNewGame(conf);
 
         if (int.TryParse(startingCharmInput.text, out int chrm))
             charmState.charm = chrm;

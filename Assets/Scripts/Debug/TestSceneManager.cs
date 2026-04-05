@@ -12,6 +12,7 @@ public class TestSceneManager : MonoBehaviour
     [SerializeField] private DebugMenu debugMenu;
     [SerializeField] private GameObject dialogueUI;
     [SerializeField] private ThoughtSpawner thoughtSpawner;
+    [SerializeField] private DeathRespawn deathRespawn;
 
     [Header("Camera")]
     [SerializeField] private CinemachineCamera conversationCamera;
@@ -27,8 +28,8 @@ public class TestSceneManager : MonoBehaviour
             dialogueUI.SetActive(true);
 
         // Tell ConfidenceState we're in test mode (skips draft UI on death)
-        confidenceState.testMode = true;
-        confidenceState.debugMenu = debugMenu;
+        deathRespawn.testMode = true;
+        deathRespawn.debugMenu = debugMenu;
 
         // Switch to conversation camera immediately
         if (conversationCamera != null)
