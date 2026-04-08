@@ -5,6 +5,7 @@ using TMPro;
 
 public class HallwaySelfTalk : MonoBehaviour
 {
+    [SerializeField] private DialogueTiming dialogueTiming;
     [SerializeField] private string[] genericHallwayLines;
     [SerializeField] private TMP_Text selfTalkText;
     [SerializeField] private float minFirstTimer = 1f;
@@ -24,11 +25,11 @@ public class HallwaySelfTalk : MonoBehaviour
     private IEnumerator HallwayTimer()
     {
         yield return new WaitForSeconds(Random.Range(minFirstTimer, maxFirstTimer));
-        selfTalkText.text = genericHallwayLines[Random.Range(0, genericHallwayLines.Length)];
+        yield return dialogueTiming.Run(genericHallwayLines[Random.Range(0, genericHallwayLines.Length)], selfTalkText);
         yield return new WaitForSeconds(thoughtTimer);
         selfTalkText.text = "";
         yield return new WaitForSeconds(Random.Range(minSecondTimer, maxSecondTimer));
-        selfTalkText.text = genericHallwayLines[Random.Range(0, genericHallwayLines.Length)];
+        yield return dialogueTiming.Run(genericHallwayLines[Random.Range(0, genericHallwayLines.Length)], selfTalkText);;
         yield return new WaitForSeconds(thoughtTimer);
         selfTalkText.text = "";
     }
@@ -39,5 +40,21 @@ public class HallwaySelfTalk : MonoBehaviour
             StopCoroutine(hallwayRoutine);
         selfTalkText.text = "";
     }
+
+    public void TriggerDraftLines(DialogueCard.DraftLine[] draftLines)
+    {
+        StartCoroutine(PlayDraftLines(draftLines));
+    }
+    public IEnumerator PlayDraftLines(DialogueCard.DraftLine[] draftLines)
+    {
+        foreach (DialogueCard.DraftLine draftLine in draftLines)
+        {
+            yield return new WaitForSeconds(0.5f);
+            yield return dialogueTiming.Run(draftLine.line, selfTalkText);
+            yield return new WaitForSeconds(1.5f);  
+        }
+        
+    }
+    
     
 }

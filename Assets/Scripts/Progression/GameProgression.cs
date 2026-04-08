@@ -70,4 +70,9 @@ public class GameProgression : MonoBehaviour
             confidenceState.confidence -= 1;
         }
     }
+
+    public void AskedToDance()
+    {
+        Debug.Log("YOU DID IT!");
+    }
 }

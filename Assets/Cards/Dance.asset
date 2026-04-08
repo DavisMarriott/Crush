@@ -12,22 +12,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Dance
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
-  previewText: Dance?
-  cost: 1
-  revealed: 0
+  isDance: 1
+  revealed: 1
+  previewText: DANCE?
+  cost: 0
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   lukeBranches:
-  - branchName: 
-    minValue: 0
-    maxValue: 0
+  - branchName: Default
     requiresIntroFalse: 0
-    charmState: 0
-    dialogue: []
-  - branchName: 
-    minValue: 0
-    maxValue: 0
-    requiresIntroFalse: 0
-    charmState: 0
-    dialogue: []
-  charmImpacts: []
-  daisyBranches: []
+    dialogue:
+    - character: 0
+      confidenceImpact: -1
+      charmImpact: 0
+      line: I was- umm.... wondering... if.....
+    - character: 0
+      confidenceImpact: -1
+      charmImpact: 0
+      line: uhhh... if you would... uhh- maybe
+    - character: 0
+      confidenceImpact: -1
+      charmImpact: 0
+      line: be interested.....
+    - character: 0
+      confidenceImpact: -1
+      charmImpact: 0
+      line: in go- uhhh.....
+    - character: 0
+      confidenceImpact: -1
+      charmImpact: 0
+      line: sorry... ummm- do you wanna.....
+    - character: 0
+      confidenceImpact: -2
+      charmImpact: 0
+      line: go to the dance....
+    - character: 0
+      confidenceImpact: -3
+      charmImpact: 0
+      line: with me?
+    charmImpacts: []
+    daisyBranches: []
+  draftLines:
+  - line: 

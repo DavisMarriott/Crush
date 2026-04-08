@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Music
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
+  isDance: 0
+  revealed: 1
   previewText: Music
   cost: 3
-  revealed: 1
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   lukeBranches:
   - branchName: Death
@@ -133,3 +134,7 @@ MonoBehaviour:
         confidenceImpact: 4
         charmImpact: 0
         line: That's cool you like them too! We should listen to the new album together
+  draftLines:
+  - line: What's that band she loves again?
+  - line: Penny Farthing??
+  - line: Or is it Farthing Penny...?

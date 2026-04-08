@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Weekend
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
+  isDance: 0
+  revealed: 1
   previewText: Weekend
   cost: 3
-  revealed: 1
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   lukeBranches:
   - branchName: Death
@@ -92,3 +93,7 @@ MonoBehaviour:
         confidenceImpact: 3
         charmImpact: 0
         line: But that's it though! I'm totally free outside of that.
+  draftLines:
+  - line: That's what guys with girlfriends talk about.
+  - line: right?
+  - line: Their big plans for the weekend?

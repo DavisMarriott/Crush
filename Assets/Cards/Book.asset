@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Book
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
+  isDance: 0
+  revealed: 1
   previewText: Book?
   cost: 3
-  revealed: 1
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   lukeBranches:
   - branchName: Death
@@ -97,3 +98,6 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: Just this fantasy series I've been reading.
+  draftLines:
+  - line: She's holding that book....
+  - line: She might like if I ask her about it.

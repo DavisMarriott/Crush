@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Look Nice
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
+  isDance: 0
+  revealed: 1
   previewText: Look Nice
   cost: 6
-  revealed: 1
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   lukeBranches:
   - branchName: Death
@@ -85,3 +86,6 @@ MonoBehaviour:
         confidenceImpact: 4
         charmImpact: 0
         line: "You look go- uhh\u2026 nice.. too"
+  draftLines:
+  - line: Girls like it when you compliment them
+  - line: I think

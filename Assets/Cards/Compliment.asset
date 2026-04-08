@@ -12,89 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Compliment
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
+  isDance: 0
+  revealed: 1
   previewText: You look nice
   cost: 9
-  revealed: 0
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   lukeBranches:
   - branchName: Afford
-    minValue: 0
-    maxValue: 45
     requiresIntroFalse: 0
-    charmState: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
       line: You look really nice today
+    charmImpacts: []
+    daisyBranches: []
   - branchName: Death
-    minValue: 0
-    maxValue: 45
     requiresIntroFalse: 0
-    charmState: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
       line: God you're so hot
-  charmImpacts:
-  - state: 1
-    impact: -3
-  - state: 2
-    impact: -1
-  - state: 3
-    impact: 0
-  - state: 4
-    impact: 0
-  daisyBranches:
-  - branchName: Death
-    minValue: 0
-    maxValue: 0
-    requiresIntroFalse: 0
-    charmState: 0
-    dialogue:
-    - character: 1
-      confidenceImpact: -4
-      charmImpact: 0
-      line: Yeah right loser
-  - branchName: Low
-    minValue: 0
-    maxValue: 0
-    requiresIntroFalse: 0
-    charmState: 1
-    dialogue:
-    - character: 1
-      confidenceImpact: -1
-      charmImpact: 0
-      line: ohh... ummm. thanks (blush)
-  - branchName: Neutral
-    minValue: 0
-    maxValue: 0
-    requiresIntroFalse: 0
-    charmState: 2
-    dialogue:
-    - character: 1
-      confidenceImpact: -2
-      charmImpact: 0
-      line: Ohhh stop... you don't mean that.
-  - branchName: Positive
-    minValue: 0
-    maxValue: 0
-    requiresIntroFalse: 0
-    charmState: 3
-    dialogue:
-    - character: 1
-      confidenceImpact: 3
-      charmImpact: 0
-      line: Thanks! I really appreciate that
-  - branchName: High
-    minValue: 0
-    maxValue: 0
-    requiresIntroFalse: 0
-    charmState: 4
-    dialogue:
-    - character: 1
-      confidenceImpact: 6
-      charmImpact: 0
-      line: Really?! You think so?! You too... I mean - thank you. You look nice
-        today too :)
+    charmImpacts: []
+    daisyBranches: []
+  draftLines:
+  - line: 
+  - line: I think

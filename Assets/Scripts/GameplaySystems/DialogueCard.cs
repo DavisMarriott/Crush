@@ -3,12 +3,13 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Crush/Dialogue Card")]
 public class DialogueCard : ScriptableObject
 {
+    public bool isDance = false;
+    public bool revealed = false;
     [Header("Display text on bubble")]
     public string previewText;
 
     [Header("Card Cost")]
     public int cost = 1;
-    public bool revealed = false;
 
     [Header("Button BG Color")]
     public Color buttonColor = Color.black;
@@ -17,6 +18,9 @@ public class DialogueCard : ScriptableObject
     [SerializeField] private DialogueBranch[] lukeBranches;
 
     public DialogueBranch[] LukeBranches => lukeBranches;
+    public DraftLine[] draftLines;
+    
+    
 
     public enum DialogueCharacter
     {
@@ -93,7 +97,7 @@ public class DialogueCard : ScriptableObject
         public CharmState charmState;
         public DialogueLine[] dialogue = new DialogueLine[0];
     }
-
+    
     [System.Serializable]
     public class DialogueBranch
     {
@@ -186,6 +190,7 @@ public class DialogueCard : ScriptableObject
         return null;
     }
 
+    
     [System.Serializable]
     public class DialogueLine
     {
@@ -198,6 +203,15 @@ public class DialogueCard : ScriptableObject
         [Header("Charm Impact")]
         public int charmImpact;
 
+        [Header("Dialogue Line")]
+        [TextArea(3,5)]
+        public string line;
+    }
+    
+
+    [System.Serializable]
+    public class DraftLine
+    {
         [Header("Dialogue Line")]
         [TextArea(3,5)]
         public string line;

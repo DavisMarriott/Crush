@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Class
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
+  isDance: 0
+  revealed: 1
   previewText: Class was boring
   cost: 1
-  revealed: 1
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   lukeBranches:
   - branchName: Death
@@ -88,3 +89,6 @@ MonoBehaviour:
         confidenceImpact: 2
         charmImpact: 0
         line: HAHA you're hilarious!
+  draftLines:
+  - line: Something easy
+  - line: Just talk about how boring 4th period was

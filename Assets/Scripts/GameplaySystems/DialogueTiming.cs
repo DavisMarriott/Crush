@@ -4,7 +4,7 @@ using System.Collections;
 
 public class DialogueTiming : MonoBehaviour
 {
-   private float typeSpeed = 50f;
+   private float typeSpeed = 30f;
    public Coroutine Run(string textToType, TMP_Text textLabel)
    {
       return StartCoroutine(TypeText(textToType, textLabel));

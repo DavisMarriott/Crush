@@ -15,8 +15,10 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private DeckManager deckManager;
     [SerializeField] private ThoughtSpawner thoughtSpawner;
     [SerializeField] private CharmState charmState;
-    private DialogueTiming _dialogueTiming;
+    [SerializeField] private DialogueTiming dialogueTiming;
     [SerializeField] private GameObject cardContainer;
+    [SerializeField] private DialogueCard dialogueCard;
+    [SerializeField] private GameProgression gameProgression;
     [Header("Speaker Indicators")]
     [SerializeField] private GameObject leftArrow;
     [SerializeField] private GameObject rightArrow;
@@ -28,7 +30,6 @@ public class DialogueBox : MonoBehaviour
 
     public void Start()
     {
-        _dialogueTiming = GetComponent<DialogueTiming>();
         CloseDialogueBox();
     }
 
@@ -56,7 +57,7 @@ public class DialogueBox : MonoBehaviour
         foreach (DialogueCard.DialogueLine line in lukeBranch.dialogue)
         {
             SetSpeakerIndicator(line.character);
-            yield return _dialogueTiming.Run(line.line, dialogueText);
+            yield return dialogueTiming.Run(line.line, dialogueText);
             confidenceState.confidence += line.confidenceImpact;
             charmState.charm += line.charmImpact;
             playerMovement.GetConfidencePose();
@@ -79,7 +80,7 @@ public class DialogueBox : MonoBehaviour
             {
                 SetSpeakerIndicator(line.character);
                 animationTriggerCrush.GetCharmPose();
-                yield return _dialogueTiming.Run(line.line, dialogueText);
+                yield return dialogueTiming.Run(line.line, dialogueText);
                 confidenceState.confidence += line.confidenceImpact;
                 charmState.charm += line.charmImpact;
                 playerMovement.GetConfidencePose();
@@ -88,12 +89,19 @@ public class DialogueBox : MonoBehaviour
         }
 
         confidenceState.introMade = true;
-
-        deckManager.DrawCard();
-        thoughtSpawner.SpawnButtons();
-
-        cardContainer.SetActive(true);
         CloseDialogueBox();
+        if (dialogueCard.isDance)
+        {
+            gameProgression.AskedToDance();
+        }
+        else
+        {
+            deckManager.DrawCard();
+            thoughtSpawner.SpawnButtons();
+
+            cardContainer.SetActive(true);
+        }
+        
     }
 
     // figure out which charm state bucket the current charm value falls into

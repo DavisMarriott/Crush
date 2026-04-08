@@ -11,6 +11,7 @@ public class DraftUI : MonoBehaviour
     [SerializeField] private GameObject draftUI;
     [SerializeField] private Transform draftContainer;
     [SerializeField] private Vector2 draftButtonSize = new Vector2(200, 60);
+    [SerializeField] private HallwaySelfTalk hallwaySelfTalk;
 
     private void Start()
     {
@@ -52,8 +53,10 @@ public class DraftUI : MonoBehaviour
             var card = options[i];
             btn.onClick.AddListener(() =>
             {
+                hallwaySelfTalk.TriggerDraftLines(card.draftLines);
                 deckManager.AddCardToDeck(card);
                 CloseDraftUI();
+
             });
 
         }

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1654876741708009024}
   - component: {fileID: 3985097242674001143}
-  - component: {fileID: 2616065841275147522}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -54,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueBox
   playerMovement: {fileID: 0}
+  animationTriggerCrush: {fileID: 0}
   dialogueBox: {fileID: 2624610366038757578}
   nextLineAction: {fileID: 0}
   dialogueText: {fileID: 839043275148572908}
@@ -61,24 +61,14 @@ MonoBehaviour:
   deckManager: {fileID: 0}
   thoughtSpawner: {fileID: 0}
   charmState: {fileID: 0}
-  thoughtBubble: {fileID: 0}
+  cardContainer: {fileID: 0}
+  dialogueCard: {fileID: 0}
+  gameProgression: {fileID: 0}
   leftArrow: {fileID: 6056971300233798366}
   rightArrow: {fileID: 5691706059927431106}
   boyTextColor: {r: 0.46666667, g: 0.9529412, b: 0.88235295, a: 1}
   girlTextColor: {r: 1, g: 0.7, b: 0.8, a: 1}
   boyInternalTextColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
---- !u!114 &2616065841275147522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2624610366038757578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2d75fed652b34dab9619362050bed44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueTiming
 --- !u!1 &2758572420946933072
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Math Test
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
+  isDance: 0
+  revealed: 1
   previewText: Math Test
   cost: 2
-  revealed: 1
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   lukeBranches:
   - branchName: Death
@@ -83,3 +84,6 @@ MonoBehaviour:
         charmImpact: 0
         line: Oh.. the test. Ummm, I think I did pretty good. I wasn't able to study
           much either
+  draftLines:
+  - line: She probably got an A on Ms. Parsons test
+  - line: She's perfect
