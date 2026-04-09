@@ -18,6 +18,7 @@ public class DeathRespawn : MonoBehaviour
     [SerializeField] private DraftUI draftUI;
     [SerializeField] private Collider2D inConversationTrigger;
     [SerializeField] ThoughtSpawner thoughtSpawner;
+    [SerializeField] HallwaySelfTalk hallwaySelfTalk;
     
     //variables hidden in inspector
     [HideInInspector] public bool isDead = false;
@@ -74,6 +75,7 @@ public class DeathRespawn : MonoBehaviour
         
         //full respawn, ready for hallway walk
         thoughtSpawner.SpawnButtons();
+        yield return new WaitUntil(() => (!hallwaySelfTalk.draftLinesActive));
         gameProgression.SetLoopConditions();
         isDead = false;
         

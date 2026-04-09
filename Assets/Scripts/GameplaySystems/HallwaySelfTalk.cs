@@ -7,21 +7,19 @@ public class HallwaySelfTalk : MonoBehaviour
 {
     [SerializeField] private DialogueTiming dialogueTiming;
     [SerializeField] private string[] genericHallwayLines;
+    [SerializeField] private Animator letterBoxAnimator;
     [SerializeField] private TMP_Text selfTalkText;
     [SerializeField] private float minFirstTimer = 1f;
     [SerializeField] private float maxFirstTimer = 4f;
     [SerializeField] private float minSecondTimer = 4f;
     [SerializeField] private float maxSecondTimer = 10f;
     [SerializeField] private float thoughtTimer = 3f;
-    private Coroutine hallwayRoutine;
+    private Coroutine _hallwayRoutine;
+    public bool draftLinesActive = false;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
-
-    void Start()
-    {
-        hallwayRoutine = StartCoroutine(HallwayTimer());
-    }
+    
     private IEnumerator HallwayTimer()
     {
         yield return new WaitForSeconds(Random.Range(minFirstTimer, maxFirstTimer));
@@ -36,8 +34,8 @@ public class HallwaySelfTalk : MonoBehaviour
 
     public void EndHallwayTimer()
     {
-        if (hallwayRoutine != null)
-            StopCoroutine(hallwayRoutine);
+        if (_hallwayRoutine != null)
+            StopCoroutine(_hallwayRoutine);
         selfTalkText.text = "";
     }
 
@@ -47,13 +45,15 @@ public class HallwaySelfTalk : MonoBehaviour
     }
     public IEnumerator PlayDraftLines(DialogueCard.DraftLine[] draftLines)
     {
+        draftLinesActive = true;
         foreach (DialogueCard.DraftLine draftLine in draftLines)
         {
             yield return new WaitForSeconds(0.5f);
             yield return dialogueTiming.Run(draftLine.line, selfTalkText);
-            yield return new WaitForSeconds(1.5f);  
+            yield return new WaitForSeconds(1.5f);
         }
-        
+        letterBoxAnimator.SetTrigger("LetterBoxOut");
+        draftLinesActive = false;
     }
     
     

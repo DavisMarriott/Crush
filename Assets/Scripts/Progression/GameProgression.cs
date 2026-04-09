@@ -40,6 +40,7 @@ public class GameProgression : MonoBehaviour
         hallwaySelfTalk.enabled = true;
         inConversationTrigger.enabled = true;
         confidenceState.inConversation = false;
+        hallwaySelfTalk.EndHallwayTimer();
         for (int i = specialLoopConditions.transform.childCount - 1; i >= 0; i--)
             specialLoopConditions.transform.GetChild(i).gameObject.SetActive(false);
     }
