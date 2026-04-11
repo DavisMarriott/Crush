@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: 33f32d7351f4b47d8be620cefd280ce8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2770676073636010647
+    second: Envt_Spritesheet_HallwayA_0
+  - first:
+      213: 4887972012355628642
+    second: Envt_Spritesheet_HallwayA_1
+  - first:
+      213: 2917569373199658818
+    second: Envt_Spritesheet_HallwayA_2
+  - first:
+      213: -7896591936809891826
+    second: Envt_Spritesheet_HallwayA_3
+  - first:
+      213: 2084884692212940090
+    second: Envt_Spritesheet_HallwayA_4
+  - first:
+      213: -1424389111069337305
+    second: Envt_Spritesheet_HallwayA_5
+  - first:
+      213: -6227353460792684791
+    second: Envt_Spritesheet_HallwayA_6
+  - first:
+      213: -4976063827542231803
+    second: Envt_Spritesheet_HallwayA_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Envt_Hallway_WallMain
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 25
+        width: 1695
+        height: 4018
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 965604b6ac49c89d0800000000000000
+      internalID: -2770676073636010647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Doorway
+      rect:
+        serializedVersion: 2
+        x: 1793
+        y: 1258
+        width: 1311
+        height: 2785
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26e228cc5a095d340800000000000000
+      internalID: 4887972012355628642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_WallColumn
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 1242
+        width: 634
+        height: 2801
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24fef1113e94d7820800000000000000
+      internalID: 2917569373199658818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_LockerEnd_Left
+      rect:
+        serializedVersion: 2
+        x: 1787
+        y: 41
+        width: 260
+        height: 1142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e088b3ea87ba96290800000000000000
+      internalID: -7896591936809891826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Locker_A
+      rect:
+        serializedVersion: 2
+        x: 2111
+        y: 43
+        width: 259
+        height: 1139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3d7005d49ffeec10800000000000000
+      internalID: 2084884692212940090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Locker_B
+      rect:
+        serializedVersion: 2
+        x: 2434
+        y: 43
+        width: 259
+        height: 1139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72917c476ad8b3ce0800000000000000
+      internalID: -1424389111069337305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Locker_C
+      rect:
+        serializedVersion: 2
+        x: 2756
+        y: 43
+        width: 259
+        height: 1139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f07a6750ff399a0800000000000000
+      internalID: -6227353460792684791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_LockerEnd_Right
+      rect:
+        serializedVersion: 2
+        x: 3079
+        y: 41
+        width: 260
+        height: 1142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 505bcab205871fab0800000000000000
+      internalID: -4976063827542231803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5f3abc02d83774c01bd3eecd17bf8192
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Envt_Hallway_Doorway: 4887972012355628642
+      Envt_Hallway_LockerEnd_Left: -7896591936809891826
+      Envt_Hallway_LockerEnd_Right: -4976063827542231803
+      Envt_Hallway_Locker_A: 2084884692212940090
+      Envt_Hallway_Locker_B: -1424389111069337305
+      Envt_Hallway_Locker_C: -6227353460792684791
+      Envt_Hallway_WallColumn: 2917569373199658818
+      Envt_Hallway_WallMain: -2770676073636010647
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
