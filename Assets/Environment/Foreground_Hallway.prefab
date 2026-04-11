@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.045173395, w: 0.9989792}
   m_LocalPosition: {x: 37.2, y: -3.87, z: -5}
-  m_LocalScale: {x: 0.4313291, y: 0.4313291, z: 0.4313291}
+  m_LocalScale: {x: 0.35507876, y: 0.35507876, z: 0.35507876}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2921666796349207703}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -783532617
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 888608321352162325, guid: 718445ce79dd64f1893635b3c05ad0e1, type: 3}
@@ -118,7 +118,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 13.06, y: -2.68, z: -3}
-  m_LocalScale: {x: 0.486115, y: 0.486115, z: 0.486115}
+  m_LocalScale: {x: 0.4001796, y: 0.4001796, z: 0.4001796}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 736019633869082483}
@@ -169,7 +169,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -783532617
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 221231294962419846, guid: e3d3bbf6184d441ecb5aed664be6c18d, type: 3}
@@ -244,7 +244,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.027921675, y: 0.9996101, z: 0, w: 0}
   m_LocalPosition: {x: 34.44, y: -3.53, z: -3}
-  m_LocalScale: {x: 0.4087741, y: 0.4087741, z: 0.4087741}
+  m_LocalScale: {x: 0.33651102, y: 0.33651102, z: 0.33651102}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2921666796349207703}
@@ -295,7 +295,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -783532617
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3165890973147804718, guid: e3d3bbf6184d441ecb5aed664be6c18d, type: 3}
@@ -335,7 +335,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -6.42, y: -2.9, z: -5}
-  m_LocalScale: {x: 0.51841193, y: 0.51841193, z: 0.51841193}
+  m_LocalScale: {x: 0.42676708, y: 0.42676708, z: 0.42676708}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1695086008238374259}
@@ -386,7 +386,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -783532617
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -7447223643647676031, guid: 718445ce79dd64f1893635b3c05ad0e1, type: 3}
@@ -426,7 +426,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.2, y: -3.31, z: -5}
-  m_LocalScale: {x: 0.51841193, y: 0.51841193, z: 0.51841193}
+  m_LocalScale: {x: 0.42676708, y: 0.42676708, z: 0.42676708}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7633614582273324907}
@@ -477,7 +477,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -783532617
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5869952836121538165, guid: 718445ce79dd64f1893635b3c05ad0e1, type: 3}
@@ -550,7 +550,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -8.67, y: -2.71, z: -3}
-  m_LocalScale: {x: 0.42596313, y: 0.42596313, z: 0.42596313}
+  m_LocalScale: {x: 0.35066137, y: 0.35066137, z: 0.35066137}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1695086008238374259}
@@ -601,7 +601,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -783532617
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 8173559581848116611, guid: e3d3bbf6184d441ecb5aed664be6c18d, type: 3}
@@ -675,7 +675,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 18.68, y: -2.68, z: -3}
-  m_LocalScale: {x: 0.486115, y: 0.486115, z: 0.486115}
+  m_LocalScale: {x: 0.4001796, y: 0.4001796, z: 0.4001796}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 736019633869082483}
@@ -726,7 +726,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -783532617
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3786981721913455913, guid: e3d3bbf6184d441ecb5aed664be6c18d, type: 3}
@@ -832,7 +832,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 15.540001, y: -3.15, z: -5}
-  m_LocalScale: {x: 0.4313291, y: 0.4313291, z: 0.4313291}
+  m_LocalScale: {x: 0.35507876, y: 0.35507876, z: 0.35507876}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 736019633869082483}
@@ -883,7 +883,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -783532617
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5731719391227994250, guid: 718445ce79dd64f1893635b3c05ad0e1, type: 3}
@@ -923,7 +923,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.046806663, y: 0.998904, z: -0, w: 0}
   m_LocalPosition: {x: 2.7800007, y: -2.71, z: -3}
-  m_LocalScale: {x: 0.42596313, y: 0.42596313, z: 0.42596313}
+  m_LocalScale: {x: 0.35066137, y: 0.35066137, z: 0.35066137}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7633614582273324907}
@@ -974,7 +974,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -783532617
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 9173453480146103873, guid: e3d3bbf6184d441ecb5aed664be6c18d, type: 3}
