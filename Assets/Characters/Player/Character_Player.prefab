@@ -249,7 +249,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -307,7 +307,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf9d585a4918446dad6966165d4b749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  deathRespawn: {fileID: 0}
   animator: {fileID: 6203604935891903430}
+  cardContainer: {fileID: 0}
   confidenceState: {fileID: 0}
   maxSpeed: 4
   move: {fileID: 0}
@@ -917,7 +919,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -519428151
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 200
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3670739388883116614, guid: 684f3f2ab2ac44864b1b500260a740f3, type: 3}
