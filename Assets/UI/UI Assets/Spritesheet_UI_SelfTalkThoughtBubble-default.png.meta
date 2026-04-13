@@ -1,0 +1,1348 @@
+fileFormatVersion: 2
+guid: a509412199492464f89ccdf877755bb0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2603411054232645692
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_0
+  - first:
+      213: 1834021526949499723
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_1
+  - first:
+      213: 7856710950834749416
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_2
+  - first:
+      213: 2825637243244840346
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_3
+  - first:
+      213: 5220936396905775159
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_4
+  - first:
+      213: -3724381853690161445
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_5
+  - first:
+      213: -5343430293328855504
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_6
+  - first:
+      213: -3614559543733891263
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_7
+  - first:
+      213: 7814928635475047592
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_8
+  - first:
+      213: 2459608210542704022
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_9
+  - first:
+      213: 2349821663047322080
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_10
+  - first:
+      213: 8415540475587458568
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_11
+  - first:
+      213: -7616925803229356410
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_12
+  - first:
+      213: -3435857972363424089
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_13
+  - first:
+      213: -889125500774048888
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_14
+  - first:
+      213: -7808085635822887448
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_15
+  - first:
+      213: -5452372106419705471
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_16
+  - first:
+      213: 866000305437373811
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_17
+  - first:
+      213: 5743149535663193953
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_18
+  - first:
+      213: -4153164878496569223
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_19
+  - first:
+      213: 340306165273262170
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_20
+  - first:
+      213: -6139289923175223168
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_21
+  - first:
+      213: 1314194531378667975
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_22
+  - first:
+      213: 8335184213478674992
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_23
+  - first:
+      213: 7527978181751609692
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_24
+  - first:
+      213: -5590587006974212429
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_25
+  - first:
+      213: 4818796834531390208
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_26
+  - first:
+      213: -5488417861328434940
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_27
+  - first:
+      213: 3460733288160842738
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_28
+  - first:
+      213: -2255906801333396401
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_29
+  - first:
+      213: -5197758956982167085
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_30
+  - first:
+      213: -4205228094994341359
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_31
+  - first:
+      213: -2219494370373329373
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_32
+  - first:
+      213: 2832577816194472475
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_33
+  - first:
+      213: -4990188205684352610
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_34
+  - first:
+      213: -9332701882472365
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_35
+  - first:
+      213: -1144740648266000053
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_36
+  - first:
+      213: -597656900414096046
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_37
+  - first:
+      213: 3515773643368240567
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_38
+  - first:
+      213: 559442094472470435
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_39
+  - first:
+      213: -6294276693722503692
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_40
+  - first:
+      213: -1056773070928127265
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_41
+  - first:
+      213: 59013416119059137
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_42
+  - first:
+      213: 9040304441565803645
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_43
+  - first:
+      213: 6683496976721808429
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_44
+  - first:
+      213: -2398145629691925316
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_45
+  - first:
+      213: -2295169195715791676
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_46
+  - first:
+      213: 3419905547073033398
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_47
+  - first:
+      213: -9089254741821346613
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_48
+  - first:
+      213: -8830436199363915684
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_49
+  - first:
+      213: 3503849302389976068
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_50
+  - first:
+      213: 8823825507286872589
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_51
+  - first:
+      213: 4599244518967525576
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_52
+  - first:
+      213: 7411387426103117338
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_53
+  - first:
+      213: -4894103453112338752
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_54
+  - first:
+      213: -7737889199548182259
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_55
+  - first:
+      213: -5490990898850268308
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_56
+  - first:
+      213: 6131678717817836739
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_57
+  - first:
+      213: 8285173414814436575
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_58
+  - first:
+      213: -9035405613924422933
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_59
+  - first:
+      213: -9017463220510627681
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_60
+  - first:
+      213: -8530225637609133197
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_61
+  - first:
+      213: 8995034573492487066
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_62
+  - first:
+      213: -6126970810460471884
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_63
+  - first:
+      213: -2357468545880437510
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_64
+  - first:
+      213: -6601091603599999843
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_65
+  - first:
+      213: 4121556828193463759
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_66
+  - first:
+      213: -6637858944509044468
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_67
+  - first:
+      213: 7065460701936403526
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_68
+  - first:
+      213: 4715307087028979636
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_69
+  - first:
+      213: -4297521767319286898
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_70
+  - first:
+      213: 2401783803428297983
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_71
+  - first:
+      213: -1530048904819935232
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_72
+  - first:
+      213: 2779286966381740588
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_73
+  - first:
+      213: -5316253205247169478
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_74
+  - first:
+      213: 4607478544143125072
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_75
+  - first:
+      213: 5273506244134826893
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_76
+  - first:
+      213: -2618845898692703998
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_77
+  - first:
+      213: -3930916700879584544
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_78
+  - first:
+      213: -8503792668174804207
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_79
+  - first:
+      213: 5055518609180116293
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_80
+  - first:
+      213: -2086615593857107443
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_81
+  - first:
+      213: 2988490642841958930
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_82
+  - first:
+      213: -8001474652262311958
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_83
+  - first:
+      213: -6303764512694518460
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_84
+  - first:
+      213: -695515216933344104
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_85
+  - first:
+      213: 5024466283991172386
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_86
+  - first:
+      213: -1067587692239582992
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_87
+  - first:
+      213: -4506715349658265023
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_88
+  - first:
+      213: 1753598848155579351
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_89
+  - first:
+      213: -5713716361398101931
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_90
+  - first:
+      213: -3269865396438076238
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_91
+  - first:
+      213: -2790689104187338411
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_92
+  - first:
+      213: -7093395713938088861
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_93
+  - first:
+      213: 8727968674842328162
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_94
+  - first:
+      213: -520698111524210871
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_95
+  - first:
+      213: 7595413661978561445
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_96
+  - first:
+      213: -6852932199045215061
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_97
+  - first:
+      213: 1107156619882065988
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_98
+  - first:
+      213: -8189331429632413034
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_99
+  - first:
+      213: -8505346985341615336
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_100
+  - first:
+      213: 7899660609859863959
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_101
+  - first:
+      213: -2203647583182989380
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_102
+  - first:
+      213: -7350385377558300909
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_103
+  - first:
+      213: -6237435991199723351
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_104
+  - first:
+      213: 3979524757591189979
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_105
+  - first:
+      213: -115740126213239856
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_106
+  - first:
+      213: 5588737940073024891
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_107
+  - first:
+      213: -8712318124014053110
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_108
+  - first:
+      213: -4794687488955545288
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_109
+  - first:
+      213: 8230488137083954768
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_110
+  - first:
+      213: 451444185738783840
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_111
+  - first:
+      213: -4409967202248793002
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_112
+  - first:
+      213: -626660897555587814
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_113
+  - first:
+      213: 3191462883132855358
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_114
+  - first:
+      213: 568055066745063334
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_115
+  - first:
+      213: 8861962140325780093
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_116
+  - first:
+      213: 1943917440147287271
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_117
+  - first:
+      213: 6337749686797789081
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_118
+  - first:
+      213: -381285228223700291
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_119
+  - first:
+      213: 7605790078608948720
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_120
+  - first:
+      213: -6331140120716944554
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_121
+  - first:
+      213: 7816601780736778441
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_122
+  - first:
+      213: -5797925869707085556
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_123
+  - first:
+      213: -8562661755798424517
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_124
+  - first:
+      213: 8329510647709457041
+    second: Spritesheet_UI_SelfTalkThoughtBubble-default_125
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cf432c8073dedbd0800000000000000
+      internalID: -2603411054232645692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b439e389cd0c37910800000000000000
+      internalID: 1834021526949499723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ef3d6fabf4a80d60800000000000000
+      internalID: 7856710950834749416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9509b31a1ea63720800000000000000
+      internalID: 2825637243244840346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7300a74cdfd747840800000000000000
+      internalID: 5220936396905775159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd613eacf66505cc0800000000000000
+      internalID: -3724381853690161445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03e721c757258d5b0800000000000000
+      internalID: -5343430293328855504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14f4e38ee3186ddc0800000000000000
+      internalID: -3614559543733891263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4b48e4034347c60800000000000000
+      internalID: 7814928635475047592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_9
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 695380cc2a8422220800000000000000
+      internalID: 2459608210542704022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_10
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e904774a5e3c9020800000000000000
+      internalID: 2349821663047322080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_11
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 806ff40a9710ac470800000000000000
+      internalID: 8415540475587458568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_12
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68ed102965e3b4690800000000000000
+      internalID: -7616925803229356410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_13
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3072
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ae859ac0616150d0800000000000000
+      internalID: -3435857972363424089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88b1f9d511139a3f0800000000000000
+      internalID: -889125500774048888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_15
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ed52f4bb7b14a390800000000000000
+      internalID: -7808085635822887448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 189ea9505784554b0800000000000000
+      internalID: -5452372106419705471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_17
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37579f480b6a40c00800000000000000
+      internalID: 866000305437373811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_18
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f772df214c3bf40800000000000000
+      internalID: 5743149535663193953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_19
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97865932c8efc56c0800000000000000
+      internalID: -4153164878496569223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_20
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a58fcff77a209b400800000000000000
+      internalID: 340306165273262170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 080710c975cdccaa0800000000000000
+      internalID: -6139289923175223168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_22
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c12690a6f4fc3210800000000000000
+      internalID: 1314194531378667975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_23
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03217d561e58ca370800000000000000
+      internalID: 8335184213478674992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_24
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5912387540c87860800000000000000
+      internalID: 7527978181751609692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_25
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b64363ccbe3a62b0800000000000000
+      internalID: -5590587006974212429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_26
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003350f903ecfd240800000000000000
+      internalID: 4818796834531390208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_27
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4090c94b80935d3b0800000000000000
+      internalID: -5488417861328434940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f3523ff69ef60030800000000000000
+      internalID: 3460733288160842738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_29
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4c922c67b861b0e0800000000000000
+      internalID: -2255906801333396401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_30
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d919fc74c9ddd7b0800000000000000
+      internalID: -5197758956982167085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_31
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 112ae5ee35704a5c0800000000000000
+      internalID: -4205228094994341359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_32
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32e1be821a5c231e0800000000000000
+      internalID: -2219494370373329373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_33
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1a5ce424865f4720800000000000000
+      internalID: 2832577816194472475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_34
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9917dd144a4fbab0800000000000000
+      internalID: -4990188205684352610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 358208305f7dedff0800000000000000
+      internalID: -9332701882472365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_SelfTalkThoughtBubble-default_36
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49972c02701d10f0800000000000000
+      internalID: -1144740648266000053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 89860249e3d054694b92b14b59dc497d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":8.0},"gridSpriteSize":{"x":512.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Spritesheet_UI_SelfTalkThoughtBubble-default_0: -2603411054232645692
+      Spritesheet_UI_SelfTalkThoughtBubble-default_1: 1834021526949499723
+      Spritesheet_UI_SelfTalkThoughtBubble-default_10: 2349821663047322080
+      Spritesheet_UI_SelfTalkThoughtBubble-default_11: 8415540475587458568
+      Spritesheet_UI_SelfTalkThoughtBubble-default_12: -7616925803229356410
+      Spritesheet_UI_SelfTalkThoughtBubble-default_13: -3435857972363424089
+      Spritesheet_UI_SelfTalkThoughtBubble-default_14: -889125500774048888
+      Spritesheet_UI_SelfTalkThoughtBubble-default_15: -7808085635822887448
+      Spritesheet_UI_SelfTalkThoughtBubble-default_16: -5452372106419705471
+      Spritesheet_UI_SelfTalkThoughtBubble-default_17: 866000305437373811
+      Spritesheet_UI_SelfTalkThoughtBubble-default_18: 5743149535663193953
+      Spritesheet_UI_SelfTalkThoughtBubble-default_19: -4153164878496569223
+      Spritesheet_UI_SelfTalkThoughtBubble-default_2: 7856710950834749416
+      Spritesheet_UI_SelfTalkThoughtBubble-default_20: 340306165273262170
+      Spritesheet_UI_SelfTalkThoughtBubble-default_21: -6139289923175223168
+      Spritesheet_UI_SelfTalkThoughtBubble-default_22: 1314194531378667975
+      Spritesheet_UI_SelfTalkThoughtBubble-default_23: 8335184213478674992
+      Spritesheet_UI_SelfTalkThoughtBubble-default_24: 7527978181751609692
+      Spritesheet_UI_SelfTalkThoughtBubble-default_25: -5590587006974212429
+      Spritesheet_UI_SelfTalkThoughtBubble-default_26: 4818796834531390208
+      Spritesheet_UI_SelfTalkThoughtBubble-default_27: -5488417861328434940
+      Spritesheet_UI_SelfTalkThoughtBubble-default_28: 3460733288160842738
+      Spritesheet_UI_SelfTalkThoughtBubble-default_29: -2255906801333396401
+      Spritesheet_UI_SelfTalkThoughtBubble-default_3: 2825637243244840346
+      Spritesheet_UI_SelfTalkThoughtBubble-default_30: -5197758956982167085
+      Spritesheet_UI_SelfTalkThoughtBubble-default_31: -4205228094994341359
+      Spritesheet_UI_SelfTalkThoughtBubble-default_32: -2219494370373329373
+      Spritesheet_UI_SelfTalkThoughtBubble-default_33: 2832577816194472475
+      Spritesheet_UI_SelfTalkThoughtBubble-default_34: -4990188205684352610
+      Spritesheet_UI_SelfTalkThoughtBubble-default_35: -9332701882472365
+      Spritesheet_UI_SelfTalkThoughtBubble-default_36: -1144740648266000053
+      Spritesheet_UI_SelfTalkThoughtBubble-default_4: 5220936396905775159
+      Spritesheet_UI_SelfTalkThoughtBubble-default_5: -3724381853690161445
+      Spritesheet_UI_SelfTalkThoughtBubble-default_6: -5343430293328855504
+      Spritesheet_UI_SelfTalkThoughtBubble-default_7: -3614559543733891263
+      Spritesheet_UI_SelfTalkThoughtBubble-default_8: 7814928635475047592
+      Spritesheet_UI_SelfTalkThoughtBubble-default_9: 2459608210542704022
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
