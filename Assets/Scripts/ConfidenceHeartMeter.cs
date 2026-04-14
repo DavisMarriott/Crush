@@ -43,6 +43,7 @@ public class ConfidenceHeartMeter : MonoBehaviour
 
    public void DestroyHeart()
    {
+      
       List<GameObject> children = new List<GameObject>();
       foreach (Transform child in transform) 
       {
@@ -51,17 +52,15 @@ public class ConfidenceHeartMeter : MonoBehaviour
       
       if (children.Count > 0)
       {
-         // 1. Get reference to the last index
+         // Get  the last index
          int lastIndex = children.Count - 1;
 
-         // 2. Destroy the GameObject from the scene
+         // Destroy last object in list
          Destroy(children[lastIndex]);
 
-         // 3. Remove the now-null reference from the list
+         // Removes the null reference from the list
          children.RemoveAt(lastIndex);
-      }
-      
-      // Destroy(heartPrefab);
+      }\
    }
    
    
