@@ -52,32 +52,15 @@ public class ConfidenceHeartMeter : MonoBehaviour
       }
       
       if (totalHearts.Count > 0)
-      {
-         // Get  the last index
+      { 
+      // Get  the last index
          int lastIndex = totalHearts.Count - 1;
-
+      // Declare animator and play animation. 
          Animator lastAnimator = totalHearts[lastIndex].GetComponent<Animator>();
+      // Heart_Break animation has an event trigger that Destroys the game object after animation plays.
          lastAnimator.Play("Heart_Break", 0);
-         
-         // totalHearts.RemoveAt(lastIndex);
       }
    }
    
    
 }
-
-
-
-// IEnumerator DestroyHeartWithDelay()
-// {
-//    for (int i = 0; i < confidenceTemp; i++)
-//    {
-//       SpawnHeart();
-//       Debug.Log("Iteration: " + i);
-//
-//       // This line pauses the loop execution for 1 second
-//       yield return new WaitForSeconds(0.3f);
-//    }
-//         
-//    Debug.Log("Loop Complete!");
-// }
