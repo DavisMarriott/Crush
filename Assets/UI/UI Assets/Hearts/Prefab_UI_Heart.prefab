@@ -9,30 +9,43 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9007881726092052813}
-  m_Layer: 0
+  - component: {fileID: 7994074061262956739}
+  m_Layer: 5
   m_Name: Prefab_UI_Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9007881726092052813
-Transform:
+--- !u!224 &9007881726092052813
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656367368513537179}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2796363213981213042}
   - {fileID: 7696769023020855525}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7994074061262956739
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656367368513537179}
+  m_CullTransparentMesh: 1
 --- !u!1 &2249440180305931283
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7696769023020855525}
   - component: {fileID: 907554565037174053}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Spritesheet_UI_Heart_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,8 +73,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 40, y: 40, z: 40}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 9007881726092052813}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -110,9 +123,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1480013977
+  m_SortingLayer: 6
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4106265712550718952, guid: 7de716463930d429682a820e9305bf76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -137,28 +150,33 @@ GameObject:
   - component: {fileID: 1540795313600014467}
   - component: {fileID: 8159630467302645944}
   - component: {fileID: 3128171284089383403}
-  m_Layer: 0
+  - component: {fileID: 9015085031124758982}
+  m_Layer: 5
   m_Name: Spritesheet_UI_Heart_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2796363213981213042
-Transform:
+--- !u!224 &2796363213981213042
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7542336290977943543}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 40, y: 40, z: 40}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9007881726092052813}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &3916926025980915452
 SpriteRenderer:
   serializedVersion: 2
@@ -204,9 +222,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1480013977
+  m_SortingLayer: 6
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: -263041920497533749, guid: 7de716463930d429682a820e9305bf76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -355,3 +373,11 @@ MonoBehaviour:
   soundEffect4: {fileID: 8300000, guid: 3c102579d5c4b4686a9d891ae028e79f, type: 3}
   soundEffect5: {fileID: 8300000, guid: 3bea23ef3cd8e49b1ad084a9ebf4eb54, type: 3}
   soundEffect6: {fileID: 8300000, guid: ab52e8a59ded143cb8740d38f046836d, type: 3}
+--- !u!222 &9015085031124758982
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7542336290977943543}
+  m_CullTransparentMesh: 1
