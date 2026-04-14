@@ -23,9 +23,10 @@ public class ConfidenceHeartMeter : MonoBehaviour
          {
             SpawnHeart();
             Debug.Log("Iteration: " + i);
+            // int delayTime = (i / (i * i));
 
-            // This line pauses the loop execution for 1 second
-            yield return new WaitForSeconds(0.3f);
+            // This line pauses the loop execution
+            yield return new WaitForSeconds(0.40f - (i *  0.04f));
          }
         
          Debug.Log("Loop Complete!");
@@ -41,27 +42,42 @@ public class ConfidenceHeartMeter : MonoBehaviour
       
    }
 
-   public void DestroyHeart()
+   public void BreakHeart()
    {
       
-      List<GameObject> children = new List<GameObject>();
+      List<GameObject> totalHearts = new List<GameObject>();
       foreach (Transform child in transform) 
       {
-         children.Add(child.gameObject);
+         totalHearts.Add(child.gameObject);
       }
       
-      if (children.Count > 0)
+      if (totalHearts.Count > 0)
       {
          // Get  the last index
-         int lastIndex = children.Count - 1;
+         int lastIndex = totalHearts.Count - 1;
 
-         // Destroy last object in list
-         Destroy(children[lastIndex]);
-
-         // Removes the null reference from the list
-         children.RemoveAt(lastIndex);
-      }\
+         Animator lastAnimator = totalHearts[lastIndex].GetComponent<Animator>();
+         lastAnimator.Play("Heart_Break", 0);
+         
+         // totalHearts.RemoveAt(lastIndex);
+      }
    }
    
    
 }
+
+
+
+// IEnumerator DestroyHeartWithDelay()
+// {
+//    for (int i = 0; i < confidenceTemp; i++)
+//    {
+//       SpawnHeart();
+//       Debug.Log("Iteration: " + i);
+//
+//       // This line pauses the loop execution for 1 second
+//       yield return new WaitForSeconds(0.3f);
+//    }
+//         
+//    Debug.Log("Loop Complete!");
+// }
