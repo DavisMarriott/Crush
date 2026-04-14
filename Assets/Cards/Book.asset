@@ -88,6 +88,10 @@ MonoBehaviour:
         confidenceImpact: 3
         charmImpact: 0
         line: "It's dorky\u2026 but I like it."
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: God she's perfect
     - charmState: 4
       dialogue:
       - character: 1

@@ -8,7 +8,7 @@ public class HallwaySelfTalk : MonoBehaviour
     [SerializeField] private DialogueTiming dialogueTiming;
     [SerializeField] private string[] genericHallwayLines;
     [SerializeField] private Animator letterBoxAnimator;
-    [SerializeField] private TMP_Text selfTalkText;
+    [SerializeField] public TMP_Text selfTalkText;
     [SerializeField] private float minFirstTimer = 1f;
     [SerializeField] private float maxFirstTimer = 4f;
     [SerializeField] private float minSecondTimer = 4f;

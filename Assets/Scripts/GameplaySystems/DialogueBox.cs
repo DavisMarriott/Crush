@@ -19,6 +19,7 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private GameObject cardContainer;
     [SerializeField] private DialogueCard dialogueCard;
     [SerializeField] private GameProgression gameProgression;
+    [SerializeField] private HallwaySelfTalk hallwaySelfTalk;
     [Header("Speaker Indicators")]
     [SerializeField] private GameObject leftArrow;
     [SerializeField] private GameObject rightArrow;
@@ -57,12 +58,21 @@ public class DialogueBox : MonoBehaviour
         foreach (DialogueCard.DialogueLine line in lukeBranch.dialogue)
         {
             SetSpeakerIndicator(line.character);
-            yield return dialogueTiming.Run(line.line, dialogueText);
+            if (line.character == DialogueCard.DialogueCharacter.BoyInternal)
+            {
+                yield return dialogueTiming.Run(line.line, hallwaySelfTalk.selfTalkText);
+            }
+            else
+            {
+                yield return dialogueTiming.Run(line.line, dialogueText);
+            }
             confidenceState.confidence += line.confidenceImpact;
             charmState.charm += line.charmImpact;
             playerMovement.GetConfidencePose();
             animationTriggerCrush.GetCharmPose();
             yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
+            hallwaySelfTalk.selfTalkText.text = "";
+            dialogueText.text = "";
         }
 
         // apply charm impact based on current charm state
@@ -80,11 +90,20 @@ public class DialogueBox : MonoBehaviour
             {
                 SetSpeakerIndicator(line.character);
                 animationTriggerCrush.GetCharmPose();
-                yield return dialogueTiming.Run(line.line, dialogueText);
+                if (line.character == DialogueCard.DialogueCharacter.BoyInternal)
+                {
+                    yield return dialogueTiming.Run(line.line, hallwaySelfTalk.selfTalkText);
+                }
+                else
+                {
+                    yield return dialogueTiming.Run(line.line, dialogueText);
+                }
                 confidenceState.confidence += line.confidenceImpact;
                 charmState.charm += line.charmImpact;
                 playerMovement.GetConfidencePose();
                 yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
+                hallwaySelfTalk.selfTalkText.text = "";
+                dialogueText.text = "";
             }
         }
 
@@ -131,12 +150,6 @@ public class DialogueBox : MonoBehaviour
                 dialogueText.color = girlTextColor;
                 leftArrow.SetActive(false);
                 rightArrow.SetActive(true);
-                break;
-            case DialogueCard.DialogueCharacter.BoyInternal:
-                dialogueText.alignment = TMPro.TextAlignmentOptions.Left;
-                dialogueText.color = boyInternalTextColor;
-                leftArrow.SetActive(true);
-                rightArrow.SetActive(false);
                 break;
         }
     }

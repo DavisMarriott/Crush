@@ -21,6 +21,10 @@ MonoBehaviour:
   - branchName: Default
     requiresIntroFalse: 0
     dialogue:
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Here goes nothing
     - character: 0
       confidenceImpact: -1
       charmImpact: 0
