@@ -19,6 +19,8 @@ public class DeathRespawn : MonoBehaviour
     [SerializeField] private Collider2D inConversationTrigger;
     [SerializeField] ThoughtSpawner thoughtSpawner;
     [SerializeField] HallwaySelfTalk hallwaySelfTalk;
+    [SerializeField] private float reflectDuration;
+    [SerializeField] private Animator letterBoxAnimator;
     
     //variables hidden in inspector
     [HideInInspector] public bool isDead = false;
@@ -37,6 +39,7 @@ public class DeathRespawn : MonoBehaviour
     
     public IEnumerator Death()
     {
+        PhaseManager.Instance.TransitionTo(GamePhase.Death);
         isDead = true;
         inConversationTrigger.enabled = false;
         yield return new WaitForSeconds(2f);
@@ -61,19 +64,24 @@ public class DeathRespawn : MonoBehaviour
        
         
         // first half of respawn + drafting
+        PhaseManager.Instance.TransitionTo(GamePhase.Reflect);
+        letterBoxAnimator.SetTrigger("LetterBoxIn");
         animationTriggerPlayer.EnterStart();
         playerTransform.position = spawnPoint.position;
         confidenceState.confidence = confidenceState.startingConfidence;
         charmState.ResetCharm();
         deckManager.ResetDeck();
+        yield return new WaitForSeconds(reflectDuration);
         
         if (deckManager.draftPool.Length >0)
         {
+            PhaseManager.Instance.TransitionTo(GamePhase.UpgradeDraft);
             draftUI.ShowDraftOptions();
             yield return new WaitUntil(() => !draftUI.gameObject.activeSelf || !draftUI.enabled);
         }
         
         //full respawn, ready for hallway walk
+        PhaseManager.Instance.TransitionTo(GamePhase.Hallway);
         thoughtSpawner.SpawnButtons();
         yield return new WaitUntil(() => (!hallwaySelfTalk.draftLinesActive));
         gameProgression.SetLoopConditions();

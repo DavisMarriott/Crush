@@ -12,7 +12,6 @@ public class DraftUI : MonoBehaviour
     [SerializeField] private Transform draftContainer;
     [SerializeField] private Vector2 draftButtonSize = new Vector2(200, 60);
     [SerializeField] private HallwaySelfTalk hallwaySelfTalk;
-    [SerializeField] private Animator letterBoxAnimator;
 
     private void Start()
     {
@@ -21,7 +20,6 @@ public class DraftUI : MonoBehaviour
 
     public void ShowDraftOptions()
     {
-        letterBoxAnimator.SetTrigger("LetterBoxIn");
         // Clear old buttons
         for (int i = draftContainer.childCount - 1; i >= 0; i--)
             Destroy(draftContainer.GetChild(i).gameObject);
