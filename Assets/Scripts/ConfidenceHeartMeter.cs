@@ -34,12 +34,11 @@ public class ConfidenceHeartMeter : MonoBehaviour
    }
    
    // Instantiate a heart prefab
-   
    public void SpawnHeart()
    {
       // Create Game Object
-      Instantiate(heartPrefab,  parentObject.transform);   
-      
+      Instantiate(heartPrefab,  parentObject.transform);
+
    }
 
    public void BreakHeart()
@@ -60,7 +59,56 @@ public class ConfidenceHeartMeter : MonoBehaviour
       // Heart_Break animation has an event trigger that Destroys the game object after animation plays.
          lastAnimator.Play("Heart_Break", 0);
       }
+      
    }
-   
-   
+
+   public void LowConfidenceCheck()
+   {
+      List<GameObject> totalHearts = new List<GameObject>();
+      foreach (Transform child in transform) 
+      {
+         totalHearts.Add(child.gameObject);
+      }
+      
+      if (totalHearts.Count > 3)
+      {
+         Animator heartOneAnimator = totalHearts[0].GetComponent<Animator>();
+         Animator heartTwoAnimator = totalHearts[1].GetComponent<Animator>();
+         Animator heartThreeAnimator = totalHearts[2].GetComponent<Animator>();
+         
+         heartOneAnimator.Play("Heart_Static", 0);
+         heartTwoAnimator.Play("Heart_Static", 0);
+         heartThreeAnimator.Play("Heart_Static", 0);
+      }
+
+      else if (totalHearts.Count == 3)
+      {
+         Animator heartOneAnimator = totalHearts[0].GetComponent<Animator>();
+         Animator heartTwoAnimator = totalHearts[1].GetComponent<Animator>();
+         Animator heartThreeAnimator = totalHearts[2].GetComponent<Animator>();
+         
+         heartOneAnimator.Play("Heart_Beat01", 0);
+         heartTwoAnimator.Play("Heart_Beat01", 0);
+         heartThreeAnimator.Play("Heart_Beat01", 0);
+      }
+      
+      else if (totalHearts.Count == 2 )
+      {
+         Animator heartOneAnimator = totalHearts[0].GetComponent<Animator>();
+         Animator heartTwoAnimator = totalHearts[1].GetComponent<Animator>();
+         
+         heartOneAnimator.Play("Heart_Beat02", 0);
+         heartTwoAnimator.Play("Heart_Beat02", 0);
+      }
+      
+      else if (totalHearts.Count == 1)
+      {
+         Animator heartOneAnimator = totalHearts[0].GetComponent<Animator>();
+
+         heartOneAnimator.Play("Heart_Beat03", 0);
+      }
+      
+      totalHearts.Clear();
+   }
+
 }
