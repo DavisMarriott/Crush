@@ -125,7 +125,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: -0.5
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce028075a60fe4531bfecea78f8ea719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
-  soundEffect1: {fileID: 8300000, guid: ca16f8fe173644c71868ba982ee2fadb, type: 3}
+  soundEffect1: {fileID: 8300000, guid: eb30ddcb570fd426e835b5f4cf213ca9, type: 3}
   soundEffect2: {fileID: 8300000, guid: 52df89ed6051c4197bc7c430dc321f05, type: 3}
   soundEffect3: {fileID: 8300000, guid: 2990649587ef64a14840a992a55ea27d, type: 3}
   soundEffect4: {fileID: 8300000, guid: 3c102579d5c4b4686a9d891ae028e79f, type: 3}

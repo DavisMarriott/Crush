@@ -8,6 +8,7 @@ public class ConfidenceHeartMeter : MonoBehaviour
    public GameObject heartPrefab;
    public GameObject parentObject;
    [SerializeField] private ConfidenceState confidenceState;
+   [SerializeField] public Animator postFxAnimator;
    public int confidenceTemp = 4;
    private Animator animator;
    // [SerializeField] private Animator heartAnimator;
@@ -34,12 +35,12 @@ public class ConfidenceHeartMeter : MonoBehaviour
    }
    
    // Instantiate a heart prefab
-   
    public void SpawnHeart()
    {
       // Create Game Object
-      Instantiate(heartPrefab,  parentObject.transform);   
-      
+      Instantiate(heartPrefab,  parentObject.transform);
+      PositivePulse();
+
    }
 
    public void BreakHeart()
@@ -60,7 +61,92 @@ public class ConfidenceHeartMeter : MonoBehaviour
       // Heart_Break animation has an event trigger that Destroys the game object after animation plays.
          lastAnimator.Play("Heart_Break", 0);
       }
+
+      NegativePulse();
+
+   }
+
+   public void LowConfidenceCheck()
+   {
+      List<GameObject> totalHearts = new List<GameObject>();
+      foreach (Transform child in transform) 
+      {
+         totalHearts.Add(child.gameObject);
+      }
+      
+      if (totalHearts.Count > 3)
+      {
+         Animator heartOneAnimator = totalHearts[0].GetComponent<Animator>();
+         Animator heartTwoAnimator = totalHearts[1].GetComponent<Animator>();
+         Animator heartThreeAnimator = totalHearts[2].GetComponent<Animator>();
+         
+         heartOneAnimator.Play("Heart_Static", 0);
+         heartTwoAnimator.Play("Heart_Static", 0);
+         heartThreeAnimator.Play("Heart_Static", 0);
+         postFxAnimator.Play("PostFX_Neutral_CYCLE", 0);
+      }
+
+      else if (totalHearts.Count == 3)
+      {
+         Animator heartOneAnimator = totalHearts[0].GetComponent<Animator>();
+         Animator heartTwoAnimator = totalHearts[1].GetComponent<Animator>();
+         Animator heartThreeAnimator = totalHearts[2].GetComponent<Animator>();
+         
+         heartOneAnimator.Play("Heart_Beat01", 0);
+         heartTwoAnimator.Play("Heart_Beat01", 0);
+         heartThreeAnimator.Play("Heart_Beat01", 0);
+         postFxAnimator.Play("PostFX_Negative_LowHealth01_CYCLE", 0);
+      }
+      
+      else if (totalHearts.Count == 2 )
+      {
+         Animator heartOneAnimator = totalHearts[0].GetComponent<Animator>();
+         Animator heartTwoAnimator = totalHearts[1].GetComponent<Animator>();
+         
+         heartOneAnimator.Play("Heart_Beat02", 0);
+         heartTwoAnimator.Play("Heart_Beat02", 0);
+         postFxAnimator.Play("PostFX_Negative_LowHealth01_CYCLE", 0);
+      }
+      
+      else if (totalHearts.Count == 1)
+      {
+         Animator heartOneAnimator = totalHearts[0].GetComponent<Animator>();
+
+         heartOneAnimator.Play("Heart_Beat03", 0);
+         postFxAnimator.Play("PostFX_Negative_LowHealth01_CYCLE", 0);
+      }
+      
+      totalHearts.Clear();
+   }
+
+   public void NegativePulse()
+   {
+      AnimatorStateInfo postFxStateInfo = postFxAnimator.GetCurrentAnimatorStateInfo(0);
+
+      if (postFxStateInfo.IsName("PostFX_Neutral_CYCLE"))
+      {
+         postFxAnimator.Play("PostFX_NegativePulse_01", 0);
+      }
+      
+      if (postFxStateInfo.IsName("PostFX_Negative_LowHealth01_CYCLE"))
+      {
+         postFxAnimator.Play("PostFX_NegativePulse_02", 0);
+      }
    }
    
-   
+   public void PositivePulse()
+   {
+      AnimatorStateInfo postFxStateInfo = postFxAnimator.GetCurrentAnimatorStateInfo(0);
+
+      if (postFxStateInfo.IsName("PostFX_Neutral_CYCLE"))
+      {
+         postFxAnimator.Play("PostFX_PositivePulse_01", 0);
+      }
+      
+      if (postFxStateInfo.IsName("PostFX_Negative_LowHealth01_CYCLE"))
+      {
+         postFxAnimator.Play("PostFX_PositivePulse_02", 0);
+      }
+   }
+
 }
