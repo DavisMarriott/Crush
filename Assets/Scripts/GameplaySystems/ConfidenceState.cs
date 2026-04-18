@@ -27,7 +27,18 @@ public class ConfidenceState : MonoBehaviour
     [Header("Starting Confidence")]
     [SerializeField] public int startingConfidence = 3;
 
-    public int confidence;
+    private int _confidence;
+    public int peakConfidence;
+    public int confidence
+    {
+        get => _confidence;
+        set
+        {
+            _confidence = Mathf.Clamp(value, MinConfidenceFullGame, MaxConfidenceFullGame);
+            if (_confidence > peakConfidence) peakConfidence = _confidence;
+        }
+    }
+
 
     void Start()
     {
@@ -38,18 +49,6 @@ public class ConfidenceState : MonoBehaviour
     {
         if (label != null)
             label.text = $"{confidence}";
-
-        // todo: only clamp when score actually changes
-        ClampConfidence();
-        label.text = $"{confidence}";
-        
-        
-        
-    }
-    
-    void ClampConfidence()
-    {
-        confidence = Mathf.Clamp(confidence, MinConfidenceFullGame, MaxConfidenceFullGame);
     }
 
     public void EnterConversation()

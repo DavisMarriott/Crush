@@ -12,6 +12,7 @@ public class GameProgression : MonoBehaviour
     [SerializeField] private GameObject specialLoopConditions;
     [SerializeField] private FirstLoopManager firstLoopManager;
     [SerializeField] private Collider2D inConversationTrigger;
+    public LoopSnapshot lastLoop;
 
     private void Start()
     {
@@ -72,6 +73,7 @@ public class GameProgression : MonoBehaviour
         }
     }
 
+    //this is our "trigger end game" success state. Need to build content
     public void AskedToDance()
     {
         Debug.Log("YOU DID IT!");

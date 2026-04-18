@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DeathRespawn : MonoBehaviour
@@ -41,12 +42,32 @@ public class DeathRespawn : MonoBehaviour
     {
         PhaseManager.Instance.TransitionTo(GamePhase.Death);
         isDead = true;
+        dialogueBox.CloseDialogueBox();
+        
+        //snapshot for branch tracking
+        LoopSnapshot loopSnapshot = new LoopSnapshot();
+        loopSnapshot.finalConfidence = confidenceState.confidence;
+        loopSnapshot.finalCharm = charmState.charm;
+        loopSnapshot.lastPeakConfidence = confidenceState.peakConfidence;
+        loopSnapshot.lastPeakCharm = charmState.peakCharm;
+        if (charmState.charm <= 0) loopSnapshot.deathFromCharm = true;
+        loopSnapshot.cardsPlayed = new List<string>();
+        foreach (DialogueCard card in deckManager.Discard)
+        {
+            loopSnapshot.cardsPlayed.Add(card.name);
+        }
+        loopSnapshot.cardsUnplayed = new List<string>();
+        foreach (DialogueCard card in deckManager.Hand)
+        {
+            loopSnapshot.cardsUnplayed.Add(card.name);
+        }
+        gameProgression.lastLoop = loopSnapshot;
+        
+        //resume death sequence
         inConversationTrigger.enabled = false;
         yield return new WaitForSeconds(2f);
         deathScreen.SetActive(true);
-        dialogueBox.CloseDialogueBox();
         gameProgression.NextLoop();
-        confidenceState.introMade = false;
         confidenceState.introMade = false;
         cardContainer.SetActive(false);
         yield return new WaitForSeconds(deathScreenTimer);
@@ -71,6 +92,8 @@ public class DeathRespawn : MonoBehaviour
         confidenceState.confidence = confidenceState.startingConfidence;
         charmState.ResetCharm();
         deckManager.ResetDeck();
+        confidenceState.peakConfidence = 0;
+        charmState.peakCharm = 0;
         yield return new WaitForSeconds(reflectDuration);
         
         if (deckManager.draftPool.Length >0)
@@ -89,5 +112,7 @@ public class DeathRespawn : MonoBehaviour
         
         
     }
+    
+    
     
 }
