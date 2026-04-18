@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ConfidenceIncrementer : MonoBehaviour
 
 {
-
+    
     public int confidence = 4;
     
     private TextMeshProUGUI textMeshPro;

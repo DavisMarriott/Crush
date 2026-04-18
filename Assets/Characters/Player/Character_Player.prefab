@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 13397708809891304}
   - component: {fileID: 5565487545552166279}
   - component: {fileID: 6203604935891903430}
+  - component: {fileID: 4154910979532179543}
   m_Layer: 0
   m_Name: Character_Player
   m_TagString: Player
@@ -191,7 +192,7 @@ MonoBehaviour:
   soundEffect3: {fileID: 8300000, guid: e55f2290852614924911c42359250009, type: 3}
   soundEffect4: {fileID: 8300000, guid: 2e6a197fe9b274142b0d208661724605, type: 3}
   soundEffect5: {fileID: 8300000, guid: cdae8214f812f4415b7744cd78c4fb6f, type: 3}
-  soundEffect6: {fileID: 0}
+  soundEffect6: {fileID: 8300000, guid: 6d0bbf6683cd54e2ebcb34f666f99a23, type: 3}
 --- !u!50 &1516352212143081565
 Rigidbody2D:
   serializedVersion: 5
@@ -349,6 +350,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4154910979532179543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288216823463544167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098558a983c9b49778e64a176f24bcfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationTriggerThoughtBubble
+  thoughtBubble: {fileID: 1418214156265520326}
 --- !u!1 &666376550814757004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,7 +1016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 671104596760632567, guid: f86d777d059fd4efbbed581f54393c1c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2.75
+      value: -3.2
       objectReference: {fileID: 0}
     - target: {fileID: 671104596760632567, guid: f86d777d059fd4efbbed581f54393c1c, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1029,6 +1043,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f86d777d059fd4efbbed581f54393c1c, type: 3}
+--- !u!1 &1418214156265520326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8412780452214898013, guid: f86d777d059fd4efbbed581f54393c1c, type: 3}
+  m_PrefabInstance: {fileID: 7453089585052811675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7943944497303395692 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 671104596760632567, guid: f86d777d059fd4efbbed581f54393c1c, type: 3}

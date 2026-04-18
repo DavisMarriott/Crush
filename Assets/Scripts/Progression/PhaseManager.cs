@@ -8,6 +8,8 @@ public class PhaseManager : MonoBehaviour
     public static PhaseManager Instance { get; private set; }
     public event Action<GamePhase, GamePhase> OnPhaseChanged;
 
+    public ConfidenceHeartMeter confidenceHeartMeter;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -19,6 +21,8 @@ public class PhaseManager : MonoBehaviour
         //only possible to get here IF ^^ ==false
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        
+        confidenceHeartMeter.SpawnHeartMeter();
     }
 
     public void TransitionTo(GamePhase newPhase)
@@ -28,5 +32,10 @@ public class PhaseManager : MonoBehaviour
         currentPhase = newPhase;
         Debug.Log($"[phaseManager] {oldPhase} -> {newPhase}");
         OnPhaseChanged?.Invoke(oldPhase, newPhase);
+
+        if (currentPhase == GamePhase.Hallway)
+        {
+            confidenceHeartMeter.SpawnHeartMeter();
+        }
     }
 }

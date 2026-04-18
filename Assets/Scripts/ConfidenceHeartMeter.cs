@@ -1,26 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
 public class ConfidenceHeartMeter : MonoBehaviour
+
 {
    public GameObject heartPrefab;
    public GameObject parentObject;
-   [SerializeField] private ConfidenceState confidenceState;
-   [SerializeField] public Animator postFxAnimator;
-   public int confidenceTemp = 4;
+   [SerializeField] ConfidenceState confidenceState;
+   public Animator postFxAnimator;
+
+   // // used only for testing
+   // public int confidenceLevel = 3;
+   
    private Animator animator;
    // [SerializeField] private Animator heartAnimator;
 
-   private void Start()
+   public void SpawnHeartMeter()
    {
-         // Start the coroutine (do not call it like a regular function)
-         StartCoroutine(SpawnHeartWithDelay());
+      StartCoroutine(SpawnHeartWithDelay());
 
       IEnumerator SpawnHeartWithDelay()
       {
-         for (int i = 0; i < confidenceTemp; i++)
+         
+         for (int i = 0; i < confidenceState.startingConfidence; i++)
          {
             SpawnHeart();
             Debug.Log("Iteration: " + i);
@@ -32,13 +34,14 @@ public class ConfidenceHeartMeter : MonoBehaviour
         
          Debug.Log("Loop Complete!");
       }
+      
    }
    
    // Instantiate a heart prefab
    public void SpawnHeart()
    {
       // Create Game Object
-      Instantiate(heartPrefab,  parentObject.transform);
+      Instantiate(heartPrefab, parentObject.transform);
       PositivePulse();
 
    }
@@ -54,7 +57,7 @@ public class ConfidenceHeartMeter : MonoBehaviour
       
       if (totalHearts.Count > 0)
       { 
-      // Get  the last index
+         // Get  the last index
          int lastIndex = totalHearts.Count - 1;
       // Declare animator and play animation. 
          Animator lastAnimator = totalHearts[lastIndex].GetComponent<Animator>();
@@ -119,7 +122,7 @@ public class ConfidenceHeartMeter : MonoBehaviour
       totalHearts.Clear();
    }
 
-   public void NegativePulse()
+   private void NegativePulse()
    {
       AnimatorStateInfo postFxStateInfo = postFxAnimator.GetCurrentAnimatorStateInfo(0);
 
@@ -134,7 +137,7 @@ public class ConfidenceHeartMeter : MonoBehaviour
       }
    }
    
-   public void PositivePulse()
+   private void PositivePulse()
    {
       AnimatorStateInfo postFxStateInfo = postFxAnimator.GetCurrentAnimatorStateInfo(0);
 
