@@ -22,12 +22,12 @@ public class AnimationTriggerPlayer : MonoBehaviour
             animator.Play("Player_Start_to_Walk", 0);
         }
         
-        if (stateInfo.IsName("Player_State01_CYCLE"))
+        else if (stateInfo.IsName("Player_State01_CYCLE"))
         {
             animator.Play("Player_State01_to_Walk", 0);
         }
         
-        if ( (stateInfo.IsName("Player_State01_to_Walk")) || (stateInfo.IsName("Player_Walk_to_State01")) || (stateInfo.IsName("Player_Start_to_Walk")) )
+        else if ( (stateInfo.IsName("Player_State01_to_Walk")) || (stateInfo.IsName("Player_Walk_to_State01")) || (stateInfo.IsName("Player_Start_to_Walk")) )
         {
             animator.Play("Player_Walk_CYCLE", 0);
         }
@@ -59,12 +59,17 @@ public class AnimationTriggerPlayer : MonoBehaviour
         //     animator.Play("Player_State01_CYCLE", 0);
         // }
         
-        if ( stateInfo.IsName("Player_State02_CYCLE") )
+        if ( (stateInfo.IsName("Player_Walk_CYCLE")) || (stateInfo.IsName("Player_Start_to_Walk")) || (stateInfo.IsName("Player_State01_to_Walk")) )
+        {
+            animator.Play("Player_Walk_to_State01", 0);
+        }
+        
+        else if ( stateInfo.IsName("Player_State02_CYCLE") )
         {
             animator.Play("Player_State02_to_State01", 0);
         }
         
-        if ( stateInfo.IsName("Player_State03_CYCLE") )
+        else if ( stateInfo.IsName("Player_State03_CYCLE") )
         {
             animator.Play("Player_State03_to_State01", 0);
         }
@@ -90,7 +95,7 @@ public class AnimationTriggerPlayer : MonoBehaviour
             animator.Play("Player_State01_to_State02", 0);
         }
         
-        if ( stateInfo.IsName("Player_State03_CYCLE") )
+        else if ( stateInfo.IsName("Player_State03_CYCLE") )
         {
             animator.Play("Player_State03_to_State02", 0);
         }
@@ -113,10 +118,11 @@ public class AnimationTriggerPlayer : MonoBehaviour
             animator.Play("Player_State01_to_State03", 0);
         }
         
-        if ( stateInfo.IsName("Player_State02_CYCLE") )
+        else if ( stateInfo.IsName("Player_State02_CYCLE") )
         {
             animator.Play("Player_State02_to_State03", 0);
         }
+        
         else
         {
             animator.Play("Player_State03_CYCLE");
@@ -139,21 +145,26 @@ public class AnimationTriggerPlayer : MonoBehaviour
             animator.Play("Player_State01_to_Death01", 0);
         }
         
-        if ( stateInfo.IsName("Player_State02_CYCLE") )
+        else if ( stateInfo.IsName("Player_State02_CYCLE") )
         {
             animator.Play("Player_State02_to_Death01", 0);
         }
         
-        if ( stateInfo.IsName("Player_State03_CYCLE") )
+        else if ( stateInfo.IsName("Player_State03_CYCLE") )
         {
             animator.Play("Player_State03_to_Death01", 0);
+        }
+        
+        else
+        {
+            animator.Play("Player_Death01_CYCLE", 0);
         }
         
     }
 
     public void EnterStart()
     {
-        animator.Play("Player_Start_CYCLE", 0);
+        animator.Play("Player_Start", 0);
     }
 
 }
