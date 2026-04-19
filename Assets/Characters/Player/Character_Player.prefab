@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 5565487545552166279}
   - component: {fileID: 6203604935891903430}
   - component: {fileID: 4154910979532179543}
+  - component: {fileID: 6199569698405733649}
   m_Layer: 0
   m_Name: Character_Player
   m_TagString: Player
@@ -91,7 +92,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -101,7 +102,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: -0.25
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -187,12 +188,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce028075a60fe4531bfecea78f8ea719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
-  soundEffect1: {fileID: 8300000, guid: e55f2290852614924911c42359250009, type: 3}
-  soundEffect2: {fileID: 8300000, guid: dd1ec8f4f542e45249ef190d03449deb, type: 3}
-  soundEffect3: {fileID: 8300000, guid: e55f2290852614924911c42359250009, type: 3}
-  soundEffect4: {fileID: 8300000, guid: 2e6a197fe9b274142b0d208661724605, type: 3}
-  soundEffect5: {fileID: 8300000, guid: cdae8214f812f4415b7744cd78c4fb6f, type: 3}
-  soundEffect6: {fileID: 8300000, guid: 6d0bbf6683cd54e2ebcb34f666f99a23, type: 3}
+  soundEffect1: {fileID: 0}
+  soundEffect2: {fileID: 0}
+  soundEffect3: {fileID: 0}
+  soundEffect4: {fileID: 0}
+  soundEffect5: {fileID: 0}
+  soundEffect6: {fileID: 8300000, guid: 6011a3f939e4f4106b191e69acb51ab7, type: 3}
 --- !u!50 &1516352212143081565
 Rigidbody2D:
   serializedVersion: 5
@@ -363,6 +364,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimationTriggerThoughtBubble
   thoughtBubble: {fileID: 1418214156265520326}
+--- !u!114 &6199569698405733649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288216823463544167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25957a85eb6c408e94b5a45ec70c289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  footstep01: {fileID: 8300000, guid: 60a4e31bf49784f45b9f5c2e06126cb5, type: 3}
+  footstep02: {fileID: 8300000, guid: 9c843a32b59d842e1a92bbf666269135, type: 3}
+  footstep03: {fileID: 8300000, guid: edbbb5220e66a485781b5971de8848b6, type: 3}
+  footstep04: {fileID: 8300000, guid: f52fe0145159e4b918f7c2edcdc80cd5, type: 3}
+  footstep05: {fileID: 8300000, guid: 485428153d9bf432dbe19ab1c8b6ffb6, type: 3}
+  footstep06: {fileID: 8300000, guid: 30043659b0a214b8e9e258a029ff68c1, type: 3}
+  clothing01: {fileID: 8300000, guid: 949c6f1f5ecac4d71b69c937d250fcb9, type: 3}
+  clothing02: {fileID: 8300000, guid: 67b900aad73444f96b7c0d83761bb406, type: 3}
+  clothing03: {fileID: 8300000, guid: 5622a845cbaac42c1afe1db2f95cd8e4, type: 3}
+  clothing04: {fileID: 8300000, guid: eb2a45a27b55c4defbfca7244e9493fa, type: 3}
+  clothing05: {fileID: 8300000, guid: 8be56064c0eee40b3b44d1d037007bc8, type: 3}
+  clothing06: {fileID: 8300000, guid: 9f2e779ff0ad14180a55123a2b8c1499, type: 3}
+  clothing07: {fileID: 8300000, guid: f04112e0d74e845bd9d4286cf0fd7988, type: 3}
+  clothing08: {fileID: 8300000, guid: 6e9479317c7374930b574ac9627984a5, type: 3}
+  clothing09: {fileID: 8300000, guid: 1824bb81482e14b3fb08223e539ef5ed, type: 3}
+  clothing10: {fileID: 8300000, guid: 71bab8c8e1b634b339af106fe6cf5217, type: 3}
+  impact01: {fileID: 8300000, guid: 6d0bbf6683cd54e2ebcb34f666f99a23, type: 3}
+  impact02: {fileID: 8300000, guid: 6b2a58004e67142c1a7e8fd7a7dc6398, type: 3}
+  impact03: {fileID: 8300000, guid: 6011a3f939e4f4106b191e69acb51ab7, type: 3}
+  impact04: {fileID: 0}
+  impact05: {fileID: 0}
+  impact06: {fileID: 0}
+  voiceNeutral01: {fileID: 0}
+  voiceNeutral02: {fileID: 0}
+  voiceNeutral03: {fileID: 0}
+  voiceNeutral04: {fileID: 0}
+  voiceNeutral05: {fileID: 0}
+  voicePositive01: {fileID: 0}
+  voicePositive02: {fileID: 0}
+  voicePositive03: {fileID: 0}
+  voicePositive04: {fileID: 0}
+  voicePositive05: {fileID: 0}
+  voiceNegative01: {fileID: 0}
+  voiceNegative02: {fileID: 0}
+  voiceNegative03: {fileID: 0}
+  voiceNegative04: {fileID: 0}
+  voiceNegative05: {fileID: 0}
 --- !u!1 &666376550814757004
 GameObject:
   m_ObjectHideFlags: 0

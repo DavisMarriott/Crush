@@ -119,28 +119,28 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.26666668
-    functionName: PlaySoundEffect2
+    functionName: Footstep01
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.6666667
-    functionName: PlaySoundEffect3
+    functionName: Footstep02
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.0666667
-    functionName: PlaySoundEffect4
+    functionName: Footstep03
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.4666667
-    functionName: PlaySoundEffect1
+    functionName: Footstep04
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

@@ -1378,42 +1378,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character_Player
       objectReference: {fileID: 0}
-    - target: {fileID: 853530314174501325, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 95.9027
-      objectReference: {fileID: 0}
-    - target: {fileID: 853530314174501325, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 6.0569
-      objectReference: {fileID: 0}
-    - target: {fileID: 853530314174501325, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.0886
-      objectReference: {fileID: 0}
-    - target: {fileID: 853530314174501325, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.1032
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248346908929086129, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-      propertyPath: m_fontSize
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248346908929086129, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248346908929086129, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 1248346908929086129, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3499565781540554659, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4400308429686677114, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1363.6357
