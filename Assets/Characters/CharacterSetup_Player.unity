@@ -3815,6 +3815,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6199569698405733649, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
+      propertyPath: blink01
+      value: 
+      objectReference: {fileID: 8300000, guid: 5123a4ee59ede4d60ab67f02e7d5f90e, type: 3}
+    - target: {fileID: 6199569698405733649, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
+      propertyPath: blink02
+      value: 
+      objectReference: {fileID: 8300000, guid: 6d96265ae107f41f484116cd78d96ad8, type: 3}
+    - target: {fileID: 6199569698405733649, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
       propertyPath: impact04
       value: 
       objectReference: {fileID: 8300000, guid: 71a75b6ab547f4b91be8174cc4b4407b, type: 3}

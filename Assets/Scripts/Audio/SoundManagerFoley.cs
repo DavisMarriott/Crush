@@ -44,6 +44,9 @@ public class SoundManagerFoley : MonoBehaviour
     public AudioClip voiceNegative03;
     public AudioClip voiceNegative04;
     public AudioClip voiceNegative05;
+    // MISC
+    public AudioClip blink01;
+    public AudioClip blink02;
 
     void Start()
     {
@@ -168,6 +171,17 @@ public class SoundManagerFoley : MonoBehaviour
     public void Impact06()
     {
         audioSource.PlayOneShot(impact06);
+    }
+    
+    // MISC
+    public void Blink01()
+    {
+        audioSource.PlayOneShot(blink01);
+    }
+    
+    public void Blink02()
+    {
+        audioSource.PlayOneShot(blink02);
     }
     
 }
