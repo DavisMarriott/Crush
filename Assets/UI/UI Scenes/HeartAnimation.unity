@@ -5109,6 +5109,18 @@ PrefabInstance:
       propertyPath: postFxAnimator
       value: 
       objectReference: {fileID: 8131901001376986370}
+    - target: {fileID: 7999130558973701568, guid: f1f9a151aff85424b817568a492dafab, type: 3}
+      propertyPath: confidenceDelta
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999130558973701568, guid: f1f9a151aff85424b817568a492dafab, type: 3}
+      propertyPath: confidenceLevel
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999130558973701568, guid: f1f9a151aff85424b817568a492dafab, type: 3}
+      propertyPath: startingConfidence
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
