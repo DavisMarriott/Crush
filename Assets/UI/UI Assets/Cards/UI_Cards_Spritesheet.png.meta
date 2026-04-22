@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: 0b2063865946248c18201a392e91540a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3997405082378307755
+    second: UI_Cards_Spritesheet_0
+  - first:
+      213: 3963818375178200490
+    second: UI_Cards_Spritesheet_1
+  - first:
+      213: 1330955043984563227
+    second: UI_Cards_Spritesheet_2
+  - first:
+      213: 6036024004823900005
+    second: UI_Cards_Spritesheet_3
+  - first:
+      213: 2289683790572153692
+    second: UI_Cards_Spritesheet_4
+  - first:
+      213: 7983236236725834707
+    second: UI_Cards_Spritesheet_5
+  - first:
+      213: 3372938513564566459
+    second: UI_Cards_Spritesheet_6
+  - first:
+      213: 8084414982421872870
+    second: UI_Cards_Spritesheet_7
+  - first:
+      213: 6944129181140865889
+    second: UI_Cards_Spritesheet_8
+  - first:
+      213: 3730943357631368853
+    second: UI_Cards_Spritesheet_9
+  - first:
+      213: 3254738612171320562
+    second: UI_Cards_Spritesheet_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Card_Frame_New
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 1587
+        width: 712
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba800864eb2a97730800000000000000
+      internalID: 3997405082378307755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Card_Frame_Used
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 1587
+        width: 712
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa5a9ae9fcf420730800000000000000
+      internalID: 3963818375178200490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Card_Frame_Upgraded
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 1074
+        width: 712
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1cd6b09f80887210800000000000000
+      internalID: 1330955043984563227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Card_Backing_Default
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 1109
+        width: 661
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56f52472ad344c350800000000000000
+      internalID: 6036024004823900005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Card_Backing_Upgraded
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 597
+        width: 661
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5be509b64796cf10800000000000000
+      internalID: 2289683790572153692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Card_Shadow
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 555
+        width: 724
+        height: 424
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3d1107f072ace60800000000000000
+      internalID: 7983236236725834707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Card_Frame_ConfidenceUpgrade
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 49
+        width: 712
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb3004e15b51fce20800000000000000
+      internalID: 3372938513564566459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Chevron_Up_01
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 320
+        width: 264
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e00a1ce79c913070800000000000000
+      internalID: 8084414982421872870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Chevron_Down_01
+      rect:
+        serializedVersion: 2
+        x: 1621
+        y: 320
+        width: 264
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 163535cd2b08e5060800000000000000
+      internalID: 6944129181140865889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Chevron_Up_02
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 131
+        width: 264
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e88b46739f6c330800000000000000
+      internalID: 3730943357631368853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Chevron_Down_02
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 132
+        width: 262
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc283ff5872b2d20800000000000000
+      internalID: 3254738612171320562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 500c85e160dad47c2ab2594ae50f53a3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Card_Backing_Default: 6036024004823900005
+      Card_Backing_Upgraded: 2289683790572153692
+      Card_Frame_ConfidenceUpgrade: 3372938513564566459
+      Card_Frame_New: 3997405082378307755
+      Card_Frame_Upgraded: 1330955043984563227
+      Card_Frame_Used: 3963818375178200490
+      Card_Shadow: 7983236236725834707
+      Icon_Chevron_Down_01: 6944129181140865889
+      Icon_Chevron_Down_02: 3254738612171320562
+      Icon_Chevron_Up_01: 8084414982421872870
+      Icon_Chevron_Up_02: 3730943357631368853
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
