@@ -10,19 +10,23 @@ public class ConfidenceHeartMeter : MonoBehaviour
    public Animator postFxAnimator;
 
    // // used only for testing
-   // public int confidenceLevel = 3;
+   public int confidenceLevel = 5;
+   public int confidenceDelta = 3;
    
    private Animator animator;
    // [SerializeField] private Animator heartAnimator;
 
+   
+   // call SpawnHeartMeter() at start of sequence - spawns [starting confidence] hearts with ramping speed
    public void SpawnHeartMeter()
    {
       StartCoroutine(SpawnHeartWithDelay());
 
       IEnumerator SpawnHeartWithDelay()
       {
-         
-         for (int i = 0; i < confidenceState.startingConfidence; i++)
+         // remove comment out here when implementing
+         // for (int i = 0; i < confidenceState.startingConfidence; i++)
+         for (int i = 0; i < confidenceLevel; i++)
          {
             SpawnHeart();
             Debug.Log("Iteration: " + i);
@@ -36,6 +40,53 @@ public class ConfidenceHeartMeter : MonoBehaviour
       }
       
    }
+   
+   // call AddHearts() if confidence delta is positive. Spawns appropriate # hearts with ramping speed
+   public void AddHearts()
+   {
+      StartCoroutine(SpawnHeartWithDelay());
+
+      IEnumerator SpawnHeartWithDelay()
+      {
+         // Need to replace confidenceDelta, or redefine above
+         for (int i = 0; i < confidenceDelta; i++)
+         {
+            SpawnHeart();
+            Debug.Log("Iteration: " + i);
+            // int delayTime = (i / (i * i));
+
+            // This line pauses the loop execution
+            yield return new WaitForSeconds(0.40f - (i *  0.04f));
+         }
+        
+         Debug.Log("Loop Complete!");
+      }
+   }
+   
+   
+   // call RemoveHearts() if confidence delta is negative. Breaks and Removes appropriate # hearts with ramping speed
+   public void RemoveHearts()
+   {
+      StartCoroutine(BreakHeartWithDelay());
+
+      IEnumerator BreakHeartWithDelay()
+      {
+         // Need to replace confidenceDelta, or redefine above
+         for (int i = 0; i < confidenceDelta; i++)
+         {
+            BreakHeart();
+            Debug.Log("Iteration: " + i);
+            // int delayTime = (i / (i * i));
+
+            // This line pauses the loop execution
+            yield return new WaitForSeconds(0.40f - (i *  0.04f));
+         }
+        
+         Debug.Log("Loop Complete!");
+      }
+   }
+   
+   
    
    // Instantiate a heart prefab
    public void SpawnHeart()
@@ -55,7 +106,7 @@ public class ConfidenceHeartMeter : MonoBehaviour
          totalHearts.Add(child.gameObject);
       }
       
-      if (totalHearts.Count > 0)
+      if (totalHearts.Count > 1)
       { 
          // Get  the last index
          int lastIndex = totalHearts.Count - 1;
@@ -63,6 +114,16 @@ public class ConfidenceHeartMeter : MonoBehaviour
          Animator lastAnimator = totalHearts[lastIndex].GetComponent<Animator>();
       // Heart_Break animation has an event trigger that Destroys the game object after animation plays.
          lastAnimator.Play("Heart_Break", 0);
+      }
+      
+      if (totalHearts.Count == 1)
+      { 
+         // Get  the last index
+         int lastIndex = totalHearts.Count - 1;
+         // Declare animator and play animation. 
+         Animator lastAnimator = totalHearts[lastIndex].GetComponent<Animator>();
+         // Heart_Break animation has an event trigger that Destroys the game object after animation plays.
+         lastAnimator.Play("Heart_Break_Long", 0);
       }
 
       NegativePulse();
