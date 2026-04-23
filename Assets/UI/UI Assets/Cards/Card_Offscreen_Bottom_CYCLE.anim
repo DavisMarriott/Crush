@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Card_Offscreen_Bottom
+  m_Name: Card_Offscreen_Bottom_CYCLE
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -1214,7 +1214,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Card_Art
+    path: 
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -1226,7 +1226,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Card_Art
+    path: 
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -1238,7 +1238,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Card_Art
+    path: 
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -1250,7 +1250,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: 
+    path: Card_Art
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -1262,7 +1262,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: 
+    path: Card_Art
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -1274,7 +1274,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: 
+    path: Card_Art
     classID: 224
     script: {fileID: 0}
     flags: 0

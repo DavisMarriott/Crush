@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: b556bed25daeb4fb5a4a387cfca099f4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6337343248955729805
+    second: UI_InfoPanels_Spritesheet_01_0
+  - first:
+      213: 3024628690224755619
+    second: UI_InfoPanels_Spritesheet_01_1
+  - first:
+      213: 6534890116599804230
+    second: UI_InfoPanels_Spritesheet_01_2
+  - first:
+      213: 6620649779221955263
+    second: UI_InfoPanels_Spritesheet_01_3
+  - first:
+      213: 402851565602534332
+    second: UI_InfoPanels_Spritesheet_01_4
+  - first:
+      213: 1270626561098489207
+    second: UI_InfoPanels_Spritesheet_01_5
+  - first:
+      213: -3669976274287875141
+    second: UI_InfoPanels_Spritesheet_01_6
+  - first:
+      213: -4909204125667291180
+    second: UI_InfoPanels_Spritesheet_01_7
+  - first:
+      213: 3348338086749947607
+    second: UI_InfoPanels_Spritesheet_01_8
+  - first:
+      213: -1196407239639715069
+    second: UI_InfoPanels_Spritesheet_01_9
+  - first:
+      213: 1206409551724464871
+    second: UI_InfoPanels_Spritesheet_01_10
+  - first:
+      213: 3571453990141069393
+    second: UI_InfoPanels_Spritesheet_01_11
+  - first:
+      213: -4149829915649960139
+    second: UI_InfoPanels_Spritesheet_01_12
+  - first:
+      213: 762810567355748573
+    second: UI_InfoPanels_Spritesheet_01_13
+  - first:
+      213: 5757112085558661251
+    second: UI_InfoPanels_Spritesheet_01_14
+  - first:
+      213: 1666336465917189559
+    second: UI_InfoPanels_Spritesheet_01_15
+  - first:
+      213: 566273301125517094
+    second: UI_InfoPanels_Spritesheet_01_16
+  - first:
+      213: 4444084082125595713
+    second: UI_InfoPanels_Spritesheet_01_17
+  - first:
+      213: 8927680274611547816
+    second: UI_InfoPanels_Spritesheet_01_18
+  - first:
+      213: 3419695434930248081
+    second: UI_InfoPanels_Spritesheet_01_19
+  - first:
+      213: -7216411129952489656
+    second: UI_InfoPanels_Spritesheet_01_20
+  - first:
+      213: 5984691724715306727
+    second: UI_InfoPanels_Spritesheet_01_21
+  - first:
+      213: -6403389558010634409
+    second: UI_InfoPanels_Spritesheet_01_22
+  - first:
+      213: 8704520750186862003
+    second: UI_InfoPanels_Spritesheet_01_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UI_InfoPanel_01a
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1863
+        width: 428
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 378164a44eb3d08a0800000000000000
+      internalID: -6337343248955729805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_01b
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1863
+        width: 428
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a33d42c4c3a9f920800000000000000
+      internalID: 3024628690224755619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_01c
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 1863
+        width: 428
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 641742e00f790ba50800000000000000
+      internalID: 6534890116599804230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_02a
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1665
+        width: 628
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb20bc085e541eb50800000000000000
+      internalID: 6620649779221955263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_02b
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 1665
+        width: 628
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb3f2f05d57379500800000000000000
+      internalID: 402851565602534332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_02c
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 1665
+        width: 628
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77d9370102c22a110800000000000000
+      internalID: 1270626561098489207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_03a
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1363
+        width: 428
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbba5fcd500a11dc0800000000000000
+      internalID: -3669976274287875141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_03b
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1363
+        width: 428
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df08b79bd00fdbb0800000000000000
+      internalID: -4909204125667291180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_03c
+      rect:
+        serializedVersion: 2
+        x: 1497
+        y: 1363
+        width: 428
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d644a8efbfa77e20800000000000000
+      internalID: 3348338086749947607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_04a
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1067
+        width: 628
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 303b19254f1856fe0800000000000000
+      internalID: -1196407239639715069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_04b
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 1067
+        width: 628
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eacc2078170eb010800000000000000
+      internalID: 1206409551724464871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_04c
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 1067
+        width: 628
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 158820e4b7a509130800000000000000
+      internalID: 3571453990141069393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_05a
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 542
+        width: 828
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 537156fada7d866c0800000000000000
+      internalID: -4149829915649960139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_05b
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 542
+        width: 828
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd057226b2c069a00800000000000000
+      internalID: 762810567355748573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_05c
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 54
+        width: 828
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38015d770fe55ef40800000000000000
+      internalID: 5757112085558661251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_06a
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 338
+        width: 228
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd1647ef24002710800000000000000
+      internalID: 1666336465917189559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_06b
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 338
+        width: 228
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62fcf5f219ecbd700800000000000000
+      internalID: 566273301125517094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_06c
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 338
+        width: 228
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 144601b4dee8cad30800000000000000
+      internalID: 4444084082125595713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_07a
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 124
+        width: 178
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aeab7ca8ed75eb70800000000000000
+      internalID: 8927680274611547816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_07b
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 124
+        width: 178
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 199da0731e2357f20800000000000000
+      internalID: 3419695434930248081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_07c
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 124
+        width: 178
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84fa10ebf482adb90800000000000000
+      internalID: -7216411129952489656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_08a
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 124
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee20e55a65ed0350800000000000000
+      internalID: 5984691724715306727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_08b
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 124
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75f9454af179227a0800000000000000
+      internalID: -6403389558010634409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_InfoPanel_08c
+      rect:
+        serializedVersion: 2
+        x: 1877
+        y: 124
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b597e6f08bacc870800000000000000
+      internalID: 8704520750186862003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 63bea6b5ed72c493799251171086bc79
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      UI_InfoPanel_01a: -6337343248955729805
+      UI_InfoPanel_01b: 3024628690224755619
+      UI_InfoPanel_01c: 6534890116599804230
+      UI_InfoPanel_02a: 6620649779221955263
+      UI_InfoPanel_02b: 402851565602534332
+      UI_InfoPanel_02c: 1270626561098489207
+      UI_InfoPanel_03a: -3669976274287875141
+      UI_InfoPanel_03b: -4909204125667291180
+      UI_InfoPanel_03c: 3348338086749947607
+      UI_InfoPanel_04a: -1196407239639715069
+      UI_InfoPanel_04b: 1206409551724464871
+      UI_InfoPanel_04c: 3571453990141069393
+      UI_InfoPanel_05a: -4149829915649960139
+      UI_InfoPanel_05b: 762810567355748573
+      UI_InfoPanel_05c: 5757112085558661251
+      UI_InfoPanel_06a: 1666336465917189559
+      UI_InfoPanel_06b: 566273301125517094
+      UI_InfoPanel_06c: 4444084082125595713
+      UI_InfoPanel_07a: 8927680274611547816
+      UI_InfoPanel_07b: 3419695434930248081
+      UI_InfoPanel_07c: -7216411129952489656
+      UI_InfoPanel_08a: 5984691724715306727
+      UI_InfoPanel_08b: -6403389558010634409
+      UI_InfoPanel_08c: 8704520750186862003
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
