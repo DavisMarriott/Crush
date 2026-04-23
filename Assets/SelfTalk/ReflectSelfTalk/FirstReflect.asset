@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec9a774f1c3f94c5ab3b77c67ac7f734, type: 3}
+  m_Name: FirstReflect
+  m_EditorClassIdentifier: Assembly-CSharp::ReflectBranch
+  lines:
+  - What??? I'm not dead?
+  - Ohhh thank god.....
+  - It looks like Daisy is still by her locker....?
+  - Does that mean....
+  - I can still ask her to the dance?
+  - Okay okay, cool.
+  - We can still do this.
+  - But I can't just walk up to her and ask her to the dance.
+  - That only happens in movies.
+  - I need to have an actual conversation with her.
+  - Warm things up a little.
+  - But what should I talk about......?
+  minLoop: 2
+  maxLoop: 2
+  minFinalConfidence: 0
+  maxFinalConfidence: 999
+  minPeakConfidence: 0
+  maxPeakConfidence: 999
+  minFinalCharm: 0
+  maxFinalCharm: 999
+  minPeakCharm: 0
+  maxPeakCharm: 999
+  requiresDeathCard: {fileID: 0}
+  requiresDeathFromCharm: 0
+  requiresCardsPlayed: []
+  requiresCardsUnplayed: []

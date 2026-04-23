@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec9a774f1c3f94c5ab3b77c67ac7f734, type: 3}
+  m_Name: SecondBranch
+  m_EditorClassIdentifier: Assembly-CSharp::ReflectBranch
+  lines:
+  - Is this really happening?
+  - It doesn't seem like Daisy remembered the first conversation....
+  - Bud I do...?
+  - What the f*@% is going on...?
+  - Sorry, God. I promised no more cussing.....
+  - even in my mind
+  - Okay. We're getting there. Just need to keep the conversation going
+  - What else could I say to her?
+  minLoop: 3
+  maxLoop: 3
+  minFinalConfidence: 0
+  maxFinalConfidence: 999
+  minPeakConfidence: 0
+  maxPeakConfidence: 999
+  minFinalCharm: 0
+  maxFinalCharm: 999
+  minPeakCharm: 0
+  maxPeakCharm: 999
+  requiresDeathCard: {fileID: 0}
+  requiresDeathFromCharm: 0
+  requiresCardsPlayed: []
+  requiresCardsUnplayed: []

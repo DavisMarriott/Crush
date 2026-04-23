@@ -22,6 +22,7 @@ public class DeathRespawn : MonoBehaviour
     [SerializeField] HallwaySelfTalk hallwaySelfTalk;
     [SerializeField] private float reflectDuration;
     [SerializeField] private Animator letterBoxAnimator;
+    [SerializeField] private ReflectSelfTalk reflectSelfTalk;
     
     //variables hidden in inspector
     [HideInInspector] public bool isDead = false;
@@ -37,7 +38,7 @@ public class DeathRespawn : MonoBehaviour
         }
     }
     
-    
+    //currently does much more than death. Handles most of respawn/reflect phase as well. Might break up in teh future.
     public IEnumerator Death()
     {
         PhaseManager.Instance.TransitionTo(GamePhase.Death);
@@ -87,7 +88,7 @@ public class DeathRespawn : MonoBehaviour
         
        
         
-        // first half of respawn + drafting
+        // first half of respawn + drafting - ENTER Reflect Phase
         PhaseManager.Instance.TransitionTo(GamePhase.Reflect);
         letterBoxAnimator.SetTrigger("LetterBoxIn");
         animationTriggerPlayer.EnterStart();
@@ -97,7 +98,7 @@ public class DeathRespawn : MonoBehaviour
         deckManager.ResetDeck();
         confidenceState.peakConfidence = 0;
         charmState.peakCharm = 0;
-        yield return new WaitForSeconds(reflectDuration);
+        yield return reflectSelfTalk.Play(gameProgression.lastLoop, gameProgression.loopCount);
         
         if (deckManager.draftPool.Length >0)
         {
