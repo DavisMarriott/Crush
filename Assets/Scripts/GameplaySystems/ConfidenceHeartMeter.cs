@@ -65,6 +65,7 @@ public class ConfidenceHeartMeter : MonoBehaviour
    
    
    // call RemoveHearts() if confidence delta is negative. Breaks and Removes appropriate # hearts. Last heart will play a longer heartbreak animation.
+   // may need to add a formula in here to convert a negative number to a positive number.
    public void RemoveHearts()
    {
       StartCoroutine(BreakHeartWithDelay());
