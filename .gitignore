@@ -103,3 +103,6 @@ Assets/UI/.DS_Store
 .DS_Store
 CLAUDE.md
 API-HANDOFF.md
+.claude/skills/wrapup/SKILL.md
+.claude/skills/kickoff/SKILL.md
+.claude/skills/resume/SKILL.md
