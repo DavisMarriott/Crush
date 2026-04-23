@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3312672716375592938
+--- !u!1001 &1154797995403076356
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,19 +10,71 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 172964852809425544, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
       propertyPath: m_Name
-      value: Prefab_Card_Dialogue_Lvl_01
+      value: Prefab_Card_Dialogue_Lvl_02
       objectReference: {fileID: 0}
+    - target: {fileID: 3371310365838634859, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: m_Color.b
+      value: 0.16087659
+      objectReference: {fileID: 0}
+    - target: {fileID: 3371310365838634859, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: m_Color.g
+      value: 0.754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 3371310365838634859, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879200428461306232, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1330955043984563227, guid: 0b2063865946248c18201a392e91540a, type: 3}
+    - target: {fileID: 5652945362499000812, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1330955043984563227, guid: 0b2063865946248c18201a392e91540a, type: 3}
     - target: {fileID: 5652945362499000812, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
       propertyPath: m_Color.b
-      value: 0.7830189
+      value: 0.53008986
       objectReference: {fileID: 0}
     - target: {fileID: 5652945362499000812, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
       propertyPath: m_Color.g
-      value: 0.7711056
+      value: 0.8867924
       objectReference: {fileID: 0}
     - target: {fileID: 5652945362499000812, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
       propertyPath: m_Color.r
-      value: 0.18098079
+      value: 0.4224813
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677397280540683179, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677397280540683179, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677397280540683179, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.105882354
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677397280540683179, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281543451
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133632178484941537, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6036024004823900005, guid: 0b2063865946248c18201a392e91540a, type: 3}
+    - target: {fileID: 7133632178484941537, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: m_Color.b
+      value: 0.94615686
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133632178484941537, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133632178484941537, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9198113
       objectReference: {fileID: 0}
     - target: {fileID: 8024183322882501111, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
       propertyPath: m_Pivot.x
@@ -103,6 +155,10 @@ PrefabInstance:
     - target: {fileID: 8024183322882501111, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787134093576837241, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
