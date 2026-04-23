@@ -4,6 +4,9 @@ public class AnimationTriggerPlayer : MonoBehaviour
 {
     // I think this just lets us access the animator attached to the game object (our character)
     private Animator animator;
+    public Animator particlesConfidenceUp;
+    public Animator particlesConfidenceDown;
+    public Animator particlesNervousState;
 
     void Start()
     {
@@ -161,10 +164,35 @@ public class AnimationTriggerPlayer : MonoBehaviour
         }
         
     }
-
+    
     public void EnterStart()
     {
         animator.Play("Player_Start", 0);
     }
+    
+    
+    // Particle Systems //
+    
+    public void ParticlesConfidenceUp()
+    {
+        particlesConfidenceUp.Play("Particles_ConfidenceUp_Burst", 0);
+    }
+    
+    public void ParticlesConfidenceDown()
+    {
+        particlesConfidenceDown.Play("Particles_ConfidenceDown_Burst", 0);
+    }
+    
+    public void ParticlesNervousStateTurnOn()
+    {
+        particlesNervousState.Play("Particles_NervousState_TurnOn", 0);
+    }
+    
+    public void ParticlesNervousStateTurnOff()
+    {
+        particlesNervousState.Play("Particles_NervousState_TurnOff", 0);
+    }
+    
+    
 
 }

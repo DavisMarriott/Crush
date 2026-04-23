@@ -6,6 +6,8 @@ public class AnimationTriggerCrush : MonoBehaviour
     private Animator animator;
     [SerializeField] private CharmState charmState;
     [SerializeField] private ConfidenceState confidenceState;
+    public Animator particlesCharmUp;
+    public Animator particlesCharmedState;
 
     void Start()
     {
@@ -136,5 +138,24 @@ public class AnimationTriggerCrush : MonoBehaviour
         else
             PositiveTwo();
     }
+    
+    
+    // Particle Systems //
+    
+    public void ParticlesCharmUp()
+    {
+        particlesCharmUp.Play("Particles_CharmUp_Burst", 0);
+    }
+    
+    public void ParticlesCharmedStateTurnOn()
+    {
+        particlesCharmedState.Play("Particles_CharmedState_TurnOn", 0);
+    }
+    
+    public void ParticlesCharmedStateTurnOff()
+    {
+        particlesCharmedState.Play("Particles_CharmedState_TurnOff", 0);
+    }
+    
     
 }

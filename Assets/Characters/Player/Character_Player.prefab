@@ -296,6 +296,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcdc221bd59a04bd1912e4dd21dc51bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimationTriggerPlayer
+  particlesConfidenceUp: {fileID: 8383778574917710353}
+  particlesConfidenceDown: {fileID: 8532650551459391546}
+  particlesNervousState: {fileID: 5445625927529620028}
 --- !u!95 &6203604935891903430
 Animator:
   serializedVersion: 7
