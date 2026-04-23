@@ -61,7 +61,10 @@ public class DeathRespawn : MonoBehaviour
         {
             loopSnapshot.cardsUnplayed.Add(card.name);
         }
+        loopSnapshot.deathCard = deckManager.LastPlayedCard;
+        //end of updating loopSnapshot: Next - game progression captures it
         gameProgression.lastLoop = loopSnapshot;
+        
         
         //resume death sequence
         inConversationTrigger.enabled = false;

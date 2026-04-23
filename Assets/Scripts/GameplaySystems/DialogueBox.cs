@@ -53,8 +53,10 @@ public class DialogueBox : MonoBehaviour
         StartCoroutine(StepThroughDialogue(dialogueCard, lukeBranch));
     }
 
+    //this is where dialogue plays/bulk of conversation system lives
     private IEnumerator StepThroughDialogue(DialogueCard dialogueCard, DialogueCard.DialogueBranch lukeBranch)
     {
+        //parse card data and play (including confidence/charm scores) - for Luke Branch
         foreach (DialogueCard.DialogueLine line in lukeBranch.dialogue)
         {
             SetSpeakerIndicator(line.character);

@@ -9,6 +9,7 @@ public struct LoopSnapshot
     public bool deathFromCharm;
     public List<string> cardsPlayed;
     public List<string> cardsUnplayed;
+    public DialogueCard deathCard;
 }
 
 
