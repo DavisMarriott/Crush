@@ -61,9 +61,11 @@ MonoBehaviour:
   deckManager: {fileID: 0}
   thoughtSpawner: {fileID: 0}
   charmState: {fileID: 0}
+  dialogueTiming: {fileID: 0}
   cardContainer: {fileID: 0}
-  dialogueCard: {fileID: 0}
+  dialogueCard: {fileID: 11400000, guid: 347ca79f63e4f483382745c2cf1852df, type: 2}
   gameProgression: {fileID: 0}
+  hallwaySelfTalk: {fileID: 0}
   leftArrow: {fileID: 6056971300233798366}
   rightArrow: {fileID: 5691706059927431106}
   boyTextColor: {r: 0.46666667, g: 0.9529412, b: 0.88235295, a: 1}
@@ -355,11 +357,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199187371391727015, guid: ace210c64affb4fb285e3397dd376467, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1199187371391727015, guid: ace210c64affb4fb285e3397dd376467, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -200
+      value: -34
       objectReference: {fileID: 0}
     - target: {fileID: 1199187371391727015, guid: ace210c64affb4fb285e3397dd376467, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -458,11 +460,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2904012092356627744, guid: 701786a8511d148aabd322fa347503f2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -400
+      value: -10.999939
       objectReference: {fileID: 0}
     - target: {fileID: 2904012092356627744, guid: 701786a8511d148aabd322fa347503f2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -200
+      value: -37
       objectReference: {fileID: 0}
     - target: {fileID: 2904012092356627744, guid: 701786a8511d148aabd322fa347503f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

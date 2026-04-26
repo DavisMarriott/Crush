@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec9a774f1c3f94c5ab3b77c67ac7f734, type: 3}
+  m_Name: DiedLookNice
+  m_EditorClassIdentifier: Assembly-CSharp::ReflectBranch
+  lines:
+  - OMG OMG OMG
+  - Why did I say that?!
+  - You can't just tell a girl she's hot
+  - I was trying to say she looks nice
+  - I was too nervous.....
+  - I should wait I'm more confident before I say that agian...
+  minLoop: 0
+  maxLoop: 999
+  minFinalConfidence: 0
+  maxFinalConfidence: 999
+  minPeakConfidence: 0
+  maxPeakConfidence: 999
+  minFinalCharm: 0
+  maxFinalCharm: 999
+  minPeakCharm: 0
+  maxPeakCharm: 999
+  requiresDeathCard: {fileID: 11400000, guid: c319d7ce095094a2382de3ea28c03f8a, type: 2}
+  requiresDeathFromCharm: 0
+  requiresCardsPlayed: []
+  requiresCardsUnplayed: []

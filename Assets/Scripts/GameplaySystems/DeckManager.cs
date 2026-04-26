@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class DeckManager : MonoBehaviour
 {
+    [SerializeField] private CardUpgradeTracker upgradeTracker;
     [SerializeField] public DialogueCard[] draftPool;
     [SerializeField] private DialogueCard[] startingDeck;
     public int startingHandSize = 4;
@@ -34,6 +35,7 @@ public class DeckManager : MonoBehaviour
     public void DiscardCard(DialogueCard card)
     {
         LastPlayedCard = card;
+        upgradeTracker.NoteCardPlayed(card);
         _hand.Remove(card);
         _discard.Add(card);
     }

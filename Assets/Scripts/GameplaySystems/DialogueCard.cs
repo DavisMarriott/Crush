@@ -19,8 +19,9 @@ public class DialogueCard : ScriptableObject
 
     public DialogueBranch[] LukeBranches => lukeBranches;
     public DraftLine[] draftLines;
-    
-    
+
+    public DialogueCardUpgrade[] availableUpgrades;
+    public int upgradeThreshold = 3;
 
     public enum DialogueCharacter
     {

@@ -42,12 +42,8 @@ public class DraftUI : MonoBehaviour
             //set size of button
             rectTransform.sizeDelta = draftButtonSize;
             
-            // Get button color from dialogue card
-            var btnImage = btn.GetComponent<Image>();
-            if (btnImage != null)
-                btnImage.color = options[i].buttonColor;
         
-            var label = btn.GetComponentInChildren<TMP_Text>();
+            var label = btn.transform.Find("Card_Art/PreviewText").GetComponent<TextMeshProUGUI>();
             label.text = options[i].previewText;
         
             var card = options[i];

@@ -13,6 +13,7 @@ public class ConfidenceState : MonoBehaviour
     [SerializeField] private DeckManager deckManager;
     [SerializeField] private GameProgression gameProgression;
     [SerializeField] private AnimationTriggerPlayer animationTriggerPlayer;
+    [SerializeField] private ConfidenceHeartMeter heartMeter;
     
 
     [Header("Conversation State")]
@@ -34,22 +35,22 @@ public class ConfidenceState : MonoBehaviour
         get => _confidence;
         set
         {
+            int oldConfidence = _confidence;
             _confidence = Mathf.Clamp(value, MinConfidenceFullGame, MaxConfidenceFullGame);
             if (_confidence > peakConfidence) peakConfidence = _confidence;
+
+            int delta = _confidence - oldConfidence;
+            if (delta > 0) heartMeter.AddHearts(delta);
+            else if (delta < 0) heartMeter.RemoveHearts(-delta);
         }
     }
 
 
     void Start()
     {
-        confidence = startingConfidence;
+        _confidence = startingConfidence;
     }
-
-    private void Update()
-    {
-        if (label != null)
-            label.text = $"{confidence}";
-    }
+    
 
     public void EnterConversation()
     {

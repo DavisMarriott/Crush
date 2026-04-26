@@ -138,3 +138,6 @@ MonoBehaviour:
   - line: What's that band she loves again?
   - line: Penny Farthing??
   - line: Or is it Farthing Penny...?
+  availableUpgrades:
+  - {fileID: 11400000, guid: 2603f1ce7b7674681a4184843cba6710, type: 2}
+  upgradeThreshold: 1

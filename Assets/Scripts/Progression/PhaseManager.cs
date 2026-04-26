@@ -32,10 +32,5 @@ public class PhaseManager : MonoBehaviour
         currentPhase = newPhase;
         Debug.Log($"[phaseManager] {oldPhase} -> {newPhase}");
         OnPhaseChanged?.Invoke(oldPhase, newPhase);
-
-        if (currentPhase == GamePhase.Hallway)
-        {
-            confidenceHeartMeter.SpawnHeartMeter();
-        }
     }
 }

@@ -153,4 +153,4 @@ MonoBehaviour:
   label: {fileID: 5961572493468242644}
   confidenceState: {fileID: 0}
   startingCharm: 4
-  charm: 0
+  peakCharm: 0

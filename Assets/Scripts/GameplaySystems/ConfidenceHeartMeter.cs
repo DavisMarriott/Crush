@@ -10,8 +10,8 @@ public class ConfidenceHeartMeter : MonoBehaviour
    public Animator postFxAnimator;
 
    // // used only for testing
-   public int startingConfidence = 5;
-   public int confidenceDelta = 3;
+   //public int startingConfidence = 5;
+   //public int confidenceDelta = 3;
    
    private Animator animator;
    // [SerializeField] private Animator heartAnimator;
@@ -25,66 +25,58 @@ public class ConfidenceHeartMeter : MonoBehaviour
       IEnumerator SpawnHeartWithDelay()
       {
          // remove comment out here when implementing
-         // for (int i = 0; i < confidenceState.startingConfidence; i++)
-         for (int i = 0; i < startingConfidence; i++)
+         for (int i = 0; i < confidenceState.startingConfidence; i++)
          {
             SpawnHeart();
-            Debug.Log("Iteration: " + i);
             // int delayTime = (i / (i * i));
 
             // This line pauses the loop execution
             yield return new WaitForSeconds(0.40f - (i *  0.04f));
          }
-        
-         Debug.Log("Loop Complete!");
       }
       
    }
    
    // call AddHearts() if confidence delta is positive. Spawns appropriate # hearts with ramping speed
-   public void AddHearts()
+   public void AddHearts(int delta)
    {
       StartCoroutine(SpawnHeartWithDelay());
 
       IEnumerator SpawnHeartWithDelay()
       {
-         // Need to replace confidenceDelta, or redefine above
-         for (int i = 0; i < confidenceDelta; i++)
+         for (int i = 0; i < delta; i++)
          {
             SpawnHeart();
-            Debug.Log("Iteration: " + i);
             // int delayTime = (i / (i * i));
 
             // This line pauses the loop execution
             yield return new WaitForSeconds(0.40f - (i *  0.04f));
+            LowConfidenceCheck();
          }
-        
-         Debug.Log("Loop Complete!");
+         
       }
    }
    
    
    // call RemoveHearts() if confidence delta is negative. Breaks and Removes appropriate # hearts. Last heart will play a longer heartbreak animation.
    // may need to add a formula in here to convert a negative number to a positive number.
-   public void RemoveHearts()
+   public void RemoveHearts(int delta)
    {
       StartCoroutine(BreakHeartWithDelay());
 
       IEnumerator BreakHeartWithDelay()
       {
-         // Need to replace confidenceDelta, or redefine above
-         for (int i = 0; i < confidenceDelta; i++)
+         for (int i = 0; i < delta; i++)
          {
             BreakHeart();
-            Debug.Log("Iteration: " + i);
             // int delayTime = (i / (i * i));
 
             // This line pauses the loop execution
             yield return new WaitForSeconds( 0.35f );
             //  + (i * 0.1f)
+            LowConfidenceCheck();
          }
-        
-         Debug.Log("Loop Complete!");
+         
       }
    }
    
@@ -137,6 +129,9 @@ public class ConfidenceHeartMeter : MonoBehaviour
       List<GameObject> totalHearts = new List<GameObject>();
       foreach (Transform child in transform) 
       {
+         Animator anim = child.GetComponent<Animator>();
+         var state = anim.GetCurrentAnimatorStateInfo(0);
+         if (state.IsName("Heart_Break") || state.IsName("Heart_Break_Long")) continue;
          totalHearts.Add(child.gameObject);
       }
       

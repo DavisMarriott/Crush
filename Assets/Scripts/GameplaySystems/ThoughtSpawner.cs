@@ -26,12 +26,12 @@ public class ThoughtSpawner : MonoBehaviour
             var btnImage = btn.GetComponent<Image>();
             if (btnImage != null)
                 btnImage.color = card.buttonColor;
-
-            var label = btn.GetComponentInChildren<TMP_Text>();
+            
+            var label = btn.transform.Find("Card_Art/PreviewText").GetComponent<TextMeshProUGUI>();
             label.text = card.previewText;
             
             // if revealed = true, display cost
-            var costIndicator = btn.transform.Find("CostIndicator");
+            var costIndicator = btn.transform.Find("Card_Art/CostIndicator/CostText").GetComponent<TextMeshProUGUI>();
             if (costIndicator != null)
             {
                 costIndicator.gameObject.SetActive(card.revealed);
@@ -42,14 +42,16 @@ public class ThoughtSpawner : MonoBehaviour
 
             btn.onClick.AddListener(() =>
             {
+                Debug.Log("onClick fired for: " + card.previewText);
                 // Always deduct cost and play the card.
                 // GetLukeBranch picks Death/Awkward/Normal based on
                 // what confidence looks like AFTER cost is paid.
                 confidenceState.confidence -= card.cost;
-                card.revealed = true;
                 deckManager.DiscardCard(card);
                 dialogueBox.ShowDialogue(card);
                 btn.gameObject.SetActive(false);
+                //playing the card reveals it's confidence next time
+                card.revealed = true;
             });
         }
     }

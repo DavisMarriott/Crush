@@ -151,18 +151,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConfidenceState
   boyTransform: {fileID: 0}
-  spawnPoint: {fileID: 0}
   dialogueBox: {fileID: 0}
   label: {fileID: 3470892202796545476}
   thoughtSpawner: {fileID: 0}
-  deathScreen: {fileID: 0}
-  deathScreenTimer: 3
-  draftUI: {fileID: 0}
   charmState: {fileID: 0}
   deckManager: {fileID: 0}
+  gameProgression: {fileID: 0}
+  animationTriggerPlayer: {fileID: 0}
   introMade: 0
   inConversation: 0
-  testMode: 0
-  debugMenu: {fileID: 0}
   startingConfidence: 5
-  confidence: 3
+  peakConfidence: 0
