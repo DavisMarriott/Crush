@@ -43,6 +43,11 @@ public class HallwaySelfTalk : MonoBehaviour
     {
         StartCoroutine(PlayDraftLines(draftLines));
     }
+
+    public void TriggerLetterBoxOut()
+    {
+        letterBoxAnimator.SetTrigger("LetterBoxOut");
+    }
     public IEnumerator PlayDraftLines(DialogueCard.DraftLine[] draftLines)
     {
         draftLinesActive = true;

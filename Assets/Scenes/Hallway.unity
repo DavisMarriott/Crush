@@ -1004,11 +1004,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TMP_InputField
---- !u!224 &1616168046 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2949258403501836216, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
-  m_PrefabInstance: {fileID: 1875503648}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1626524210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2143192508002892132, guid: 7ebe5a21796954a24bee0dd12c661de7, type: 3}
@@ -1660,27 +1655,64 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1748536000}
     - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
-      propertyPath: upgradeTracker
-      value: 
-      objectReference: {fileID: 1901707132}
-    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: draftPool.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'draftPool.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 492db9a2c56774bfa862b4d9117db4f3, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'draftPool.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: ea012e923232f4198ab985c89473a4ee, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'draftPool.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c319d7ce095094a2382de3ea28c03f8a, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'draftPool.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f2948faa612d34f3cb05eb9b58d5ef05, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'draftPool.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c85b7427876af4a97b941a547235f673, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'draftPool.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 28082c635fd3d487db56d4875a6a1d01, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'draftPool.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e0daa4f92aa6e4a58a4a277aa4182840, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'draftPool.Array.data[7]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e182db554c0c04c2f87cbd7eddc052a5, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'draftPool.Array.data[8]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e182db554c0c04c2f87cbd7eddc052a5, type: 2}
     - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: startingDeck.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'startingDeck.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 347ca79f63e4f483382745c2cf1852df, type: 2}
     - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: 'startingDeck.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: c85b7427876af4a97b941a547235f673, type: 2}
+      objectReference: {fileID: 11400000, guid: 28082c635fd3d487db56d4875a6a1d01, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'startingDeck.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 02cbdcd2e9af542fab79834ff67a3ae4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2949258403501836216, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1901707131}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
 --- !u!224 &1875503649 stripped
@@ -1710,49 +1742,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TMP_InputField
---- !u!1 &1901707130
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1901707131}
-  - component: {fileID: 1901707132}
-  m_Layer: 5
-  m_Name: CardUpgradeTracker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1901707131
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1901707130}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1616168046}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1901707132
+--- !u!114 &1901707132 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5793799506273718784, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+  m_PrefabInstance: {fileID: 1875503648}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1901707130}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef26eefdcd241468da2449fc91bee2f9, type: 3}
@@ -2293,6 +2288,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1875503650}
     - target: {fileID: 4140086091944439077, guid: 20d174e6d335c4ca8a6cdcb18a8ffe79, type: 3}
+      propertyPath: upgradeTracker
+      value: 
+      objectReference: {fileID: 1901707132}
+    - target: {fileID: 4140086091944439077, guid: 20d174e6d335c4ca8a6cdcb18a8ffe79, type: 3}
       propertyPath: hallwaySelfTalk
       value: 
       objectReference: {fileID: 1748535994}
@@ -2397,6 +2396,10 @@ PrefabInstance:
       propertyPath: dialogueBox
       value: 
       objectReference: {fileID: 1056035271448750362}
+    - target: {fileID: 8487344155764405582, guid: 624e488fe14e646838c9376c7c24b162, type: 3}
+      propertyPath: upgradeTracker
+      value: 
+      objectReference: {fileID: 1901707132}
     - target: {fileID: 8487344155764405582, guid: 624e488fe14e646838c9376c7c24b162, type: 3}
       propertyPath: confidenceState
       value: 
@@ -3277,6 +3280,10 @@ PrefabInstance:
       propertyPath: gameProgression
       value: 
       objectReference: {fileID: 10528340}
+    - target: {fileID: 7808991336363666016, guid: fcf526b0583ca49519115b49bf144d72, type: 3}
+      propertyPath: startingConfidence
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7808991336363666016, guid: fcf526b0583ca49519115b49bf144d72, type: 3}
       propertyPath: confidenceHeartMeter
       value: 

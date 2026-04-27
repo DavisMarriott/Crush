@@ -16,3 +16,4 @@ MonoBehaviour:
   branchOverrides: []
   branchAdditions: []
   previewTextOverride: 
+  visualPrefab: {fileID: 5626390890515017851, guid: 839aeaaca1feb4c979b9da13f5ff988e, type: 3}

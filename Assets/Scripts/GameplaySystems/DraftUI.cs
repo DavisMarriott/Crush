@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +11,7 @@ public class DraftUI : MonoBehaviour
     [SerializeField] private Transform draftContainer;
     [SerializeField] private Vector2 draftButtonSize = new Vector2(200, 60);
     [SerializeField] private HallwaySelfTalk hallwaySelfTalk;
+    [SerializeField] private CardUpgradeTracker upgradeTracker;
 
     private void Start()
     {
@@ -20,43 +20,81 @@ public class DraftUI : MonoBehaviour
 
     public void ShowDraftOptions()
     {
-        // Clear old buttons
         for (int i = draftContainer.childCount - 1; i >= 0; i--)
             Destroy(draftContainer.GetChild(i).gameObject);
-        
-        // Show the draft screen
-        draftUI.SetActive(true);
-        
-        // Get random cards and spawn buttons
-        List<DialogueCard> options = deckManager.GetDraftOptions(3);
-        
-        for (int i = 0; i < options.Count; i++)
-        {
-            var btn = Instantiate(thoughtButtonPrefab, draftContainer);
-            
-            // button is centered in draft slot
-            var rectTransform = btn.GetComponent<RectTransform>();
-            rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
-            rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
-            rectTransform.anchoredPosition = Vector2.zero;
-            //set size of button
-            rectTransform.sizeDelta = draftButtonSize;
-            
-        
-            var label = btn.transform.Find("Card_Art/PreviewText").GetComponent<TextMeshProUGUI>();
-            label.text = options[i].previewText;
-        
-            var card = options[i];
-            btn.onClick.AddListener(() =>
-            {
-                hallwaySelfTalk.TriggerDraftLines(card.draftLines);
-                deckManager.AddCardToDeck(card);
-                deckManager.ResetDeck();
-                CloseDraftUI();
-            });
 
+        draftUI.SetActive(true);
+
+        List<DialogueCard> cardOptions = deckManager.GetDraftOptions(10);
+        List<DeckManager.DraftableUpgrade> upgradeOptions = deckManager.GetAvailableUpgrades();
+
+        for (int slot = 0; slot < 3; slot++)
+        {
+            if (cardOptions.Count == 0 && upgradeOptions.Count == 0) break;
+    
+            int totalAvailable = cardOptions.Count + upgradeOptions.Count;
+            bool pickUpgrade = Random.Range(0, totalAvailable) >= cardOptions.Count;
+    
+            if (pickUpgrade)
+            {
+                int idx = Random.Range(0, upgradeOptions.Count);
+                SpawnUpgradeButton(upgradeOptions[idx]);
+                upgradeOptions.RemoveAt(idx);
+            }
+            else
+            {
+                int idx = Random.Range(0, cardOptions.Count);
+                SpawnCardButton(cardOptions[idx]);
+                cardOptions.RemoveAt(idx);
+            }
         }
     }
+    
+    private void SpawnCardButton(DialogueCard card)
+    {
+        var btn = Instantiate(thoughtButtonPrefab, draftContainer);
+    
+        // button is centered in draft slot
+        var rectTransform = btn.GetComponent<RectTransform>();
+        rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
+        rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
+        rectTransform.anchoredPosition = Vector2.zero;
+        rectTransform.sizeDelta = draftButtonSize;
+    
+        var label = btn.transform.Find("Card_Art/PreviewText").GetComponent<TextMeshProUGUI>();
+        label.text = card.previewText;
+    
+        btn.onClick.AddListener(() =>
+        {
+            hallwaySelfTalk.TriggerDraftLines(card.draftLines);
+            deckManager.AddCardToDeck(card);
+            deckManager.ResetDeck();
+            CloseDraftUI();
+        });
+    }
+    
+    private void SpawnUpgradeButton(DeckManager.DraftableUpgrade dup)
+    {
+        var btn = Instantiate(dup.upgrade.visualPrefab, draftContainer);
+    
+        var rectTransform = btn.GetComponent<RectTransform>();
+        rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
+        rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
+        rectTransform.anchoredPosition = Vector2.zero;
+        rectTransform.sizeDelta = draftButtonSize;
+    
+        var label = btn.transform.Find("Card_Art/PreviewText").GetComponent<TextMeshProUGUI>();
+        label.text = dup.card.previewText;
+    
+        btn.onClick.AddListener(() =>
+        {
+            upgradeTracker.ApplyUpgrade(dup.card, dup.upgrade);
+            hallwaySelfTalk.TriggerLetterBoxOut();
+            deckManager.ResetDeck();
+            CloseDraftUI();
+        });
+    }
+
 
     public void CloseDraftUI()
     {

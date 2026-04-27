@@ -147,6 +147,7 @@ RectTransform:
   - {fileID: 7743620440373145386}
   - {fileID: 1223285914324515292}
   - {fileID: 559209120404928744}
+  - {fileID: 8692376919474824017}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -374,6 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92f68ed49e1914ead9007b7113ac985e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeckManager
+  upgradeTracker: {fileID: 5793799506273718784}
   draftPool:
   - {fileID: 11400000, guid: e182db554c0c04c2f87cbd7eddc052a5, type: 2}
   - {fileID: 11400000, guid: c319d7ce095094a2382de3ea28c03f8a, type: 2}
@@ -382,11 +384,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c85b7427876af4a97b941a547235f673, type: 2}
   - {fileID: 11400000, guid: 28082c635fd3d487db56d4875a6a1d01, type: 2}
   - {fileID: 11400000, guid: 492db9a2c56774bfa862b4d9117db4f3, type: 2}
-  - {fileID: 11400000, guid: c319d7ce095094a2382de3ea28c03f8a, type: 2}
   startingDeck:
   - {fileID: 11400000, guid: 347ca79f63e4f483382745c2cf1852df, type: 2}
   - {fileID: 11400000, guid: c85b7427876af4a97b941a547235f673, type: 2}
-  - {fileID: 11400000, guid: ea012e923232f4198ab985c89473a4ee, type: 2}
+  - {fileID: 11400000, guid: 28082c635fd3d487db56d4875a6a1d01, type: 2}
+  - {fileID: 11400000, guid: 02cbdcd2e9af542fab79834ff67a3ae4, type: 2}
+  - {fileID: 11400000, guid: e0daa4f92aa6e4a58a4a277aa4182840, type: 2}
   startingHandSize: 3
 --- !u!1 &8180440860134320090
 GameObject:
@@ -515,3 +518,51 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
+--- !u!1 &8733695961288237770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8692376919474824017}
+  - component: {fileID: 5793799506273718784}
+  m_Layer: 5
+  m_Name: CardUpgradeTracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8692376919474824017
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8733695961288237770}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2949258403501836216}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5793799506273718784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8733695961288237770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef26eefdcd241468da2449fc91bee2f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardUpgradeTracker

@@ -8,6 +8,11 @@ public class DeckManager : MonoBehaviour
     [SerializeField] private DialogueCard[] startingDeck;
     public int startingHandSize = 4;
     
+    public struct DraftableUpgrade
+    {
+        public DialogueCard card;
+        public DialogueCardUpgrade upgrade;
+    }
     private List<DialogueCard> _deck;
     private List<DialogueCard> _hand;
     private List<DialogueCard> _discard;
@@ -104,5 +109,22 @@ public class DeckManager : MonoBehaviour
         }
     
         return options;
+    }
+    public List<DraftableUpgrade> GetAvailableUpgrades()
+    {
+        var result = new List<DraftableUpgrade>();
+        foreach (var card in _deck) AddIfAvailable(card, result);
+        foreach (var card in _hand) AddIfAvailable(card, result);
+        foreach (var card in _discard) AddIfAvailable(card, result);
+        return result;
+    }
+
+    private void AddIfAvailable(DialogueCard card, List<DraftableUpgrade> list)
+    {
+        if (!upgradeTracker.IsUpgradeAvailable(card)) return;
+        foreach (var upgrade in card.availableUpgrades)
+        {
+            list.Add(new DraftableUpgrade { card = card, upgrade = upgrade });
+        }
     }
 }

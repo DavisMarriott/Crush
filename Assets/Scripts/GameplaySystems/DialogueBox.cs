@@ -47,10 +47,15 @@ public class DialogueBox : MonoBehaviour
             Debug.LogWarning($"No valid Luke branch for confidence {confidenceState.confidence} on card {dialogueCard.previewText}");
             return;
         }
-
         dialogueBox.SetActive(true);
-        cardContainer.SetActive(false);
-        StartCoroutine(StepThroughDialogue(dialogueCard, lukeBranch));
+        StartCoroutine(SelectAnim());
+        IEnumerator SelectAnim()
+        {
+            yield return new WaitForSeconds(.5f);
+            cardContainer.SetActive(false);
+            StartCoroutine(StepThroughDialogue(dialogueCard, lukeBranch));
+        }
+   
     }
 
     //this is where dialogue plays/bulk of conversation system lives
