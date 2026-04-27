@@ -5461,18 +5461,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Card_Dance
       objectReference: {fileID: 0}
-    - target: {fileID: 5668902091063549223, guid: d9a2f2c4a979844959dba1220e165f50, type: 3}
-      propertyPath: m_SortingLayer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5668902091063549223, guid: d9a2f2c4a979844959dba1220e165f50, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1480013977
-      objectReference: {fileID: 0}
-    - target: {fileID: 5668902091063549223, guid: d9a2f2c4a979844959dba1220e165f50, type: 3}
-      propertyPath: m_RenderingLayerMask
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 7809418007634916227, guid: d9a2f2c4a979844959dba1220e165f50, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
