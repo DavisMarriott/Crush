@@ -3,7 +3,8 @@ using UnityEngine;
 public class AnimationTriggerThoughtBubble : MonoBehaviour
 {
     public GameObject thoughtBubble;
-    private Animator thoughtBubbleAnimator;
+    public Animator thoughtBubbleAnimator;
+    
 
     void Start()
     {
@@ -13,11 +14,48 @@ public class AnimationTriggerThoughtBubble : MonoBehaviour
 
     public void ThoughtBubbleOn()
     {
-        thoughtBubbleAnimator.Play("ThoughtBubble_Off_to_Full");
+        AnimatorStateInfo stateInfo = thoughtBubbleAnimator.GetCurrentAnimatorStateInfo(0);
+
+        if (stateInfo.IsName("ThoughtBubble_Half_CYCLE"))
+        {
+            thoughtBubbleAnimator.Play("ThoughtBubble_Half_to_Full");
+        }
+        
+        else
+        {
+            thoughtBubbleAnimator.Play("ThoughtBubble_Off_to_Full");
+        }
     }
+    
+    public void ThoughtBubbleHalf()
+    {
+        AnimatorStateInfo stateInfo = thoughtBubbleAnimator.GetCurrentAnimatorStateInfo(0);
+        
+        if (stateInfo.IsName("ThoughtBubble_Off_CYCLE"))
+        {
+            thoughtBubbleAnimator.Play("ThoughtBubble_Off_to_Half");
+        }
+        
+        if (stateInfo.IsName("ThoughtBubble_Full_CYCLE"))
+        {
+            thoughtBubbleAnimator.Play("ThoughtBubble_Full_to_Half");
+        }
+    }
+    
     
     public void ThoughtBubbleOff()
     {
-        thoughtBubbleAnimator.Play("ThoughtBubble_Full_to_Off");
+        AnimatorStateInfo stateInfo = thoughtBubbleAnimator.GetCurrentAnimatorStateInfo(0);
+
+        if (stateInfo.IsName("ThoughtBubble_Full_CYCLE"))
+        {
+            thoughtBubbleAnimator.Play("ThoughtBubble_Full_to_Off");
+        }
+        
+        if (stateInfo.IsName("ThoughtBubble_Half_CYCLE"))
+        {
+            thoughtBubbleAnimator.Play("ThoughtBubble_Half_to_Off");
+        }
+        
     }
 }

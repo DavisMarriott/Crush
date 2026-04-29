@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ThoughtBubble_Full_to_Off
+  m_Name: ThoughtBubble_Half_to_Off
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -31,7 +31,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.6666667
+        time: 0.4
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -51,24 +51,16 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -5488417861328434940, guid: a509412199492464f89ccdf877755bb0, type: 3}
+      value: {fileID: 1475621543, guid: a509412199492464f89ccdf877755bb0, type: 3}
     - time: 0.06666667
-      value: {fileID: 3460733288160842738, guid: a509412199492464f89ccdf877755bb0, type: 3}
+      value: {fileID: -1308970832, guid: a509412199492464f89ccdf877755bb0, type: 3}
     - time: 0.13333334
-      value: {fileID: -2255906801333396401, guid: a509412199492464f89ccdf877755bb0, type: 3}
+      value: {fileID: -1092088209, guid: a509412199492464f89ccdf877755bb0, type: 3}
     - time: 0.2
-      value: {fileID: -5197758956982167085, guid: a509412199492464f89ccdf877755bb0, type: 3}
-    - time: 0.26666668
-      value: {fileID: -4205228094994341359, guid: a509412199492464f89ccdf877755bb0, type: 3}
-    - time: 0.33333334
-      value: {fileID: -2219494370373329373, guid: a509412199492464f89ccdf877755bb0, type: 3}
-    - time: 0.4
-      value: {fileID: 2832577816194472475, guid: a509412199492464f89ccdf877755bb0, type: 3}
-    - time: 0.46666667
       value: {fileID: -4990188205684352610, guid: a509412199492464f89ccdf877755bb0, type: 3}
-    - time: 0.53333336
+    - time: 0.26666668
       value: {fileID: -9332701882472365, guid: a509412199492464f89ccdf877755bb0, type: 3}
-    - time: 0.6
+    - time: 0.33333334
       value: {fileID: -1144740648266000053, guid: a509412199492464f89ccdf877755bb0, type: 3}
     attribute: m_Sprite
     path: Spritesheet_UI_SelfTalkThoughtBubble-default_0
@@ -101,13 +93,9 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -5488417861328434940, guid: a509412199492464f89ccdf877755bb0, type: 3}
-    - {fileID: 3460733288160842738, guid: a509412199492464f89ccdf877755bb0, type: 3}
-    - {fileID: -2255906801333396401, guid: a509412199492464f89ccdf877755bb0, type: 3}
-    - {fileID: -5197758956982167085, guid: a509412199492464f89ccdf877755bb0, type: 3}
-    - {fileID: -4205228094994341359, guid: a509412199492464f89ccdf877755bb0, type: 3}
-    - {fileID: -2219494370373329373, guid: a509412199492464f89ccdf877755bb0, type: 3}
-    - {fileID: 2832577816194472475, guid: a509412199492464f89ccdf877755bb0, type: 3}
+    - {fileID: 1475621543, guid: a509412199492464f89ccdf877755bb0, type: 3}
+    - {fileID: -1308970832, guid: a509412199492464f89ccdf877755bb0, type: 3}
+    - {fileID: -1092088209, guid: a509412199492464f89ccdf877755bb0, type: 3}
     - {fileID: -4990188205684352610, guid: a509412199492464f89ccdf877755bb0, type: 3}
     - {fileID: -9332701882472365, guid: a509412199492464f89ccdf877755bb0, type: 3}
     - {fileID: -1144740648266000053, guid: a509412199492464f89ccdf877755bb0, type: 3}
@@ -116,7 +104,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.6666667
+    m_StopTime: 0.4
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -146,7 +134,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.6666667
+        time: 0.4
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -173,7 +161,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.23333333
+  - time: 0.06666667
     functionName: PlaySoundEffect2
     data: 
     objectReferenceParameter: {fileID: 0}
