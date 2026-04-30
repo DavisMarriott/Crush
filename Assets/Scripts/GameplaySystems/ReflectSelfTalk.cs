@@ -19,7 +19,20 @@ public class ReflectSelfTalk : MonoBehaviour
             yield break;
         }
 
-        foreach (string line in chosen.lines)
+        yield return PlayLines(chosen.lines);
+    }
+
+    // Plays a fixed set of lines without branch selection.
+    // Used for milestone reflects that bring their own line set.
+    public IEnumerator PlayLines(string[] lines)
+    {
+        if (lines == null || lines.Length == 0)
+        {
+            yield return new WaitForSeconds(holdAfterLine);
+            yield break;
+        }
+
+        foreach (string line in lines)
         {
             yield return dialogueTiming.Run(line, selfTalkText);
             yield return new WaitForSeconds(holdAfterLine);

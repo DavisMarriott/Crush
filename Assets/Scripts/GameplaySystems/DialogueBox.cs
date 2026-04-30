@@ -49,6 +49,7 @@ public class DialogueBox : MonoBehaviour
         }
         dialogueBox.SetActive(true);
         StartCoroutine(SelectAnim());
+        //wait to let the select animation play
         IEnumerator SelectAnim()
         {
             yield return new WaitForSeconds(.5f);

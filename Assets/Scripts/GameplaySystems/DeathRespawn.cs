@@ -23,6 +23,7 @@ public class DeathRespawn : MonoBehaviour
     [SerializeField] private float reflectDuration;
     [SerializeField] private Animator letterBoxAnimator;
     [SerializeField] private ReflectSelfTalk reflectSelfTalk;
+    [SerializeField] private MilestoneTracker milestoneTracker;
     
     //variables hidden in inspector
     [HideInInspector] public bool isDead = false;
@@ -98,7 +99,29 @@ public class DeathRespawn : MonoBehaviour
         deckManager.ResetDeck();
         confidenceState.peakConfidence = 0;
         charmState.peakCharm = 0;
-        yield return reflectSelfTalk.Play(gameProgression.lastLoop, gameProgression.loopCount);
+        // Check for a milestone hit this loop; if one fired, play its custom reflect line
+        // (replacing the standard ReflectBranch line) and apply its character upgrade if any.
+        Milestone triggeredMilestone = milestoneTracker != null
+            ? milestoneTracker.GetTriggeredMilestone(gameProgression.lastLoop, gameProgression.loopCount)
+            : null;
+
+        if (triggeredMilestone != null)
+        {
+            yield return reflectSelfTalk.PlayLines(triggeredMilestone.reflectLines);
+            if (triggeredMilestone.characterUpgrade != null)
+            {
+                milestoneTracker.ApplyCharacterUpgrade(triggeredMilestone.characterUpgrade);
+                // Re-apply respawn state so an upgrade that bumped startingConfidence
+                // or startingHandSize is felt immediately on this respawn (not the next one).
+                confidenceState.confidence = confidenceState.startingConfidence;
+                deckManager.ResetDeck();
+            }
+            milestoneTracker.MarkComplete(triggeredMilestone);
+        }
+        else
+        {
+            yield return reflectSelfTalk.Play(gameProgression.lastLoop, gameProgression.loopCount);
+        }
         
         if (deckManager.draftPool.Length >0)
         {
