@@ -1,0 +1,697 @@
+fileFormatVersion: 2
+guid: 1cfc68ba58a6f4739b46b1a3f7e870bc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8364475745489507737
+    second: UI_Icons_Spritesheet_0
+  - first:
+      213: -3678483755214029578
+    second: UI_Icons_Spritesheet_1
+  - first:
+      213: 4986184313633719838
+    second: UI_Icons_Spritesheet_2
+  - first:
+      213: -2560030432136793283
+    second: UI_Icons_Spritesheet_3
+  - first:
+      213: 6630527477255967090
+    second: UI_Icons_Spritesheet_4
+  - first:
+      213: -1763166373410795363
+    second: UI_Icons_Spritesheet_5
+  - first:
+      213: 4443173427934348455
+    second: UI_Icons_Spritesheet_6
+  - first:
+      213: 4261255755286477055
+    second: UI_Icons_Spritesheet_7
+  - first:
+      213: 366768335894920473
+    second: UI_Icons_Spritesheet_8
+  - first:
+      213: 4787049588387528179
+    second: UI_Icons_Spritesheet_9
+  - first:
+      213: -381429644557113521
+    second: UI_Icons_Spritesheet_10
+  - first:
+      213: -7579780358816581064
+    second: UI_Icons_Spritesheet_11
+  - first:
+      213: -899190456009508645
+    second: UI_Icons_Spritesheet_12
+  - first:
+      213: 5843859525450818882
+    second: UI_Icons_Spritesheet_13
+  - first:
+      213: 6886587731168761117
+    second: UI_Icons_Spritesheet_14
+  - first:
+      213: 397003597918853880
+    second: UI_Icons_Spritesheet_15
+  - first:
+      213: -1761668547856160739
+    second: UI_Icons_Spritesheet_16
+  - first:
+      213: 6087505653495100568
+    second: UI_Icons_Spritesheet_17
+  - first:
+      213: -5474080185574985534
+    second: UI_Icons_Spritesheet_18
+  - first:
+      213: -484236651671925215
+    second: UI_Icons_Spritesheet_19
+  - first:
+      213: 3782696624125970120
+    second: UI_Icons_Spritesheet_20
+  - first:
+      213: 8996646823049621441
+    second: UI_Icons_Spritesheet_21
+  - first:
+      213: 8570908083528178420
+    second: UI_Icons_Spritesheet_22
+  - first:
+      213: -7876428666585529745
+    second: UI_Icons_Spritesheet_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UI_Icon_HandSize4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1792
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fc3c6a938663fcc0800000000000000
+      internalID: -3678483755214029578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_HandSize5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1792
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1643ce173c723540800000000000000
+      internalID: 4986184313633719838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_WalkUp
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1792
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d33fb46b2e1f87cd0800000000000000
+      internalID: -2560030432136793283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_NextCardCharm
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2711f4b4c9d540c50800000000000000
+      internalID: 6630527477255967090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_FirstCardCharm
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d909fe86689f787e0800000000000000
+      internalID: -1763166373410795363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_CardSwap
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a44b7711b259ad30800000000000000
+      internalID: 4443173427934348455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_Charm
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff870f64885032b30800000000000000
+      internalID: 4261255755286477055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_Brain_A
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91db0e7bbd5071500800000000000000
+      internalID: 366768335894920473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_Brain_B
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1280
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fdb40edc340f6240800000000000000
+      internalID: 4787049588387528179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_Exclamation
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 1280
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47ae5952c3e4baf0800000000000000
+      internalID: -381429644557113521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_Card_Select
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a314d4ce53fc690800000000000000
+      internalID: -7579780358816581064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_HandSize4_Select
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd8b12c5b0f6583f0800000000000000
+      internalID: -899190456009508645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_HandSize5_Select
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 768
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24567cbb64f891150800000000000000
+      internalID: 5843859525450818882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_WalkUp_Select
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 768
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1590e60e03129f50800000000000000
+      internalID: 6886587731168761117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_NextCardCharm_Select
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fa518c3ba0728500800000000000000
+      internalID: 397003597918853880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_FirstCardCharm_Select
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d182e091acb4d87e0800000000000000
+      internalID: -1761668547856160739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_CardSwap_Select
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 894f1cc832a2b7450800000000000000
+      internalID: 6087505653495100568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_Charm_Select
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c07ccaf2192804b0800000000000000
+      internalID: -5474080185574985534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_Brain_A_Select
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12eced5b455a749f0800000000000000
+      internalID: -484236651671925215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_Brain_B_Select
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c6091eb986de7430800000000000000
+      internalID: 3782696624125970120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_Exclamation_Select
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 256
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cfe4898e928adc70800000000000000
+      internalID: 8996646823049621441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Icon_Card
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a53318c166254bc7a3381ffac2a12c8
+      internalID: -204420258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c8ff6bd212b8d44bd80b591d199f4ec0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":512.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      UI_Icon_Brain_A: 366768335894920473
+      UI_Icon_Brain_A_Select: -484236651671925215
+      UI_Icon_Brain_B: 4787049588387528179
+      UI_Icon_Brain_B_Select: 3782696624125970120
+      UI_Icon_Card: -204420258
+      UI_Icon_CardSwap: 4443173427934348455
+      UI_Icon_CardSwap_Select: 6087505653495100568
+      UI_Icon_Card_Select: -7579780358816581064
+      UI_Icon_Charm: 4261255755286477055
+      UI_Icon_Charm_Select: -5474080185574985534
+      UI_Icon_Exclamation: -381429644557113521
+      UI_Icon_Exclamation_Select: 8996646823049621441
+      UI_Icon_FirstCardCharm: -1763166373410795363
+      UI_Icon_FirstCardCharm_Select: -1761668547856160739
+      UI_Icon_HandSize4: -3678483755214029578
+      UI_Icon_HandSize4_Select: -899190456009508645
+      UI_Icon_HandSize5: 4986184313633719838
+      UI_Icon_HandSize5_Select: 5843859525450818882
+      UI_Icon_NextCardCharm: 6630527477255967090
+      UI_Icon_NextCardCharm_Select: 397003597918853880
+      UI_Icon_WalkUp: -2560030432136793283
+      UI_Icon_WalkUp_Select: 6886587731168761117
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
