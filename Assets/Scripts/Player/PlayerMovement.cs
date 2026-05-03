@@ -89,6 +89,12 @@ public class PlayerMovement : MonoBehaviour
              animTrigger.EnterStateOne();
      }
 
+     public void PlayerTalk()
+     {
+         animTrigger.Talk();
+     }
+     
+
     void FixedUpdate()
     {
         // acceleration feels different depending on what anim state we're in
