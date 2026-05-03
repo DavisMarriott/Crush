@@ -9,6 +9,8 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private AnimationTriggerPlayer animationTriggerPlayer;
     [SerializeField] private AnimationTriggerCrush animationTriggerCrush;
+    [SerializeField] private AnimationTriggerSpeechBubble animationTriggerSpeechBubblePlayer;
+    [SerializeField] private AnimationTriggerSpeechBubble animationTriggerSpeechBubbleCrush;
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private InputActionReference nextLineAction;
     [SerializeField] private TMP_Text dialogueText;
@@ -209,16 +211,20 @@ public class DialogueBox : MonoBehaviour
         switch (character)
         {
             case DialogueCard.DialogueCharacter.Boy:
-                dialogueText.alignment = TMPro.TextAlignmentOptions.TopLeft;
+                animationTriggerSpeechBubblePlayer.SpeechBubbleShow();
+                animationTriggerSpeechBubbleCrush.SpeechBubbleHide();                
+                dialogueText.alignment = TMPro.TextAlignmentOptions.MidlineLeft;
                 dialogueText.color = boyTextColor;
-                leftArrow.SetActive(true);
+                leftArrow.SetActive(false);
                 rightArrow.SetActive(false);
                 break;
             case DialogueCard.DialogueCharacter.Girl:
-                dialogueText.alignment = TMPro.TextAlignmentOptions.TopRight;
+                animationTriggerSpeechBubblePlayer.SpeechBubbleHide();
+                animationTriggerSpeechBubbleCrush.SpeechBubbleShow(); 
+                dialogueText.alignment = TMPro.TextAlignmentOptions.MidlineRight;
                 dialogueText.color = girlTextColor;
                 leftArrow.SetActive(false);
-                rightArrow.SetActive(true);
+                rightArrow.SetActive(false);
                 break;
         }
     }

@@ -226,5 +226,17 @@ public class AnimationTriggerPlayer : MonoBehaviour
     }
     
     
+    // Thought bubble scaling and position //
+    
+    // public void ThoughtBubbleEnterConversation()
+    // {
+    //     animator.Play("ThoughtBubble_EnterConversation", 1);
+    // }
+    //
+    // public void ThoughtBubbleExitConversation()
+    // {
+    //     animator.Play("ThoughtBubble_ExitConversation", 1);
+    // }
+    
 
 }

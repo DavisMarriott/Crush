@@ -13,14 +13,13 @@ MonoBehaviour:
   m_Name: SecondBranch
   m_EditorClassIdentifier: Assembly-CSharp::ReflectBranch
   lines:
-  - Is this really happening?
-  - It doesn't seem like Daisy remembered the first conversation....
-  - Bud I do...?
-  - What the f*@% is going on...?
-  - Sorry, God. I promised no more cussing.....
-  - even in my mind
-  - Okay. We're getting there. Just need to keep the conversation going
-  - What else could I say to her?
+  - What is happening?
+  - It doesn't seem like Daisy remembered talking to us...
+  - But we did talk to her, right?
+  - 'Yes. We definitely talked to her.  '
+  - And we blew it!
+  - But if this is some kind of time loop...
+  - ...maybe we can think of something else to say?
   minLoop: 3
   maxLoop: 3
   minFinalConfidence: 0

@@ -21,7 +21,7 @@ public class AnimationTriggerThoughtBubble : MonoBehaviour
             thoughtBubbleAnimator.Play("ThoughtBubble_Half_to_Full");
         }
         
-        else
+        else if (stateInfo.IsName("ThoughtBubble_Off_CYCLE"))
         {
             thoughtBubbleAnimator.Play("ThoughtBubble_Off_to_Full");
         }

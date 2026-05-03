@@ -8,6 +8,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1564733061495559337, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.60784316
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564733061495559337, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6117647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564733061495559337, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393472669592761024, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393472669592761024, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393472669592761024, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5204723580632095717, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
       propertyPath: m_Name
       value: SpeechBubble_Player

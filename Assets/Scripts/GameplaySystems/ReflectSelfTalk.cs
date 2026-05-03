@@ -5,6 +5,7 @@ using TMPro;
 public class ReflectSelfTalk : MonoBehaviour
 {
     [SerializeField] private DialogueTiming dialogueTiming;
+    [SerializeField] public AnimationTriggerThoughtBubble animationTriggerThoughtBubble;
     [SerializeField] private TMP_Text selfTalkText;
     [SerializeField] private ReflectBranch[] branches;
     [SerializeField] private float holdAfterLine = 2f;
@@ -29,11 +30,13 @@ public class ReflectSelfTalk : MonoBehaviour
         if (lines == null || lines.Length == 0)
         {
             yield return new WaitForSeconds(holdAfterLine);
+            animationTriggerThoughtBubble.ThoughtBubbleHalf();
             yield break;
         }
 
         foreach (string line in lines)
         {
+            animationTriggerThoughtBubble.ThoughtBubbleOn();
             yield return dialogueTiming.Run(line, selfTalkText);
             yield return new WaitForSeconds(holdAfterLine);
             selfTalkText.text = "";

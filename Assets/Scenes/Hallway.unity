@@ -487,9 +487,29 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1066025724806284937, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
+      propertyPath: onTriggerExit.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066025724806284937, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
+      propertyPath: onTriggerExit.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066025724806284937, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
+      propertyPath: onTriggerExit.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2036124711}
+    - target: {fileID: 1066025724806284937, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2036124710}
+    - target: {fileID: 1066025724806284937, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
+      propertyPath: onTriggerExit.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ThoughtBubbleEnterConversation
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066025724806284937, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
+      propertyPath: onTriggerExit.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AnimationTriggerPlayer, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1476055540710017529, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
@@ -1912,6 +1932,10 @@ PrefabInstance:
       propertyPath: selfTalkText
       value: 
       objectReference: {fileID: 1748536000}
+    - target: {fileID: 7796232783117579734, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: animationTriggerThoughtBubble
+      value: 
+      objectReference: {fileID: 2036124716}
     - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: draftPool.Array.size
       value: 8
@@ -2126,6 +2150,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcdc221bd59a04bd1912e4dd21dc51bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimationTriggerPlayer
+--- !u!114 &2036124716 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4154910979532179543, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
+  m_PrefabInstance: {fileID: 1748535992}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098558a983c9b49778e64a176f24bcfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationTriggerThoughtBubble
 --- !u!1 &2037803507
 GameObject:
   m_ObjectHideFlags: 0
@@ -3081,7 +3116,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2236130830028738280, guid: 3e9db6356aa654891a41cef1c7232bf0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -12.8376465
+      value: -12.837524
       objectReference: {fileID: 0}
     - target: {fileID: 2788993437142595439, guid: 3e9db6356aa654891a41cef1c7232bf0, type: 3}
       propertyPath: m_Pivot.x
@@ -3169,7 +3204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4590611505744424479, guid: 3e9db6356aa654891a41cef1c7232bf0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -13.453125
+      value: -13.453003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3425,7 +3460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1654876741708009024, guid: 8f22cec600c2f48d5800a9c7b0538689, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 40
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1654876741708009024, guid: 8f22cec600c2f48d5800a9c7b0538689, type: 3}
       propertyPath: m_AnchoredPosition.y
