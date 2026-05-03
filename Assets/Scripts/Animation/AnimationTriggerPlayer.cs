@@ -171,6 +171,32 @@ public class AnimationTriggerPlayer : MonoBehaviour
     }
     
     
+    public void Talk()
+    {
+        
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        
+       
+        
+        if ( stateInfo.IsName("Player_State01_CYCLE") )
+        {
+            animator.Play("Player_State01_Oneshot_Talk", 0);
+        }
+        
+        
+        else if ( stateInfo.IsName("Player_State02_CYCLE") )
+        {
+            animator.Play("Player_State02_Oneshot_Talk", 0);        }
+        
+        
+        else if ( stateInfo.IsName("Player_State03_CYCLE") )
+        {
+            animator.Play("Player_State03_Oneshot_Talk", 0);        }
+        
+        
+    }
+    
+    
     // Particle Systems //
     
     public void ParticlesConfidenceUp()
