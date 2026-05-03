@@ -598,6 +598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PhaseManager
   currentPhase: 2
   confidenceHeartMeter: {fileID: 753952907}
+  animationTriggerCrush: {fileID: 1561869875}
 --- !u!114 &489236910 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2928635927911322808, guid: 3e9db6356aa654891a41cef1c7232bf0, type: 3}
@@ -3250,6 +3251,10 @@ PrefabInstance:
       value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 3812239083386361934, guid: d016b84d0091a4db6aeb957c9a023e3f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3812239083386361934, guid: d016b84d0091a4db6aeb957c9a023e3f, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
@@ -3324,6 +3329,10 @@ PrefabInstance:
     - target: {fileID: 7498224789527062091, guid: d016b84d0091a4db6aeb957c9a023e3f, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498224789527062091, guid: d016b84d0091a4db6aeb957c9a023e3f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 7498224789527062091, guid: d016b84d0091a4db6aeb957c9a023e3f, type: 3}
       propertyPath: m_ConstrainProportionsScale
