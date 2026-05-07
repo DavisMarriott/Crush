@@ -24,6 +24,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1564733061495559337, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.49411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564733061495559337, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.21960784
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564733061495559337, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393472669592761024, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393472669592761024, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2393472669592761024, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5204723580632095717, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
       propertyPath: m_Name
       value: SpeechBubble_Crush
@@ -79,6 +103,10 @@ PrefabInstance:
     - target: {fileID: 6832830389747429635, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6832830389747429635, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8561763223293154351, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
       propertyPath: m_Color.b

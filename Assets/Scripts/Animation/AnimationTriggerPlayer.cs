@@ -62,17 +62,17 @@ public class AnimationTriggerPlayer : MonoBehaviour
         //     animator.Play("Player_State01_CYCLE", 0);
         // }
         
-        if ( (stateInfo.IsName("Player_Walk_CYCLE")) || (stateInfo.IsName("Player_Start_to_Walk")) || (stateInfo.IsName("Player_State01_to_Walk")) )
+        if ( stateInfo.IsName("Player_Walk_CYCLE") || stateInfo.IsName("Player_Start_to_Walk") || stateInfo.IsName("Player_State01_to_Walk") || stateInfo.IsName("Player_State01_Oneshot_Talk") )
         {
             animator.Play("Player_Walk_to_State01", 0);
         }
         
-        else if ( stateInfo.IsName("Player_State02_CYCLE") )
+        else if ( stateInfo.IsName("Player_State02_CYCLE") || stateInfo.IsName("Player_State02_Oneshot_Talk") )
         {
             animator.Play("Player_State02_to_State01", 0);
         }
         
-        else if ( stateInfo.IsName("Player_State03_CYCLE") )
+        else if ( stateInfo.IsName("Player_State03_CYCLE") || stateInfo.IsName("Player_State03_Oneshot_Talk") )
         {
             animator.Play("Player_State03_to_State01", 0);
         }
@@ -93,12 +93,12 @@ public class AnimationTriggerPlayer : MonoBehaviour
         //     animator.Play("Player_State02_CYCLE", 0);
         // }
         
-        if ( stateInfo.IsName("Player_State01_CYCLE") )
+        if ( stateInfo.IsName("Player_State01_CYCLE") || stateInfo.IsName("Player_State01_Oneshot_Talk"))
         {
             animator.Play("Player_State01_to_State02", 0);
         }
         
-        else if ( stateInfo.IsName("Player_State03_CYCLE") )
+        else if ( stateInfo.IsName("Player_State03_CYCLE") || stateInfo.IsName("Player_State03_Oneshot_Talk"))
         {
             animator.Play("Player_State03_to_State02", 0);
         }
@@ -116,12 +116,12 @@ public class AnimationTriggerPlayer : MonoBehaviour
         //     animator.Play("Player_State03_CYCLE", 0);
         // }
         
-        if ( stateInfo.IsName("Player_State01_CYCLE") )
+        if ( stateInfo.IsName("Player_State01_CYCLE") || stateInfo.IsName("Player_State01_Oneshot_Talk"))
         {
             animator.Play("Player_State01_to_State03", 0);
         }
         
-        else if ( stateInfo.IsName("Player_State02_CYCLE") )
+        else if ( stateInfo.IsName("Player_State02_CYCLE") || stateInfo.IsName("Player_State02_Oneshot_Talk"))
         {
             animator.Play("Player_State02_to_State03", 0);
         }
@@ -158,6 +158,12 @@ public class AnimationTriggerPlayer : MonoBehaviour
             animator.Play("Player_State03_to_Death01", 0);
         }
         
+        else if ( stateInfo.IsName("Player_State03_Oneshot_Talk") )
+        {
+            animator.Play("Player_State03_to_Death01", 0);
+        }
+        
+        
         else
         {
             animator.Play("Player_Death01_CYCLE", 0);
@@ -168,6 +174,32 @@ public class AnimationTriggerPlayer : MonoBehaviour
     public void EnterStart()
     {
         animator.Play("Player_Start", 0);
+    }
+    
+    
+    public void Talk()
+    {
+        
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        
+       
+        
+        if ( stateInfo.IsName("Player_State01_CYCLE") )
+        {
+            animator.Play("Player_State01_Oneshot_Talk", 0);
+        }
+        
+        
+        else if ( stateInfo.IsName("Player_State02_CYCLE") )
+        {
+            animator.Play("Player_State02_Oneshot_Talk", 0);        }
+        
+        
+        else if ( stateInfo.IsName("Player_State03_CYCLE") )
+        {
+            animator.Play("Player_State03_Oneshot_Talk", 0);        }
+        
+        
     }
     
     
@@ -193,6 +225,18 @@ public class AnimationTriggerPlayer : MonoBehaviour
         particlesNervousState.Play("Particles_NervousState_TurnOff", 0);
     }
     
+    
+    // Thought bubble scaling and position //
+    
+    // public void ThoughtBubbleEnterConversation()
+    // {
+    //     animator.Play("ThoughtBubble_EnterConversation", 1);
+    // }
+    //
+    // public void ThoughtBubbleExitConversation()
+    // {
+    //     animator.Play("ThoughtBubble_ExitConversation", 1);
+    // }
     
 
 }

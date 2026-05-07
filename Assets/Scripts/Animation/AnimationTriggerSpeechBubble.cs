@@ -20,6 +20,11 @@ public class AnimationTriggerSpeechBubble : MonoBehaviour
             animator.Play("SpeechBubble_Show");
         }
         
+        else if (stateInfo.IsName("SpeechBubble_On_CYCLE"))
+        {
+            animator.Play("SpeechBubble_On_CYCLE");
+        }
+        
     }
     
     public void SpeechBubbleHide()
@@ -29,6 +34,11 @@ public class AnimationTriggerSpeechBubble : MonoBehaviour
         if (stateInfo.IsName("SpeechBubble_On_CYCLE"))
         {
             animator.Play("SpeechBubble_Hide");
+        }
+        
+        else if (stateInfo.IsName("SpeechBubble_Off_CYCLE"))
+        {
+            animator.Play("SpeechBubble_Off_CYCLE");
         }
         
     }

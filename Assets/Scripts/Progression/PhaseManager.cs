@@ -9,6 +9,7 @@ public class PhaseManager : MonoBehaviour
     public event Action<GamePhase, GamePhase> OnPhaseChanged;
 
     public ConfidenceHeartMeter confidenceHeartMeter;
+    public AnimationTriggerCrush animationTriggerCrush;
 
     private void Awake()
     {
@@ -32,5 +33,13 @@ public class PhaseManager : MonoBehaviour
         currentPhase = newPhase;
         Debug.Log($"[phaseManager] {oldPhase} -> {newPhase}");
         OnPhaseChanged?.Invoke(oldPhase, newPhase);
+
+        if (currentPhase == GamePhase.Hallway)
+        {
+            animationTriggerCrush.Begin();
+            animationTriggerCrush.ParticlesCharmedStateTurnOff();
+        }
+            
+
     }
 }

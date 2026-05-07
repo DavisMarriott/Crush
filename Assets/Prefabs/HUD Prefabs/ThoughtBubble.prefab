@@ -276,7 +276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.782, y: 0.08}
+  m_AnchoredPosition: {x: -0.44, y: 0.08}
   m_SizeDelta: {x: 115, y: 7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1289778213749340024
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4288000073
-  m_fontColor: {r: 0.2772339, g: 0.6603774, b: 0.55784595, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 32
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -398,6 +398,7 @@ MonoBehaviour:
   - She likes you... I think?
   - Just talk to her. "Hi Daisy" isn't so hard....
   letterBoxAnimator: {fileID: 0}
+  animationTriggerThoughtBubble: {fileID: 0}
   selfTalkText: {fileID: 8520165747430806314}
   minFirstTimer: 1
   maxFirstTimer: 4

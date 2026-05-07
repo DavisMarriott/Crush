@@ -7,7 +7,10 @@ using UnityEngine.InputSystem;
 public class DialogueBox : MonoBehaviour
 {
     [SerializeField] private PlayerMovement playerMovement;
+    [SerializeField] private AnimationTriggerPlayer animationTriggerPlayer;
     [SerializeField] private AnimationTriggerCrush animationTriggerCrush;
+    [SerializeField] private AnimationTriggerSpeechBubble animationTriggerSpeechBubblePlayer;
+    [SerializeField] private AnimationTriggerSpeechBubble animationTriggerSpeechBubbleCrush;
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private InputActionReference nextLineAction;
     [SerializeField] private TMP_Text dialogueText;
@@ -74,21 +77,62 @@ public class DialogueBox : MonoBehaviour
             }
             else
             {
+                playerMovement.PlayerTalk();
                 yield return dialogueTiming.Run(line.line, dialogueText);
             }
             confidenceState.confidence += line.confidenceImpact;
             charmState.charm += line.charmImpact;
+            // Confidence particles 
+            if (line.confidenceImpact > 0)
+            {
+                animationTriggerPlayer.ParticlesConfidenceUp();
+            }
+            if (line.confidenceImpact < 0)
+            {
+                animationTriggerPlayer.ParticlesConfidenceDown();
+            }
+            if (confidenceState.confidence > 2 && confidenceState.confidence < 0)
+            {
+                animationTriggerPlayer.ParticlesNervousStateTurnOff();
+            }
+            if (confidenceState.confidence == 0)
+            {
+                animationTriggerPlayer.ParticlesNervousStateTurnOff();
+            }
+            if (confidenceState.confidence <= 2)
+            {
+                animationTriggerPlayer.ParticlesNervousStateTurnOn();
+            }
+            
             playerMovement.GetConfidencePose();
             animationTriggerCrush.GetCharmPose();
             yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
             hallwaySelfTalk.selfTalkText.text = "";
             dialogueText.text = "";
         }
+        
 
         // apply charm impact based on current charm state
         DialogueCard.CharmState currentCharmState = GetCurrentCharmState(charmState.charm);
         int charmImpact = lukeBranch.GetCharmImpact(currentCharmState);
         charmState.charm += charmImpact;
+        
+        // animate charm particles 
+        if (charmImpact > 0)
+        {
+            animationTriggerCrush.ParticlesCharmUp();
+        }
+        
+        if (charmState.charm >= 10)
+        {
+            animationTriggerCrush.ParticlesCharmedStateTurnOn();
+        }
+        
+        if (charmState.charm < 10)
+        {
+            animationTriggerCrush.ParticlesCharmedStateTurnOff();
+        }
+        
 
         // Daisy's response (picked by charm score after Luke's impact)
         Debug.Log($"Charm after impact: {charmState.charm}, picking Daisy branch");
@@ -115,6 +159,25 @@ public class DialogueBox : MonoBehaviour
                     yield return dialogueTiming.Run(line.line, dialogueText);
                 }
                 confidenceState.confidence += line.confidenceImpact;
+                
+                // Confidence particles 
+                if (line.confidenceImpact > 0)
+                {
+                    animationTriggerPlayer.ParticlesConfidenceUp();
+                }
+                if (line.confidenceImpact < 0)
+                {
+                    animationTriggerPlayer.ParticlesConfidenceDown();
+                }
+                if (confidenceState.confidence <= 2)
+                {
+                    animationTriggerPlayer.ParticlesNervousStateTurnOn();
+                }
+                if (confidenceState.confidence > 2)
+                {
+                    animationTriggerPlayer.ParticlesNervousStateTurnOff();
+                }
+                
                 charmState.charm += line.charmImpact;
                 playerMovement.GetConfidencePose();
                 yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
@@ -156,16 +219,20 @@ public class DialogueBox : MonoBehaviour
         switch (character)
         {
             case DialogueCard.DialogueCharacter.Boy:
-                dialogueText.alignment = TMPro.TextAlignmentOptions.TopLeft;
+                animationTriggerSpeechBubblePlayer.SpeechBubbleShow();
+                animationTriggerSpeechBubbleCrush.SpeechBubbleHide();                
+                dialogueText.alignment = TMPro.TextAlignmentOptions.MidlineLeft;
                 dialogueText.color = boyTextColor;
-                leftArrow.SetActive(true);
+                leftArrow.SetActive(false);
                 rightArrow.SetActive(false);
                 break;
             case DialogueCard.DialogueCharacter.Girl:
-                dialogueText.alignment = TMPro.TextAlignmentOptions.TopRight;
+                animationTriggerSpeechBubblePlayer.SpeechBubbleHide();
+                animationTriggerSpeechBubbleCrush.SpeechBubbleShow(); 
+                dialogueText.alignment = TMPro.TextAlignmentOptions.MidlineRight;
                 dialogueText.color = girlTextColor;
                 leftArrow.SetActive(false);
-                rightArrow.SetActive(true);
+                rightArrow.SetActive(false);
                 break;
         }
     }
@@ -176,4 +243,6 @@ public class DialogueBox : MonoBehaviour
         dialogueBox.SetActive(false);
         dialogueText.text = string.Empty;
     }
+    
+
 }

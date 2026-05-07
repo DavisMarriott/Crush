@@ -13,18 +13,13 @@ MonoBehaviour:
   m_Name: FirstReflect
   m_EditorClassIdentifier: Assembly-CSharp::ReflectBranch
   lines:
-  - What??? I'm not dead?
-  - Ohhh thank god.....
-  - It looks like Daisy is still by her locker....?
-  - Does that mean....
-  - I can still ask her to the dance?
-  - Okay okay, cool.
-  - We can still do this.
-  - But I can't just walk up to her and ask her to the dance.
-  - That only happens in movies.
-  - I need to have an actual conversation with her.
-  - Warm things up a little.
-  - But what should I talk about......?
+  - What??? We're not dead?
+  - Well if it was just a bad dream...
+  - ...maybe we can still ask Daisy to the dance.
+  - We can't just walk up and ask her, though!
+  - Gotta have an actual conversation.
+  - Yeah. We can do that. Just... talk.
+  - Talk about what?!?
   minLoop: 2
   maxLoop: 2
   minFinalConfidence: 0
