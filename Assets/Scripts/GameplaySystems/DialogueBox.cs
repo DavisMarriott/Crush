@@ -47,6 +47,8 @@ public class DialogueBox : MonoBehaviour
             Debug.LogWarning($"No valid Luke branch for confidence {confidenceState.confidence} on card {dialogueCard.previewText}");
             return;
         }
+        // Register tags from the Luke branch as fired this loop
+        deckManager.RegisterTags(lukeBranch.tags);
         dialogueBox.SetActive(true);
         StartCoroutine(SelectAnim());
         //wait to let the select animation play
@@ -91,6 +93,12 @@ public class DialogueBox : MonoBehaviour
         // Daisy's response (picked by charm score after Luke's impact)
         Debug.Log($"Charm after impact: {charmState.charm}, picking Daisy branch");
         var daisyBranch = lukeBranch.GetDaisyBranch(charmState.charm);
+
+        if (daisyBranch != null)
+        {
+            // Register tags from the Daisy branch as fired this loop
+            deckManager.RegisterTags(daisyBranch.tags);
+        }
 
         if (daisyBranch != null && daisyBranch.dialogue != null && daisyBranch.dialogue.Length > 0)
         {

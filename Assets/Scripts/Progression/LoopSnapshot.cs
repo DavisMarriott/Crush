@@ -10,6 +10,7 @@ public struct LoopSnapshot
     public List<string> cardsPlayed;
     public List<string> cardsUnplayed;
     public DialogueCard deathCard;
+    public HashSet<DialogueTag> tagsFired;
 }
 
 

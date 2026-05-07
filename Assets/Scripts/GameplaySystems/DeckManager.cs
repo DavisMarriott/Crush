@@ -17,10 +17,22 @@ public class DeckManager : MonoBehaviour
     private List<DialogueCard> _hand;
     private List<DialogueCard> _discard;
     public DialogueCard LastPlayedCard { get; private set; }
-    
+
+    private HashSet<DialogueTag> _tagsFiredThisLoop = new HashSet<DialogueTag>();
+
     public List<DialogueCard> Deck => _deck;
     public List<DialogueCard> Hand => _hand;
     public List<DialogueCard> Discard => _discard;
+    public HashSet<DialogueTag> TagsFiredThisLoop => _tagsFiredThisLoop;
+
+    public void RegisterTags(DialogueTag[] tags)
+    {
+        if (tags == null) return;
+        foreach (var tag in tags)
+        {
+            _tagsFiredThisLoop.Add(tag);
+        }
+    }
 
     void Start()
     {
@@ -69,7 +81,10 @@ public class DeckManager : MonoBehaviour
         _deck.AddRange(_discard);
         _hand.Clear();
         _discard.Clear();
-        
+
+        // Clear per-loop tag state so next loop starts fresh
+        _tagsFiredThisLoop.Clear();
+
         Shuffle();
         DrawHand(startingHandSize);
     }

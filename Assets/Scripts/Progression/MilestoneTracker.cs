@@ -32,6 +32,8 @@ public class MilestoneTracker : MonoBehaviour
                 return snapshot.lastPeakCharm >= cond.threshold;
             case MilestoneConditionType.CardsPlayedInLoopAtLeast:
                 return snapshot.cardsPlayed != null && snapshot.cardsPlayed.Count >= cond.threshold;
+            case MilestoneConditionType.DialogueTagFired:
+                return snapshot.tagsFired != null && snapshot.tagsFired.Contains(cond.tag);
         }
         return false;
     }

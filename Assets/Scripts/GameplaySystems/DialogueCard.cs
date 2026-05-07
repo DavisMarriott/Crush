@@ -97,6 +97,9 @@ public class DialogueCard : ScriptableObject
     {
         public CharmState charmState;
         public DialogueLine[] dialogue = new DialogueLine[0];
+
+        [Header("Tags fired when this Daisy branch plays")]
+        public DialogueTag[] tags;
     }
     
     [System.Serializable]
@@ -105,6 +108,9 @@ public class DialogueCard : ScriptableObject
         public string branchName;
         public bool requiresIntroFalse = false;
         public DialogueLine[] dialogue = new DialogueLine[0];
+
+        [Header("Tags fired when this Luke branch plays")]
+        public DialogueTag[] tags;
 
         [Header("Charm Impact Per State (for this branch)")]
         public CharmImpactEntry[] charmImpacts;

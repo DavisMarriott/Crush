@@ -64,6 +64,8 @@ public class DeathRespawn : MonoBehaviour
             loopSnapshot.cardsUnplayed.Add(card.name);
         }
         loopSnapshot.deathCard = deckManager.LastPlayedCard;
+        // Snapshot the tags fired during this loop's conversation(s)
+        loopSnapshot.tagsFired = new HashSet<DialogueTag>(deckManager.TagsFiredThisLoop);
         //end of updating loopSnapshot: Next - game progression captures it
         gameProgression.lastLoop = loopSnapshot;
         

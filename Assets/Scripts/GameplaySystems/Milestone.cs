@@ -5,6 +5,7 @@ public enum MilestoneConditionType
     PeakConfidenceReached,
     PeakCharmReached,
     CardsPlayedInLoopAtLeast,
+    DialogueTagFired,
 }
 
 [System.Serializable]
@@ -12,6 +13,8 @@ public struct MilestoneCondition
 {
     public MilestoneConditionType type;
     public int threshold;
+    [Tooltip("Used only when type == DialogueTagFired")]
+    public DialogueTag tag;
 }
 
 [CreateAssetMenu(menuName = "Crush/Milestone")]
