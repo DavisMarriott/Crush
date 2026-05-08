@@ -41,6 +41,9 @@ public class ReflectSelfTalk : MonoBehaviour
             yield return new WaitForSeconds(holdAfterLine);
             selfTalkText.text = "";
         }
+
+        // Reflect lines done — minimize bubble before draft / hallway resumes
+        animationTriggerThoughtBubble.ThoughtBubbleHalf();
     }
 
     private ReflectBranch SelectBranch(LoopSnapshot snapshot, int loopCount)

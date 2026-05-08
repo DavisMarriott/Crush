@@ -25,6 +25,7 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: "Class was uhhh\u2026 pretty\u2026."
+    tags: 
     charmImpacts: []
     daisyBranches: []
   - branchName: Normal
@@ -39,6 +40,7 @@ MonoBehaviour:
       charmImpact: 0
       line: I was fighting to stay awake when Mr. Miller started talking about the
         Roman Empire.
+    tags: 
     charmImpacts:
     - state: 1
       impact: 2
@@ -55,18 +57,21 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: yeah that class sucked gotta go see ya later
+      tags: 
     - charmState: 1
       dialogue:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
         line: haha yeah. Not exactly the most exciting class I've ever been to.
+      tags: 
     - charmState: 2
       dialogue:
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
         line: Seriously haha. Ugh 5th period is the absolute worst.
+      tags: 00000000
     - charmState: 3
       dialogue:
       - character: 1
@@ -78,6 +83,7 @@ MonoBehaviour:
         confidenceImpact: 2
         charmImpact: 0
         line: He needs some new hobbies.
+      tags: 00000000
     - charmState: 4
       dialogue:
       - character: 1
@@ -89,6 +95,9 @@ MonoBehaviour:
         confidenceImpact: 2
         charmImpact: 0
         line: HAHA you're hilarious!
+      tags: 00000000
   draftLines:
   - line: Something easy
   - line: Just talk about how boring 4th period was
+  availableUpgrades: []
+  upgradeThreshold: 3

@@ -10,6 +10,11 @@ public class AnimationTriggerThoughtBubble : MonoBehaviour
     {
         // Get the Animator component attached to the GameObject
         thoughtBubbleAnimator = thoughtBubble.GetComponent<Animator>();
+
+        // Force a known starting state so the first On/Half/Off call has a valid _CYCLE state to transition from.
+        // (Without this, the first loop's bubble can stay invisible because the default Animator state
+        //  isn't named with the _CYCLE suffix the state-guards in this class look for.)
+        thoughtBubbleAnimator.Play("ThoughtBubble_Half_CYCLE");
     }
 
     public void ThoughtBubbleOn()

@@ -130,7 +130,6 @@ GameObject:
   - component: {fileID: 10528341}
   - component: {fileID: 10528340}
   - component: {fileID: 10528342}
-  - component: {fileID: 10528343}
   m_Layer: 0
   m_Name: GameProgressionManager
   m_TagString: Untagged
@@ -158,6 +157,7 @@ MonoBehaviour:
   specialLoopConditions: {fileID: 1695503005}
   firstLoopManager: {fileID: 24498267}
   inConversationTrigger: {fileID: 332963191}
+  animationTriggerThoughtBubble: {fileID: 2036124716}
 --- !u!4 &10528341
 Transform:
   m_ObjectHideFlags: 0
@@ -209,22 +209,6 @@ MonoBehaviour:
   isDead: 0
   testMode: 0
   debugMenu: {fileID: 0}
---- !u!114 &10528343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 10528339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46aec8ddab5bd4c80be0d1f6f5d4f2d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MilestoneTracker
-  milestones: []
-  confidenceState: {fileID: 1056035271448750366}
-  deckManager: {fileID: 0}
-  upgradeBanner: {fileID: 0}
 --- !u!1 &24498265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2216,6 +2200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MilestoneTracker
   milestones:
   - {fileID: 11400000, guid: db606718f18fe4f33a7c3b35743685db, type: 2}
+  - {fileID: 11400000, guid: 5fc515acc26ba47358da8076717a1f2e, type: 2}
   confidenceState: {fileID: 1056035271448750366}
   deckManager: {fileID: 1875503650}
   upgradeBanner: {fileID: 1039652770}
@@ -3717,6 +3702,10 @@ PrefabInstance:
       propertyPath: animationTriggerPlayer
       value: 
       objectReference: {fileID: 2036124711}
+    - target: {fileID: 3985097242674001143, guid: 8f22cec600c2f48d5800a9c7b0538689, type: 3}
+      propertyPath: animationTriggerThoughtBubble
+      value: 
+      objectReference: {fileID: 2036124716}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

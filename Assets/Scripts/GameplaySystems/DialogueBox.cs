@@ -9,6 +9,7 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private AnimationTriggerPlayer animationTriggerPlayer;
     [SerializeField] private AnimationTriggerCrush animationTriggerCrush;
+    [SerializeField] private AnimationTriggerThoughtBubble animationTriggerThoughtBubble;
     [SerializeField] private AnimationTriggerSpeechBubble animationTriggerSpeechBubblePlayer;
     [SerializeField] private AnimationTriggerSpeechBubble animationTriggerSpeechBubbleCrush;
     [SerializeField] private GameObject dialogueBox;
@@ -52,6 +53,8 @@ public class DialogueBox : MonoBehaviour
         }
         // Register tags from the Luke branch as fired this loop
         deckManager.RegisterTags(lukeBranch.tags);
+        // Bring thought bubble to full while dialogue is showing
+        animationTriggerThoughtBubble.ThoughtBubbleOn();
         dialogueBox.SetActive(true);
         StartCoroutine(SelectAnim());
         //wait to let the select animation play
@@ -186,6 +189,8 @@ public class DialogueBox : MonoBehaviour
             }
         }
 
+        // Card finished playing — minimize bubble between cards
+        animationTriggerThoughtBubble.ThoughtBubbleHalf();
         confidenceState.introMade = true;
         CloseDialogueBox();
         if (dialogueCard.isDance)

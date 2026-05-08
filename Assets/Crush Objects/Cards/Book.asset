@@ -25,6 +25,7 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: "What book are you\u2026\u2026."
+    tags: 
     charmImpacts: []
     daisyBranches: []
   - branchName: Normal
@@ -34,6 +35,7 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: What book is that you're reading?
+    tags: 
     charmImpacts:
     - state: 1
       impact: 2
@@ -46,6 +48,7 @@ MonoBehaviour:
     daisyBranches:
     - charmState: 0
       dialogue: []
+      tags: 
     - charmState: 1
       dialogue:
       - character: 1
@@ -60,6 +63,7 @@ MonoBehaviour:
         confidenceImpact: 1
         charmImpact: 0
         line: They're just okay.
+      tags: 
     - charmState: 2
       dialogue:
       - character: 1
@@ -74,6 +78,7 @@ MonoBehaviour:
         confidenceImpact: 2
         charmImpact: 0
         line: "It's kinda dorky though\u2026."
+      tags: 03000000
     - charmState: 3
       dialogue:
       - character: 1
@@ -92,6 +97,7 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: God she's perfect
+      tags: 03000000
     - charmState: 4
       dialogue:
       - character: 1
@@ -102,6 +108,9 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: Just this fantasy series I've been reading.
+      tags: 03000000
   draftLines:
   - line: She's holding that book....
   - line: She might like if I ask her about it.
+  availableUpgrades: []
+  upgradeThreshold: 3

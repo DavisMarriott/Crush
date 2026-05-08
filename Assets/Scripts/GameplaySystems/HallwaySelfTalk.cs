@@ -53,7 +53,7 @@ public class HallwaySelfTalk : MonoBehaviour
     }
     public IEnumerator PlayDraftLines(DialogueCard.DraftLine[] draftLines)
     {
-        animationTriggerThoughtBubble.ThoughtBubbleHalf();
+        // (bubble should already be Half from end of ReflectSelfTalk.PlayLines)
         draftLinesActive = true;
         foreach (DialogueCard.DraftLine draftLine in draftLines)
         {

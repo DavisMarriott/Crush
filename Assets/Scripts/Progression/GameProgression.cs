@@ -12,6 +12,7 @@ public class GameProgression : MonoBehaviour
     [SerializeField] private GameObject specialLoopConditions;
     [SerializeField] private FirstLoopManager firstLoopManager;
     [SerializeField] private Collider2D inConversationTrigger;
+    [SerializeField] private AnimationTriggerThoughtBubble animationTriggerThoughtBubble;
     public LoopSnapshot lastLoop;
 
     private void Start()
@@ -54,13 +55,16 @@ public class GameProgression : MonoBehaviour
     
     public void HallwayTriggerHit(int  triggerIndex)
     {
+        // Bring the thought bubble to Full so the first-loop trigger line is visible
+        animationTriggerThoughtBubble.ThoughtBubbleOn();
+
         if (triggerIndex == 1)
         {
             selfTalkText.text = firstLoopManager.firstLoopHallwayLines[0];
             confidenceState.confidence -= 1;
 
         }
-  
+
         else if (triggerIndex == 2)
         {
             selfTalkText.text = firstLoopManager.firstLoopHallwayLines[1];
