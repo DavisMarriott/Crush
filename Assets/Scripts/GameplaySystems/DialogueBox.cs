@@ -31,6 +31,10 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private Color girlTextColor = new Color(1f, 0.7f, 0.8f);
     [SerializeField] private Color boyInternalTextColor = Color.gray;
 
+    [Header("Per-loop intro lines (play once on first card per loop)")]
+    [SerializeField] private string lukeIntroLine;
+    [SerializeField] private string daisyIntroLine;
+
 
 
     public void Start()
@@ -44,7 +48,7 @@ public class DialogueBox : MonoBehaviour
 
     public void ShowDialogue(DialogueCard dialogueCard)
     {
-        var lukeBranch = dialogueCard.GetLukeBranch(confidenceState.confidence, confidenceState.introMade);
+        var lukeBranch = dialogueCard.GetLukeBranch(confidenceState.confidence);
 
         if (lukeBranch == null || lukeBranch.dialogue == null || lukeBranch.dialogue.Length == 0)
         {
@@ -67,9 +71,29 @@ public class DialogueBox : MonoBehaviour
    
     }
 
+    // Plays a single intro line (no confidence/charm impact, no card data).
+    // Used at the top of the first card-played per loop to play the character intro
+    // before the card's own Luke/Daisy branches fire.
+    private IEnumerator PlayIntroLine(string line, DialogueCard.DialogueCharacter speaker)
+    {
+        if (string.IsNullOrEmpty(line)) yield break;
+        SetSpeakerIndicator(speaker);
+        if (speaker == DialogueCard.DialogueCharacter.Boy)
+            playerMovement.PlayerTalk();
+        yield return dialogueTiming.Run(line, dialogueText);
+        yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
+        dialogueText.text = "";
+    }
+
     //this is where dialogue plays/bulk of conversation system lives
     private IEnumerator StepThroughDialogue(DialogueCard dialogueCard, DialogueCard.DialogueBranch lukeBranch)
     {
+        // First card per loop: play Luke's intro line ("Hey Daisy") before his card dialogue runs.
+        // confidenceState.introMade gets flipped to true at the end of this method (line below the Daisy branch),
+        // so subsequent cards in the same loop skip both intro lines.
+        if (!confidenceState.introMade)
+            yield return PlayIntroLine(lukeIntroLine, DialogueCard.DialogueCharacter.Boy);
+
         //parse card data and play (including confidence/charm scores) - for Luke Branch
         foreach (DialogueCard.DialogueLine line in lukeBranch.dialogue)
         {
@@ -145,6 +169,10 @@ public class DialogueBox : MonoBehaviour
         {
             // Register tags from the Daisy branch as fired this loop
             deckManager.RegisterTags(daisyBranch.tags);
+
+            // First card per loop: play Daisy's intro line ("Hey Luke") before her card response runs.
+            if (!confidenceState.introMade)
+                yield return PlayIntroLine(daisyIntroLine, DialogueCard.DialogueCharacter.Girl);
         }
 
         if (daisyBranch != null && daisyBranch.dialogue != null && daisyBranch.dialogue.Length > 0)

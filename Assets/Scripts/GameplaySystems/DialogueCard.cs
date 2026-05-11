@@ -106,7 +106,6 @@ public class DialogueCard : ScriptableObject
     public class DialogueBranch
     {
         public string branchName;
-        public bool requiresIntroFalse = false;
         public DialogueLine[] dialogue = new DialogueLine[0];
 
         [Header("Tags fired when this Luke branch plays")]
@@ -148,51 +147,42 @@ public class DialogueCard : ScriptableObject
     }
 
     // confidence here is AFTER cost has been deducted by ThoughtSpawner
-    public DialogueBranch GetLukeBranch(int confidence, bool introMade)
+    public DialogueBranch GetLukeBranch(int confidence)
     {
         if (lukeBranches == null || lukeBranches.Length == 0)
             return null;
 
         // dead
         if (confidence <= 0)
-            return FindBranchByName("Death", introMade);
+            return FindBranchByName("Death");
 
         ConfidenceLevel level = GetConfidenceLevel(confidence);
 
         // awkward (only if the card has one)
         if (level == ConfidenceLevel.Low)
         {
-            DialogueBranch awkward = FindBranchByName("Awkward", introMade);
+            DialogueBranch awkward = FindBranchByName("Awkward");
             if (awkward != null)
                 return awkward;
         }
 
         // normal (or fallback if no awkward)
-        DialogueBranch normal = FindBranchByName("Normal", introMade);
+        DialogueBranch normal = FindBranchByName("Normal");
         if (normal != null)
             return normal;
 
-        // last resort - first branch that passes intro check
-        for (int i = 0; i < lukeBranches.Length; i++)
-        {
-            var b = lukeBranches[i];
-            bool introValid = !b.requiresIntroFalse || !introMade;
-            if (introValid)
-                return b;
-        }
+        // last resort - first available branch
+        if (lukeBranches.Length > 0)
+            return lukeBranches[0];
         return null;
     }
 
-    private DialogueBranch FindBranchByName(string name, bool introMade)
+    private DialogueBranch FindBranchByName(string name)
     {
         for (int i = 0; i < lukeBranches.Length; i++)
         {
-            var b = lukeBranches[i];
-            if (b.branchName != name) continue;
-
-            bool introValid = !b.requiresIntroFalse || !introMade;
-            if (introValid)
-                return b;
+            if (lukeBranches[i].branchName == name)
+                return lukeBranches[i];
         }
         return null;
     }

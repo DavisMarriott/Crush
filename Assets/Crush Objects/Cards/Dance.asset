@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dance
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   isDance: 1
-  revealed: 1
+  revealed: 0
   previewText: DANCE?
   cost: 0
   buttonColor: {r: 1, g: 1, b: 1, a: 1}

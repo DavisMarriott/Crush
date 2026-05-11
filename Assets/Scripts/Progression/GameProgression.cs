@@ -13,6 +13,7 @@ public class GameProgression : MonoBehaviour
     [SerializeField] private FirstLoopManager firstLoopManager;
     [SerializeField] private Collider2D inConversationTrigger;
     [SerializeField] private AnimationTriggerThoughtBubble animationTriggerThoughtBubble;
+    [SerializeField] private DialogueTiming dialogueTiming;
     public LoopSnapshot lastLoop;
 
     private void Start()
@@ -42,7 +43,9 @@ public class GameProgression : MonoBehaviour
         hallwaySelfTalk.enabled = true;
         inConversationTrigger.enabled = true;
         confidenceState.inConversation = false;
-        hallwaySelfTalk.EndHallwayTimer();
+        // (removed redundant EndHallwayTimer() — HallwaySelfTalk's OnEnable / OnDisable /
+        //  OnPhaseChanged lifecycle now handles timer cleanup and re-start.
+        //  Calling End here was killing the timer right after OnEnable started it.)
         for (int i = specialLoopConditions.transform.childCount - 1; i >= 0; i--)
             specialLoopConditions.transform.GetChild(i).gameObject.SetActive(false);
     }
@@ -58,21 +61,15 @@ public class GameProgression : MonoBehaviour
         // Bring the thought bubble to Full so the first-loop trigger line is visible
         animationTriggerThoughtBubble.ThoughtBubbleOn();
 
-        if (triggerIndex == 1)
-        {
-            selfTalkText.text = firstLoopManager.firstLoopHallwayLines[0];
-            confidenceState.confidence -= 1;
+        string line = null;
+        if (triggerIndex == 1) line = firstLoopManager.firstLoopHallwayLines[0];
+        else if (triggerIndex == 2) line = firstLoopManager.firstLoopHallwayLines[1];
+        else if (triggerIndex == 3) line = firstLoopManager.firstLoopHallwayLines[2];
 
-        }
-
-        else if (triggerIndex == 2)
+        if (line != null)
         {
-            selfTalkText.text = firstLoopManager.firstLoopHallwayLines[1];
-            confidenceState.confidence -= 1;
-        }
-        else if (triggerIndex == 3)
-        {
-            selfTalkText.text = firstLoopManager.firstLoopHallwayLines[2];
+            // Use the same typing effect as conversation/draft/reflect phases
+            dialogueTiming.Run(line, selfTalkText);
             confidenceState.confidence -= 1;
         }
     }

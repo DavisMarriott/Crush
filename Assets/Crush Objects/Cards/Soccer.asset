@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   previewText: Soccer
   cost: 4
-  revealed: 1
+  revealed: 0
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   lukeBranches:
   - branchName: Afford
