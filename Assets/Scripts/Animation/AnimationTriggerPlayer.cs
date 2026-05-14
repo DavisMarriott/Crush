@@ -182,8 +182,6 @@ public class AnimationTriggerPlayer : MonoBehaviour
         
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         
-       
-        
         if ( stateInfo.IsName("Player_State01_CYCLE") )
         {
             animator.Play("Player_State01_Oneshot_Talk", 0);
@@ -224,6 +222,64 @@ public class AnimationTriggerPlayer : MonoBehaviour
     {
         particlesNervousState.Play("Particles_NervousState_TurnOff", 0);
     }
+    
+    
+    // DRAFT SCREEN ANIMATIONS
+    
+    public void LockerWake()
+    {
+        
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        
+        animator.Play("Player_Locker_Wake_to_Idle", 0);
+        
+    }
+    
+    public void LockerLookRight()
+    {
+        
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        
+        if ( stateInfo.IsName("Player_Locker_Idle_CYCLE") )
+        {
+            animator.Play("Player_Locker_Idle_to_LookRight", 0);
+        }
+        
+    }
+    
+    public void LockerClose()
+    {
+        
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        
+        if ( stateInfo.IsName("Player_Locker_Idle_CYCLE") )
+        {
+            animator.Play("Player_Locker_Idle_to_LockerClosed", 0);
+        }
+        
+        
+        else if ( stateInfo.IsName("Player_Locker_LookRight_CYCLE") )
+        {
+            animator.Play("Player_Locker_LookRight_to_LockerClose", 0);        
+        }
+        
+        else if ( stateInfo.IsName("Player_Locker_Idle_to_LookRight") )
+        {
+            animator.Play("Player_Locker_LookRight_to_LockerClose", 0);        
+        }
+        
+    }
+    
+    public void LockerOpen()
+    {
+        
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        
+        animator.Play("Player_Locker_LockerOpen", 0);
+        
+    }
+    
+    
     
     
     // Thought bubble scaling and position //
