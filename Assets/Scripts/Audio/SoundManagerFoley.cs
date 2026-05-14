@@ -47,6 +47,9 @@ public class SoundManagerFoley : MonoBehaviour
     // MISC
     public AudioClip blink01;
     public AudioClip blink02;
+    // LOCKER
+    public AudioClip lockerOpen;
+    public AudioClip lockerClose;
 
     void Start()
     {
@@ -173,6 +176,12 @@ public class SoundManagerFoley : MonoBehaviour
         audioSource.PlayOneShot(impact06);
     }
     
+    // VOICE
+    public void VoiceNegative05()
+    {
+        audioSource.PlayOneShot(voiceNegative05);
+    }
+    
     // MISC
     public void Blink01()
     {
@@ -182,6 +191,17 @@ public class SoundManagerFoley : MonoBehaviour
     public void Blink02()
     {
         audioSource.PlayOneShot(blink02);
+    }
+    
+    // LOCKER
+    public void LockerOpenSound()
+    {
+        audioSource.PlayOneShot(lockerOpen);
+    }
+    
+    public void LockerCloseSound()
+    {
+        audioSource.PlayOneShot(lockerClose);
     }
     
 }

@@ -366,9 +366,9 @@ MonoBehaviour:
   impact01: {fileID: 8300000, guid: 6d0bbf6683cd54e2ebcb34f666f99a23, type: 3}
   impact02: {fileID: 8300000, guid: 6b2a58004e67142c1a7e8fd7a7dc6398, type: 3}
   impact03: {fileID: 8300000, guid: 6011a3f939e4f4106b191e69acb51ab7, type: 3}
-  impact04: {fileID: 0}
-  impact05: {fileID: 0}
-  impact06: {fileID: 0}
+  impact04: {fileID: 8300000, guid: 71a75b6ab547f4b91be8174cc4b4407b, type: 3}
+  impact05: {fileID: 8300000, guid: 977dc09c063ec4cf68488dc9c2294b2d, type: 3}
+  impact06: {fileID: 8300000, guid: badf47eb5d07a4edcaaccc8783b65d64, type: 3}
   voiceNeutral01: {fileID: 0}
   voiceNeutral02: {fileID: 0}
   voiceNeutral03: {fileID: 0}
@@ -383,9 +383,11 @@ MonoBehaviour:
   voiceNegative02: {fileID: 0}
   voiceNegative03: {fileID: 0}
   voiceNegative04: {fileID: 0}
-  voiceNegative05: {fileID: 0}
-  blink01: {fileID: 0}
-  blink02: {fileID: 0}
+  voiceNegative05: {fileID: 8300000, guid: 0269a6532bafc48618c37cbb5f9180a9, type: 3}
+  blink01: {fileID: 8300000, guid: 5123a4ee59ede4d60ab67f02e7d5f90e, type: 3}
+  blink02: {fileID: 8300000, guid: 6d96265ae107f41f484116cd78d96ad8, type: 3}
+  lockerOpen: {fileID: 8300000, guid: 9c20c010948e3466a9cd0333f34e1a3d, type: 3}
+  lockerClose: {fileID: 8300000, guid: 924bf82fe1def4b7895828c3d10c0971, type: 3}
 --- !u!1 &2305240783736307181
 GameObject:
   m_ObjectHideFlags: 0

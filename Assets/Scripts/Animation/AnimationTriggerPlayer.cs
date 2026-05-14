@@ -270,6 +270,14 @@ public class AnimationTriggerPlayer : MonoBehaviour
         
     }
     
+    public void LockerCloseDMenu()
+    {
+        
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        animator.Play("Player_Locker_LockerClosed_CYCLE", 0);
+        
+    }
+    
     public void LockerOpen()
     {
         
