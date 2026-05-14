@@ -12,6 +12,9 @@ public class HallwaySelfTalk : MonoBehaviour
     [SerializeField] private Animator letterBoxAnimator;
     [SerializeField] public AnimationTriggerThoughtBubble animationTriggerThoughtBubble;
     [SerializeField] public TMP_Text selfTalkText;
+
+    [Header("Draft phase text target (separate from hallway ambient — typically a screen-space TMP_Text that's visible during DraftScreenCam)")]
+    [SerializeField] public TMP_Text draftSelfTalkText;
     [SerializeField] private float minFirstTimer = 1f;
     [SerializeField] private float maxFirstTimer = 4f;
     [SerializeField] private float minSecondTimer = 4f;
@@ -93,21 +96,26 @@ public class HallwaySelfTalk : MonoBehaviour
 
     public void TriggerLetterBoxOut()
     {
-        letterBoxAnimator.SetTrigger("LetterBoxOut");
+        // letterBoxAnimator.SetTrigger("LetterBoxOut"); — removed 2026-05-12: dedicated DraftScreenCam handles the visual cut.
+        // Method kept as a no-op for now since DraftUI still calls it; cleanup later.
     }
     public IEnumerator PlayDraftLines(DialogueCard.DraftLine[] draftLines)
     {
         // (bubble should already be Half from end of ReflectSelfTalk.PlayLines)
         draftLinesActive = true;
+        // Draft lines play during DraftScreenCam, so route to draftSelfTalkText (screen-space) instead of
+        // selfTalkText (Luke's world-space thought bubble, off-camera during this phase).
+        TMP_Text target = draftSelfTalkText != null ? draftSelfTalkText : selfTalkText;
         foreach (DialogueCard.DraftLine draftLine in draftLines)
         {
             animationTriggerThoughtBubble.ThoughtBubbleOn();
             yield return new WaitForSeconds(0.5f);
-            yield return dialogueTiming.Run(draftLine.line, selfTalkText);
+            yield return dialogueTiming.Run(draftLine.line, target);
             yield return new WaitForSeconds(1.5f);
         }
-        letterBoxAnimator.SetTrigger("LetterBoxOut");
+        // letterBoxAnimator.SetTrigger("LetterBoxOut"); — removed 2026-05-12: dedicated DraftScreenCam handles the visual cut.
         animationTriggerThoughtBubble.ThoughtBubbleHalf();
+        if (target != null) target.text = "";
         draftLinesActive = false;
     }
     

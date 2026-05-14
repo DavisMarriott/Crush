@@ -93,7 +93,7 @@ public class DeathRespawn : MonoBehaviour
         
         // first half of respawn + drafting - ENTER Reflect Phase
         PhaseManager.Instance.TransitionTo(GamePhase.Reflect);
-        letterBoxAnimator.SetTrigger("LetterBoxIn");
+        // letterBoxAnimator.SetTrigger("LetterBoxIn"); — removed 2026-05-12: dedicated DraftScreenCam now handles the Reflect/Draft visual cut, no letterboxing needed.
         animationTriggerPlayer.EnterStart();
         playerTransform.position = spawnPoint.position;
         confidenceState.confidence = confidenceState.startingConfidence;
@@ -131,11 +131,15 @@ public class DeathRespawn : MonoBehaviour
             draftUI.ShowDraftOptions();
             yield return new WaitUntil(() => !draftUI.gameObject.activeSelf || !draftUI.enabled);
         }
-        
+
+        // Wait for draft self-talk lines to finish typing BEFORE transitioning to Hallway —
+        // otherwise the camera cuts back to HallCam mid-line, leaving the text playing in
+        // the screen-space temp object over the wrong camera shot.
+        yield return new WaitUntil(() => (!hallwaySelfTalk.draftLinesActive));
+
         //full respawn, ready for hallway walk
         PhaseManager.Instance.TransitionTo(GamePhase.Hallway);
         thoughtSpawner.SpawnButtons();
-        yield return new WaitUntil(() => (!hallwaySelfTalk.draftLinesActive));
         gameProgression.SetLoopConditions();
         isDead = false;
         
