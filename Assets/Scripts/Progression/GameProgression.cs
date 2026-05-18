@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -14,10 +15,40 @@ public class GameProgression : MonoBehaviour
     [SerializeField] private Collider2D inConversationTrigger;
     [SerializeField] private AnimationTriggerThoughtBubble animationTriggerThoughtBubble;
     [SerializeField] private DialogueTiming dialogueTiming;
+    [SerializeField] private ReflectSelfTalk reflectSelfTalk;
+    [Header("Loop 1 reflect lines — placeholder for v1, will be replaced by SO-driven content from the Narrative Bible import (task 86b9z5x7z)")]
+    [SerializeField, TextArea(2, 5)] private string[] loop1ReflectLines;
     public LoopSnapshot lastLoop;
 
     private void Start()
     {
+        // Game starts in Reflect phase on loop 1 (per Narrative Bible's loop 1 opening monologue).
+        // Loop 2+ never hit this path — Start() only runs once per scene load.
+        StartCoroutine(StartGameOnReflect());
+    }
+
+    // Initial scene-load entry: play loop 1 reflect lines, then transition into the normal Hallway loop.
+    // Distinct from DeathRespawn's reflect handling (which uses LoopSnapshot-driven branch selection).
+    // Here loop 1 reflect is scripted, not branch-selected, so we use ReflectSelfTalk.PlayLines directly.
+    private IEnumerator StartGameOnReflect()
+    {
+        // Wait one frame so every other component's Start() has completed —
+        // otherwise AnimationTriggerThoughtBubble.thoughtBubbleAnimator (assigned in its Start)
+        // and ReflectDraftCameraController's PhaseManager subscription (also in Start) can race
+        // against this coroutine firing too early.
+        yield return null;
+
+        // Transition to Reflect — fires OnPhaseChanged so the camera controller cuts to DraftScreenCam
+        // and other phase-aware systems init correctly.
+        PhaseManager.Instance.TransitionTo(GamePhase.Reflect);
+
+        // Play the scripted loop 1 reflect lines using the same PlayLines overload that milestones use.
+        // Bypasses branch selection (no LoopSnapshot needed on game start — no prior loop exists).
+        if (loop1ReflectLines != null && loop1ReflectLines.Length > 0)
+            yield return reflectSelfTalk.PlayLines(loop1ReflectLines);
+
+        // Now transition to Hallway and run the normal loop setup (BasicLoop + FirstLoopActive).
+        PhaseManager.Instance.TransitionTo(GamePhase.Hallway);
         SetLoopConditions();
     }
 
