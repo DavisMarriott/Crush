@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec9a774f1c3f94c5ab3b77c67ac7f734, type: 3}
+  m_Name: LoopReflect_05
+  m_EditorClassIdentifier: Assembly-CSharp::ReflectBranch
+  lines:
+  - Man - I am never going to get used to dying.
+  - But okay - I'm in a loop.
+  - Is the universe helping me out?? Do I need to ask her to the dance to escape
+    this loop?!?
+  - But how???
+  - Maybe if my confidence is high enough, I'll be able to get it out.
+  - "Just need to figure out the right things to say\u2026."
+  - This loop is just the universe's way of giving me practice runs. And when Daisy
+    says yes to the dance, I'm free. Maybe.
+  - I just need to build up my confidence enough to survive the drain of asking her
+    to the dance.
+  commitLines: []
+  isScripted: 1
+  minLoop: 5
+  maxLoop: 5
+  minFinalConfidence: 0
+  maxFinalConfidence: 999
+  minPeakConfidence: 0
+  maxPeakConfidence: 999
+  minFinalCharm: 0
+  maxFinalCharm: 999
+  minPeakCharm: 0
+  maxPeakCharm: 999
+  requiresDeathCard: {fileID: 0}
+  requiresDeathFromCharm: 0
+  requiresCardsPlayed: []
+  requiresCardsUnplayed: []

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec9a774f1c3f94c5ab3b77c67ac7f734, type: 3}
+  m_Name: LoopReflect_01
+  m_EditorClassIdentifier: Assembly-CSharp::ReflectBranch
+  lines:
+  - Okay, Luke. It's now or never.
+  - She's right there. You're gonna ask Daisy to the homecoming dance.
+  - And if you don't ask her this passing period, Brett Kissenger is gonna ask her
+    and they'll get married and you'll die alone.
+  commitLines:
+  - There's only 3 minutes left in passing period.
+  - Deep Breath.
+  - You can do this.
+  isScripted: 1
+  minLoop: 1
+  maxLoop: 1
+  minFinalConfidence: 0
+  maxFinalConfidence: 999
+  minPeakConfidence: 0
+  maxPeakConfidence: 999
+  minFinalCharm: 0
+  maxFinalCharm: 999
+  minPeakCharm: 0
+  maxPeakCharm: 999
+  requiresDeathCard: {fileID: 0}
+  requiresDeathFromCharm: 0
+  requiresCardsPlayed: []
+  requiresCardsUnplayed: []

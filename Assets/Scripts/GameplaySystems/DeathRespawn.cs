@@ -101,14 +101,42 @@ public class DeathRespawn : MonoBehaviour
         deckManager.ResetDeck();
         confidenceState.peakConfidence = 0;
         charmState.peakCharm = 0;
-        // Check for a milestone hit this loop; if one fired, play its custom reflect line
-        // (replacing the standard ReflectBranch line) and apply its character upgrade if any.
+        // Reflect priority (per design 2026-05-19):
+        //   1. Scripted loop branch (isScripted == true, loop-matched)  — the narrative spine, always wins
+        //   2. Milestone override                                       — replaces conditional fallback
+        //   3. Conditional / legacy ReflectBranch                       — picked by Play()'s SelectBranch
+        // TODO (future task): scripted-vs-milestone overlap. When both match the same loop today,
+        // the milestone's reflect lines are SKIPPED but the upgrade still applies + marks complete.
+        // Davis flagged this for the first 4–5 loops (narrative intro) — we need both to play somehow.
+        // Probably: chain them (scripted then milestone, or vice-versa), or queue the milestone for
+        // the next non-scripted loop. Follow-up to the reflect import work.
+        ReflectBranch scriptedBranch = reflectSelfTalk.FindScriptedBranchForLoop(gameProgression.loopCount);
         Milestone triggeredMilestone = milestoneTracker != null
             ? milestoneTracker.GetTriggeredMilestone(gameProgression.lastLoop, gameProgression.loopCount)
             : null;
 
-        if (triggeredMilestone != null)
+        if (scriptedBranch != null)
         {
+            // Scripted wins. Play its lines.
+            yield return reflectSelfTalk.PlayLines(scriptedBranch.lines);
+
+            // Milestone overlap fallback — still apply the upgrade + mark complete so progression
+            // doesn't break, even though the milestone's reflect lines didn't play this loop.
+            if (triggeredMilestone != null)
+            {
+                Debug.Log($"[Reflect] Scripted (loop {gameProgression.loopCount}) overrode milestone '{triggeredMilestone.milestoneName}' reflect lines. Upgrade still applied — see TODO in DeathRespawn for overlap design.");
+                if (triggeredMilestone.characterUpgrade != null)
+                {
+                    milestoneTracker.ApplyCharacterUpgrade(triggeredMilestone.characterUpgrade);
+                    confidenceState.confidence = confidenceState.startingConfidence;
+                    deckManager.ResetDeck();
+                }
+                milestoneTracker.MarkComplete(triggeredMilestone);
+            }
+        }
+        else if (triggeredMilestone != null)
+        {
+            // No scripted match — milestone wins over the conditional fallback.
             yield return reflectSelfTalk.PlayLines(triggeredMilestone.reflectLines);
             if (triggeredMilestone.characterUpgrade != null)
             {
@@ -122,6 +150,7 @@ public class DeathRespawn : MonoBehaviour
         }
         else
         {
+            // No scripted, no milestone — fall back to conditional / legacy branch selection.
             yield return reflectSelfTalk.Play(gameProgression.lastLoop, gameProgression.loopCount);
         }
         
@@ -136,6 +165,12 @@ public class DeathRespawn : MonoBehaviour
         // otherwise the camera cuts back to HallCam mid-line, leaving the text playing in
         // the screen-space temp object over the wrong camera shot.
         yield return new WaitUntil(() => (!hallwaySelfTalk.draftLinesActive));
+
+        // Commit lines — the loop's final hype-up before committing to the hallway approach
+        // (the locker-close beat). Plays AFTER the draft phase, while the camera is still on the
+        // reflect/draft close-up, then we cut to Hallway. Flow: reflect → draft → commit → hallway.
+        if (scriptedBranch != null && scriptedBranch.commitLines != null && scriptedBranch.commitLines.Length > 0)
+            yield return reflectSelfTalk.PlayLines(scriptedBranch.commitLines);
 
         //full respawn, ready for hallway walk
         PhaseManager.Instance.TransitionTo(GamePhase.Hallway);

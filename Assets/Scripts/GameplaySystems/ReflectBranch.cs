@@ -6,6 +6,14 @@ public class ReflectBranch : ScriptableObject
     [TextArea(2, 5)]
     public string[] lines;
 
+    [Header("Commit lines — final hype-up before the hallway approach (locker-close beat). Plays after draft, before hallway. Per-loop scripted, usually 1-2 lines.")]
+    [TextArea(1, 3)]
+    public string[] commitLines;
+
+    [Header("Scripted (loop-keyed) vs. conditional")]
+    [Tooltip("True for the per-loop scripted reflects (LoopReflect_01..05). The importer sets this on Loop tabs. Scripted branches take priority over milestones and conditional branches in DeathRespawn — they're the narrative spine.")]
+    public bool isScripted = false;
+
     [Header("Loop range (inclusive)")]
     public int minLoop = 0;
     public int maxLoop = 999;

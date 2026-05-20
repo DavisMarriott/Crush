@@ -23,6 +23,25 @@ public class ReflectSelfTalk : MonoBehaviour
         yield return PlayLines(chosen.lines);
     }
 
+    /// <summary>
+    /// Find a scripted (loop-keyed) reflect branch matching the given loop number.
+    /// Used by DeathRespawn to prioritize the narrative-spine scripted reflects
+    /// over milestone overrides and conditional branches.
+    /// Returns null if no scripted branch matches this loop.
+    /// </summary>
+    public ReflectBranch FindScriptedBranchForLoop(int loopCount)
+    {
+        if (branches == null) return null;
+        foreach (var branch in branches)
+        {
+            if (branch == null) continue;
+            if (!branch.isScripted) continue;
+            if (loopCount < branch.minLoop || loopCount > branch.maxLoop) continue;
+            return branch;
+        }
+        return null;
+    }
+
     // Plays a fixed set of lines without branch selection.
     // Used for milestone reflects that bring their own line set.
     public IEnumerator PlayLines(string[] lines)

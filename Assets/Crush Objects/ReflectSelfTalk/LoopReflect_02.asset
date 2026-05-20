@@ -10,17 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec9a774f1c3f94c5ab3b77c67ac7f734, type: 3}
-  m_Name: DiedLookNice
+  m_Name: LoopReflect_02
   m_EditorClassIdentifier: Assembly-CSharp::ReflectBranch
   lines:
-  - OMG OMG OMG
-  - Why did I say that?!
-  - You can't just tell a girl she's hot
-  - I was trying to say she looks nice
-  - I was too nervous.....
-  - I should wait I'm more confident before I say that agian...
-  minLoop: 0
-  maxLoop: 999
+  - That was a crazy daydream.
+  - What were you thinking??
+  - You can't just ask her to the dance. You have to actually TALK to her.
+  - Okay - I just need a few things to say to her.
+  commitLines:
+  - You're still a man.
+  - A man with a plan.
+  isScripted: 1
+  minLoop: 2
+  maxLoop: 2
   minFinalConfidence: 0
   maxFinalConfidence: 999
   minPeakConfidence: 0
@@ -29,7 +31,7 @@ MonoBehaviour:
   maxFinalCharm: 999
   minPeakCharm: 0
   maxPeakCharm: 999
-  requiresDeathCard: {fileID: 11400000, guid: c319d7ce095094a2382de3ea28c03f8a, type: 2}
+  requiresDeathCard: {fileID: 0}
   requiresDeathFromCharm: 0
   requiresCardsPlayed: []
   requiresCardsUnplayed: []

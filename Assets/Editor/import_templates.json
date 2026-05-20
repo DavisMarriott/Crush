@@ -1,0 +1,44 @@
+{
+  "_meta": {
+    "purpose": "Template patterns for normalizing writer-friendly Trigger: lines into parser-readable canonical form. Consumed by (1) the Cowork normalizer, which rewrites doc text to match a template phrasing, and (2) the Unity Editor importer, which parses canonical text into engine fields.",
+    "version": 1,
+    "field_substitution": "Template strings use {Name} placeholders (e.g. {N}, {Tag}). Regex capture groups feed back via $1/$2/... references in the `fields` map.",
+    "regex_anchoring": "All regex patterns are implicitly anchored ^...$. Comparisons are case-sensitive."
+  },
+  "milestone_conditions": [
+    {
+      "type": "PeakConfidenceReached",
+      "template": "Peak confidence reaches {N}",
+      "regex": "^Peak confidence reaches (\\d+)$",
+      "fields": {
+        "threshold": "$1"
+      }
+    },
+    {
+      "type": "PeakCharmReached",
+      "template": "Peak charm reaches {N}",
+      "regex": "^Peak charm reaches (\\d+)$",
+      "fields": {
+        "threshold": "$1"
+      }
+    },
+    {
+      "type": "CardsPlayedInLoopAtLeast",
+      "template": "Plays {N} or more cards in a loop",
+      "regex": "^Plays (\\d+) or more cards in a loop$",
+      "fields": {
+        "threshold": "$1"
+      }
+    },
+    {
+      "type": "DialogueTagFired",
+      "template": "{Tag} tag fires",
+      "regex": "^(Funny|Mean|Charming|Passions) tag fires$",
+      "fields": {
+        "tag": "$1",
+        "threshold": "1"
+      },
+      "notes": "v1 supports 'fires at least once' semantics only. To allow explicit count thresholds (e.g. 'Funny tag fires 3 times'), add a second template entry with type DialogueTagFired and the appropriate regex/fields."
+    }
+  ]
+}

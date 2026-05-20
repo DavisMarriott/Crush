@@ -16,9 +16,15 @@ public class GameProgression : MonoBehaviour
     [SerializeField] private AnimationTriggerThoughtBubble animationTriggerThoughtBubble;
     [SerializeField] private DialogueTiming dialogueTiming;
     [SerializeField] private ReflectSelfTalk reflectSelfTalk;
-    [Header("Loop 1 reflect lines — placeholder for v1, will be replaced by SO-driven content from the Narrative Bible import (task 86b9z5x7z)")]
-    [SerializeField, TextArea(2, 5)] private string[] loop1ReflectLines;
+    [Header("Loop 1 reflect — populated by the doc importer (ReflectImporter creates/updates LoopReflect_01.asset and auto-wires it here).")]
+    [SerializeField] private ReflectBranch loop1ReflectBranch;
+    public ReflectBranch Loop1ReflectBranch { get { return loop1ReflectBranch; } set { loop1ReflectBranch = value; } }
     public LoopSnapshot lastLoop;
+
+    // Tracks how many triggers (counting from 1 upward) have had their drain removed
+    // by the RemoveApproachTriggerDrain character upgrade. e.g. 2 = triggers 1 and 2 skip drain.
+    // Persists across loops within a run (set once by MilestoneTracker, never reset).
+    private int approachDrainDisabledCount;
 
     private void Start()
     {
@@ -44,8 +50,13 @@ public class GameProgression : MonoBehaviour
 
         // Play the scripted loop 1 reflect lines using the same PlayLines overload that milestones use.
         // Bypasses branch selection (no LoopSnapshot needed on game start — no prior loop exists).
-        if (loop1ReflectLines != null && loop1ReflectLines.Length > 0)
-            yield return reflectSelfTalk.PlayLines(loop1ReflectLines);
+        if (loop1ReflectBranch != null && loop1ReflectBranch.lines != null && loop1ReflectBranch.lines.Length > 0)
+            yield return reflectSelfTalk.PlayLines(loop1ReflectBranch.lines);
+
+        // Commit lines — final hype-up before committing to the hallway approach (locker-close beat).
+        // Loop 1 has no draft phase, so this plays right after reflect. Flow: reflect → commit → hallway.
+        if (loop1ReflectBranch != null && loop1ReflectBranch.commitLines != null && loop1ReflectBranch.commitLines.Length > 0)
+            yield return reflectSelfTalk.PlayLines(loop1ReflectBranch.commitLines);
 
         // Now transition to Hallway and run the normal loop setup (BasicLoop + FirstLoopActive).
         PhaseManager.Instance.TransitionTo(GamePhase.Hallway);
@@ -55,12 +66,11 @@ public class GameProgression : MonoBehaviour
     public void SetLoopConditions()
     {
         BasicLoop();
-        
-        if (loopCount == 1)
-        {
-   
-            FirstLoopActive();
-        }
+
+        // Hallway triggers (drain + self-talk) now fire on every loop.
+        // The firstLoopManagerObject holds the trigger GameObjects + FirstLoopManager line data.
+        // (Name is legacy from when this was first-loop-only.)
+        firstLoopManagerObject.SetActive(true);
     }
     
     public void NextLoop()
@@ -71,7 +81,7 @@ public class GameProgression : MonoBehaviour
     //turns off all special loop conditions
     private void BasicLoop()
     {
-        hallwaySelfTalk.enabled = true;
+        hallwaySelfTalk.enabled = false; // timer system on ice — triggers handle hallway beats now
         inConversationTrigger.enabled = true;
         confidenceState.inConversation = false;
         // (removed redundant EndHallwayTimer() — HallwaySelfTalk's OnEnable / OnDisable /
@@ -87,21 +97,43 @@ public class GameProgression : MonoBehaviour
         firstLoopManagerObject.SetActive(true);
     }
     
-    public void HallwayTriggerHit(int  triggerIndex)
+    /// <summary>
+    /// Called by MilestoneTracker when the RemoveApproachTriggerDrain upgrade is applied.
+    /// Disables drain for the first N triggers (e.g. count=2 disables triggers 1 and 2).
+    /// </summary>
+    public void DisableApproachDrain(int count)
     {
-        // Bring the thought bubble to Full so the first-loop trigger line is visible
+        approachDrainDisabledCount = count;
+    }
+
+    public void HallwayTriggerHit(int triggerIndex)
+    {
+        // Bring the thought bubble to Full so the trigger line is visible
         animationTriggerThoughtBubble.ThoughtBubbleOn();
 
+        // Per-loop priority: if this loop has a scripted LoopHallway, fire its line for this
+        // trigger zone. Otherwise it's a "base loop" — pull a random line from the generic pool.
+        // (Replaces the old timer-driven random self-talk; same "no script → random line" behavior.)
         string line = null;
-        if (triggerIndex == 1) line = firstLoopManager.firstLoopHallwayLines[0];
-        else if (triggerIndex == 2) line = firstLoopManager.firstLoopHallwayLines[1];
-        else if (triggerIndex == 3) line = firstLoopManager.firstLoopHallwayLines[2];
+        LoopHallway loopHallway = firstLoopManager.GetForLoop(loopCount);
+        if (loopHallway != null && loopHallway.triggerLines != null
+            && triggerIndex >= 1 && triggerIndex <= loopHallway.triggerLines.Length)
+        {
+            line = loopHallway.triggerLines[triggerIndex - 1];
+        }
+        else if (firstLoopManager.genericPool != null)
+        {
+            line = firstLoopManager.genericPool.GetRandomLine();
+        }
 
         if (line != null)
         {
-            // Use the same typing effect as conversation/draft/reflect phases
             dialogueTiming.Run(line, selfTalkText);
-            confidenceState.confidence -= 1;
+
+            // Only drain if this trigger hasn't been disabled by the upgrade.
+            // approachDrainDisabledCount of 2 means triggers 1 and 2 skip drain.
+            if (triggerIndex > approachDrainDisabledCount)
+                confidenceState.confidence -= 1;
         }
     }
 

@@ -4,6 +4,7 @@ public enum CharacterUpgradeEffect
 {
     IncreaseStartingConfidence,
     IncreaseStartingHandSize,
+    RemoveApproachTriggerDrain,
 }
 
 [CreateAssetMenu(menuName = "Crush/Character Upgrade")]

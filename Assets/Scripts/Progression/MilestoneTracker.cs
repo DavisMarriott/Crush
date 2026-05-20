@@ -6,6 +6,7 @@ public class MilestoneTracker : MonoBehaviour
     [SerializeField] private Milestone[] milestones;
     [SerializeField] private ConfidenceState confidenceState;
     [SerializeField] private DeckManager deckManager;
+    [SerializeField] private GameProgression gameProgression;
     [SerializeField] private UpgradeBanner upgradeBanner;
 
     private HashSet<Milestone> completed = new HashSet<Milestone>();
@@ -49,6 +50,11 @@ public class MilestoneTracker : MonoBehaviour
                 break;
             case CharacterUpgradeEffect.IncreaseStartingHandSize:
                 deckManager.startingHandSize += upgrade.intValue;
+                break;
+            case CharacterUpgradeEffect.RemoveApproachTriggerDrain:
+                // intValue = how many triggers to disable, counting from trigger 1 upward.
+                // e.g. intValue 2 disables triggers 1 and 2, leaving trigger 3 active.
+                gameProgression.DisableApproachDrain(upgrade.intValue);
                 break;
         }
 
