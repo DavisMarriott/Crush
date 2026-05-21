@@ -1,0 +1,2095 @@
+fileFormatVersion: 2
+guid: f8855c6bc6d2f4a3a934239dd3c25175
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6526215534322891823
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_0
+  - first:
+      213: 1951004875533161462
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_1
+  - first:
+      213: -2728263916882034541
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_2
+  - first:
+      213: 6675147564019130462
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_3
+  - first:
+      213: -2406291988406105365
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_4
+  - first:
+      213: 2588783066458458429
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_5
+  - first:
+      213: 3836755642844855172
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_6
+  - first:
+      213: 2310974287375758835
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_7
+  - first:
+      213: 1466824068505489296
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_8
+  - first:
+      213: 609264428972105193
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_9
+  - first:
+      213: 8833745656242279271
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_10
+  - first:
+      213: -2502622745187883154
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_11
+  - first:
+      213: 5038500841831769864
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_12
+  - first:
+      213: -3975550979598242008
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_13
+  - first:
+      213: 2539385049917001665
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_14
+  - first:
+      213: -555873156406607138
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_15
+  - first:
+      213: 2882787766750173377
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_16
+  - first:
+      213: -2189933223552695334
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_17
+  - first:
+      213: -2606872865360573415
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_18
+  - first:
+      213: -4257934364105936102
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_19
+  - first:
+      213: 2551697233400167205
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_20
+  - first:
+      213: 292799870934021555
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_21
+  - first:
+      213: 6035084615532859242
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_22
+  - first:
+      213: 2784179444669833377
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_23
+  - first:
+      213: -5562096026500611402
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_24
+  - first:
+      213: -7125979093350868278
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_25
+  - first:
+      213: 5936255150931695224
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_26
+  - first:
+      213: 6572069479235598967
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_27
+  - first:
+      213: -6255348445407293848
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_28
+  - first:
+      213: -146723190691146241
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_29
+  - first:
+      213: -9126902386518687526
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_30
+  - first:
+      213: -8519214525953618180
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_31
+  - first:
+      213: -5199143502818936322
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_32
+  - first:
+      213: 8047951224508659546
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_33
+  - first:
+      213: 1993516150995512281
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_34
+  - first:
+      213: 8389266238298597019
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_35
+  - first:
+      213: 457928021780680057
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_36
+  - first:
+      213: -3676176750638145999
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_37
+  - first:
+      213: -2506787690493973771
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_38
+  - first:
+      213: 8359296840671292168
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_39
+  - first:
+      213: -5088014731300804658
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_40
+  - first:
+      213: 1744507084109402621
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_41
+  - first:
+      213: 2226577331576412538
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_42
+  - first:
+      213: -5084895989014476552
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_43
+  - first:
+      213: 6654577759071854885
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_44
+  - first:
+      213: 5582013569064516941
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_45
+  - first:
+      213: -1266926099926482324
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_46
+  - first:
+      213: -7197697288056825392
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_47
+  - first:
+      213: -3340785073286020332
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_48
+  - first:
+      213: 544319497439723895
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_49
+  - first:
+      213: -90829493354990540
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_50
+  - first:
+      213: -643823696457805390
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_51
+  - first:
+      213: -3746719190659793557
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_52
+  - first:
+      213: 57361587727229737
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_53
+  - first:
+      213: 7437690387347406726
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_54
+  - first:
+      213: -7544796474936678889
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_55
+  - first:
+      213: -2408560537594097114
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_56
+  - first:
+      213: 4420161474190303242
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_57
+  - first:
+      213: -1146994920160364575
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_58
+  - first:
+      213: -7917253255703121133
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_59
+  - first:
+      213: -1947545736260495128
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_60
+  - first:
+      213: -4207222184953966119
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_61
+  - first:
+      213: -5690299020049514891
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_62
+  - first:
+      213: 2025534675313806371
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_63
+  - first:
+      213: 759406923474970883
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_64
+  - first:
+      213: -6110186363448465210
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_65
+  - first:
+      213: -1071161475030594809
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_66
+  - first:
+      213: 5499703190060583828
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_67
+  - first:
+      213: -6495530795773485308
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_68
+  - first:
+      213: -3800537167143123062
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_69
+  - first:
+      213: 6779196052318879143
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_70
+  - first:
+      213: 2044620177067098989
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_71
+  - first:
+      213: -5542547112838956433
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_72
+  - first:
+      213: -8966455801956876250
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_73
+  - first:
+      213: 2377011523597472758
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_74
+  - first:
+      213: -6300299591941507066
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_75
+  - first:
+      213: -4208814729766017274
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_76
+  - first:
+      213: -5020123545730682978
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_77
+  - first:
+      213: 9220670862779718204
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_78
+  - first:
+      213: 8373626967127799378
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_79
+  - first:
+      213: 895298707673922583
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_80
+  - first:
+      213: 1692849415860587445
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_81
+  - first:
+      213: 7892510233439828293
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_82
+  - first:
+      213: 729495485102752763
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_83
+  - first:
+      213: -8072123972856914214
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_84
+  - first:
+      213: -592561119177910777
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_85
+  - first:
+      213: 8915326352267419868
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_86
+  - first:
+      213: -2583679157234378895
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_87
+  - first:
+      213: 3632959270845937784
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_88
+  - first:
+      213: 5407758660620686882
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_89
+  - first:
+      213: -4434723608387581142
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_90
+  - first:
+      213: 6180961736763897684
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_91
+  - first:
+      213: -2185025258460313369
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_92
+  - first:
+      213: -1499280589599909406
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_93
+  - first:
+      213: 8818068370809968812
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_94
+  - first:
+      213: 7132323599545652260
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_95
+  - first:
+      213: -8906483892321848867
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_96
+  - first:
+      213: 7869808263261647765
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_97
+  - first:
+      213: -2512807269411960611
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_98
+  - first:
+      213: 1313482184237526203
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_99
+  - first:
+      213: -4082937696031647507
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_100
+  - first:
+      213: 8012633605675370891
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_101
+  - first:
+      213: 8756385199181593438
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_102
+  - first:
+      213: -6377776423442905258
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_103
+  - first:
+      213: -3700311947074644162
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_104
+  - first:
+      213: -1511550278953377622
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_105
+  - first:
+      213: -609434052514041965
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_106
+  - first:
+      213: -2350977999948018325
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_107
+  - first:
+      213: 6607504265494797467
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_108
+  - first:
+      213: 1820661203783358549
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_109
+  - first:
+      213: 3703057665114415741
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_110
+  - first:
+      213: 8344709146211755117
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_111
+  - first:
+      213: 873980651811225003
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_112
+  - first:
+      213: 2885491727108322648
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_113
+  - first:
+      213: 3952896691645117865
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_114
+  - first:
+      213: -2792755725051428660
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_115
+  - first:
+      213: 6518678537318517724
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_116
+  - first:
+      213: -2744099366478058973
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_117
+  - first:
+      213: -3863881628149639695
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_118
+  - first:
+      213: 625573843313021210
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_119
+  - first:
+      213: 7497786772098415606
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_120
+  - first:
+      213: 2446173382548454921
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_121
+  - first:
+      213: 5337600514669100040
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_122
+  - first:
+      213: 8995007059967621243
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_123
+  - first:
+      213: 546380243843558007
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_124
+  - first:
+      213: -977561876742429556
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_125
+  - first:
+      213: 108583094998218471
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_126
+  - first:
+      213: 1085582896276800093
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_127
+  - first:
+      213: -4625844301047426518
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_128
+  - first:
+      213: -4967983251052239731
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_129
+  - first:
+      213: -3151035357097358842
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_130
+  - first:
+      213: 7219913413738868262
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_131
+  - first:
+      213: 7833059633580703379
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_132
+  - first:
+      213: -1987924425041326879
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_133
+  - first:
+      213: -454442714830670374
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_134
+  - first:
+      213: -1465146662824349809
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_135
+  - first:
+      213: 4762290256964464497
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_136
+  - first:
+      213: 3490643915559988366
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_137
+  - first:
+      213: -4214174479045341008
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_138
+  - first:
+      213: -6247589395247399438
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_139
+  - first:
+      213: 2505978674848020925
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_140
+  - first:
+      213: 3125556744745121226
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_141
+  - first:
+      213: 550112315618264256
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_142
+  - first:
+      213: -6482903458207545873
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_143
+  - first:
+      213: 3860060107281008361
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_144
+  - first:
+      213: 7221113915885957092
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_145
+  - first:
+      213: -3627218306235997916
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_146
+  - first:
+      213: -103993778478083195
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_147
+  - first:
+      213: 4698237664637495261
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_148
+  - first:
+      213: -9175504283972791854
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_149
+  - first:
+      213: -1520054441085254067
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_150
+  - first:
+      213: 5322925328035943900
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_151
+  - first:
+      213: 3640961095372836660
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_152
+  - first:
+      213: 3683592796946039936
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_153
+  - first:
+      213: -5340057669585851669
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_154
+  - first:
+      213: -7586266702518880369
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_155
+  - first:
+      213: 5959798502867705206
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_156
+  - first:
+      213: 201956778548702575
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_157
+  - first:
+      213: 2512735807337232815
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_158
+  - first:
+      213: -8342639806704504179
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_159
+  - first:
+      213: 4996431488202347187
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_160
+  - first:
+      213: -7524848031254655917
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_161
+  - first:
+      213: -4973679267642331893
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_162
+  - first:
+      213: 3351875587543605977
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_163
+  - first:
+      213: 6910708147285430464
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_164
+  - first:
+      213: -6233581021288250763
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_165
+  - first:
+      213: 5856271815739361480
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_166
+  - first:
+      213: 627172346456563473
+    second: Spritesheet_UI_ThoughtBubble_Draft-default_167
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7168
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2cb3fa7376c19a50800000000000000
+      internalID: 6526215534322891823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 7168
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f39531f89c531b10800000000000000
+      internalID: 1951004875533161462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 7168
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3900bbc2c62432ad0800000000000000
+      internalID: -2728263916882034541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 7168
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e50aca0d753e2ac50800000000000000
+      internalID: 6675147564019130462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_4
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 7168
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bea8f258f222b9ed0800000000000000
+      internalID: -2406291988406105365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_5
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 7168
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d398dc4ab743de320800000000000000
+      internalID: 2588783066458458429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_6
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 7168
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48b3ebddde4ee3530800000000000000
+      internalID: 3836755642844855172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_7
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 7168
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f5f71cceda321020800000000000000
+      internalID: 2310974287375758835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6144
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f434ff7b43b5410800000000000000
+      internalID: 1466824068505489296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_9
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 6144
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9edd92725ca847800800000000000000
+      internalID: 609264428972105193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_10
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 6144
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76398740fd4c79a70800000000000000
+      internalID: 8833745656242279271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_11
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 6144
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e67634a6fd5e44dd0800000000000000
+      internalID: -2502622745187883154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_12
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 6144
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807a3ed02d95ce540800000000000000
+      internalID: 5038500841831769864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_13
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 6144
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82f279a827104d8c0800000000000000
+      internalID: -3975550979598242008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_14
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 6144
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cf8d38af35bd3320800000000000000
+      internalID: 2539385049917001665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_15
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 6144
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed285343f442948f0800000000000000
+      internalID: -555873156406607138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5120
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c85cff3338b10820800000000000000
+      internalID: 2882787766750173377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_17
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 5120
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad3c050065bcb91e0800000000000000
+      internalID: -2189933223552695334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_18
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 5120
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c0495d0f682dbd0800000000000000
+      internalID: -2606872865360573415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_19
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 5120
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a13798e5147c8e4c0800000000000000
+      internalID: -4257934364105936102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_20
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 5120
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52bf9234d13796320800000000000000
+      internalID: 2551697233400167205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_21
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 5120
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b57d496eeb301400800000000000000
+      internalID: 292799870934021555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_22
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 5120
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6fc24a8b7de0c350800000000000000
+      internalID: 6035084615532859242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_23
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 5120
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a06d76247463a620800000000000000
+      internalID: 2784179444669833377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4096
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b2c1d512277fc2b0800000000000000
+      internalID: -5562096026500611402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_25
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 4096
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca16f705cf6b1d90800000000000000
+      internalID: -7125979093350868278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_26
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 4096
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 876dd5fab90d16250800000000000000
+      internalID: 5936255150931695224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_27
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 4096
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77a360dfe5ea43b50800000000000000
+      internalID: 6572069479235598967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_28
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 4096
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86ec43d2bb98039a0800000000000000
+      internalID: -6255348445407293848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_29
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 4096
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff5da82190cb6fdf0800000000000000
+      internalID: -146723190691146241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_30
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 4096
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad083e7c2aab65180800000000000000
+      internalID: -9126902386518687526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_31
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 4096
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfecf2f768ba5c980800000000000000
+      internalID: -8519214525953618180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef9723ac78ee8d7b0800000000000000
+      internalID: -5199143502818936322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_33
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a573282bff010bf60800000000000000
+      internalID: 8047951224508659546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_34
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9db671290646aab10800000000000000
+      internalID: 1993516150995512281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_35
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9627fb0239ac6470800000000000000
+      internalID: 8389266238298597019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_36
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d4fee0c13ea5600800000000000000
+      internalID: 457928021780680057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_37
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13ed9a6f8b89bfcc0800000000000000
+      internalID: -3676176750638145999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_38
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fae8c480e9163dd0800000000000000
+      internalID: -2506787690493973771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_39
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80be148ef20320470800000000000000
+      internalID: 8359296840671292168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec76cd03f8db369b0800000000000000
+      internalID: -5088014731300804658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_41
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df15e7043fbb53810800000000000000
+      internalID: 1744507084109402621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_42
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a799c81494466ee10800000000000000
+      internalID: 2226577331576412538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_43
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f8cbf6f902de69b0800000000000000
+      internalID: -5084895989014476552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_44
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52161b3e63fc95c50800000000000000
+      internalID: 6654577759071854885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_45
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4d308b24cb477d40800000000000000
+      internalID: 5582013569064516941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_46
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c620631bc69fa6ee0800000000000000
+      internalID: -1266926099926482324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_47
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d994989374ac1c90800000000000000
+      internalID: -7197697288056825392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4130cd31da523a1d0800000000000000
+      internalID: -3340785073286020332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_49
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 771c631f2bfcd8700800000000000000
+      internalID: 544319497439723895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_50
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43472799e0f4dbef0800000000000000
+      internalID: -90829493354990540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_51
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b157aa52cda017f0800000000000000
+      internalID: -643823696457805390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_52
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6d759f3fbaf00cc0800000000000000
+      internalID: -3746719190659793557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_53
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 923eb346f0acbc000800000000000000
+      internalID: 57361587727229737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_54
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68ffd2f200cf73760800000000000000
+      internalID: 7437690387347406726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_55
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 716a7c0849f7b4790800000000000000
+      internalID: -7544796474936678889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6221ea0c3f2139ed0800000000000000
+      internalID: -2408560537594097114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_57
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a00eaf61171975d30800000000000000
+      internalID: 4420161474190303242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_58
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e7f9a8723e0510f0800000000000000
+      internalID: -1146994920160364575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_59
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 313b2018c14402290800000000000000
+      internalID: -7917253255703121133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_60
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e8dd5ea87de8f4e0800000000000000
+      internalID: -1947545736260495128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_61
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d11daea6b1fc95c0800000000000000
+      internalID: -4207222184953966119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_62
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57ef134903ff701b0800000000000000
+      internalID: -5690299020049514891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_UI_ThoughtBubble_Draft-default_63
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32cc0523e052c1c10800000000000000
+      internalID: 2025534675313806371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 35b2b04951b8c46e8b154a0ca7b4fb08
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1024.0,"y":1024.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":true,"isAlternate":false}'
+    nameFileIdTable:
+      Spritesheet_UI_ThoughtBubble_Draft-default_0: 6526215534322891823
+      Spritesheet_UI_ThoughtBubble_Draft-default_1: 1951004875533161462
+      Spritesheet_UI_ThoughtBubble_Draft-default_10: 8833745656242279271
+      Spritesheet_UI_ThoughtBubble_Draft-default_11: -2502622745187883154
+      Spritesheet_UI_ThoughtBubble_Draft-default_12: 5038500841831769864
+      Spritesheet_UI_ThoughtBubble_Draft-default_13: -3975550979598242008
+      Spritesheet_UI_ThoughtBubble_Draft-default_14: 2539385049917001665
+      Spritesheet_UI_ThoughtBubble_Draft-default_15: -555873156406607138
+      Spritesheet_UI_ThoughtBubble_Draft-default_16: 2882787766750173377
+      Spritesheet_UI_ThoughtBubble_Draft-default_17: -2189933223552695334
+      Spritesheet_UI_ThoughtBubble_Draft-default_18: -2606872865360573415
+      Spritesheet_UI_ThoughtBubble_Draft-default_19: -4257934364105936102
+      Spritesheet_UI_ThoughtBubble_Draft-default_2: -2728263916882034541
+      Spritesheet_UI_ThoughtBubble_Draft-default_20: 2551697233400167205
+      Spritesheet_UI_ThoughtBubble_Draft-default_21: 292799870934021555
+      Spritesheet_UI_ThoughtBubble_Draft-default_22: 6035084615532859242
+      Spritesheet_UI_ThoughtBubble_Draft-default_23: 2784179444669833377
+      Spritesheet_UI_ThoughtBubble_Draft-default_24: -5562096026500611402
+      Spritesheet_UI_ThoughtBubble_Draft-default_25: -7125979093350868278
+      Spritesheet_UI_ThoughtBubble_Draft-default_26: 5936255150931695224
+      Spritesheet_UI_ThoughtBubble_Draft-default_27: 6572069479235598967
+      Spritesheet_UI_ThoughtBubble_Draft-default_28: -6255348445407293848
+      Spritesheet_UI_ThoughtBubble_Draft-default_29: -146723190691146241
+      Spritesheet_UI_ThoughtBubble_Draft-default_3: 6675147564019130462
+      Spritesheet_UI_ThoughtBubble_Draft-default_30: -9126902386518687526
+      Spritesheet_UI_ThoughtBubble_Draft-default_31: -8519214525953618180
+      Spritesheet_UI_ThoughtBubble_Draft-default_32: -5199143502818936322
+      Spritesheet_UI_ThoughtBubble_Draft-default_33: 8047951224508659546
+      Spritesheet_UI_ThoughtBubble_Draft-default_34: 1993516150995512281
+      Spritesheet_UI_ThoughtBubble_Draft-default_35: 8389266238298597019
+      Spritesheet_UI_ThoughtBubble_Draft-default_36: 457928021780680057
+      Spritesheet_UI_ThoughtBubble_Draft-default_37: -3676176750638145999
+      Spritesheet_UI_ThoughtBubble_Draft-default_38: -2506787690493973771
+      Spritesheet_UI_ThoughtBubble_Draft-default_39: 8359296840671292168
+      Spritesheet_UI_ThoughtBubble_Draft-default_4: -2406291988406105365
+      Spritesheet_UI_ThoughtBubble_Draft-default_40: -5088014731300804658
+      Spritesheet_UI_ThoughtBubble_Draft-default_41: 1744507084109402621
+      Spritesheet_UI_ThoughtBubble_Draft-default_42: 2226577331576412538
+      Spritesheet_UI_ThoughtBubble_Draft-default_43: -5084895989014476552
+      Spritesheet_UI_ThoughtBubble_Draft-default_44: 6654577759071854885
+      Spritesheet_UI_ThoughtBubble_Draft-default_45: 5582013569064516941
+      Spritesheet_UI_ThoughtBubble_Draft-default_46: -1266926099926482324
+      Spritesheet_UI_ThoughtBubble_Draft-default_47: -7197697288056825392
+      Spritesheet_UI_ThoughtBubble_Draft-default_48: -3340785073286020332
+      Spritesheet_UI_ThoughtBubble_Draft-default_49: 544319497439723895
+      Spritesheet_UI_ThoughtBubble_Draft-default_5: 2588783066458458429
+      Spritesheet_UI_ThoughtBubble_Draft-default_50: -90829493354990540
+      Spritesheet_UI_ThoughtBubble_Draft-default_51: -643823696457805390
+      Spritesheet_UI_ThoughtBubble_Draft-default_52: -3746719190659793557
+      Spritesheet_UI_ThoughtBubble_Draft-default_53: 57361587727229737
+      Spritesheet_UI_ThoughtBubble_Draft-default_54: 7437690387347406726
+      Spritesheet_UI_ThoughtBubble_Draft-default_55: -7544796474936678889
+      Spritesheet_UI_ThoughtBubble_Draft-default_56: -2408560537594097114
+      Spritesheet_UI_ThoughtBubble_Draft-default_57: 4420161474190303242
+      Spritesheet_UI_ThoughtBubble_Draft-default_58: -1146994920160364575
+      Spritesheet_UI_ThoughtBubble_Draft-default_59: -7917253255703121133
+      Spritesheet_UI_ThoughtBubble_Draft-default_6: 3836755642844855172
+      Spritesheet_UI_ThoughtBubble_Draft-default_60: -1947545736260495128
+      Spritesheet_UI_ThoughtBubble_Draft-default_61: -4207222184953966119
+      Spritesheet_UI_ThoughtBubble_Draft-default_62: -5690299020049514891
+      Spritesheet_UI_ThoughtBubble_Draft-default_63: 2025534675313806371
+      Spritesheet_UI_ThoughtBubble_Draft-default_7: 2310974287375758835
+      Spritesheet_UI_ThoughtBubble_Draft-default_8: 1466824068505489296
+      Spritesheet_UI_ThoughtBubble_Draft-default_9: 609264428972105193
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
