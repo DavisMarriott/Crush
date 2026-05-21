@@ -181,29 +181,29 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b25957a85eb6c408e94b5a45ec70c289, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SoundManagerFoley
-  footstep01: {fileID: 0}
-  footstep02: {fileID: 0}
-  footstep03: {fileID: 0}
-  footstep04: {fileID: 0}
-  footstep05: {fileID: 0}
-  footstep06: {fileID: 0}
-  clothing01: {fileID: 0}
-  clothing02: {fileID: 0}
-  clothing03: {fileID: 0}
-  clothing04: {fileID: 0}
-  clothing05: {fileID: 0}
-  clothing06: {fileID: 0}
-  clothing07: {fileID: 0}
-  clothing08: {fileID: 0}
-  clothing09: {fileID: 0}
-  clothing10: {fileID: 0}
-  impact01: {fileID: 0}
-  impact02: {fileID: 0}
-  impact03: {fileID: 0}
-  impact04: {fileID: 0}
-  impact05: {fileID: 0}
-  impact06: {fileID: 0}
+  m_EditorClassIdentifier: '::'
+  footstep01: {fileID: 8300000, guid: 60a4e31bf49784f45b9f5c2e06126cb5, type: 3}
+  footstep02: {fileID: 8300000, guid: 9c843a32b59d842e1a92bbf666269135, type: 3}
+  footstep03: {fileID: 8300000, guid: edbbb5220e66a485781b5971de8848b6, type: 3}
+  footstep04: {fileID: 8300000, guid: f52fe0145159e4b918f7c2edcdc80cd5, type: 3}
+  footstep05: {fileID: 8300000, guid: 485428153d9bf432dbe19ab1c8b6ffb6, type: 3}
+  footstep06: {fileID: 8300000, guid: 30043659b0a214b8e9e258a029ff68c1, type: 3}
+  clothing01: {fileID: 8300000, guid: 949c6f1f5ecac4d71b69c937d250fcb9, type: 3}
+  clothing02: {fileID: 8300000, guid: 67b900aad73444f96b7c0d83761bb406, type: 3}
+  clothing03: {fileID: 8300000, guid: 5622a845cbaac42c1afe1db2f95cd8e4, type: 3}
+  clothing04: {fileID: 8300000, guid: eb2a45a27b55c4defbfca7244e9493fa, type: 3}
+  clothing05: {fileID: 8300000, guid: 8be56064c0eee40b3b44d1d037007bc8, type: 3}
+  clothing06: {fileID: 8300000, guid: 9f2e779ff0ad14180a55123a2b8c1499, type: 3}
+  clothing07: {fileID: 8300000, guid: f04112e0d74e845bd9d4286cf0fd7988, type: 3}
+  clothing08: {fileID: 8300000, guid: 6e9479317c7374930b574ac9627984a5, type: 3}
+  clothing09: {fileID: 8300000, guid: 1824bb81482e14b3fb08223e539ef5ed, type: 3}
+  clothing10: {fileID: 8300000, guid: 71bab8c8e1b634b339af106fe6cf5217, type: 3}
+  impact01: {fileID: 8300000, guid: 6d0bbf6683cd54e2ebcb34f666f99a23, type: 3}
+  impact02: {fileID: 8300000, guid: 6b2a58004e67142c1a7e8fd7a7dc6398, type: 3}
+  impact03: {fileID: 8300000, guid: 6011a3f939e4f4106b191e69acb51ab7, type: 3}
+  impact04: {fileID: 8300000, guid: 71a75b6ab547f4b91be8174cc4b4407b, type: 3}
+  impact05: {fileID: 8300000, guid: 977dc09c063ec4cf68488dc9c2294b2d, type: 3}
+  impact06: {fileID: 8300000, guid: badf47eb5d07a4edcaaccc8783b65d64, type: 3}
   voiceNeutral01: {fileID: 0}
   voiceNeutral02: {fileID: 0}
   voiceNeutral03: {fileID: 0}
@@ -218,11 +218,11 @@ MonoBehaviour:
   voiceNegative02: {fileID: 0}
   voiceNegative03: {fileID: 0}
   voiceNegative04: {fileID: 0}
-  voiceNegative05: {fileID: 0}
-  blink01: {fileID: 0}
-  blink02: {fileID: 0}
-  lockerOpen: {fileID: 0}
-  lockerClose: {fileID: 0}
+  voiceNegative05: {fileID: 8300000, guid: 0269a6532bafc48618c37cbb5f9180a9, type: 3}
+  blink01: {fileID: 8300000, guid: 5123a4ee59ede4d60ab67f02e7d5f90e, type: 3}
+  blink02: {fileID: 8300000, guid: 6d96265ae107f41f484116cd78d96ad8, type: 3}
+  lockerOpen: {fileID: 8300000, guid: 9c20c010948e3466a9cd0333f34e1a3d, type: 3}
+  lockerClose: {fileID: 8300000, guid: 924bf82fe1def4b7895828c3d10c0971, type: 3}
 --- !u!1 &3412941076464463679
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,6 +324,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4012187530177892575}
   - component: {fileID: 900204233942656611}
+  - component: {fileID: 5918267327605081884}
+  - component: {fileID: 6936304237035682389}
+  - component: {fileID: 688225725452901633}
   m_Layer: 0
   m_Name: ThoughtBubble
   m_TagString: Untagged
@@ -369,6 +372,135 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5918267327605081884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4736389911452715891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098558a983c9b49778e64a176f24bcfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationTriggerThoughtBubble
+  thoughtBubble: {fileID: 4736389911452715891}
+  thoughtBubbleAnimator: {fileID: 900204233942656611}
+--- !u!82 &6936304237035682389
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4736389911452715891}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &688225725452901633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4736389911452715891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce028075a60fe4531bfecea78f8ea719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundManager
+  soundEffect1: {fileID: 8300000, guid: a60edc9a05ff142edb2fa779356b9f77, type: 3}
+  soundEffect2: {fileID: 8300000, guid: 2dff6172010b549d18a93ddeb9622562, type: 3}
+  soundEffect3: {fileID: 0}
+  soundEffect4: {fileID: 0}
+  soundEffect5: {fileID: 0}
+  soundEffect6: {fileID: 0}
 --- !u!1 &5713929060024708410
 GameObject:
   m_ObjectHideFlags: 0

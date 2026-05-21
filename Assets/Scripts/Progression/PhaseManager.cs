@@ -10,6 +10,8 @@ public class PhaseManager : MonoBehaviour
 
     public ConfidenceHeartMeter confidenceHeartMeter;
     public AnimationTriggerCrush animationTriggerCrush;
+    public AnimationTriggerPlayer animationTriggerPlayerDraft;
+    public GameProgression gameProgression;
 
     private void Awake()
     {
@@ -25,6 +27,7 @@ public class PhaseManager : MonoBehaviour
         
         confidenceHeartMeter.SpawnHeartMeter();
     }
+    
 
     public void TransitionTo(GamePhase newPhase)
     {
@@ -34,12 +37,24 @@ public class PhaseManager : MonoBehaviour
         Debug.Log($"[phaseManager] {oldPhase} -> {newPhase}");
         OnPhaseChanged?.Invoke(oldPhase, newPhase);
 
+        int loopCount = gameProgression.loopCount;
+        
         if (currentPhase == GamePhase.Hallway)
         {
             animationTriggerCrush.Begin();
             animationTriggerCrush.ParticlesCharmedStateTurnOff();
         }
-            
-
+        
+        if (currentPhase == GamePhase.Reflect && loopCount <= 1)
+        {
+            animationTriggerPlayerDraft.LockerOpen();
+        }
+        
+        if (currentPhase == GamePhase.Reflect && loopCount > 1)
+        {
+            animationTriggerPlayerDraft.LockerWake();
+        }
+        
     }
+
 }
