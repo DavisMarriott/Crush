@@ -64,6 +64,7 @@ public class GameProgression : MonoBehaviour
         // Trigger LockerClose Animation here //
         animationTriggerPlayer.LockerClose();
         Invoke(nameof(TransitionToHallway), 2.5f);
+        // PhaseManager.Instance.TransitionTo(GamePhase.Hallway);
         SetLoopConditions();
     }
 

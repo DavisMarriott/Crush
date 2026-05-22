@@ -176,8 +176,8 @@ public class DeathRespawn : MonoBehaviour
         //full respawn, ready for hallway walk
         animationTriggerPlayerDraft.LockerClose();
         Invoke(nameof(TransitionToHallway), 2.5f);
-        Invoke(nameof(thoughtSpawner.SpawnButtons), 2.5f);
-        // thoughtSpawner.SpawnButtons();
+        // PhaseManager.Instance.TransitionTo(GamePhase.Hallway);
+        thoughtSpawner.SpawnButtons();
         gameProgression.SetLoopConditions();
         isDead = false;
         
