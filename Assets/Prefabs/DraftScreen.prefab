@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 421866865280148724}
   - component: {fileID: 4248087349665966726}
   - component: {fileID: 4075737818961743442}
+  - component: {fileID: 7342068571949159373}
   m_Layer: 0
   m_Name: Character_Player
   m_TagString: Untagged
@@ -223,6 +224,20 @@ MonoBehaviour:
   blink02: {fileID: 8300000, guid: 6d96265ae107f41f484116cd78d96ad8, type: 3}
   lockerOpen: {fileID: 8300000, guid: 9c20c010948e3466a9cd0333f34e1a3d, type: 3}
   lockerClose: {fileID: 8300000, guid: 924bf82fe1def4b7895828c3d10c0971, type: 3}
+--- !u!114 &7342068571949159373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835535847506019946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30919a1f1d37742398aacf504138a7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  animationTriggerThoughtBubble: {fileID: 5918267327605081884}
+  thoughtBubble: {fileID: 4736389911452715891}
 --- !u!1 &3412941076464463679
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,13 +342,14 @@ GameObject:
   - component: {fileID: 5918267327605081884}
   - component: {fileID: 6936304237035682389}
   - component: {fileID: 688225725452901633}
+  - component: {fileID: 4859050615770044696}
   m_Layer: 0
   m_Name: ThoughtBubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4012187530177892575
 Transform:
   m_ObjectHideFlags: 0
@@ -501,6 +517,20 @@ MonoBehaviour:
   soundEffect4: {fileID: 0}
   soundEffect5: {fileID: 0}
   soundEffect6: {fileID: 0}
+--- !u!114 &4859050615770044696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4736389911452715891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c1a362e9b1234da8a3f23dd66bd81d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SelfTalkManager
+  reflectSelfTalk: {fileID: 0}
+  reflectText: {fileID: 0}
 --- !u!1 &5713929060024708410
 GameObject:
   m_ObjectHideFlags: 0

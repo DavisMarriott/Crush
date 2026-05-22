@@ -14,6 +14,7 @@ public class GameProgression : MonoBehaviour
     [SerializeField] private FirstLoopManager firstLoopManager;
     [SerializeField] private Collider2D inConversationTrigger;
     [SerializeField] private AnimationTriggerThoughtBubble animationTriggerThoughtBubble;
+    [SerializeField] private AnimationTriggerPlayer animationTriggerPlayer;
     [SerializeField] private DialogueTiming dialogueTiming;
     [SerializeField] private ReflectSelfTalk reflectSelfTalk;
     [Header("Loop 1 reflect — populated by the doc importer (ReflectImporter creates/updates LoopReflect_01.asset and auto-wires it here).")]
@@ -58,11 +59,19 @@ public class GameProgression : MonoBehaviour
         if (loop1ReflectBranch != null && loop1ReflectBranch.commitLines != null && loop1ReflectBranch.commitLines.Length > 0)
             yield return reflectSelfTalk.PlayLines(loop1ReflectBranch.commitLines);
 
+       
         // Now transition to Hallway and run the normal loop setup (BasicLoop + FirstLoopActive).
-        PhaseManager.Instance.TransitionTo(GamePhase.Hallway);
+        // Trigger LockerClose Animation here //
+        animationTriggerPlayer.LockerClose();
+        Invoke(nameof(TransitionToHallway), 2.5f);
         SetLoopConditions();
     }
 
+    public void TransitionToHallway()
+    {
+        PhaseManager.Instance.TransitionTo(GamePhase.Hallway);
+    }
+    
     public void SetLoopConditions()
     {
         BasicLoop();

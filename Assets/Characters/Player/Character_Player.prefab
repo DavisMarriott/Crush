@@ -384,8 +384,8 @@ MonoBehaviour:
   voiceNegative03: {fileID: 0}
   voiceNegative04: {fileID: 0}
   voiceNegative05: {fileID: 8300000, guid: 0269a6532bafc48618c37cbb5f9180a9, type: 3}
-  blink01: {fileID: 8300000, guid: 5123a4ee59ede4d60ab67f02e7d5f90e, type: 3}
-  blink02: {fileID: 8300000, guid: 6d96265ae107f41f484116cd78d96ad8, type: 3}
+  blink01: {fileID: 0}
+  blink02: {fileID: 0}
   lockerOpen: {fileID: 8300000, guid: 9c20c010948e3466a9cd0333f34e1a3d, type: 3}
   lockerClose: {fileID: 8300000, guid: 924bf82fe1def4b7895828c3d10c0971, type: 3}
 --- !u!1 &2305240783736307181

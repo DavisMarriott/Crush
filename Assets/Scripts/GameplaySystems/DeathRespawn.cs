@@ -11,6 +11,7 @@ public class DeathRespawn : MonoBehaviour
     [SerializeField] private CharmState charmState;
     [SerializeField] private GameObject deathScreen;
     [SerializeField] private AnimationTriggerPlayer animationTriggerPlayer;
+    [SerializeField] private AnimationTriggerPlayer animationTriggerPlayerDraft;
     [SerializeField] private DeckManager deckManager;
     [SerializeField] private DialogueBox dialogueBox;
     [SerializeField] private GameObject cardContainer;
@@ -173,14 +174,18 @@ public class DeathRespawn : MonoBehaviour
             yield return reflectSelfTalk.PlayLines(scriptedBranch.commitLines);
 
         //full respawn, ready for hallway walk
-        PhaseManager.Instance.TransitionTo(GamePhase.Hallway);
-        thoughtSpawner.SpawnButtons();
+        animationTriggerPlayerDraft.LockerClose();
+        Invoke(nameof(TransitionToHallway), 2.5f);
+        Invoke(nameof(thoughtSpawner.SpawnButtons), 2.5f);
+        // thoughtSpawner.SpawnButtons();
         gameProgression.SetLoopConditions();
         isDead = false;
         
-        
     }
     
-    
+    public void TransitionToHallway()
+    {
+        PhaseManager.Instance.TransitionTo(GamePhase.Hallway);
+    }
     
 }

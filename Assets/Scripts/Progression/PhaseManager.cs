@@ -12,6 +12,7 @@ public class PhaseManager : MonoBehaviour
     public AnimationTriggerCrush animationTriggerCrush;
     public AnimationTriggerPlayer animationTriggerPlayerDraft;
     public GameProgression gameProgression;
+    public AnimationTriggerThoughtBubble animationTriggerThoughtBubbleDraft;
 
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class PhaseManager : MonoBehaviour
         //only possible to get here IF ^^ ==false
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        
         
         confidenceHeartMeter.SpawnHeartMeter();
     }
@@ -48,11 +50,13 @@ public class PhaseManager : MonoBehaviour
         if (currentPhase == GamePhase.Reflect && loopCount <= 1)
         {
             animationTriggerPlayerDraft.LockerOpen();
+            // animationTriggerThoughtBubbleDraft.ThoughtBubbleOff();
         }
         
         if (currentPhase == GamePhase.Reflect && loopCount > 1)
         {
             animationTriggerPlayerDraft.LockerWake();
+            // animationTriggerThoughtBubbleDraft.ThoughtBubbleOff();
         }
         
     }

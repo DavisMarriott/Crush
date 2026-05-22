@@ -158,6 +158,7 @@ MonoBehaviour:
   firstLoopManager: {fileID: 24498267}
   inConversationTrigger: {fileID: 332963191}
   animationTriggerThoughtBubble: {fileID: 2036124716}
+  animationTriggerPlayer: {fileID: 636330340}
   dialogueTiming: {fileID: 1448305601}
   reflectSelfTalk: {fileID: 706991435}
   loop1ReflectBranch: {fileID: 11400000, guid: a5f663975fbb84d98915f8b4b758c631, type: 2}
@@ -196,6 +197,7 @@ MonoBehaviour:
   charmState: {fileID: 1056035271448750364}
   deathScreen: {fileID: 1928474379}
   animationTriggerPlayer: {fileID: 2036124711}
+  animationTriggerPlayerDraft: {fileID: 636330340}
   deckManager: {fileID: 1875503650}
   dialogueBox: {fileID: 1056035271448750362}
   cardContainer: {fileID: 1165197825}
@@ -520,7 +522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1161810281762307539, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.05342
+      value: -4.0534153
       objectReference: {fileID: 0}
     - target: {fileID: 1161810281762307539, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -695,6 +697,7 @@ MonoBehaviour:
   animationTriggerCrush: {fileID: 1561869875}
   animationTriggerPlayerDraft: {fileID: 636330340}
   gameProgression: {fileID: 10528340}
+  animationTriggerThoughtBubbleDraft: {fileID: 2696648771307027886}
 --- !u!114 &489236910 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2928635927911322808, guid: 3e9db6356aa654891a41cef1c7232bf0, type: 3}
@@ -837,7 +840,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7796232783117579734, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
   m_PrefabInstance: {fileID: 1875503648}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1737139108}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a34e02cb22b204f909b67c3db1eab5a0, type: 3}
@@ -992,7 +995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &861709120
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1717,6 +1720,11 @@ MonoBehaviour:
   gameProgression: {fileID: 10528340}
   triggerIndex: 1
   maxDelay: 1.5
+--- !u!1 &1737139108 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3257844069133594696, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+  m_PrefabInstance: {fileID: 1875503648}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1748535992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2122,6 +2130,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2949258403501836216, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257844069133594696, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7117061288056274065, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
@@ -3153,6 +3165,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4859050615770044696, guid: ed9cf1283843d41049e1cab22a41cb05, type: 3}
+      propertyPath: reflectText
+      value: 
+      objectReference: {fileID: 861709119}
+    - target: {fileID: 4859050615770044696, guid: ed9cf1283843d41049e1cab22a41cb05, type: 3}
+      propertyPath: reflectSelfTalk
+      value: 
+      objectReference: {fileID: 1737139108}
     - target: {fileID: 8347422286424153363, guid: ed9cf1283843d41049e1cab22a41cb05, type: 3}
       propertyPath: m_Name
       value: DraftScreen
@@ -3608,7 +3628,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2236130830028738280, guid: 3e9db6356aa654891a41cef1c7232bf0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -12.837463
+      value: -12.837402
       objectReference: {fileID: 0}
     - target: {fileID: 2788993437142595439, guid: 3e9db6356aa654891a41cef1c7232bf0, type: 3}
       propertyPath: m_Pivot.x
@@ -3696,7 +3716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4590611505744424479, guid: 3e9db6356aa654891a41cef1c7232bf0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -13.452942
+      value: -13.452881
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

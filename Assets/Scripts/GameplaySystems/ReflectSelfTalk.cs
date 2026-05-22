@@ -49,7 +49,7 @@ public class ReflectSelfTalk : MonoBehaviour
         if (lines == null || lines.Length == 0)
         {
             yield return new WaitForSeconds(holdAfterLine);
-            animationTriggerThoughtBubble.ThoughtBubbleHalf();
+            // animationTriggerThoughtBubble.ThoughtBubbleHalf();
             yield break;
         }
 
@@ -62,7 +62,7 @@ public class ReflectSelfTalk : MonoBehaviour
         }
 
         // Reflect lines done — minimize bubble before draft / hallway resumes
-        animationTriggerThoughtBubble.ThoughtBubbleHalf();
+        // animationTriggerThoughtBubble.ThoughtBubbleHalf();
     }
 
     private ReflectBranch SelectBranch(LoopSnapshot snapshot, int loopCount)
