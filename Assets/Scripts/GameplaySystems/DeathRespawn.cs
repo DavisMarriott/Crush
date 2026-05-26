@@ -158,7 +158,7 @@ public class DeathRespawn : MonoBehaviour
         if (deckManager.draftPool.Length >0)
         {
             PhaseManager.Instance.TransitionTo(GamePhase.UpgradeDraft);
-            draftUI.ShowDraftOptions();
+            draftUI.ShowDraftOptions(gameProgression.loopCount);
             yield return new WaitUntil(() => !draftUI.gameObject.activeSelf || !draftUI.enabled);
         }
 

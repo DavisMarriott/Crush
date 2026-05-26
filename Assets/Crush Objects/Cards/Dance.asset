@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
+  m_Script: {fileID: 11500000, guid: cce99e1dca2b469d89fbea7552f6899b, type: 3}
   m_Name: Dance
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
+  m_EditorClassIdentifier: Assembly-CSharp::DanceCard
   isDance: 1
   revealed: 0
   previewText: DANCE?
@@ -19,7 +19,6 @@ MonoBehaviour:
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   lukeBranches:
   - branchName: Default
-    requiresIntroFalse: 0
     dialogue:
     - character: 2
       confidenceImpact: 0
@@ -53,7 +52,30 @@ MonoBehaviour:
       confidenceImpact: -3
       charmImpact: 0
       line: with me?
+    tags: 
+    charmImpacts: []
+    daisyBranches: []
+  - branchName: FirstLoop
+    dialogue:
+    - character: 0
+      confidenceImpact: -1
+      charmImpact: 0
+      line: ........
+    - character: 0
+      confidenceImpact: -1
+      charmImpact: 0
+      line: Oh - hey Luke!
+    - character: 2
+      confidenceImpact: -1
+      charmImpact: 0
+      line: Say Something!
+    tags: 
     charmImpacts: []
     daisyBranches: []
   draftLines:
-  - line: 
+  - line: yeah, yeah. Just keep it simple.
+  availableUpgrades: []
+  upgradeThreshold: 3
+  firstLoopBranchName: FirstLoop
+  confidentBranchName: Confident
+  confidentConfidenceThreshold: 17

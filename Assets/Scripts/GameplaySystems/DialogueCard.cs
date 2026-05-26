@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [CreateAssetMenu(menuName = "Crush/Dialogue Card")]
 public class DialogueCard : ScriptableObject
@@ -146,43 +147,70 @@ public class DialogueCard : ScriptableObject
         }
     }
 
-    // confidence here is AFTER cost has been deducted by ThoughtSpawner
+    // confidence here is AFTER cost has been deducted by ThoughtSpawner.
+    // Convenience overload — no applied upgrade, no loop context.
     public DialogueBranch GetLukeBranch(int confidence)
     {
-        if (lukeBranches == null || lukeBranches.Length == 0)
+        return GetLukeBranch(confidence, null, 0);
+    }
+
+    // Main branch selector. `upgrade` (if any) folds branch overrides into the card's branches.
+    // `loopCount` is unused by the base card but lets subclasses (e.g. DanceCard) special-case by loop.
+    // virtual so subclasses can override selection while reusing the effective-branch helpers below.
+    public virtual DialogueBranch GetLukeBranch(int confidence, DialogueCardUpgrade upgrade, int loopCount)
+    {
+        DialogueBranch[] branches = GetEffectiveLukeBranches(upgrade);
+        if (branches == null || branches.Length == 0)
             return null;
 
         // dead
         if (confidence <= 0)
-            return FindBranchByName("Death");
+            return FindBranchByName(branches, "Death");
 
         ConfidenceLevel level = GetConfidenceLevel(confidence);
 
         // awkward (only if the card has one)
         if (level == ConfidenceLevel.Low)
         {
-            DialogueBranch awkward = FindBranchByName("Awkward");
+            DialogueBranch awkward = FindBranchByName(branches, "Awkward");
             if (awkward != null)
                 return awkward;
         }
 
         // normal (or fallback if no awkward)
-        DialogueBranch normal = FindBranchByName("Normal");
+        DialogueBranch normal = FindBranchByName(branches, "Normal");
         if (normal != null)
             return normal;
 
         // last resort - first available branch
-        if (lukeBranches.Length > 0)
-            return lukeBranches[0];
-        return null;
+        return branches[0];
     }
 
-    private DialogueBranch FindBranchByName(string name)
+    // Effective Luke-branch set for an applied upgrade: the card's branches with any same-named
+    // branch replaced by the upgrade's override. branchAdditions are intentionally ignored for now.
+    protected DialogueBranch[] GetEffectiveLukeBranches(DialogueCardUpgrade upgrade)
     {
-        for (int i = 0; i < lukeBranches.Length; i++)
+        if (upgrade == null || upgrade.branchOverrides == null || upgrade.branchOverrides.Length == 0)
+            return lukeBranches;
+
+        List<DialogueBranch> result = new List<DialogueBranch>(lukeBranches);
+        foreach (DialogueBranch ov in upgrade.branchOverrides)
         {
-            if (lukeBranches[i].branchName == name)
-                return lukeBranches[i];
+            if (ov == null) continue;
+            int idx = result.FindIndex(b => b.branchName == ov.branchName);
+            if (idx >= 0) result[idx] = ov;   // override the same-named branch
+            // (no matching name would be an "addition" — on ice for now, so skip)
+        }
+        return result.ToArray();
+    }
+
+    protected DialogueBranch FindBranchByName(DialogueBranch[] branches, string name)
+    {
+        if (branches == null) return null;
+        for (int i = 0; i < branches.Length; i++)
+        {
+            if (branches[i].branchName == name)
+                return branches[i];
         }
         return null;
     }

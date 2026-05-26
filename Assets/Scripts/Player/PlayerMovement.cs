@@ -29,20 +29,28 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        
-        //movement IF player is alive
+        // Always read input so FixedUpdate never acts on a stale value (dying mid-walk used to
+        // freeze a non-zero moveInput that kept the player gliding through the draft screen),
+        // and so the input stays available for future self-talk triggers.
+        moveInput = move.action.ReadValue<Vector2>();
+
+        // block left movement (one-way walk)
+        if (moveInput.x < 0)
+            moveInput.x = 0;
+
+        // Movement is only allowed while alive, not in a conversation, and during the Hallway
+        // phase. The phase gate is what stops the player walking on the Reflect / Draft screens.
+        bool canMove = !deathRespawn.isDead
+                       && !confidenceState.inConversation
+                       && PhaseManager.Instance != null
+                       && PhaseManager.Instance.CurrentPhase == GamePhase.Hallway;
+
+        if (!canMove)
+            moveInput.x = 0;
+
+        // Drive walk/idle animation only while alive — death/reflect poses are owned elsewhere.
         if (deathRespawn.isDead == false)
         {
-            moveInput = move.action.ReadValue<Vector2>();
-
-            // block left movement but keep reading the input for future self-talk triggers
-            if (moveInput.x < 0)
-                moveInput.x = 0;
-            
-            
-            if (confidenceState.inConversation)
-                moveInput.x = 0;
-
             bool isMoving = moveInput.x != 0;
 
             // start walking

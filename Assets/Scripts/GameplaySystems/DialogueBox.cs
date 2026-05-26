@@ -17,6 +17,7 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private ConfidenceState confidenceState;
     [SerializeField] private DeckManager deckManager;
+    [SerializeField] private CardUpgradeTracker upgradeTracker;
     [SerializeField] private ThoughtSpawner thoughtSpawner;
     [SerializeField] private CharmState charmState;
     [SerializeField] private DialogueTiming dialogueTiming;
@@ -48,7 +49,10 @@ public class DialogueBox : MonoBehaviour
 
     public void ShowDialogue(DialogueCard dialogueCard)
     {
-        var lukeBranch = dialogueCard.GetLukeBranch(confidenceState.confidence);
+        // Fold in any applied card upgrade (branch overrides) and pass loop context so a
+        // DanceCard can special-case loop 1. upgradeTracker may be unwired in older scenes.
+        var appliedUpgrade = upgradeTracker != null ? upgradeTracker.GetAppliedUpgrade(dialogueCard) : null;
+        var lukeBranch = dialogueCard.GetLukeBranch(confidenceState.confidence, appliedUpgrade, gameProgression.loopCount);
 
         if (lukeBranch == null || lukeBranch.dialogue == null || lukeBranch.dialogue.Length == 0)
         {
