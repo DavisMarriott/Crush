@@ -139,7 +139,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3676941888706378115}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: AnimationTriggerPlayer, Assembly-CSharp
+        m_MethodName: ParticlesNervousStateTurnOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Particles_NervousState_TurnOff
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!82 &8225880123297392781
 AudioSource:
   m_ObjectHideFlags: 0
