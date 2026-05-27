@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip soundEffect4;
     public AudioClip soundEffect5;
     public AudioClip soundEffect6;
+    
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class SoundManager : MonoBehaviour
         {
             Debug.LogError("AudioSource component missing from GameObject!");
         }
+        
     }
 
     // Example functions to play sounds
