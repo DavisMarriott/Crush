@@ -9,6 +9,8 @@ public class ReflectSelfTalk : MonoBehaviour
     [SerializeField] private TMP_Text selfTalkText;
     [SerializeField] private ReflectBranch[] branches;
     [SerializeField] private float holdAfterLine = 2f;
+    [SerializeField] private float maxRevealWait = 3f;   // safety cap so the reveal-wait below can't hang
+    [SerializeField] private SelfTalkManager selfTalkManager;   // reveal signal — EnableSelfTalk sets its flag
 
     public IEnumerator Play(LoopSnapshot snapshot, int loopCount)
     {
@@ -42,8 +44,7 @@ public class ReflectSelfTalk : MonoBehaviour
         return null;
     }
 
-    // Plays a fixed set of lines without branch selection.
-    // Used for milestone reflects that bring their own line set.
+    //Plays lines once correct branch is passed in
     public IEnumerator PlayLines(string[] lines)
     {
         if (lines == null || lines.Length == 0)
@@ -51,6 +52,17 @@ public class ReflectSelfTalk : MonoBehaviour
             yield return new WaitForSeconds(holdAfterLine);
             // animationTriggerThoughtBubble.ThoughtBubbleHalf();
             yield break;
+        }
+
+        // Wait for the bubble's EnableSelfTalk reveal before typing, so lines don't type before the
+        // bubble is actually open. Poke the bubble up each frame (only "takes" in an idle _CYCLE state);
+        // maxRevealWait caps it so this can't hang.
+        float waited = 0f;
+        while (selfTalkManager != null && !selfTalkManager.SelfTalkRevealed && waited < maxRevealWait)
+        {
+            animationTriggerThoughtBubble.ThoughtBubbleOn();
+            waited += Time.deltaTime;
+            yield return null;
         }
 
         foreach (string line in lines)

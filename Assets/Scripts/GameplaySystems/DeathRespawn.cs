@@ -115,7 +115,8 @@ public class DeathRespawn : MonoBehaviour
         Milestone triggeredMilestone = milestoneTracker != null
             ? milestoneTracker.GetTriggeredMilestone(gameProgression.lastLoop, gameProgression.loopCount)
             : null;
-
+        
+        //if statement to check for correct reflect branch 
         if (scriptedBranch != null)
         {
             // Scripted wins. Play its lines.
