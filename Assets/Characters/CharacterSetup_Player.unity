@@ -2857,7 +2857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8785659306307188253, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
       propertyPath: m_SceneBindings.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8785659306307188253, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].key
@@ -2866,7 +2866,7 @@ PrefabInstance:
     - target: {fileID: 8785659306307188253, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
       propertyPath: m_SceneBindings.Array.data[1].key
       value: 
-      objectReference: {fileID: -4060613603333960946, guid: ca0415c7134674619a54e4b3b43c873f, type: 2}
+      objectReference: {fileID: -4067753193231379582, guid: ca0415c7134674619a54e4b3b43c873f, type: 2}
     - target: {fileID: 8785659306307188253, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
       propertyPath: m_SceneBindings.Array.data[1].value
       value: 
@@ -2887,9 +2887,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34017bb81fb4f478da564c0a50b2be54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
---- !u!95 &1936194678 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2343881085972465535, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
+--- !u!82 &1936194678 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1722819915911790147, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
   m_PrefabInstance: {fileID: 1936194676}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &1936194682 stripped
