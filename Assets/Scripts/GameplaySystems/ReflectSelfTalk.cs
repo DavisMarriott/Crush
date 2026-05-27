@@ -54,9 +54,7 @@ public class ReflectSelfTalk : MonoBehaviour
             yield break;
         }
 
-        // Wait for the bubble's EnableSelfTalk reveal before typing, so lines don't type before the
-        // bubble is actually open. Poke the bubble up each frame (only "takes" in an idle _CYCLE state);
-        // maxRevealWait caps it so this can't hang.
+        // Loop that waits for EnableSelfTalk on ThoughtBubble to start PlayLines
         float waited = 0f;
         while (selfTalkManager != null && !selfTalkManager.SelfTalkRevealed && waited < maxRevealWait)
         {

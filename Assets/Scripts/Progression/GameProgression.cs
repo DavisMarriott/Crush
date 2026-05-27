@@ -17,6 +17,10 @@ public class GameProgression : MonoBehaviour
     [SerializeField] private AnimationTriggerPlayer animationTriggerPlayer;
     [SerializeField] private DialogueTiming dialogueTiming;
     [SerializeField] private ReflectSelfTalk reflectSelfTalk;
+    [Header("Loop 1 DANCE draft (86ba2uadt) — wire DraftUI + the DANCE card + ThoughtSpawner, and set startingDeck size 0")]
+    [SerializeField] private DraftUI draftUI;
+    [SerializeField] private DialogueCard danceCard;
+    [SerializeField] private ThoughtSpawner thoughtSpawner;
     [Header("Loop 1 reflect — populated by the doc importer (ReflectImporter creates/updates LoopReflect_01.asset and auto-wires it here).")]
     [SerializeField] private ReflectBranch loop1ReflectBranch;
     public ReflectBranch Loop1ReflectBranch { get { return loop1ReflectBranch; } set { loop1ReflectBranch = value; } }
@@ -54,8 +58,22 @@ public class GameProgression : MonoBehaviour
         if (loop1ReflectBranch != null && loop1ReflectBranch.lines != null && loop1ReflectBranch.lines.Length > 0)
             yield return reflectSelfTalk.PlayLines(loop1ReflectBranch.lines);
 
+        // Loop-1 DANCE draft — DANCE is the only card offered (per design: DANCE is drafted, not pre-owned).
+        // Null-guarded: until draftUI + danceCard are wired (and DANCE removed from startingDeck), this is
+        // skipped and loop 1 stays reflect → commit → hallway. With it wired: reflect → DANCE draft → commit → hallway.
+        if (draftUI != null && danceCard != null)
+        {
+            PhaseManager.Instance.TransitionTo(GamePhase.UpgradeDraft);
+            draftUI.ShowSingleCardDraft(danceCard);
+            yield return new WaitUntil(() => !draftUI.gameObject.activeSelf || !draftUI.enabled);
+            // Wait for DANCE's draft self-talk to finish before the commit lines, so they don't overlap.
+            yield return new WaitUntil(() => !hallwaySelfTalk.draftLinesActive);
+            // Render the just-drafted DANCE into the hand (the pick's ResetDeck already drew it).
+            if (thoughtSpawner != null) thoughtSpawner.SpawnButtons();
+        }
+
         // Commit lines — final hype-up before committing to the hallway approach (locker-close beat).
-        // Loop 1 has no draft phase, so this plays right after reflect. Flow: reflect → commit → hallway.
+        // Plays after the (optional) DANCE draft. Flow: reflect → [DANCE draft] → commit → hallway.
         if (loop1ReflectBranch != null && loop1ReflectBranch.commitLines != null && loop1ReflectBranch.commitLines.Length > 0)
             yield return reflectSelfTalk.PlayLines(loop1ReflectBranch.commitLines);
 
