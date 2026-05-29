@@ -114,7 +114,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -213,9 +213,9 @@ MonoBehaviour:
   soundEffect1: {fileID: 8300000, guid: eb30ddcb570fd426e835b5f4cf213ca9, type: 3}
   soundEffect2: {fileID: 8300000, guid: 52df89ed6051c4197bc7c430dc321f05, type: 3}
   soundEffect3: {fileID: 8300000, guid: 2990649587ef64a14840a992a55ea27d, type: 3}
-  soundEffect4: {fileID: 8300000, guid: 3c102579d5c4b4686a9d891ae028e79f, type: 3}
-  soundEffect5: {fileID: 8300000, guid: 3bea23ef3cd8e49b1ad084a9ebf4eb54, type: 3}
-  soundEffect6: {fileID: 8300000, guid: ab52e8a59ded143cb8740d38f046836d, type: 3}
+  soundEffect4: {fileID: 8300000, guid: 3641959852dc44762a714487376efe1d, type: 3}
+  soundEffect5: {fileID: 8300000, guid: 74b2a45eda7844749a7d201281c578d0, type: 3}
+  soundEffect6: {fileID: 8300000, guid: 85eb186ca20214f89a17dbbd70e3274e, type: 3}
 --- !u!114 &6578679222317192797
 MonoBehaviour:
   m_ObjectHideFlags: 0
