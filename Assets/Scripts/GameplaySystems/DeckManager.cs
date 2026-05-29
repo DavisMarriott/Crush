@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 public class DeckManager : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class DeckManager : MonoBehaviour
     [SerializeField] public DialogueCard[] draftPool;
     [SerializeField] private DialogueCard[] startingDeck;
     public int startingHandSize = 4;
+    [SerializeField] public int deckSize;
     
     public struct DraftableUpgrade
     {
@@ -141,5 +143,10 @@ public class DeckManager : MonoBehaviour
         {
             list.Add(new DraftableUpgrade { card = card, upgrade = upgrade });
         }
+    }
+
+    void Update()
+    {
+         deckSize = _deck.Count;
     }
 }
