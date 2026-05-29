@@ -12,28 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Notes
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
+  isDance: 0
+  revealed: 0
   previewText: I took notes
   cost: 1
-  revealed: 0
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   lukeBranches:
   - branchName: Death
-    requiresIntroFalse: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
       line: Do you want my n-
+    tags: 
     charmImpacts: []
     daisyBranches: []
   - branchName: Normal
-    requiresIntroFalse: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
       line: You were out on Monday right? I took notes in Ms. Greene's class if you
         need them.
+    tags: 
     charmImpacts:
     - state: 1
       impact: 2
@@ -41,17 +42,17 @@ MonoBehaviour:
       impact: 2
     - state: 3
       impact: 0
-    - state: 4
-      impact: -2
     daisyBranches:
     - charmState: 0
       dialogue: []
+      tags: 
     - charmState: 1
       dialogue:
       - character: 1
         confidenceImpact: -1
         charmImpact: 0
         line: "Oh thanks. I'll uhhh\u2026. let you know if I need them."
+      tags: 
     - charmState: 2
       dialogue:
       - character: 1
@@ -62,15 +63,22 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: That would be really helpful.
+      tags: 
     - charmState: 3
       dialogue:
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
         line: You're the best! That would be awesome! You are such a life saver.
+      tags: 
     - charmState: 4
       dialogue:
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
         line: You're the best! That would be awesome! You are such a life saver.
+      tags: 
+  draftLines:
+  - line: (none)
+  availableUpgrades: []
+  upgradeThreshold: 3

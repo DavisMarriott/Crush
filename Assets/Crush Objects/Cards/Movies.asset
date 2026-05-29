@@ -19,7 +19,6 @@ MonoBehaviour:
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   lukeBranches:
   - branchName: Death
-    requiresIntroFalse: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
@@ -29,10 +28,10 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: Seen any good mov-
+    tags: 
     charmImpacts: []
     daisyBranches: []
   - branchName: Normal
-    requiresIntroFalse: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
@@ -42,6 +41,7 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: I haven't seen anything in a while. I could use a good recommendation.
+    tags: 
     charmImpacts:
     - state: 1
       impact: 1
@@ -49,17 +49,17 @@ MonoBehaviour:
       impact: 2
     - state: 3
       impact: 1
-    - state: 4
-      impact: -1
     daisyBranches:
     - charmState: 0
       dialogue: []
+      tags: 
     - charmState: 1
       dialogue:
       - character: 1
         confidenceImpact: -2
         charmImpact: 0
         line: "Nooo\u2026. not that I can remember."
+      tags: 
     - charmState: 2
       dialogue:
       - character: 1
@@ -74,6 +74,7 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: It was pretty funny.
+      tags: 
     - charmState: 3
       dialogue:
       - character: 1
@@ -92,6 +93,7 @@ MonoBehaviour:
         confidenceImpact: 1
         charmImpact: 0
         line: You need to see it!
+      tags: 
     - charmState: 4
       dialogue:
       - character: 1
@@ -114,5 +116,9 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: "I mean - if you want to\u2026"
+      tags: 
   draftLines:
   - line: I think she likes movies....
+  - line: I think she likes movies....
+  availableUpgrades: []
+  upgradeThreshold: 3

@@ -19,26 +19,22 @@ MonoBehaviour:
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   lukeBranches:
   - branchName: Death
-    requiresIntroFalse: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
       line: You are soooo hot
+    tags: 
     charmImpacts: []
     daisyBranches: []
   - branchName: Normal
-    requiresIntroFalse: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
       line: "You uhhh\u2026. You look really nice today."
+    tags: 
     charmImpacts:
-    - state: 1
-      impact: -3
-    - state: 2
-      impact: -1
     - state: 3
       impact: 3
     - state: 4
@@ -50,18 +46,21 @@ MonoBehaviour:
         confidenceImpact: -6
         charmImpact: 0
         line: "Ohh - ummm\u2026. thanks? I guess\u2026"
+      tags: 
     - charmState: 1
       dialogue:
       - character: 1
         confidenceImpact: -1
         charmImpact: 0
         line: "Ohh - ummm\u2026. thanks."
+      tags: 
     - charmState: 2
       dialogue:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
         line: "Thanks\u2026 that's nice of you."
+      tags: 
     - charmState: 3
       dialogue:
       - character: 1
@@ -72,6 +71,7 @@ MonoBehaviour:
         confidenceImpact: 1
         charmImpact: 0
         line: "That umm\u2026 means a lot"
+      tags: 
     - charmState: 4
       dialogue:
       - character: 1
@@ -86,6 +86,9 @@ MonoBehaviour:
         confidenceImpact: 4
         charmImpact: 0
         line: "You look go- uhh\u2026 nice.. too"
+      tags: 
   draftLines:
   - line: Girls like it when you compliment them
   - line: I think
+  availableUpgrades: []
+  upgradeThreshold: 3

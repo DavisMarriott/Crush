@@ -19,16 +19,15 @@ MonoBehaviour:
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   lukeBranches:
   - branchName: Death
-    requiresIntroFalse: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
       line: "So- uhhhhh\u2026. How did that math te-"
+    tags: 
     charmImpacts: []
     daisyBranches: []
   - branchName: Normal
-    requiresIntroFalse: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
@@ -38,6 +37,7 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: I had soccer practice last night so I barely got to study.
+    tags: 
     charmImpacts:
     - state: 1
       impact: 0
@@ -45,8 +45,6 @@ MonoBehaviour:
       impact: 0
     - state: 3
       impact: 0
-    - state: 4
-      impact: -2
     daisyBranches:
     - charmState: 0
       dialogue:
@@ -54,12 +52,14 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: walks away
+      tags: 
     - charmState: 1
       dialogue:
       - character: 1
         confidenceImpact: -1
         charmImpact: 0
         line: uhhh... it was okay
+      tags: 
     - charmState: 2
       dialogue:
       - character: 1
@@ -71,12 +71,14 @@ MonoBehaviour:
         confidenceImpact: 3
         charmImpact: 0
         line: I started studying before even taking a shower. I was so gross.
+      tags: 
     - charmState: 3
       dialogue:
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
         line: It was pretty good! I didn't know you still played soccer. That's awesome!
+      tags: 
     - charmState: 4
       dialogue:
       - character: 1
@@ -84,6 +86,9 @@ MonoBehaviour:
         charmImpact: 0
         line: Oh.. the test. Ummm, I think I did pretty good. I wasn't able to study
           much either
+      tags: 
   draftLines:
   - line: She probably got an A on Ms. Parsons test
   - line: She's perfect
+  availableUpgrades: []
+  upgradeThreshold: 3

@@ -19,7 +19,6 @@ MonoBehaviour:
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   lukeBranches:
   - branchName: Death
-    requiresIntroFalse: 0
     dialogue:
     - character: 0
       confidenceImpact: 0
@@ -29,7 +28,6 @@ MonoBehaviour:
     charmImpacts: []
     daisyBranches: []
   - branchName: Normal
-    requiresIntroFalse: 0
     dialogue:
     - character: 0
       confidenceImpact: 0

@@ -15,7 +15,11 @@ MonoBehaviour:
   lines:
   - Am I looping? I'm stuck in a $&%ing time loop!?!
   - How am I gonna get out of this?!?
+  - What the hell is going on?!
+  - "Daisy is still standing there like nothing happened\u2026.\rDo I try to talk
+    to her again?"
   commitLines:
+  - Please God let this work.
   - I promise I'll stop cursing.
   isScripted: 1
   minLoop: 4

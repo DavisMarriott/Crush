@@ -13,11 +13,16 @@ MonoBehaviour:
   m_Name: LoopReflect_02
   m_EditorClassIdentifier: Assembly-CSharp::ReflectBranch
   lines:
+  - What??
   - That was a crazy daydream.
+  - But you can't just ask her to the dance.
   - What were you thinking??
-  - You can't just ask her to the dance. You have to actually TALK to her.
-  - Okay - I just need a few things to say to her.
+  - You need a plan.
+  - You have to actually TALK to her.
+  - "Talk to her\u2026.\rWhat do girls like to talk about?"
   commitLines:
+  - This might work.
+  - "You\u2019re not gonna die\u2026"
   - You're still a man.
   - A man with a plan.
   isScripted: 1

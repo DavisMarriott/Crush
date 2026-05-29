@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dance
   m_EditorClassIdentifier: Assembly-CSharp::DanceCard
   isDance: 1
-  revealed: 0
+  revealed: 1
   previewText: DANCE?
   cost: 0
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
@@ -61,7 +61,7 @@ MonoBehaviour:
       confidenceImpact: -1
       charmImpact: 0
       line: ........
-    - character: 0
+    - character: 1
       confidenceImpact: -1
       charmImpact: 0
       line: Oh - hey Luke!
@@ -73,7 +73,13 @@ MonoBehaviour:
     charmImpacts: []
     daisyBranches: []
   draftLines:
-  - line: yeah, yeah. Just keep it simple.
+  - line: Yeah. Just keep it simple.
+  - line: "\u201CDaisy, will you go to the dance with me.\u201D"
+  - line: Straight forward.
+  - line: I like it.
+  - line: Confident. Like a man.
+  - line: "You\u2019re a man now."
+  - line: "That\u2019s what mom says."
   availableUpgrades: []
   upgradeThreshold: 3
   firstLoopBranchName: FirstLoop

@@ -13,17 +13,20 @@ MonoBehaviour:
   m_Name: LoopReflect_05
   m_EditorClassIdentifier: Assembly-CSharp::ReflectBranch
   lines:
-  - Man - I am never going to get used to dying.
-  - But okay - I'm in a loop.
-  - Is the universe helping me out?? Do I need to ask her to the dance to escape
-    this loop?!?
-  - But how???
-  - Maybe if my confidence is high enough, I'll be able to get it out.
-  - "Just need to figure out the right things to say\u2026."
-  - This loop is just the universe's way of giving me practice runs. And when Daisy
-    says yes to the dance, I'm free. Maybe.
-  - I just need to build up my confidence enough to survive the drain of asking her
-    to the dance.
+  - I am officially stuck in a loop.
+  - So how do I get out of this?
+  - Maybe this is the universe helping me out in some #$@!*% up way?
+  - I get unlimited tries at asking Daisy to the dance?
+  - "If I ask her, maybe I\u2019ll stop looping?"
+  - "That\u2019s not the craziest theory I could think of\u2026."
+  - So then how do I actually ask her?
+  - "Well asking her to the dance has been absolutely terrifying\u2026"
+  - No matter how many times I try.
+  - "So I think\u2026 I just need to get my confidence up?"
+  - "Really get in a good conversation with her\u2026"
+  - "So that the dread of asking her to the dance doesn\u2019t kill me\u2026."
+  - "Again\u2026"
+  - "Yep, let\u2019s go with that. \rAlrighty then - what else can I say to her?"
   commitLines: []
   isScripted: 1
   minLoop: 5

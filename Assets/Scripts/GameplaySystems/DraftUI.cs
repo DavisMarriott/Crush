@@ -24,10 +24,9 @@ public class DraftUI : MonoBehaviour
     private int _picksRemaining = 1;
     private bool _multiPick = false;
 
-    private void Start()
-    {
-        draftUI.SetActive(false);
-    }
+    // (Was: Start() { draftUI.SetActive(false); } — fired on first activation, which during a real
+    // draft meant DraftUI deactivated itself a frame after ShowSingleCardDraft, killing the draft.
+    // Intent is now handled by leaving the DraftUI GO inactive in the scene at edit time.)
 
     // loopCount is passed in by DeathRespawn so the draft can special-case loop 2.
     public void ShowDraftOptions(int loopCount)

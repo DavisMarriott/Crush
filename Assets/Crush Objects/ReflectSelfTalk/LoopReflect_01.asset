@@ -14,11 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ReflectBranch
   lines:
   - Okay, Luke. It's now or never.
-  - She's right there. You're gonna ask Daisy to the homecoming dance.
-  - And if you don't ask her this passing period, Brett Kissenger is gonna ask her
-    and they'll get married and you'll die alone.
+  - She's right there.
+  - Today is the day. No more chickening out.
+  - You're gonna ask Daisy to the homecoming dance.
+  - And if you don't ask her this passing period, Brett Kissenger is gonna ask her.
+  - And they'll get married.
+  - And you'll die alone.
+  - "Just need to figure out what to say to her\u2026.."
   commitLines:
-  - There's only 3 minutes left in passing period.
+  - Only 3 minutes left in passing period.
+  - "It\u2019s go time."
   - Deep Breath.
   - You can do this.
   isScripted: 1
