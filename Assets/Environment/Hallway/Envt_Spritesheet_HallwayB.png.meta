@@ -1,0 +1,1105 @@
+fileFormatVersion: 2
+guid: 7f700459518234fd2ba5d9e1f09047a1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3216609406758215505
+    second: Envt_Spritesheet_HallwayB_0
+  - first:
+      213: 7626642327513330981
+    second: Envt_Spritesheet_HallwayB_1
+  - first:
+      213: -1426978106842061901
+    second: Envt_Spritesheet_HallwayB_2
+  - first:
+      213: -7962295651295458551
+    second: Envt_Spritesheet_HallwayB_3
+  - first:
+      213: 3301053995051180872
+    second: Envt_Spritesheet_HallwayB_4
+  - first:
+      213: -4590276601038622719
+    second: Envt_Spritesheet_HallwayB_5
+  - first:
+      213: -6982214209125168300
+    second: Envt_Spritesheet_HallwayB_6
+  - first:
+      213: -6758289817390236410
+    second: Envt_Spritesheet_HallwayB_7
+  - first:
+      213: 6265430996158993321
+    second: Envt_Spritesheet_HallwayB_8
+  - first:
+      213: -3578821568294521653
+    second: Envt_Spritesheet_HallwayB_9
+  - first:
+      213: 1110003564915704722
+    second: Envt_Spritesheet_HallwayB_10
+  - first:
+      213: 4406697299692535927
+    second: Envt_Spritesheet_HallwayB_11
+  - first:
+      213: -3509228647084474471
+    second: Envt_Spritesheet_HallwayB_12
+  - first:
+      213: 6508702705341849758
+    second: Envt_Spritesheet_HallwayB_13
+  - first:
+      213: -1840557231405841885
+    second: Envt_Spritesheet_HallwayB_14
+  - first:
+      213: -9209068285402178549
+    second: Envt_Spritesheet_HallwayB_15
+  - first:
+      213: 2615142490957928649
+    second: Envt_Spritesheet_HallwayB_16
+  - first:
+      213: -6554389716389658636
+    second: Envt_Spritesheet_HallwayB_17
+  - first:
+      213: -4651166421396375465
+    second: Envt_Spritesheet_HallwayB_18
+  - first:
+      213: -8998430940894979755
+    second: Envt_Spritesheet_HallwayB_19
+  - first:
+      213: 4948532358273814057
+    second: Envt_Spritesheet_HallwayB_20
+  - first:
+      213: -1695393210675261221
+    second: Envt_Spritesheet_HallwayB_21
+  - first:
+      213: -7177683868986926259
+    second: Envt_Spritesheet_HallwayB_22
+  - first:
+      213: -7546317639433233093
+    second: Envt_Spritesheet_HallwayB_23
+  - first:
+      213: 758769276559914218
+    second: Envt_Spritesheet_HallwayB_24
+  - first:
+      213: -6007694679890228439
+    second: Envt_Spritesheet_HallwayB_25
+  - first:
+      213: -142421144976858026
+    second: Envt_Spritesheet_HallwayB_26
+  - first:
+      213: -4042989281137376428
+    second: Envt_Spritesheet_HallwayB_27
+  - first:
+      213: 5270584177846243811
+    second: Envt_Spritesheet_HallwayB_28
+  - first:
+      213: -5631846286876992015
+    second: Envt_Spritesheet_HallwayB_29
+  - first:
+      213: -2185532270243736713
+    second: Envt_Spritesheet_HallwayB_30
+  - first:
+      213: 7185035049082610709
+    second: Envt_Spritesheet_HallwayB_31
+  - first:
+      213: -9208482824720183735
+    second: Envt_Spritesheet_HallwayB_32
+  - first:
+      213: -7074476431807993817
+    second: Envt_Spritesheet_HallwayB_33
+  - first:
+      213: -3552164986930586026
+    second: Envt_Spritesheet_HallwayB_34
+  - first:
+      213: 1170045106123623723
+    second: Envt_Spritesheet_HallwayB_35
+  - first:
+      213: -8374278903228634915
+    second: Envt_Spritesheet_HallwayB_36
+  - first:
+      213: 45047291086469704
+    second: Envt_Spritesheet_HallwayB_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Envt_Hallway_Classroom
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 2285
+        width: 1590
+        height: 1763
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15fd00f8631b3ac20800000000000000
+      internalID: 3216609406758215505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Banner_Dance
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 3341
+        width: 1749
+        height: 669
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 525f3680ac647d960800000000000000
+      internalID: 7626642327513330981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Prop_Clock
+      rect:
+        serializedVersion: 2
+        x: 3604
+        y: 3744
+        width: 262
+        height: 263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b36b67e8fa523ce0800000000000000
+      internalID: -1426978106842061901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Prop_Clock_HandMinute
+      rect:
+        serializedVersion: 2
+        x: 3919
+        y: 3862
+        width: 24
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90b85eb8a4e308190800000000000000
+      internalID: -7962295651295458551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Prop_Clock_HandHour
+      rect:
+        serializedVersion: 2
+        x: 4014
+        y: 3862
+        width: 20
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 843e8676e13bfcd20800000000000000
+      internalID: 3301053995051180872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Spritesheet_HallwayB_5
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 3210
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1003e4e60cf0c40c0800000000000000
+      internalID: -4590276601038622719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Posterboard_Dance
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 2810
+        width: 607
+        height: 491
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45bc86f8b213a1f90800000000000000
+      internalID: -6982214209125168300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Poster_A
+      rect:
+        serializedVersion: 2
+        x: 2404
+        y: 2779
+        width: 393
+        height: 498
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60db051d73bb532a0800000000000000
+      internalID: -6758289817390236410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Spritesheet_HallwayB_8
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 2860
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a357ca9b4843f650800000000000000
+      internalID: 6265430996158993321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Spritesheet_HallwayB_9
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 2376
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc47c4bbeb8755ec0800000000000000
+      internalID: -3578821568294521653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Posterboard_SpiritNight
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 2285
+        width: 622
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 293c73a7c56876f00800000000000000
+      internalID: 1110003564915704722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Spritesheet_HallwayB_11
+      rect:
+        serializedVersion: 2
+        x: 2308
+        y: 2372
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770c8dca8dbb72d30800000000000000
+      internalID: 4406697299692535927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Poster_B
+      rect:
+        serializedVersion: 2
+        x: 2404
+        y: 2205
+        width: 393
+        height: 498
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99fb7ee5327bc4fc0800000000000000
+      internalID: -3509228647084474471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Spritesheet_HallwayB_13
+      rect:
+        serializedVersion: 2
+        x: 2203
+        y: 2285
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e90668c30ae835a50800000000000000
+      internalID: 6508702705341849758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Spritesheet_HallwayB_14
+      rect:
+        serializedVersion: 2
+        x: 2214
+        y: 2285
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 322474123f60576e0800000000000000
+      internalID: -1840557231405841885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Posterboard_Hammerheads
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 1772
+        width: 622
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c9948af21d23080800000000000000
+      internalID: -9209068285402178549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Spritesheet_HallwayB_16
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 2241
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c8d39a6d3ada4420800000000000000
+      internalID: 2615142490957928649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Spritesheet_HallwayB_17
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 2247
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fffe1397412a05a0800000000000000
+      internalID: -6554389716389658636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Exterior_Sky
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1024
+        width: 1581
+        height: 1183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 758b17d58ccb37fb0800000000000000
+      internalID: -4651166421396375465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Spritesheet_HallwayB_19
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 2162
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55912182cb62f1380800000000000000
+      internalID: -8998430940894979755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Spritesheet_HallwayB_20
+      rect:
+        serializedVersion: 2
+        x: 2299
+        y: 2158
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92ecf6e16f7bca440800000000000000
+      internalID: 4948532358273814057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Flier_A
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 1499
+        width: 177
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd097138bd0c878e0800000000000000
+      internalID: -1695393210675261221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Flier_B
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 1499
+        width: 177
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4b9bf6dc8eb36c90800000000000000
+      internalID: -7177683868986926259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Flier_C
+      rect:
+        serializedVersion: 2
+        x: 2133
+        y: 1498
+        width: 177
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3d515bc618164790800000000000000
+      internalID: -7546317639433233093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Flier_D
+      rect:
+        serializedVersion: 2
+        x: 2345
+        y: 1495
+        width: 177
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae475db03a0b78a00800000000000000
+      internalID: 758769276559914218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Flier_E
+      rect:
+        serializedVersion: 2
+        x: 2557
+        y: 1499
+        width: 177
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92b832ec48160aca0800000000000000
+      internalID: -6007694679890228439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_StickyNote_A
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 1412
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 654662529b4060ef0800000000000000
+      internalID: -142421144976858026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_StickyNote_B
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 1412
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45348136baa64e7c0800000000000000
+      internalID: -4042989281137376428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_StickyNote_C
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 1412
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e1d15f8260e42940800000000000000
+      internalID: 5270584177846243811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Prop_Backpack
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 1000
+        width: 305
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd181114a9a7d1b0800000000000000
+      internalID: -5631846286876992015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Prop_WaterBottle
+      rect:
+        serializedVersion: 2
+        x: 2108
+        y: 1044
+        width: 105
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77318facafd6ba1e0800000000000000
+      internalID: -2185532270243736713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Prop_Cup_A
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1096
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 514ec472f4f56b360800000000000000
+      internalID: 7185035049082610709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Prop_Book_A
+      rect:
+        serializedVersion: 2
+        x: 2573
+        y: 1096
+        width: 206
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94e8448d8a5e43080800000000000000
+      internalID: -9208482824720183735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Prop_Book_B
+      rect:
+        serializedVersion: 2
+        x: 2863
+        y: 1096
+        width: 173
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 728263eda2962dd90800000000000000
+      internalID: -7074476431807993817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Sign113
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 804
+        width: 224
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65e1c6ab3cc24bec0800000000000000
+      internalID: -3552164986930586026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Sign115
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 801
+        width: 224
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2dcea923d5dc3010800000000000000
+      internalID: 1170045106123623723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Sign117
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 804
+        width: 224
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd86203d4b598cb80800000000000000
+      internalID: -8374278903228634915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_Exterior_Trees
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 63
+        width: 2092
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84a7d47c54a00a000800000000000000
+      internalID: 45047291086469704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 7ced1c388cd524f3b80ed09e36d69a02
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Envt_Hallway_Banner_Dance: 7626642327513330981
+      Envt_Hallway_Classroom: 3216609406758215505
+      Envt_Hallway_Exterior_Sky: -4651166421396375465
+      Envt_Hallway_Exterior_Trees: 45047291086469704
+      Envt_Hallway_Flier_A: -1695393210675261221
+      Envt_Hallway_Flier_B: -7177683868986926259
+      Envt_Hallway_Flier_C: -7546317639433233093
+      Envt_Hallway_Flier_D: 758769276559914218
+      Envt_Hallway_Flier_E: -6007694679890228439
+      Envt_Hallway_Poster_A: -6758289817390236410
+      Envt_Hallway_Poster_B: -3509228647084474471
+      Envt_Hallway_Posterboard_Dance: -6982214209125168300
+      Envt_Hallway_Posterboard_Hammerheads: -9209068285402178549
+      Envt_Hallway_Posterboard_SpiritNight: 1110003564915704722
+      Envt_Hallway_Prop_Backpack: -5631846286876992015
+      Envt_Hallway_Prop_Book_A: -9208482824720183735
+      Envt_Hallway_Prop_Book_B: -7074476431807993817
+      Envt_Hallway_Prop_Clock: -1426978106842061901
+      Envt_Hallway_Prop_Clock_HandHour: 3301053995051180872
+      Envt_Hallway_Prop_Clock_HandMinute: -7962295651295458551
+      Envt_Hallway_Prop_Cup_A: 7185035049082610709
+      Envt_Hallway_Prop_WaterBottle: -2185532270243736713
+      Envt_Hallway_Sign113: -3552164986930586026
+      Envt_Hallway_Sign115: 1170045106123623723
+      Envt_Hallway_Sign117: -8374278903228634915
+      Envt_Hallway_StickyNote_A: -142421144976858026
+      Envt_Hallway_StickyNote_B: -4042989281137376428
+      Envt_Hallway_StickyNote_C: 5270584177846243811
+      Envt_Spritesheet_HallwayB_11: 4406697299692535927
+      Envt_Spritesheet_HallwayB_13: 6508702705341849758
+      Envt_Spritesheet_HallwayB_14: -1840557231405841885
+      Envt_Spritesheet_HallwayB_16: 2615142490957928649
+      Envt_Spritesheet_HallwayB_17: -6554389716389658636
+      Envt_Spritesheet_HallwayB_19: -8998430940894979755
+      Envt_Spritesheet_HallwayB_20: 4948532358273814057
+      Envt_Spritesheet_HallwayB_5: -4590276601038622719
+      Envt_Spritesheet_HallwayB_8: 6265430996158993321
+      Envt_Spritesheet_HallwayB_9: -3578821568294521653
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

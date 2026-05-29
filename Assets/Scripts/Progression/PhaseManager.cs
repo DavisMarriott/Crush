@@ -13,6 +13,10 @@ public class PhaseManager : MonoBehaviour
     public AnimationTriggerPlayer animationTriggerPlayerDraft;
     public GameProgression gameProgression;
     public AnimationTriggerThoughtBubble animationTriggerThoughtBubbleDraft;
+    public AudioSource thoughtBubbleHallwayAudio;
+    public AudioSource postFxAudio;
+    public GameObject postProcessingVolumeNegative;
+    public GameObject iconDeckSize;
 
     private void Awake()
     {
@@ -45,19 +49,42 @@ public class PhaseManager : MonoBehaviour
         {
             animationTriggerCrush.Begin();
             animationTriggerCrush.ParticlesCharmedStateTurnOff();
+            thoughtBubbleHallwayAudio.enabled = true;
+            postFxAudio.enabled = true;
+            postProcessingVolumeNegative.SetActive(true);
         }
         
         if (currentPhase == GamePhase.Reflect && loopCount <= 1)
         {
             animationTriggerPlayerDraft.LockerOpen();
             // animationTriggerThoughtBubbleDraft.ThoughtBubbleOff();
+            thoughtBubbleHallwayAudio.enabled = false;
+            postFxAudio.enabled = false;
+            postProcessingVolumeNegative.SetActive(false);
         }
         
         if (currentPhase == GamePhase.Reflect && loopCount > 1)
         {
             animationTriggerPlayerDraft.LockerWake();
             // animationTriggerThoughtBubbleDraft.ThoughtBubbleOff();
+            thoughtBubbleHallwayAudio.enabled = false;
+            postFxAudio.enabled = false;
+            postProcessingVolumeNegative.SetActive(false);
         }
+        
+        if (currentPhase == GamePhase.UpgradeDraft)
+        {
+            iconDeckSize.SetActive(true);
+            thoughtBubbleHallwayAudio.enabled = false;
+            postFxAudio.enabled = false;
+            postProcessingVolumeNegative.SetActive(false);
+        }
+
+        if (currentPhase == GamePhase.Death)
+        {
+            iconDeckSize.SetActive(false);
+        }
+        
         
     }
 

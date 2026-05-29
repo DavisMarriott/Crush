@@ -11,11 +11,20 @@ public class DeckSizeIndicator : MonoBehaviour
     {
         textMeshPro = GetComponent<TextMeshProUGUI>();
     }
-    void Update()
+    public void UpdateDeckSize()
     {
-        //deckSize = deckManager.deckSize;
-        textMeshPro.text = $"{deckManager.deckSize}";
-        Debug.Log(deckManager.deckSize);
-        Debug.Log($"Deck Size: {deckManager.deckSize}");
+
+        if (deckManager.deckSize >= 0)
+        {
+            textMeshPro.text = $"{deckManager.deckSize}";
+            //Debug.Log($"Deck Size: {deckManager.deckSize}");
+        }
+        
+        else
+        {
+            textMeshPro.text = "0";
+            //Debug.Log($"Deck Size: {deckManager.deckSize}");
+        }
+        
     }
 }

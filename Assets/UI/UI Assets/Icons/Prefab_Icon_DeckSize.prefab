@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1004524998016257922}
   - component: {fileID: 2135139797122562380}
   - component: {fileID: 9028769839160101553}
+  - component: {fileID: 8722652305422913965}
   m_Layer: 5
   m_Name: Prefab_Icon_DeckSize
   m_TagString: Untagged
@@ -61,7 +62,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -185,6 +186,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8722652305422913965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172964852809425544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2290e7e1184c42fca3816a14ecc113c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationTriggerAbilityIcon
+  iconAnimator: {fileID: 9028769839160101553}
+  deckSizeIndicator: {fileID: 430579231899901015}
 --- !u!1 &510563150204025812
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +417,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '#'
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce46503b67fc04d4ead5f4dcf89ea1a2, type: 2}
   m_sharedMaterial: {fileID: -6875868866237193346, guid: ce46503b67fc04d4ead5f4dcf89ea1a2, type: 2}
@@ -486,7 +501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de8b20abc11da4c098fd981c2b05e890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  deckSize: 0
+  deckManager: {fileID: 0}
 --- !u!1 &6213477955786791092
 GameObject:
   m_ObjectHideFlags: 0

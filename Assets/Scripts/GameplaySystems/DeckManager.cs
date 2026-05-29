@@ -9,6 +9,7 @@ public class DeckManager : MonoBehaviour
     [SerializeField] private DialogueCard[] startingDeck;
     public int startingHandSize = 4;
     [SerializeField] public int deckSize;
+    public AnimationTriggerIcon animationTriggerIcon;
     
     public struct DraftableUpgrade
     {
@@ -49,6 +50,7 @@ public class DeckManager : MonoBehaviour
     public void AddCardToDeck(DialogueCard card)
     {
         _deck.Add(card);
+        animationTriggerIcon.DeckSizeAddOne();
     }
 
     public void DiscardCard(DialogueCard card)
@@ -57,6 +59,7 @@ public class DeckManager : MonoBehaviour
         upgradeTracker.NoteCardPlayed(card);
         _hand.Remove(card);
         _discard.Add(card);
+        animationTriggerIcon.DeckSizeMinusOne();
     }
 
     public void DrawCard()
@@ -66,6 +69,7 @@ public class DeckManager : MonoBehaviour
         int randomIndex = Random.Range(0, _deck.Count);
         _hand.Add(_deck[randomIndex]);
         _deck.RemoveAt(randomIndex);
+        // animationTriggerIcon.DeckSizeAddOne();
     }
 
     public void DrawHand(int count)
@@ -147,6 +151,6 @@ public class DeckManager : MonoBehaviour
 
     void Update()
     {
-         deckSize = _deck.Count;
+         deckSize = _deck.Count + _hand.Count;
     }
 }
