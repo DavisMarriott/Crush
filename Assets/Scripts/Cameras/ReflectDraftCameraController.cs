@@ -17,6 +17,14 @@ public class ReflectDraftCameraController : MonoBehaviour
     [SerializeField] private CinemachineCamera draftScreenCam;
     [SerializeField] private CinemachineCamera hallCam;
 
+    private void Awake()
+    {
+        //solo the draft/locker cam from frame 1 so HallCam doesn't render briefly
+        //before the start-screen UI covers it (the menu lives in the locker shot)
+        if (draftScreenCam != null)
+            CinemachineCore.SoloCamera = draftScreenCam;
+    }
+
     // Subscribe in Start (not OnEnable) — PhaseManager.Instance may not be assigned yet
     // at OnEnable time depending on script execution order across the scene's GameObjects.
     // Start runs after all Awake calls have completed, so Instance is guaranteed to be set.

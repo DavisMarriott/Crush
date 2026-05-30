@@ -15,4 +15,8 @@ public class LoopHallway : ScriptableObject
     [Header("Lines that fire at the hallway trigger zones (index 0 = trigger 1, etc.)")]
     [TextArea(1, 3)]
     public string[] triggerLines;
+
+    [Header("Per-loop overrides")]
+    [Tooltip("When true, DialogueBox skips Luke + Daisy intro lines for this loop (e.g. loop 1's nervous freeze).")]
+    public bool skipIntros;
 }

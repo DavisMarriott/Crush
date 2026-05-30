@@ -26,7 +26,8 @@ MonoBehaviour:
   - "Really get in a good conversation with her\u2026"
   - "So that the dread of asking her to the dance doesn\u2019t kill me\u2026."
   - "Again\u2026"
-  - "Yep, let\u2019s go with that. \rAlrighty then - what else can I say to her?"
+  - "Yep, let\u2019s go with that."
+  - Alrighty then - what else can I say to her?
   commitLines: []
   isScripted: 1
   minLoop: 5

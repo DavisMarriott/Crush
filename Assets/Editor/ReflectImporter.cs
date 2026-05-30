@@ -346,9 +346,17 @@ namespace Crush.EditorTools
                 if (string.IsNullOrEmpty(t)) continue;
                 if (t.StartsWith("[!]")) continue;
 
-                if (section == "reflect") reflect.Add(t);
-                else if (section == "commit") commit.Add(t);
-                // "ignore" section: skip
+                //some doc paragraphs come back as one structure item with embedded newlines
+                //- split so each visible line becomes its own entry
+                foreach (var sub in t.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    var line = sub.Trim();
+                    if (string.IsNullOrEmpty(line)) continue;
+                    if (line.StartsWith("[!]")) continue;
+                    if (section == "reflect") reflect.Add(line);
+                    else if (section == "commit") commit.Add(line);
+                    // "ignore" section: skip
+                }
             }
             return (reflect, commit);
         }
@@ -466,7 +474,14 @@ namespace Crush.EditorTools
                     continue;
                 }
 
-                current.reflectLines.Add(text);
+                //split multi-line paragraphs into one entry per line (same fix as ExtractLoopSections)
+                foreach (var sub in text.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    var line = sub.Trim();
+                    if (string.IsNullOrEmpty(line)) continue;
+                    if (line.StartsWith("[!]")) continue;
+                    current.reflectLines.Add(line);
+                }
             }
             if (current != null) result.Add(current);
             return result;

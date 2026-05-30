@@ -15,5 +15,6 @@ MonoBehaviour:
   loop: 4
   triggerLines:
   - Just your run-of-the-mill time loop.
-  - Can't be that unusual right?
-  - No big deal.
+  - "I\u2019m sure plenty of guys get stuck in time loops at this age."
+  - "Can\u2019t be that unusual."
+  skipIntros: 0

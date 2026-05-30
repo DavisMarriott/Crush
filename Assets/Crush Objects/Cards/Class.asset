@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Class
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   isDance: 0
-  revealed: 0
+  revealed: 1
   previewText: Class was boring
   cost: 1
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
@@ -38,6 +38,10 @@ MonoBehaviour:
       charmImpact: 0
       line: I was fighting to stay awake when Mr. Miller started talking about the
         Roman Empire.
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: That actually worked.
     tags: 
     charmImpacts:
     - state: 1
