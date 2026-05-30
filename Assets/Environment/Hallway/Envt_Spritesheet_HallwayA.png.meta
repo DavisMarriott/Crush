@@ -296,6 +296,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Envt_Hallway_PipeA
+      rect:
+        serializedVersion: 2
+        x: 3949
+        y: 1243
+        width: 56
+        height: 2802
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b404cf8869d6d4e2f892a3f572749ba2
+      internalID: 1065000101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -308,7 +330,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":2,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Envt_Hallway_Doorway: 4887972012355628642
       Envt_Hallway_LockerEnd_Left: -7896591936809891826
@@ -316,6 +340,7 @@ TextureImporter:
       Envt_Hallway_Locker_A: 2084884692212940090
       Envt_Hallway_Locker_B: -1424389111069337305
       Envt_Hallway_Locker_C: -6227353460792684791
+      Envt_Hallway_PipeA: 1065000101
       Envt_Hallway_WallColumn: 2917569373199658818
       Envt_Hallway_WallMain: -2770676073636010647
   mipmapLimitGroupName: 
