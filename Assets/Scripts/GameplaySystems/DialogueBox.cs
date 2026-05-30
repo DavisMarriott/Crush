@@ -95,7 +95,8 @@ public class DialogueBox : MonoBehaviour
         // First card per loop: play Luke's intro line ("Hey Daisy") before his card dialogue runs.
         // confidenceState.introMade gets flipped to true at the end of this method (line below the Daisy branch),
         // so subsequent cards in the same loop skip both intro lines.
-        if (!confidenceState.introMade)
+        // Per-loop override: GameProgression.ShouldSkipIntrosThisLoop() reads from LoopHallway.skipIntros.
+        if (!confidenceState.introMade && !gameProgression.ShouldSkipIntrosThisLoop())
             yield return PlayIntroLine(lukeIntroLine, DialogueCard.DialogueCharacter.Boy);
 
         //parse card data and play (including confidence/charm scores) - for Luke Branch
@@ -175,7 +176,7 @@ public class DialogueBox : MonoBehaviour
             deckManager.RegisterTags(daisyBranch.tags);
 
             // First card per loop: play Daisy's intro line ("Hey Luke") before her card response runs.
-            if (!confidenceState.introMade)
+            if (!confidenceState.introMade && !gameProgression.ShouldSkipIntrosThisLoop())
                 yield return PlayIntroLine(daisyIntroLine, DialogueCard.DialogueCharacter.Girl);
         }
 

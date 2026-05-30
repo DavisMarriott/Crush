@@ -30,19 +30,19 @@ MonoBehaviour:
       line: I was- umm.... wondering... if.....
     - character: 0
       confidenceImpact: -1
-      charmImpact: 0
+      charmImpact: -1
       line: uhhh... if you would... uhh- maybe
     - character: 0
       confidenceImpact: -1
-      charmImpact: 0
+      charmImpact: -1
       line: be interested.....
     - character: 0
       confidenceImpact: -1
-      charmImpact: 0
+      charmImpact: -1
       line: in go- uhhh.....
     - character: 0
       confidenceImpact: -1
-      charmImpact: 0
+      charmImpact: -1
       line: sorry... ummm- do you wanna.....
     - character: 0
       confidenceImpact: -2
@@ -57,24 +57,56 @@ MonoBehaviour:
     daisyBranches: []
   - branchName: FirstLoop
     dialogue:
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Oh - hey Luke!
     - character: 0
       confidenceImpact: -1
       charmImpact: 0
       line: ........
-    - character: 1
-      confidenceImpact: -1
+    - character: 2
+      confidenceImpact: 0
       charmImpact: 0
-      line: Oh - hey Luke!
+      line: "Oh no\u2026."
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Say Something!
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: -1
+      line: "\u2026\u2026."
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: -1
+      line: Are you okay?
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "WHY AREN\u2019T YOU SAYING ANYTHING?!??"
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Earth to Luke\u2026.."
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "This isn\u2019t happening\u2026.."
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I don\u2019t feel very good."
     - character: 2
       confidenceImpact: -1
       charmImpact: 0
-      line: Say Something!
+      line: "I think I\u2019m gonna be si-"
     tags: 
     charmImpacts: []
     daisyBranches: []
   draftLines:
   - line: Yeah. Just keep it simple.
-  - line: "\u201CDaisy, will you go to the dance with me.\u201D"
+  - line: "\u201CDaisy, will you go to the dance with me?\u201D"
   - line: Straight forward.
   - line: I like it.
   - line: Confident. Like a man.

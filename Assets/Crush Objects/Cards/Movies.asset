@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Movies
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   isDance: 0
-  revealed: 0
+  revealed: 1
   previewText: Movies
   cost: 2
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
@@ -118,7 +118,8 @@ MonoBehaviour:
         line: "I mean - if you want to\u2026"
       tags: 
   draftLines:
-  - line: I think she likes movies....
+  - line: I think she likes movies.
+  - line: "That might be a good ice breaker\u2026"
   - line: I think she likes movies....
   availableUpgrades: []
   upgradeThreshold: 3

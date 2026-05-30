@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Notes
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   isDance: 0
-  revealed: 0
+  revealed: 1
   previewText: I took notes
   cost: 1
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
@@ -79,6 +79,7 @@ MonoBehaviour:
         line: You're the best! That would be awesome! You are such a life saver.
       tags: 
   draftLines:
-  - line: (none)
+  - line: She was out on Monday. I could offer her my notes.
+  - line: But is it creepy that I remembered that she was out?
   availableUpgrades: []
   upgradeThreshold: 3

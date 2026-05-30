@@ -53,7 +53,8 @@ namespace Crush.EditorTools
                 foreach (var tab in tabs)
                 {
                     var title = (tab.title ?? "").Trim();
-                    if (string.IsNullOrEmpty(title) || title == "Explainer")
+                    //skip the Explainer tab + any tab whose title starts with `[` (convention for non-card content like "Open Issues" / "Soccer Outdated")
+                    if (string.IsNullOrEmpty(title) || title == "Explainer" || title.StartsWith("[", StringComparison.Ordinal))
                     {
                         Debug.Log($"[CardsImporter] Skipping tab '{title}'.");
                         continue;
@@ -253,7 +254,8 @@ namespace Crush.EditorTools
                         {
                             character = "Boy",
                             text = lukeMatch.text,
-                            confidenceImpact = lukeMatch.conf
+                            confidenceImpact = lukeMatch.conf,
+                            charmImpact = lukeMatch.charm
                         });
                         continue;
                     }
@@ -264,7 +266,8 @@ namespace Crush.EditorTools
                         {
                             character = "BoyInternal",
                             text = internalMatch.text,
-                            confidenceImpact = internalMatch.conf
+                            confidenceImpact = internalMatch.conf,
+                            charmImpact = internalMatch.charm
                         });
                         continue;
                     }
@@ -279,7 +282,8 @@ namespace Crush.EditorTools
                             {
                                 character = "Girl",
                                 text = daisyInMain.text,
-                                confidenceImpact = daisyInMain.conf
+                                confidenceImpact = daisyInMain.conf,
+                                charmImpact = daisyInMain.charm
                             });
                             continue;
                         }
@@ -329,7 +333,8 @@ namespace Crush.EditorTools
                             {
                                 character = "Girl",
                                 text = dm.text,
-                                confidenceImpact = dm.conf
+                                confidenceImpact = dm.conf,
+                                charmImpact = dm.charm
                             });
                             continue;
                         }
@@ -343,18 +348,28 @@ namespace Crush.EditorTools
             return card;
         }
 
-        // Matches "[+N conf] Luke: text" / "[0 conf] Daisy: text" / "Luke: text" (no annotation = 0 conf)
+        // Matches "[+N conf] Luke: text" / "[0 conf, -1 charm] Daisy: text" / "Luke: text" (no annotation = 0 each)
+        // The annotation supports one or more comma-separated impacts inside a single bracket, e.g.
+        // [0 conf], [-1 charm], [+2 conf, -1 charm], [-1 charm, +2 conf] (order-flexible).
         // Returns null if the line doesn't match the expected speaker prefix.
         static DialogueParseResult MatchDialogueLine(string rawText, string speaker)
         {
             var t = rawText.Trim();
             int conf = 0;
+            int charm = 0;
 
-            // optional [+N conf] / [-N conf] / [0 conf] prefix
-            var annot = Regex.Match(t, @"^\[([+\-]?\d+)\s*conf\]\s*", RegexOptions.IgnoreCase);
+            //optional [N conf] / [N charm] / [N conf, N charm] / [N charm, N conf] prefix
+            var annot = Regex.Match(t, @"^\[([^\]]+)\]\s*");
             if (annot.Success)
             {
-                int.TryParse(annot.Groups[1].Value, out conf);
+                foreach (var piece in annot.Groups[1].Value.Split(','))
+                {
+                    var m = Regex.Match(piece.Trim(), @"^([+\-]?\d+)\s*(conf|charm)$", RegexOptions.IgnoreCase);
+                    if (!m.Success) continue;
+                    int.TryParse(m.Groups[1].Value, out int val);
+                    if (m.Groups[2].Value.Equals("conf", StringComparison.OrdinalIgnoreCase)) conf = val;
+                    else charm = val;
+                }
                 t = t.Substring(annot.Length);
             }
 
@@ -362,7 +377,7 @@ namespace Crush.EditorTools
             var sp = Regex.Match(t, $@"^{Regex.Escape(speaker)}:\s*(.+)$", RegexOptions.IgnoreCase);
             if (!sp.Success) return null;
 
-            return new DialogueParseResult { conf = conf, text = sp.Groups[1].Value.Trim() };
+            return new DialogueParseResult { conf = conf, charm = charm, text = sp.Groups[1].Value.Trim() };
         }
 
         static string StripBold(string s) => BoldStrip.Replace(s, m => m.Groups[1].Value).Trim();
@@ -436,7 +451,7 @@ namespace Crush.EditorTools
                 lp.FindPropertyRelative("character").enumValueIndex = (int)ParseCharacter(line.character);
                 lp.FindPropertyRelative("line").stringValue = line.text;
                 lp.FindPropertyRelative("confidenceImpact").intValue = line.confidenceImpact;
-                lp.FindPropertyRelative("charmImpact").intValue = 0;
+                lp.FindPropertyRelative("charmImpact").intValue = line.charmImpact;
             }
         }
 
@@ -561,11 +576,13 @@ namespace Crush.EditorTools
             public string character; // "Boy" | "Girl" | "BoyInternal"
             public string text;
             public int confidenceImpact;
+            public int charmImpact;
         }
 
         class DialogueParseResult
         {
             public int conf;
+            public int charm;
             public string text;
         }
     }

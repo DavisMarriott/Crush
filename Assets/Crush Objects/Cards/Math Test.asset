@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Math Test
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   isDance: 0
-  revealed: 0
+  revealed: 1
   previewText: Math Test
   cost: 2
   buttonColor: {r: 0, g: 0, b: 0, a: 1}

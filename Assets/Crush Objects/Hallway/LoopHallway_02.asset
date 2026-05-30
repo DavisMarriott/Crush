@@ -16,4 +16,5 @@ MonoBehaviour:
   triggerLines:
   - It's a conversation.
   - Girls are people too.
-  - I'm screwed.
+  - "Oh god I\u2019m screwed."
+  skipIntros: 0

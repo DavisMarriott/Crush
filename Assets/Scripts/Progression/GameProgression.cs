@@ -105,6 +105,15 @@ public class GameProgression : MonoBehaviour
     {
         loopCount++;
     }
+
+    //per-loop override lookup - currently only used by DialogueBox for the skipIntros flag.
+    //returns false if there's no scripted LoopHallway for this loop (base loops don't override).
+    public bool ShouldSkipIntrosThisLoop()
+    {
+        if (firstLoopManager == null) return false;
+        var lh = firstLoopManager.GetForLoop(loopCount);
+        return lh != null && lh.skipIntros;
+    }
     
     //turns off all special loop conditions
     private void BasicLoop()

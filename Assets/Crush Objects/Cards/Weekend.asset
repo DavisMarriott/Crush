@@ -14,78 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   isDance: 0
   revealed: 0
-  previewText: 
-  cost: 1
+  previewText: Weekend
+  cost: 3
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
-  lukeBranches:
-  - branchName: 'CARD: Weekend'
-    dialogue:
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: "Soooo\u2026. what are you up t-"
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: So.. do you..umm.. have any plans this weekend?
-    tags: 
-    charmImpacts:
-    - state: 2
-      impact: 1
-    - state: 3
-      impact: 2
-    - state: 4
-      impact: 0
-    daisyBranches:
-    - charmState: 0
-      dialogue:
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "Ummm\u2026. no - nott really\u2026."
-      tags: 
-    - charmState: 1
-      dialogue:
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: Ohh you know - just the usual stuff
-      tags: 
-    - charmState: 2
-      dialogue: []
-      tags: 
-    - charmState: 3
-      dialogue:
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: Ugh I wish. My parents are throwing this big 10th birthday party for
-          my little brother.
-      tags: 
-    - charmState: 4
-      dialogue:
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: Ugh I wish. My parents are throwing this big 10th birthday party for
-          my little brother.
-      tags: 
-    - charmState: 4
-      dialogue:
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: Ugh I wish. My parents are throwing this big 10th birthday party for
-          my little brother.
-      - character: 1
-        confidenceImpact: 3
-        charmImpact: 0
-        line: They said I have to be there.
-      - character: 1
-        confidenceImpact: 3
-        charmImpact: 0
-        line: But that's it though! I'm totally free outside of that.
-      tags: 
+  lukeBranches: []
   draftLines:
   - line: That's what guys with girlfriends talk about.
   - line: right?

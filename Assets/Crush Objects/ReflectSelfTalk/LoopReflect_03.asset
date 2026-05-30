@@ -18,7 +18,7 @@ MonoBehaviour:
   - "But\u2026 Daisy doesn't seem to remember anything\u2026"
   - '(to do: conditional line based on how you died)'
   - This is crazy.
-  - But at least I got a word out this time.
+  - 'But at least I got a word out this time. (to do: Make this conditional)'
   - Just need to give it another try.
   commitLines: []
   isScripted: 1
