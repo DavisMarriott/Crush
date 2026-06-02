@@ -4197,6 +4197,14 @@ PrefabInstance:
       propertyPath: hallwaySelfTalk
       value: 
       objectReference: {fileID: 1748535994}
+    - target: {fileID: 4140086091944439077, guid: 20d174e6d335c4ca8a6cdcb18a8ffe79, type: 3}
+      propertyPath: multiPickSlateSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140086091944439077, guid: 20d174e6d335c4ca8a6cdcb18a8ffe79, type: 3}
+      propertyPath: loop2DraftPickCount
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

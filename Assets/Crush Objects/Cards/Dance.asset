@@ -86,7 +86,7 @@ MonoBehaviour:
       charmImpact: 0
       line: "WHY AREN\u2019T YOU SAYING ANYTHING?!??"
     - character: 1
-      confidenceImpact: 0
+      confidenceImpact: -1
       charmImpact: 0
       line: "Earth to Luke\u2026.."
     - character: 2
@@ -94,7 +94,7 @@ MonoBehaviour:
       charmImpact: 0
       line: "This isn\u2019t happening\u2026.."
     - character: 2
-      confidenceImpact: -1
+      confidenceImpact: 0
       charmImpact: 0
       line: "I don\u2019t feel very good."
     - character: 2
@@ -108,7 +108,6 @@ MonoBehaviour:
   - line: Yeah. Just keep it simple.
   - line: "\u201CDaisy, will you go to the dance with me?\u201D"
   - line: Straight forward.
-  - line: I like it.
   - line: Confident. Like a man.
   - line: "You\u2019re a man now."
   - line: "That\u2019s what mom says."
