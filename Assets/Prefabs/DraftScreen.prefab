@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4075737818961743442}
   - component: {fileID: 7342068571949159373}
   - component: {fileID: 414499540909449100}
+  - component: {fileID: 2731710269468779616}
   m_Layer: 0
   m_Name: Character_Player
   m_TagString: Untagged
@@ -252,6 +253,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   lockerInsideAnimator: {fileID: 7166829856630401998}
+--- !u!114 &2731710269468779616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835535847506019946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8531d06f196fb42788d5169e5f0d9c62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicManager
+  musicHallway: {fileID: 0}
+  musicLocker: {fileID: 0}
+  phaseManager: {fileID: 0}
 --- !u!1 &3412941076464463679
 GameObject:
   m_ObjectHideFlags: 0

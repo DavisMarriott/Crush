@@ -8,6 +8,7 @@ public class PauseManager : MonoBehaviour
     public bool paused = false;
     // Assign menu game object here
     public GameObject menuCanvas;
+    public AudioSource mainMenuMusic;
     
     InputSystem_Actions.PauseActions action;
 
@@ -53,7 +54,8 @@ public class PauseManager : MonoBehaviour
         AudioListener.pause = true;
         paused =  true;
         menuCanvas.SetActive(true);
-        
+        mainMenuMusic.volume = 0f;
+
     }
 
     public void ResumeGame()
@@ -62,6 +64,7 @@ public class PauseManager : MonoBehaviour
         AudioListener.pause = false;
         paused = false;
         menuCanvas.SetActive(false);
+        mainMenuMusic.volume = 0.25f;
     }
 
    
