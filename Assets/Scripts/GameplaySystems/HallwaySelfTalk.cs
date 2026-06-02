@@ -111,7 +111,11 @@ public class HallwaySelfTalk : MonoBehaviour
             animationTriggerThoughtBubble.ThoughtBubbleOn();
             yield return new WaitForSeconds(0.5f);
             yield return dialogueTiming.Run(draftLine.line, target);
-            yield return new WaitForSeconds(1.5f);
+            // manual advance (space/click) - draft lines now wait on the player like convo
+            yield return new WaitUntil(() => DialogueAdvance.Pressed());
+            //clear per-line so the final line's text doesn't linger if the coroutine gets
+            //interrupted before the post-loop cleanup runs (script disable / phase race).
+            if (target != null) target.text = "";
         }
         // letterBoxAnimator.SetTrigger("LetterBoxOut"); — removed 2026-05-12: dedicated DraftScreenCam handles the visual cut.
         animationTriggerThoughtBubble.ThoughtBubbleHalf();

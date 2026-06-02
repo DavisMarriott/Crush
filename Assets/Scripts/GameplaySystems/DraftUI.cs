@@ -17,12 +17,16 @@ public class DraftUI : MonoBehaviour
     [Header("Loop-2 \"starting deck\" draft")]
     [Tooltip("On loop 2 the draft becomes a multi-pick: the player drafts this many cards to seed a starting deck.")]
     [SerializeField] private int loop2DraftPickCount = 3;
-    [Tooltip("How many card options to show on the loop-2 multi-pick draft.")]
-    [SerializeField] private int multiPickSlateSize = 6;
+    [Tooltip("How many card options to show per pick on the loop-2 multi-pick draft. 3 = same width as the normal draft.")]
+    [SerializeField] private int multiPickSlateSize = 3;
 
     // Multi-pick draft state (loop 2 only). For a normal draft _multiPick is false and _picksRemaining is 1.
     private int _picksRemaining = 1;
     private bool _multiPick = false;
+
+    // Cards currently on the multi-pick slate, in slot order. Picking refreshes only the picked
+    // slot; the others keep their card AND position when the slate comes back.
+    private readonly List<DialogueCard> _slateCards = new();
 
     // (Was: Start() { draftUI.SetActive(false); } — fired on first activation, which during a real
     // draft meant DraftUI deactivated itself a frame after ShowSingleCardDraft, killing the draft.
@@ -49,7 +53,8 @@ public class DraftUI : MonoBehaviour
 
         if (_multiPick)
         {
-            // Loop-2 "starting deck" draft: cards only, chosen from a wider slate.
+            // Loop-2 "starting deck" draft: pick one of the slate, that slot refills with a fresh
+            // card, the other slots stay put - like playing a card and drawing a replacement.
             int slots = Mathf.Min(multiPickSlateSize, cardOptions.Count);
 
             // Nothing left to offer — finish cleanly so the Upgrade/Draft phase doesn't hang.
@@ -60,12 +65,14 @@ public class DraftUI : MonoBehaviour
                 return;
             }
 
+            _slateCards.Clear();
             for (int i = 0; i < slots; i++)
             {
                 int idx = Random.Range(0, cardOptions.Count);
-                SpawnCardButton(cardOptions[idx]);
+                _slateCards.Add(cardOptions[idx]);
                 cardOptions.RemoveAt(idx);
             }
+            RenderMultiPickSlate();
             return;
         }
 
@@ -132,46 +139,82 @@ public class DraftUI : MonoBehaviour
         btn.onClick.AddListener(() => OnCardPicked(card));
     }
 
-    // Handles a drafted card pick for both the normal (single-pick) and loop-2 (multi-pick) drafts.
+    // Normal single-pick draft (and the loop-1 DANCE single draft): pick one, draft closes.
     private void OnCardPicked(DialogueCard card)
     {
         deckManager.AddCardToDeck(card);
-
-        // Play this card's draft self-talk on every pick (multi-pick included).
         hallwaySelfTalk.TriggerDraftLines(card.draftLines);
-
-        if (_multiPick)
-        {
-            _picksRemaining--;
-            if (_picksRemaining > 0)
-            {
-                // Hold the next options until this card's draft line finishes, then re-roll the slate.
-                // (Serializes picks so the per-pick draft lines never overlap; GetDraftOptions also
-                //  filters out cards we now own. ResetDeck is deferred until the last pick.)
-                StartCoroutine(ShowNextAfterDraftLines());
-            }
-            else
-            {
-                deckManager.ResetDeck();
-                CloseDraftUI();
-            }
-            return;
-        }
-
-        // Normal single-pick draft.
         deckManager.ResetDeck();
         CloseDraftUI();
     }
 
-    // Clears the slate, waits for the just-played draft line to finish, then shows the next options.
-    private IEnumerator ShowNextAfterDraftLines()
+    // Renders the multi-pick slate from _slateCards (clears the row first). Slot order = list order,
+    // so unpicked cards always come back in the same place.
+    private void RenderMultiPickSlate()
+    {
+        for (int i = draftContainer.childCount - 1; i >= 0; i--)
+            Destroy(draftContainer.GetChild(i).gameObject);
+
+        for (int s = 0; s < _slateCards.Count; s++)
+            SpawnMultiPickButton(_slateCards[s], s);
+    }
+
+    private void SpawnMultiPickButton(DialogueCard card, int slotIndex)
+    {
+        var btn = Instantiate(thoughtButtonPrefab, draftContainer);
+
+        var rt = btn.GetComponent<RectTransform>();
+        rt.anchorMin = new Vector2(0.5f, 0.5f);
+        rt.anchorMax = new Vector2(0.5f, 0.5f);
+        rt.anchoredPosition = Vector2.zero;
+        rt.sizeDelta = draftButtonSize;
+
+        var label = btn.transform.Find("Card_Art/PreviewText").GetComponent<TextMeshProUGUI>();
+        label.text = card.previewText;
+
+        btn.onClick.AddListener(() => OnMultiPickPicked(slotIndex));
+    }
+
+    private void OnMultiPickPicked(int slotIndex)
+    {
+        DialogueCard picked = _slateCards[slotIndex];
+        deckManager.AddCardToDeck(picked);          // now owned -> excluded from the refill draw
+        hallwaySelfTalk.TriggerDraftLines(picked.draftLines);
+        _picksRemaining--;
+
+        // Done seeding the starting deck.
+        if (_picksRemaining <= 0)
+        {
+            deckManager.ResetDeck();
+            CloseDraftUI();
+            return;
+        }
+
+        // Replace ONLY the picked slot. Owned cards are already dropped by GetDraftOptions; also
+        // skip the other slate cards so we don't double up. Other slots keep their card.
+        List<DialogueCard> pool = deckManager.GetDraftOptions(10);
+        for (int s = 0; s < _slateCards.Count; s++)
+            if (s != slotIndex) pool.Remove(_slateCards[s]);
+
+        if (pool.Count > 0)
+            _slateCards[slotIndex] = pool[Random.Range(0, pool.Count)];
+        else
+            _slateCards.RemoveAt(slotIndex);  // pool exhausted - drop the slot
+
+        // Clear the whole row and let the draft self-talk play, then bring the slate back with the
+        // unpicked cards in their same spots + the new card in the picked slot.
+        StartCoroutine(RefillAfterDraftLines());
+    }
+
+    // Empties the row, waits for the just-played draft line, then re-shows the slate.
+    private IEnumerator RefillAfterDraftLines()
     {
         for (int i = draftContainer.childCount - 1; i >= 0; i--)
             Destroy(draftContainer.GetChild(i).gameObject);
 
         yield return new WaitUntil(() => !hallwaySelfTalk.draftLinesActive);
 
-        RenderDraftOptions();
+        RenderMultiPickSlate();
     }
 
     private void SpawnUpgradeButton(DeckManager.DraftableUpgrade dup)

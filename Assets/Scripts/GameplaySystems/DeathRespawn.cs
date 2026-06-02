@@ -34,7 +34,10 @@ public class DeathRespawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (confidenceState.confidence <= 0 && !isDead)
+        //narrow defer: only wait if the dialogue is actively playing a Death branch.
+        //For non-Death branches (or no dialogue at all) Death fires immediately.
+        bool deathBranchPlaying = dialogueBox != null && dialogueBox.IsPlayingDeathBranch;
+        if (confidenceState.confidence <= 0 && !isDead && !deathBranchPlaying)
         {
             StartCoroutine(Death());
         }
@@ -45,6 +48,8 @@ public class DeathRespawn : MonoBehaviour
     {
         PhaseManager.Instance.TransitionTo(GamePhase.Death);
         isDead = true;
+        //safe now that DeathRespawn.Update defers on IsPlayingDeathBranch - Death() only fires here
+        //after any Death-branch dialogue has reached its natural end (or it was never running).
         dialogueBox.CloseDialogueBox();
         
         //snapshot for branch tracking

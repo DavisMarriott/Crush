@@ -135,40 +135,15 @@ public class AnimationTriggerPlayer : MonoBehaviour
     
     public void EnterDeathOne()
     {
-        
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        
-        // if ( stateInfo.IsName("Player_Death01_CYCLE") )
-        // {
-        //     animator.Play("Player_Death01_CYCLE", 0);
-        // }
-        
-        if ( stateInfo.IsName("Player_State01_CYCLE") )
-        {
-            animator.Play("Player_State01_to_Death01", 0);
-        }
-        
-        else if ( stateInfo.IsName("Player_State02_CYCLE") )
-        {
-            animator.Play("Player_State02_to_Death01", 0);
-        }
-        
-        else if ( stateInfo.IsName("Player_State03_CYCLE") )
-        {
-            animator.Play("Player_State03_to_Death01", 0);
-        }
-        
-        else if ( stateInfo.IsName("Player_State03_Oneshot_Talk") )
-        {
-            animator.Play("Player_State03_to_Death01", 0);
-        }
-        
-        
-        else
-        {
-            animator.Play("Player_Death01_CYCLE", 0);
-        }
-        
+
+        // already dead / already going down - don't restart it
+        if ( stateInfo.IsName("Player_Death01_CYCLE") || stateInfo.IsName("Player_State03_to_Death01") )
+            return;
+
+        // State03_to_Death01 is the only death transition that exists - old code tried State01/02
+        // ones (they don't), then snapped to the dead pose. just always play the real one.
+        animator.Play("Player_State03_to_Death01", 0);
     }
     
     public void EnterStart()

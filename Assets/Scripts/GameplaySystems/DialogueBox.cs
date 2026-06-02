@@ -36,6 +36,10 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private string lukeIntroLine;
     [SerializeField] private string daisyIntroLine;
 
+    [Header("Death")]
+    [Tooltip("Seconds the final Death-branch line holds on screen (no input) before Luke dies. Player shouldn't have to 'press space to die'.")]
+    [SerializeField] private float deathFinalLineHold = 2f;
+
 
 
     public void Start()
@@ -56,6 +60,8 @@ public class DialogueBox : MonoBehaviour
 
         if (lukeBranch == null || lukeBranch.dialogue == null || lukeBranch.dialogue.Length == 0)
         {
+            // no death branch authored - slump now, since the line loop below won't run to do it
+            playerMovement.GetConfidencePose();
             Debug.LogWarning($"No valid Luke branch for confidence {confidenceState.confidence} on card {dialogueCard.previewText}");
             return;
         }
@@ -64,6 +70,9 @@ public class DialogueBox : MonoBehaviour
         // Bring thought bubble to full while dialogue is showing
         animationTriggerThoughtBubble.ThoughtBubbleOn();
         dialogueBox.SetActive(true);
+        //narrow defer-gate: only true for Death branch dialogues - lets the Death lines play
+        //before DeathRespawn closes the dialogue UI. Normal/Awkward/etc. don't set this.
+        _isPlayingDeathBranch = (lukeBranch.branchName == "Death");
         StartCoroutine(SelectAnim());
         //wait to let the select animation play
         IEnumerator SelectAnim()
@@ -85,7 +94,7 @@ public class DialogueBox : MonoBehaviour
         if (speaker == DialogueCard.DialogueCharacter.Boy)
             playerMovement.PlayerTalk();
         yield return dialogueTiming.Run(line, dialogueText);
-        yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
+        yield return new WaitUntil(() => DialogueAdvance.Pressed(nextLineAction.action));
         dialogueText.text = "";
     }
 
@@ -96,12 +105,14 @@ public class DialogueBox : MonoBehaviour
         // confidenceState.introMade gets flipped to true at the end of this method (line below the Daisy branch),
         // so subsequent cards in the same loop skip both intro lines.
         // Per-loop override: GameProgression.ShouldSkipIntrosThisLoop() reads from LoopHallway.skipIntros.
-        if (!confidenceState.introMade && !gameProgression.ShouldSkipIntrosThisLoop())
+        // ...but never on a death branch - "Hey Daisy" makes no sense if he's dying
+        if (!confidenceState.introMade && !gameProgression.ShouldSkipIntrosThisLoop() && !_isPlayingDeathBranch)
             yield return PlayIntroLine(lukeIntroLine, DialogueCard.DialogueCharacter.Boy);
 
         //parse card data and play (including confidence/charm scores) - for Luke Branch
-        foreach (DialogueCard.DialogueLine line in lukeBranch.dialogue)
+        for (int i = 0; i < lukeBranch.dialogue.Length; i++)
         {
+            DialogueCard.DialogueLine line = lukeBranch.dialogue[i];
             SetSpeakerIndicator(line.character);
             if (line.character == DialogueCard.DialogueCharacter.BoyInternal)
             {
@@ -136,13 +147,27 @@ public class DialogueBox : MonoBehaviour
                 animationTriggerPlayer.ParticlesNervousStateTurnOn();
             }
             
-            playerMovement.GetConfidencePose();
+            // death branch: hold the slump til the final line (below); other branches pose per line
+            if (!_isPlayingDeathBranch)
+                playerMovement.GetConfidencePose();
             animationTriggerCrush.GetCharmPose();
-            yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
-            hallwaySelfTalk.selfTalkText.text = "";
-            dialogueText.text = "";
+
+            // final death line - don't make the player press space to die. slump, hold a beat,
+            // then the loop ends and Death() takes over. other lines advance on input.
+            bool isFinalDeathLine = _isPlayingDeathBranch && i == lukeBranch.dialogue.Length - 1;
+            if (isFinalDeathLine)
+            {
+                playerMovement.GetConfidencePose();
+                yield return new WaitForSeconds(deathFinalLineHold);
+            }
+            else
+            {
+                yield return new WaitUntil(() => DialogueAdvance.Pressed(nextLineAction.action));
+                hallwaySelfTalk.selfTalkText.text = "";
+                dialogueText.text = "";
+            }
         }
-        
+
 
         // apply charm impact based on current charm state
         DialogueCard.CharmState currentCharmState = GetCurrentCharmState(charmState.charm);
@@ -176,7 +201,7 @@ public class DialogueBox : MonoBehaviour
             deckManager.RegisterTags(daisyBranch.tags);
 
             // First card per loop: play Daisy's intro line ("Hey Luke") before her card response runs.
-            if (!confidenceState.introMade && !gameProgression.ShouldSkipIntrosThisLoop())
+            if (!confidenceState.introMade && !gameProgression.ShouldSkipIntrosThisLoop() && !_isPlayingDeathBranch)
                 yield return PlayIntroLine(daisyIntroLine, DialogueCard.DialogueCharacter.Girl);
         }
 
@@ -216,7 +241,7 @@ public class DialogueBox : MonoBehaviour
                 
                 charmState.charm += line.charmImpact;
                 playerMovement.GetConfidencePose();
-                yield return new WaitUntil(() => nextLineAction.action.WasPerformedThisFrame());
+                yield return new WaitUntil(() => DialogueAdvance.Pressed(nextLineAction.action));
                 hallwaySelfTalk.selfTalkText.text = "";
                 dialogueText.text = "";
             }
@@ -225,8 +250,17 @@ public class DialogueBox : MonoBehaviour
         // Card finished playing — minimize bubble between cards
         animationTriggerThoughtBubble.ThoughtBubbleHalf();
         confidenceState.introMade = true;
+
+        // grab it before CloseDialogueBox clears the flag
+        bool wasDeathBranch = _isPlayingDeathBranch;
         CloseDialogueBox();
-        if (dialogueCard.isDance)
+
+        if (wasDeathBranch)
+        {
+            // died this card - don't deal a new hand. Death() was deferred til now and takes
+            // over. drawing here flashed a stray "next turn" before the death screen showed.
+        }
+        else if (dialogueCard.isDance)
         {
             gameProgression.AskedToDance();
         }
@@ -237,7 +271,7 @@ public class DialogueBox : MonoBehaviour
 
             cardContainer.SetActive(true);
         }
-        
+
     }
 
     // figure out which charm state bucket the current charm value falls into
@@ -279,8 +313,27 @@ public class DialogueBox : MonoBehaviour
     {
         StopAllCoroutines();
         dialogueBox.SetActive(false);
+        _isPlayingDeathBranch = false;
         dialogueText.text = string.Empty;
+        //also clear the internal-monologue text - if the card's last line was BoyInternal and
+        //the per-line cleanup got skipped (coroutine killed, death race, etc.), it'd otherwise
+        //linger into the next hallway phase under the minimized bubble.
+        if (hallwaySelfTalk != null && hallwaySelfTalk.selfTalkText != null)
+            hallwaySelfTalk.selfTalkText.text = string.Empty;
+        //hide both speech bubbles - if the last line was Daisy's (or Luke's) the bubble is in
+        //its "Show" animator state and won't go away on its own. SetSpeakerIndicator hides the
+        //other one each line, but the FINAL line's bubble never gets a hide command otherwise.
+        if (animationTriggerSpeechBubblePlayer != null) animationTriggerSpeechBubblePlayer.SpeechBubbleHide();
+        if (animationTriggerSpeechBubbleCrush != null) animationTriggerSpeechBubbleCrush.SpeechBubbleHide();
     }
+
+    //narrow gate - true ONLY while ShowDialogue is playing a card whose chosen branch is "Death".
+    //DeathRespawn uses this to defer death-screen takeover until the Death branch dialogue finishes.
+    //Other branches (Normal/Awkward/etc.) DON'T set this - if confidence drops to 0 mid-Normal,
+    //Death() fires immediately and kills any remaining lines (acceptable - the remaining Normal
+    //lines wouldn't make narrative sense post-death anyway).
+    private bool _isPlayingDeathBranch;
+    public bool IsPlayingDeathBranch => _isPlayingDeathBranch;
     
 
 }

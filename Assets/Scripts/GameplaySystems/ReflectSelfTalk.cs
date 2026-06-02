@@ -10,6 +10,7 @@ public class ReflectSelfTalk : MonoBehaviour
     [SerializeField] private ReflectBranch[] branches;
     [SerializeField] private float holdAfterLine = 2f;
     [SerializeField] private float maxRevealWait = 3f;   // safety cap so the reveal-wait below can't hang
+    [SerializeField] private float minHoldAfterReveal = 0.3f;  // extra hold after the reveal flag fires - catches cases where the EnableSelfTalk anim event fires before the bubble is visually open
     [SerializeField] private SelfTalkManager selfTalkManager;   // reveal signal — EnableSelfTalk sets its flag
 
     public IEnumerator Play(LoopSnapshot snapshot, int loopCount)
@@ -63,11 +64,17 @@ public class ReflectSelfTalk : MonoBehaviour
             yield return null;
         }
 
+        //extra hold once revealed - on some loops (loop 2 "What??") the EnableSelfTalk event fires
+        //before the bubble is fully open visually, so short lines beat the open animation otherwise
+        if (selfTalkManager != null && selfTalkManager.SelfTalkRevealed && minHoldAfterReveal > 0f)
+            yield return new WaitForSeconds(minHoldAfterReveal);
+
         foreach (string line in lines)
         {
             animationTriggerThoughtBubble.ThoughtBubbleOn();
             yield return dialogueTiming.Run(line, selfTalkText);
-            yield return new WaitForSeconds(holdAfterLine);
+            // manual advance (space/click) - reflect + commit lines now wait on the player like convo
+            yield return new WaitUntil(() => DialogueAdvance.Pressed());
             selfTalkText.text = "";
         }
 

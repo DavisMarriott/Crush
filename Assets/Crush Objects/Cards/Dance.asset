@@ -94,7 +94,7 @@ MonoBehaviour:
       charmImpact: 0
       line: "This isn\u2019t happening\u2026.."
     - character: 2
-      confidenceImpact: 0
+      confidenceImpact: -1
       charmImpact: 0
       line: "I don\u2019t feel very good."
     - character: 2

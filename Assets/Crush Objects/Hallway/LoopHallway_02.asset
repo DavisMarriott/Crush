@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoopHallway
   loop: 2
   triggerLines:
-  - It's a conversation.
+  - "It's just a conversation\u2026"
   - Girls are people too.
   - "Oh god I\u2019m screwed."
   skipIntros: 0
