@@ -62,7 +62,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -72,7 +72,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: -0.75
+  Pan2D: -0.65
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   soundEffect3: {fileID: 8300000, guid: f45358bb12bdc4031a761cc501beb4fb, type: 3}
   soundEffect4: {fileID: 8300000, guid: fb98c4c9ccb564c71a4ca0bdb496c089, type: 3}
   soundEffect5: {fileID: 8300000, guid: 71f9c98c6e95f4069a75c47078a83f59, type: 3}
-  soundEffect6: {fileID: 8300000, guid: a60edc9a05ff142edb2fa779356b9f77, type: 3}
+  soundEffect6: {fileID: 8300000, guid: 510c701f0bbcf4db6b27aa5b312823f3, type: 3}
 --- !u!95 &9028769839160101553
 Animator:
   serializedVersion: 7
