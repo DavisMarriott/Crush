@@ -35,6 +35,10 @@ public class MilestoneTracker : MonoBehaviour
                 return snapshot.cardsPlayed != null && snapshot.cardsPlayed.Count >= cond.threshold;
             case MilestoneConditionType.DialogueTagFired:
                 return snapshot.tagsFired != null && snapshot.tagsFired.Contains(cond.tag);
+            case MilestoneConditionType.LoopReached:
+                // threshold = loop number. loopCount is already the loop being entered (bumped on
+                // death before reflect). Milestones are one-shot, so >= = "first reflect at/past loop X".
+                return loopCount >= cond.threshold;
         }
         return false;
     }

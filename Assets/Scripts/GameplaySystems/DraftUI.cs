@@ -79,6 +79,15 @@ public class DraftUI : MonoBehaviour
         // Normal draft: a mix of cards + available upgrades across 3 slots.
         List<DeckManager.DraftableUpgrade> upgradeOptions = deckManager.GetAvailableUpgrades();
 
+        // Nothing to draft AND nothing to upgrade — close cleanly so the phase doesn't hang on an
+        // empty screen (DeathRespawn waits on the draft UI closing). Falls through to commit/hallway.
+        if (cardOptions.Count == 0 && upgradeOptions.Count == 0)
+        {
+            deckManager.ResetDeck();
+            CloseDraftUI();
+            return;
+        }
+
         for (int slot = 0; slot < 3; slot++)
         {
             if (cardOptions.Count == 0 && upgradeOptions.Count == 0) break;

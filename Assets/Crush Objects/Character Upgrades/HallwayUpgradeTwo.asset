@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b84911f0b82974d33a871facbd0f2d19, type: 3}
-  m_Name: RemoveApproachDrain
+  m_Name: HallwayUpgradeTwo
   m_EditorClassIdentifier: Assembly-CSharp::CharacterUpgrade
-  upgradeName: Remove Approach Drain
+  upgradeName: Hallway Upgrade 2
   effect: 2
-  intValue: 2
-  bannerText: 
+  intValue: 3
+  bannerText: '[TEMP] +2 Hallway Approach Confidence'

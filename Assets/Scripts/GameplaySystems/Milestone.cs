@@ -6,6 +6,7 @@ public enum MilestoneConditionType
     PeakCharmReached,
     CardsPlayedInLoopAtLeast,
     DialogueTagFired,
+    LoopReached,        // fires on the reflect of loop >= threshold (threshold = loop number)
 }
 
 [System.Serializable]

@@ -18,8 +18,8 @@ public class ReflectSelfTalk : MonoBehaviour
         ReflectBranch chosen = SelectBranch(snapshot, loopCount);
         if (chosen == null)
         {
-            Debug.Log("[ReflectSelfTalk] no matching branch — holding blank");
-            yield return new WaitForSeconds(holdAfterLine);
+            // no reflect content this loop - skip straight to draft, don't park on a blank bubble
+            Debug.Log("[ReflectSelfTalk] no matching branch — skipping reflect");
             yield break;
         }
 
@@ -50,8 +50,7 @@ public class ReflectSelfTalk : MonoBehaviour
     {
         if (lines == null || lines.Length == 0)
         {
-            yield return new WaitForSeconds(holdAfterLine);
-            // animationTriggerThoughtBubble.ThoughtBubbleHalf();
+            // no lines - fall through immediately, no blank hold
             yield break;
         }
 
