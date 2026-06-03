@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84911f0b82974d33a871facbd0f2d19, type: 3}
   m_Name: HallwayUpgradeOne
   m_EditorClassIdentifier: Assembly-CSharp::CharacterUpgrade
-  upgradeName: HallwayUpgradeOne
+  upgradeName: Hallway Upgrade 1
   effect: 2
   intValue: 2
   bannerText: '[TEMP] +1 Hallway Approach Confidence '
