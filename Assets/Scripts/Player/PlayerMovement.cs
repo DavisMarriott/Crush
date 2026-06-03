@@ -84,17 +84,20 @@ public class PlayerMovement : MonoBehaviour
      {
          //tweak these numbers to edit confidence range/pose pairing
          //grabs first true condition
-         if (confidenceState.confidence <= 0)
-             animTrigger.EnterDeathOne();
-         else if (confidenceState.confidence <= 3)
+         if (confidenceState.confidence <= 3)
          {
              animTrigger.EnterStateThree();
          }
              
          else if (confidenceState.confidence <= 9)
+         {
              animTrigger.EnterStateTwo();
+         }
+
          else
+         {
              animTrigger.EnterStateOne();
+         }
      }
 
      public void PlayerTalk()

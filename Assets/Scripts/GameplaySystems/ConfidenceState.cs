@@ -12,7 +12,6 @@ public class ConfidenceState : MonoBehaviour
     [SerializeField] private CharmState charmState;
     [SerializeField] private DeckManager deckManager;
     [SerializeField] private GameProgression gameProgression;
-    [SerializeField] private AnimationTriggerPlayer animationTriggerPlayer;
     [SerializeField] private ConfidenceHeartMeter heartMeter;
     
 

@@ -4,6 +4,7 @@ public class AnimationTriggerPlayer : MonoBehaviour
 {
     // I think this just lets us access the animator attached to the game object (our character)
     private Animator animator;
+    // public DeathRespawn deathRespawn;
     public Animator particlesConfidenceUp;
     public Animator particlesConfidenceDown;
     public Animator particlesNervousState;
@@ -203,11 +204,7 @@ public class AnimationTriggerPlayer : MonoBehaviour
     
     public void LockerWake()
     {
-        
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        
         animator.Play("Player_Locker_Wake_to_Idle", 0);
-        
     }
     
     public void LockerLookRight()
@@ -248,21 +245,20 @@ public class AnimationTriggerPlayer : MonoBehaviour
     public void LockerCloseDMenu()
     {
         
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         animator.Play("Player_Locker_LockerClosed_CYCLE", 0);
         
     }
     
     public void LockerOpen()
     {
-        
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        
         animator.Play("Player_Locker_LockerOpen", 0);
-        
     }
-    
-    
+
+    // DELETE this if we roll back Death respawn Update stuff
+    // public void TriggerDeath()
+    // {
+    //     deathRespawn.DeathCoroutine();
+    // }
     
     
     // Thought bubble scaling and position //

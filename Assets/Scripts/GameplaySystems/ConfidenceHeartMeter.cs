@@ -8,6 +8,7 @@ public class ConfidenceHeartMeter : MonoBehaviour
    public GameObject parentObject;
    [SerializeField] ConfidenceState confidenceState;
    public Animator postFxAnimator;
+   public AnimationTriggerPlayer animationTriggerPlayer;
 
    // // used only for testing
    //public int startingConfidence = 5;
@@ -86,7 +87,9 @@ public class ConfidenceHeartMeter : MonoBehaviour
    public void SpawnHeart()
    {
       // Create Game Object
-      Instantiate(heartPrefab, parentObject.transform);
+      GameObject newHeart = Instantiate(heartPrefab, parentObject.transform);
+      DeathAnimationTrigger deathAnimationTrigger = newHeart.GetComponent<DeathAnimationTrigger>();
+      deathAnimationTrigger.animationTriggerPlayer = GameObject.Find("Character_Player").GetComponent<AnimationTriggerPlayer>();
       PositivePulse();
 
    }

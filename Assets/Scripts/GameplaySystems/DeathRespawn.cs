@@ -32,7 +32,7 @@ public class DeathRespawn : MonoBehaviour
     [HideInInspector] public DebugMenu debugMenu;
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         //narrow defer: only wait if the dialogue is actively playing a Death branch.
         //For non-Death branches (or no dialogue at all) Death fires immediately.
@@ -75,9 +75,10 @@ public class DeathRespawn : MonoBehaviour
         //end of updating loopSnapshot: Next - game progression captures it
         gameProgression.lastLoop = loopSnapshot;
         
-        
         //resume death sequence
         inConversationTrigger.enabled = false;
+        animationTriggerPlayer.EnterDeathOne();
+        animationTriggerPlayer.ParticlesNervousStateTurnOff();
         yield return new WaitForSeconds(2f);
         deathScreen.SetActive(true);
         gameProgression.NextLoop();
