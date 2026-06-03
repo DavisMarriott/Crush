@@ -814,15 +814,8 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.13333334
-    functionName: Blink02
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.26666668
-    functionName: 
+  - time: 0.33333334
+    functionName: ThoughtBubbleOff
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -844,6 +837,13 @@ AnimationClip:
     messageOptions: 0
   - time: 1.1
     functionName: Clothing09
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.1666666
+    functionName: TriggerDeath
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
