@@ -83,6 +83,8 @@ public class PhaseManager : MonoBehaviour
         if (currentPhase == GamePhase.Death)
         {
             iconDeckSize.SetActive(false);
+            // clear any leftover hearts so they don't carry into the next loop (respawn re-adds from 0)
+            confidenceHeartMeter.ClearAllHearts();
         }
         
         

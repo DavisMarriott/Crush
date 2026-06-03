@@ -95,11 +95,16 @@ public class ConfidenceHeartMeter : MonoBehaviour
    {
       
       List<GameObject> totalHearts = new List<GameObject>();
-      foreach (Transform child in transform) 
+      foreach (Transform child in transform)
       {
+         // skip hearts already mid-break - their Destroy is a deferred anim event, so without this
+         // RemoveHearts keeps re-breaking the SAME last heart each tick and the rest linger (the bug).
+         Animator anim = child.GetComponent<Animator>();
+         var state = anim.GetCurrentAnimatorStateInfo(0);
+         if (state.IsName("Heart_Break") || state.IsName("Heart_Break_Long")) continue;
          totalHearts.Add(child.gameObject);
       }
-      
+
       if (totalHearts.Count > 1)
       { 
          // Get  the last index
@@ -122,6 +127,15 @@ public class ConfidenceHeartMeter : MonoBehaviour
 
       NegativePulse();
 
+   }
+
+   // Wipe every heart immediately. Called on death so any stragglers (a break anim that got
+   // interrupted, etc.) don't carry into the next loop - the respawn re-adds startingConfidence
+   // hearts from a clean 0.
+   public void ClearAllHearts()
+   {
+      foreach (Transform child in transform)
+         Destroy(child.gameObject);
    }
 
    public void LowConfidenceCheck()
