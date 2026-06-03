@@ -111,7 +111,7 @@ public class DeathRespawn : MonoBehaviour
         //   1. Scripted loop branch (isScripted == true, loop-matched)  — the narrative spine, always wins
         //   2. Milestone override                                       — replaces conditional fallback
         //   3. Conditional / legacy ReflectBranch                       — picked by Play()'s SelectBranch
-        // TODO (future task): scripted-vs-milestone overlap. When both match the same loop today,
+        // TODO (future task): scripted-vs-milestone overlap. When both match the same loop,
         // the milestone's reflect lines are SKIPPED but the upgrade still applies + marks complete.
         // Davis flagged this for the first 4–5 loops (narrative intro) — we need both to play somehow.
         // Probably: chain them (scripted then milestone, or vice-versa), or queue the milestone for

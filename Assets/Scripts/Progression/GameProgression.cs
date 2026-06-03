@@ -31,7 +31,7 @@ public class GameProgression : MonoBehaviour
     // Persists across loops within a run (set once by MilestoneTracker, never reset).
     // Base is 1 (trigger 1 is dialogue-only, no drain) - hallway starts at -2 total
     // (triggers 2+3 drain). Upgrades push this to 2 (-1 total) then 3 (-0 total).
-    private int approachDrainDisabledCount = 1;
+    public int approachDrainDisabledCount = 1;
 
     private void Start()
     {
