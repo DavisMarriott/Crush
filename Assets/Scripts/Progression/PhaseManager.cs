@@ -17,6 +17,8 @@ public class PhaseManager : MonoBehaviour
     public AudioSource postFxAudio;
     public GameObject postProcessingVolumeNegative;
     public GameObject iconDeckSize;
+    public GameObject iconConfidentWalk;
+
 
     private void Awake()
     {
@@ -75,6 +77,8 @@ public class PhaseManager : MonoBehaviour
         if (currentPhase == GamePhase.UpgradeDraft)
         {
             iconDeckSize.SetActive(true);
+            iconConfidentWalk.SetActive(true);
+
             thoughtBubbleHallwayAudio.enabled = false;
             postFxAudio.enabled = false;
             postProcessingVolumeNegative.SetActive(false);
@@ -83,6 +87,7 @@ public class PhaseManager : MonoBehaviour
         if (currentPhase == GamePhase.Death)
         {
             iconDeckSize.SetActive(false);
+            iconConfidentWalk.SetActive(false);
             // clear any leftover hearts so they don't carry into the next loop (respawn re-adds from 0)
             confidenceHeartMeter.ClearAllHearts();
         }

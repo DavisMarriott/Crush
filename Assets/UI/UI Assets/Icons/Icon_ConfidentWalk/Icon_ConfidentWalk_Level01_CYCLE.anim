@@ -31,7 +31,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.06666667
+        time: 0.033333335
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -43,7 +43,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Heart_01/Text_Level03
+    path: Icon_Parent/Upgrade_Indicators/Icon_Chevron_Up_01
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -61,7 +61,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.06666667
+        time: 0.033333335
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -73,7 +73,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Heart_01/Text_Level02
+    path: Icon_Parent/Upgrade_Indicators/Icon_Chevron_Up_02
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -91,7 +91,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.06666667
+        time: 0.033333335
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -103,7 +103,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Upgrade_Indicators/Icon_Chevron_Up_01
+    path: Icon_Parent/Heart_01/Text_Level03
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -121,7 +121,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.06666667
+        time: 0.033333335
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -133,7 +133,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Upgrade_Indicators/Icon_Chevron_Up_02
+    path: Icon_Parent/Heart_01/Text_Level02
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -151,7 +151,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.06666667
+        time: 0.033333335
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -163,7 +163,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Heart_01/Text_Level01
+    path: Icon_Parent/Heart_01/Text_Level01
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -176,7 +176,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2176746333
+      path: 4055704416
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -185,7 +185,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 4139365323
+      path: 1756656346
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -194,7 +194,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3035546623
+      path: 1272919729
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -203,7 +203,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 770150981
+      path: 1020790311
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -212,7 +212,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1873863281
+      path: 2781960093
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -226,7 +226,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.06666667
+    m_StopTime: 0.033333335
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -256,7 +256,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.06666667
+        time: 0.033333335
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -268,7 +268,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Heart_01/Text_Level03
+    path: Icon_Parent/Upgrade_Indicators/Icon_Chevron_Up_01
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -286,7 +286,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.06666667
+        time: 0.033333335
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -298,7 +298,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Heart_01/Text_Level02
+    path: Icon_Parent/Upgrade_Indicators/Icon_Chevron_Up_02
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -316,7 +316,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.06666667
+        time: 0.033333335
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -328,7 +328,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Upgrade_Indicators/Icon_Chevron_Up_01
+    path: Icon_Parent/Heart_01/Text_Level03
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -346,7 +346,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.06666667
+        time: 0.033333335
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -358,7 +358,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Upgrade_Indicators/Icon_Chevron_Up_02
+    path: Icon_Parent/Heart_01/Text_Level02
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -376,7 +376,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.06666667
+        time: 0.033333335
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -388,7 +388,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Heart_01/Text_Level01
+    path: Icon_Parent/Heart_01/Text_Level01
     classID: 1
     script: {fileID: 0}
     flags: 0
