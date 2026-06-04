@@ -686,15 +686,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1161810281762307539, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.5333178
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 1161810281762307539, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6001167
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1161810281762307539, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -35
+      value: -22.2
       objectReference: {fileID: 0}
     - target: {fileID: 1476055540710017529, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: Target.TrackingTarget
@@ -770,23 +770,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: orthographic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
-      propertyPath: field of view
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
-      propertyPath: far clip plane
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
-      propertyPath: near clip plane
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
+      propertyPath: field of view
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
+      propertyPath: far clip plane
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: orthographic size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8505781925488531942, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2025,17 +2025,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2101156442150190626, guid: 08a2ba3117c794c62b45139d97baf04e, type: 3}
   m_PrefabInstance: {fileID: 4928462322359268290}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1098785292 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4692217207849691477, guid: c58f3f0d0de464123a598dc6337b2a78, type: 3}
-  m_PrefabInstance: {fileID: 7967408649926416638}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!114 &1136481368 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 299651008883940301, guid: 3e9db6356aa654891a41cef1c7232bf0, type: 3}
@@ -2383,7 +2372,7 @@ MonoBehaviour:
   overlayRoot: {fileID: 1459510546}
   backdrop: {fileID: 1052231721}
   tutorialText: {fileID: 1558124282}
-  continueButton: {fileID: 1098785292}
+  continueButton: {fileID: 1768402923}
   tutorialBox: {fileID: 444298569}
   continueDelay: 2
   pauseManager: {fileID: 1446523756}
@@ -2881,6 +2870,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1768402923 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 203481151096665914, guid: c58f3f0d0de464123a598dc6337b2a78, type: 3}
+  m_PrefabInstance: {fileID: 7967408649926416638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1775483650 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1171240731125937102, guid: f72a663393f554275955b5c5a6c5cfe1, type: 3}
