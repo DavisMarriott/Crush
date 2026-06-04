@@ -12,6 +12,7 @@ public class PhaseManager : MonoBehaviour
     public AnimationTriggerCrush animationTriggerCrush;
     public AnimationTriggerPlayer animationTriggerPlayerDraft;
     public GameProgression gameProgression;
+    public AnimationTriggerThoughtBubble animationTriggerThoughtBubbleHallway;
     public AnimationTriggerThoughtBubble animationTriggerThoughtBubbleDraft;
     public AudioSource thoughtBubbleHallwayAudio;
     public AudioSource postFxAudio;
@@ -55,6 +56,7 @@ public class PhaseManager : MonoBehaviour
             postFxAudio.enabled = true;
             postProcessingVolumeNegative.SetActive(true);
         }
+        
         
         if (currentPhase == GamePhase.Reflect && loopCount <= 1)
         {

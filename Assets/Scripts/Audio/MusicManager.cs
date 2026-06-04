@@ -79,7 +79,6 @@ public class MusicManager : MonoBehaviour
 
         // Ensure the final volume is explicitly set exactly to the target
         audioSource.volume = targetVolume;
-        
     }
     
     
