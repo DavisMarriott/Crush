@@ -102,18 +102,27 @@ public class DialogueBox : MonoBehaviour
     // that stops movement / swaps to the convo camera). Wire this on that trigger in the inspector.
     // Luke's intro still plays on the first card (top of StepThroughDialogue).
     private bool _daisyIntroRunning;
+
+    [Tooltip("Small beat between hitting the convo trigger and Daisy's intro starting.")]
+    [SerializeField] private float daisyIntroDelay = 0.25f;
+
     public void PlayDaisyIntroAtTrigger()
     {
         if (confidenceState.daisyIntroMade) return;
-        if (gameProgression.ShouldSkipIntrosThisLoop()) return;
+        // note: deliberately NOT gated on ShouldSkipIntrosThisLoop - Daisy always greets at the
+        // trigger, every loop. The skipIntros override only applies to Luke's convo-side intro.
         confidenceState.daisyIntroMade = true;
+        // the box object is inactive between conversations (CloseDialogueBox turns it off), and an
+        // inactive GO can't StartCoroutine - reactivate BEFORE starting, same as ShowDialogue does.
+        dialogueBox.SetActive(true);
         StartCoroutine(DaisyIntroAtTrigger());
     }
 
     private IEnumerator DaisyIntroAtTrigger()
     {
         _daisyIntroRunning = true;
-        dialogueBox.SetActive(true);
+        // tiny beat so her line doesn't start the same frame you cross the trigger
+        yield return new WaitForSeconds(daisyIntroDelay);
         yield return PlayIntroLine(daisyIntroLine, DialogueCard.DialogueCharacter.Girl);
         // tuck just her bubble away. Deliberately NOT CloseDialogueBox() - that StopAllCoroutines()s,
         // which would kill this routine mid-call AND any card dialogue the player started meanwhile.

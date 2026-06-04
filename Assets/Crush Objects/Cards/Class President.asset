@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
-  m_Name: Music
+  m_Name: Class President
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   isDance: 0
-  revealed: 1
-  previewText: Music
-  cost: 3
-  buttonColor: {r: 1, g: 1, b: 1, a: 1}
+  revealed: 0
+  previewText: Class President
+  cost: 4
+  buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
   - branchName: Death
@@ -24,11 +24,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "Any, uhhhh\u2026\u2026."
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: good musi-
+      line: "What uhhh\u2026"
     tags: 
     charmImpacts: []
     daisyBranches: []
@@ -37,7 +33,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: So have you listened to that Farthing Penny song yet?
+      line: Did you vote?
     tags: 
     charmImpacts: []
     daisyBranches:
@@ -46,30 +42,24 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: HAHA Farthing Penny? You mean Penny Farthing? Some fan you are hahaha
+        line: "uhhh\u2026 vote for what?"
       tags: 
     - charmState: 1
       dialogue:
       - character: 1
         confidenceImpact: -1
         charmImpact: 0
-        line: HAHA that's not their name. It's Penny Farthing. But yeah I love that
-          song.
+        line: You mean for class president? Yeah, I voted.
       tags: 
     - charmState: 2
       dialogue:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: I think you mean Penny Farthing. But of course I've listened to it!
+        line: Yep! Was first in line before first period.
       tags: 
     - charmState: 3
-      dialogue:
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: "Ohhh Luke\u2026. It's Penny Farthing. And duhhhh I've listened to
-          it like a thousand times already."
+      dialogue: []
       tags: 
     - charmState: 4
       dialogue:
@@ -112,7 +102,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 3
         charmImpact: 0
-        line: It's soooo good! OMG I didn't know you liked them.
+        line: Yep! Was first in line before first period.
       tags: 
     - charmState: 3
       dialogue:
@@ -141,6 +131,5 @@ MonoBehaviour:
   - line: What's that band she loves again?
   - line: Penny Farthing??
   - line: Or is it Farthing Penny...?
-  availableUpgrades:
-  - {fileID: 11400000, guid: 2603f1ce7b7674681a4184843cba6710, type: 2}
+  availableUpgrades: []
   upgradeThreshold: 1

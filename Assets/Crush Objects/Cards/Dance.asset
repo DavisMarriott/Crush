@@ -58,10 +58,6 @@ MonoBehaviour:
     daisyBranches: []
   - branchName: FirstLoop
     dialogue:
-    - character: 1
-      confidenceImpact: 0
-      charmImpact: 0
-      line: Oh - hey Luke!
     - character: 0
       confidenceImpact: -1
       charmImpact: 0
