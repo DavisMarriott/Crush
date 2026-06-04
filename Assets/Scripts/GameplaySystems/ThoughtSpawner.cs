@@ -24,9 +24,10 @@ public class ThoughtSpawner : MonoBehaviour
         foreach (var card in deckManager.Hand)
         {
             var appliedUpgrade = upgradeTracker.GetAppliedUpgrade(card);
+            // prefab priority: upgrade override > per-card prefab (e.g. DANCE) > default
             var prefabToUse = (appliedUpgrade != null && appliedUpgrade.visualPrefab != null)
                 ? appliedUpgrade.visualPrefab
-                : thoughtButtonPrefab;
+                : (card.visualPrefab != null ? card.visualPrefab : thoughtButtonPrefab);
             var btn = Instantiate(prefabToUse, thoughtListContainer);
 
             var btnImage = btn.GetComponent<Image>();

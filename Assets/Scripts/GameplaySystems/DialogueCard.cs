@@ -15,6 +15,10 @@ public class DialogueCard : ScriptableObject
     [Header("Button BG Color")]
     public Color buttonColor = Color.black;
 
+    [Header("Custom card prefab (optional)")]
+    [Tooltip("Full card button prefab spawned instead of the default (e.g. DANCE). Needs the same Card_Art/PreviewText structure. An applied upgrade's visualPrefab still wins over this.")]
+    public UnityEngine.UI.Button visualPrefab;
+
     [Header("Luke's Branches (confidence-based)")]
     [SerializeField] private DialogueBranch[] lukeBranches;
 

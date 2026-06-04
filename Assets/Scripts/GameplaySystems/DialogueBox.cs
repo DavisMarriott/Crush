@@ -98,12 +98,39 @@ public class DialogueBox : MonoBehaviour
         dialogueText.text = "";
     }
 
+    // Daisy's intro - fired from the conversation TriggerZone's onTriggerEnter (the same trigger
+    // that stops movement / swaps to the convo camera). Wire this on that trigger in the inspector.
+    // Luke's intro still plays on the first card (top of StepThroughDialogue).
+    private bool _daisyIntroRunning;
+    public void PlayDaisyIntroAtTrigger()
+    {
+        if (confidenceState.daisyIntroMade) return;
+        if (gameProgression.ShouldSkipIntrosThisLoop()) return;
+        confidenceState.daisyIntroMade = true;
+        StartCoroutine(DaisyIntroAtTrigger());
+    }
+
+    private IEnumerator DaisyIntroAtTrigger()
+    {
+        _daisyIntroRunning = true;
+        dialogueBox.SetActive(true);
+        yield return PlayIntroLine(daisyIntroLine, DialogueCard.DialogueCharacter.Girl);
+        // tuck just her bubble away. Deliberately NOT CloseDialogueBox() - that StopAllCoroutines()s,
+        // which would kill this routine mid-call AND any card dialogue the player started meanwhile.
+        animationTriggerSpeechBubbleCrush.SpeechBubbleHide();
+        _daisyIntroRunning = false;
+    }
+
     //this is where dialogue plays/bulk of conversation system lives
     private IEnumerator StepThroughDialogue(DialogueCard dialogueCard, DialogueCard.DialogueBranch lukeBranch)
     {
+        // if Daisy's trigger-intro is mid-line, let it finish before the card dialogue takes the box
+        yield return new WaitUntil(() => !_daisyIntroRunning);
+
         // First card per loop: play Luke's intro line ("Hey Daisy") before his card dialogue runs.
-        // confidenceState.introMade gets flipped to true at the end of this method (line below the Daisy branch),
-        // so subsequent cards in the same loop skip both intro lines.
+        // (Daisy's intro now fires earlier, at the convo trigger - see PlayDaisyIntroAtTrigger.)
+        // confidenceState.introMade gets flipped to true at the end of this method,
+        // so subsequent cards in the same loop skip Luke's intro.
         // Per-loop override: GameProgression.ShouldSkipIntrosThisLoop() reads from LoopHallway.skipIntros.
         // ...but never on a death branch - "Hey Daisy" makes no sense if he's dying
         if (!confidenceState.introMade && !gameProgression.ShouldSkipIntrosThisLoop() && !_isPlayingDeathBranch)
@@ -199,10 +226,7 @@ public class DialogueBox : MonoBehaviour
         {
             // Register tags from the Daisy branch as fired this loop
             deckManager.RegisterTags(daisyBranch.tags);
-
-            // First card per loop: play Daisy's intro line ("Hey Luke") before her card response runs.
-            if (!confidenceState.introMade && !gameProgression.ShouldSkipIntrosThisLoop() && !_isPlayingDeathBranch)
-                yield return PlayIntroLine(daisyIntroLine, DialogueCard.DialogueCharacter.Girl);
+            // (Daisy's intro used to play here - it now fires at the convo trigger instead.)
         }
 
         if (daisyBranch != null && daisyBranch.dialogue != null && daisyBranch.dialogue.Length > 0)

@@ -83,6 +83,7 @@ public class DeathRespawn : MonoBehaviour
         deathScreen.SetActive(true);
         gameProgression.NextLoop();
         confidenceState.introMade = false;
+        confidenceState.daisyIntroMade = false;
         cardContainer.SetActive(false);
         yield return new WaitForSeconds(deathScreenTimer);
         deathScreen.SetActive(false);

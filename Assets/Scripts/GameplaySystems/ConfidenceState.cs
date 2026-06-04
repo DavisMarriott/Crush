@@ -17,6 +17,9 @@ public class ConfidenceState : MonoBehaviour
 
     [Header("Conversation State")]
     public bool introMade = false;
+    // Daisy's intro now fires at the convo trigger (before any card), so she gets her own flag.
+    // Reset alongside introMade in DeathRespawn each loop.
+    public bool daisyIntroMade = false;
     public bool inConversation = false;
     
 

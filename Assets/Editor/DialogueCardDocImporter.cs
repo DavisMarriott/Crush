@@ -21,7 +21,7 @@ namespace Crush.EditorTools
     ///   - "Draft lines" H1 + bullets
     ///   - "Upgrades" H1 + bullets (optional, threshold + upgrade name)
     ///
-    /// Doesn't touch isDance / revealed / buttonColor / availableUpgrades (programmer-side).
+    /// Doesn't touch isDance / revealed / buttonColor / visualPrefab / availableUpgrades (programmer-side).
     /// Skips the "Explainer" tab.
     /// </summary>
     public static class DialogueCardDocImporter

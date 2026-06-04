@@ -133,7 +133,8 @@ public class DraftUI : MonoBehaviour
 
     private void SpawnCardButton(DialogueCard card)
     {
-        var btn = Instantiate(thoughtButtonPrefab, draftContainer);
+        // per-card prefab (e.g. DANCE) wins over the default
+        var btn = Instantiate(card.visualPrefab != null ? card.visualPrefab : thoughtButtonPrefab, draftContainer);
     
         // button is centered in draft slot
         var rectTransform = btn.GetComponent<RectTransform>();
@@ -170,7 +171,8 @@ public class DraftUI : MonoBehaviour
 
     private void SpawnMultiPickButton(DialogueCard card, int slotIndex)
     {
-        var btn = Instantiate(thoughtButtonPrefab, draftContainer);
+        // per-card prefab (e.g. DANCE) wins over the default
+        var btn = Instantiate(card.visualPrefab != null ? card.visualPrefab : thoughtButtonPrefab, draftContainer);
 
         var rt = btn.GetComponent<RectTransform>();
         rt.anchorMin = new Vector2(0.5f, 0.5f);
