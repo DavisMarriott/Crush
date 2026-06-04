@@ -83,8 +83,12 @@ public class ReflectSelfTalk : MonoBehaviour
 
     private ReflectBranch SelectBranch(LoopSnapshot snapshot, int loopCount)
     {
+        if (branches == null) return null;
         foreach (var branch in branches)
         {
+            // skip empty inspector slots - same guard FindScriptedBranchForLoop has.
+            // Without it a null element NREs inside Matches and kills the reflect coroutine (the loop-7 freeze).
+            if (branch == null) continue;
             if (Matches(branch, snapshot, loopCount)) return branch;
         }
         return null;
@@ -105,12 +109,12 @@ public class ReflectSelfTalk : MonoBehaviour
         if (branch.requiresCardsPlayed != null)
         {
             foreach (var required in branch.requiresCardsPlayed)
-                if (!snapshot.cardsPlayed.Contains(required.name)) return false;
+                if (required != null && !snapshot.cardsPlayed.Contains(required.name)) return false;
         }
         if (branch.requiresCardsUnplayed != null)
         {
             foreach (var required in branch.requiresCardsUnplayed)
-                if (!snapshot.cardsUnplayed.Contains(required.name)) return false;
+                if (required != null && !snapshot.cardsUnplayed.Contains(required.name)) return false;
         }
 
         return true;

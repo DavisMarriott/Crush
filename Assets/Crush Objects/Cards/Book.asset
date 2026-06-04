@@ -33,10 +33,6 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: What book is that you're reading?
-    - character: 2
-      confidenceImpact: 0
-      charmImpact: 0
-      line: God she's perfect
     tags: 
     charmImpacts:
     - state: 1
@@ -93,6 +89,10 @@ MonoBehaviour:
         confidenceImpact: 3
         charmImpact: 0
         line: "It's dorky\u2026 but I like it."
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: God she's perfect
       tags: 
     - charmState: 4
       dialogue:

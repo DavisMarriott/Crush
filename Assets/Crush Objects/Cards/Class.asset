@@ -38,10 +38,6 @@ MonoBehaviour:
       charmImpact: 0
       line: I was fighting to stay awake when Mr. Miller started talking about the
         Roman Empire.
-    - character: 2
-      confidenceImpact: 0
-      charmImpact: 0
-      line: That actually worked.
     tags: 
     charmImpacts:
     - state: 1
@@ -85,6 +81,10 @@ MonoBehaviour:
         confidenceImpact: 2
         charmImpact: 0
         line: He needs some new hobbies.
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: That actually worked.
       tags: 00000000
     - charmState: 4
       dialogue:

@@ -2,8 +2,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 
-// Debug-only fast-forward for testing. Z toggles 3x, X toggles 5x (pressing the same key again
-// returns to 1x; the keys cross over — at 3x, X jumps to 5x, etc.).
+// Debug-only fast-forward for testing. Z toggles 3x, X toggles 5x, C toggles 10x (pressing the same
+// key again returns to 1x; the keys cross over — at 3x, X jumps to 5x, etc.).
 //
 // It just drives Time.timeScale, which the whole game scales off (nothing in the project uses
 // unscaled/real-time timing), so dialogue, coroutine waits, the Invoke-delayed transitions,
@@ -19,6 +19,7 @@ public class FastForward : MonoBehaviour
 {
     [SerializeField] private float speed3 = 3f;
     [SerializeField] private float speed5 = 5f;
+    [SerializeField] private float speed10 = 10f;
 
     [Tooltip("Optional HUD label that shows the current fast-forward speed. Hidden at normal speed.")]
     [SerializeField] private TMP_Text speedIndicator;
@@ -37,6 +38,9 @@ public class FastForward : MonoBehaviour
 
             if (kb.xKey.wasPressedThisFrame)
                 Time.timeScale = Mathf.Approximately(Time.timeScale, speed5) ? 1f : speed5;
+
+            if (kb.cKey.wasPressedThisFrame)
+                Time.timeScale = Mathf.Approximately(Time.timeScale, speed10) ? 1f : speed10;
         }
 
         UpdateIndicator();
@@ -50,7 +54,9 @@ public class FastForward : MonoBehaviour
         if (Mathf.Approximately(Time.timeScale, _lastShownScale)) return;
         _lastShownScale = Time.timeScale;
 
-        bool fast = Mathf.Approximately(Time.timeScale, speed3) || Mathf.Approximately(Time.timeScale, speed5);
+        bool fast = Mathf.Approximately(Time.timeScale, speed3)
+                 || Mathf.Approximately(Time.timeScale, speed5)
+                 || Mathf.Approximately(Time.timeScale, speed10);
 
         if (speedIndicator.gameObject.activeSelf != fast)
             speedIndicator.gameObject.SetActive(fast);

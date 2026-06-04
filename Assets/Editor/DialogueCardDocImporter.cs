@@ -32,9 +32,10 @@ namespace Crush.EditorTools
 
         const string DEFAULT_DIR = "Assets/Crush Objects/Cards";
 
-        // toggle to dump every structure item's (type, text) on the first parsed tab — useful when the
-        // Apps Script's vocabulary changes or you're parsing a new doc. Leave off for normal runs.
-        const bool DUMP_FIRST_TAB_STRUCTURE = true;
+        // dump every structure item's (type, text) for the tabs named here (case-insensitive) — useful
+        // for diagnosing per-card parse issues like the Book/Movies internal-line + draft ordering bug.
+        // Leave as empty {} for normal runs.
+        static readonly string[] DUMP_TABS = { };
 
         [MenuItem("Crush/Import Dialogue Cards from Doc")]
         public static void ImportCards()
@@ -48,7 +49,6 @@ namespace Crush.EditorTools
                 Debug.Log($"[CardsImporter] Found {tabs.Count} tabs.");
 
                 int updated = 0, warnings = 0;
-                bool dumpedOnce = false;
 
                 foreach (var tab in tabs)
                 {
@@ -61,11 +61,8 @@ namespace Crush.EditorTools
                     }
 
                     var content = FetchTab(tab.id);
-                    if (DUMP_FIRST_TAB_STRUCTURE && !dumpedOnce)
-                    {
+                    if (Array.Exists(DUMP_TABS, n => string.Equals(n, title, StringComparison.OrdinalIgnoreCase)))
                         DumpStructure(title, content.structure);
-                        dumpedOnce = true;
-                    }
 
                     var (u, w) = ImportCardTab(title, content);
                     updated += u; warnings += w;
@@ -246,29 +243,37 @@ namespace Crush.EditorTools
                         continue;
                     }
 
-                    // Luke / Internal dialogue lines
+                    // Luke / Internal dialogue lines.
+                    // If we're inside a Daisy state block, the line belongs to THAT daisy branch
+                    // (it plays after her lines, in authored order) - not hoisted up to the pre-Daisy
+                    // Luke array. This is what lets a "[..] Internal: That actually worked" sit after
+                    // Daisy's response. Outside a daisy block it goes to the Luke array as before.
                     var lukeMatch = MatchDialogueLine(rawText, "Luke");
                     if (lukeMatch != null)
                     {
-                        currentBranch.luke.Add(new LineData
+                        var ld = new LineData
                         {
                             character = "Boy",
                             text = lukeMatch.text,
                             confidenceImpact = lukeMatch.conf,
                             charmImpact = lukeMatch.charm
-                        });
+                        };
+                        if (daisyMode == "inState" && currentDaisy != null) currentDaisy.lines.Add(ld);
+                        else currentBranch.luke.Add(ld);
                         continue;
                     }
                     var internalMatch = MatchDialogueLine(rawText, "Internal");
                     if (internalMatch != null)
                     {
-                        currentBranch.luke.Add(new LineData
+                        var ld = new LineData
                         {
                             character = "BoyInternal",
                             text = internalMatch.text,
                             confidenceImpact = internalMatch.conf,
                             charmImpact = internalMatch.charm
-                        });
+                        };
+                        if (daisyMode == "inState" && currentDaisy != null) currentDaisy.lines.Add(ld);
+                        else currentBranch.luke.Add(ld);
                         continue;
                     }
                     //Daisy lines interleaved in the main branch dialogue (before any "Daisy responses:" section)

@@ -120,6 +120,5 @@ MonoBehaviour:
   draftLines:
   - line: I think she likes movies.
   - line: "That might be a good ice breaker\u2026"
-  - line: I think she likes movies....
   availableUpgrades: []
   upgradeThreshold: 3
