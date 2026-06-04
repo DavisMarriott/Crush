@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acded0d660c6143a58a646a883d11c26, type: 3}
+  m_Name: tut_seconddraft
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialStep
+  id: seconddraft
+  text: "The hearts up top measure your CONFIDENCE. It's basically your health +
+    currency. \n\nEach card has a difference CONFIDENCE cost to play, displayed on
+    each card. \n\nPlaying cards will affect Daisy's CHARM and further impact your
+    CONFIDENCE - positively or negativley - depending on current CHARM and CONFIDENCE
+    levels.\n\nA card's impact is always hidden. Pay attention to how Luke speaks
+    and how Daisy responds. Experiment.\n\nYou'll need not only high enough CONFIDENCE
+    to ask Daisy to the dance, but Daisy will need to be CHARMED enough to say yes.\n "
+  boxSize: {x: 600, y: 300}
+  boxAnchoredPosition: {x: 0, y: 0}
+  dismissMode: 0
+  showBackdrop: 1

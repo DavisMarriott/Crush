@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: tut_firstdraft
   m_EditorClassIdentifier: Assembly-CSharp::TutorialStep
   id: firstdraft
-  text: Crushing is a teenage romance deck builder where your cards are dialogue
-    options. Start by drafting a card to your deck.
+  text: '"Crushing" is a coming-of-age conversational deck builder, and cards are
+    your dialogue options. Click on your first card to draft it into your deck.'
   boxSize: {x: 600, y: 300}
   boxAnchoredPosition: {x: 0, y: 0}
   dismissMode: 0
