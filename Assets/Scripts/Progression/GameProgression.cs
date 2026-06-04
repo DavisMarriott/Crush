@@ -55,9 +55,15 @@ public class GameProgression : MonoBehaviour
         // and other phase-aware systems init correctly.
         PhaseManager.Instance.TransitionTo(GamePhase.Reflect);
 
+        // Hold here until the main menu is dismissed (StartGamePaused flips timeScale back to 1).
+        // Without this the coroutine hit the line-playback checks at scene load - before the player
+        // could toggle skip-reflect at the menu - then sat frozen inside PlayLines until unpause.
+        // The Reflect transition above stays immediate so the menu's locker-shot backdrop is unaffected.
+        yield return new WaitUntil(() => Time.timeScale > 0f);
+
         // Play the scripted loop 1 reflect lines using the same PlayLines overload that milestones use.
         // Bypasses branch selection (no LoopSnapshot needed on game start — no prior loop exists).
-        if (loop1ReflectBranch != null && loop1ReflectBranch.lines != null && loop1ReflectBranch.lines.Length > 0)
+        if (!SkipReflect.Active && loop1ReflectBranch != null && loop1ReflectBranch.lines != null && loop1ReflectBranch.lines.Length > 0)
             yield return reflectSelfTalk.PlayLines(loop1ReflectBranch.lines);
 
         // Loop-1 DANCE draft — DANCE is the only card offered (per design: DANCE is drafted, not pre-owned).
@@ -76,7 +82,7 @@ public class GameProgression : MonoBehaviour
 
         // Commit lines — final hype-up before committing to the hallway approach (locker-close beat).
         // Plays after the (optional) DANCE draft. Flow: reflect → [DANCE draft] → commit → hallway.
-        if (loop1ReflectBranch != null && loop1ReflectBranch.commitLines != null && loop1ReflectBranch.commitLines.Length > 0)
+        if (!SkipReflect.Active && loop1ReflectBranch != null && loop1ReflectBranch.commitLines != null && loop1ReflectBranch.commitLines.Length > 0)
             yield return reflectSelfTalk.PlayLines(loop1ReflectBranch.commitLines);
 
        

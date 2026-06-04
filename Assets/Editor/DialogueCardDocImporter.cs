@@ -32,11 +32,6 @@ namespace Crush.EditorTools
 
         const string DEFAULT_DIR = "Assets/Crush Objects/Cards";
 
-        // dump every structure item's (type, text) for the tabs named here (case-insensitive) — useful
-        // for diagnosing per-card parse issues like the Book/Movies internal-line + draft ordering bug.
-        // Leave as empty {} for normal runs.
-        static readonly string[] DUMP_TABS = { };
-
         [MenuItem("Crush/Import Dialogue Cards from Doc")]
         public static void ImportCards()
         {
@@ -61,8 +56,6 @@ namespace Crush.EditorTools
                     }
 
                     var content = FetchTab(tab.id);
-                    if (Array.Exists(DUMP_TABS, n => string.Equals(n, title, StringComparison.OrdinalIgnoreCase)))
-                        DumpStructure(title, content.structure);
 
                     var (u, w) = ImportCardTab(title, content);
                     updated += u; warnings += w;
@@ -75,17 +68,6 @@ namespace Crush.EditorTools
             catch (Exception e)
             {
                 Debug.LogError($"[CardsImporter] Failed: {e}");
-            }
-        }
-
-        static void DumpStructure(string title, TabStructureItem[] structure)
-        {
-            Debug.Log($"[CardsImporter] === Structure dump for '{title}' ===");
-            if (structure == null) { Debug.Log("(null structure)"); return; }
-            for (int i = 0; i < structure.Length; i++)
-            {
-                var s = structure[i];
-                Debug.Log($"  [{i}] type='{s.type}' text='{(s.text ?? "").Replace("\n", "⏎")}'");
             }
         }
 

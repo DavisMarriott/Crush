@@ -125,8 +125,9 @@ public class DeathRespawn : MonoBehaviour
         //if statement to check for correct reflect branch 
         if (scriptedBranch != null)
         {
-            // Scripted wins. Play its lines.
-            yield return reflectSelfTalk.PlayLines(scriptedBranch.lines);
+            // Scripted wins. Play its lines (skipped in skip-reflect debug mode - N key).
+            if (!SkipReflect.Active)
+                yield return reflectSelfTalk.PlayLines(scriptedBranch.lines);
 
             // Milestone overlap fallback — still apply the upgrade + mark complete so progression
             // doesn't break, even though the milestone's reflect lines didn't play this loop.
@@ -145,7 +146,9 @@ public class DeathRespawn : MonoBehaviour
         else if (triggeredMilestone != null)
         {
             // No scripted match — milestone wins over the conditional fallback.
-            yield return reflectSelfTalk.PlayLines(triggeredMilestone.reflectLines);
+            // (lines skipped in skip-reflect mode; upgrade application below still runs)
+            if (!SkipReflect.Active)
+                yield return reflectSelfTalk.PlayLines(triggeredMilestone.reflectLines);
             if (triggeredMilestone.characterUpgrade != null)
             {
                 milestoneTracker.ApplyCharacterUpgrade(triggeredMilestone.characterUpgrade);
@@ -159,7 +162,8 @@ public class DeathRespawn : MonoBehaviour
         else
         {
             // No scripted, no milestone — fall back to conditional / legacy branch selection.
-            yield return reflectSelfTalk.Play(gameProgression.lastLoop, gameProgression.loopCount);
+            if (!SkipReflect.Active)
+                yield return reflectSelfTalk.Play(gameProgression.lastLoop, gameProgression.loopCount);
         }
         
         if (deckManager.draftPool.Length >0)
@@ -177,7 +181,7 @@ public class DeathRespawn : MonoBehaviour
         // Commit lines — the loop's final hype-up before committing to the hallway approach
         // (the locker-close beat). Plays AFTER the draft phase, while the camera is still on the
         // reflect/draft close-up, then we cut to Hallway. Flow: reflect → draft → commit → hallway.
-        if (scriptedBranch != null && scriptedBranch.commitLines != null && scriptedBranch.commitLines.Length > 0)
+        if (!SkipReflect.Active && scriptedBranch != null && scriptedBranch.commitLines != null && scriptedBranch.commitLines.Length > 0)
             yield return reflectSelfTalk.PlayLines(scriptedBranch.commitLines);
 
         //full respawn, ready for hallway walk

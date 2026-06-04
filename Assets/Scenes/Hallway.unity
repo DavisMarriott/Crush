@@ -1826,6 +1826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FastForward
   speed3: 3
   speed5: 5
+  speed10: 10
   speedIndicator: {fileID: 1723559442}
 --- !u!1 &1075827586
 GameObject:
