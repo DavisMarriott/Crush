@@ -135,7 +135,7 @@ public class DraftUI : MonoBehaviour
     {
         // per-card prefab (e.g. DANCE) wins over the default
         var btn = Instantiate(card.visualPrefab != null ? card.visualPrefab : thoughtButtonPrefab, draftContainer);
-    
+
         // button is centered in draft slot
         var rectTransform = btn.GetComponent<RectTransform>();
         rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
@@ -145,7 +145,18 @@ public class DraftUI : MonoBehaviour
     
         var label = btn.transform.Find("Card_Art/PreviewText").GetComponent<TextMeshProUGUI>();
         label.text = card.previewText;
-    
+
+        // cost indicator - same population as the hand (ThoughtSpawner). Draft spawns were
+        // skipping this entirely, so cost never showed on draft cards even when revealed.
+        var costNode = btn.transform.Find("Card_Art/CostIndicator/CostText");
+        if (costNode != null)
+        {
+            costNode.gameObject.SetActive(card.revealed);
+            var costText = costNode.GetComponentInChildren<TMP_Text>();
+            if (costText != null)
+                costText.text = (upgradeTracker != null ? upgradeTracker.GetEffectiveCost(card) : card.cost).ToString();
+        }
+
         btn.onClick.AddListener(() => OnCardPicked(card));
     }
 
@@ -182,6 +193,16 @@ public class DraftUI : MonoBehaviour
 
         var label = btn.transform.Find("Card_Art/PreviewText").GetComponent<TextMeshProUGUI>();
         label.text = card.previewText;
+
+        // cost indicator - same as SpawnCardButton above
+        var costNode = btn.transform.Find("Card_Art/CostIndicator/CostText");
+        if (costNode != null)
+        {
+            costNode.gameObject.SetActive(card.revealed);
+            var costText = costNode.GetComponentInChildren<TMP_Text>();
+            if (costText != null)
+                costText.text = (upgradeTracker != null ? upgradeTracker.GetEffectiveCost(card) : card.cost).ToString();
+        }
 
         btn.onClick.AddListener(() => OnMultiPickPicked(slotIndex));
     }

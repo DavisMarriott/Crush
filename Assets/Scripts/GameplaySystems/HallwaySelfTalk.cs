@@ -89,6 +89,20 @@ public class HallwaySelfTalk : MonoBehaviour
         selfTalkText.text = "";
     }
 
+    // Bug 86ba9uzau: the final hallway trigger line lingered into the conversation.
+    // Fired on convo-trigger entry (via DialogueBox.PlayDaisyIntroAtTrigger) - clears the
+    // world-space bubble a beat after entering, per the notebook spec (~1s).
+    public void ClearHallwayLineOnConvoEntry(float delay = 1f)
+    {
+        StartCoroutine(ClearAfterDelay(delay));
+    }
+
+    private IEnumerator ClearAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        selfTalkText.text = "";
+    }
+
     public void TriggerDraftLines(DialogueCard.DraftLine[] draftLines)
     {
         StartCoroutine(PlayDraftLines(draftLines));

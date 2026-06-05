@@ -80,6 +80,29 @@ public class DeckManager : MonoBehaviour
         }
     }
 
+    // Opening-hand draw - from loop 2 on, DANCE never starts in the hand (a 3-card hand with
+    // DANCE stuck in it plays like a 2-card hand all loop - 06/04 note). It stays in the deck
+    // and any later draw can pull it. Loop 1 is exempt (the loop-1 DANCE draft should land in hand).
+    private void DrawOpeningHand(int count)
+    {
+        int loop = _gameProgression != null ? _gameProgression.loopCount : 1;
+        if (loop < 2)
+        {
+            DrawHand(count);
+            return;
+        }
+
+        for (int i = 0; i < count; i++)
+        {
+            if (_deck.Count == 0) return;
+            var eligible = _deck.FindAll(c => !c.isDance);
+            if (eligible.Count == 0) return;   // only DANCE left - short hand beats breaking the rule
+            var card = eligible[Random.Range(0, eligible.Count)];
+            _hand.Add(card);
+            _deck.Remove(card);
+        }
+    }
+
     public void ResetDeck()
     {
         // Hand and discard go back to deck
@@ -92,7 +115,7 @@ public class DeckManager : MonoBehaviour
         _tagsFiredThisLoop.Clear();
 
         Shuffle();
-        DrawHand(startingHandSize);
+        DrawOpeningHand(startingHandSize);
     }
 
     private void Shuffle()
@@ -106,13 +129,18 @@ public class DeckManager : MonoBehaviour
     
     void Awake()
     {
+        // found at runtime so no scene re-wiring needed - used by DrawOpeningHand's loop check
+        _gameProgression = FindFirstObjectByType<GameProgression>();
+
         _deck = new List<DialogueCard>(startingDeck);
         _hand = new List<DialogueCard>();
         _discard = new List<DialogueCard>();
-    
+
         Shuffle();
         DrawHand(startingHandSize);
     }
+
+    private GameProgression _gameProgression;
 
     public List<DialogueCard> GetDraftOptions(int count)
     {

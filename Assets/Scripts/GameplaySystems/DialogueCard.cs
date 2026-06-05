@@ -181,7 +181,16 @@ public class DialogueCard : ScriptableObject
                 return awkward;
         }
 
-        // normal (or fallback if no awkward)
+        // confident (only if the card has one) - High confidence tier (10+).
+        // Mirrors the awkward rule: no Confident branch on the card -> falls through to Normal.
+        if (level == ConfidenceLevel.High)
+        {
+            DialogueBranch confident = FindBranchByName(branches, "Confident");
+            if (confident != null)
+                return confident;
+        }
+
+        // normal (or fallback if no awkward/confident)
         DialogueBranch normal = FindBranchByName(branches, "Normal");
         if (normal != null)
             return normal;

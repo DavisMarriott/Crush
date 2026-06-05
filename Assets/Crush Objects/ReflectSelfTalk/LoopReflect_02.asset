@@ -13,18 +13,17 @@ MonoBehaviour:
   m_Name: LoopReflect_02
   m_EditorClassIdentifier: Assembly-CSharp::ReflectBranch
   lines:
-  - What??
+  - What was that??
   - That was a crazy daydream.
-  - It felt so real.
-  - But still, that plan is not going to work.
+  - "But still\u2026."
   - You can't just ask her to the dance.
   - You need a plan.
   - You have to actually TALK to her.
   - "Okay okay\u2026.."
   - What do girls like to talk about?
   commitLines:
-  - This might work.
-  - "You\u2019re not gonna die\u2026"
+  - Okay. This might actually work.
+  - "It\u2019s not actually life or death."
   - You're still a man.
   - A man with a plan.
   isScripted: 1

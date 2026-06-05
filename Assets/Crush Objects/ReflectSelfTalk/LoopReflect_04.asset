@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: LoopReflect_04
   m_EditorClassIdentifier: Assembly-CSharp::ReflectBranch
   lines:
-  - Am I looping? I'm stuck in a $&%ing time loop!?!
+  - Am I looping? I'm stuck in a time loop!?!
   - How am I gonna get out of this?!?
   - What the hell is going on?!
   - "Daisy is still standing there like nothing happened\u2026."
   - Do I try to talk to her again?
   commitLines:
+  - "I can\u2019t believe this is $&%ing happening to me."
   - Please God let this work.
   - I promise I'll stop cursing.
   isScripted: 1

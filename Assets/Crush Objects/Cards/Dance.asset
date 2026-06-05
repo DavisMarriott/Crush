@@ -105,7 +105,8 @@ MonoBehaviour:
   - line: Yeah. Just keep it simple.
   - line: "\u201CDaisy, will you go to the dance with me?\u201D"
   - line: Straight forward.
-  - line: Confident. Like a man.
+  - line: Confident.
+  - line: Like a man.
   - line: "You\u2019re a man now."
   - line: "That\u2019s what mom says."
   availableUpgrades: []

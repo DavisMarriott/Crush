@@ -37,7 +37,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: I had soccer practice last night so I barely got to study.
+      line: Geometry is kind of breaking my brain haha
     tags: 
     charmImpacts:
     - state: 1
@@ -59,34 +59,36 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: -1
         charmImpact: 0
-        line: uhhh... it was okay
+        line: Ohhh really? Geometry has been pretty easy for me so far.
       tags: 
     - charmState: 2
       dialogue:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: I think I did okay. Same, I had volleyball practice and didn't get
-          home until like 8.
+        line: Ohhh yeah.
       - character: 1
-        confidenceImpact: 3
+        confidenceImpact: 1
         charmImpact: 0
-        line: I started studying before even taking a shower. I was so gross.
+        line: I think I did okay though.
       tags: 
     - charmState: 3
       dialogue:
       - character: 1
-        confidenceImpact: 2
+        confidenceImpact: 0
         charmImpact: 0
-        line: It was pretty good! I didn't know you still played soccer. That's awesome!
+        line: Yeah.. it can be pretty hard.
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 0
+        line: I could help you study for the next one.
       tags: 
     - charmState: 4
       dialogue:
       - character: 1
         confidenceImpact: -1
         charmImpact: 0
-        line: Oh.. the test. Ummm, I think I did pretty good. I wasn't able to study
-          much either
+        line: Oh.. the test. Ummm, yeah. I think I did pretty well.
       tags: 
   draftLines:
   - line: She probably got an A on Ms. Parsons test

@@ -15,14 +15,16 @@ MonoBehaviour:
   lines:
   - Okay, Luke. It's now or never.
   - She's right there.
-  - Today is the day. No more chickening out.
+  - Today is the day.
+  - No more chickening out.
   - You're gonna ask Daisy to the homecoming dance.
-  - And if you don't ask her this passing period, Brett Kissenger is gonna ask her.
+  - "And if you don't ask her this passing period\u2026"
+  - Brett Kissinger is gonna ask her.
   - And they'll get married.
   - And you'll die alone.
   - "Just need to figure out what to say to her\u2026.."
   commitLines:
-  - Only 3 minutes left until the bell rings.
+  - The bell rings soon.
   - "It\u2019s go time."
   - Deep Breath.
   - You can do this.

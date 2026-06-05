@@ -73,6 +73,12 @@ public class DialogueBox : MonoBehaviour
         //narrow defer-gate: only true for Death branch dialogues - lets the Death lines play
         //before DeathRespawn closes the dialogue UI. Normal/Awkward/etc. don't set this.
         _isPlayingDeathBranch = (lukeBranch.branchName == "Death");
+
+        // pose reflects the just-paid cost BEFORE any line types (play card -> cost -> pose -> line).
+        // Cost was deducted in the click handler, so confidence is already current here.
+        // Death branches keep the delayed slump (held until the final line) - don't pre-pose those.
+        if (!_isPlayingDeathBranch)
+            playerMovement.GetConfidencePose();
         StartCoroutine(SelectAnim());
         //wait to let the select animation play
         IEnumerator SelectAnim()
@@ -108,6 +114,11 @@ public class DialogueBox : MonoBehaviour
 
     public void PlayDaisyIntroAtTrigger()
     {
+        // always clear the lingering hallway self-talk a beat after convo entry (bug 86ba9uzau) -
+        // runs BEFORE the intro gates so it fires even on loops where her intro is skipped/already made
+        if (hallwaySelfTalk != null)
+            hallwaySelfTalk.ClearHallwayLineOnConvoEntry();
+
         if (confidenceState.daisyIntroMade) return;
         // note: deliberately NOT gated on ShouldSkipIntrosThisLoop - Daisy always greets at the
         // trigger, every loop. The skipIntros override only applies to Luke's convo-side intro.

@@ -15,6 +15,6 @@ MonoBehaviour:
   loop: 1
   triggerLines:
   - Just be confident.
-  - "What\u2019s the worst that can happen?\rIt\u2019s not like I\u2019m gonna pee
-    my pants."
+  - "What\u2019s the worst that can happen?"
+  - "It\u2019s not like I\u2019m gonna pee my pants."
   skipIntros: 1
