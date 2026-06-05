@@ -686,15 +686,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1161810281762307539, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.5
+      value: -4.0534067
       objectReference: {fileID: 0}
     - target: {fileID: 1161810281762307539, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24
+      value: -0.99227667
       objectReference: {fileID: 0}
     - target: {fileID: 1161810281762307539, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.2
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 1476055540710017529, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: Target.TrackingTarget
@@ -770,23 +770,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: orthographic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: field of view
-      value: 28
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: far clip plane
-      value: 5000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: near clip plane
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: orthographic size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8505781925488531942, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1496,7 +1496,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -636.3, y: 160.2}
-  m_SizeDelta: {x: 385.5, y: 227}
+  m_SizeDelta: {x: 450, y: 227}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &861709121
 MonoBehaviour:
@@ -1545,8 +1545,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1577,7 +1577,7 @@ MonoBehaviour:
   m_isOrthographic: 1
   m_isCullingEnabled: 0
   m_horizontalMapping: 0
-  m_verticalMapping: 0
+  m_verticalMapping: 1
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
   m_IsTextObjectScaleStatic: 0
@@ -4759,10 +4759,10 @@ RectTransform:
   - {fileID: 861709120}
   - {fileID: 1723559441}
   - {fileID: 700476206}
-  - {fileID: 5004740748231049796}
-  - {fileID: 8746889761864027569}
   - {fileID: 1459510547}
   - {fileID: 1607508138}
+  - {fileID: 5004740748231049796}
+  - {fileID: 8746889761864027569}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

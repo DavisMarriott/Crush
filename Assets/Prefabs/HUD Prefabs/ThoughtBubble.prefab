@@ -366,7 +366,7 @@ MonoBehaviour:
   m_isOrthographic: 1
   m_isCullingEnabled: 0
   m_horizontalMapping: 0
-  m_verticalMapping: 0
+  m_verticalMapping: 1
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
   m_IsTextObjectScaleStatic: 0
@@ -400,6 +400,7 @@ MonoBehaviour:
   letterBoxAnimator: {fileID: 0}
   animationTriggerThoughtBubble: {fileID: 0}
   selfTalkText: {fileID: 8520165747430806314}
+  draftSelfTalkText: {fileID: 0}
   minFirstTimer: 1
   maxFirstTimer: 4
   minSecondTimer: 4
