@@ -213,7 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
   soundEffect1: {fileID: 8300000, guid: eb30ddcb570fd426e835b5f4cf213ca9, type: 3}
   soundEffect2: {fileID: 8300000, guid: 52df89ed6051c4197bc7c430dc321f05, type: 3}
-  soundEffect3: {fileID: 8300000, guid: 2990649587ef64a14840a992a55ea27d, type: 3}
+  soundEffect3: {fileID: 8300000, guid: c3ed47316ee28465987e909b2a716f5c, type: 3}
   soundEffect4: {fileID: 8300000, guid: 3641959852dc44762a714487376efe1d, type: 3}
   soundEffect5: {fileID: 8300000, guid: 74b2a45eda7844749a7d201281c578d0, type: 3}
   soundEffect6: {fileID: 8300000, guid: 85eb186ca20214f89a17dbbd70e3274e, type: 3}
