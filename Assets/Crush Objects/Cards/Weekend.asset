@@ -60,7 +60,7 @@ MonoBehaviour:
     - charmState: 2
       dialogue:
       - character: 1
-        confidenceImpact: 2
+        confidenceImpact: 0
         charmImpact: 0
         line: Not too much. My little brother turns 10 on Saturday so he's having
           a birthday party.
@@ -68,6 +68,10 @@ MonoBehaviour:
         confidenceImpact: -1
         charmImpact: 0
         line: It's Star Wars themed, I think. Or something nerdy like that haha.
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: NEVER talk about last year's birthday party.
       tags: 
     - charmState: 3
       dialogue:

@@ -25,6 +25,14 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: "What book are you\u2026\u2026."
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: WHAT?!?!
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: WHAT??!?
     tags: 
     charmImpacts: []
     daisyBranches: []
@@ -49,17 +57,13 @@ MonoBehaviour:
     - charmState: 1
       dialogue:
       - character: 1
-        confidenceImpact: 1
+        confidenceImpact: 0
         charmImpact: 0
-        line: Oh this? It's ummm this fantasy series.
+        line: Oh this? It's nothing.
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
-        line: This is the fourth one.
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: They're just okay.
+        line: "Just this - ummm this fantasy series I\u2019ve been reading."
       tags: 
     - charmState: 2
       dialogue:

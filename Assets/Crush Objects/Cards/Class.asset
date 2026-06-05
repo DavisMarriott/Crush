@@ -15,7 +15,7 @@ MonoBehaviour:
   isDance: 0
   revealed: 1
   previewText: Class was boring
-  cost: 1
+  cost: 2
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
@@ -28,7 +28,7 @@ MonoBehaviour:
     tags: 
     charmImpacts: []
     daisyBranches: []
-  - branchName: Normal
+  - branchName: Confident
     dialogue:
     - character: 0
       confidenceImpact: 0

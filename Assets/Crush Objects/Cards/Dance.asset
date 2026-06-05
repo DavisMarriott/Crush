@@ -89,15 +89,15 @@ MonoBehaviour:
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
-      line: "This isn\u2019t happening\u2026.."
+      line: "This can not be happening\u2026.."
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
-      line: "I don\u2019t feel very good."
+      line: DO NOT PEE YOUR PANTS
     - character: 2
       confidenceImpact: -1
       charmImpact: 0
-      line: "I think I\u2019m gonna be si-"
+      line: "I don\u2019t feel so good\u2026."
     tags: 
     charmImpacts: []
     daisyBranches: []
