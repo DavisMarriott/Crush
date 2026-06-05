@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1564733061495559337, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
       propertyPath: m_Color.b
-      value: 0.60784316
+      value: 0.553
       objectReference: {fileID: 0}
     - target: {fileID: 1564733061495559337, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
       propertyPath: m_Color.g
-      value: 0.6117647
+      value: 0.69803923
       objectReference: {fileID: 0}
     - target: {fileID: 1564733061495559337, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 0.011764706
       objectReference: {fileID: 0}
     - target: {fileID: 2393472669592761024, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
       propertyPath: m_Color.b
@@ -37,12 +37,24 @@ PrefabInstance:
       value: SpeechBubble_Player
       objectReference: {fileID: 0}
     - target: {fileID: 6385475954366956650, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 57
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385475954366956650, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 57
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385475954366956650, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 57
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385475954366956650, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 6385475954366956650, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 273
       objectReference: {fileID: 0}
     - target: {fileID: 6385475954366956650, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -90,11 +102,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8561763223293154351, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
       propertyPath: m_Color.b
-      value: 0.6082221
+      value: 0.41573757
       objectReference: {fileID: 0}
     - target: {fileID: 8561763223293154351, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
       propertyPath: m_Color.g
-      value: 0.6132076
+      value: 0.6981132
       objectReference: {fileID: 0}
     - target: {fileID: 8561763223293154351, guid: 8361ffff5d0854aef9e07ecd383e265b, type: 3}
       propertyPath: m_Color.r

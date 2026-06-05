@@ -164,6 +164,8 @@ public class DialogueBox : MonoBehaviour
             if (line.character == DialogueCard.DialogueCharacter.BoyInternal)
             {
                 yield return dialogueTiming.Run(line.line, hallwaySelfTalk.selfTalkText);
+                animationTriggerSpeechBubblePlayer.SpeechBubbleHide();
+                animationTriggerSpeechBubbleCrush.SpeechBubbleHide();   
             }
             else
             {
@@ -258,6 +260,8 @@ public class DialogueBox : MonoBehaviour
                 if (line.character == DialogueCard.DialogueCharacter.BoyInternal)
                 {
                     yield return dialogueTiming.Run(line.line, hallwaySelfTalk.selfTalkText);
+                    animationTriggerSpeechBubblePlayer.SpeechBubbleHide();
+                    animationTriggerSpeechBubbleCrush.SpeechBubbleHide(); 
                 }
                 else
                 {
