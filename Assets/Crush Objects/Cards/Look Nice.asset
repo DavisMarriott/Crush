@@ -28,6 +28,7 @@ MonoBehaviour:
     tags: 
     charmImpacts: []
     daisyBranches: []
+    deathReactions: []
   - branchName: Normal
     dialogue:
     - character: 0
@@ -88,6 +89,7 @@ MonoBehaviour:
         charmImpact: 0
         line: "You look cu- uhh\u2026 nice.. too"
       tags: 
+    deathReactions: []
   draftLines:
   - line: Girls like it when you compliment them
   - line: I think

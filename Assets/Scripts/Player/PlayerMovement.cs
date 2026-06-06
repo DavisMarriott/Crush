@@ -108,23 +108,28 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // acceleration feels different depending on what anim state we're in
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        // acceleration feels different depending on what anim state we're in.
+        // Only poll while the animator is actually running - polling a disabled/controller-less
+        // animator spams "Animator is not playing an AnimatorController" every physics tick.
+        if (animator != null && animator.isActiveAndEnabled && animator.runtimeAnimatorController != null)
+        {
+            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 
-        if (stateInfo.IsName("Player_Start_CYCLE"))
-        {
-            accelerationTime = 0.40f;
-            // delayTime = .25f;
-        }
-        if (stateInfo.IsName("Player_State01_CYCLE"))
-        {
-            accelerationTime = 0.30f;
-            // delayTime = .15f;
-        }
-        else
-        {
-            accelerationTime = 0.12f;
-            // delayTime = .25f;
+            if (stateInfo.IsName("Player_Start_CYCLE"))
+            {
+                accelerationTime = 0.40f;
+                // delayTime = .25f;
+            }
+            if (stateInfo.IsName("Player_State01_CYCLE"))
+            {
+                accelerationTime = 0.30f;
+                // delayTime = .15f;
+            }
+            else
+            {
+                accelerationTime = 0.12f;
+                // delayTime = .25f;
+            }
         }
 
 

@@ -67,6 +67,9 @@ public class DialogueBox : MonoBehaviour
         }
         // Register tags from the Luke branch as fired this loop
         deckManager.RegisterTags(lukeBranch.tags);
+        // log which branch fired for this card - LoopSnapshot picks this up on death so
+        // death reactions can key off the exact card+branch you died on
+        gameProgression.RecordBranchPlayed(dialogueCard.name, lukeBranch.branchName);
         // Bring thought bubble to full while dialogue is showing
         animationTriggerThoughtBubble.ThoughtBubbleOn();
         dialogueBox.SetActive(true);
@@ -141,6 +144,39 @@ public class DialogueBox : MonoBehaviour
         _daisyIntroRunning = false;
     }
 
+    // ---- sequenced discovery slots ([1st]/[2nd]/[last], 86baanp61) ----
+
+    // Resolve which variant group plays for this slot visit (advances the per-run counter).
+    // Returns null when exhausted with no [last] - the slot is omitted this visit.
+    private ReflectLineGroup ResolveSlotGroup(DialogueCard.DialogueLine line, string slotKey)
+    {
+        int used = gameProgression.GetSequencedSlotUse(slotKey);
+        gameProgression.NoteSequencedSlotUsed(slotKey);
+        if (used < line.variantGroups.Length) return line.variantGroups[used];
+        return line.lastSticks ? line.variantGroups[line.variantGroups.Length - 1] : null;
+    }
+
+    // Plays one variant group - each line types + advances like a normal dialogue line.
+    private IEnumerator PlaySlotGroup(ReflectLineGroup group, DialogueCard.DialogueCharacter character)
+    {
+        foreach (var text in group.lines)
+        {
+            SetSpeakerIndicator(character);
+            if (character == DialogueCard.DialogueCharacter.BoyInternal)
+            {
+                yield return dialogueTiming.Run(text, hallwaySelfTalk.selfTalkText);
+            }
+            else
+            {
+                playerMovement.PlayerTalk();
+                yield return dialogueTiming.Run(text, dialogueText);
+            }
+            yield return new WaitUntil(() => DialogueAdvance.Pressed(nextLineAction.action));
+            hallwaySelfTalk.selfTalkText.text = "";
+            dialogueText.text = "";
+        }
+    }
+
     //this is where dialogue plays/bulk of conversation system lives
     private IEnumerator StepThroughDialogue(DialogueCard dialogueCard, DialogueCard.DialogueBranch lukeBranch)
     {
@@ -160,6 +196,23 @@ public class DialogueBox : MonoBehaviour
         for (int i = 0; i < lukeBranch.dialogue.Length; i++)
         {
             DialogueCard.DialogueLine line = lukeBranch.dialogue[i];
+
+            // sequenced discovery slot - plays its per-run variant group instead of a single line
+            if (line.variantGroups != null && line.variantGroups.Length > 0)
+            {
+                var slotGroup = ResolveSlotGroup(line, $"{dialogueCard.name}|{lukeBranch.branchName}|L{i}");
+                if (slotGroup != null)
+                {
+                    yield return PlaySlotGroup(slotGroup, line.character);
+                    // slot impacts apply once per play, whichever variant fired
+                    confidenceState.confidence += line.confidenceImpact;
+                    charmState.charm += line.charmImpact;
+                    if (!_isPlayingDeathBranch) playerMovement.GetConfidencePose();
+                    animationTriggerCrush.GetCharmPose();
+                }
+                continue;
+            }
+
             SetSpeakerIndicator(line.character);
             if (line.character == DialogueCard.DialogueCharacter.BoyInternal)
             {
@@ -253,8 +306,25 @@ public class DialogueBox : MonoBehaviour
 
         if (daisyBranch != null && daisyBranch.dialogue != null && daisyBranch.dialogue.Length > 0)
         {
+            int daisyLineIndex = -1;
             foreach (DialogueCard.DialogueLine line in daisyBranch.dialogue)
             {
+                daisyLineIndex++;
+
+                // sequenced discovery slot - plays its per-run variant group instead of a single line
+                if (line.variantGroups != null && line.variantGroups.Length > 0)
+                {
+                    var slotGroup = ResolveSlotGroup(line, $"{dialogueCard.name}|{lukeBranch.branchName}|D{daisyBranch.charmState}|{daisyLineIndex}");
+                    if (slotGroup != null)
+                    {
+                        yield return PlaySlotGroup(slotGroup, line.character);
+                        confidenceState.confidence += line.confidenceImpact;
+                        charmState.charm += line.charmImpact;
+                        playerMovement.GetConfidencePose();
+                    }
+                    continue;
+                }
+
                 SetSpeakerIndicator(line.character);
                 animationTriggerCrush.GetCharmPose();
                 if (line.character == DialogueCard.DialogueCharacter.BoyInternal)

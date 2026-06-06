@@ -123,6 +123,8 @@ namespace Crush.EditorTools
             BranchData currentBranch = null;
             DaisyBranchData currentDaisy = null;
             string daisyMode = "none";         // none | expectingState | inState
+            bool deathReactionMode = false;    // inside a "Death reactions:" block (within a branch)
+            LineData currentSlot = null;       // sequenced slot under construction ([1st]/[2nd]/[last])
 
             for (int i = 0; i < structure.Length; i++)
             {
@@ -146,6 +148,7 @@ namespace Crush.EditorTools
                         currentBranch = null;
                         currentDaisy = null;
                         daisyMode = "none";
+                        currentSlot = null;
                         continue;
                     }
                     if (Regex.IsMatch(h1, @"^upgrades$", RegexOptions.IgnoreCase))
@@ -154,15 +157,27 @@ namespace Crush.EditorTools
                         currentBranch = null;
                         currentDaisy = null;
                         daisyMode = "none";
+                        currentSlot = null;
                         continue;
                     }
-                    // otherwise it's a new Luke branch. Strip a trailing " branch" if the doc included it.
-                    var branchName = Regex.Replace(h1, @"\s+branch$", "", RegexOptions.IgnoreCase).Trim();
-                    currentBranch = new BranchData { branchName = branchName };
+                    // otherwise it's a new Luke branch. Extract optional [tag] markers first
+                    // (e.g. "Normal branch [funny]"), then strip a trailing " branch".
+                    var branchTags = new List<string>();
+                    foreach (Match tagMatch in Regex.Matches(h1, @"\[([^\]]+)\]"))
+                        foreach (var piece in tagMatch.Groups[1].Value.Split(','))
+                        {
+                            var tagName = piece.Trim();
+                            if (tagName.Length > 0) branchTags.Add(tagName);
+                        }
+                    var h1Clean = Regex.Replace(h1, @"\s*\[[^\]]+\]", "").Trim();
+                    var branchName = Regex.Replace(h1Clean, @"\s+branch$", "", RegexOptions.IgnoreCase).Trim();
+                    currentBranch = new BranchData { branchName = branchName, tags = branchTags };
                     card.lukeBranches.Add(currentBranch);
                     section = "branch";
                     currentDaisy = null;
                     daisyMode = "none";
+                    deathReactionMode = false;
+                    currentSlot = null;
                     continue;
                 }
 
@@ -215,6 +230,8 @@ namespace Crush.EditorTools
                     {
                         currentBranch.expectingCharmBullets = true;
                         daisyMode = "none";
+                        deathReactionMode = false;
+                        currentSlot = null;
                         continue;
                     }
 
@@ -222,7 +239,92 @@ namespace Crush.EditorTools
                     {
                         currentBranch.expectingCharmBullets = false;
                         daisyMode = "expectingState";
+                        deathReactionMode = false;
+                        currentSlot = null;
                         continue;
+                    }
+
+                    if (Regex.IsMatch(stripped, @"^death reactions:?$", RegexOptions.IgnoreCase))
+                    {
+                        currentBranch.expectingCharmBullets = false;
+                        daisyMode = "none";
+                        deathReactionMode = true;
+                        currentSlot = null;
+                        continue;
+                    }
+
+                    // Death-reactions block: "1)" / "2." markers split reaction groups; other lines
+                    // join the current group. A leading "Internal:" prefix is stripped (reflect lines
+                    // render raw - the prefix would show on screen otherwise). Runs BEFORE the
+                    // Luke/Internal matchers so reaction lines don't leak into the branch dialogue.
+                    if (deathReactionMode)
+                    {
+                        if (Regex.IsMatch(stripped, @"^\d+[\)\.]?$"))
+                        {
+                            currentBranch.deathReactions.Add(new List<string>());
+                            continue;
+                        }
+                        if (currentBranch.deathReactions.Count == 0)
+                            currentBranch.deathReactions.Add(new List<string>());
+                        var reactionText = stripped;
+                        var internalPrefix = MatchDialogueLine(rawText, "Internal");
+                        if (internalPrefix != null) reactionText = internalPrefix.text;
+                        currentBranch.deathReactions[currentBranch.deathReactions.Count - 1].Add(reactionText);
+                        continue;
+                    }
+
+                    // ---- sequenced discovery slots ([1st]/[2nd]/[last]/[once], 86baanp61) ----
+                    // A marker line opens/extends a slot; a marker alone starts a multi-line group,
+                    // inline text after the marker is a one-line group. Bare lines while a slot is
+                    // open join its current group. A normal speaker line (no marker) closes the slot.
+                    var slotMarker = MatchSlotMarker(rawText);
+                    if (slotMarker != null)
+                    {
+                        if (currentSlot == null)
+                        {
+                            currentSlot = new LineData
+                            {
+                                character = "BoyInternal",   // discovery slots default to Internal
+                                text = "",
+                                variantGroups = new List<List<string>>()
+                            };
+                            var slotTarget = (daisyMode == "inState" && currentDaisy != null) ? currentDaisy.lines : currentBranch.luke;
+                            slotTarget.Add(currentSlot);
+                        }
+                        if (slotMarker.last) currentSlot.lastSticks = true;
+                        if (slotMarker.conf != 0) currentSlot.confidenceImpact = slotMarker.conf;
+                        if (slotMarker.charm != 0) currentSlot.charmImpact = slotMarker.charm;
+                        currentSlot.variantGroups.Add(new List<string>());
+
+                        if (!string.IsNullOrEmpty(slotMarker.remainder))
+                        {
+                            var lineText = slotMarker.remainder;
+                            var sp = Regex.Match(lineText, @"^(Luke|Internal|Daisy):\s*(.+)$", RegexOptions.IgnoreCase);
+                            if (sp.Success)
+                            {
+                                currentSlot.character = SpeakerToCharacter(sp.Groups[1].Value);
+                                lineText = sp.Groups[2].Value.Trim();
+                            }
+                            currentSlot.variantGroups[currentSlot.variantGroups.Count - 1].Add(StripBold(lineText));
+                        }
+                        continue;
+                    }
+
+                    if (currentSlot != null)
+                    {
+                        bool isNormalLine = MatchDialogueLine(rawText, "Luke") != null
+                                         || MatchDialogueLine(rawText, "Internal") != null
+                                         || MatchDialogueLine(rawText, "Daisy") != null;
+                        bool isDaisyStateHeader = daisyMode != "none"
+                                         && Regex.IsMatch(stripped, @"^(Death|Low|Neutral|Positive|High)(\s|\(|$)", RegexOptions.IgnoreCase)
+                                         && !rawText.StartsWith("[", StringComparison.Ordinal);
+                        if (!isNormalLine && !isDaisyStateHeader)
+                        {
+                            // bare line - belongs to the slot's current variant group
+                            currentSlot.variantGroups[currentSlot.variantGroups.Count - 1].Add(stripped);
+                            continue;
+                        }
+                        currentSlot = null;   // normal line / state header - close the slot, fall through
                     }
 
                     // Luke / Internal dialogue lines.
@@ -304,6 +406,14 @@ namespace Crush.EditorTools
                             {
                                 stateName = Capitalize(stateMatch.Groups[1].Value)
                             };
+                            // optional [tag] / [tag1, tag2] markers on the state header → DaisyBranch.tags
+                            // e.g. "**High** (charm 9–10) [funny]"
+                            foreach (Match tagMatch in Regex.Matches(stripped, @"\[([^\]]+)\]"))
+                                foreach (var piece in tagMatch.Groups[1].Value.Split(','))
+                                {
+                                    var tagName = piece.Trim();
+                                    if (tagName.Length > 0) currentDaisy.tags.Add(tagName);
+                                }
                             currentBranch.daisyBranches.Add(currentDaisy);
                             daisyMode = "inState";
                             continue;
@@ -367,6 +477,48 @@ namespace Crush.EditorTools
             return new DialogueParseResult { conf = conf, charm = charm, text = sp.Groups[1].Value.Trim() };
         }
 
+        // Matches a leading [..] bracket containing a slot token: an ordinal (1st/2nd/3...),
+        // "last", or "once". Impacts may share the bracket ([1st, +1 conf]). Returns null for
+        // non-slot lines (incl. normal [0 conf] annotations). Ordinal VALUES are ignored -
+        // groups land in authored order; the numbers are for the writer's eyes.
+        class SlotMarker { public bool last; public int conf; public int charm; public string remainder; }
+
+        static SlotMarker MatchSlotMarker(string rawText)
+        {
+            var t = StripBold(rawText);
+            var m = Regex.Match(t, @"^\[([^\]]+)\]\s*(.*)$", RegexOptions.Singleline);
+            if (!m.Success) return null;
+
+            bool isSlot = false, last = false;
+            int conf = 0, charm = 0;
+            foreach (var piece in m.Groups[1].Value.Split(','))
+            {
+                var p = piece.Trim();
+                if (Regex.IsMatch(p, @"^\d+(st|nd|rd|th)?$", RegexOptions.IgnoreCase)) { isSlot = true; continue; }
+                if (p.Equals("last", StringComparison.OrdinalIgnoreCase)) { isSlot = true; last = true; continue; }
+                if (p.Equals("once", StringComparison.OrdinalIgnoreCase)) { isSlot = true; continue; }
+                var im = Regex.Match(p, @"^([+\-]?\d+)\s*(conf|charm)$", RegexOptions.IgnoreCase);
+                if (im.Success)
+                {
+                    int.TryParse(im.Groups[1].Value, out int val);
+                    if (im.Groups[2].Value.Equals("conf", StringComparison.OrdinalIgnoreCase)) conf = val;
+                    else charm = val;
+                }
+            }
+            if (!isSlot) return null;
+            return new SlotMarker { last = last, conf = conf, charm = charm, remainder = m.Groups[2].Value.Trim() };
+        }
+
+        static string SpeakerToCharacter(string speaker)
+        {
+            switch ((speaker ?? "").Trim().ToLowerInvariant())
+            {
+                case "luke": return "Boy";
+                case "daisy": return "Girl";
+                default: return "BoyInternal";
+            }
+        }
+
         static string StripBold(string s) => BoldStrip.Replace(s, m => m.Groups[1].Value).Trim();
         static string Capitalize(string s) => string.IsNullOrEmpty(s) ? s : char.ToUpper(s[0]) + s.Substring(1).ToLower();
 
@@ -394,6 +546,15 @@ namespace Crush.EditorTools
                 // luke dialogue
                 WriteLines(bp.FindPropertyRelative("dialogue"), branch.luke);
 
+                // branch tags from [tag] H1 markers - only overwrite when the doc provides tags
+                if (branch.tags.Count > 0)
+                {
+                    var branchTagsProp = bp.FindPropertyRelative("tags");
+                    branchTagsProp.arraySize = branch.tags.Count;
+                    for (int j = 0; j < branch.tags.Count; j++)
+                        branchTagsProp.GetArrayElementAtIndex(j).enumValueIndex = (int)ParseDialogueTag(branch.tags[j]);
+                }
+
                 // charm impacts on this branch
                 var ciProp = bp.FindPropertyRelative("charmImpacts");
                 ciProp.arraySize = branch.charmImpacts.Count;
@@ -414,6 +575,27 @@ namespace Crush.EditorTools
                     var dp = dbProp.GetArrayElementAtIndex(j);
                     dp.FindPropertyRelative("charmState").enumValueIndex = (int)ParseCharmState(daisy.stateName);
                     WriteLines(dp.FindPropertyRelative("dialogue"), daisy.lines);
+
+                    // tags from [tag] header markers. Only overwrite when the doc provides tags -
+                    // an untagged header leaves inspector-set tags untouched.
+                    if (daisy.tags.Count > 0)
+                    {
+                        var tagsProp = dp.FindPropertyRelative("tags");
+                        tagsProp.arraySize = daisy.tags.Count;
+                        for (int k = 0; k < daisy.tags.Count; k++)
+                            tagsProp.GetArrayElementAtIndex(k).enumValueIndex = (int)ParseDialogueTag(daisy.tags[k]);
+                    }
+                }
+
+                // death reactions on this luke branch (groups of plain lines)
+                var drProp = bp.FindPropertyRelative("deathReactions");
+                drProp.arraySize = branch.deathReactions.Count;
+                for (int j = 0; j < branch.deathReactions.Count; j++)
+                {
+                    var linesProp = drProp.GetArrayElementAtIndex(j).FindPropertyRelative("lines");
+                    linesProp.arraySize = branch.deathReactions[j].Count;
+                    for (int k = 0; k < branch.deathReactions[j].Count; k++)
+                        linesProp.GetArrayElementAtIndex(k).stringValue = branch.deathReactions[j][k];
                 }
             }
 
@@ -439,6 +621,19 @@ namespace Crush.EditorTools
                 lp.FindPropertyRelative("line").stringValue = line.text;
                 lp.FindPropertyRelative("confidenceImpact").intValue = line.confidenceImpact;
                 lp.FindPropertyRelative("charmImpact").intValue = line.charmImpact;
+
+                // sequenced slot payload
+                var vgProp = lp.FindPropertyRelative("variantGroups");
+                int groupCount = line.variantGroups?.Count ?? 0;
+                vgProp.arraySize = groupCount;
+                for (int g = 0; g < groupCount; g++)
+                {
+                    var linesProp = vgProp.GetArrayElementAtIndex(g).FindPropertyRelative("lines");
+                    linesProp.arraySize = line.variantGroups[g].Count;
+                    for (int k = 0; k < line.variantGroups[g].Count; k++)
+                        linesProp.GetArrayElementAtIndex(k).stringValue = line.variantGroups[g][k];
+                }
+                lp.FindPropertyRelative("lastSticks").boolValue = line.lastSticks;
             }
         }
 
@@ -455,6 +650,14 @@ namespace Crush.EditorTools
                     Debug.LogWarning($"[CardsImporter] Unknown charm state '{name}', defaulting to Neutral.");
                     return DialogueCard.CharmState.Neutral;
             }
+        }
+
+        static DialogueTag ParseDialogueTag(string s)
+        {
+            if (Enum.TryParse<DialogueTag>((s ?? "").Trim(), true, out var tag))
+                return tag;
+            Debug.LogWarning($"[CardsImporter] Unknown dialogue tag '{s}' — defaulting to {default(DialogueTag)}. Valid: {string.Join(", ", Enum.GetNames(typeof(DialogueTag)))}");
+            return default;
         }
 
         static DialogueCard.DialogueCharacter ParseCharacter(string s)
@@ -544,12 +747,15 @@ namespace Crush.EditorTools
             public List<CharmImpactData> charmImpacts = new List<CharmImpactData>();
             public List<DaisyBranchData> daisyBranches = new List<DaisyBranchData>();
             public bool expectingCharmBullets;  // set true after we see "Charm shift…" header
+            public List<List<string>> deathReactions = new List<List<string>>();  // groups from "Death reactions:" blocks
+            public List<string> tags = new List<string>();   // from [tag] markers on the branch H1
         }
 
         class DaisyBranchData
         {
             public string stateName;
             public List<LineData> lines = new List<LineData>();
+            public List<string> tags = new List<string>();   // from [tag] markers on the state header
         }
 
         class CharmImpactData
@@ -564,6 +770,9 @@ namespace Crush.EditorTools
             public string text;
             public int confidenceImpact;
             public int charmImpact;
+            // sequenced slot payload ([1st]/[2nd]/[last]) - null for normal lines
+            public List<List<string>> variantGroups;
+            public bool lastSticks;
         }
 
         class DialogueParseResult

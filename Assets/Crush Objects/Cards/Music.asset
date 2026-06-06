@@ -32,6 +32,7 @@ MonoBehaviour:
     tags: 
     charmImpacts: []
     daisyBranches: []
+    deathReactions: []
   - branchName: Awkward
     dialogue:
     - character: 0
@@ -79,6 +80,7 @@ MonoBehaviour:
         line: "Uhhh\u2026. they're called Penny Farthing, not Farthing Penny. But
           close enough. Don't worry, I won't tell anyone."
       tags: 
+    deathReactions: []
   - branchName: Normal
     dialogue:
     - character: 0
@@ -137,6 +139,7 @@ MonoBehaviour:
         charmImpact: 0
         line: That's cool you like them too! We should listen to the new album together
       tags: 
+    deathReactions: []
   draftLines:
   - line: A new Penny Farthing song just came out.
   - line: She loves them.

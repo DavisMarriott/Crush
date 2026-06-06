@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -112,6 +113,47 @@ public class GameProgression : MonoBehaviour
     public void NextLoop()
     {
         loopCount++;
+        // fresh branch log for the new loop (DeathRespawn snapshots it BEFORE calling NextLoop)
+        _branchLog.Clear();
+    }
+
+    // ---- per-loop branch log (which Luke branch fired per card played) ----
+    // recorded by DialogueBox at branch-select time; snapshotted into LoopSnapshot on death
+    private readonly List<CardBranchRecord> _branchLog = new List<CardBranchRecord>();
+    public IReadOnlyList<CardBranchRecord> BranchLog => _branchLog;
+
+    public void RecordBranchPlayed(string cardName, string branchName)
+    {
+        _branchLog.Add(new CardBranchRecord(cardName, branchName));
+    }
+
+    // ---- per-RUN sequenced-slot usage (key: "card|branch|slotIndex") ----
+    // discovery line slots ([1st]/[2nd]/[last]) advance through this. Runtime only.
+    private readonly Dictionary<string, int> _sequencedSlotUse = new Dictionary<string, int>();
+
+    public int GetSequencedSlotUse(string key)
+    {
+        return _sequencedSlotUse.TryGetValue(key, out int n) ? n : 0;
+    }
+
+    public void NoteSequencedSlotUsed(string key)
+    {
+        _sequencedSlotUse[key] = GetSequencedSlotUse(key) + 1;
+    }
+
+    // ---- per-RUN death-reaction exhaustion (key: "card|branch") ----
+    // runtime only, deliberately NOT serialized anywhere - resets on full game restart
+    private readonly Dictionary<string, int> _deathReactionUse = new Dictionary<string, int>();
+
+    public int GetDeathReactionUse(string cardName, string branchName)
+    {
+        return _deathReactionUse.TryGetValue($"{cardName}|{branchName}", out int n) ? n : 0;
+    }
+
+    public void NoteDeathReactionUsed(string cardName, string branchName)
+    {
+        string key = $"{cardName}|{branchName}";
+        _deathReactionUse[key] = GetDeathReactionUse(cardName, branchName) + 1;
     }
 
     //per-loop override lookup - currently only used by DialogueBox for the skipIntros flag.

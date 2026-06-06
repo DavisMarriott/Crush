@@ -24,10 +24,144 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "Class was uhhh\u2026 pretty\u2026."
+      line: "\u2026."
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Not again\u2026"
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: -1
+      line: Are you okay?
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "No, I\u2019m not okay!"
     tags: 
     charmImpacts: []
     daisyBranches: []
+    deathReactions: []
+  - branchName: Awkward
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Mr. Miller\u2019s class is a real snooze fest huh?"
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Wow\u2026 good one Luke."
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 1
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "I don\u2019t think it\u2019s that bad."
+      - character: 1
+        confidenceImpact: -2
+        charmImpact: 0
+        line: At least Mr. Miller is passionate about history.
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: Haha I know right.
+      tags: 
+    - charmState: 3
+      dialogue: []
+      tags: 00000000
+    - charmState: 4
+      dialogue: []
+      tags: 00000000
+    deathReactions: []
+  - branchName: Normal
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Class was soooo boring.
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I don\u2019t know if I can handle another semester of Mr. Miller"
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 1
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: yeah that class sucked gotta go see ya later
+      tags: 
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "I don\u2019t think it\u2019s that bad."
+      - character: 1
+        confidenceImpact: -2
+        charmImpact: 0
+        line: At least Mr. Miller is passionate about history.
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: Seriously haha. Ugh 5th period is the absolute worst.
+      tags: 00000000
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: I know right. It's like all that guy thinks about is the Roman Empire
+          haha.
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: He needs some new hobbies.
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: That actually worked.
+      tags: 00000000
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: HAHAH right?! He is so boring I want to DIE every time 5th period rolls
+          around.
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: HAHA you're hilarious!
+      tags: 00000000
+    deathReactions: []
   - branchName: Confident
     dialogue:
     - character: 0
@@ -99,6 +233,7 @@ MonoBehaviour:
         charmImpact: 0
         line: HAHA you're hilarious!
       tags: 00000000
+    deathReactions: []
   draftLines:
   - line: Something easy
   - line: Just talk about how boring 4th period was

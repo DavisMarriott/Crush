@@ -28,6 +28,7 @@ MonoBehaviour:
     tags: 
     charmImpacts: []
     daisyBranches: []
+    deathReactions: []
   - branchName: Normal
     dialogue:
     - character: 0
@@ -90,6 +91,7 @@ MonoBehaviour:
         charmImpact: 0
         line: Oh.. the test. Ummm, yeah. I think I did pretty well.
       tags: 
+    deathReactions: []
   draftLines:
   - line: She probably got an A on Ms. Parsons test
   - line: She's perfect

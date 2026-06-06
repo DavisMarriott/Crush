@@ -18,7 +18,7 @@ MonoBehaviour:
     threshold: 10
     tag: 0
   reflectLines:
-  - I was actually feeling okay there for a second
+  - I was actually feeling kind of confident there for a second.
   - Do I......
   - know how to talk to girls now?
-  characterUpgrade: {fileID: 11400000, guid: 2babad58a1e5643b9a3a713940aaad6e, type: 2}
+  characterUpgrade: {fileID: 11400000, guid: e133446fbe28a4c07b37145815ed06f5, type: 2}

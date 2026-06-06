@@ -36,6 +36,13 @@ MonoBehaviour:
     tags: 
     charmImpacts: []
     daisyBranches: []
+    deathReactions:
+    - lines:
+      - "Why couldn\u2019t I get that out? I was just trying to ask her about the
+        book!!"
+    - lines:
+      - Again?!? Really??
+      - "You\u2019re so afraid of girls you can\u2019t ask about a stupid book?!"
   - branchName: Normal
     dialogue:
     - character: 0
@@ -110,6 +117,7 @@ MonoBehaviour:
         charmImpact: 0
         line: Just this fantasy series I've been reading.
       tags: 
+    deathReactions: []
   draftLines:
   - line: She's holding that book....
   - line: She might like if I ask her about it.

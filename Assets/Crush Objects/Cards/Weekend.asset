@@ -28,6 +28,7 @@ MonoBehaviour:
     tags: 
     charmImpacts: []
     daisyBranches: []
+    deathReactions: []
   - branchName: Normal
     dialogue:
     - character: 0
@@ -101,6 +102,7 @@ MonoBehaviour:
         charmImpact: 0
         line: But that's it though! I'm totally free outside of that.
       tags: 
+    deathReactions: []
   draftLines:
   - line: That's what guys with girlfriends talk about.
   - line: right?

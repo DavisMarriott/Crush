@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -12,6 +13,7 @@ public class ReflectSelfTalk : MonoBehaviour
     [SerializeField] private float maxRevealWait = 3f;   // safety cap so the reveal-wait below can't hang
     [SerializeField] private float minHoldAfterReveal = 0.3f;  // extra hold after the reveal flag fires - catches cases where the EnableSelfTalk anim event fires before the bubble is visually open
     [SerializeField] private SelfTalkManager selfTalkManager;   // reveal signal — EnableSelfTalk sets its flag
+    [SerializeField] private BaseReflectPools basePools;        // base-loop formula pools (generic death / draft intro / commit)
 
     public IEnumerator Play(LoopSnapshot snapshot, int loopCount)
     {
@@ -79,6 +81,83 @@ public class ReflectSelfTalk : MonoBehaviour
 
         // Reflect lines done — minimize bubble before draft / hallway resumes
         // animationTriggerThoughtBubble.ThoughtBubbleHalf();
+    }
+
+    // ============================================================
+    // Base-loop reflect formula beats (2026-06-05 design, 86baajqwe)
+    // ============================================================
+
+    // Beat 1 — reflect on death. Card+branch-specific reaction first (in authored order,
+    // per-run exhaustion tracked on GameProgression); else a random generic-pool reaction.
+    public IEnumerator PlayDeathReactionBeat(LoopSnapshot snapshot, GameProgression progression)
+    {
+        var card = snapshot.deathCard;
+        string branchName = snapshot.deathBranchName;
+
+        if (card != null && !string.IsNullOrEmpty(branchName) && card.LukeBranches != null)
+        {
+            foreach (var b in card.LukeBranches)
+            {
+                if (b == null || b.branchName != branchName) continue;
+                if (b.deathReactions == null || b.deathReactions.Length == 0) break;
+
+                int used = progression.GetDeathReactionUse(card.name, branchName);
+                if (used < b.deathReactions.Length)
+                {
+                    progression.NoteDeathReactionUsed(card.name, branchName);
+                    yield return PlayLines(b.deathReactions[used].lines);
+                    yield break;
+                }
+                break; // exhausted - fall through to the generic pool
+            }
+        }
+
+        if (basePools != null && basePools.genericDeathReactions != null && basePools.genericDeathReactions.Length > 0)
+        {
+            var g = basePools.genericDeathReactions[Random.Range(0, basePools.genericDeathReactions.Length)];
+            yield return PlayLines(g.lines);
+        }
+        // no pool authored yet - beat just skips
+    }
+
+    // Beat 2 fallback — random among ALL eligible conditional branches (instead of first-match),
+    // so repeated similar deaths don't always read the same conditional. Scripted branches excluded.
+    public IEnumerator PlayRandomEligible(LoopSnapshot snapshot, int loopCount)
+    {
+        var eligible = new List<ReflectBranch>();
+        if (branches != null)
+        {
+            foreach (var branch in branches)
+            {
+                if (branch == null || branch.isScripted) continue;
+                if (Matches(branch, snapshot, loopCount)) eligible.Add(branch);
+            }
+        }
+
+        if (eligible.Count == 0)
+        {
+            Debug.Log("[ReflectSelfTalk] no eligible conditional — skipping progress beat");
+            yield break;
+        }
+
+        yield return PlayLines(eligible[Random.Range(0, eligible.Count)].lines);
+    }
+
+    // Beat 3 — one random draft-intro line right before the draft opens.
+    public IEnumerator PlayDraftIntro()
+    {
+        if (basePools == null || basePools.draftIntroLines == null || basePools.draftIntroLines.Length == 0)
+            yield break;
+        yield return PlayLines(new[] { basePools.draftIntroLines[Random.Range(0, basePools.draftIntroLines.Length)] });
+    }
+
+    // Beat 4 — random commit group for base loops (scripted loops keep their own commitLines).
+    public IEnumerator PlayBaseCommit()
+    {
+        if (basePools == null || basePools.commitLineGroups == null || basePools.commitLineGroups.Length == 0)
+            yield break;
+        var g = basePools.commitLineGroups[Random.Range(0, basePools.commitLineGroups.Length)];
+        yield return PlayLines(g.lines);
     }
 
     private ReflectBranch SelectBranch(LoopSnapshot snapshot, int loopCount)

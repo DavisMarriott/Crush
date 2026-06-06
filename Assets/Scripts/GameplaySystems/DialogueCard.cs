@@ -122,6 +122,9 @@ public class DialogueCard : ScriptableObject
         [Header("Daisy's Response (charm-based, for this branch)")]
         public DaisyBranch[] daisyBranches;
 
+        [Header("Death reactions — reflect callbacks for dying on THIS branch (base loops only). Played in authored order across deaths, exhaustion is per run; when used up the generic pool takes over.")]
+        public ReflectLineGroup[] deathReactions;
+
         public int GetCharmImpact(CharmState currentState)
         {
             if (charmImpacts == null) return 0;
@@ -244,8 +247,14 @@ public class DialogueCard : ScriptableObject
         [Header("Dialogue Line")]
         [TextArea(3,5)]
         public string line;
+
+        [Header("Sequenced slot (optional) — per-run variant groups. When non-empty, this entry is a")]
+        [Header("discovery slot: run-visit 1 plays group 0, visit 2 group 1, etc. 'line' above is unused.")]
+        public ReflectLineGroup[] variantGroups;
+        [Tooltip("From the [last] doc marker: once variants are exhausted the final group repeats forever. Off = the slot goes silent.")]
+        public bool lastSticks;
     }
-    
+
 
     [System.Serializable]
     public class DraftLine

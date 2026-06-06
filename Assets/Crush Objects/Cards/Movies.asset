@@ -32,6 +32,7 @@ MonoBehaviour:
     tags: 
     charmImpacts: []
     daisyBranches: []
+    deathReactions: []
   - branchName: Normal
     dialogue:
     - character: 0
@@ -118,6 +119,7 @@ MonoBehaviour:
         charmImpact: 0
         line: "I mean - if you want to\u2026"
       tags: 
+    deathReactions: []
   draftLines:
   - line: I think she likes movies.
   - line: "That might be a good ice breaker\u2026"

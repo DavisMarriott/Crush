@@ -72,6 +72,12 @@ public class DeathRespawn : MonoBehaviour
         loopSnapshot.deathCard = deckManager.LastPlayedCard;
         // Snapshot the tags fired during this loop's conversation(s)
         loopSnapshot.tagsFired = new HashSet<DialogueTag>(deckManager.TagsFiredThisLoop);
+        // branch log + the branch you died on (last branch that fired) - drives death reactions.
+        // Must copy BEFORE NextLoop() below, which clears the live log.
+        loopSnapshot.branchesPlayed = new List<CardBranchRecord>(gameProgression.BranchLog);
+        loopSnapshot.deathBranchName = loopSnapshot.branchesPlayed.Count > 0
+            ? loopSnapshot.branchesPlayed[loopSnapshot.branchesPlayed.Count - 1].branchName
+            : null;
         //end of updating loopSnapshot: Next - game progression captures it
         gameProgression.lastLoop = loopSnapshot;
         
@@ -123,10 +129,11 @@ public class DeathRespawn : MonoBehaviour
             ? milestoneTracker.GetTriggeredMilestone(gameProgression.lastLoop, gameProgression.loopCount)
             : null;
         
-        //if statement to check for correct reflect branch 
+        //if statement to check for correct reflect branch
         if (scriptedBranch != null)
         {
-            // Scripted wins. Play its lines (skipped in skip-reflect debug mode - N key).
+            // SCRIPTED LOOP: plays ONLY its scripted lines - no death reactions, no milestone
+            // text, no pools (2026-06-05 design, 86baajqwe). Skipped in skip-reflect mode (N key).
             if (!SkipReflect.Active)
                 yield return reflectSelfTalk.PlayLines(scriptedBranch.lines);
 
@@ -144,29 +151,40 @@ public class DeathRespawn : MonoBehaviour
                 milestoneTracker.MarkComplete(triggeredMilestone);
             }
         }
-        else if (triggeredMilestone != null)
-        {
-            // No scripted match — milestone wins over the conditional fallback.
-            // (lines skipped in skip-reflect mode; upgrade application below still runs)
-            if (!SkipReflect.Active)
-                yield return reflectSelfTalk.PlayLines(triggeredMilestone.reflectLines);
-            if (triggeredMilestone.characterUpgrade != null)
-            {
-                milestoneTracker.ApplyCharacterUpgrade(triggeredMilestone.characterUpgrade);
-                // Re-apply respawn state so an upgrade that bumped startingConfidence
-                // or startingHandSize is felt immediately on this respawn (not the next one).
-                confidenceState.confidence = confidenceState.startingConfidence;
-                deckManager.ResetDeck();
-            }
-            milestoneTracker.MarkComplete(triggeredMilestone);
-        }
         else
         {
-            // No scripted, no milestone — fall back to conditional / legacy branch selection.
+            // BASE LOOP: the four-beat reflect formula (beats 3+4 live below, around the draft).
+            // Beat 1 — reflect on death: card+branch-specific reaction, else generic pool.
             if (!SkipReflect.Active)
-                yield return reflectSelfTalk.Play(gameProgression.lastLoop, gameProgression.loopCount);
+                yield return reflectSelfTalk.PlayDeathReactionBeat(gameProgression.lastLoop, gameProgression);
+
+            // Beat 2 — comment on progress: milestone text if one fired, else a random
+            // eligible conditional. Death reaction + milestone CAN both play in one loop (by design).
+            if (triggeredMilestone != null)
+            {
+                if (!SkipReflect.Active)
+                    yield return reflectSelfTalk.PlayLines(triggeredMilestone.reflectLines);
+                if (triggeredMilestone.characterUpgrade != null)
+                {
+                    milestoneTracker.ApplyCharacterUpgrade(triggeredMilestone.characterUpgrade);
+                    // Re-apply respawn state so an upgrade that bumped startingConfidence
+                    // or startingHandSize is felt immediately on this respawn (not the next one).
+                    confidenceState.confidence = confidenceState.startingConfidence;
+                    deckManager.ResetDeck();
+                }
+                milestoneTracker.MarkComplete(triggeredMilestone);
+            }
+            else if (!SkipReflect.Active)
+            {
+                yield return reflectSelfTalk.PlayRandomEligible(gameProgression.lastLoop, gameProgression.loopCount);
+            }
         }
-        
+
+        // Beat 3 — draft intro (base loops only): one random "what should I say this time…" line
+        // before the draft opens. Scripted loops stay scripted-only.
+        if (scriptedBranch == null && !SkipReflect.Active && deckManager.draftPool.Length > 0)
+            yield return reflectSelfTalk.PlayDraftIntro();
+
         if (deckManager.draftPool.Length >0)
         {
             PhaseManager.Instance.TransitionTo(GamePhase.UpgradeDraft);
@@ -184,6 +202,9 @@ public class DeathRespawn : MonoBehaviour
         // reflect/draft close-up, then we cut to Hallway. Flow: reflect → draft → commit → hallway.
         if (!SkipReflect.Active && scriptedBranch != null && scriptedBranch.commitLines != null && scriptedBranch.commitLines.Length > 0)
             yield return reflectSelfTalk.PlayLines(scriptedBranch.commitLines);
+        // Beat 4 — base loops pull a random commit group from the pool instead
+        else if (!SkipReflect.Active && scriptedBranch == null)
+            yield return reflectSelfTalk.PlayBaseCommit();
 
         //full respawn, ready for hallway walk
         animationTriggerPlayerDraft.LockerClose();

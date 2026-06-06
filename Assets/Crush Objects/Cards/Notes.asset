@@ -28,6 +28,7 @@ MonoBehaviour:
     tags: 
     charmImpacts: []
     daisyBranches: []
+    deathReactions: []
   - branchName: Normal
     dialogue:
     - character: 0
@@ -71,7 +72,7 @@ MonoBehaviour:
         confidenceImpact: 2
         charmImpact: 0
         line: You're the best! That would be awesome! You are such a life saver.
-      tags: 
+      tags: 00000000
     - charmState: 4
       dialogue:
       - character: 1
@@ -79,6 +80,7 @@ MonoBehaviour:
         charmImpact: 0
         line: You're the best! That would be awesome! You are such a life saver.
       tags: 
+    deathReactions: []
   draftLines:
   - line: She was out on Monday. I could offer her my notes.
   - line: But is it creepy that I remembered that she was out?

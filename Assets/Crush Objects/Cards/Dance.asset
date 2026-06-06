@@ -26,15 +26,15 @@ MonoBehaviour:
       charmImpact: 0
       line: Here goes nothing
     - character: 0
-      confidenceImpact: -1
+      confidenceImpact: -2
       charmImpact: 0
       line: I was- umm.... wondering... if.....
     - character: 0
-      confidenceImpact: -1
+      confidenceImpact: -2
       charmImpact: -1
       line: uhhh... if you would... uhh- maybe
     - character: 0
-      confidenceImpact: -1
+      confidenceImpact: -2
       charmImpact: -1
       line: be interested.....
     - character: 0
@@ -50,12 +50,13 @@ MonoBehaviour:
       charmImpact: 0
       line: go to the dance....
     - character: 0
-      confidenceImpact: -3
+      confidenceImpact: -2
       charmImpact: 0
       line: with me?
     tags: 
     charmImpacts: []
     daisyBranches: []
+    deathReactions: []
   - branchName: FirstLoop
     dialogue:
     - character: 0
@@ -93,14 +94,23 @@ MonoBehaviour:
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
-      line: DO NOT PEE YOUR PANTS
+      line: Everyone is going to laugh at me.
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: This is another [BOY NAME] situation all over again.
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I\u2019m\u2026.. gonna go to class now\u2026"
     - character: 2
       confidenceImpact: -1
       charmImpact: 0
-      line: "I don\u2019t feel so good\u2026."
+      line: WAIT!!
     tags: 
     charmImpacts: []
     daisyBranches: []
+    deathReactions: []
   draftLines:
   - line: Yeah. Just keep it simple.
   - line: "\u201CDaisy, will you go to the dance with me?\u201D"
