@@ -17,13 +17,16 @@ public class AnimationTriggerIcon : MonoBehaviour
     public void DeckSizeAddOne()
     {
         iconAnimator.Play("Icon_DeckSize_AddOneCard");
-        
     }
     
     public void DeckSizeMinusOne()
     {
         iconAnimator.Play("Icon_DeckSize_PlayCard");
-        
+    }
+
+    public void DraftUpgradedCard()
+    {
+        iconAnimator.Play("Icon_DeckSize_Upgrade01");
     }
 
     public void UpdateDeckSizeIndicator()

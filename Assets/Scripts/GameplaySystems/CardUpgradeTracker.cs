@@ -5,7 +5,7 @@ public class CardUpgradeTracker : MonoBehaviour
 {
     private Dictionary<DialogueCard, int> useCount = new();
     private Dictionary<DialogueCard, DialogueCardUpgrade> appliedUpgrades = new();
-    
+    public AnimationTriggerIcon animationTriggerIcon;
     public void NoteCardPlayed(DialogueCard card)
     {
         if (useCount.ContainsKey(card))
@@ -36,6 +36,7 @@ public class CardUpgradeTracker : MonoBehaviour
     public void ApplyUpgrade(DialogueCard card, DialogueCardUpgrade upgrade)
     {
         appliedUpgrades[card] = upgrade;
+        animationTriggerIcon.DraftUpgradedCard();
     }
     
     public DialogueCardUpgrade GetAppliedUpgrade(DialogueCard card)

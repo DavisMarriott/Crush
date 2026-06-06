@@ -49,7 +49,9 @@ public class DeckManager : MonoBehaviour
 
     public void AddCardToDeck(DialogueCard card)
     {
+        // Add an if statement that determines whether the card added is an upgraded card or not, then play the appropriate animation //
         _deck.Add(card);
+        // animationTriggerIcon.DraftUpgradedCard();
         animationTriggerIcon.DeckSizeAddOne();
     }
 
@@ -69,7 +71,6 @@ public class DeckManager : MonoBehaviour
         int randomIndex = Random.Range(0, _deck.Count);
         _hand.Add(_deck[randomIndex]);
         _deck.RemoveAt(randomIndex);
-        // animationTriggerIcon.DeckSizeAddOne();
     }
 
     public void DrawHand(int count)
