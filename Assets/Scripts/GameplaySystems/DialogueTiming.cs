@@ -6,6 +6,7 @@ using System.Text;
 public class DialogueTiming : MonoBehaviour
 {
    [SerializeField] float typeSpeed = 30f;
+   [SerializeField] RandomSoundPlayer textSound;
    public Coroutine Run(string textToType, TMP_Text textLabel)
    {
       return StartCoroutine(TypeText(textToType, textLabel));
@@ -34,6 +35,11 @@ public class DialogueTiming : MonoBehaviour
          charIndex = Mathf.Clamp(charIndex, 0, baked.Length);
 
          textLabel.text = baked.Substring(0, charIndex);
+
+         if (Time.time >= textSound.nextPlayTime)
+         {
+            textSound.PlayRandomSound();
+         }
 
          yield return null;
       }

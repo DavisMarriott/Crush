@@ -28,10 +28,13 @@ public class DialogueBox : MonoBehaviour
     [Header("Speaker Indicators")]
     [SerializeField] private GameObject leftArrow;
     [SerializeField] private GameObject rightArrow;
-    [SerializeField] private Color boyTextColor = Color.white;
-    [SerializeField] private Color girlTextColor = new Color(1f, 0.7f, 0.8f);
-    [SerializeField] private Color boyInternalTextColor = Color.gray;
-
+    // [SerializeField] private Color boyTextColor = Color.white;
+    // [SerializeField] private Color girlTextColor = new Color(1f, 0.7f, 0.8f);
+    // [SerializeField] private Color boyInternalTextColor = Color.gray;
+    [Header("Text Audio")]
+    [SerializeField] private RandomSoundPlayer textSound;
+    
+    
     [Header("Per-loop intro lines (play once on first card per loop)")]
     [SerializeField] private string lukeIntroLine;
     [SerializeField] private string daisyIntroLine;
@@ -102,6 +105,7 @@ public class DialogueBox : MonoBehaviour
         SetSpeakerIndicator(speaker);
         if (speaker == DialogueCard.DialogueCharacter.Boy)
             playerMovement.PlayerTalk();
+        textSound.speakingCharacter = SpeakingCharacter.Luke;
         yield return dialogueTiming.Run(line, dialogueText);
         yield return new WaitUntil(() => DialogueAdvance.Pressed(nextLineAction.action));
         dialogueText.text = "";
@@ -134,6 +138,7 @@ public class DialogueBox : MonoBehaviour
 
     private IEnumerator DaisyIntroAtTrigger()
     {
+        textSound.speakingCharacter = SpeakingCharacter.Daisy;
         _daisyIntroRunning = true;
         // tiny beat so her line doesn't start the same frame you cross the trigger
         yield return new WaitForSeconds(daisyIntroDelay);
@@ -164,10 +169,12 @@ public class DialogueBox : MonoBehaviour
             SetSpeakerIndicator(character);
             if (character == DialogueCard.DialogueCharacter.BoyInternal)
             {
+                textSound.speakingCharacter = SpeakingCharacter.LukeSelf;
                 yield return dialogueTiming.Run(text, hallwaySelfTalk.selfTalkText);
             }
             else
             {
+                textSound.speakingCharacter = SpeakingCharacter.Luke;
                 playerMovement.PlayerTalk();
                 yield return dialogueTiming.Run(text, dialogueText);
             }
@@ -216,12 +223,14 @@ public class DialogueBox : MonoBehaviour
             SetSpeakerIndicator(line.character);
             if (line.character == DialogueCard.DialogueCharacter.BoyInternal)
             {
+                textSound.speakingCharacter = SpeakingCharacter.LukeSelf;
                 yield return dialogueTiming.Run(line.line, hallwaySelfTalk.selfTalkText);
                 animationTriggerSpeechBubblePlayer.SpeechBubbleHide();
                 animationTriggerSpeechBubbleCrush.SpeechBubbleHide();   
             }
             else
             {
+                textSound.speakingCharacter = SpeakingCharacter.Luke;
                 playerMovement.PlayerTalk();
                 yield return dialogueTiming.Run(line.line, dialogueText);
             }
@@ -410,17 +419,19 @@ public class DialogueBox : MonoBehaviour
         {
             case DialogueCard.DialogueCharacter.Boy:
                 animationTriggerSpeechBubblePlayer.SpeechBubbleShow();
-                animationTriggerSpeechBubbleCrush.SpeechBubbleHide();                
+                animationTriggerSpeechBubbleCrush.SpeechBubbleHide(); 
+                textSound.speakingCharacter = SpeakingCharacter.Luke;
                 dialogueText.alignment = TMPro.TextAlignmentOptions.MidlineLeft;
-                dialogueText.color = boyTextColor;
+                // dialogueText.color = boyTextColor;
                 leftArrow.SetActive(false);
                 rightArrow.SetActive(false);
                 break;
             case DialogueCard.DialogueCharacter.Girl:
                 animationTriggerSpeechBubblePlayer.SpeechBubbleHide();
-                animationTriggerSpeechBubbleCrush.SpeechBubbleShow(); 
+                animationTriggerSpeechBubbleCrush.SpeechBubbleShow();
+                textSound.speakingCharacter = SpeakingCharacter.Daisy;
                 dialogueText.alignment = TMPro.TextAlignmentOptions.MidlineRight;
-                dialogueText.color = girlTextColor;
+                // dialogueText.color = girlTextColor;
                 leftArrow.SetActive(false);
                 rightArrow.SetActive(false);
                 break;
