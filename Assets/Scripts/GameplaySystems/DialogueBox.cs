@@ -174,7 +174,7 @@ public class DialogueBox : MonoBehaviour
             }
             else
             {
-                textSound.speakingCharacter = SpeakingCharacter.Luke;
+                // textSound.speakingCharacter = SpeakingCharacter.Luke;
                 playerMovement.PlayerTalk();
                 yield return dialogueTiming.Run(text, dialogueText);
             }
@@ -230,7 +230,7 @@ public class DialogueBox : MonoBehaviour
             }
             else
             {
-                textSound.speakingCharacter = SpeakingCharacter.Luke;
+                // textSound.speakingCharacter = SpeakingCharacter.Luke;
                 playerMovement.PlayerTalk();
                 yield return dialogueTiming.Run(line.line, dialogueText);
             }
