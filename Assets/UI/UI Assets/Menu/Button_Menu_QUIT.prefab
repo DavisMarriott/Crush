@@ -12,6 +12,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_Menu_QUIT
       objectReference: {fileID: 0}
+    - target: {fileID: 2914059464699277768, guid: f8060c12c0c124bfeaf678febdb19f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1547911206699895177}
+    - target: {fileID: 2914059464699277768, guid: f8060c12c0c124bfeaf678febdb19f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914059464699277768, guid: f8060c12c0c124bfeaf678febdb19f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: QuitGame, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6197029622935798949, guid: f8060c12c0c124bfeaf678febdb19f71, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -99,5 +111,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2214257107483433147, guid: f8060c12c0c124bfeaf678febdb19f71, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1547911206699895177}
   m_SourcePrefab: {fileID: 100100000, guid: f8060c12c0c124bfeaf678febdb19f71, type: 3}
+--- !u!1 &3355145204713409565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2214257107483433147, guid: f8060c12c0c124bfeaf678febdb19f71, type: 3}
+  m_PrefabInstance: {fileID: 3473755058257220774}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1547911206699895177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3355145204713409565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cea7d97f704d40d3b38c1efb5ce6aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::QuitGame

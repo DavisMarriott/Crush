@@ -12,6 +12,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_Menu_SETTINGS
       objectReference: {fileID: 0}
+    - target: {fileID: 2914059464699277768, guid: f8060c12c0c124bfeaf678febdb19f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914059464699277768, guid: f8060c12c0c124bfeaf678febdb19f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914059464699277768, guid: f8060c12c0c124bfeaf678febdb19f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914059464699277768, guid: f8060c12c0c124bfeaf678febdb19f71, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AnimationTriggerPlayer, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3606320278306468361, guid: f8060c12c0c124bfeaf678febdb19f71, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.99620235
