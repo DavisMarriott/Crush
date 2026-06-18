@@ -687,15 +687,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1161810281762307539, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.5
+      value: -3.5333178
       objectReference: {fileID: 0}
     - target: {fileID: 1161810281762307539, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24
+      value: -0.6001167
       objectReference: {fileID: 0}
     - target: {fileID: 1161810281762307539, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.2
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 1476055540710017529, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: Target.TrackingTarget
@@ -765,29 +765,37 @@ PrefabInstance:
       propertyPath: m_RenderPostProcessing
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6162989258514354116, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.053411
+      objectReference: {fileID: 0}
+    - target: {fileID: 6162989258514354116, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.5091624
+      objectReference: {fileID: 0}
     - target: {fileID: 6293075821288382058, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_Name
       value: Cameras
       objectReference: {fileID: 0}
     - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: orthographic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: field of view
-      value: 28
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: far clip plane
-      value: 5000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: near clip plane
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7302166636092044629, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: orthographic size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8505781925488531942, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1641,7 +1649,7 @@ Transform:
   m_GameObject: {fileID: 892003276}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.300049, y: -4.299988, z: 0}
+  m_LocalPosition: {x: 10.300049, y: -4.299988, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1707,7 +1715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FirstLoopTrigger
   gameProgression: {fileID: 10528340}
   triggerIndex: 3
-  maxDelay: 1.5
+  maxDelay: 0.75
 --- !u!1 &925576024 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3354484047614631624, guid: 20d174e6d335c4ca8a6cdcb18a8ffe79, type: 3}
@@ -2496,7 +2504,7 @@ Transform:
   m_GameObject: {fileID: 1689465894}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7399902, y: -4.299988, z: 0}
+  m_LocalPosition: {x: 0.73999023, y: -4.299988, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2562,7 +2570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FirstLoopTrigger
   gameProgression: {fileID: 10528340}
   triggerIndex: 2
-  maxDelay: 1.5
+  maxDelay: 0.75
 --- !u!1 &1695503005
 GameObject:
   m_ObjectHideFlags: 0
@@ -2627,7 +2635,7 @@ Transform:
   m_GameObject: {fileID: 1723128793}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.839966, y: -4.299988, z: 0}
+  m_LocalPosition: {x: -9.839966, y: -4.299988, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2693,7 +2701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FirstLoopTrigger
   gameProgression: {fileID: 10528340}
   triggerIndex: 1
-  maxDelay: 1.5
+  maxDelay: 0.75
 --- !u!1 &1723559440
 GameObject:
   m_ObjectHideFlags: 0
@@ -2870,7 +2878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4400308429686677114, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1363.6357
+      value: -1369.6357
       objectReference: {fileID: 0}
     - target: {fileID: 4400308429686677114, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3554,6 +3562,10 @@ PrefabInstance:
       propertyPath: 'startingDeck.Array.data[2]'
       value: 
       objectReference: {fileID: 11400000, guid: 02cbdcd2e9af542fab79834ff67a3ae4, type: 2}
+    - target: {fileID: 8706701293874008316, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -89.59
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

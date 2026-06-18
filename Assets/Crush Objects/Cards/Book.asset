@@ -24,15 +24,21 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "What book are you\u2026\u2026."
+      line: "What book are you\u2026"
+      variantGroups: []
+      lastSticks: 0
     - character: 1
       confidenceImpact: 0
       charmImpact: 0
       line: WHAT?!?!
+      variantGroups: []
+      lastSticks: 0
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
       line: WHAT??!?
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts: []
     daisyBranches: []
@@ -49,6 +55,8 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: What book is that you're reading?
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts:
     - state: 1
@@ -67,10 +75,14 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: Oh this? It's nothing.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
         line: "Just this - ummm this fantasy series I\u2019ve been reading."
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 2
       dialogue:
@@ -78,14 +90,20 @@ MonoBehaviour:
         confidenceImpact: 1
         charmImpact: 0
         line: It's a fantasy series I've been reading for a while.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
         line: This is actually the fourth one.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
         line: "It's kinda dorky though\u2026."
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 3
       dialogue:
@@ -93,18 +111,26 @@ MonoBehaviour:
         confidenceImpact: 1
         charmImpact: 0
         line: It's just a fantasy series I've been reading for a while.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
         line: This is actually the fourth one.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 3
         charmImpact: 0
         line: "It's dorky\u2026 but I like it."
+        variantGroups: []
+        lastSticks: 0
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
         line: God she's perfect
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 4
       dialogue:
@@ -112,10 +138,14 @@ MonoBehaviour:
         confidenceImpact: -1
         charmImpact: 0
         line: Oh it's nothing.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
         line: Just this fantasy series I've been reading.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     deathReactions: []
   draftLines:

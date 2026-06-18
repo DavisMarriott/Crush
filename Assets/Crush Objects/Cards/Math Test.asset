@@ -25,6 +25,8 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: "So- uhhhhh\u2026. How did that math te-"
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts: []
     daisyBranches: []
@@ -35,10 +37,14 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: How did you do on Ms. Parsons test?
+      variantGroups: []
+      lastSticks: 0
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
       line: Geometry is kind of breaking my brain haha
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts:
     - state: 1
@@ -54,6 +60,8 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: walks away
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 1
       dialogue:
@@ -61,6 +69,8 @@ MonoBehaviour:
         confidenceImpact: -1
         charmImpact: 0
         line: Ohhh really? Geometry has been pretty easy for me so far.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 2
       dialogue:
@@ -68,10 +78,14 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: Ohhh yeah.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
         line: I think I did okay though.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 3
       dialogue:
@@ -79,10 +93,14 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: Yeah.. it can be pretty hard.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 3
         charmImpact: 0
         line: I could help you study for the next one.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 4
       dialogue:
@@ -90,10 +108,12 @@ MonoBehaviour:
         confidenceImpact: -1
         charmImpact: 0
         line: Oh.. the test. Ummm, yeah. I think I did pretty well.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     deathReactions: []
   draftLines:
   - line: She probably got an A on Ms. Parsons test
-  - line: She's perfect
+  - line: She's, like, a genius.
   availableUpgrades: []
   upgradeThreshold: 3

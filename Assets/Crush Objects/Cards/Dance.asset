@@ -25,34 +25,50 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: Here goes nothing
+      variantGroups: []
+      lastSticks: 0
     - character: 0
       confidenceImpact: -2
       charmImpact: 0
       line: I was- umm.... wondering... if.....
+      variantGroups: []
+      lastSticks: 0
     - character: 0
       confidenceImpact: -2
       charmImpact: -1
       line: uhhh... if you would... uhh- maybe
+      variantGroups: []
+      lastSticks: 0
     - character: 0
       confidenceImpact: -2
       charmImpact: -1
       line: be interested.....
+      variantGroups: []
+      lastSticks: 0
     - character: 0
       confidenceImpact: -1
       charmImpact: -1
       line: in go- uhhh.....
+      variantGroups: []
+      lastSticks: 0
     - character: 0
       confidenceImpact: -1
       charmImpact: -1
       line: sorry... ummm- do you wanna.....
+      variantGroups: []
+      lastSticks: 0
     - character: 0
       confidenceImpact: -2
       charmImpact: 0
       line: go to the dance....
+      variantGroups: []
+      lastSticks: 0
     - character: 0
       confidenceImpact: -2
       charmImpact: 0
       line: with me?
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts: []
     daisyBranches: []
@@ -63,50 +79,74 @@ MonoBehaviour:
       confidenceImpact: -1
       charmImpact: 0
       line: ........
+      variantGroups: []
+      lastSticks: 0
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
       line: "Oh no\u2026."
+      variantGroups: []
+      lastSticks: 0
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
       line: Say Something!
+      variantGroups: []
+      lastSticks: 0
     - character: 0
       confidenceImpact: 0
       charmImpact: -1
       line: "\u2026\u2026."
+      variantGroups: []
+      lastSticks: 0
     - character: 1
       confidenceImpact: 0
       charmImpact: -1
       line: Are you okay?
+      variantGroups: []
+      lastSticks: 0
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
       line: "WHY AREN\u2019T YOU SAYING ANYTHING?!??"
+      variantGroups: []
+      lastSticks: 0
     - character: 1
       confidenceImpact: -1
       charmImpact: 0
       line: "Earth to Luke\u2026.."
+      variantGroups: []
+      lastSticks: 0
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
       line: "This can not be happening\u2026.."
+      variantGroups: []
+      lastSticks: 0
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
       line: Everyone is going to laugh at me.
+      variantGroups: []
+      lastSticks: 0
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
       line: This is another [BOY NAME] situation all over again.
+      variantGroups: []
+      lastSticks: 0
     - character: 1
       confidenceImpact: 0
       charmImpact: 0
       line: "I\u2019m\u2026.. gonna go to class now\u2026"
+      variantGroups: []
+      lastSticks: 0
     - character: 2
       confidenceImpact: -1
       charmImpact: 0
       line: WAIT!!
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts: []
     daisyBranches: []

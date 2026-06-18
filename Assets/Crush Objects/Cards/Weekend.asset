@@ -25,6 +25,8 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: "Soooo\u2026. what are you up t-"
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts: []
     daisyBranches: []
@@ -35,6 +37,8 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: So.. do you..umm.. have any plans this weekend?
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts:
     - state: 2
@@ -50,6 +54,8 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: "Ummm\u2026. no - nott really\u2026."
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 1
       dialogue:
@@ -57,6 +63,8 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: Ohh you know - just the usual stuff
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 2
       dialogue:
@@ -65,14 +73,20 @@ MonoBehaviour:
         charmImpact: 0
         line: Not too much. My little brother turns 10 on Saturday so he's having
           a birthday party.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: -1
         charmImpact: 0
         line: It's Star Wars themed, I think. Or something nerdy like that haha.
+        variantGroups: []
+        lastSticks: 0
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
         line: NEVER talk about last year's birthday party.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 3
       dialogue:
@@ -81,10 +95,14 @@ MonoBehaviour:
         charmImpact: 0
         line: Ugh I wish. My parents are throwing this big 10th birthday party for
           my little brother.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 3
         charmImpact: 0
         line: They said I have to be there.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 4
       dialogue:
@@ -93,14 +111,20 @@ MonoBehaviour:
         charmImpact: 0
         line: Ugh I wish. My parents are throwing this big 10th birthday party for
           my little brother.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 3
         charmImpact: 0
         line: They said I have to be there.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 3
         charmImpact: 0
         line: But that's it though! I'm totally free outside of that.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     deathReactions: []
   draftLines:

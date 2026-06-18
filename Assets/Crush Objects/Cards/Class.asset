@@ -25,18 +25,26 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: "\u2026."
+      variantGroups: []
+      lastSticks: 0
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
       line: "Not again\u2026"
+      variantGroups: []
+      lastSticks: 0
     - character: 1
       confidenceImpact: 0
       charmImpact: -1
       line: Are you okay?
+      variantGroups: []
+      lastSticks: 0
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
       line: "No, I\u2019m not okay!"
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts: []
     daisyBranches: []
@@ -47,10 +55,14 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: "Mr. Miller\u2019s class is a real snooze fest huh?"
+      variantGroups: []
+      lastSticks: 0
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
       line: "Wow\u2026 good one Luke."
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts:
     - state: 1
@@ -68,10 +80,14 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: "I don\u2019t think it\u2019s that bad."
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: -2
         charmImpact: 0
         line: At least Mr. Miller is passionate about history.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 2
       dialogue:
@@ -79,6 +95,8 @@ MonoBehaviour:
         confidenceImpact: 2
         charmImpact: 0
         line: Haha I know right.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 3
       dialogue: []
@@ -93,10 +111,14 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: Class was soooo boring.
+      variantGroups: []
+      lastSticks: 0
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
       line: "I don\u2019t know if I can handle another semester of Mr. Miller"
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts:
     - state: 1
@@ -114,6 +136,8 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: yeah that class sucked gotta go see ya later
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 1
       dialogue:
@@ -121,10 +145,14 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: "I don\u2019t think it\u2019s that bad."
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: -2
         charmImpact: 0
         line: At least Mr. Miller is passionate about history.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 2
       dialogue:
@@ -132,6 +160,8 @@ MonoBehaviour:
         confidenceImpact: 2
         charmImpact: 0
         line: Seriously haha. Ugh 5th period is the absolute worst.
+        variantGroups: []
+        lastSticks: 0
       tags: 00000000
     - charmState: 3
       dialogue:
@@ -140,14 +170,20 @@ MonoBehaviour:
         charmImpact: 0
         line: I know right. It's like all that guy thinks about is the Roman Empire
           haha.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
         line: He needs some new hobbies.
+        variantGroups: []
+        lastSticks: 0
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
         line: That actually worked.
+        variantGroups: []
+        lastSticks: 0
       tags: 00000000
     - charmState: 4
       dialogue:
@@ -156,10 +192,14 @@ MonoBehaviour:
         charmImpact: 0
         line: HAHAH right?! He is so boring I want to DIE every time 5th period rolls
           around.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
         line: HAHA you're hilarious!
+        variantGroups: []
+        lastSticks: 0
       tags: 00000000
     deathReactions: []
   - branchName: Confident
@@ -168,11 +208,15 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: Class was pretty boring huh?
+      variantGroups: []
+      lastSticks: 0
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
       line: I was fighting to stay awake when Mr. Miller started talking about the
         Roman Empire.
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts:
     - state: 1
@@ -190,6 +234,8 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: yeah that class sucked gotta go see ya later
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 1
       dialogue:
@@ -197,6 +243,8 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: haha yeah. Not exactly the most exciting class I've ever been to.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 2
       dialogue:
@@ -204,6 +252,8 @@ MonoBehaviour:
         confidenceImpact: 2
         charmImpact: 0
         line: Seriously haha. Ugh 5th period is the absolute worst.
+        variantGroups: []
+        lastSticks: 0
       tags: 00000000
     - charmState: 3
       dialogue:
@@ -212,14 +262,20 @@ MonoBehaviour:
         charmImpact: 0
         line: I know right. It's like all that guy thinks about is the Roman Empire
           haha.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
         line: He needs some new hobbies.
+        variantGroups: []
+        lastSticks: 0
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
         line: That actually worked.
+        variantGroups: []
+        lastSticks: 0
       tags: 00000000
     - charmState: 4
       dialogue:
@@ -228,10 +284,14 @@ MonoBehaviour:
         charmImpact: 0
         line: HAHAH right?! He is so boring I want to DIE every time 5th period rolls
           around.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
         line: HAHA you're hilarious!
+        variantGroups: []
+        lastSticks: 0
       tags: 00000000
     deathReactions: []
   draftLines:

@@ -25,10 +25,14 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: "Any, uhhhh\u2026\u2026."
+      variantGroups: []
+      lastSticks: 0
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
       line: good musi-
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts: []
     daisyBranches: []
@@ -39,6 +43,8 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: So have you listened to that Farthing Penny song yet?
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts: []
     daisyBranches:
@@ -48,6 +54,8 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: HAHA Farthing Penny? You mean Penny Farthing? Some fan you are hahaha
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 1
       dialogue:
@@ -56,6 +64,8 @@ MonoBehaviour:
         charmImpact: 0
         line: HAHA that's not their name. It's Penny Farthing. But yeah I love that
           song.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 2
       dialogue:
@@ -63,6 +73,8 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: I think you mean Penny Farthing. But of course I've listened to it!
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 3
       dialogue:
@@ -71,6 +83,8 @@ MonoBehaviour:
         charmImpact: 0
         line: "Ohhh Luke\u2026. It's Penny Farthing. And duhhhh I've listened to
           it like a thousand times already."
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 4
       dialogue:
@@ -79,6 +93,8 @@ MonoBehaviour:
         charmImpact: 0
         line: "Uhhh\u2026. they're called Penny Farthing, not Farthing Penny. But
           close enough. Don't worry, I won't tell anyone."
+        variantGroups: []
+        lastSticks: 0
       tags: 
     deathReactions: []
   - branchName: Normal
@@ -87,6 +103,8 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: Have you heard that new Penny Farthing song yet?
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts:
     - state: 1
@@ -108,6 +126,8 @@ MonoBehaviour:
         charmImpact: 0
         line: Oh you like them too?? Yeah it's really good. I've been playing it
           a bunch.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 2
       dialogue:
@@ -115,6 +135,8 @@ MonoBehaviour:
         confidenceImpact: 3
         charmImpact: 0
         line: It's soooo good! OMG I didn't know you liked them.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 3
       dialogue:
@@ -122,10 +144,14 @@ MonoBehaviour:
         confidenceImpact: 2
         charmImpact: 0
         line: OMG I'm obsessed with the new song. It has like 2 million plays already.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
         line: but at least a million are me.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 4
       dialogue:
@@ -134,10 +160,14 @@ MonoBehaviour:
         charmImpact: 0
         line: They're so good. I totally knew about them like 3 years ago before
           they blew up.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 4
         charmImpact: 0
         line: That's cool you like them too! We should listen to the new album together
+        variantGroups: []
+        lastSticks: 0
       tags: 
     deathReactions: []
   draftLines:

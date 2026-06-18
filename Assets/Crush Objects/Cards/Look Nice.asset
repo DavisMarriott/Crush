@@ -25,6 +25,8 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: You are soooo hot
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts: []
     daisyBranches: []
@@ -35,6 +37,8 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: "You uhhh\u2026. You look really nice today."
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts:
     - state: 3
@@ -48,6 +52,8 @@ MonoBehaviour:
         confidenceImpact: -6
         charmImpact: 0
         line: "Ohh - ummm\u2026. thanks? I guess\u2026"
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 1
       dialogue:
@@ -55,6 +61,8 @@ MonoBehaviour:
         confidenceImpact: -1
         charmImpact: 0
         line: "Ohh - ummm\u2026. thanks."
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 2
       dialogue:
@@ -62,6 +70,8 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: "Thanks\u2026 that's nice of you."
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 3
       dialogue:
@@ -69,10 +79,14 @@ MonoBehaviour:
         confidenceImpact: 3
         charmImpact: 0
         line: Aww thanks!
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
         line: "That umm\u2026 means a lot"
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 4
       dialogue:
@@ -80,14 +94,20 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: Really?! You think so???
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
         line: I mean - thanks! That's really nice.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 4
         charmImpact: 0
         line: "You look cu- uhh\u2026 nice.. too"
+        variantGroups: []
+        lastSticks: 0
       tags: 
     deathReactions: []
   draftLines:

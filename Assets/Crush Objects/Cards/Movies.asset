@@ -25,10 +25,14 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: "So\u2026. ummmm\u2026\u2026"
+      variantGroups: []
+      lastSticks: 0
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
       line: Seen any good mov-
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts: []
     daisyBranches: []
@@ -39,10 +43,14 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: Have you watched any good movies lately?
+      variantGroups: []
+      lastSticks: 0
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
       line: I haven't seen anything in a while. I could use a good recommendation.
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts:
     - state: 1
@@ -61,6 +69,8 @@ MonoBehaviour:
         confidenceImpact: -2
         charmImpact: 0
         line: "Nooo\u2026. not that I can remember."
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 2
       dialogue:
@@ -68,14 +78,20 @@ MonoBehaviour:
         confidenceImpact: 1
         charmImpact: 0
         line: Yeah I did actually!
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
         line: It was this really old movie about these two cops.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
         line: It was pretty funny.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 3
       dialogue:
@@ -83,18 +99,26 @@ MonoBehaviour:
         confidenceImpact: 1
         charmImpact: 0
         line: Yeah I did actually!
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
         line: It was this really old movie about these two cops.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
         line: It was soooo funnyyyy!
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
         line: You need to see it!
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 4
       dialogue:
@@ -102,22 +126,32 @@ MonoBehaviour:
         confidenceImpact: 1
         charmImpact: 0
         line: Yeah I did actually!
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
         line: It was this really old movie about these two cops.
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
         line: It was soooo funnyyyy!
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 3
         charmImpact: 0
         line: We should watch it together!
+        variantGroups: []
+        lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
         line: "I mean - if you want to\u2026"
+        variantGroups: []
+        lastSticks: 0
       tags: 
     deathReactions: []
   draftLines:
