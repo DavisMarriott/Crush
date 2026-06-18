@@ -114,7 +114,6 @@ public class DeathRespawn : MonoBehaviour
         // letterBoxAnimator.SetTrigger("LetterBoxIn"); — removed 2026-05-12: dedicated DraftScreenCam now handles the Reflect/Draft visual cut, no letterboxing needed.
         animationTriggerPlayer.EnterStart();
         playerTransform.position = spawnPoint.position;
-        confidenceState.confidence = confidenceState.startingConfidence;
         charmState.ResetCharm();
         deckManager.ResetDeck();
         confidenceState.peakConfidence = 0;
@@ -209,6 +208,7 @@ public class DeathRespawn : MonoBehaviour
         // Beat 4 — base loops pull a random commit group from the pool instead
         else if (!SkipReflect.Active && scriptedBranch == null)
             yield return reflectSelfTalk.PlayBaseCommit(gameProgression.loopCount);
+        confidenceState.confidence = confidenceState.startingConfidence;
 
         //full respawn, ready for hallway walk
         animationTriggerPlayerDraft.LockerClose();

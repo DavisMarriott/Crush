@@ -32,9 +32,6 @@ public class PhaseManager : MonoBehaviour
         //only possible to get here IF ^^ ==false
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        
-        
-        confidenceHeartMeter.SpawnHeartMeter();
     }
     
 
