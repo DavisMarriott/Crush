@@ -18,6 +18,7 @@ public class GameProgression : MonoBehaviour
     [SerializeField] private AnimationTriggerPlayer animationTriggerPlayer;
     [SerializeField] private DialogueTiming dialogueTiming;
     [SerializeField] private ReflectSelfTalk reflectSelfTalk;
+    public ConfidenceHeartMeter confidenceHeartMeter;
     [Header("Loop 1 DANCE draft (86ba2uadt) — wire DraftUI + the DANCE card + ThoughtSpawner, and set startingDeck size 0")]
     [SerializeField] private DraftUI draftUI;
     [SerializeField] private DialogueCard danceCard;
@@ -89,6 +90,7 @@ public class GameProgression : MonoBehaviour
        
         // Now transition to Hallway and run the normal loop setup (BasicLoop + FirstLoopActive).
         // Trigger LockerClose Animation here //
+        confidenceHeartMeter.SpawnHeartMeter();
         animationTriggerPlayer.LockerClose();
         Invoke(nameof(TransitionToHallway), 2.5f);
         // PhaseManager.Instance.TransitionTo(GamePhase.Hallway);
