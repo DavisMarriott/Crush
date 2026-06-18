@@ -29,8 +29,14 @@ public class RandomSoundPlayer : MonoBehaviour
 
     public SpeakingCharacter speakingCharacter;
 
+    [Header("Temp: dialogue blips disabled by request 2026-06-16 — uncheck to bring them back")]
+    [SerializeField] private bool muted = true;
+
     public void PlayRandomSound()
     {
+        // master off-switch for the dialogue text blips (both internal + external). Flip in inspector.
+        if (muted) return;
+
         if (soundClips == null || soundClips.Length == 0 )
         {
             return;

@@ -112,10 +112,20 @@ public class ReflectSelfTalk : MonoBehaviour
             }
         }
 
-        if (basePools != null && basePools.genericDeathReactions != null && basePools.genericDeathReactions.Length > 0)
+        // No card-specific reaction left. If you've died 2+ times on this exact card+branch this
+        // run, prefer the repeat-death pool ("doing the same thing and expecting different results");
+        // otherwise the generic pool.
+        if (basePools != null)
         {
-            var g = basePools.genericDeathReactions[Random.Range(0, basePools.genericDeathReactions.Length)];
-            yield return PlayLines(g.lines);
+            bool repeat = card != null && !string.IsNullOrEmpty(branchName)
+                          && progression.GetComboDeaths(card.name, branchName) >= 2;
+
+            var pool = (repeat && basePools.repeatDeathReactions != null && basePools.repeatDeathReactions.Length > 0)
+                ? basePools.repeatDeathReactions
+                : basePools.genericDeathReactions;
+
+            if (pool != null && pool.Length > 0)
+                yield return PlayLines(pool[Random.Range(0, pool.Length)].lines);
         }
         // no pool authored yet - beat just skips
     }
@@ -143,21 +153,33 @@ public class ReflectSelfTalk : MonoBehaviour
         yield return PlayLines(eligible[Random.Range(0, eligible.Count)].lines);
     }
 
-    // Beat 3 — one random draft-intro line right before the draft opens.
-    public IEnumerator PlayDraftIntro()
+    // Beat 3 — a random eligible draft-intro group right before the draft opens.
+    public IEnumerator PlayDraftIntro(int loopCount)
     {
-        if (basePools == null || basePools.draftIntroLines == null || basePools.draftIntroLines.Length == 0)
-            yield break;
-        yield return PlayLines(new[] { basePools.draftIntroLines[Random.Range(0, basePools.draftIntroLines.Length)] });
+        var g = PickEligiblePoolGroup(basePools != null ? basePools.draftIntroPools : null, loopCount);
+        if (g != null) yield return PlayLines(g.lines);
     }
 
-    // Beat 4 — random commit group for base loops (scripted loops keep their own commitLines).
-    public IEnumerator PlayBaseCommit()
+    // Beat 4 — a random eligible commit group for base loops (scripted loops keep their own commitLines).
+    public IEnumerator PlayBaseCommit(int loopCount)
     {
-        if (basePools == null || basePools.commitLineGroups == null || basePools.commitLineGroups.Length == 0)
-            yield break;
-        var g = basePools.commitLineGroups[Random.Range(0, basePools.commitLineGroups.Length)];
-        yield return PlayLines(g.lines);
+        var g = PickEligiblePoolGroup(basePools != null ? basePools.commitPools : null, loopCount);
+        if (g != null) yield return PlayLines(g.lines);
+    }
+
+    // pool every group from entries whose loop range includes loopCount, pick one at random
+    private ReflectLineGroup PickEligiblePoolGroup(ConditionalReflectGroups[] pools, int loopCount)
+    {
+        if (pools == null) return null;
+        var eligible = new List<ReflectLineGroup>();
+        foreach (var p in pools)
+        {
+            if (p == null || p.groups == null) continue;
+            if (loopCount < p.minLoop || loopCount > p.maxLoop) continue;
+            foreach (var g in p.groups)
+                if (g != null && g.lines != null && g.lines.Length > 0) eligible.Add(g);
+        }
+        return eligible.Count > 0 ? eligible[Random.Range(0, eligible.Count)] : null;
     }
 
     private ReflectBranch SelectBranch(LoopSnapshot snapshot, int loopCount)

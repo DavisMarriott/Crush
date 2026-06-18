@@ -127,6 +127,21 @@ public class GameProgression : MonoBehaviour
         _branchLog.Add(new CardBranchRecord(cardName, branchName));
     }
 
+    // ---- per-RUN death count per card+branch combo (key: "card|branch") ----
+    // drives the Death Reflect "repeatDeaths >= 2" pool. Runtime only.
+    private readonly Dictionary<string, int> _comboDeaths = new Dictionary<string, int>();
+
+    public int GetComboDeaths(string cardName, string branchName)
+    {
+        return _comboDeaths.TryGetValue($"{cardName}|{branchName}", out int n) ? n : 0;
+    }
+
+    public void NoteComboDeath(string cardName, string branchName)
+    {
+        string key = $"{cardName}|{branchName}";
+        _comboDeaths[key] = GetComboDeaths(cardName, branchName) + 1;
+    }
+
     // ---- per-RUN sequenced-slot usage (key: "card|branch|slotIndex") ----
     // discovery line slots ([1st]/[2nd]/[last]) advance through this. Runtime only.
     private readonly Dictionary<string, int> _sequencedSlotUse = new Dictionary<string, int>();
@@ -210,7 +225,15 @@ public class GameProgression : MonoBehaviour
         }
         else if (firstLoopManager.genericPool != null)
         {
-            line = firstLoopManager.genericPool.GetRandomLine();
+            // Base loop: one cohesive cluster per loop, its lines spread one-per-trigger.
+            // Pick the cluster on the first trigger of the loop, reuse it for the rest.
+            if (_hallwayClusterLoop != loopCount)
+            {
+                _hallwayCluster = PickHallwayCluster(firstLoopManager.genericPool, loopCount);
+                _hallwayClusterLoop = loopCount;
+            }
+            if (_hallwayCluster != null && triggerIndex >= 1 && triggerIndex <= _hallwayCluster.Length)
+                line = _hallwayCluster[triggerIndex - 1];   // short cluster → later triggers stay silent
         }
 
         if (line != null)
@@ -222,6 +245,40 @@ public class GameProgression : MonoBehaviour
             if (triggerIndex > approachDrainDisabledCount)
                 confidenceState.confidence -= 1;
         }
+    }
+
+    // ---- base-loop hallway clusters (86bagphkz) ----
+    private string[] _hallwayCluster;       // the cluster chosen for the current base loop
+    private int _hallwayClusterLoop = -1;   // which loop _hallwayCluster was picked for
+    private readonly HashSet<ReflectLineGroup> _usedHallwayClusters = new HashSet<ReflectLineGroup>(); // per-run no-repeat
+
+    // Choose a cluster for this base loop: a random UNUSED eligible (loop-gated) cluster; if those
+    // are exhausted, an unused generic backup cluster; if everything's used, re-allow eligible so the
+    // hallway never goes fully silent. Marks the chosen cluster used for the run.
+    private string[] PickHallwayCluster(HallwayGenericPool pool, int loop)
+    {
+        var eligible = new List<ReflectLineGroup>();
+        if (pool.clusterPools != null)
+            foreach (var cp in pool.clusterPools)
+                if (cp != null && loop >= cp.minLoop && loop <= cp.maxLoop && cp.groups != null)
+                    foreach (var g in cp.groups)
+                        if (g != null && g.lines != null && g.lines.Length > 0) eligible.Add(g);
+
+        var pick = PickUnusedCluster(eligible);
+        if (pick == null && pool.genericClusters != null)
+            pick = PickUnusedCluster(new List<ReflectLineGroup>(pool.genericClusters));
+        if (pick == null && eligible.Count > 0)
+            pick = eligible[UnityEngine.Random.Range(0, eligible.Count)];   // all used → re-allow rather than go silent
+
+        if (pick == null) return null;
+        _usedHallwayClusters.Add(pick);
+        return pick.lines;
+    }
+
+    private ReflectLineGroup PickUnusedCluster(List<ReflectLineGroup> groups)
+    {
+        var unused = groups.FindAll(g => g != null && g.lines != null && g.lines.Length > 0 && !_usedHallwayClusters.Contains(g));
+        return unused.Count > 0 ? unused[UnityEngine.Random.Range(0, unused.Count)] : null;
     }
 
     //this is our "trigger end game" success state. Need to build content

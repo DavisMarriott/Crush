@@ -12,8 +12,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a07010ed0fcc498aa8f524cab04fbe0, type: 3}
   m_Name: HallwayGenericPool
   m_EditorClassIdentifier: Assembly-CSharp::HallwayGenericPool
+  clusterPools:
+  - minLoop: 0
+    maxLoop: 10
+    groups:
+    - lines:
+      - What even is a time loop?
+      - Like scientifically, how do these work?
+      - I should pay more attention in science class
+  - minLoop: 10
+    maxLoop: 999
+    groups:
+    - lines:
+      - Okay, you got this.
+      - This is the one, I can feel it.
+      - "And there\u2019s always next loop"
+    - lines:
+      - She likes you
+      - Right?
+      - "Yeah, she likes you\u2026"
+    - lines:
+      - When I get out of this
+      - Should I tell [friends name]?
+      - "He\u2019d never believe me\u2026"
+  genericClusters: []
   lines:
+  - What even is a time loop?
+  - Like scientifically, how do these work?
+  - I should pay more attention in science class
   - Okay, you got this.
   - This is the one, I can feel it.
-  - She likes you... I think?
-  - Just talk to her. "Hi Daisy" isn't so hard....
+  - "And there\u2019s always next loop"
+  - "She likes you\rRight?"
+  - "Yeah, she likes you\u2026"
+  - When I get out of this
+  - Should I tell [friends name]?
+  - "He\u2019d never believe me\u2026"

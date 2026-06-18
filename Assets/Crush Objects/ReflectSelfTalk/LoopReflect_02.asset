@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: LoopReflect_02
   m_EditorClassIdentifier: Assembly-CSharp::ReflectBranch
   lines:
-  - What was that??
-  - That was a crazy daydream.
-  - "But still\u2026."
-  - You can't just ask her to the dance.
-  - You need a plan.
-  - You have to actually TALK to her.
-  - "Okay okay\u2026.."
+  - WHOA!!!
+  - Thank god that was just a daydream.
+  - That was crazy real.
+  - "But maybe I SHOULDN\u2019T ask her to the Dance point-blank like that."
+  - Just in case.
+  - I need a plan.
+  - I need to actually TALK to her.
+  - Okay, okay.
   - What do girls like to talk about?
   commitLines:
   - Okay. This might actually work.

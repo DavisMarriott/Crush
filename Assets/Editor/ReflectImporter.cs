@@ -60,6 +60,30 @@ namespace Crush.EditorTools
                         updated += u;
                         warnings += w;
                     }
+                    else if (tab.title == "Progress Reflect")
+                    {
+                        var (u, w) = ImportProgressReflectTab(tab.id);
+                        updated += u;
+                        warnings += w;
+                    }
+                    else if (tab.title == "Death Reflect")
+                    {
+                        var (u, w) = ImportDeathReflectTab(tab.id);
+                        updated += u;
+                        warnings += w;
+                    }
+                    else if (tab.title == "Commit Lines")
+                    {
+                        var (u, w) = ImportPoolTab(tab.id, "commitPools", "Commit Lines");
+                        updated += u;
+                        warnings += w;
+                    }
+                    else if (tab.title == "Draft Intro")
+                    {
+                        var (u, w) = ImportPoolTab(tab.id, "draftIntroPools", "Draft Intro");
+                        updated += u;
+                        warnings += w;
+                    }
                     else if (Regex.IsMatch(tab.title ?? "", @"^Loop \d+$"))
                     {
                         var (u, w) = ImportLoopTab(tab.id, tab.title);
@@ -223,6 +247,371 @@ namespace Crush.EditorTools
                 Debug.Log($"[ReflectImporter] Updated ReflectBranch '{entity.name}' — {entity.reflectLines.Count} line(s), requiresDeathCard={(rb.requiresDeathCard != null ? rb.requiresDeathCard.name : "(none)")}.");
             }
             return (updated, warnings);
+        }
+
+        // ============================================================
+        // Progress Reflect tab — beat 2 of the base-loop reflect (86baajqwe)
+        // Each H1 is a condition ("if lastPeakConfidence > 10"); blank-line-separated
+        // groups under it each become ONE conditional ReflectBranch whose range fields
+        // encode the condition. Beat 2 (ReflectSelfTalk.PlayRandomEligible) then picks a
+        // random eligible branch. Regenerated from scratch each import (prefix-namespaced).
+        // ============================================================
+
+        const string PROGRESS_REFLECT_PREFIX = "ProgressReflect_";
+
+        static (int updated, int warnings) ImportProgressReflectTab(string tabId)
+        {
+            var tab = FetchTab(tabId);
+            var sections = ParseConditionSections(tab.structure);
+
+            // wipe last import's generated branches (and their ReflectSelfTalk refs) before rebuilding
+            PurgeGeneratedBranches(PROGRESS_REFLECT_PREFIX);
+
+            string folder = GetReflectBranchFolder();
+            if (!AssetDatabase.IsValidFolder(folder))
+            {
+                Directory.CreateDirectory(folder);
+                AssetDatabase.Refresh();
+            }
+
+            int created = 0, warnings = 0, idx = 0;
+            foreach (var section in sections)
+            {
+                var apply = ParseConditionHeading(section.heading, out string err);
+                if (apply == null)
+                {
+                    Debug.LogWarning($"[ReflectImporter] Progress Reflect: condition '{section.heading}' — {err}. Skipping its {section.groups.Count} group(s).");
+                    warnings++;
+                    continue;
+                }
+                foreach (var group in section.groups)
+                {
+                    if (group.Count == 0) continue;
+                    idx++;
+                    var rb = ScriptableObject.CreateInstance<ReflectBranch>();
+                    apply(rb);                 // bake the condition into the range fields
+                    rb.lines = group.ToArray();
+                    rb.isScripted = false;
+                    string name = $"{PROGRESS_REFLECT_PREFIX}{idx:D3}";
+                    AssetDatabase.CreateAsset(rb, $"{folder}/{name}.asset");
+                    EditorUtility.SetDirty(rb);
+                    if (!EnsureBranchInReflectSelfTalk(rb))
+                    {
+                        Debug.LogWarning($"[ReflectImporter] Progress Reflect: created {name} but no ReflectSelfTalk in a loaded scene to wire it into.");
+                        warnings++;
+                    }
+                    created++;
+                }
+            }
+            Debug.Log($"[ReflectImporter] Progress Reflect: {created} conditional branch(es) from {sections.Count} condition(s).");
+            return (created, warnings);
+        }
+
+        // ---- condition grammar: "if <field> <op> N [and <field> <op> N ...]" / "if deathFromCharm"
+        // maps onto ReflectBranch's existing min/max range fields. Returns an apply-delegate or null+error.
+        static System.Action<ReflectBranch> ParseConditionHeading(string heading, out string error)
+        {
+            error = null;
+            var h = (heading ?? "").Trim();
+            h = Regex.Replace(h, @"\s*\([^)]*\)\s*$", "").Trim();   // drop trailing (comment)
+            h = Regex.Replace(h, @"^if\s+", "", RegexOptions.IgnoreCase).Trim();
+            if (h.Length == 0) { error = "empty condition"; return null; }
+
+            var actions = new List<System.Action<ReflectBranch>>();
+            foreach (var raw in SplitAndClauses(h))
+            {
+                var c = raw.Trim();
+                if (c.Equals("deathFromCharm", StringComparison.OrdinalIgnoreCase))
+                {
+                    actions.Add(rb => rb.requiresDeathFromCharm = true);
+                    continue;
+                }
+                var m = Regex.Match(c, @"^(\w+)\s*(>=|<=|==|>|<)\s*(-?\d+)$");
+                if (!m.Success) { error = $"clause '{c}' not understood"; return null; }
+                var act = BuildClauseAction(m.Groups[1].Value.ToLowerInvariant(), m.Groups[2].Value, int.Parse(m.Groups[3].Value), out string ferr);
+                if (act == null) { error = ferr; return null; }
+                actions.Add(act);
+            }
+            return rb => { foreach (var a in actions) a(rb); };
+        }
+
+        static System.Action<ReflectBranch> BuildClauseAction(string field, string op, int val, out string error)
+        {
+            error = null;
+            System.Action<ReflectBranch, int> setMin, setMax;
+            switch (field)
+            {
+                case "finalconfidence":     setMin = (rb, v) => rb.minFinalConfidence = Mathf.Max(rb.minFinalConfidence, v); setMax = (rb, v) => rb.maxFinalConfidence = Mathf.Min(rb.maxFinalConfidence, v); break;
+                case "lastpeakconfidence":  setMin = (rb, v) => rb.minPeakConfidence  = Mathf.Max(rb.minPeakConfidence, v);  setMax = (rb, v) => rb.maxPeakConfidence  = Mathf.Min(rb.maxPeakConfidence, v);  break;
+                case "finalcharm":          setMin = (rb, v) => rb.minFinalCharm      = Mathf.Max(rb.minFinalCharm, v);      setMax = (rb, v) => rb.maxFinalCharm      = Mathf.Min(rb.maxFinalCharm, v);      break;
+                case "lastpeakcharm":       setMin = (rb, v) => rb.minPeakCharm       = Mathf.Max(rb.minPeakCharm, v);       setMax = (rb, v) => rb.maxPeakCharm       = Mathf.Min(rb.maxPeakCharm, v);       break;
+                case "loopcount":           setMin = (rb, v) => rb.minLoop            = Mathf.Max(rb.minLoop, v);            setMax = (rb, v) => rb.maxLoop            = Mathf.Min(rb.maxLoop, v);            break;
+                default: error = $"unknown field '{field}'"; return null;
+            }
+            switch (op)
+            {
+                case ">":  return rb => setMin(rb, val + 1);
+                case ">=": return rb => setMin(rb, val);
+                case "<":  return rb => setMax(rb, val - 1);
+                case "<=": return rb => setMax(rb, val);
+                case "==": return rb => { setMin(rb, val); setMax(rb, val); };
+                default: error = $"unknown op '{op}'"; return null;
+            }
+        }
+
+        class ConditionSection { public string heading; public List<List<string>> groups = new List<List<string>>(); }
+
+        // walk a tab into (condition heading -> blank-line-separated line groups). Shared shape
+        // for Progress Reflect, Death Reflect, Commit/Draft pool tabs. (HallwayImporter has its own
+        // copy since it has a distinct TabStructureItem type.)
+        static List<ConditionSection> ParseConditionSections(TabStructureItem[] structure)
+        {
+            var result = new List<ConditionSection>();
+            if (structure == null) return result;
+
+            ConditionSection cur = null;
+            List<string> group = null;
+            foreach (var item in structure)
+            {
+                if (item.type == "heading1")
+                {
+                    cur = new ConditionSection { heading = (item.text ?? "").Trim() };
+                    result.Add(cur);
+                    group = null;
+                    continue;
+                }
+                if (cur == null) continue;
+                var text = item.text ?? "";
+                if (string.IsNullOrWhiteSpace(text)) { group = null; continue; }   // blank = group break
+                foreach (var sub in text.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    var line = sub.Trim();
+                    if (line.Length == 0 || line.StartsWith("[!]")) continue;
+                    if (group == null) { group = new List<string>(); cur.groups.Add(group); }
+                    group.Add(line);
+                }
+            }
+            return result;
+        }
+
+        // delete every ReflectBranch asset whose name starts with prefix, after unwiring it
+        // from any ReflectSelfTalk. Lets each import regenerate the generated set cleanly.
+        static void PurgeGeneratedBranches(string prefix)
+        {
+            var toDelete = new List<string>();
+            foreach (var guid in AssetDatabase.FindAssets("t:ReflectBranch"))
+            {
+                var path = AssetDatabase.GUIDToAssetPath(guid);
+                if (!Path.GetFileNameWithoutExtension(path).StartsWith(prefix)) continue;
+                var rb = AssetDatabase.LoadAssetAtPath<ReflectBranch>(path);
+                if (rb != null) RemoveBranchFromReflectSelfTalk(rb);
+                toDelete.Add(path);
+            }
+            foreach (var p in toDelete) AssetDatabase.DeleteAsset(p);
+        }
+
+        static void RemoveBranchFromReflectSelfTalk(ReflectBranch rb)
+        {
+            foreach (var rst in Resources.FindObjectsOfTypeAll<ReflectSelfTalk>())
+            {
+                if (rst == null || PrefabUtility.IsPartOfPrefabAsset(rst)) continue;
+                if (rst.gameObject == null || !rst.gameObject.scene.IsValid()) continue;
+                var so = new SerializedObject(rst);
+                var prop = so.FindProperty("branches");
+                if (prop == null || !prop.isArray) continue;
+                for (int i = prop.arraySize - 1; i >= 0; i--)
+                {
+                    if (prop.GetArrayElementAtIndex(i).objectReferenceValue == rb)
+                        prop.DeleteArrayElementAtIndex(i);
+                }
+                so.ApplyModifiedProperties();
+                EditorUtility.SetDirty(rst);
+                EditorSceneManager.MarkSceneDirty(rst.gameObject.scene);
+            }
+        }
+
+        // accept either "and" or "&&" between clauses (Davis writes both)
+        internal static string[] SplitAndClauses(string h) => Regex.Split(h, @"\s+and\s+|\s*&&\s*", RegexOptions.IgnoreCase);
+
+        // ============================================================
+        // Commit Lines / Draft Intro tabs — beats 4 & 3 loop-gated pools (86baajqwe)
+        // Each "if LoopCount …" H1 → a ConditionalReflectGroups entry on BaseReflectPools.
+        // Only loopCount conditions are supported here (per design); other fields warn.
+        // ============================================================
+
+        static (int updated, int warnings) ImportPoolTab(string tabId, string poolFieldName, string label)
+        {
+            var tab = FetchTab(tabId);
+            var sections = ParseConditionSections(tab.structure);
+
+            var entries = new List<(int min, int max, List<List<string>> groups)>();
+            int warnings = 0;
+            foreach (var section in sections)
+            {
+                if (!TryParsePoolCondition(section.heading, out int mn, out int mx, out string err))
+                {
+                    Debug.LogWarning($"[ReflectImporter] {label}: condition '{section.heading}' — {err}. Skipping its group(s).");
+                    warnings++;
+                    continue;
+                }
+                var groups = new List<List<string>>();
+                foreach (var g in section.groups) if (g.Count > 0) groups.Add(g);
+                if (groups.Count > 0) entries.Add((mn, mx, groups));
+            }
+
+            var pools = FindOrCreateBaseReflectPools();
+            var so = new SerializedObject(pools);
+            WriteConditionalGroups(so.FindProperty(poolFieldName), entries);
+            so.ApplyModifiedProperties();
+            EditorUtility.SetDirty(pools);
+            EnsureBasePoolsWired(pools);
+
+            Debug.Log($"[ReflectImporter] {label}: {entries.Count} loop-gated pool(s).");
+            return (entries.Count, warnings);
+        }
+
+        // loopCount-only condition → (minLoop, maxLoop). "Generic" / no clause = 0..999.
+        internal static bool TryParsePoolCondition(string heading, out int minLoop, out int maxLoop, out string error)
+        {
+            minLoop = 0; maxLoop = 999; error = null;
+            var h = Regex.Replace((heading ?? "").Trim(), @"\s*\([^)]*\)\s*$", "").Trim();
+            if (Regex.IsMatch(h, @"^generic$", RegexOptions.IgnoreCase)) return true;
+            h = Regex.Replace(h, @"^if\s+", "", RegexOptions.IgnoreCase).Trim();
+            if (h.Length == 0) return true;   // bare/empty heading = all loops
+
+            foreach (var raw in SplitAndClauses(h))
+            {
+                var m = Regex.Match(raw.Trim(), @"^loopcount\s*(>=|<=|==|>|<)\s*(\d+)$", RegexOptions.IgnoreCase);
+                if (!m.Success) { error = $"only loopCount conditions are supported here (got '{raw.Trim()}')"; return false; }
+                int v = int.Parse(m.Groups[2].Value);
+                switch (m.Groups[1].Value)
+                {
+                    case ">":  minLoop = Mathf.Max(minLoop, v + 1); break;
+                    case ">=": minLoop = Mathf.Max(minLoop, v); break;
+                    case "<":  maxLoop = Mathf.Min(maxLoop, v - 1); break;
+                    case "<=": maxLoop = Mathf.Min(maxLoop, v); break;
+                    case "==": minLoop = v; maxLoop = v; break;
+                }
+            }
+            return true;
+        }
+
+        internal static void WriteConditionalGroups(SerializedProperty arrayProp, List<(int min, int max, List<List<string>> groups)> entries)
+        {
+            arrayProp.arraySize = entries.Count;
+            for (int i = 0; i < entries.Count; i++)
+            {
+                var e = arrayProp.GetArrayElementAtIndex(i);
+                e.FindPropertyRelative("minLoop").intValue = entries[i].min;
+                e.FindPropertyRelative("maxLoop").intValue = entries[i].max;
+                var gp = e.FindPropertyRelative("groups");
+                gp.arraySize = entries[i].groups.Count;
+                for (int j = 0; j < entries[i].groups.Count; j++)
+                {
+                    var lp = gp.GetArrayElementAtIndex(j).FindPropertyRelative("lines");
+                    lp.arraySize = entries[i].groups[j].Count;
+                    for (int k = 0; k < entries[i].groups[j].Count; k++)
+                        lp.GetArrayElementAtIndex(k).stringValue = entries[i].groups[j][k];
+                }
+            }
+        }
+
+        // ============================================================
+        // Death Reflect tab — beat 1 generic/repeat pools (86baajqwe)
+        // "Generic" + "if repeatDeaths >= 2" sections; blank-line groups → BaseReflectPools
+        // (created + wired to ReflectSelfTalk if missing). Card-specific reactions still win at
+        // runtime; these are the fallback pools.
+        // ============================================================
+
+        static (int updated, int warnings) ImportDeathReflectTab(string tabId)
+        {
+            var tab = FetchTab(tabId);
+            var sections = ParseConditionSections(tab.structure);
+
+            var generic = new List<List<string>>();
+            var repeat = new List<List<string>>();
+            int warnings = 0;
+
+            foreach (var section in sections)
+            {
+                var head = Regex.Replace((section.heading ?? "").Trim(), @"\s*\([^)]*\)\s*$", "").Trim();
+                List<List<string>> target;
+                if (Regex.IsMatch(head, @"^generic$", RegexOptions.IgnoreCase))
+                    target = generic;
+                else if (Regex.IsMatch(head, @"^if\s+repeatDeaths\s*(>=|>)\s*2$", RegexOptions.IgnoreCase))
+                    target = repeat;
+                else
+                {
+                    Debug.LogWarning($"[ReflectImporter] Death Reflect: section '{section.heading}' isn't 'Generic' or 'if repeatDeaths >= 2' — skipping its {section.groups.Count} group(s).");
+                    warnings++;
+                    continue;
+                }
+                foreach (var g in section.groups)
+                    if (g.Count > 0) target.Add(g);
+            }
+
+            var pools = FindOrCreateBaseReflectPools();
+            var so = new SerializedObject(pools);
+            WriteLineGroups(so.FindProperty("genericDeathReactions"), generic);
+            WriteLineGroups(so.FindProperty("repeatDeathReactions"), repeat);
+            so.ApplyModifiedProperties();
+            EditorUtility.SetDirty(pools);
+
+            if (!EnsureBasePoolsWired(pools))
+                Debug.LogWarning("[ReflectImporter] Death Reflect: wrote BaseReflectPools but no ReflectSelfTalk in a loaded scene to wire it into.");
+
+            Debug.Log($"[ReflectImporter] Death Reflect: {generic.Count} generic + {repeat.Count} repeat death-reaction group(s) → BaseReflectPools.");
+            return (generic.Count + repeat.Count, warnings);
+        }
+
+        // write List<group-of-lines> into a ReflectLineGroup[] serialized array
+        internal static void WriteLineGroups(SerializedProperty arrayProp, List<List<string>> groups)
+        {
+            arrayProp.arraySize = groups.Count;
+            for (int i = 0; i < groups.Count; i++)
+            {
+                var linesProp = arrayProp.GetArrayElementAtIndex(i).FindPropertyRelative("lines");
+                linesProp.arraySize = groups[i].Count;
+                for (int k = 0; k < groups[i].Count; k++)
+                    linesProp.GetArrayElementAtIndex(k).stringValue = groups[i][k];
+            }
+        }
+
+        static BaseReflectPools FindOrCreateBaseReflectPools()
+        {
+            var guids = AssetDatabase.FindAssets("t:BaseReflectPools");
+            if (guids.Length > 0)
+                return AssetDatabase.LoadAssetAtPath<BaseReflectPools>(AssetDatabase.GUIDToAssetPath(guids[0]));
+
+            string folder = GetReflectBranchFolder();
+            if (!AssetDatabase.IsValidFolder(folder)) { Directory.CreateDirectory(folder); AssetDatabase.Refresh(); }
+            var pools = ScriptableObject.CreateInstance<BaseReflectPools>();
+            AssetDatabase.CreateAsset(pools, $"{folder}/BaseReflectPools.asset");
+            Debug.Log($"[ReflectImporter] Created BaseReflectPools at {folder}/BaseReflectPools.asset");
+            return pools;
+        }
+
+        // wire the pools asset into ReflectSelfTalk.basePools on every loaded instance
+        static bool EnsureBasePoolsWired(BaseReflectPools pools)
+        {
+            bool any = false;
+            foreach (var rst in Resources.FindObjectsOfTypeAll<ReflectSelfTalk>())
+            {
+                if (rst == null || PrefabUtility.IsPartOfPrefabAsset(rst)) continue;
+                if (rst.gameObject == null || !rst.gameObject.scene.IsValid()) continue;
+                var so = new SerializedObject(rst);
+                var prop = so.FindProperty("basePools");
+                if (prop == null) continue;
+                if (prop.objectReferenceValue != pools)
+                {
+                    prop.objectReferenceValue = pools;
+                    so.ApplyModifiedProperties();
+                    EditorUtility.SetDirty(rst);
+                    EditorSceneManager.MarkSceneDirty(rst.gameObject.scene);
+                }
+                any = true;
+            }
+            return any;
         }
 
         // ============================================================

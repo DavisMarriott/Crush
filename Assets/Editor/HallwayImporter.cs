@@ -117,11 +117,32 @@ namespace Crush.EditorTools
         static (int updated, int warnings) ImportGenericPool(string tabId)
         {
             var tab = FetchTab(tabId);
-            var lines = ExtractLines(tab.structure);
-            if (lines.Count == 0)
+            var sections = ParseConditionSections(tab.structure);
+
+            // "Generic hallway pool" section → backup clusters; "if LoopCount …" → loop-gated cluster pools.
+            var genericClusters = new List<List<string>>();
+            var conditional = new List<(int min, int max, List<List<string>> groups)>();
+            int warnings = 0;
+
+            foreach (var section in sections)
             {
-                Debug.LogWarning("[HallwayImporter] Base Loop Random Lines: no lines parsed. Skipping.");
-                return (0, 1);
+                var head = Regex.Replace((section.heading ?? "").Trim(), @"\s*\([^)]*\)\s*$", "").Trim();
+                var groups = new List<List<string>>();
+                foreach (var g in section.groups) if (g.Count > 0) groups.Add(g);
+
+                if (Regex.IsMatch(head, @"^generic", RegexOptions.IgnoreCase))   // "Generic hallway pool"
+                {
+                    genericClusters.AddRange(groups);
+                }
+                else if (ReflectImporter.TryParsePoolCondition(section.heading, out int mn, out int mx, out string err))
+                {
+                    if (groups.Count > 0) conditional.Add((mn, mx, groups));
+                }
+                else
+                {
+                    Debug.LogWarning($"[HallwayImporter] Base Loop Random Lines: condition '{section.heading}' — {err}. Skipping.");
+                    warnings++;
+                }
             }
 
             var pool = FindByName<HallwayGenericPool>(GENERIC_POOL_NAME);
@@ -134,12 +155,52 @@ namespace Crush.EditorTools
                 AssetDatabase.CreateAsset(pool, $"{folder}/{GENERIC_POOL_NAME}.asset");
                 created = true;
             }
-            pool.lines = lines.ToArray();
+
+            var so = new SerializedObject(pool);
+            ReflectImporter.WriteConditionalGroups(so.FindProperty("clusterPools"), conditional);
+            ReflectImporter.WriteLineGroups(so.FindProperty("genericClusters"), genericClusters);
+            so.ApplyModifiedProperties();
             EditorUtility.SetDirty(pool);
 
-            int warnings = WireGenericPoolInManager(pool) ? 0 : 1;
-            Debug.Log($"[HallwayImporter] Base Loop Random Lines: {(created ? "CREATED" : "Updated")} {GENERIC_POOL_NAME} ({lines.Count} line(s)).");
+            if (!WireGenericPoolInManager(pool)) warnings++;
+            Debug.Log($"[HallwayImporter] Base Loop Random Lines: {(created ? "CREATED" : "Updated")} {GENERIC_POOL_NAME} ({conditional.Count} loop-gated pool(s), {genericClusters.Count} generic cluster(s)).");
             return (1, warnings);
+        }
+
+        // ============================================================
+        // Condition-section parse (local copy — Hallway has its own TabStructureItem type;
+        // the string/SerializedProperty helpers on ReflectImporter are reused directly).
+        // ============================================================
+
+        class ConditionSection { public string heading; public List<List<string>> groups = new List<List<string>>(); }
+
+        static List<ConditionSection> ParseConditionSections(TabStructureItem[] structure)
+        {
+            var result = new List<ConditionSection>();
+            if (structure == null) return result;
+            ConditionSection cur = null;
+            List<string> group = null;
+            foreach (var item in structure)
+            {
+                if (item.type == "heading1")
+                {
+                    cur = new ConditionSection { heading = (item.text ?? "").Trim() };
+                    result.Add(cur);
+                    group = null;
+                    continue;
+                }
+                if (cur == null) continue;
+                var text = item.text ?? "";
+                if (string.IsNullOrWhiteSpace(text)) { group = null; continue; }   // blank = group break
+                foreach (var sub in text.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    var line = sub.Trim();
+                    if (line.Length == 0 || line.StartsWith("[!]")) continue;
+                    if (group == null) { group = new List<string>(); cur.groups.Add(group); }
+                    group.Add(line);
+                }
+            }
+            return result;
         }
 
         // ============================================================

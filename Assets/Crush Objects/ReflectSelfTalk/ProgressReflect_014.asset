@@ -10,21 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec9a774f1c3f94c5ab3b77c67ac7f734, type: 3}
-  m_Name: LoopReflect_04
+  m_Name: ProgressReflect_014
   m_EditorClassIdentifier: Assembly-CSharp::ReflectBranch
   lines:
-  - Am I looping? I'm stuck in a time loop!?!
-  - How am I gonna get out of this?!?
-  - What the hell is going on?!
-  - "Daisy is still standing there like nothing happened\u2026"
-  - Do I try to talk to her again?
-  commitLines:
-  - "I can\u2019t believe this is $&%ing happening to me."
-  - Please GOD let this work.
-  - I promise I'll stop cursing.
-  isScripted: 1
-  minLoop: 4
-  maxLoop: 4
+  - Oh man, she looked really uncomfortable there.
+  - You made it WEIRD!
+  - "DON\u2019T make it weird!"
+  commitLines: []
+  isScripted: 0
+  minLoop: 0
+  maxLoop: 999
   minFinalConfidence: 0
   maxFinalConfidence: 999
   minPeakConfidence: 0
@@ -34,6 +29,6 @@ MonoBehaviour:
   minPeakCharm: 0
   maxPeakCharm: 999
   requiresDeathCard: {fileID: 0}
-  requiresDeathFromCharm: 0
+  requiresDeathFromCharm: 1
   requiresCardsPlayed: []
   requiresCardsUnplayed: []

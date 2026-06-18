@@ -10,11 +10,17 @@ using Random = UnityEngine.Random;
 [CreateAssetMenu(menuName = "Crush/Hallway Generic Pool")]
 public class HallwayGenericPool : ScriptableObject
 {
-    [Header("Ambient random hallway lines (base loops, no scripted hallway)")]
+    [Header("Conditional clusters (loop-gated). One cluster = lines for one base loop, played one per trigger (line 0 → trigger 1, …). Picked random + once-per-run.")]
+    public ConditionalReflectGroups[] clusterPools;
+
+    [Header("Generic backup clusters — used when no conditional cluster is eligible or all eligible are exhausted this run.")]
+    public ReflectLineGroup[] genericClusters;
+
+    [Header("LEGACY flat lines (pre-cluster). No longer written by the importer.")]
     [TextArea(1, 3)]
     public string[] lines;
 
-    /// <summary>Returns a random line, or null if the pool is empty.</summary>
+    /// <summary>Returns a random line, or null if the pool is empty. (Legacy.)</summary>
     public string GetRandomLine()
     {
         if (lines == null || lines.Length == 0) return null;

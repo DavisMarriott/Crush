@@ -18,5 +18,5 @@ MonoBehaviour:
     threshold: 1
     tag: 0
   reflectLines:
-  - Wow - she actually laughed at that joke. I need to use that again.
+  - Wow! She actually laughed at that joke. I need to use that again.
   characterUpgrade: {fileID: 11400000, guid: 2babad58a1e5643b9a3a713940aaad6e, type: 2}

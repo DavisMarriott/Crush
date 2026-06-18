@@ -78,6 +78,10 @@ public class DeathRespawn : MonoBehaviour
         loopSnapshot.deathBranchName = loopSnapshot.branchesPlayed.Count > 0
             ? loopSnapshot.branchesPlayed[loopSnapshot.branchesPlayed.Count - 1].branchName
             : null;
+        // bump the per-run death count for this card+branch combo (drives the repeatDeaths pool).
+        // Counted here so the reflect beat below sees the up-to-date count incl. this death.
+        if (loopSnapshot.deathCard != null && !string.IsNullOrEmpty(loopSnapshot.deathBranchName))
+            gameProgression.NoteComboDeath(loopSnapshot.deathCard.name, loopSnapshot.deathBranchName);
         //end of updating loopSnapshot: Next - game progression captures it
         gameProgression.lastLoop = loopSnapshot;
         
@@ -183,7 +187,7 @@ public class DeathRespawn : MonoBehaviour
         // Beat 3 — draft intro (base loops only): one random "what should I say this time…" line
         // before the draft opens. Scripted loops stay scripted-only.
         if (scriptedBranch == null && !SkipReflect.Active && deckManager.draftPool.Length > 0)
-            yield return reflectSelfTalk.PlayDraftIntro();
+            yield return reflectSelfTalk.PlayDraftIntro(gameProgression.loopCount);
 
         if (deckManager.draftPool.Length >0)
         {
@@ -204,7 +208,7 @@ public class DeathRespawn : MonoBehaviour
             yield return reflectSelfTalk.PlayLines(scriptedBranch.commitLines);
         // Beat 4 — base loops pull a random commit group from the pool instead
         else if (!SkipReflect.Active && scriptedBranch == null)
-            yield return reflectSelfTalk.PlayBaseCommit();
+            yield return reflectSelfTalk.PlayBaseCommit(gameProgression.loopCount);
 
         //full respawn, ready for hallway walk
         animationTriggerPlayerDraft.LockerClose();

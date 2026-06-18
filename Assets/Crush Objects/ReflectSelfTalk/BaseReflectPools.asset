@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b460802220e243cdb227ef7a7c21f85, type: 3}
+  m_Name: BaseReflectPools
+  m_EditorClassIdentifier: Assembly-CSharp::BaseReflectPools
+  genericDeathReactions:
+  - lines:
+    - "I\u2019m gonna be stuck like this forever."
+  - lines:
+    - "If I never hear that STUPID bell ring again it\u2019ll be too soon."
+  - lines:
+    - "I wish someone could explain what\u2019s happening to me."
+    - "I\u2019m a Marty without a Doc, here!"
+    - "Where\u2019s MY Doc?"
+  - lines:
+    - "Why don\u2019t they teach you about THIS stuff in school?"
+    - Geometry? World history? Gimme something I can USE!!!
+  - lines:
+    - Maybe time-looping is, like, a puberty thing?
+    - "No, gross, don\u2019t think about puberty."
+  - lines:
+    - Scientists will want to study this for a long time.
+    - Who am I kidding? NOBODY is gonna believe me.
+  - lines:
+    - "They\u2019re gonna write books about this one day."
+    - "\u201CInfinity Luke: The Boy Who Blew it Until the End of Time.\u201D"
+  - lines:
+    - Call Guiness!
+    - "There\u2019s a new record for getting rejected by the same"
+  - lines:
+    - "Well, you either die a hero\u2026"
+    - "\u2026or live long enough to see yourself become a cringy weirdo loser."
+  - lines:
+    - "Okay\u2026 there\u2019s cool, tough-guy, Gatorade-y jock sweating\u2026"
+    - "And there\u2019s bad, awkward \u201Cthis guy\u2019s a creep\u201D sweating\u2026"
+    - That was BAD sweating.
+  - lines:
+    - It feels like I keep getting unplugged from the Matrix.
+    - "Am I \u201CThe One?\u201D"
+  - lines:
+    - "Wait\u2026"
+    - What if each loop is a different timeline that goes on without me?
+    - Who gets my stuff?
+  - lines:
+    - "I wonder if I\u2019ll ever see my room again\u2026"
+    - I never wrote a will
+  repeatDeathReactions:
+  - lines:
+    - WHY would you try THAT again?!?
+  - lines:
+    - "\u201CDoing the same thing and expecting different results.\u201D"
+    - "That\u2019s the definition of a chud."
+  - lines:
+    - "Okay, now you\u2019re repeating your mistakes?"
+    - At least make NEW ones.
+  - lines:
+    - Try. A. DIFFERENT. Approach.
+  - lines:
+    - "Now you\u2019re just being lazy, Luke."
+    - Get it together!
+  - lines:
+    - Another crushing blow for the Luke-ster.
+    - "Ugh\u2026 don\u2019t call yourself \u201Cthe Luke-ster.\u201D"
+  - lines:
+    - "What\u2019s the point of looping\u2026"
+    - "\u2026if you\u2019re just going to do the same dumb thing over and over."
+  draftIntroPools: []
+  commitPools:
+  - minLoop: 0
+    maxLoop: 10
+    groups:
+    - lines:
+      - Here we go again.
+    - lines:
+      - Let's run it back.
+      - Again.
+    - lines:
+      - "Don\u2019t die don\u2019t die don\u2019t die."

@@ -13,21 +13,24 @@ MonoBehaviour:
   m_Name: LoopReflect_05
   m_EditorClassIdentifier: Assembly-CSharp::ReflectBranch
   lines:
-  - I am officially stuck in a loop.
-  - So how do I get out of this?
-  - Maybe this is the universe helping me out in some #$@!*% up way?
-  - I get unlimited tries at asking Daisy to the dance?
-  - "If I ask her, maybe I\u2019ll stop looping?"
-  - "That\u2019s not the craziest theory I could think of\u2026."
-  - So then how do I actually ask her?
-  - "Well asking her to the dance has been absolutely terrifying\u2026"
-  - No matter how many times I try.
-  - "So I think\u2026 I just need to get my confidence up?"
-  - "Really get in a good conversation with her\u2026"
-  - "So that the dread of asking her to the dance doesn\u2019t kill me\u2026."
+  - "I\u2019m stuck!"
+  - I am officially STUCK in a LOOP.
+  - How am I gonna get out of this?
+  - Unless... this is the universe's sick way of helping me out?
+  - Giving me unlimited tries at asking Daisy to the dance?
+  - "If she says YES, maybe I\u2019ll stop looping!"
+  - "That\u2019s not the craziest theory I could think of\u2026"
+  - Asking her SO FAR has been absolutely TERRIFYING.
+  - I feel my confidence draining just walking up to her!
+  - "I could only get in a good conversation with her\u2026"
+  - Start feeling comfortable...
+  - Build my confidence up...
+  - MAYBE I could do this.
+  - And, you know...
+  - Not die.
   - "Again\u2026"
   - "Yep, let\u2019s go with that."
-  - Alrighty then - what else can I say to her?
+  - Now THINK! What else can I say to her?
   commitLines: []
   isScripted: 1
   minLoop: 5

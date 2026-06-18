@@ -13,20 +13,22 @@ MonoBehaviour:
   m_Name: LoopReflect_01
   m_EditorClassIdentifier: Assembly-CSharp::ReflectBranch
   lines:
-  - Okay, Luke. It's now or never.
-  - She's right there.
+  - Okay, Luke.
   - Today is the day.
+  - It's now or never.
   - No more chickening out.
-  - You're gonna ask Daisy to the homecoming dance.
-  - "And if you don't ask her this passing period\u2026"
+  - She's right there.
+  - "You\u2019re gonna walk right up to Daisy Winfield\u2026"
+  - And you're gonna ask her to the Homecoming Dance.
+  - "And if you DON\u2019T ask her this passing period\u2026"
   - Brett Kissinger is gonna ask her.
   - And they'll get married.
-  - And you'll die alone.
-  - "Just need to figure out what to say to her\u2026.."
+  - And you'll die ALONE.
+  - "Just\u2026 ask her."
   commitLines:
-  - The bell rings soon.
-  - "It\u2019s go time."
-  - Deep Breath.
+  - "Bell\u2019s gonna ring soon."
+  - "It\u2019s GO time."
+  - "Deep breath\u2026"
   - You can do this.
   isScripted: 1
   minLoop: 1
