@@ -76,11 +76,15 @@ public class PhaseManager : MonoBehaviour
         if (currentPhase == GamePhase.UpgradeDraft)
         {
             iconDeckSize.SetActive(true);
-            iconConfidentWalk.SetActive(true);
-
             thoughtBubbleHallwayAudio.enabled = false;
             postFxAudio.enabled = false;
             postProcessingVolumeNegative.SetActive(false);
+            if (gameProgression.loopCount > 1)
+            {
+                iconConfidentWalk.SetActive(true);
+            }
+            else{
+                iconConfidentWalk.SetActive(false);}
         }
 
         if (currentPhase == GamePhase.Death)
