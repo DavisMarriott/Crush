@@ -1064,6 +1064,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 415221935336462986, guid: 5ba686e920f0a49f2bfc583104767c9f, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 3353371
+      objectReference: {fileID: 0}
     - target: {fileID: 430579231899901015, guid: 5ba686e920f0a49f2bfc583104767c9f, type: 3}
       propertyPath: deckSize
       value: 0
