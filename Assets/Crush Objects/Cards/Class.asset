@@ -15,7 +15,7 @@ MonoBehaviour:
   isDance: 0
   revealed: 1
   previewText: Class was boring
-  cost: 2
+  cost: 1
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
@@ -24,7 +24,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "\u2026."
+      line: "\u2026"
       variantGroups: []
       lastSticks: 0
     - character: 2
@@ -42,7 +42,7 @@ MonoBehaviour:
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
-      line: "No, I\u2019m not okay!"
+      line: "No, I\u2019m NOT okay!"
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -54,7 +54,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "Mr. Miller\u2019s class is a real snooze fest huh?"
+      line: "Mr. Miller\u2019s class is a real snooze fest, huh?"
       variantGroups: []
       lastSticks: 0
     - character: 2
@@ -116,7 +116,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "I don\u2019t know if I can handle another semester of Mr. Miller"
+      line: "I don\u2019t know if I can handle another semester of Mr. Miller."
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -135,7 +135,13 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: yeah that class sucked gotta go see ya later
+        line: Yeah, that class sucked.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Gotta go. See ya later.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -144,7 +150,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "I don\u2019t think it\u2019s that bad."
+        line: "I don\u2019t think it\u2019s THAT bad."
         variantGroups: []
         lastSticks: 0
       - character: 1
@@ -159,7 +165,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
-        line: Seriously haha. Ugh 5th period is the absolute worst.
+        line: Seriously, hehe. Ugh! Fifth period is the absolute WORST.
         variantGroups: []
         lastSticks: 0
       tags: 00000000
@@ -168,7 +174,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
-        line: I know right. It's like all that guy thinks about is the Roman Empire
+        line: I know, right? It's like all that guy thinks about is the Roman Empire
           haha.
         variantGroups: []
         lastSticks: 0
@@ -190,14 +196,20 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
-        line: HAHAH right?! He is so boring I want to DIE every time 5th period rolls
-          around.
+        line: HEHE. Right?! He is SO boring I want to DIE every time fifth period
+          rolls around.
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
-        line: HAHA you're hilarious!
+        line: You're hilarious! HEHE.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "It wasn\u2019t THAT funny. I don\u2019t understand girls."
         variantGroups: []
         lastSticks: 0
       tags: 00000000
@@ -233,7 +245,13 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: yeah that class sucked gotta go see ya later
+        line: Yeah, that class sucked.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Gotta go. See ya later.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -242,7 +260,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: haha yeah. Not exactly the most exciting class I've ever been to.
+        line: Hehe. Yeah. Not exactly the most exciting class I've ever been to.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -282,14 +300,20 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
-        line: HAHAH right?! He is so boring I want to DIE every time 5th period rolls
-          around.
+        line: HEHE. Right?! He is SO boring I want to DIE every time fifth period
+          rolls around.
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
-        line: HAHA you're hilarious!
+        line: You're hilarious! HEHE.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "It wasn\u2019t THAT funny. I don\u2019t understand girls."
         variantGroups: []
         lastSticks: 0
       tags: 00000000

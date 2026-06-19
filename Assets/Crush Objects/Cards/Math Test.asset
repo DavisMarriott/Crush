@@ -42,7 +42,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: Geometry is kind of breaking my brain haha
+      line: Geometry is kind of breaking my brain, haha.
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -113,7 +113,7 @@ MonoBehaviour:
       tags: 
     deathReactions: []
   draftLines:
-  - line: She probably got an A on Ms. Parsons test
+  - line: She probably got an A on Ms. Parsons test.
   - line: She's, like, a genius.
   availableUpgrades: []
   upgradeThreshold: 3

@@ -24,7 +24,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "What book are you\u2026"
+      line: "What book are y\u2013"
       variantGroups: []
       lastSticks: 0
     - character: 1
@@ -48,7 +48,7 @@ MonoBehaviour:
         book!!"
     - lines:
       - Again?!? Really??
-      - "You\u2019re so afraid of girls you can\u2019t ask about a stupid book?!"
+      - "You\u2019re so afraid of girls you can\u2019t ask about a stupid BOOK?!"
   - branchName: Normal
     dialogue:
     - character: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
-        line: "Just this - ummm this fantasy series I\u2019ve been reading."
+        line: "Just this\u2026 umm\u2026 this fantasy series I\u2019ve been reading."
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -101,7 +101,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
-        line: "It's kinda dorky though\u2026."
+        line: It's kinda dorky though.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -149,7 +149,7 @@ MonoBehaviour:
       tags: 
     deathReactions: []
   draftLines:
-  - line: She's holding that book....
+  - line: "She's holding that book\u2026"
   - line: She might like if I ask her about it.
   availableUpgrades: []
   upgradeThreshold: 3

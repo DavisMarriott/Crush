@@ -15,7 +15,7 @@ MonoBehaviour:
   isDance: 0
   revealed: 1
   previewText: I took notes
-  cost: 1
+  cost: 2
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
@@ -83,6 +83,17 @@ MonoBehaviour:
         charmImpact: 0
         line: You're the best! That would be awesome! You are such a life saver.
         variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: 
+        variantGroups:
+        - lines:
+          - Phew, not a creep.
+          - "[!] issue that\u2019s emerging: if we do duplicate lines like this (positive
+            and high match) then we can\u2019t have duplicate exhaustive lines. Well,
+            we can. But they\u2019d each play once."
         lastSticks: 0
       tags: 00000000
     - charmState: 4

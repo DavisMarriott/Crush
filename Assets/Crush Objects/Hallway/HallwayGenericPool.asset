@@ -17,23 +17,23 @@ MonoBehaviour:
     maxLoop: 10
     groups:
     - lines:
-      - What even is a time loop?
-      - Like scientifically, how do these work?
-      - I should pay more attention in science class
+      - What even IS a time loop?
+      - Like, scientifically, how do these work?
+      - I should pay more attention in science class.
   - minLoop: 10
     maxLoop: 999
     groups:
     - lines:
       - Okay, you got this.
-      - This is the one, I can feel it.
-      - "And there\u2019s always next loop"
+      - This is the one. I can feel it.
+      - "And there\u2019s always NEXT loop."
     - lines:
-      - She likes you
+      - She likes you.
       - Right?
       - "Yeah, she likes you\u2026"
     - lines:
-      - When I get out of this
-      - Should I tell [friends name]?
+      - "When I get out of this\u2026"
+      - Should I tell Mitch?
       - "He\u2019d never believe me\u2026"
   genericClusters: []
   lines:

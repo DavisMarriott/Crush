@@ -16,17 +16,16 @@ MonoBehaviour:
   - WHOA!!!
   - Thank god that was just a daydream.
   - That was crazy real.
-  - "But maybe I SHOULDN\u2019T ask her to the Dance point-blank like that."
-  - Just in case.
-  - I need a plan.
-  - I need to actually TALK to her.
+  - "But maybe I SHOULDN\u2019T ask her to the Dance point-blank."
+  - I need a plan. I need to actually TALK to her.
   - Okay, okay.
   - What do girls like to talk about?
   commitLines:
   - Okay. This might actually work.
-  - "It\u2019s not actually life or death."
+  - "It\u2019s not like it\u2019s REALLY  life or death."
+  - "Don\u2019t think about that daydream."
   - You're still a man.
-  - A man with a plan.
+  - "This time, you\u2019re a man with a plan."
   isScripted: 1
   minLoop: 2
   maxLoop: 2

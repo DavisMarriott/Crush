@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoopHallway
   loop: 3
   triggerLines:
-  - "This is really weird\u2026."
-  - Wait - Does she think I'm being weird?
+  - "This is really weird\u2026"
+  - "Wait\u2013 does she think I'm being weird?"
   - Don't act weird!
   skipIntros: 0

@@ -15,6 +15,6 @@ MonoBehaviour:
   loop: 5
   triggerLines:
   - Ask Daisy to the dance. Escape the time loop.
-  - Get married, have kids.
-  - And Brett Kissinger dies alone.
+  - "Get married, have kids\u2026"
+  - "\u2026and Brett Kissinger dies alone."
   skipIntros: 0

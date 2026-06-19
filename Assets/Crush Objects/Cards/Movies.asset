@@ -15,7 +15,7 @@ MonoBehaviour:
   isDance: 0
   revealed: 1
   previewText: Movies
-  cost: 2
+  cost: 1
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
@@ -156,6 +156,6 @@ MonoBehaviour:
     deathReactions: []
   draftLines:
   - line: I think she likes movies.
-  - line: "That might be a good ice breaker\u2026"
+  - line: "Who doesn\u2019t?"
   availableUpgrades: []
   upgradeThreshold: 3

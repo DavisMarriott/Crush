@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   isDance: 0
   revealed: 1
-  previewText: Music
+  previewText: Favorite Band
   cost: 3
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   visualPrefab: {fileID: 0}
@@ -79,10 +79,15 @@ MonoBehaviour:
     - charmState: 3
       dialogue:
       - character: 1
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "Ohhh Luke\u2026. It\u2019s Penny Farthing"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
         confidenceImpact: 1
         charmImpact: 0
-        line: "Ohhh Luke\u2026. It's Penny Farthing. And duhhhh I've listened to
-          it like a thousand times already."
+        line: And duhhhh I've listened to it like a thousand times already.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -171,8 +176,8 @@ MonoBehaviour:
       tags: 
     deathReactions: []
   draftLines:
-  - line: A new Penny Farthing song just came out.
-  - line: She loves them.
+  - line: "She\u2019s pretty obsessed with Penny Farthing"
+  - line: I should ask her about that new song
   availableUpgrades:
   - {fileID: 11400000, guid: 2603f1ce7b7674681a4184843cba6710, type: 2}
   upgradeThreshold: 1

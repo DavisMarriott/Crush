@@ -1,0 +1,495 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
+  m_Name: Dorky Stuff
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
+  isDance: 0
+  revealed: 1
+  previewText: Dorky Stuff
+  cost: 7
+  buttonColor: {r: 0, g: 0, b: 0, a: 1}
+  visualPrefab: {fileID: 0}
+  lukeBranches:
+  - branchName: Death
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "You\u2019re a dork!"
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: That came out SO MEAN!!
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts: []
+    daisyBranches: []
+    deathReactions: []
+  - branchName: Awkward
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "You seem like you\u2019re kinda into dorky stuff."
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts: []
+    daisyBranches:
+    - charmState: 0
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Well that\u2019s kinda rude."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "Oh, um\u2026that\u2019s not\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "Did you want something, or\u2026?"
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: Yeah, I guess you COULD say that.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: -1
+        charmImpact: 0
+        line: Ugh! But WHY did I say that???
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: I like what I like!
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: Well, I like what I like!
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: I can live with it, if you can.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Wait, live with HER being dorky?
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: -1
+        charmImpact: -1
+        line: "Yeah, uh\u2026 haha. Sure."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Or ME being dorky?
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: -1
+        charmImpact: 0
+        line: I mean, of course I can. Duh.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: -1
+        line: "Uhhh\u2026 look who\u2019s talking, Luke."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "I\u2019ve seen you drawing Naruto characters in your notebook!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: OH NO! She SAW those?!?!
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 1
+        line: "We\u2019re both dorks!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Phew. Threat downgraded. Don\u2019t panic!"
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    deathReactions: []
+  - branchName: Normal
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I like that you\u2019re into, kinda\u2026 dorky stuff."
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 1
+    - state: 2
+      impact: 4
+    - state: 3
+      impact: 5
+    - state: 4
+      impact: 4
+    daisyBranches:
+    - charmState: 0
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Kinda rude, Luke.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: Hehe. Um, thanks.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: -1
+        line: I guess.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: Really?!?
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "I mean, um\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: -1
+        line: "I like that you\u2019re into dorky stuff, too."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: Oh yeah?
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "Yeah. I like dorky stuff, too. I\u2019m always, like\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "No DON\u2019T tell her!\r[-1 conf] Luke: ..doodling Naruto during
+          class, and stuff."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: "Hehe, I know. I\u2019ve peeked over your shoulder once or twice."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 1
+        line: "It\u2019s cute."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Hell yeah!
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Wait\u2026 is it cute that I draw Naruto, or is Naruto cute?"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "He\u2019s good at fighting and he\u2019s ALWAYS there for his friends\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: But is he CUTE??
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Get your head in the game, Luke!
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: 0
+        line: Oh, you mean liking math and fantasy stuff is dorky?
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: In the BEST way, Daisy.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: Hehehe.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 0
+        line: "Well, I\u2019m proud to be a dork\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 1
+        line: "\u2026and I\u2019m glad you noticed."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Oh man! Why can\u2019t I just loop THIS moment?"
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    deathReactions: []
+  - branchName: High
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Are you sure you want to be seen talking with a guy who likes as much
+        dorky stuff as I do?
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: -1
+    - state: 4
+      impact: -1
+    daisyBranches:
+    - charmState: 0
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Is that what you think of me?
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "First off, what even is considered \u201Cdorky\u201D anymore?"
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "No, I\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "And second, do you really think I wouldn\u2019t talk to someone because
+          they\u2019re, in your words, \u201Cdorky?\u201D"
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "I didn\u2019t mean to\u2026 I was just\u2026 it was a bad joke."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: -1
+        charmImpact: 0
+        line: Ugh. You got COCKY!
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "What\u2019s even considered \u201Cdorky\u201D anymore?"
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "Um, I dunno\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "I wouldn\u2019t NOT talk to someone because they\u2019re \u201Cdorky.\u201D
+          Your word, not mine."
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "I know that. I\u2026 just a bad attempt at a joke."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "Great, kid. Don\u2019t get COCKY!"
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: -1
+        line: "You shouldn\u2019t put yourself down like that."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: -1
+        line: "I like things that some people might call \u201Cdorky.\u201D"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "I know. Why didn\u2019t you just tell her you like that about her?!?"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: That did NOT come out as smooth as I thought it would.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: 0
+        line: You heard him, boys.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "COOL POLICE! You\u2019re under arrest for dorking it up big time.
+          Hehe."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -2
+        line: Stupid joke, hehe. Sorry.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: "OBVIOUSLY I don\u2019t mind dorkiness."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    deathReactions: []
+  draftLines:
+  - line: "We\u2019re into similar nerdy things."
+  - line: "There\u2019s got to be some common ground there."
+  - line: But this might be a real tightrope walk.
+  availableUpgrades: []
+  upgradeThreshold: 1

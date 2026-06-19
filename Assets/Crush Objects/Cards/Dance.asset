@@ -30,7 +30,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: -2
       charmImpact: 0
-      line: I was- umm.... wondering... if.....
+      line: I was- umm... wondering... if...
       variantGroups: []
       lastSticks: 0
     - character: 0
@@ -42,25 +42,25 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: -2
       charmImpact: -1
-      line: be interested.....
+      line: be interested...
       variantGroups: []
       lastSticks: 0
     - character: 0
       confidenceImpact: -1
       charmImpact: -1
-      line: in go- uhhh.....
+      line: in go- uhhh...
       variantGroups: []
       lastSticks: 0
     - character: 0
       confidenceImpact: -1
       charmImpact: -1
-      line: sorry... ummm- do you wanna.....
+      line: sorry... ummm- do you wanna...
       variantGroups: []
       lastSticks: 0
     - character: 0
       confidenceImpact: -2
       charmImpact: 0
-      line: go to the dance....
+      line: go to the dance...
       variantGroups: []
       lastSticks: 0
     - character: 0
@@ -78,13 +78,13 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: -1
       charmImpact: 0
-      line: ........
+      line: "...\u2026"
       variantGroups: []
       lastSticks: 0
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
-      line: "Oh no\u2026."
+      line: "Oh no\u2026"
       variantGroups: []
       lastSticks: 0
     - character: 2
@@ -96,7 +96,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: -1
-      line: "\u2026\u2026."
+      line: "\u2026\u2026"
       variantGroups: []
       lastSticks: 0
     - character: 1
@@ -114,31 +114,31 @@ MonoBehaviour:
     - character: 1
       confidenceImpact: -1
       charmImpact: 0
-      line: "Earth to Luke\u2026.."
+      line: "Earth to Luke\u2026"
       variantGroups: []
       lastSticks: 0
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
-      line: "This can not be happening\u2026.."
+      line: "This can NOT be happening\u2026"
       variantGroups: []
       lastSticks: 0
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
-      line: Everyone is going to laugh at me.
+      line: Everyone is going to LAUGH at me.
       variantGroups: []
       lastSticks: 0
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
-      line: This is another [BOY NAME] situation all over again.
+      line: This is another Chris Farmer situation all over again.
       variantGroups: []
       lastSticks: 0
     - character: 1
       confidenceImpact: 0
       charmImpact: 0
-      line: "I\u2019m\u2026.. gonna go to class now\u2026"
+      line: "I\u2019m\u2026 gonna go to class now."
       variantGroups: []
       lastSticks: 0
     - character: 2
@@ -155,8 +155,7 @@ MonoBehaviour:
   - line: Yeah. Just keep it simple.
   - line: "\u201CDaisy, will you go to the dance with me?\u201D"
   - line: Straight forward.
-  - line: Confident.
-  - line: Like a man.
+  - line: Confident. Like a man.
   - line: "You\u2019re a man now."
   - line: "That\u2019s what mom says."
   availableUpgrades: []
