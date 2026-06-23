@@ -367,6 +367,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2135859860941446823, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
+      propertyPath: hud
+      value: 
+      objectReference: {fileID: 6558551286821584881}
+    - target: {fileID: 2135859860941446823, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
       propertyPath: director
       value: 
       objectReference: {fileID: 579765104}
@@ -382,6 +386,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 6860181611323662972, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
+      propertyPath: hud
+      value: 
+      objectReference: {fileID: 6558551286821584881}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5591,10 +5599,10 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 258512674}
+  - {fileID: 5346111824549220897}
   - {fileID: 1850426308}
   - {fileID: 1078007670}
   - {fileID: 52463535}
-  - {fileID: 5346111824549220897}
   - {fileID: 1075827587}
   - {fileID: 2043738661}
   - {fileID: 2696648771307027885}

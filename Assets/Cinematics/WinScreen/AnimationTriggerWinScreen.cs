@@ -5,6 +5,8 @@ public class AnimationTriggerWinScreen : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private PlayableDirector director;
+    public GameObject hud;
+    public AudioSource hallwayMusic;
 
     void Awake()
     {
@@ -15,6 +17,9 @@ public class AnimationTriggerWinScreen : MonoBehaviour
     public void WinScreenPlay()
     {
         director.Play();
+        hud.SetActive(false);
+        hallwayMusic.Stop();
+        
     }
 
     public void ResetWinScreen()

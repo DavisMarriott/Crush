@@ -6,6 +6,7 @@ public class ResetMainMenu : MonoBehaviour
     public PlayableDirector director;
     public GameObject menuCanvas;
     public AudioSource mainMenuMusic;
+    public GameObject hud;
     
     public void RestartMenu()
     {
@@ -15,6 +16,7 @@ public class ResetMainMenu : MonoBehaviour
         director.time = 0;
         director.Evaluate();
         mainMenuMusic.Play();
+        hud.SetActive(true);
     }
 
 }
