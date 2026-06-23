@@ -166,7 +166,7 @@ MonoBehaviour:
   danceCard: {fileID: 11400000, guid: 347ca79f63e4f483382745c2cf1852df, type: 2}
   thoughtSpawner: {fileID: 1870375414}
   loop1ReflectBranch: {fileID: 11400000, guid: a5f663975fbb84d98915f8b4b758c631, type: 2}
-  animationTriggerWinScreen: {fileID: 0}
+  animationTriggerWinScreen: {fileID: 1733786512}
   approachDrainDisabledCount: 1
 --- !u!4 &10528341
 Transform:
@@ -2760,6 +2760,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723559440}
   m_CullTransparentMesh: 1
+--- !u!114 &1733786512 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6860181611323662972, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
+  m_PrefabInstance: {fileID: 52463535}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34017bb81fb4f478da564c0a50b2be54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &1737139108 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3257844069133594696, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
