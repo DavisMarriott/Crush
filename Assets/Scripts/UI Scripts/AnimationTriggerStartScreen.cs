@@ -18,4 +18,6 @@ public class AnimationTriggerStartScreen : MonoBehaviour
         blackout.SetActive(false);
     }
     
+    
+    
 }

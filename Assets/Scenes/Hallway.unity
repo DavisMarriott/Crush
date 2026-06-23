@@ -166,6 +166,7 @@ MonoBehaviour:
   danceCard: {fileID: 11400000, guid: 347ca79f63e4f483382745c2cf1852df, type: 2}
   thoughtSpawner: {fileID: 1870375414}
   loop1ReflectBranch: {fileID: 11400000, guid: a5f663975fbb84d98915f8b4b758c631, type: 2}
+  animationTriggerWinScreen: {fileID: 0}
   approachDrainDisabledCount: 1
 --- !u!4 &10528341
 Transform:
@@ -365,45 +366,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2135859860941446823, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
+      propertyPath: director
+      value: 
+      objectReference: {fileID: 579765104}
+    - target: {fileID: 2135859860941446823, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
+      propertyPath: menuCanvas
+      value: 
+      objectReference: {fileID: 579765099}
+    - target: {fileID: 2135859860941446823, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
+      propertyPath: mainMenuMusic
+      value: 
+      objectReference: {fileID: 1822830451}
     - target: {fileID: 3171532439229704082, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
       propertyPath: m_Name
       value: WinScreen
       objectReference: {fileID: 0}
-    - target: {fileID: 8785659306307188253, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
-      propertyPath: m_SceneBindings.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785659306307188253, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
-      propertyPath: m_SceneBindings.Array.data[1].key
-      value: 
-      objectReference: {fileID: -4060613603333960946, guid: ca0415c7134674619a54e4b3b43c873f, type: 2}
-    - target: {fileID: 8785659306307188253, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
-      propertyPath: m_SceneBindings.Array.data[2].key
-      value: 
-      objectReference: {fileID: -4067753193231379582, guid: ca0415c7134674619a54e4b3b43c873f, type: 2}
-    - target: {fileID: 8785659306307188253, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
-      propertyPath: m_SceneBindings.Array.data[1].value
-      value: 
-      objectReference: {fileID: 52463536}
-    - target: {fileID: 8785659306307188253, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
-      propertyPath: m_SceneBindings.Array.data[2].value
-      value: 
-      objectReference: {fileID: 52463537}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
---- !u!95 &52463536 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2343881085972465535, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
-  m_PrefabInstance: {fileID: 52463535}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &52463537 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1722819915911790147, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
-  m_PrefabInstance: {fileID: 52463535}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &57356425
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1161810281762307539, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6001167
+      value: -0.99227667
       objectReference: {fileID: 0}
     - target: {fileID: 1161810281762307539, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1051,6 +1034,11 @@ Animator:
 --- !u!1 &579765099 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6005991290581168775, guid: d85596000e3f142e48de0ffcca9e1c20, type: 3}
+  m_PrefabInstance: {fileID: 1078007670}
+  m_PrefabAsset: {fileID: 0}
+--- !u!320 &579765104 stripped
+PlayableDirector:
+  m_CorrespondingSourceObject: {fileID: 5737454852048494085, guid: d85596000e3f142e48de0ffcca9e1c20, type: 3}
   m_PrefabInstance: {fileID: 1078007670}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &636330340 stripped
@@ -1928,10 +1916,6 @@ PrefabInstance:
     - target: {fileID: 7066471746790085191, guid: d85596000e3f142e48de0ffcca9e1c20, type: 3}
       propertyPath: m_Name
       value: MainMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 7066471746790085191, guid: d85596000e3f142e48de0ffcca9e1c20, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7234878473162507069, guid: d85596000e3f142e48de0ffcca9e1c20, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3075,6 +3059,11 @@ MonoBehaviour:
   fireOn: 0
   highlightTarget: {fileID: 979002726}
   dismissOnDisable: 0
+--- !u!82 &1822830451 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8082760503938097510, guid: 1b0df0ce063c54e92b9ac2fc73d906de, type: 3}
+  m_PrefabInstance: {fileID: 7961918368644807454}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1850426308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3431,6 +3420,14 @@ PrefabInstance:
       propertyPath: animationTriggerIcon
       value: 
       objectReference: {fileID: 1210007547}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: draftPool.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'draftPool.Array.data[11]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 9ee7a066388ff4e598d27169864292a2, type: 2}
     - target: {fileID: 8415773379507266724, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: upgradeBanner
       value: 
@@ -5115,6 +5112,10 @@ PrefabInstance:
       propertyPath: gameProgression
       value: 
       objectReference: {fileID: 10528340}
+    - target: {fileID: 8082760503938097510, guid: 1b0df0ce063c54e92b9ac2fc73d906de, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5580,8 +5581,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 258512674}
   - {fileID: 1850426308}
-  - {fileID: 52463535}
   - {fileID: 1078007670}
+  - {fileID: 52463535}
   - {fileID: 5346111824549220897}
   - {fileID: 1075827587}
   - {fileID: 2043738661}

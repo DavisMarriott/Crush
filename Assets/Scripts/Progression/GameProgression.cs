@@ -27,6 +27,9 @@ public class GameProgression : MonoBehaviour
     [SerializeField] private ReflectBranch loop1ReflectBranch;
     public ReflectBranch Loop1ReflectBranch { get { return loop1ReflectBranch; } set { loop1ReflectBranch = value; } }
     public LoopSnapshot lastLoop;
+    [Header("Win Condition")] 
+    public AnimationTriggerWinScreen animationTriggerWinScreen;
+
 
     // Tracks how many triggers (counting from 1 upward) have had their drain removed
     // by the RemoveApproachTriggerDrain character upgrade. e.g. 2 = triggers 1 and 2 skip drain.
@@ -287,5 +290,6 @@ public class GameProgression : MonoBehaviour
     public void AskedToDance()
     {
         Debug.Log("YOU DID IT!");
+        animationTriggerWinScreen.WinScreenPlay();
     }
 }

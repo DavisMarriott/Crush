@@ -16,5 +16,11 @@ public class AnimationTriggerWinScreen : MonoBehaviour
     {
         director.Play();
     }
+
+    public void ResetWinScreen()
+    {
+        director.time = 0;
+        director.Evaluate();
+    }
     
 }
