@@ -33,13 +33,9 @@ public class CharmState : MonoBehaviour
     {
         if (label != null)
             label.text = $"{charm}";
-        
-        // you die if charm hits 0
-        // todo: build branches/logic for this
-        if (charm <= 0)
-        {
-            confidenceState.confidence = 0;
-        }
+
+        // zero-charm fail is written into the dialogue cards now (low/zero-charm branches drain conf).
+        // ripped out the old auto "charm 0 -> conf 0 -> die" hack. confidenceState kept for a possible fallback later.
     }
 
     public void ResetCharm()

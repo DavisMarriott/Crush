@@ -37,11 +37,11 @@ public class DialogueCard : ScriptableObject
 
     public enum CharmState
     {
-        Death,      // 0
-        Low,        // 1-2
-        Neutral,    // 3-5
-        Positive,   // 6-8
-        High        // 9-10
+        Death,
+        Low,
+        Neutral,
+        Positive,
+        High
     }
 
     public enum ConfidenceLevel
@@ -58,10 +58,10 @@ public class DialogueCard : ScriptableObject
         switch (state)
         {
             case CharmState.Death:    min = 0;  max = 0;  break;
-            case CharmState.Low:      min = 1;  max = 2;  break;
-            case CharmState.Neutral:  min = 3;  max = 5;  break;
-            case CharmState.Positive: min = 6;  max = 8;  break;
-            case CharmState.High:     min = 9;  max = 10; break;
+            case CharmState.Low:      min = 1;  max = 1;  break;
+            case CharmState.Neutral:  min = 2;  max = 2;  break;
+            case CharmState.Positive: min = 3;  max = 3;  break;
+            case CharmState.High:     min = 4;  max = 4; break;
             default:                  min = 0;  max = 10; break;
         }
     }
