@@ -166,7 +166,8 @@ MonoBehaviour:
   danceCard: {fileID: 11400000, guid: 347ca79f63e4f483382745c2cf1852df, type: 2}
   thoughtSpawner: {fileID: 1870375414}
   loop1ReflectBranch: {fileID: 11400000, guid: a5f663975fbb84d98915f8b4b758c631, type: 2}
-  animationTriggerWinScreen: {fileID: 0}
+  winScreen: {fileID: 52463537}
+  animationTriggerWinScreen: {fileID: 52463536}
   approachDrainDisabledCount: 1
 --- !u!4 &10528341
 Transform:
@@ -379,6 +380,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 579765099}
     - target: {fileID: 2135859860941446823, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
+      propertyPath: postFxAudio
+      value: 
+      objectReference: {fileID: 1785046808}
+    - target: {fileID: 2135859860941446823, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
       propertyPath: mainMenuMusic
       value: 
       objectReference: {fileID: 1822830451}
@@ -390,11 +395,35 @@ PrefabInstance:
       propertyPath: hud
       value: 
       objectReference: {fileID: 6558551286821584881}
+    - target: {fileID: 6860181611323662972, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
+      propertyPath: postFxAudio
+      value: 
+      objectReference: {fileID: 1785046808}
+    - target: {fileID: 6860181611323662972, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
+      propertyPath: hallwayMusic
+      value: 
+      objectReference: {fileID: 7961918368644807455}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
+--- !u!114 &52463536 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6860181611323662972, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
+  m_PrefabInstance: {fileID: 52463535}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52463537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34017bb81fb4f478da564c0a50b2be54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!1 &52463537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3171532439229704082, guid: 413ac92074be5406fafe11aba2c36e4c, type: 3}
+  m_PrefabInstance: {fileID: 52463535}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &122801679 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4400308429686677114, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
@@ -1656,7 +1685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeIconReveal
   iconParent: {fileID: 1039652768}
   clickHold: 2
-  despawnDelay: 1
+  despawnDelay: 2
 --- !u!114 &1042143623 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7101752895909625279, guid: 3e9db6356aa654891a41cef1c7232bf0, type: 3}
@@ -1741,6 +1770,10 @@ PrefabInstance:
     - target: {fileID: 2937871558778309427, guid: d85596000e3f142e48de0ffcca9e1c20, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3004097741654372686, guid: d85596000e3f142e48de0ffcca9e1c20, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 184549375
       objectReference: {fileID: 0}
     - target: {fileID: 6856790062791093520, guid: d85596000e3f142e48de0ffcca9e1c20, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4994,6 +5027,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0df0ce063c54e92b9ac2fc73d906de, type: 3}
+--- !u!82 &7961918368644807455 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3692211870725573076, guid: 1b0df0ce063c54e92b9ac2fc73d906de, type: 3}
+  m_PrefabInstance: {fileID: 7961918368644807454}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7967408649926416638
 PrefabInstance:
   m_ObjectHideFlags: 0

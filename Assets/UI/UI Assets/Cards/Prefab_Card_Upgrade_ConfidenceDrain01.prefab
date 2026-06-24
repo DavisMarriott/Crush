@@ -636,6 +636,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_Card_Upgrade_ConfidenceDrain01
       objectReference: {fileID: 0}
+    - target: {fileID: 2135139797122562380, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: soundEffect1
+      value: 
+      objectReference: {fileID: 8300000, guid: 510c701f0bbcf4db6b27aa5b312823f3, type: 3}
     - target: {fileID: 4197770940157184114, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
       propertyPath: m_text
       value: +1
@@ -763,6 +767,18 @@ PrefabInstance:
     - target: {fileID: 8024183322882501111, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
       propertyPath: m_SizeDelta.y
       value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024183322882501111, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024183322882501111, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024183322882501111, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8024183322882501111, guid: 52b4e42a80f6b4059b948e7be67ab505, type: 3}
       propertyPath: m_LocalPosition.x

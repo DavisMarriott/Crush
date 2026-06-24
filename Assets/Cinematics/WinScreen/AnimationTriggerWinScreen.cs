@@ -7,6 +7,7 @@ public class AnimationTriggerWinScreen : MonoBehaviour
     private PlayableDirector director;
     public GameObject hud;
     public AudioSource hallwayMusic;
+    public AudioSource postFxAudio;
 
     void Awake()
     {
@@ -16,9 +17,11 @@ public class AnimationTriggerWinScreen : MonoBehaviour
 
     public void WinScreenPlay()
     {
+        ResetWinScreen();
         director.Play();
         hud.SetActive(false);
         hallwayMusic.Stop();
+        postFxAudio.enabled = false;
         
     }
 

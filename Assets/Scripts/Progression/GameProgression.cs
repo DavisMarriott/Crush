@@ -28,6 +28,7 @@ public class GameProgression : MonoBehaviour
     public ReflectBranch Loop1ReflectBranch { get { return loop1ReflectBranch; } set { loop1ReflectBranch = value; } }
     public LoopSnapshot lastLoop;
     [Header("Win Condition")] 
+    public GameObject winScreen;
     public AnimationTriggerWinScreen animationTriggerWinScreen;
 
 
@@ -290,6 +291,7 @@ public class GameProgression : MonoBehaviour
     public void AskedToDance()
     {
         Debug.Log("YOU DID IT!");
+        winScreen.SetActive(true);
         animationTriggerWinScreen.WinScreenPlay();
     }
 }
