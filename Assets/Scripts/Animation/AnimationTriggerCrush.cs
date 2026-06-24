@@ -127,13 +127,13 @@ public class AnimationTriggerCrush : MonoBehaviour
         if (charmState.charm <= 0)
             NegativeTwo();
             
-        else if (charmState.charm <= 2)
+        else if (charmState.charm <= 1)
             NegativeOne();
         
-        else if (charmState.charm <= 5)
+        else if (charmState.charm <= 2)
             Neutral();
              
-        else if (charmState.charm <= 8)
+        else if (charmState.charm <= 3)
             PositiveOne();
         else
             PositiveTwo();
