@@ -150,6 +150,8 @@ public class DeathRespawn : MonoBehaviour
                     milestoneTracker.ApplyCharacterUpgrade(triggeredMilestone.characterUpgrade);
                     confidenceState.confidence = confidenceState.startingConfidence;
                     deckManager.ResetDeck();
+                    if (!SkipReflect.Active)
+                        yield return StartCoroutine(milestoneTracker.PlayUpgradeReveal(triggeredMilestone.characterUpgrade));
                 }
                 milestoneTracker.MarkComplete(triggeredMilestone);
             }
@@ -174,6 +176,8 @@ public class DeathRespawn : MonoBehaviour
                     // or startingHandSize is felt immediately on this respawn (not the next one).
                     confidenceState.confidence = confidenceState.startingConfidence;
                     deckManager.ResetDeck();
+                    if (!SkipReflect.Active)
+                        yield return StartCoroutine(milestoneTracker.PlayUpgradeReveal(triggeredMilestone.characterUpgrade));
                 }
                 milestoneTracker.MarkComplete(triggeredMilestone);
             }

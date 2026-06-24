@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class MilestoneTracker : MonoBehaviour
@@ -7,7 +8,7 @@ public class MilestoneTracker : MonoBehaviour
     [SerializeField] private ConfidenceState confidenceState;
     [SerializeField] private DeckManager deckManager;
     [SerializeField] private GameProgression gameProgression;
-    [SerializeField] private UpgradeBanner upgradeBanner;
+    [SerializeField] private UpgradeIconReveal upgradeIconReveal;
 
     private HashSet<Milestone> completed = new HashSet<Milestone>();
 
@@ -61,11 +62,14 @@ public class MilestoneTracker : MonoBehaviour
                 gameProgression.DisableApproachDrain(upgrade.intValue);
                 break;
         }
+    }
 
-        if (upgradeBanner != null)
-        {
-            upgradeBanner.Show(string.IsNullOrEmpty(upgrade.bannerText) ? upgrade.upgradeName : upgrade.bannerText);
-        }
+    // Interactive reveal — pops the upgrade's icon and blocks until the player clicks.
+    // Caller yields on this so the reflect beat waits for it. Apply the stat first, then reveal.
+    public IEnumerator PlayUpgradeReveal(CharacterUpgrade upgrade)
+    {
+        if (upgradeIconReveal != null)
+            yield return upgradeIconReveal.Play(upgrade);
     }
 
     public void MarkComplete(Milestone m)

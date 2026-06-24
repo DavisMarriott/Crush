@@ -16,3 +16,4 @@ MonoBehaviour:
   effect: 2
   intValue: 2
   bannerText: '[TEMP] +1 Hallway Approach Confidence '
+  iconPrefab: {fileID: 8220373668078900622, guid: 6cae6fc116acc41d789fb6e59efc823b, type: 3}
