@@ -264,10 +264,22 @@ namespace Crush.EditorTools
                     var m = Regex.Match(u, @"^Available upgrades?:\s*(.+)$", RegexOptions.IgnoreCase);
                     if (m.Success) { card.upgradeNames.Add(m.Groups[1].Value.Trim()); continue; }
 
-                    m = Regex.Match(u, @"^Upgrade threshold:\s*(\d+)$", RegexOptions.IgnoreCase);
+                    // explicit condition type (the standard): "Upgrade Condition: Play Threshold" / "Branch Tag"
+                    m = Regex.Match(u, @"^Upgrade Condition:\s*(.+)$", RegexOptions.IgnoreCase);
+                    if (m.Success)
+                    {
+                        var v = m.Groups[1].Value.Trim();
+                        if (Regex.IsMatch(v, @"^branch\s*tag$", RegexOptions.IgnoreCase)) card.upgradeConditionType = "BranchTag";
+                        else if (Regex.IsMatch(v, @"^play\s*threshold$", RegexOptions.IgnoreCase)) card.upgradeConditionType = "PlayThreshold";
+                        continue;
+                    }
+
+                    // Play Threshold value ("Upgrade threshold" still accepted for un-migrated cards)
+                    m = Regex.Match(u, @"^(?:Play Threshold|Upgrade threshold):\s*(\d+)$", RegexOptions.IgnoreCase);
                     if (m.Success) { int.TryParse(m.Groups[1].Value, out card.upgradeThreshold); continue; }
 
-                    m = Regex.Match(u, @"^Upgrade tag:\s*(.+)$", RegexOptions.IgnoreCase);
+                    // Branch Tag value ("Upgrade tag" still accepted)
+                    m = Regex.Match(u, @"^(?:Branch Tag|Upgrade tag):\s*(.+)$", RegexOptions.IgnoreCase);
                     if (m.Success) { card.upgradeTag = m.Groups[1].Value.Trim(); continue; }
                     continue;
                 }
@@ -596,9 +608,11 @@ namespace Crush.EditorTools
 
             so.FindProperty("previewText").stringValue = data.previewText ?? "";
             so.FindProperty("cost").intValue = data.cost;
-            // upgrade condition: an "Upgrade tag:" line => BranchTag, otherwise PlayThreshold from "Upgrade threshold:"
+            // upgrade condition: the explicit "Upgrade Condition:" line wins; else infer (a Branch Tag value => BranchTag)
             var condProp = so.FindProperty("upgradeCondition");
-            if (!string.IsNullOrEmpty(data.upgradeTag))
+            bool branchTag = data.upgradeConditionType == "BranchTag"
+                             || (data.upgradeConditionType == null && !string.IsNullOrEmpty(data.upgradeTag));
+            if (branchTag)
             {
                 condProp.FindPropertyRelative("type").enumValueIndex = (int)UpgradeConditionType.BranchTag;
                 condProp.FindPropertyRelative("tag").enumValueIndex = (int)ParseDialogueTag(data.upgradeTag);
@@ -876,7 +890,8 @@ namespace Crush.EditorTools
             public string previewText = "";
             public int cost = 1;
             public int upgradeThreshold = 3;
-            public string upgradeTag = null;   // set => BranchTag condition; else PlayThreshold
+            public string upgradeTag = null;            // Branch Tag value
+            public string upgradeConditionType = null;  // "PlayThreshold" | "BranchTag" from the explicit "Upgrade Condition" line
             public List<BranchData> lukeBranches = new List<BranchData>();
             public List<string> draftLines = new List<string>();
             public List<string> upgradeNames = new List<string>(); // captured but not wired (programmer-side)
