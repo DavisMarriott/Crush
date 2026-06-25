@@ -4,7 +4,7 @@ using System.Collections.Generic;
 [CreateAssetMenu(menuName = "Crush/Dialogue Card")]
 public class DialogueCard : ScriptableObject
 {
-    public bool isDance = false;
+    public CardCategory category;
     public bool revealed = false;
     [Header("Display text on bubble")]
     public string previewText;

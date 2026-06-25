@@ -189,10 +189,10 @@ public class DeathRespawn : MonoBehaviour
 
         // Beat 3 — draft intro (base loops only): one random "what should I say this time…" line
         // before the draft opens. Scripted loops stay scripted-only.
-        if (scriptedBranch == null && !SkipReflect.Active && deckManager.draftPool.Length > 0)
+        if (scriptedBranch == null && !SkipReflect.Active && deckManager.HasDraftPool())
             yield return reflectSelfTalk.PlayDraftIntro(gameProgression.loopCount);
 
-        if (deckManager.draftPool.Length >0)
+        if (deckManager.HasDraftPool())
         {
             PhaseManager.Instance.TransitionTo(GamePhase.UpgradeDraft);
             draftUI.ShowDraftOptions(gameProgression.loopCount);

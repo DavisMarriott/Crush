@@ -387,7 +387,7 @@ public class DialogueBox : MonoBehaviour
             // died this card - don't deal a new hand. Death() was deferred til now and takes
             // over. drawing here flashed a stray "next turn" before the death screen showed.
         }
-        else if (dialogueCard.isDance)
+        else if (dialogueCard.category == CardCategory.Dance)
         {
             gameProgression.AskedToDance();
         }

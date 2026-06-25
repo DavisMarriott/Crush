@@ -239,6 +239,9 @@ namespace Crush.EditorTools
 
                     m = Regex.Match(p, @"^Cost:\s*(\d+)$", RegexOptions.IgnoreCase);
                     if (m.Success) { int.TryParse(m.Groups[1].Value, out card.cost); continue; }
+
+                    m = Regex.Match(p, @"^Category:\s*(.+)$", RegexOptions.IgnoreCase);
+                    if (m.Success) { card.category = m.Groups[1].Value.Trim(); continue; }
                     // ignore other preamble paragraphs (could be notes)
                     continue;
                 }
@@ -608,6 +611,8 @@ namespace Crush.EditorTools
 
             so.FindProperty("previewText").stringValue = data.previewText ?? "";
             so.FindProperty("cost").intValue = data.cost;
+            if (!string.IsNullOrEmpty(data.category))
+                so.FindProperty("category").enumValueIndex = (int)ParseCardCategory(data.category);
             // upgrade condition: the explicit "Upgrade Condition:" line wins; else infer (a Branch Tag value => BranchTag)
             var condProp = so.FindProperty("upgradeCondition");
             bool branchTag = data.upgradeConditionType == "BranchTag"
@@ -815,6 +820,15 @@ namespace Crush.EditorTools
             return default;
         }
 
+        // "Basic Deck" -> BasicDeck, "Deck on New Game" -> DeckOnNewGame, etc. (spaces stripped, case-insensitive)
+        static CardCategory ParseCardCategory(string s)
+        {
+            var key = Regex.Replace(s ?? "", @"\s+", "");
+            if (Enum.TryParse<CardCategory>(key, true, out var cat)) return cat;
+            Debug.LogWarning($"[CardsImporter] Unknown card category '{s}'. Valid: {string.Join(", ", Enum.GetNames(typeof(CardCategory)))}. Leaving default.");
+            return default;
+        }
+
         static DialogueCard.DialogueCharacter ParseCharacter(string s)
         {
             switch (s)
@@ -889,6 +903,7 @@ namespace Crush.EditorTools
             public string name;
             public string previewText = "";
             public int cost = 1;
+            public string category = null;   // from the "Category:" preamble line
             public int upgradeThreshold = 3;
             public string upgradeTag = null;            // Branch Tag value
             public string upgradeConditionType = null;  // "PlayThreshold" | "BranchTag" from the explicit "Upgrade Condition" line

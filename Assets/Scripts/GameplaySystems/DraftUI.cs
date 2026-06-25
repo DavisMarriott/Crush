@@ -49,7 +49,7 @@ public class DraftUI : MonoBehaviour
         for (int i = draftContainer.childCount - 1; i >= 0; i--)
             Destroy(draftContainer.GetChild(i).gameObject);
 
-        List<DialogueCard> cardOptions = deckManager.GetDraftOptions(10);
+        List<DialogueCard> cardOptions = _multiPick ? deckManager.GetStarterDraftOptions(10) : deckManager.GetDraftOptions(10);
 
         if (_multiPick)
         {
@@ -224,7 +224,7 @@ public class DraftUI : MonoBehaviour
 
         // Replace ONLY the picked slot. Owned cards are already dropped by GetDraftOptions; also
         // skip the other slate cards so we don't double up. Other slots keep their card.
-        List<DialogueCard> pool = deckManager.GetDraftOptions(10);
+        List<DialogueCard> pool = deckManager.GetStarterDraftOptions(10);
         for (int s = 0; s < _slateCards.Count; s++)
             if (s != slotIndex) pool.Remove(_slateCards[s]);
 

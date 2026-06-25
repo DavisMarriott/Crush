@@ -5,8 +5,8 @@ using TMPro;
 public class DeckManager : MonoBehaviour
 {
     [SerializeField] private CardUpgradeTracker upgradeTracker;
-    [SerializeField] public DialogueCard[] draftPool;
-    [SerializeField] private DialogueCard[] startingDeck;
+    [Tooltip("Master list of every card. The new-game deck + draft pools are derived from each card's Category.")]
+    [SerializeField] public DialogueCard[] allCards;
     public int startingHandSize = 4;
     [SerializeField] public int deckSize;
     public AnimationTriggerIcon animationTriggerIcon;
@@ -39,7 +39,7 @@ public class DeckManager : MonoBehaviour
 
     void Start()
     {
-        _deck = new List<DialogueCard>(startingDeck);
+        _deck = NewGameDeck();
         _hand = new List<DialogueCard>();
         _discard = new List<DialogueCard>();
         
@@ -96,7 +96,7 @@ public class DeckManager : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             if (_deck.Count == 0) return;
-            var eligible = _deck.FindAll(c => !c.isDance);
+            var eligible = _deck.FindAll(c => c.category != CardCategory.Dance);
             if (eligible.Count == 0) return;   // only DANCE left - short hand beats breaking the rule
             var card = eligible[Random.Range(0, eligible.Count)];
             _hand.Add(card);
@@ -133,7 +133,7 @@ public class DeckManager : MonoBehaviour
         // found at runtime so no scene re-wiring needed - used by DrawOpeningHand's loop check
         _gameProgression = FindFirstObjectByType<GameProgression>();
 
-        _deck = new List<DialogueCard>(startingDeck);
+        _deck = NewGameDeck();
         _hand = new List<DialogueCard>();
         _discard = new List<DialogueCard>();
 
@@ -143,22 +143,75 @@ public class DeckManager : MonoBehaviour
 
     private GameProgression _gameProgression;
 
+    // loop-3+ main draft: Starter + Basic cards (+ unlocked Progress-Gated — pass 2), minus what you own.
     public List<DialogueCard> GetDraftOptions(int count)
     {
-        List<DialogueCard> options = new List<DialogueCard>();
-        List<DialogueCard> pool = new List<DialogueCard>(draftPool);
-        
-        // Remove cards already owned (deck + hand + discard)
-        pool.RemoveAll(card => _deck.Contains(card) || _hand.Contains(card) || _discard.Contains(card));
-    
+        return PickFromPool(MainDraftPool(), count);
+    }
+
+    // loop-2 multi-draft ("starter deck"): Starter cards only.
+    public List<DialogueCard> GetStarterDraftOptions(int count)
+    {
+        return PickFromPool(StarterPool(), count);
+    }
+
+    // a card you don't already own (deck + hand + discard)
+    private bool IsDraftable(DialogueCard c)
+        => c != null && !_deck.Contains(c) && !_hand.Contains(c) && !_discard.Contains(c);
+
+    private List<DialogueCard> StarterPool()
+    {
+        var list = new List<DialogueCard>();
+        if (allCards == null) return list;
+        foreach (var c in allCards)
+            if (IsDraftable(c) && c.category == CardCategory.StarterDeck) list.Add(c);
+        return list;
+    }
+
+    private List<DialogueCard> MainDraftPool()
+    {
+        var list = new List<DialogueCard>();
+        if (allCards == null) return list;
+        foreach (var c in allCards)
+        {
+            if (!IsDraftable(c)) continue;
+            if (c.category == CardCategory.StarterDeck || c.category == CardCategory.BasicDeck) list.Add(c);
+            // TODO (pass 2): also include ProgressGated cards whose unlock condition is met.
+        }
+        return list;
+    }
+
+    private List<DialogueCard> PickFromPool(List<DialogueCard> pool, int count)
+    {
+        var options = new List<DialogueCard>();
         for (int i = 0; i < count && pool.Count > 0; i++)
         {
             int randomIndex = Random.Range(0, pool.Count);
             options.Add(pool[randomIndex]);
             pool.RemoveAt(randomIndex);
         }
-    
         return options;
+    }
+
+    // cards that seed your deck at the start of a run
+    private List<DialogueCard> NewGameDeck()
+    {
+        var list = new List<DialogueCard>();
+        if (allCards == null) return list;
+        foreach (var c in allCards)
+            if (c != null && c.category == CardCategory.DeckOnNewGame) list.Add(c);
+        return list;
+    }
+
+    // is any draftable card configured at all? (drives whether the draft phase runs — replaces the old draftPool.Length check)
+    public bool HasDraftPool()
+    {
+        if (allCards == null) return false;
+        foreach (var c in allCards)
+            if (c != null && (c.category == CardCategory.StarterDeck
+                              || c.category == CardCategory.BasicDeck
+                              || c.category == CardCategory.ProgressGated)) return true;
+        return false;
     }
     public List<DraftableUpgrade> GetAvailableUpgrades()
     {
