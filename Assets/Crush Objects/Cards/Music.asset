@@ -24,13 +24,13 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "Any, uhhhh\u2026\u2026."
+      line: "Any, uhhhh\u2026"
       variantGroups: []
       lastSticks: 0
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: good musi-
+      line: "good musi\u2013"
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -42,7 +42,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: So have you listened to that Farthing Penny song yet?
+      line: So, have you listened to that new Farthing Penny song yet?
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -53,7 +53,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: HAHA Farthing Penny? You mean Penny Farthing? Some fan you are hahaha
+        line: HEHE! Farthing Penny? You mean Penny Farthing? Some fan you are! Hehehe.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -62,8 +62,8 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: -1
         charmImpact: 0
-        line: HAHA that's not their name. It's Penny Farthing. But yeah I love that
-          song.
+        line: HEHE! That's not their name. It's Penny Farthing. But yeah, I love
+          that song.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -81,23 +81,29 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: -1
         charmImpact: 0
-        line: "Ohhh Luke\u2026. It\u2019s Penny Farthing"
+        line: "Ohhh Luke\u2026 it\u2019s Penny Farthing!"
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
-        line: And duhhhh I've listened to it like a thousand times already.
+        line: And duhhhh! I've listened to it, like, a thousand times already.
         variantGroups: []
         lastSticks: 0
       tags: 
     - charmState: 4
       dialogue:
       - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Uhhh\u2026 they're called Penny Farthing, not Farthing Penny. But
+          close enough."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
         confidenceImpact: 1
         charmImpact: 0
-        line: "Uhhh\u2026. they're called Penny Farthing, not Farthing Penny. But
-          close enough. Don't worry, I won't tell anyone."
+        line: Don't worry, I won't tell anyone.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -129,7 +135,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
-        line: Oh you like them too?? Yeah it's really good. I've been playing it
+        line: Oh you like them too?? Yeah, it's really good. I've been playing it
           a bunch.
         variantGroups: []
         lastSticks: 0
@@ -139,7 +145,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 3
         charmImpact: 0
-        line: It's soooo good! OMG I didn't know you liked them.
+        line: It's soooo good! OMG, I didn't know you liked them.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -148,13 +154,13 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
-        line: OMG I'm obsessed with the new song. It has like 2 million plays already.
+        line: OMG I'm obsessed with the new song! It has like 2 million plays already.
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
-        line: but at least a million are me.
+        line: But at least a million are me.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -163,21 +169,21 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
-        line: They're so good. I totally knew about them like 3 years ago before
+        line: They're SO good! I totally knew about them like 3 years ago, before
           they blew up.
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 4
         charmImpact: 0
-        line: That's cool you like them too! We should listen to the new album together
+        line: That's cool you like them too! We should listen to the new album together.
         variantGroups: []
         lastSticks: 0
       tags: 
     deathReactions: []
   draftLines:
-  - line: "She\u2019s pretty obsessed with Penny Farthing"
-  - line: I should ask her about that new song
+  - line: "She\u2019s pretty obsessed with Penny Farthing."
+  - line: I should ask her about that new song.
   availableUpgrades:
   - {fileID: 11400000, guid: 2603f1ce7b7674681a4184843cba6710, type: 2}
   upgradeThreshold: 1

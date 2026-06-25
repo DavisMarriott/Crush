@@ -19,13 +19,19 @@ MonoBehaviour:
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   visualPrefab: {fileID: 6713000513520601355, guid: d9a2f2c4a979844959dba1220e165f50, type: 3}
   lukeBranches:
-  - branchName: Default
+  - branchName: Normal
     dialogue:
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
-      line: Here goes nothing
-      variantGroups: []
+      line: 
+      variantGroups:
+      - lines:
+        - 'Internal:'
+      - lines:
+        - Here goes nothing
+      - lines:
+        - "I really don\u2019t wanna die again\u2026"
       lastSticks: 0
     - character: 0
       confidenceImpact: -2
@@ -71,7 +77,193 @@ MonoBehaviour:
       lastSticks: 0
     tags: 
     charmImpacts: []
-    daisyBranches: []
+    daisyBranches:
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Umm\u2026 I don\u2019t think so."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Sorry\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: But thanks for asking.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "I\u2019m gonna go to class now.\rDaisy: But I\u2019ll see you later."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: WHAT?!? But I asked her!
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "This isn\u2019t how this is supposed to go.."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: -30
+        charmImpact: 0
+        line: "I can\u2019t loop again"
+        variantGroups: []
+        lastSticks: 0
+      tags: 00000000
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "I\u2019m sorry Luke, but I\u2019m actually going with friends."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "They\u2019d kill me if I bail this late."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "This isn\u2019t how this is supposed to go.."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: -30
+        charmImpact: 0
+        line: "I can\u2019t loop again"
+        variantGroups: []
+        lastSticks: 0
+      tags: 00000000
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Umm\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Oh no, please don\u2019t say no."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "I can\u2019t handle that kind of rejection after all this."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Yeah, sure.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 1
+        line: "I mean\u2013 I\u2019d really like to go to the dance with you."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: It worked?
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 3
+        charmImpact: 0
+        line: It worked!!
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Should I ask her to marry me now too?
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Or is that too much?
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Oh wait, I should say something back!
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: REALLY? I MEAN - Yeah, cool.
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: This will be fun.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "Yes\u2026 I\u2019ll go to the dance with you!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Really?
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 2
+        charmImpact: 0
+        line: "Umm\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 8
+        charmImpact: 0
+        line: Cool
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 2
+        charmImpact: 0
+        line: Cool
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 1
+        line: Cool
+        variantGroups: []
+        lastSticks: 0
+      tags: 
     deathReactions: []
   - branchName: FirstLoop
     dialogue:
@@ -85,6 +277,12 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: "Oh no\u2026"
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "...\u2026"
       variantGroups: []
       lastSticks: 0
     - character: 2

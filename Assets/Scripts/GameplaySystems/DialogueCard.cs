@@ -26,7 +26,7 @@ public class DialogueCard : ScriptableObject
     public DraftLine[] draftLines;
 
     public DialogueCardUpgrade[] availableUpgrades;
-    public int upgradeThreshold = 3;
+    public UpgradeCondition upgradeCondition = new UpgradeCondition { type = UpgradeConditionType.PlayThreshold, playThreshold = 3 };
 
     public enum DialogueCharacter
     {

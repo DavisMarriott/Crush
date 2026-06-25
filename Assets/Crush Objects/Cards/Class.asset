@@ -15,7 +15,7 @@ MonoBehaviour:
   isDance: 0
   revealed: 1
   previewText: Class was boring
-  cost: 1
+  cost: 0
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
@@ -60,8 +60,12 @@ MonoBehaviour:
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
-      line: "Wow\u2026 good one Luke."
-      variantGroups: []
+      line: 
+      variantGroups:
+      - lines:
+        - "[0 conf] Internal: Wow\u2026 good one Luke."
+      - lines:
+        - "[0 conf] Internal: I should stop trying to be funny when I\u2019m nervous."
       lastSticks: 0
     tags: 
     charmImpacts:
@@ -88,6 +92,12 @@ MonoBehaviour:
         line: At least Mr. Miller is passionate about history.
         variantGroups: []
         lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Ouch\u2026"
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 2
       dialogue:
@@ -95,6 +105,12 @@ MonoBehaviour:
         confidenceImpact: 2
         charmImpact: 0
         line: Haha I know right.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Wow, that actually worked?
         variantGroups: []
         lastSticks: 0
       tags: 

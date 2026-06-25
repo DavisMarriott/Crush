@@ -265,6 +265,7 @@ public class DraftUI : MonoBehaviour
         btn.onClick.AddListener(() =>
         {
             upgradeTracker.ApplyUpgrade(dup.card, dup.upgrade);
+            hallwaySelfTalk.TriggerDraftLines(dup.upgrade.draftLines);   // same draft self-talk a card gets
             hallwaySelfTalk.TriggerLetterBoxOut();
             deckManager.ResetDeck();
             CloseDraftUI();

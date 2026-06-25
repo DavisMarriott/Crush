@@ -36,8 +36,13 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: You were out on Monday right? I took notes in Ms. Greene's class if you
-        need them.
+      line: You were out on Monday, right?
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: I took notes in Ms. Greene's class if you need them.
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -57,7 +62,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: -1
         charmImpact: 0
-        line: "Oh thanks. I'll uhhh\u2026. let you know if I need them."
+        line: "Oh thanks. I'll uhhh\u2026 let you know if I need them."
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -91,9 +96,6 @@ MonoBehaviour:
         variantGroups:
         - lines:
           - Phew, not a creep.
-          - "[!] issue that\u2019s emerging: if we do duplicate lines like this (positive
-            and high match) then we can\u2019t have duplicate exhaustive lines. Well,
-            we can. But they\u2019d each play once."
         lastSticks: 0
       tags: 00000000
     - charmState: 4
@@ -109,5 +111,6 @@ MonoBehaviour:
   draftLines:
   - line: She was out on Monday. I could offer her my notes.
   - line: But is it creepy that I remembered that she was out?
+  - line: '[!] Is it good to know things about her??'
   availableUpgrades: []
   upgradeThreshold: 3

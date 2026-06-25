@@ -119,12 +119,13 @@ namespace Crush.EditorTools
             if (structure == null || structure.Length == 0) return card;
 
             // walker state
-            string section = "preamble";       // preamble | branch | draftLines | upgrades
+            string section = "preamble";       // preamble | branch | draftLines | upgrades | upgradeDraftLines
             BranchData currentBranch = null;
             DaisyBranchData currentDaisy = null;
             string daisyMode = "none";         // none | expectingState | inState
             bool deathReactionMode = false;    // inside a "Death reactions:" block (within a branch)
             LineData currentSlot = null;       // sequenced slot under construction ([1st]/[2nd]/[last])
+            UpgradeDraftLinesData currentUpgradeDraft = null;  // active "Upgrade Draft Lines" block
 
             for (int i = 0; i < structure.Length; i++)
             {
@@ -136,7 +137,17 @@ namespace Crush.EditorTools
                 // ── titles + H1 transitions ────────────────────────────────
                 if (type == "title")
                 {
-                    continue;  // centered card title is redundant with tab title
+                    // "Upgrades" as a centered Title is the section divider (the standard). Any other title
+                    // is the redundant card-name title and is skipped.
+                    if (Regex.IsMatch(StripBold(rawText), @"^upgrades$", RegexOptions.IgnoreCase))
+                    {
+                        section = "upgrades";
+                        currentBranch = null;
+                        currentDaisy = null;
+                        daisyMode = "none";
+                        currentSlot = null;
+                    }
+                    continue;
                 }
 
                 if (type == "heading1")
@@ -157,6 +168,44 @@ namespace Crush.EditorTools
                         currentBranch = null;
                         currentDaisy = null;
                         daisyMode = "none";
+                        currentSlot = null;
+                        continue;
+                    }
+                    // "Upgrade Draft Lines" (optionally "...: <UpgradeName>") → lines for the card's upgrade SO.
+                    var udlMatch = Regex.Match(h1, @"^upgrade draft lines(?::\s*(.+))?$", RegexOptions.IgnoreCase);
+                    if (udlMatch.Success)
+                    {
+                        var upName = udlMatch.Groups[1].Success ? udlMatch.Groups[1].Value.Trim() : null;
+                        currentUpgradeDraft = new UpgradeDraftLinesData { upgradeName = upName };
+                        card.upgradeDraftLines.Add(currentUpgradeDraft);
+                        section = "upgradeDraftLines";
+                        currentBranch = null;
+                        currentDaisy = null;
+                        daisyMode = "none";
+                        currentSlot = null;
+                        continue;
+                    }
+                    // "BO: <Name> branch" H1 = a branch OVERRIDE for the card's upgrade (the standard).
+                    // Authored exactly like a card branch; replaces the same-named branch when the upgrade applies.
+                    var boMatch = Regex.Match(h1, @"^BO:\s*(.+)$", RegexOptions.IgnoreCase);
+                    if (boMatch.Success)
+                    {
+                        var boBody = boMatch.Groups[1].Value;
+                        var ovTags = new List<string>();
+                        foreach (Match tagMatch in Regex.Matches(boBody, @"\[([^\]]+)\]"))
+                            foreach (var piece in tagMatch.Groups[1].Value.Split(','))
+                            {
+                                var tagName = piece.Trim();
+                                if (tagName.Length > 0) ovTags.Add(tagName);
+                            }
+                        var boClean = Regex.Replace(boBody, @"\s*\[[^\]]+\]", "").Trim();
+                        var ovName = Regex.Replace(boClean, @"\s+branch$", "", RegexOptions.IgnoreCase).Trim();
+                        currentBranch = new BranchData { branchName = ovName, tags = ovTags };
+                        card.upgradeOverrideBranches.Add(currentBranch);
+                        section = "branch";
+                        currentDaisy = null;
+                        daisyMode = "none";
+                        deathReactionMode = false;
                         currentSlot = null;
                         continue;
                     }
@@ -217,6 +266,21 @@ namespace Crush.EditorTools
 
                     m = Regex.Match(u, @"^Upgrade threshold:\s*(\d+)$", RegexOptions.IgnoreCase);
                     if (m.Success) { int.TryParse(m.Groups[1].Value, out card.upgradeThreshold); continue; }
+
+                    m = Regex.Match(u, @"^Upgrade tag:\s*(.+)$", RegexOptions.IgnoreCase);
+                    if (m.Success) { card.upgradeTag = m.Groups[1].Value.Trim(); continue; }
+                    continue;
+                }
+
+                // ── upgrade draft lines section: bullets are lines (same as draft lines, but for the upgrade)
+                if (section == "upgradeDraftLines" && currentUpgradeDraft != null)
+                {
+                    var stripped = StripBold(rawText);
+                    foreach (var sub in stripped.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries))
+                    {
+                        var trimmed = sub.Trim();
+                        if (!string.IsNullOrEmpty(trimmed)) currentUpgradeDraft.lines.Add(trimmed);
+                    }
                     continue;
                 }
 
@@ -532,72 +596,24 @@ namespace Crush.EditorTools
 
             so.FindProperty("previewText").stringValue = data.previewText ?? "";
             so.FindProperty("cost").intValue = data.cost;
-            so.FindProperty("upgradeThreshold").intValue = data.upgradeThreshold > 0 ? data.upgradeThreshold : 3;
+            // upgrade condition: an "Upgrade tag:" line => BranchTag, otherwise PlayThreshold from "Upgrade threshold:"
+            var condProp = so.FindProperty("upgradeCondition");
+            if (!string.IsNullOrEmpty(data.upgradeTag))
+            {
+                condProp.FindPropertyRelative("type").enumValueIndex = (int)UpgradeConditionType.BranchTag;
+                condProp.FindPropertyRelative("tag").enumValueIndex = (int)ParseDialogueTag(data.upgradeTag);
+            }
+            else
+            {
+                condProp.FindPropertyRelative("type").enumValueIndex = (int)UpgradeConditionType.PlayThreshold;
+                condProp.FindPropertyRelative("playThreshold").intValue = data.upgradeThreshold > 0 ? data.upgradeThreshold : 3;
+            }
 
             // luke branches
             var lukeProp = so.FindProperty("lukeBranches");
             lukeProp.arraySize = data.lukeBranches.Count;
             for (int i = 0; i < data.lukeBranches.Count; i++)
-            {
-                var branch = data.lukeBranches[i];
-                var bp = lukeProp.GetArrayElementAtIndex(i);
-                bp.FindPropertyRelative("branchName").stringValue = branch.branchName;
-
-                // luke dialogue
-                WriteLines(bp.FindPropertyRelative("dialogue"), branch.luke);
-
-                // branch tags from [tag] H1 markers - only overwrite when the doc provides tags
-                if (branch.tags.Count > 0)
-                {
-                    var branchTagsProp = bp.FindPropertyRelative("tags");
-                    branchTagsProp.arraySize = branch.tags.Count;
-                    for (int j = 0; j < branch.tags.Count; j++)
-                        branchTagsProp.GetArrayElementAtIndex(j).enumValueIndex = (int)ParseDialogueTag(branch.tags[j]);
-                }
-
-                // charm impacts on this branch
-                var ciProp = bp.FindPropertyRelative("charmImpacts");
-                ciProp.arraySize = branch.charmImpacts.Count;
-                for (int j = 0; j < branch.charmImpacts.Count; j++)
-                {
-                    var ci = branch.charmImpacts[j];
-                    var cep = ciProp.GetArrayElementAtIndex(j);
-                    cep.FindPropertyRelative("state").enumValueIndex = (int)ParseCharmState(ci.stateName);
-                    cep.FindPropertyRelative("impact").intValue = ci.impact;
-                }
-
-                // daisy branches on this luke branch
-                var dbProp = bp.FindPropertyRelative("daisyBranches");
-                dbProp.arraySize = branch.daisyBranches.Count;
-                for (int j = 0; j < branch.daisyBranches.Count; j++)
-                {
-                    var daisy = branch.daisyBranches[j];
-                    var dp = dbProp.GetArrayElementAtIndex(j);
-                    dp.FindPropertyRelative("charmState").enumValueIndex = (int)ParseCharmState(daisy.stateName);
-                    WriteLines(dp.FindPropertyRelative("dialogue"), daisy.lines);
-
-                    // tags from [tag] header markers. Only overwrite when the doc provides tags -
-                    // an untagged header leaves inspector-set tags untouched.
-                    if (daisy.tags.Count > 0)
-                    {
-                        var tagsProp = dp.FindPropertyRelative("tags");
-                        tagsProp.arraySize = daisy.tags.Count;
-                        for (int k = 0; k < daisy.tags.Count; k++)
-                            tagsProp.GetArrayElementAtIndex(k).enumValueIndex = (int)ParseDialogueTag(daisy.tags[k]);
-                    }
-                }
-
-                // death reactions on this luke branch (groups of plain lines)
-                var drProp = bp.FindPropertyRelative("deathReactions");
-                drProp.arraySize = branch.deathReactions.Count;
-                for (int j = 0; j < branch.deathReactions.Count; j++)
-                {
-                    var linesProp = drProp.GetArrayElementAtIndex(j).FindPropertyRelative("lines");
-                    linesProp.arraySize = branch.deathReactions[j].Count;
-                    for (int k = 0; k < branch.deathReactions[j].Count; k++)
-                        linesProp.GetArrayElementAtIndex(k).stringValue = branch.deathReactions[j][k];
-                }
-            }
+                WriteBranch(lukeProp.GetArrayElementAtIndex(i), data.lukeBranches[i]);
 
             // draft lines
             var dlProp = so.FindProperty("draftLines");
@@ -608,6 +624,131 @@ namespace Crush.EditorTools
             }
 
             so.ApplyModifiedProperties();
+
+            // upgrade draft lines + branch overrides live on the card's upgrade SO(s), not the card itself
+            WriteUpgradeDraftLines(asset, data);
+            WriteUpgradeOverrides(asset, data);
+        }
+
+        // Writes one DialogueBranch (branchName + luke lines + tags + charm impacts + daisy branches +
+        // death reactions). Shared by the card's lukeBranches and an upgrade's branchOverrides — both are
+        // DialogueCard.DialogueBranch arrays, so the same writer fills either.
+        static void WriteBranch(SerializedProperty bp, BranchData branch)
+        {
+            bp.FindPropertyRelative("branchName").stringValue = branch.branchName;
+            WriteLines(bp.FindPropertyRelative("dialogue"), branch.luke);
+
+            // branch tags from [tag] header markers - only overwrite when the doc provides tags
+            if (branch.tags.Count > 0)
+            {
+                var branchTagsProp = bp.FindPropertyRelative("tags");
+                branchTagsProp.arraySize = branch.tags.Count;
+                for (int j = 0; j < branch.tags.Count; j++)
+                    branchTagsProp.GetArrayElementAtIndex(j).enumValueIndex = (int)ParseDialogueTag(branch.tags[j]);
+            }
+
+            var ciProp = bp.FindPropertyRelative("charmImpacts");
+            ciProp.arraySize = branch.charmImpacts.Count;
+            for (int j = 0; j < branch.charmImpacts.Count; j++)
+            {
+                var ci = branch.charmImpacts[j];
+                var cep = ciProp.GetArrayElementAtIndex(j);
+                cep.FindPropertyRelative("state").enumValueIndex = (int)ParseCharmState(ci.stateName);
+                cep.FindPropertyRelative("impact").intValue = ci.impact;
+            }
+
+            var dbProp = bp.FindPropertyRelative("daisyBranches");
+            dbProp.arraySize = branch.daisyBranches.Count;
+            for (int j = 0; j < branch.daisyBranches.Count; j++)
+            {
+                var daisy = branch.daisyBranches[j];
+                var dp = dbProp.GetArrayElementAtIndex(j);
+                dp.FindPropertyRelative("charmState").enumValueIndex = (int)ParseCharmState(daisy.stateName);
+                WriteLines(dp.FindPropertyRelative("dialogue"), daisy.lines);
+
+                if (daisy.tags.Count > 0)
+                {
+                    var tagsProp = dp.FindPropertyRelative("tags");
+                    tagsProp.arraySize = daisy.tags.Count;
+                    for (int k = 0; k < daisy.tags.Count; k++)
+                        tagsProp.GetArrayElementAtIndex(k).enumValueIndex = (int)ParseDialogueTag(daisy.tags[k]);
+                }
+            }
+
+            var drProp = bp.FindPropertyRelative("deathReactions");
+            drProp.arraySize = branch.deathReactions.Count;
+            for (int j = 0; j < branch.deathReactions.Count; j++)
+            {
+                var linesProp = drProp.GetArrayElementAtIndex(j).FindPropertyRelative("lines");
+                linesProp.arraySize = branch.deathReactions[j].Count;
+                for (int k = 0; k < branch.deathReactions[j].Count; k++)
+                    linesProp.GetArrayElementAtIndex(k).stringValue = branch.deathReactions[j][k];
+            }
+        }
+
+        // Writes "BO:"-prefixed override branches (authored under the Upgrades section) onto the card's
+        // upgrade SO's branchOverrides. One-per-card for now: all overrides go to the single availableUpgrade.
+        static void WriteUpgradeOverrides(DialogueCard asset, CardData data)
+        {
+            if (data.upgradeOverrideBranches.Count == 0) return;
+            var upgrades = asset.availableUpgrades;
+            if (upgrades == null || upgrades.Length == 0)
+            {
+                Debug.LogWarning($"[CardsImporter] '{data.name}' has upgrade override branches but no availableUpgrades wired on the card (programmer-side). Skipping.");
+                return;
+            }
+            var target = ResolveUpgrade(upgrades, null, data.name);   // unnamed → the card's single upgrade
+            if (target == null) return;
+
+            var uso = new SerializedObject(target);
+            var ovProp = uso.FindProperty("branchOverrides");
+            ovProp.arraySize = data.upgradeOverrideBranches.Count;
+            for (int i = 0; i < data.upgradeOverrideBranches.Count; i++)
+                WriteBranch(ovProp.GetArrayElementAtIndex(i), data.upgradeOverrideBranches[i]);
+            uso.ApplyModifiedProperties();
+            EditorUtility.SetDirty(target);
+        }
+
+        // Writes parsed "Upgrade Draft Lines" blocks onto the card's upgrade SO(s). One-per-card for now
+        // (an unnamed block → the card's single availableUpgrade); a named block ("Upgrade Draft Lines: X")
+        // targets that upgrade by asset name, so this extends cleanly when cards get multiple upgrades.
+        static void WriteUpgradeDraftLines(DialogueCard asset, CardData data)
+        {
+            if (data.upgradeDraftLines.Count == 0) return;
+            var upgrades = asset.availableUpgrades;
+            if (upgrades == null || upgrades.Length == 0)
+            {
+                Debug.LogWarning($"[CardsImporter] '{data.name}' has Upgrade Draft Lines but no availableUpgrades wired on the card (programmer-side). Skipping.");
+                return;
+            }
+            foreach (var block in data.upgradeDraftLines)
+            {
+                var target = ResolveUpgrade(upgrades, block.upgradeName, data.name);
+                if (target == null) continue;
+                var uso = new SerializedObject(target);
+                var udl = uso.FindProperty("draftLines");
+                udl.arraySize = block.lines.Count;
+                for (int i = 0; i < block.lines.Count; i++)
+                    udl.GetArrayElementAtIndex(i).FindPropertyRelative("line").stringValue = block.lines[i];
+                uso.ApplyModifiedProperties();
+                EditorUtility.SetDirty(target);
+            }
+        }
+
+        static DialogueCardUpgrade ResolveUpgrade(DialogueCardUpgrade[] upgrades, string name, string cardName)
+        {
+            // unnamed block → the card's single upgrade (one-per-card default)
+            if (string.IsNullOrEmpty(name))
+            {
+                if (upgrades.Length == 1) return upgrades[0];
+                Debug.LogWarning($"[CardsImporter] '{cardName}' has {upgrades.Length} upgrades but an unnamed 'Upgrade Draft Lines' section — name it 'Upgrade Draft Lines: <UpgradeName>'. Skipping.");
+                return null;
+            }
+            // named block → match an availableUpgrade by asset name
+            foreach (var u in upgrades)
+                if (u != null && string.Equals(u.name, name, StringComparison.OrdinalIgnoreCase)) return u;
+            Debug.LogWarning($"[CardsImporter] '{cardName}': no availableUpgrade named '{name}'. Skipping.");
+            return null;
         }
 
         static void WriteLines(SerializedProperty arrayProp, List<LineData> lines)
@@ -735,9 +876,20 @@ namespace Crush.EditorTools
             public string previewText = "";
             public int cost = 1;
             public int upgradeThreshold = 3;
+            public string upgradeTag = null;   // set => BranchTag condition; else PlayThreshold
             public List<BranchData> lukeBranches = new List<BranchData>();
             public List<string> draftLines = new List<string>();
             public List<string> upgradeNames = new List<string>(); // captured but not wired (programmer-side)
+            public List<UpgradeDraftLinesData> upgradeDraftLines = new List<UpgradeDraftLinesData>();
+            public List<BranchData> upgradeOverrideBranches = new List<BranchData>();   // H2 branches under "Upgrades"
+        }
+
+        // draft self-talk lines for a card's upgrade. upgradeName empty = the card's single upgrade
+        // (one-per-card); a named block ("Upgrade Draft Lines: X") targets that upgrade once cards have several.
+        class UpgradeDraftLinesData
+        {
+            public string upgradeName;
+            public List<string> lines = new List<string>();
         }
 
         class BranchData

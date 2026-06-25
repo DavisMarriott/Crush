@@ -11,5 +11,6 @@ public class DialogueCardUpgrade : ScriptableObject
     //overrides the cardprefab used once upgraded
     public Button visualPrefab;
 
-
+    // self-talk lines that play when you draft THIS upgrade (same as DialogueCard.draftLines, but for the upgrade)
+    public DialogueCard.DraftLine[] draftLines;
 }

@@ -920,14 +920,21 @@ namespace Crush.EditorTools
                 return true;
             }
 
-            // DialogueTagFired: "<Tag> tag fires"
-            m = Regex.Match(trigger, @"^(Funny|Mean|Charming|Passions) tag fires$");
+            // DialogueTagFired: "<Tag> tag fires" — valid tags come straight from the DialogueTag enum,
+            // so adding a value to DialogueTag.cs is the ONLY edit needed to support a new tag here.
+            m = Regex.Match(trigger, @"^(.+) tag fires$");
             if (m.Success)
             {
-                type = MilestoneConditionType.DialogueTagFired;
-                threshold = 1;
-                tag = (DialogueTag)Enum.Parse(typeof(DialogueTag), m.Groups[1].Value);
-                return true;
+                var tagName = m.Groups[1].Value.Trim();
+                if (Enum.TryParse<DialogueTag>(tagName, true, out var parsedTag))
+                {
+                    type = MilestoneConditionType.DialogueTagFired;
+                    threshold = 1;
+                    tag = parsedTag;
+                    return true;
+                }
+                error = $"Unknown dialogue tag '{tagName}'. Valid tags: {string.Join(", ", Enum.GetNames(typeof(DialogueTag)))}. Add it to DialogueTag.cs if it's new.";
+                return false;
             }
 
             error = $"No template matched '{trigger}'. See Assets/Editor/import_templates.json for supported phrasings.";

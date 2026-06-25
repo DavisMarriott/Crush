@@ -51,7 +51,7 @@ MonoBehaviour:
     - charmState: 0
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: -30
         charmImpact: 0
         line: "Ummm\u2026 No. Not really\u2026"
         variantGroups: []
@@ -229,8 +229,8 @@ MonoBehaviour:
       tags: 
     deathReactions: []
   draftLines:
-  - line: That's what guys with girlfriends talk about.
+  - line: Yeah. That's what guys with girlfriends talk about.
   - line: Right?
-  - line: Their big plans for the weekend?
+  - line: Their plans for the weekend?
   availableUpgrades: []
   upgradeThreshold: 3

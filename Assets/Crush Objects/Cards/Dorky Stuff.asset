@@ -46,7 +46,9 @@ MonoBehaviour:
       variantGroups: []
       lastSticks: 0
     tags: 
-    charmImpacts: []
+    charmImpacts:
+    - state: 1
+      impact: 0
     daisyBranches:
     - charmState: 0
       dialogue:
@@ -179,11 +181,11 @@ MonoBehaviour:
     - state: 1
       impact: 1
     - state: 2
-      impact: 4
+      impact: 2
     - state: 3
-      impact: 5
+      impact: 0
     - state: 4
-      impact: 4
+      impact: 0
     daisyBranches:
     - charmState: 0
       dialogue:
@@ -199,7 +201,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
-        line: Hehe. Um, thanks.
+        line: Um, thanks.
         variantGroups: []
         lastSticks: 0
       - character: 1
@@ -225,7 +227,7 @@ MonoBehaviour:
         lastSticks: 0
       - character: 1
         confidenceImpact: 1
-        charmImpact: -1
+        charmImpact: 0
         line: "I like that you\u2019re into dorky stuff, too."
         variantGroups: []
         lastSticks: 0
@@ -239,7 +241,7 @@ MonoBehaviour:
         variantGroups: []
         lastSticks: 0
       - character: 0
-        confidenceImpact: -1
+        confidenceImpact: 0
         charmImpact: 0
         line: "Yeah. I like dorky stuff, too. I\u2019m always, like\u2026"
         variantGroups: []
@@ -247,7 +249,7 @@ MonoBehaviour:
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: "No DON\u2019T tell her!\r[-1 conf] Luke: ..doodling Naruto during
+        line: "No DON\u2019T tell her!\r[-2 conf] Luke: ..doodling Naruto during
           class, and stuff."
         variantGroups: []
         lastSticks: 0
@@ -258,7 +260,7 @@ MonoBehaviour:
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 3
+        confidenceImpact: 2
         charmImpact: 1
         line: "It\u2019s cute."
         variantGroups: []
@@ -298,7 +300,7 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: -1
-        charmImpact: 0
+        charmImpact: -1
         line: Oh, you mean liking math and fantasy stuff is dorky?
         variantGroups: []
         lastSticks: 0
@@ -315,7 +317,7 @@ MonoBehaviour:
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 3
+        confidenceImpact: 1
         charmImpact: 0
         line: "Well, I\u2019m proud to be a dork\u2026"
         variantGroups: []
@@ -350,9 +352,9 @@ MonoBehaviour:
     - state: 2
       impact: 0
     - state: 3
-      impact: -1
+      impact: 0
     - state: 4
-      impact: -1
+      impact: 0
     daisyBranches:
     - charmState: 0
       dialogue:
@@ -379,7 +381,7 @@ MonoBehaviour:
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
-        charmImpact: -1
+        charmImpact: 0
         line: "And second, do you really think I wouldn\u2019t talk to someone because
           they\u2019re, in your words, \u201Cdorky?\u201D"
         variantGroups: []
@@ -401,7 +403,7 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 0
-        charmImpact: -1
+        charmImpact: 0
         line: "What\u2019s even considered \u201Cdorky\u201D anymore?"
         variantGroups: []
         lastSticks: 0
@@ -413,7 +415,7 @@ MonoBehaviour:
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
-        charmImpact: 0
+        charmImpact: -1
         line: "I wouldn\u2019t NOT talk to someone because they\u2019re \u201Cdorky.\u201D
           Your word, not mine."
         variantGroups: []
@@ -435,7 +437,7 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: -1
-        charmImpact: -1
+        charmImpact: 0
         line: "You shouldn\u2019t put yourself down like that."
         variantGroups: []
         lastSticks: 0
@@ -462,7 +464,7 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: -1
-        charmImpact: 0
+        charmImpact: -1
         line: You heard him, boys.
         variantGroups: []
         lastSticks: 0
@@ -475,13 +477,13 @@ MonoBehaviour:
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
-        charmImpact: -2
+        charmImpact: -1
         line: Stupid joke, hehe. Sorry.
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 1
-        charmImpact: 0
+        charmImpact: 1
         line: "OBVIOUSLY I don\u2019t mind dorkiness."
         variantGroups: []
         lastSticks: 0

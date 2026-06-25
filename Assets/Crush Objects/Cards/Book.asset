@@ -49,49 +49,67 @@ MonoBehaviour:
     - lines:
       - Again?!? Really??
       - "You\u2019re so afraid of girls you can\u2019t ask about a stupid BOOK?!"
-  - branchName: Normal
+  - branchName: Awkward
     dialogue:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: What book is that you're reading?
+      line: I like your book.
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: I mean - your book looks fun to read.
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Ugh I mean - Is that a good book?
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "You\u2019re an idiot."
       variantGroups: []
       lastSticks: 0
     tags: 
     charmImpacts:
     - state: 1
-      impact: 2
+      impact: -1
     - state: 2
-      impact: 2
+      impact: -1
     - state: 3
-      impact: 0
+      impact: -1
     daisyBranches:
     - charmState: 0
-      dialogue: []
-      tags: 
-    - charmState: 1
       dialogue:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: Oh this? It's nothing.
+        line: Haha wanna give that another try?
         variantGroups: []
         lastSticks: 0
-      - character: 1
-        confidenceImpact: 1
+      - character: 2
+        confidenceImpact: 0
         charmImpact: 0
-        line: "Just this\u2026 umm\u2026 this fantasy series I\u2019ve been reading."
+        line: Yes, I literally do.
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Uhhh\u2026."
         variantGroups: []
         lastSticks: 0
       tags: 
+    - charmState: 1
+      dialogue: []
+      tags: 
     - charmState: 2
       dialogue:
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: It's a fantasy series I've been reading for a while.
-        variantGroups: []
-        lastSticks: 0
       - character: 1
         confidenceImpact: 1
         charmImpact: 0
@@ -148,8 +166,108 @@ MonoBehaviour:
         lastSticks: 0
       tags: 
     deathReactions: []
+  - branchName: Normal
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: What book is that you're reading?
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 2
+    - state: 2
+      impact: 2
+    - state: 3
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue: []
+      tags: 
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Oh this? It's nothing.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: "Just this\u2026 umm\u2026 this fantasy series I\u2019ve been reading."
+        variantGroups: []
+        lastSticks: 0
+      tags: 00000000
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: It's a fantasy series I've been reading for a while.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: This is actually the fourth one.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: It's kinda dorky though.
+        variantGroups: []
+        lastSticks: 0
+      tags: 00000000
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: It's just a fantasy series I've been reading for a while.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: This is actually the fourth one.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 0
+        line: "It's dorky\u2026 but I like it."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: God she's perfect
+        variantGroups: []
+        lastSticks: 0
+      tags: 00000000
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: 0
+        line: Oh it's nothing.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Just this fantasy series I've been reading.
+        variantGroups: []
+        lastSticks: 0
+      tags: 00000000
+    deathReactions: []
   draftLines:
   - line: "She's holding that book\u2026"
-  - line: She might like if I ask her about it.
+  - line: And I always see her reading during lunch.
+  - line: "Girls like talking about their hobbies\u2026"
   availableUpgrades: []
   upgradeThreshold: 3

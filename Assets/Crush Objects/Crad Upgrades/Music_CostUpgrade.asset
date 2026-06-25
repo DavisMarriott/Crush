@@ -17,3 +17,6 @@ MonoBehaviour:
   branchAdditions: []
   previewTextOverride: 
   visualPrefab: {fileID: 5626390890515017851, guid: 839aeaaca1feb4c979b9da13f5ff988e, type: 3}
+  draftLines:
+  - line: "Asking her about a band she loves isn\u2019t that hard."
+  - line: "I\u2019m overthinking it, next time it\u2019ll be easier."

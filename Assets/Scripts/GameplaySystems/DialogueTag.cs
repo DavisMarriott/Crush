@@ -4,4 +4,9 @@ public enum DialogueTag
     Mean,
     Charming,
     Passions,
+    Rejected,
+    Dorky,
+    Likesher,
+    Likeshim,
+    Partysaturday,
 }

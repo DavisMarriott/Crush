@@ -62,7 +62,7 @@ MonoBehaviour:
     - state: 2
       impact: 0
     - state: 4
-      impact: 1
+      impact: 0
     daisyBranches:
     - charmState: 0
       dialogue:
@@ -82,7 +82,7 @@ MonoBehaviour:
     - charmState: 1
       dialogue:
       - character: 1
-        confidenceImpact: -1
+        confidenceImpact: 0
         charmImpact: 0
         line: When were you watching us practice?
         variantGroups: []
@@ -116,7 +116,7 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 0
-        charmImpact: 0
+        charmImpact: -1
         line: "Oh, well I hope I wasn\u2019t too gross and sweaty."
         variantGroups: []
         lastSticks: 0
@@ -155,14 +155,26 @@ MonoBehaviour:
         lastSticks: 0
       - character: 0
         confidenceImpact: 0
-        charmImpact: -1
+        charmImpact: 0
         line: Oh, you can serve!
         variantGroups: []
         lastSticks: 0
       - character: 0
         confidenceImpact: 0
+        charmImpact: -1
+        line: "I mean you\u2019re a great server\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
         charmImpact: 0
-        line: "I mean you\u2019re a great server. At volleyball."
+        line: At volleyball. I mean.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 1
+        line: Hehe. Thanks.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -207,7 +219,7 @@ MonoBehaviour:
     - state: 1
       impact: 1
     - state: 2
-      impact: 2
+      impact: 1
     - state: 3
       impact: 0
     daisyBranches:
@@ -218,7 +230,7 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 0
-        charmImpact: 0
+        charmImpact: 1
         line: Thanks.
         variantGroups: []
         lastSticks: 0
@@ -230,7 +242,7 @@ MonoBehaviour:
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
-        charmImpact: 0
+        charmImpact: -1
         line: "They\u2019re really good."
         variantGroups: []
         lastSticks: 0
@@ -250,14 +262,14 @@ MonoBehaviour:
     - charmState: 2
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 1
         charmImpact: 0
         line: Thanks. Coach has been working us pretty hard.
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
-        charmImpact: 0
+        charmImpact: -1
         line: I hope it pays off when we go up against Marshall.
         variantGroups: []
         lastSticks: 0
@@ -346,13 +358,13 @@ MonoBehaviour:
     tags: 
     charmImpacts:
     - state: 1
-      impact: 1
+      impact: 0
     - state: 2
-      impact: 2
+      impact: 0
     - state: 3
-      impact: 1
+      impact: 0
     - state: 4
-      impact: 1
+      impact: 0
     daisyBranches:
     - charmState: 0
       dialogue: []
@@ -361,12 +373,12 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 0
-        charmImpact: 0
+        charmImpact: 1
         line: Oh, thanks.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 2
         charmImpact: -1
         line: "We\u2019re just doing drills. It\u2019s not that impressive."
         variantGroups: []
@@ -382,7 +394,7 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 1
-        charmImpact: 0
+        charmImpact: 1
         line: Thanks, hehe.
         variantGroups: []
         lastSticks: 0
@@ -405,12 +417,18 @@ MonoBehaviour:
         line: Are you kidding? You were great out there!
         variantGroups: []
         lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 1
+        line: "That\u2019s really sweet."
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 3
       dialogue:
       - character: 1
         confidenceImpact: 0
-        charmImpact: 0
+        charmImpact: -1
         line: You think so?
         variantGroups: []
         lastSticks: 0
@@ -429,12 +447,12 @@ MonoBehaviour:
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: "Beat the frickin\u2019 crap outta me."
+        line: "Beat the freakin\u2019 crap outta me."
         variantGroups: []
         lastSticks: 0
       - character: 0
-        confidenceImpact: 0
-        charmImpact: 1
+        confidenceImpact: 1
+        charmImpact: 0
         line: "Haha. I\u2019ll be on my best behavior."
         variantGroups: []
         lastSticks: 0
@@ -443,18 +461,18 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 1
-        charmImpact: 0
-        line: If you thought that was bad-ass, you should come to our next match?
+        charmImpact: -1
+        line: If you thought THAT was bad-ass, you should come to our next match.
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
-        charmImpact: 1
+        charmImpact: 0
         line: "We\u2019re gonna wipe the floor with Marshall High."
         variantGroups: []
         lastSticks: 0
       - character: 2
-        confidenceImpact: 0
+        confidenceImpact: 3
         charmImpact: 0
         line: That was totally an invitation!
         variantGroups: []
@@ -474,7 +492,8 @@ MonoBehaviour:
       tags: 
     deathReactions: []
   draftLines:
-  - line: You saw them playing the other day. You could tell her how good she is.
+  - line: "You did see her at practice the other day\u2026"
+  - line: Maybe tell her how good she loo- I mean, played?
   - line: "Just don\u2019t say it in a creepy way."
   availableUpgrades: []
   upgradeThreshold: 3
