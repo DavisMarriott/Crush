@@ -72,6 +72,7 @@ public class DeathRespawn : MonoBehaviour
         loopSnapshot.deathCard = deckManager.LastPlayedCard;
         // Snapshot the tags fired during this loop's conversation(s)
         loopSnapshot.tagsFired = new HashSet<DialogueTag>(deckManager.TagsFiredThisLoop);
+        gameProgression.NoteTagsFired(loopSnapshot.tagsFired);   // accumulate into the run-level set (Progress-Gated unlocks)
         // branch log + the branch you died on (last branch that fired) - drives death reactions.
         // Must copy BEFORE NextLoop() below, which clears the live log.
         loopSnapshot.branchesPlayed = new List<CardBranchRecord>(gameProgression.BranchLog);

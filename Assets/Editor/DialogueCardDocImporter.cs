@@ -119,7 +119,7 @@ namespace Crush.EditorTools
             if (structure == null || structure.Length == 0) return card;
 
             // walker state
-            string section = "preamble";       // preamble | branch | draftLines | upgrades | upgradeDraftLines
+            string section = "preamble";       // preamble | branch | draftLines | progressGated | upgrades | upgradeDraftLines
             BranchData currentBranch = null;
             DaisyBranchData currentDaisy = null;
             string daisyMode = "none";         // none | expectingState | inState
@@ -165,6 +165,17 @@ namespace Crush.EditorTools
                     if (Regex.IsMatch(h1, @"^upgrades$", RegexOptions.IgnoreCase))
                     {
                         section = "upgrades";
+                        currentBranch = null;
+                        currentDaisy = null;
+                        daisyMode = "none";
+                        currentSlot = null;
+                        continue;
+                    }
+                    // "Progress Gated" → the draft-unlock gate. Only authored on Progress Gated cards;
+                    // if the section is absent the card's unlockCondition is left untouched.
+                    if (Regex.IsMatch(h1, @"^progress gated$", RegexOptions.IgnoreCase))
+                    {
+                        section = "progressGated";
                         currentBranch = null;
                         currentDaisy = null;
                         daisyMode = "none";
@@ -257,6 +268,27 @@ namespace Crush.EditorTools
                         var trimmed = sub.Trim();
                         if (!string.IsNullOrEmpty(trimmed)) card.draftLines.Add(trimmed);
                     }
+                    continue;
+                }
+
+                // ── progress-gated section: the draft-unlock gate. Author keeps the one condition that
+                // fits and deletes the other value line (same convention as the Upgrades block).
+                if (section == "progressGated")
+                {
+                    var g = StripBold(rawText);
+                    var m = Regex.Match(g, @"^Unlock Condition:\s*(.+)$", RegexOptions.IgnoreCase);
+                    if (m.Success)
+                    {
+                        var v = m.Groups[1].Value.Trim();
+                        if (Regex.IsMatch(v, @"^branch\s*tag$", RegexOptions.IgnoreCase)) card.unlockConditionType = "BranchTag";
+                        else if (Regex.IsMatch(v, @"^loop\s*reached$", RegexOptions.IgnoreCase)) card.unlockConditionType = "LoopReached";
+                        continue;
+                    }
+                    m = Regex.Match(g, @"^Branch Tag:\s*(.+)$", RegexOptions.IgnoreCase);
+                    if (m.Success) { card.unlockTag = m.Groups[1].Value.Trim(); continue; }
+
+                    m = Regex.Match(g, @"^Loop Reached:\s*(\d+)$", RegexOptions.IgnoreCase);
+                    if (m.Success) { int.TryParse(m.Groups[1].Value, out card.unlockLoop); continue; }
                     continue;
                 }
 
@@ -628,6 +660,23 @@ namespace Crush.EditorTools
                 condProp.FindPropertyRelative("playThreshold").intValue = data.upgradeThreshold > 0 ? data.upgradeThreshold : 3;
             }
 
+            // progress-gated unlock condition: only written when a "Progress Gated" section was present,
+            // so non-gated cards keep their default unlockCondition untouched.
+            if (!string.IsNullOrEmpty(data.unlockConditionType))
+            {
+                var ucProp = so.FindProperty("unlockCondition");
+                if (data.unlockConditionType == "LoopReached")
+                {
+                    ucProp.FindPropertyRelative("type").enumValueIndex = (int)DraftUnlockType.LoopReached;
+                    ucProp.FindPropertyRelative("loop").intValue = data.unlockLoop;
+                }
+                else
+                {
+                    ucProp.FindPropertyRelative("type").enumValueIndex = (int)DraftUnlockType.BranchTag;
+                    ucProp.FindPropertyRelative("tag").enumValueIndex = (int)ParseDialogueTag(data.unlockTag);
+                }
+            }
+
             // luke branches
             var lukeProp = so.FindProperty("lukeBranches");
             lukeProp.arraySize = data.lukeBranches.Count;
@@ -907,6 +956,9 @@ namespace Crush.EditorTools
             public int upgradeThreshold = 3;
             public string upgradeTag = null;            // Branch Tag value
             public string upgradeConditionType = null;  // "PlayThreshold" | "BranchTag" from the explicit "Upgrade Condition" line
+            public string unlockConditionType = null;   // "BranchTag" | "LoopReached" from the "Progress Gated" section (null = no section)
+            public string unlockTag = null;             // Progress-Gated Branch Tag value
+            public int unlockLoop = 0;                  // Progress-Gated Loop Reached value
             public List<BranchData> lukeBranches = new List<BranchData>();
             public List<string> draftLines = new List<string>();
             public List<string> upgradeNames = new List<string>(); // captured but not wired (programmer-side)

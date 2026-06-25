@@ -27,6 +27,12 @@ public class GameProgression : MonoBehaviour
     [SerializeField] private ReflectBranch loop1ReflectBranch;
     public ReflectBranch Loop1ReflectBranch { get { return loop1ReflectBranch; } set { loop1ReflectBranch = value; } }
     public LoopSnapshot lastLoop;
+
+    // tags fired across the whole run (persistent — drives Progress-Gated card unlocks). Resets when this
+    // component is recreated (new run / scene reload).
+    private HashSet<DialogueTag> _tagsFiredThisRun = new HashSet<DialogueTag>();
+    public bool HasFiredTagThisRun(DialogueTag tag) => _tagsFiredThisRun.Contains(tag);
+    public void NoteTagsFired(IEnumerable<DialogueTag> tags) { if (tags != null) _tagsFiredThisRun.UnionWith(tags); }
     [Header("Win Condition")] 
     public GameObject winScreen;
     public AnimationTriggerWinScreen animationTriggerWinScreen;

@@ -176,9 +176,23 @@ public class DeckManager : MonoBehaviour
         {
             if (!IsDraftable(c)) continue;
             if (c.category == CardCategory.StarterDeck || c.category == CardCategory.BasicDeck) list.Add(c);
-            // TODO (pass 2): also include ProgressGated cards whose unlock condition is met.
+            else if (c.category == CardCategory.ProgressGated && ProgressUnlocked(c)) list.Add(c);
         }
         return list;
+    }
+
+    // a Progress-Gated card's unlock condition is met (sticky — once true this run it stays true)
+    private bool ProgressUnlocked(DialogueCard c)
+    {
+        if (_gameProgression == null) return false;
+        switch (c.unlockCondition.type)
+        {
+            case DraftUnlockType.BranchTag:
+                return _gameProgression.HasFiredTagThisRun(c.unlockCondition.tag);
+            case DraftUnlockType.LoopReached:
+                return _gameProgression.loopCount >= c.unlockCondition.loop;
+        }
+        return false;
     }
 
     private List<DialogueCard> PickFromPool(List<DialogueCard> pool, int count)

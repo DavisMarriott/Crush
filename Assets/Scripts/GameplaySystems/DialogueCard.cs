@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class DialogueCard : ScriptableObject
 {
     public CardCategory category;
+    public DraftUnlockCondition unlockCondition;   // used only when category == ProgressGated
     public bool revealed = false;
     [Header("Display text on bubble")]
     public string previewText;
