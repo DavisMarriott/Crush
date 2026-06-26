@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
-  m_Name: How's Your Day Going
+  m_Name: HowsYourDay
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   isDance: 0
   revealed: 0
@@ -399,5 +399,9 @@ MonoBehaviour:
   draftLines:
   - line: Just some small talk.
   - line: A little small talk never killed anyone.
-  availableUpgrades: []
-  upgradeThreshold: 1
+  availableUpgrades:
+  - {fileID: 11400000, guid: 07a327b95022144f48fad75efd11e66f, type: 2}
+  upgradeCondition:
+    type: 0
+    playThreshold: 1
+    tag: 0
