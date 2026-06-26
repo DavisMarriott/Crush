@@ -18,7 +18,7 @@ MonoBehaviour:
     tag: 0
     loop: 0
   revealed: 0
-  previewText: How was that party?
+  previewText: "\u201CHow was that party?\u201D"
   cost: 3
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}

@@ -18,7 +18,7 @@ MonoBehaviour:
     tag: 0
     loop: 0
   revealed: 1
-  previewText: DANCE?
+  previewText: "\u201CWill you go to the dance with me?\u201D"
   cost: 0
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   visualPrefab: {fileID: 6713000513520601355, guid: d9a2f2c4a979844959dba1220e165f50, type: 3}

@@ -18,7 +18,7 @@ MonoBehaviour:
     tag: 0
     loop: 0
   revealed: 1
-  previewText: Favorite Band
+  previewText: "\u201CFavorite band\u201D"
   cost: 3
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   visualPrefab: {fileID: 0}

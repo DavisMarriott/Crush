@@ -18,7 +18,7 @@ MonoBehaviour:
     tag: 0
     loop: 0
   revealed: 0
-  previewText: "How\u2019s Your Day Going?"
+  previewText: "\u201CHow\u2019s your day going?\u201D"
   cost: 1
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}

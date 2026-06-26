@@ -18,7 +18,7 @@ MonoBehaviour:
     tag: 9
     loop: 0
   revealed: 1
-  previewText: Dorky Stuff
+  previewText: "\u201CDorky stuff\u201D"
   cost: 4
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}

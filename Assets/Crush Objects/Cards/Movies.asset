@@ -18,7 +18,7 @@ MonoBehaviour:
     tag: 0
     loop: 0
   revealed: 1
-  previewText: Movies
+  previewText: "\u201CMovies?\u201D"
   cost: 1
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   visualPrefab: {fileID: 0}

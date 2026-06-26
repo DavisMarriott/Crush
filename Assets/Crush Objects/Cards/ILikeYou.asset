@@ -18,7 +18,7 @@ MonoBehaviour:
     tag: 0
     loop: 10
   revealed: 0
-  previewText: I Like You.
+  previewText: "\u201CI like you\u201D"
   cost: 6
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}

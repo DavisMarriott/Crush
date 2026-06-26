@@ -18,8 +18,8 @@ MonoBehaviour:
     tag: 0
     loop: 0
   revealed: 0
-  previewText: Going to the homecoming game?
-  cost: 5
+  previewText: "\u201CHomecoming game?\u201D"
+  cost: 4
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
@@ -82,14 +82,14 @@ MonoBehaviour:
     - charmState: 1
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: -1
         charmImpact: 0
         line: School spirit?
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
+        confidenceImpact: -1
+        charmImpact: 1
         line: You sound like Principal Miller, hehe.
         variantGroups: []
         lastSticks: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
     - charmState: 2
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: -1
         charmImpact: 0
         line: "Yes, Principal Miller, ma\u2019am. Let\u2019s go Hammerheads!"
         variantGroups: []
@@ -112,20 +112,20 @@ MonoBehaviour:
     - charmState: 3
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: -1
         charmImpact: 0
         line: You sound JUST like Principal Miller, hehe.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: -1
         charmImpact: 0
         line: "Just don\u2019t start singing the lame old fight song, too."
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
+        confidenceImpact: -2
+        charmImpact: 1
         line: "But yeah, hehe, I\u2019m going."
         variantGroups: []
         lastSticks: 0
@@ -134,12 +134,12 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 0
-        charmImpact: 0
+        charmImpact: -1
         line: "I\u2019ll be there, Principal Miller!"
         variantGroups: []
         lastSticks: 0
       - character: 0
-        confidenceImpact: 0
+        confidenceImpact: -1
         charmImpact: 0
         line: "Wha\u2013?"
         variantGroups: []
@@ -151,7 +151,7 @@ MonoBehaviour:
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 3
         charmImpact: 0
         line: "Hehe. That\u2019s a really good impression of her!"
         variantGroups: []
@@ -213,13 +213,13 @@ MonoBehaviour:
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
+        confidenceImpact: 1
+        charmImpact: 1
         line: The volleyball team is going together.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 1
         charmImpact: 0
         line: Some of the girls might go to the dance as a group, too.
         variantGroups: []
@@ -228,19 +228,19 @@ MonoBehaviour:
     - charmState: 2
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 1
         charmImpact: 0
         line: "Yeah. I\u2019m going with the volleyball team."
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
+        confidenceImpact: 1
+        charmImpact: 1
         line: "I think it\u2019ll be fun. We\u2019re gonna make signs."
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 1
         charmImpact: 0
         line: Some of the team mentioned going to the dance as a group, too.
         variantGroups: []
@@ -249,19 +249,19 @@ MonoBehaviour:
     - charmState: 3
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 1
         charmImpact: 0
         line: Yeah, the girls on the volleyball team are going together!
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 3
         charmImpact: 0
         line: I DO want to go to the homecoming dance, too.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 1
         charmImpact: 0
         line: "First high school dance\u2026 It\u2019s a little nerve-racking!"
         variantGroups: []
@@ -276,25 +276,25 @@ MonoBehaviour:
     - charmState: 4
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 1
         charmImpact: 0
         line: Yeah, the volleyball team is all going together!
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 2
         charmImpact: 0
         line: "AND I\u2019m kind of excited for the homecoming dance."
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
-        charmImpact: 0
+        charmImpact: -1
         line: "Just trying to, like\u2026 finalize plans and stuff."
         variantGroups: []
         lastSticks: 0
       - character: 2
-        confidenceImpact: 0
+        confidenceImpact: 2
         charmImpact: 0
         line: "Okay, does that mean she DOESN\u2019T have a date?!?"
         variantGroups: []
@@ -360,7 +360,7 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 3
-        charmImpact: 0
+        charmImpact: 1
         line: The volleyball team is going, too. Some of us are making signs.
         variantGroups: []
         lastSticks: 0
@@ -381,13 +381,13 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 2
-        charmImpact: 0
+        charmImpact: -1
         line: The volleyball team is going, too. Some of us are making signs!
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 3
-        charmImpact: 0
+        charmImpact: 1
         line: We should all try to sit together!
         variantGroups: []
         lastSticks: 0
@@ -402,7 +402,7 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 0
-        charmImpact: 0
+        charmImpact: -1
         line: Yeah, the volleyball team is going, too! Some of us are making signs.
         variantGroups: []
         lastSticks: 0
@@ -426,7 +426,7 @@ MonoBehaviour:
         lastSticks: 0
       - character: 1
         confidenceImpact: 2
-        charmImpact: 0
+        charmImpact: 1
         line: "If\u2026 you know, if you want to."
         variantGroups: []
         lastSticks: 0
