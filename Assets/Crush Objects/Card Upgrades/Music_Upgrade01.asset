@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41d45558e3c9f402f9cb31cbc6bac591, type: 3}
-  m_Name: Music_CostUpgrade
+  m_Name: Music_Upgrade01
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCardUpgrade
   costDelta: -1
   branchOverrides:

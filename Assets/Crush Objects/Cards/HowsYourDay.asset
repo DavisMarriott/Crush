@@ -403,7 +403,8 @@ MonoBehaviour:
   draftLines:
   - line: Just some small talk.
   - line: A little small talk never killed anyone.
-  availableUpgrades: []
+  availableUpgrades:
+  - {fileID: 11400000, guid: 07a327b95022144f48fad75efd11e66f, type: 2}
   upgradeCondition:
     type: 0
     playThreshold: 1

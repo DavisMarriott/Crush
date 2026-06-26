@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
-  m_Name: Dorky Stuff
+  m_Name: DorkyStuff
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   category: 4
   unlockCondition:
     type: 0
-    tag: 0
+    tag: 9
     loop: 0
   revealed: 1
   previewText: Dorky Stuff
-  cost: 6
+  cost: 4
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
@@ -336,8 +336,8 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: 'Are you sure you want to be seen talking with a guy who likes as much
-        dorky stuff as I do? [cu_cockydork]'
+      line: Are you sure you want to be seen talking with a guy who likes as much
+        dorky stuff as I do?
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -359,7 +359,7 @@ MonoBehaviour:
         line: Is that what you think of me?
         variantGroups: []
         lastSticks: 0
-      tags: 
+      tags: 0c000000
     - charmState: 1
       dialogue:
       - character: 1
@@ -393,7 +393,7 @@ MonoBehaviour:
         line: Ugh. You got COCKY!
         variantGroups: []
         lastSticks: 0
-      tags: 
+      tags: 0c000000
     - charmState: 2
       dialogue:
       - character: 1
@@ -427,7 +427,7 @@ MonoBehaviour:
         line: "Great, kid. Don\u2019t get COCKY!"
         variantGroups: []
         lastSticks: 0
-      tags: 
+      tags: 0c000000
     - charmState: 3
       dialogue:
       - character: 1
@@ -454,7 +454,7 @@ MonoBehaviour:
         line: That did NOT come out as smooth as I thought it would.
         variantGroups: []
         lastSticks: 0
-      tags: 
+      tags: 0c000000
     - charmState: 4
       dialogue:
       - character: 1
@@ -482,14 +482,15 @@ MonoBehaviour:
         line: "OBVIOUSLY I don\u2019t mind dorkiness."
         variantGroups: []
         lastSticks: 0
-      tags: 
+      tags: 0c000000
     deathReactions: []
   draftLines:
   - line: She said it herself, her fantasy book is dorky. I like that!
   - line: "I\u2019m a dork. Gotta be some common ground there."
   - line: But this might be a real tightrope walk.
-  availableUpgrades: []
+  availableUpgrades:
+  - {fileID: 11400000, guid: 116e5c5db4816405aad11e2df5be62cd, type: 2}
   upgradeCondition:
     type: 1
     playThreshold: 3
-    tag: 0
+    tag: 12

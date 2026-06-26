@@ -11,4 +11,7 @@ public enum DialogueTag
     Partysaturday,
     Ms_dorky,
     Cu_likeshim,
+    Cu_jockitch,
+    Cu_cockydork,
+    Ms_nodate,
 }

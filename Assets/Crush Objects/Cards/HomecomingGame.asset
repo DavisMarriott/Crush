@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
-  m_Name: I Like You
+  m_Name: HomecomingGame
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   category: 0
   unlockCondition:
@@ -18,8 +18,8 @@ MonoBehaviour:
     tag: 0
     loop: 0
   revealed: 0
-  previewText: I Like You.
-  cost: 9
+  previewText: Going to the homecoming game?
+  cost: 5
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
@@ -28,7 +28,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "I LOVE YOU\u2013"
+      line: "Are you coming home\u2013?"
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -36,43 +36,27 @@ MonoBehaviour:
     daisyBranches: []
     deathReactions:
     - lines:
-      - "Ahh! You can\u2019t tell her you LOVE her!"
-      - Tell her you LIKE her!
-      - "What\u2019s the matter with me?"
+      - HomeCOMING, not coming HOME. Moron!
     - lines:
-      - This is so embarrassing. Thank GOD nobody will remember that.
-    - lines:
-      - Stop saying LOVE!
+      - I wanna go home.
   - branchName: Awkward
     dialogue:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "Daisy\u2026 I, uh\u2026"
+      line: Are you going to the homecoming game?
       variantGroups: []
       lastSticks: 0
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "Well, I like\u2026 you\u2013"
+      line: Show some school spirit?
       variantGroups: []
       lastSticks: 0
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
-      line: Get outta there!
-      variantGroups: []
-      lastSticks: 0
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: "\u2013kuleles! I like ukuleles."
-      variantGroups: []
-      lastSticks: 0
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: "They\u2019re like guitars. But smaller. So\u2026"
+      line: Doofus!
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -91,7 +75,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: Yeah, I know what a ukulele is.
+        line: "Aren\u2019t we all going?"
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -100,19 +84,13 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "Yeah, they are small\u2026"
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "What\u2019s the matter with you?!?"
+        line: School spirit?
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: Well, thanks for telling me, I guess.
+        line: You sound like Principal Miller, hehe.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -121,25 +99,13 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: Yeah, that IS true.
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "Do you\u2026 PLAY the ukulele?"
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
-        charmImpact: 0
-        line: No.
+        line: "Yes, Principal Miller, ma\u2019am. Let\u2019s go Hammerheads!"
         variantGroups: []
         lastSticks: 0
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: REAL smooth, doofus.
+        line: Huh?
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -148,31 +114,19 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: Uh, yeah. Ukuleles are cute.
+        line: You sound JUST like Principal Miller, hehe.
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: Do you play?
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
-        charmImpact: 0
-        line: No, not really.
+        line: "Just don\u2019t start singing the lame old fight song, too."
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "Aw, that\u2019s too bad."
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: 'Note to self: learn to play an instrument.'
+        line: "But yeah, hehe, I\u2019m going."
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -181,25 +135,37 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: Oh, ukuleles.
+        line: "I\u2019ll be there, Principal Miller!"
         variantGroups: []
         lastSticks: 0
-      - character: 2
+      - character: 0
         confidenceImpact: 0
         charmImpact: 0
-        line: "Wait! Is she disappointed that I didn\u2019t say \u201CI like YOU?\u201D"
+        line: "Wha\u2013?"
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "Sure, they\u2019re\u2026 cool I guess."
+        line: "Just please don\u2019t make us sing the old fight song!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Hehe. That\u2019s a really good impression of her!"
         variantGroups: []
         lastSticks: 0
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: Did I blow it? Am I crazy?
+        line: "I wasn\u2019t\u2013 do I sound like a middle-aged lady?"
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Ha. Thanks.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -209,25 +175,13 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "Daisy\u2026 I, uh\u2026"
+      line: Are you gonna go to homecoming?
       variantGroups: []
       lastSticks: 0
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "Well, I\u2026 like\u2026 you\u2013"
-      variantGroups: []
-      lastSticks: 0
-    - character: 2
-      confidenceImpact: 0
-      charmImpact: 0
-      line: BAIL!
-      variantGroups: []
-      lastSticks: 0
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: "I, like, USUALLY am not this\u2026 awkward."
+      line: The game. The homecoming game.
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -246,120 +200,125 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: Yes you are, Luke.
+        line: "Aren\u2019t we all going?"
         variantGroups: []
         lastSticks: 0
-      tags: 
+      tags: 0d000000
     - charmState: 1
       dialogue:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: I mean, you ARE being a little shifty.
+        line: "I figured that\u2019s what you meant."
         variantGroups: []
         lastSticks: 0
-      - character: 2
+      - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "She thinks you\u2019re a total SKETCH-ball!"
+        line: The volleyball team is going together.
         variantGroups: []
         lastSticks: 0
-      tags: 
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Some of the girls might go to the dance as a group, too.
+        variantGroups: []
+        lastSticks: 0
+      tags: 0d000000
     - charmState: 2
       dialogue:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "Oh. Um\u2026 it\u2019s okay."
+        line: "Yeah. I\u2019m going with the volleyball team."
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: We all have off days.
+        line: "I think it\u2019ll be fun. We\u2019re gonna make signs."
         variantGroups: []
         lastSticks: 0
-      - character: 2
+      - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "You don\u2019t know the HALF of it, Daisy!"
+        line: Some of the team mentioned going to the dance as a group, too.
         variantGroups: []
         lastSticks: 0
-      tags: 
+      tags: 0d000000
     - charmState: 3
       dialogue:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: Oh. Okay.
+        line: Yeah, the girls on the volleyball team are going together!
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "You\u2019re not being THAT awkward, Luke."
+        line: I DO want to go to the homecoming dance, too.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "First high school dance\u2026 It\u2019s a little nerve-racking!"
         variantGroups: []
         lastSticks: 0
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: "Yes I am. You\u2019re just too nice, Daisy."
+        line: NO $#%&!
         variantGroups: []
         lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: I like a little awkward, anyway.
-        variantGroups: []
-        lastSticks: 0
-      tags: 
+      tags: 0d000000
     - charmState: 4
       dialogue:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: Oh. Okay.
+        line: Yeah, the volleyball team is all going together!
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: I, like, Usually am not this awkward either.
+        line: "AND I\u2019m kind of excited for the homecoming dance."
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "But a little awkwardness is\u2026 you know\u2026 a little charming,
-          too."
+        line: "Just trying to, like\u2026 finalize plans and stuff."
         variantGroups: []
         lastSticks: 0
-      tags: 
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Okay, does that mean she DOESN\u2019T have a date?!?"
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Yeah. I, uh\u2026 I need to do that, too."
+        variantGroups: []
+        lastSticks: 0
+      tags: 0d000000
     deathReactions: []
   - branchName: High
     dialogue:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "Daisy\u2026 I, uh\u2026"
+      line: You gonna go to the homecoming game?
       variantGroups: []
       lastSticks: 0
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "I kinda\u2026 like\u2026 you."
-      variantGroups: []
-      lastSticks: 0
-    - character: 2
-      confidenceImpact: 0
-      charmImpact: 0
-      line: KINDA?!?!
-      variantGroups: []
-      lastSticks: 0
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: I like you.
+      line: I think most of the soccer team is gonna go.
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -378,118 +337,106 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "Let\u2019s talk about this another time, Luke."
+        line: "I\u2019ll be ther\u2013 are you feeling okay, Luke?"
         variantGroups: []
         lastSticks: 0
-      tags: 00000000
+      tags: 
     - charmState: 1
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 2
         charmImpact: 0
-        line: You do?!?
+        line: "Yeah, I\u2019ll see you there, then."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: "I\u2019m going with the volleyball team."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 0
+        line: The volleyball team is going, too. Some of us are making signs.
         variantGroups: []
         lastSticks: 0
       - character: 0
         confidenceImpact: 0
         charmImpact: 0
-        line: "Well, I mean, I \u2013"
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "Sorry. You just haven't really been putting an \u201CI like you\u201D
-          vibe out there."
+        line: "Oh, that\u2019s neat."
         variantGroups: []
         lastSticks: 0
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: '#&@%!'
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "I, uh\u2026 kinda like you, too."
-        variantGroups: []
-        lastSticks: 0
-      tags: 0000000000000000
-    - charmState: 2
-      dialogue:
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: Really?
+        line: Neat? What are you, a HUNDRED years old?
         variantGroups: []
         lastSticks: 0
       tags: 
     - charmState: 3
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 2
         charmImpact: 0
-        line: I kinda thought so.
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: '#&@%!'
+        line: The volleyball team is going, too. Some of us are making signs!
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 3
         charmImpact: 0
-        line: I like you, too.
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: WOOHOOOO!!! OH MY GOD OH MY GOD WHAT DO I DO NOW?!?!
+        line: We should all try to sit together!
         variantGroups: []
         lastSticks: 0
       - character: 0
-        confidenceImpact: 0
+        confidenceImpact: 1
         charmImpact: 0
-        line: Cool cool.
+        line: "Yeah, that\u2019d be fun."
         variantGroups: []
         lastSticks: 0
-      tags: 0000000000000000
+      tags: 
     - charmState: 4
       dialogue:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: I LIKE YOU, TOO!
+        line: Yeah, the volleyball team is going, too! Some of us are making signs.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: "Hey, you\u2019re creative!"
         variantGroups: []
         lastSticks: 0
       - character: 2
-        confidenceImpact: 0
+        confidenceImpact: 1
         charmImpact: 0
-        line: WHAT?!?
+        line: I am? Yeah, I AM!
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 3
         charmImpact: 0
-        line: "I, uh\u2026 sorry, I didn\u2019t mean to blurt that out."
+        line: You should help me make some after school tomorrow!
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 2
         charmImpact: 0
-        line: But I do. Like you, I mean.
+        line: "If\u2026 you know, if you want to."
         variantGroups: []
         lastSticks: 0
-      tags: 0000000000000000
+      tags: 
     deathReactions: []
   draftLines:
-  - line: Just say it. Just tell her you like her.
-  - line: "You\u2019re already stuck in a time loop. What\u2019s the worst that could
-      happen?"
+  - line: Yeah, this is smart.
+  - line: "\u201CAre you going to the homecoming game?\u201D"
+  - line: "\u201CBy the way, did you know there\u2019s a homecoming DANCE?\u201D"
+  - line: "It\u2019s an S-tier segue!"
   availableUpgrades: []
   upgradeCondition:
     type: 0

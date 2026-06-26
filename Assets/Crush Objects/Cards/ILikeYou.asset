@@ -455,7 +455,7 @@ MonoBehaviour:
         line: "I, uh\u2026 kinda like you, too."
         variantGroups: []
         lastSticks: 0
-      tags: 00000000
+      tags: 0a000000
     - charmState: 2
       dialogue:
       - character: 1
@@ -486,7 +486,7 @@ MonoBehaviour:
         - lines:
           - "[+5 conf] Internal: I\u2019ll NEVER get tired of hearing that!"
         lastSticks: 0
-      tags: 
+      tags: 0a000000
     - charmState: 3
       dialogue:
       - character: 1
@@ -523,7 +523,7 @@ MonoBehaviour:
         line: Cool cool.
         variantGroups: []
         lastSticks: 0
-      tags: 00000000
+      tags: 0a000000
     - charmState: 4
       dialogue:
       - character: 1
@@ -568,7 +568,7 @@ MonoBehaviour:
         - lines:
           - I could get used to this!
         lastSticks: 0
-      tags: 00000000
+      tags: 0a000000
     deathReactions: []
   - branchName: 'CO: Awkward'
     dialogue:
@@ -999,8 +999,9 @@ MonoBehaviour:
   - line: Enough is enough. Just tell her you like her.
   - line: "You\u2019re already stuck in a time loop. What\u2019s the worst that could
       happen?"
-  availableUpgrades: []
+  availableUpgrades:
+  - {fileID: 11400000, guid: be91aa4704a834ad5b97d9268640f47f, type: 2}
   upgradeCondition:
     type: 1
     playThreshold: 3
-    tag: 0
+    tag: 10

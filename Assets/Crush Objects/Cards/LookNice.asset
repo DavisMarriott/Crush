@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
-  m_Name: Math Test
+  m_Name: LookNice
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   category: 1
   unlockCondition:
@@ -18,8 +18,8 @@ MonoBehaviour:
     tag: 0
     loop: 0
   revealed: 1
-  previewText: Math Test
-  cost: 0
+  previewText: Look Nice
+  cost: 4
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
@@ -28,7 +28,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "So- uhhhhh\u2026. How did that math te-"
+      line: You are soooo hot
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -40,30 +40,22 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: How did you do on Ms. Parsons test?
-      variantGroups: []
-      lastSticks: 0
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: Geometry is kind of breaking my brain, haha.
+      line: "You uhhh\u2026. You look really nice today."
       variantGroups: []
       lastSticks: 0
     tags: 
     charmImpacts:
-    - state: 1
-      impact: 0
-    - state: 2
-      impact: 0
     - state: 3
+      impact: 3
+    - state: 4
       impact: 0
     daisyBranches:
     - charmState: 0
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: -6
         charmImpact: 0
-        line: walks away
+        line: "Ohh - ummm\u2026. thanks? I guess\u2026"
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -72,7 +64,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: -1
         charmImpact: 0
-        line: Ohhh really? Geometry has been pretty easy for me so far.
+        line: "Ohh - ummm\u2026. thanks."
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -81,13 +73,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: Yeah.. it can be pretty hard.
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: I think I did okay though.
+        line: "Thanks\u2026 that's nice of you."
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -96,23 +82,41 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 3
         charmImpact: 0
-        line: I could help you study for the next one.
+        line: Aww thanks!
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: "That umm\u2026 means a lot"
         variantGroups: []
         lastSticks: 0
       tags: 
     - charmState: 4
       dialogue:
       - character: 1
-        confidenceImpact: -1
+        confidenceImpact: 0
         charmImpact: 0
-        line: Oh.. the test. Ummm, yeah. I think I did pretty well.
+        line: Really?! You think so???
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: I mean - thanks! That's really nice.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 4
+        charmImpact: 0
+        line: "You look cu- uhh\u2026 nice.. too"
         variantGroups: []
         lastSticks: 0
       tags: 
     deathReactions: []
   draftLines:
-  - line: She probably got an A on Ms. Parsons test.
-  - line: She's, like, a genius.
+  - line: Girls like it when you compliment them
+  - line: I think
   availableUpgrades: []
   upgradeCondition:
     type: 0

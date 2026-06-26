@@ -48,7 +48,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "Ya know, I\u2019m actually kind of jock-ish. [cu_jockitch]"
+      line: "Ya know, I\u2019m actually kind of jock-ish."
       variantGroups: []
       lastSticks: 0
     - character: 2
@@ -94,7 +94,7 @@ MonoBehaviour:
         line: Take me out, coach!
         variantGroups: []
         lastSticks: 0
-      tags: 
+      tags: 0b000000
     - charmState: 1
       dialogue:
       - character: 1
@@ -133,7 +133,7 @@ MonoBehaviour:
         line: "I\u2019m on the soccer\u2013 you know what, nevermind."
         variantGroups: []
         lastSticks: 0
-      tags: 
+      tags: 0b000000
     - charmState: 2
       dialogue:
       - character: 1
@@ -160,7 +160,7 @@ MonoBehaviour:
         line: Oh, yeah. I know.
         variantGroups: []
         lastSticks: 0
-      tags: 
+      tags: 0b000000
     - charmState: 3
       dialogue:
       - character: 1
@@ -181,7 +181,7 @@ MonoBehaviour:
         line: "But I\u2019ve seen you playing soccer, I know."
         variantGroups: []
         lastSticks: 0
-      tags: 
+      tags: 0b000000
     - charmState: 4
       dialogue:
       - character: 1
@@ -220,7 +220,7 @@ MonoBehaviour:
         line: "See if you\u2019re really as jock-ish as you say, hehe."
         variantGroups: []
         lastSticks: 0
-      tags: 
+      tags: 0b000000
     deathReactions: []
   - branchName: Normal
     dialogue:
@@ -529,8 +529,9 @@ MonoBehaviour:
   - line: "The freshman soccer team is BASICALLY a walk-on\u2026"
   - line: "\u2026but still, I\u2019m KIND OF a jock."
   - line: AND she plays volleyball, so she might like a jock-ish kind of guy.
-  availableUpgrades: []
+  availableUpgrades:
+  - {fileID: 11400000, guid: 67e2b022638624c28b2d25fa2aaa13f0, type: 2}
   upgradeCondition:
     type: 1
     playThreshold: 3
-    tag: 0
+    tag: 11

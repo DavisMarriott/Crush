@@ -17,4 +17,6 @@ MonoBehaviour:
   branchAdditions: []
   previewTextOverride: 
   visualPrefab: {fileID: 5626390890515017851, guid: 839aeaaca1feb4c979b9da13f5ff988e, type: 3}
-  draftLines: []
+  draftLines:
+  - line: Feeling better at small talk already.
+  - line: No more dying trying to ask how her day is going!

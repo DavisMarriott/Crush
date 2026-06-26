@@ -1,0 +1,280 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d45558e3c9f402f9cb31cbc6bac591, type: 3}
+  m_Name: SoccerTeam_Upgrade01
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueCardUpgrade
+  costDelta: -1
+  branchOverrides:
+  - branchName: Awkward
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Hey, we\u2019re both athletes. That\u2019s cool."
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I\u2019m on the soccer team."
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Okay.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: Yeah, I guess we both are then.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: Right on.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: I know you are.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: "Let\u2019s go Hammerheads! Hehe."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "I\u2019ve seen you play, I know."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Jazmine begged me to go to Andre\u2019s practice with her."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "Oh no! I hope it wasn\u2019t the day I ate $#%! During rondos!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 6
+        charmImpact: 0
+        line: You looked good out there.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: -1
+        line: Jazmine and I watched you guys practice once.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 4
+        charmImpact: 0
+        line: You were really good out there.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 1
+        line: Maybe I should come to a real game.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Ahh, I\u2019d be so nervous if she came to a real game!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: You totally should. And thanks.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    deathReactions: []
+  - branchName: High
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I don\u2019t know if you like soccer, but the freshman team is looking
+        good this season."
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: You should come watch us play.
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: My schedule is pretty busy right now. Sorry.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 1
+        line: "I\u2019ve seen you at practice."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Maybe she\u2019ll actually come."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: I heard! Jazmine has been asking me to go, too.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: "I\u2019ll do my best to make it to a game!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Gotta show some Hammerheads pride!
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 1
+        line: "I\u2019d love to come to a game!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Ahh, you didn\u2019t think this through! Now you have to be GOOD!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: If that was an invitation.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: -2
+        charmImpact: -1
+        line: Oh yeah? Gonna show off your moves for me? Hehe.
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Sure, gimme a soccer ball. I\u2019ll blow your mind right here in
+          the hallway!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: Hehehe. Save it for the field, Luke!
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: 
+        variantGroups:
+        - lines:
+          - "[+2 conf] Internal: Whoa\u2026 did I just do a flirt?"
+        - lines:
+          - "[+2 conf] Internal: Dude\u2026 I think you\u2019re flirting!"
+        - lines:
+          - "[+2 conf] Internal: You\u2019re a natural, Luke. A freakin\u2019 casanova!"
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 1
+        line: "I\u2019d love to watch you play."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    deathReactions: []
+  branchAdditions: []
+  previewTextOverride: 
+  visualPrefab: {fileID: 5626390890515017851, guid: 839aeaaca1feb4c979b9da13f5ff988e, type: 3}
+  draftLines:
+  - line: "Gotta stop saying I\u2019m \u201Cjock-ish.\u201D"
+  - line: "Don\u2019t wanna go through that awkward mix-up again."

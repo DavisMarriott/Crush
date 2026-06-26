@@ -204,7 +204,7 @@ MonoBehaviour:
         line: "Just this\u2026 umm\u2026 this fantasy series I\u2019ve been reading."
         variantGroups: []
         lastSticks: 0
-      tags: 00000000
+      tags: 09000000
     - charmState: 2
       dialogue:
       - character: 1
@@ -225,7 +225,7 @@ MonoBehaviour:
         line: It's kinda dorky though.
         variantGroups: []
         lastSticks: 0
-      tags: 00000000
+      tags: 09000000
     - charmState: 3
       dialogue:
       - character: 1
@@ -252,7 +252,7 @@ MonoBehaviour:
         line: God she's perfect
         variantGroups: []
         lastSticks: 0
-      tags: 00000000
+      tags: 09000000
     - charmState: 4
       dialogue:
       - character: 1
@@ -267,7 +267,7 @@ MonoBehaviour:
         line: Just this fantasy series I've been reading.
         variantGroups: []
         lastSticks: 0
-      tags: 00000000
+      tags: 09000000
     deathReactions: []
   draftLines:
   - line: "She's holding that book\u2026"

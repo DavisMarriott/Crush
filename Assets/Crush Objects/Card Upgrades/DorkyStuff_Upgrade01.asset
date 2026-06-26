@@ -1,0 +1,191 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d45558e3c9f402f9cb31cbc6bac591, type: 3}
+  m_Name: DorkyStuff_Upgrade01
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueCardUpgrade
+  costDelta: -1
+  branchOverrides:
+  - branchName: High
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I\u2019m into kinda\u2026 dorky stuff. And..."
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "\u2026I like that you are, too."
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I meant that as a compliment! I\u2019m, just\u2026 you know."
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Oh yeah?
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: THAT was a compliment?
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: -1
+        charmImpact: 0
+        line: It was SUPPOSED to be one, yeah.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 1
+        line: Hehe, okay then. Thanks!
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: Thanks, I think. We like what we like, right?
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: "What\u2019s even considered \u201Cdorky\u201D anymore, anyway?"
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Good point.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 0
+        line: "I\u2019m going to wear it like a badge of honor! Hehe."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "But I won\u2019t tell anyone you\u2019re a dork."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Hehe, I know. That\u2019s sweet."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: Dorks like us gotta stick together, Luke.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Like GLUE!
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 4
+        charmImpact: 0
+        line: "I wanna hear more about the stuff you\u2019re into some time."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: -1
+        line: Pfft. Speak for yourself!
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "I\u2019m teasing!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Phew! Thank GOD!
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Haha, good one.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 1
+        line: "OBVIOUSLY I don\u2019t mind dorkiness."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 0
+        line: "As long as you don\u2019t mind me talking your ear off about The Fey
+          Dawn Chronicles."
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 2
+        charmImpact: 0
+        line: "Haha, I don\u2019t know what that is! But I\u2019m excited to find
+          out."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    deathReactions: []
+  branchAdditions: []
+  previewTextOverride: 
+  visualPrefab: {fileID: 5626390890515017851, guid: 839aeaaca1feb4c979b9da13f5ff988e, type: 3}
+  draftLines:
+  - line: "I\u2019ve been talking like a smug jerk when I\u2019m overconfident."
+  - line: "That\u2019s not me! No more getting cocky."

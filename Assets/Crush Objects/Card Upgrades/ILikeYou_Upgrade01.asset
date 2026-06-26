@@ -10,11 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41d45558e3c9f402f9cb31cbc6bac591, type: 3}
-  m_Name: Dorky Stuff_Upgrade01
+  m_Name: ILikeYou_Upgrade01
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCardUpgrade
-  costDelta: 0
+  costDelta: -2
   branchOverrides: []
   branchAdditions: []
   previewTextOverride: 
-  visualPrefab: {fileID: 0}
-  draftLines: []
+  visualPrefab: {fileID: 7215568414287354664, guid: 4874a985bfc474716bc0fca595642177, type: 3}
+  draftLines:
+  - line: "Shouldn\u2019t be so hard to say now that I KNOW she likes me."
+  - line: She said so herself!
+  - line: Plenty of time to think about the ethical uses of a time loop later.

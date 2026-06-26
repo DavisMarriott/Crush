@@ -16,3 +16,4 @@ MonoBehaviour:
   effect: 0
   intValue: 1
   bannerText: Confidence Increase +1
+  iconPrefab: {fileID: 8220373668078900622, guid: 7d4329b47935f4f1d908363ad1104579, type: 3}
