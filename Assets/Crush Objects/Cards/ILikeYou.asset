@@ -16,7 +16,7 @@ MonoBehaviour:
   unlockCondition:
     type: 1
     tag: 0
-    loop: 10
+    loop: 9
   revealed: 0
   previewText: "\u201CI like you\u201D"
   cost: 6

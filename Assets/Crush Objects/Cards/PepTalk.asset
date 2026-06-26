@@ -1,0 +1,164 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
+  m_Name: PepTalk
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
+  category: 4
+  unlockCondition:
+    type: 1
+    tag: 0
+    loop: 10
+  revealed: 0
+  previewText: '*GIVE YOURSELF A PEP TALK*'
+  cost: 0
+  buttonColor: {r: 0, g: 0, b: 0, a: 1}
+  visualPrefab: {fileID: 0}
+  lukeBranches:
+  - branchName: Death
+    dialogue: []
+    tags: 
+    charmImpacts: []
+    daisyBranches: []
+    deathReactions: []
+  - branchName: Awkward
+    dialogue:
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Don\u2019t sweat this, dude."
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 3
+      charmImpact: 0
+      line: You can do this!
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue: []
+      tags: 
+    - charmState: 1
+      dialogue: []
+      tags: 
+    - charmState: 2
+      dialogue: []
+      tags: 
+    - charmState: 3
+      dialogue: []
+      tags: 
+    - charmState: 4
+      dialogue: []
+      tags: 
+    deathReactions: []
+  - branchName: Normal
+    dialogue:
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Hang in there. It\u2019s going fine."
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 2
+      charmImpact: 0
+      line: You got this!
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue: []
+      tags: 
+    - charmState: 1
+      dialogue: []
+      tags: 
+    - charmState: 2
+      dialogue: []
+      tags: 
+    - charmState: 3
+      dialogue: []
+      tags: 
+    - charmState: 4
+      dialogue: []
+      tags: 
+    deathReactions: []
+  - branchName: High
+    dialogue:
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "You\u2019re doing great!"
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 1
+      charmImpact: 0
+      line: You got this.
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue: []
+      tags: 
+    - charmState: 1
+      dialogue: []
+      tags: 
+    - charmState: 2
+      dialogue: []
+      tags: 
+    - charmState: 3
+      dialogue: []
+      tags: 
+    - charmState: 4
+      dialogue: []
+      tags: 
+    deathReactions: []
+  draftLines:
+  - line: "I\u2019m pretty bad at talking to Daisy."
+  - line: But I can talk to myself all day!
+  - line: Maybe I can hype myself up a little.
+  availableUpgrades:
+  - {fileID: 11400000, guid: 7ecf01a170e2c42b0976635bc3497c44, type: 2}
+  upgradeCondition:
+    type: 0
+    playThreshold: 2
+    tag: 0
