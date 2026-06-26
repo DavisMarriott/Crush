@@ -106,7 +106,7 @@ MonoBehaviour:
     - charmState: 2
       dialogue:
       - character: 1
-        confidenceImpact: 2
+        confidenceImpact: 1
         charmImpact: 0
         line: Haha I know right.
         variantGroups: []

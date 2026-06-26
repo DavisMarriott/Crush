@@ -31,39 +31,39 @@ MonoBehaviour:
       line: 
       variantGroups:
       - lines:
-        - 'Internal:'
+        - "Oh jeez\u2026 I don\u2019t think I can do this."
       - lines:
         - Here goes nothing
       - lines:
         - "I really don\u2019t wanna die again\u2026"
       lastSticks: 0
     - character: 0
-      confidenceImpact: -2
+      confidenceImpact: -1
       charmImpact: 0
       line: I was- umm... wondering... if...
       variantGroups: []
       lastSticks: 0
     - character: 0
-      confidenceImpact: -2
-      charmImpact: -1
+      confidenceImpact: -1
+      charmImpact: 0
       line: uhhh... if you would... uhh- maybe
       variantGroups: []
       lastSticks: 0
     - character: 0
       confidenceImpact: -2
-      charmImpact: -1
+      charmImpact: 0
       line: be interested...
       variantGroups: []
       lastSticks: 0
     - character: 0
-      confidenceImpact: -1
-      charmImpact: -1
+      confidenceImpact: -2
+      charmImpact: 0
       line: in go- uhhh...
       variantGroups: []
       lastSticks: 0
     - character: 0
-      confidenceImpact: -1
-      charmImpact: -1
+      confidenceImpact: -2
+      charmImpact: 0
       line: sorry... ummm- do you wanna...
       variantGroups: []
       lastSticks: 0
@@ -297,7 +297,7 @@ MonoBehaviour:
       lastSticks: 0
     - character: 0
       confidenceImpact: 0
-      charmImpact: -1
+      charmImpact: 0
       line: "\u2026\u2026"
       variantGroups: []
       lastSticks: 0
@@ -311,12 +311,6 @@ MonoBehaviour:
       confidenceImpact: 0
       charmImpact: 0
       line: "WHY AREN\u2019T YOU SAYING ANYTHING?!??"
-      variantGroups: []
-      lastSticks: 0
-    - character: 1
-      confidenceImpact: -1
-      charmImpact: 0
-      line: "Earth to Luke\u2026"
       variantGroups: []
       lastSticks: 0
     - character: 2
@@ -339,7 +333,7 @@ MonoBehaviour:
       lastSticks: 0
     - character: 1
       confidenceImpact: 0
-      charmImpact: 0
+      charmImpact: -1
       line: "I\u2019m\u2026 gonna go to class now."
       variantGroups: []
       lastSticks: 0

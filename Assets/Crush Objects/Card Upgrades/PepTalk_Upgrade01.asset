@@ -13,7 +13,130 @@ MonoBehaviour:
   m_Name: PepTalk_Upgrade01
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCardUpgrade
   costDelta: 0
-  branchOverrides: []
+  branchOverrides:
+  - branchName: Awkward
+    dialogue:
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "You\u2019re an old pro at this, man!"
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 4
+      charmImpact: 0
+      line: Nothing to sweat over.
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue: []
+      tags: 
+    - charmState: 1
+      dialogue: []
+      tags: 
+    - charmState: 2
+      dialogue: []
+      tags: 
+    - charmState: 3
+      dialogue: []
+      tags: 
+    - charmState: 4
+      dialogue: []
+      tags: 
+    deathReactions: []
+  - branchName: Normal
+    dialogue:
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "You\u2019re a time-looper, man!"
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 3
+      charmImpact: 0
+      line: That basically makes you a superhero!
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue: []
+      tags: 
+    - charmState: 1
+      dialogue: []
+      tags: 
+    - charmState: 2
+      dialogue: []
+      tags: 
+    - charmState: 3
+      dialogue: []
+      tags: 
+    - charmState: 4
+      dialogue: []
+      tags: 
+    deathReactions: []
+  - branchName: High
+    dialogue:
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Look at you go!
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 2
+      charmImpact: 0
+      line: "You\u2019re cool. You\u2019re collected. You\u2019re damn HUNK!"
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue: []
+      tags: 
+    - charmState: 1
+      dialogue: []
+      tags: 
+    - charmState: 2
+      dialogue: []
+      tags: 
+    - charmState: 3
+      dialogue: []
+      tags: 
+    - charmState: 4
+      dialogue: []
+      tags: 
+    deathReactions: []
   branchAdditions: []
   previewTextOverride: 
   visualPrefab: {fileID: 0}

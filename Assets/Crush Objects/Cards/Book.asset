@@ -102,7 +102,7 @@ MonoBehaviour:
         line: Yes, I literally do.
         variantGroups: []
         lastSticks: 0
-      - character: 0
+      - character: 2
         confidenceImpact: 0
         charmImpact: 0
         line: "See you in a minute\u2026"
@@ -113,61 +113,13 @@ MonoBehaviour:
       dialogue: []
       tags: 
     - charmState: 2
-      dialogue:
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: This is actually the fourth one.
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 2
-        charmImpact: 0
-        line: It's kinda dorky though.
-        variantGroups: []
-        lastSticks: 0
+      dialogue: []
       tags: 
     - charmState: 3
-      dialogue:
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: It's just a fantasy series I've been reading for a while.
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: This is actually the fourth one.
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 3
-        charmImpact: 0
-        line: "It's dorky\u2026 but I like it."
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: God she's perfect
-        variantGroups: []
-        lastSticks: 0
+      dialogue: []
       tags: 
     - charmState: 4
-      dialogue:
-      - character: 1
-        confidenceImpact: -1
-        charmImpact: 0
-        line: Oh it's nothing.
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: Just this fantasy series I've been reading.
-        variantGroups: []
-        lastSticks: 0
+      dialogue: []
       tags: 
     deathReactions: []
   - branchName: Normal
@@ -208,19 +160,19 @@ MonoBehaviour:
     - charmState: 2
       dialogue:
       - character: 1
-        confidenceImpact: 1
+        confidenceImpact: 0
         charmImpact: 0
         line: It's a fantasy series I've been reading for a while.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 1
+        confidenceImpact: 0
         charmImpact: 0
         line: This is actually the fourth one.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 2
+        confidenceImpact: 1
         charmImpact: 0
         line: It's kinda dorky though.
         variantGroups: []
@@ -229,25 +181,25 @@ MonoBehaviour:
     - charmState: 3
       dialogue:
       - character: 1
-        confidenceImpact: 1
+        confidenceImpact: 0
         charmImpact: 0
         line: It's just a fantasy series I've been reading for a while.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 1
+        confidenceImpact: 0
         charmImpact: 0
         line: This is actually the fourth one.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 3
+        confidenceImpact: 1
         charmImpact: 0
         line: "It's dorky\u2026 but I like it."
         variantGroups: []
         lastSticks: 0
       - character: 2
-        confidenceImpact: 0
+        confidenceImpact: 1
         charmImpact: 0
         line: God she's perfect
         variantGroups: []
@@ -256,15 +208,21 @@ MonoBehaviour:
     - charmState: 4
       dialogue:
       - character: 1
-        confidenceImpact: -1
-        charmImpact: 0
+        confidenceImpact: 0
+        charmImpact: -1
         line: Oh it's nothing.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: -1
         charmImpact: 0
         line: Just this fantasy series I've been reading.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Okay\u2026 I thought that one would work."
         variantGroups: []
         lastSticks: 0
       tags: 09000000
