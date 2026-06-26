@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Music
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
-  isDance: 0
+  category: 1
+  unlockCondition:
+    type: 0
+    tag: 0
+    loop: 0
   revealed: 1
   previewText: Favorite Band
   cost: 3
@@ -42,7 +46,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: So, have you listened to that new Farthing Penny song yet?
+      line: 'So, have you listened to that new Farthing Penny song yet? [cu_farthingpenny]'
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -119,13 +123,13 @@ MonoBehaviour:
     tags: 
     charmImpacts:
     - state: 1
-      impact: 4
-    - state: 2
-      impact: 3
-    - state: 3
       impact: 2
-    - state: 4
+    - state: 2
       impact: 1
+    - state: 3
+      impact: 1
+    - state: 4
+      impact: 0
     daisyBranches:
     - charmState: 0
       dialogue: []
@@ -186,4 +190,7 @@ MonoBehaviour:
   - line: I should ask her about that new song.
   availableUpgrades:
   - {fileID: 11400000, guid: 2603f1ce7b7674681a4184843cba6710, type: 2}
-  upgradeThreshold: 1
+  upgradeCondition:
+    type: 1
+    playThreshold: 3
+    tag: 0

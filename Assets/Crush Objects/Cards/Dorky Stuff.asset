@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Dorky Stuff
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
-  isDance: 0
+  category: 4
+  unlockCondition:
+    type: 0
+    tag: 0
+    loop: 0
   revealed: 1
   previewText: Dorky Stuff
-  cost: 7
+  cost: 6
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
@@ -268,32 +272,23 @@ MonoBehaviour:
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: Hell yeah!
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "Wait\u2026 is it cute that I draw Naruto, or is Naruto cute?"
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "He\u2019s good at fighting and he\u2019s ALWAYS there for his friends\u2026"
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: But is he CUTE??
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: Get your head in the game, Luke!
-        variantGroups: []
+        line: 
+        variantGroups:
+        - lines:
+          - Hell yeah!
+        - lines:
+          - "Wait\u2026 is it cute that I draw Naruto, or is Naruto cute?"
+        - lines:
+          - "He\u2019s good at fighting and he\u2019s ALWAYS there for his friends\u2026"
+        - lines:
+          - But is he CUTE??
+        - lines:
+          - Get your head in the game, Luke!
+        - lines:
+          - "Don\u2019t get hung up on Naruto again. She thinks it\u2019s cute that
+            you draw!"
+        - lines:
+          - Maybe I should draw something for Daisy! THAT would be cute!
         lastSticks: 0
       tags: 
     - charmState: 4
@@ -341,8 +336,8 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: Are you sure you want to be seen talking with a guy who likes as much
-        dorky stuff as I do?
+      line: 'Are you sure you want to be seen talking with a guy who likes as much
+        dorky stuff as I do? [cu_cockydork]'
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -490,8 +485,11 @@ MonoBehaviour:
       tags: 
     deathReactions: []
   draftLines:
-  - line: "We\u2019re into similar nerdy things."
-  - line: "There\u2019s got to be some common ground there."
+  - line: She said it herself, her fantasy book is dorky. I like that!
+  - line: "I\u2019m a dork. Gotta be some common ground there."
   - line: But this might be a real tightrope walk.
   availableUpgrades: []
-  upgradeThreshold: 1
+  upgradeCondition:
+    type: 1
+    playThreshold: 3
+    tag: 0

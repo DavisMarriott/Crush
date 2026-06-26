@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Math Test
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
-  isDance: 0
+  category: 1
+  unlockCondition:
+    type: 0
+    tag: 0
+    loop: 0
   revealed: 1
   previewText: Math Test
   cost: 0
@@ -110,4 +114,7 @@ MonoBehaviour:
   - line: She probably got an A on Ms. Parsons test.
   - line: She's, like, a genius.
   availableUpgrades: []
-  upgradeThreshold: 3
+  upgradeCondition:
+    type: 0
+    playThreshold: 3
+    tag: 0

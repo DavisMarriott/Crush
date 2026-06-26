@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Book
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
-  isDance: 0
+  category: 0
+  unlockCondition:
+    type: 0
+    tag: 0
+    loop: 0
   revealed: 1
   previewText: Book?
-  cost: 3
+  cost: 2
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
@@ -89,7 +93,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: Haha wanna give that another try?
+        line: Wanna give that another try?
         variantGroups: []
         lastSticks: 0
       - character: 2
@@ -101,7 +105,7 @@ MonoBehaviour:
       - character: 0
         confidenceImpact: 0
         charmImpact: 0
-        line: "Uhhh\u2026."
+        line: "See you in a minute\u2026"
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -270,4 +274,7 @@ MonoBehaviour:
   - line: And I always see her reading during lunch.
   - line: "Girls like talking about their hobbies\u2026"
   availableUpgrades: []
-  upgradeThreshold: 3
+  upgradeCondition:
+    type: 0
+    playThreshold: 3
+    tag: 0

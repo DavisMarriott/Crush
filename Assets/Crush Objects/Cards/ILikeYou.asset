@@ -1,0 +1,1006 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
+  m_Name: ILikeYou
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
+  category: 4
+  unlockCondition:
+    type: 1
+    tag: 0
+    loop: 10
+  revealed: 0
+  previewText: I Like You.
+  cost: 6
+  buttonColor: {r: 0, g: 0, b: 0, a: 1}
+  visualPrefab: {fileID: 0}
+  lukeBranches:
+  - branchName: Death
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I LOVE YOU\u2013"
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts: []
+    daisyBranches: []
+    deathReactions:
+    - lines:
+      - "Ahh! You can\u2019t tell her you LOVE her!"
+      - Tell her you LIKE her!
+      - "What\u2019s the matter with me?"
+    - lines:
+      - This is so embarrassing. Thank GOD nobody will remember that.
+    - lines:
+      - Stop saying LOVE!
+  - branchName: Awkward
+    dialogue:
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: 
+      variantGroups:
+      - lines:
+        - You can do this. Just say it.
+      - lines:
+        - "I don\u2019t think I\u2019m gonna be able to say it\u2026"
+      - lines:
+        - Try not to bail out this time.
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Daisy\u2026 I, uh\u2026"
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Well, I like\u2026 you\u2013"
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Get outta there!
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "\u2013kuleles! I like ukuleles."
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "They\u2019re like guitars. But smaller. So\u2026"
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Yeah, I know what a ukulele is.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Yeah, they are small\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "What\u2019s the matter with you?!?"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Well, thanks for telling me, I guess.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: Yeah, that IS true.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Do you\u2026 PLAY the ukulele?"
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: -1
+        charmImpact: 0
+        line: No.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: REAL smooth, doofus.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: Uh, yeah. Ukuleles are cute.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Do you play?
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: No, not really.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "Aw, that\u2019s too bad."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: 'Note to self: learn to play an instrument.'
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: Oh, ukuleles.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Wait! Is she disappointed that I didn\u2019t say \u201CI like YOU?\u201D"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: -1
+        line: "Sure, they\u2019re\u2026 cool I guess."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Did I blow it? Am I crazy?
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    deathReactions: []
+  - branchName: Normal
+    dialogue:
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: 
+      variantGroups:
+      - lines:
+        - You can do this. Just say it.
+      - lines:
+        - "I\u2019m feeling a little too shaky for this\u2026"
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Daisy\u2026 I, uh\u2026"
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Well, I\u2026 like\u2026 you\u2013"
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: BAIL!
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I, like, USUALLY am not this\u2026 awkward."
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Yes you are, Luke.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 1
+        line: You kind of are, Luke.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "She thinks you\u2019re a total lame-o!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "It\u2019s okay, though. Sorry."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "Oh. Um\u2026 it\u2019s okay."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: 0
+        line: We all have off days.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "You don\u2019t know the HALF of it, Daisy!"
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: Oh. Okay.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "You\u2019re not being THAT awkward, Luke."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "Yes I am. You\u2019re just too nice, Daisy."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 1
+        line: I like a little awkward, anyway.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: Oh. Okay.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: -1
+        line: I, like, Usually am not this awkward either.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 1
+        line: "But a little awkwardness is\u2026 you know\u2026 a little charming,
+          too."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    deathReactions: []
+  - branchName: High
+    dialogue:
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: 
+      variantGroups:
+      - lines:
+        - Why am I doing this?
+      - lines:
+        - Remember, she said she likes you!
+      - lines:
+        - "She\u2019s gonna say it back. Try to enjoy it."
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Daisy\u2026 I, uh\u2026"
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I kinda\u2026 like\u2026 you."
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: KINDA?!?!
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: I like you.
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Let\u2019s talk about this another time, Luke."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 1
+        line: You do?!?
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Well, I mean, I \u2013"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "Sorry. You just haven't really been putting an \u201CI like you\u201D
+          vibe out there."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: '#&@%!'
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 1
+        line: "I, uh\u2026 kinda like you, too."
+        variantGroups: []
+        lastSticks: 0
+      tags: 00000000
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 1
+        line: Really?
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: -1
+        line: "I didn\u2019t think you\u2013"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 1
+        line: I kinda like you, too.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: 
+        variantGroups:
+        - lines:
+          - "[+5 conf] Internal: AHHH! I can\u2019t believe it!"
+        - lines:
+          - "[+5 conf] Internal: I\u2019ll NEVER get tired of hearing that!"
+        lastSticks: 0
+      tags: 
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: I kinda thought so.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: '#&@%!'
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 1
+        line: I like you, too.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: 
+        variantGroups:
+        - lines:
+          - '[+3 conf] Internal: WOOHOOOO!!! OH MY GOD OH MY GOD. WHAT DO I DO NOW?!?!'
+        - lines:
+          - '[+3 conf] Internal: Feels great to hear EVERY time!'
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Cool cool.
+        variantGroups: []
+        lastSticks: 0
+      tags: 00000000
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: I LIKE YOU, TOO!
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 1
+        charmImpact: 0
+        line: WHAT?!?
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "I, uh\u2026 sorry, I didn\u2019t mean to blurt that out."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 1
+        line: But I do.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 1
+        line: Like you, I mean.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: 
+        variantGroups:
+        - lines:
+          - Luke Capello, you magnificent sonuva gun! Daisy LIKES you!!!
+        - lines:
+          - NEVER getting tired of this!
+        - lines:
+          - I could get used to this!
+        lastSticks: 0
+      tags: 00000000
+    deathReactions: []
+  - branchName: 'CO: Awkward'
+    dialogue:
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Remember, she said she likes you!
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Daisy\u2026 I, uh\u2026"
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I kinda\u2026 like\u2026 you."
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Let\u2019s talk about this another time, Luke."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 1
+        line: You do?!?
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "You haven't really been putting an \u201CI like you\u201D vibe out
+          there."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 1
+        line: "I, uh\u2026 kinda like you, too."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 1
+        line: Really?
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: -1
+        line: "I didn\u2019t think you\u2013"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 5
+        charmImpact: 1
+        line: I kinda like you, too.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: I kinda thought so.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 5
+        charmImpact: 1
+        line: I like you, too.
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Okay! Cool!
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: -1
+        line: I LIKE YOU, TOO!
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "I, uh\u2026 sorry, I didn\u2019t mean to blurt that out."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 1
+        line: But I do.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 1
+        line: Like you, I mean.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    deathReactions: []
+  - branchName: 'CO: Normal'
+    dialogue:
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: You got this. She likes you!
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Daisy\u2026 I know this might be out of nowhere, but\u2026"
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I\u2026 like\u2026 you."
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Let\u2019s talk about this another time, Luke."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 1
+        line: You do?!?
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "You haven't really been putting an \u201CI like you\u201D vibe out
+          there."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 1
+        line: "I, uh\u2026 like you, too."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 1
+        line: Really?
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: -1
+        line: "I thought you\u2013"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 5
+        charmImpact: 1
+        line: I like you, too.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: I kinda thought so.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 5
+        charmImpact: 1
+        line: I like you, too.
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Great! Awesome.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: -1
+        line: I LIKE YOU, TOO!
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "I, uh\u2026 sorry, I didn\u2019t mean to blurt that out."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 1
+        line: But I do.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 1
+        line: Like you, I mean.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    deathReactions: []
+  - branchName: High
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Daisy\u2026 I\u2019ve never done this before, but\u2026"
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I think you\u2019re really cool, and smart, and funny."
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: And I like you.
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Let\u2019s talk about this another time, Luke."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 1
+        line: Wow. You do?!?
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Thank you. I wasn\u2019t really sure."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 1
+        line: "I, uh\u2026 like you, too, Luke"
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 1
+        line: Really?
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "I didn\u2019t think know\u2013"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "I think you\u2019re cool and smart and funny, too."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 5
+        charmImpact: 1
+        line: And I like you, too.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: I kinda thought so.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 1
+        line: I like you, too.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 0
+        line: "And I think you\u2019re cool and smart and funny, too."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: You forgot to mention cute!
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: -1
+        charmImpact: 0
+        line: Huh?
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "Nevermind. I make dumb jokes when I\u2019m nervous."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: I make HER nervous? This changes EVERYTHING.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 1
+        line: "I\u2026 like you, too, Luke."
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "That\u2019s good to know."
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 3
+        charmImpact: 1
+        line: "And for the record\u2026 I DO think you\u2019re cute."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Holy crap! I\u2019m smooth as hell!"
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    deathReactions: []
+  draftLines:
+  - line: Enough is enough. Just tell her you like her.
+  - line: "You\u2019re already stuck in a time loop. What\u2019s the worst that could
+      happen?"
+  availableUpgrades: []
+  upgradeCondition:
+    type: 1
+    playThreshold: 3
+    tag: 0

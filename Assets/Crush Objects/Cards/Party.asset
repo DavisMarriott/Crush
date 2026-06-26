@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
-  m_Name: Volleyball Practice
+  m_Name: Party
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   category: 0
   unlockCondition:
     type: 0
     tag: 0
     loop: 0
-  revealed: 1
-  previewText: Volleyball Practice
-  cost: 5
+  revealed: 0
+  previewText: How was that party?
+  cost: 4
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
@@ -28,13 +28,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "I like watching you at volleyball practice\u2013"
-      variantGroups: []
-      lastSticks: 0
-    - character: 2
-      confidenceImpact: 0
-      charmImpact: 0
-      line: NOOOOO!!!
+      line: "Do you like to part\u2013"
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -42,21 +36,23 @@ MonoBehaviour:
     daisyBranches: []
     deathReactions:
     - lines:
-      - Ugh. She probably thought you were being a perv!
+      - "Too nervous to even TALK about a party\u2026"
+      - "\u2026let alone GO to one."
     - lines:
-      - Great. I sounded like a peeping Tom!
+      - "Maybe that\u2019s for the best."
+      - Do I really want to know what went on at that party?
   - branchName: Awkward
     dialogue:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "I saw you at, uh\u2026"
+      line: I heard there was a cool party over the weekend.
       variantGroups: []
       lastSticks: 0
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "\u2026volleyball practice."
+      line: "Did you go? I was super busy on Friday night, so I couldn\u2019t. [cu_partysaturday]"
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -64,6 +60,8 @@ MonoBehaviour:
     - state: 1
       impact: 0
     - state: 2
+      impact: 0
+    - state: 3
       impact: 0
     - state: 4
       impact: 0
@@ -73,13 +71,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "Good to know you like creeping on the girls\u2019 volleyball team."
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "Great. Now she thinks you\u2019re a total PERV!"
+        line: The party was on Saturday.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -88,31 +80,19 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: When were you watching us practice?
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: You sound like a creepo!
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "No, I wasn\u2019t, like, WATCHING."
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "I just saw you\u2026 the TEAM. When I walked by the gym."
+        line: "Yeah. I mean, it was a party. Don\u2019t know how COOL it was."
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: Okay. Cool.
+        line: It was on Saturday, though.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: -1
+        charmImpact: 0
+        line: Ugh! Why did you try to bluff your way through this?!?
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -121,85 +101,91 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: -1
-        line: "Oh, well I hope I wasn\u2019t too gross and sweaty."
+        line: You mean Saturday?
         variantGroups: []
         lastSticks: 0
       - character: 0
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "No. You weren\u2019t gross at all."
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: Watch yourself.
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
-        charmImpact: -1
-        line: Just like, normal sweaty.
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
         confidenceImpact: -1
         charmImpact: 0
-        line: IDIOT!
+        line: "Right. Saturday. That\u2019s what I meant."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Great. Now she knows you LIED about being busy.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Anyway, I did go. It was okay.
         variantGroups: []
         lastSticks: 0
       tags: 
     - charmState: 3
       dialogue:
       - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: I hope I was playing well. My serve has been off.
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
         confidenceImpact: 0
         charmImpact: 0
-        line: Oh, you can serve!
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
-        charmImpact: -1
-        line: "I mean you\u2019re a great server\u2026"
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
-        charmImpact: 0
-        line: At volleyball. I mean.
+        line: "Yeah, I went with Jazmine and Caroline\u2026"
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
-        charmImpact: 1
-        line: Hehe. Thanks.
+        charmImpact: -1
+        line: "\u2026 on Saturday."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: -1
+        charmImpact: 0
+        line: AHH! She caught you in a lie!
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: It was kind of overwhelming.
         variantGroups: []
         lastSticks: 0
       tags: 
     - charmState: 4
       dialogue:
       - character: 1
-        confidenceImpact: 1
+        confidenceImpact: 0
         charmImpact: 0
-        line: "Oh yeah? How\u2019d the team look?"
+        line: Does that make ME cool, then?
         variantGroups: []
         lastSticks: 0
       - character: 0
         confidenceImpact: 0
         charmImpact: 0
-        line: You looked good.
+        line: "Yeah. I mean\u2026 you were ALREADY cool. Or whatever."
         variantGroups: []
         lastSticks: 0
-      - character: 0
+      - character: 1
         confidenceImpact: 0
         charmImpact: -1
-        line: The team looked good, I mean.
+        line: Or WHATEVER? Thanks a lot hehe.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "And\u2026 just in case you talk about it with anyone else\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "\u2026the party was on Saturday."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: -1
+        charmImpact: 0
+        line: Caught red-handed!
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -209,154 +195,13 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: I walked by the gym the other day and saw the volleyball team practicing.
+      line: Sounds like there was a big party over the weekend.
       variantGroups: []
       lastSticks: 0
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: The team is looking good!
-      variantGroups: []
-      lastSticks: 0
-    tags: 
-    charmImpacts:
-    - state: 1
-      impact: 1
-    - state: 2
-      impact: 1
-    - state: 3
-      impact: 0
-    daisyBranches:
-    - charmState: 0
-      dialogue: []
-      tags: 
-    - charmState: 1
-      dialogue:
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 1
-        line: Thanks.
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "I\u2019m a little nervous about going up against Marshall High."
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: -1
-        line: "They\u2019re really good."
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: Maybe I should sabotage the other team.
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "Poison the\u2013NO! What are you thinking?"
-        variantGroups: []
-        lastSticks: 0
-      tags: 
-    - charmState: 2
-      dialogue:
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: Thanks. Coach has been working us pretty hard.
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: -1
-        line: I hope it pays off when we go up against Marshall.
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
-        charmImpact: 0
-        line: You got this.
-        variantGroups: []
-        lastSticks: 0
-      tags: 
-    - charmState: 3
-      dialogue:
-      - character: 1
-        confidenceImpact: -1
-        charmImpact: 0
-        line: "Thanks! I\u2019m just glad I didn\u2019t see you."
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 2
-        charmImpact: -1
-        line: I would have gotten too nervous and messed up my serve.
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "I\u2019d make HER nervous?"
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: -1
-        line: "I\u2019ve been in my head about it enough lately."
-        variantGroups: []
-        lastSticks: 0
-      tags: 
-    - charmState: 4
-      dialogue:
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: Really? You think so?
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: -2
-        line: "I hope you didn\u2019t see me mess up my serve."
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
-        charmImpact: 0
-        line: No, you were great!
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 1
-        line: Well thanks. You should come to a match sometime.
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 1
-        charmImpact: 0
-        line: Was that an invitation?
-        variantGroups: []
-        lastSticks: 0
-      tags: 
-    deathReactions: []
-  - branchName: High
-    dialogue:
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: I caught a few minutes of volleyball practice the other day.
-      variantGroups: []
-      lastSticks: 0
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: "You\u2019re kind of a bad-ass on the court."
+      line: "Did you, uh\u2026 go?"
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -376,21 +221,9 @@ MonoBehaviour:
     - charmState: 1
       dialogue:
       - character: 1
-        confidenceImpact: 0
-        charmImpact: 1
-        line: Oh, thanks.
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 2
-        charmImpact: -1
-        line: "We\u2019re just doing drills. It\u2019s not that impressive."
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
+        confidenceImpact: 1
         charmImpact: 0
-        line: "She\u2019s so humble."
+        line: Yeah, for a little bit.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -398,33 +231,14 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 1
-        charmImpact: 1
-        line: Thanks, hehe.
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
         charmImpact: 0
-        line: "I figured high school sports would be more intense, but I didn\u2019t
-          realize it\u2019d be THIS tough."
+        line: Yeah. Me and Jazmine went with Caroline and her older sister.
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 1
-        charmImpact: -1
-        line: "I hope I didn\u2019t make a fool of myself."
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
         charmImpact: 0
-        line: Are you kidding? You were great out there!
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 1
-        line: "That\u2019s really sweet."
+        line: It was a bit much for me.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -433,74 +247,224 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: -1
-        line: You think so?
+        line: Yeah, but Jazmine and Caroline were a little more into it all than
+          I was.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 1
+        confidenceImpact: 2
         charmImpact: 1
-        line: "Wow! I\u2019ve never been called a bad-ass before."
+        line: I wish you went, too.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: "Well, you better watch it then, or I\u2019ll beat you up hehe."
+        confidenceImpact: 0
+        charmImpact: 1
+        line: It probably would have been more fun if you were there.
         variantGroups: []
         lastSticks: 0
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: "Beat the freakin\u2019 crap outta me."
+        line: How do I find out about parties BEFORE they happen?
         variantGroups: []
         lastSticks: 0
       - character: 0
-        confidenceImpact: 1
+        confidenceImpact: 0
         charmImpact: 0
-        line: "Haha. I\u2019ll be on my best behavior."
+        line: Thanks. Next time, then, I guess.
         variantGroups: []
         lastSticks: 0
       tags: 
     - charmState: 4
       dialogue:
       - character: 1
-        confidenceImpact: 1
-        charmImpact: -1
-        line: If you thought THAT was bad-ass, you should come to our next match.
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
         confidenceImpact: 0
-        charmImpact: 0
-        line: "We\u2019re gonna wipe the floor with Marshall High."
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 3
-        charmImpact: 0
-        line: That was totally an invitation!
+        charmImpact: -1
+        line: "Yeah. I guess you didn\u2019t go then?"
         variantGroups: []
         lastSticks: 0
       - character: 0
         confidenceImpact: -1
         charmImpact: 0
-        line: "I\u2019ll be there. I\u2019ll a sign that says \u201C#1 Winfield Fan!\u201D"
+        line: "Uh, no, I\u2026 I was\u2026 busy."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: I WISH you were there.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Jazmine and Caroline kinda did their own thing when we got there.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: You could have made fun of the dumb drunk kids with me.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    deathReactions: []
+  - branchName: High
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: I wish I could have made it to that party over the weekend.
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: I wish someone INVITED me.
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: I heard it was really fun.
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue: []
+      tags: 
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: It was alright.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: "I don\u2019t know if big parties like that are my thing."
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 2
+        charmImpact: 1
+        line: Oh yeah, sure. Me neither, really.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: How would you even know that?
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 1
+        line: It was kinda fun.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: Jazmine and Caroline liked it more than I did.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 1
+        line: But at least I was there with friends.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "I didn\u2019t know you\u2026 partied."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 1
+        line: Yeesh, I must sound SO cool hehe.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: -1
+        line: "I don\u2019t really know if parties like that are my thing yet."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 1
+        line: But, it would have been fun with you there.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: -1
+        line: "I don\u2019t know if it would have been your thing."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: That came out wrong!
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 1
+        line: "It wasn\u2019t really MY thing, and I think me and you are, like\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 2
+        charmImpact: 0
+        line: Made for each other?
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: 1
-        line: "Oh no! Hehe. I\u2019d be so nervous."
+        line: "\u2026similar. Or whatever."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 1
+        line: But, it WOULD have been fun if YOU were there.
         variantGroups: []
         lastSticks: 0
       tags: 
     deathReactions: []
   draftLines:
-  - line: "You did see her at practice the other day\u2026"
-  - line: Maybe tell her how good she loo- I mean, played?
-  - line: "Just don\u2019t say it in a creepy way."
+  - line: I heard there was a wild party last weekend.
+  - line: I think Daisy went.
+  - line: High school parties are probably crazy.
   availableUpgrades: []
   upgradeCondition:
-    type: 0
+    type: 1
     playThreshold: 3
     tag: 0

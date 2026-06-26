@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce99e1dca2b469d89fbea7552f6899b, type: 3}
   m_Name: Dance
   m_EditorClassIdentifier: Assembly-CSharp::DanceCard
-  isDance: 1
+  category: 3
+  unlockCondition:
+    type: 0
+    tag: 0
+    loop: 0
   revealed: 1
   previewText: DANCE?
   cost: 0
@@ -122,7 +126,7 @@ MonoBehaviour:
         line: "I can\u2019t loop again"
         variantGroups: []
         lastSticks: 0
-      tags: 00000000
+      tags: 04000000
     - charmState: 2
       dialogue:
       - character: 1
@@ -149,7 +153,7 @@ MonoBehaviour:
         line: "I can\u2019t loop again"
         variantGroups: []
         lastSticks: 0
-      tags: 00000000
+      tags: 04000000
     - charmState: 3
       dialogue:
       - character: 1
@@ -357,7 +361,10 @@ MonoBehaviour:
   - line: "You\u2019re a man now."
   - line: "That\u2019s what mom says."
   availableUpgrades: []
-  upgradeThreshold: 3
+  upgradeCondition:
+    type: 0
+    playThreshold: 3
+    tag: 0
   firstLoopBranchName: FirstLoop
   confidentBranchName: Confident
   confidentConfidenceThreshold: 17

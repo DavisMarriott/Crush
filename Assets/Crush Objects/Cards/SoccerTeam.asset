@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
-  m_Name: Volleyball Practice
+  m_Name: SoccerTeam
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   category: 0
   unlockCondition:
     type: 0
     tag: 0
     loop: 0
-  revealed: 1
-  previewText: Volleyball Practice
-  cost: 5
+  revealed: 0
+  previewText: Soccer Team
+  cost: 4
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
@@ -28,13 +28,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "I like watching you at volleyball practice\u2013"
-      variantGroups: []
-      lastSticks: 0
-    - character: 2
-      confidenceImpact: 0
-      charmImpact: 0
-      line: NOOOOO!!!
+      line: "I\u2019m a jock\u2013"
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -42,21 +36,25 @@ MonoBehaviour:
     daisyBranches: []
     deathReactions:
     - lines:
-      - Ugh. She probably thought you were being a perv!
+      - "Ugh. You dork! Why did you say you\u2019re a jock?!?"
     - lines:
-      - Great. I sounded like a peeping Tom!
+      - "If you\u2019re just going to say something dumb like \u201CI\u2019m a jock,\u201D..."
+      - Maybe you ARE just a dumb jock.
+      - "Except you aren\u2019t even buff\u2026"
+      - "Or tall\u2026"
+      - Or ABLE TO TALK TO GIRLS!!
   - branchName: Awkward
     dialogue:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "I saw you at, uh\u2026"
+      line: "Ya know, I\u2019m actually kind of jock-ish. [cu_jockitch]"
       variantGroups: []
       lastSticks: 0
-    - character: 0
+    - character: 2
       confidenceImpact: 0
       charmImpact: 0
-      line: "\u2026volleyball practice."
+      line: Yellow card, Luke!
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -65,87 +63,101 @@ MonoBehaviour:
       impact: 0
     - state: 2
       impact: 0
+    - state: 3
+      impact: 0
     - state: 4
       impact: 0
     daisyBranches:
     - charmState: 0
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: -2
         charmImpact: 0
-        line: "Good to know you like creeping on the girls\u2019 volleyball team."
+        line: You have JOCK itch?!
         variantGroups: []
         lastSticks: 0
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: "Great. Now she thinks you\u2019re a total PERV!"
+        line: Oh GOD, NO! WHY?!?
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "NO! I mean, I\u2019m\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Take me out, coach!
         variantGroups: []
         lastSticks: 0
       tags: 
     - charmState: 1
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: -2
         charmImpact: 0
-        line: When were you watching us practice?
+        line: You have JOCK itch?!
         variantGroups: []
         lastSticks: 0
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: You sound like a creepo!
+        line: No no no no no.
         variantGroups: []
         lastSticks: 0
       - character: 0
         confidenceImpact: 0
         charmImpact: 0
-        line: "No, I wasn\u2019t, like, WATCHING."
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "I just saw you\u2026 the TEAM. When I walked by the gym."
+        line: "NO! I\u2019m jock-ISH. You know, jocky."
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: Okay. Cool.
+        line: A jockey?
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: You race horses?
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "I\u2019m on the soccer\u2013 you know what, nevermind."
         variantGroups: []
         lastSticks: 0
       tags: 
     - charmState: 2
       dialogue:
       - character: 1
-        confidenceImpact: 0
-        charmImpact: -1
-        line: "Oh, well I hope I wasn\u2019t too gross and sweaty."
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "No. You weren\u2019t gross at all."
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: Watch yourself.
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
-        charmImpact: -1
-        line: Just like, normal sweaty.
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
         confidenceImpact: -1
+        charmImpact: -1
+        line: Jock-ish? Like, sporty or something?
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
         charmImpact: 0
-        line: IDIOT!
+        line: "Yeah, that\u2019s what I meant."
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 1
+        charmImpact: 0
+        line: "I\u2019m on the soccer team."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Oh, yeah. I know.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -153,53 +165,59 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 1
-        charmImpact: 0
-        line: I hope I was playing well. My serve has been off.
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
-        charmImpact: 0
-        line: Oh, you can serve!
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
         charmImpact: -1
-        line: "I mean you\u2019re a great server\u2026"
+        line: Wow, very cool.
         variantGroups: []
         lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
+      - character: 1
+        confidenceImpact: -1
         charmImpact: 0
-        line: At volleyball. I mean.
+        line: "It\u2019s kind of a weird way to say that, hehe."
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: 1
-        line: Hehe. Thanks.
+        line: "But I\u2019ve seen you playing soccer, I know."
         variantGroups: []
         lastSticks: 0
       tags: 
     - charmState: 4
       dialogue:
       - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: "Oh yeah? How\u2019d the team look?"
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
-        charmImpact: 0
-        line: You looked good.
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
         confidenceImpact: 0
         charmImpact: -1
-        line: The team looked good, I mean.
+        line: "You don\u2019t have to try to impress me, Luke."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "Oh no\u2026I\u2019ve become the worst kind of guy in the world:"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: -1
+        line: "And I\u2019m not, like, into JOCKS or anything."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "I\u2019m a poser!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: But maybe I should come watch you play some time.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: "See if you\u2019re really as jock-ish as you say, hehe."
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -209,154 +227,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: I walked by the gym the other day and saw the volleyball team practicing.
-      variantGroups: []
-      lastSticks: 0
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: The team is looking good!
-      variantGroups: []
-      lastSticks: 0
-    tags: 
-    charmImpacts:
-    - state: 1
-      impact: 1
-    - state: 2
-      impact: 1
-    - state: 3
-      impact: 0
-    daisyBranches:
-    - charmState: 0
-      dialogue: []
-      tags: 
-    - charmState: 1
-      dialogue:
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 1
-        line: Thanks.
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "I\u2019m a little nervous about going up against Marshall High."
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: -1
-        line: "They\u2019re really good."
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: Maybe I should sabotage the other team.
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "Poison the\u2013NO! What are you thinking?"
-        variantGroups: []
-        lastSticks: 0
-      tags: 
-    - charmState: 2
-      dialogue:
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: Thanks. Coach has been working us pretty hard.
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: -1
-        line: I hope it pays off when we go up against Marshall.
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
-        charmImpact: 0
-        line: You got this.
-        variantGroups: []
-        lastSticks: 0
-      tags: 
-    - charmState: 3
-      dialogue:
-      - character: 1
-        confidenceImpact: -1
-        charmImpact: 0
-        line: "Thanks! I\u2019m just glad I didn\u2019t see you."
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 2
-        charmImpact: -1
-        line: I would have gotten too nervous and messed up my serve.
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "I\u2019d make HER nervous?"
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: -1
-        line: "I\u2019ve been in my head about it enough lately."
-        variantGroups: []
-        lastSticks: 0
-      tags: 
-    - charmState: 4
-      dialogue:
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: Really? You think so?
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: -2
-        line: "I hope you didn\u2019t see me mess up my serve."
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
-        charmImpact: 0
-        line: No, you were great!
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 1
-        line: Well thanks. You should come to a match sometime.
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 1
-        charmImpact: 0
-        line: Was that an invitation?
-        variantGroups: []
-        lastSticks: 0
-      tags: 
-    deathReactions: []
-  - branchName: High
-    dialogue:
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: I caught a few minutes of volleyball practice the other day.
-      variantGroups: []
-      lastSticks: 0
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: "You\u2019re kind of a bad-ass on the court."
+      line: I hear the, uh, freshman soccer team is looking pretty good this season.
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -371,60 +242,59 @@ MonoBehaviour:
       impact: 0
     daisyBranches:
     - charmState: 0
-      dialogue: []
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Good for a walk-on team, maybe.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 1
       dialogue:
       - character: 1
-        confidenceImpact: 0
-        charmImpact: 1
-        line: Oh, thanks.
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 2
-        charmImpact: -1
-        line: "We\u2019re just doing drills. It\u2019s not that impressive."
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
+        confidenceImpact: -1
         charmImpact: 0
-        line: "She\u2019s so humble."
+        line: "I KNOW you\u2019re on the team, Luke. Why so mysterious?"
         variantGroups: []
         lastSticks: 0
       tags: 
     - charmState: 2
       dialogue:
       - character: 1
-        confidenceImpact: 1
-        charmImpact: 1
-        line: Thanks, hehe.
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "I figured high school sports would be more intense, but I didn\u2019t
-          realize it\u2019d be THIS tough."
+        line: I heard. Brett said you guys might be almost as good as the JV team.
         variantGroups: []
         lastSticks: 0
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: -1
-        line: "I hope I didn\u2019t make a fool of myself."
+      - character: 2
+        confidenceImpact: -2
+        charmImpact: 0
+        line: Brett KISSINGER!?! Why would she bring HIM up?!?
         variantGroups: []
         lastSticks: 0
       - character: 0
         confidenceImpact: 0
         charmImpact: 0
-        line: Are you kidding? You were great out there!
+        line: Brett who? Kissinger?
         variantGroups: []
         lastSticks: 0
-      - character: 1
+      - character: 0
         confidenceImpact: 0
-        charmImpact: 1
-        line: "That\u2019s really sweet."
+        charmImpact: 0
+        line: "He\u2019s on JV I think, right? Cool cool."
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: -1
+        line: Yeah, maybe we could even beat them.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Beat HIM. Penalty kick him right in the dinger!
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -432,75 +302,235 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 0
-        charmImpact: -1
-        line: You think so?
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 1
-        line: "Wow! I\u2019ve never been called a bad-ass before."
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 1
         charmImpact: 0
-        line: "Well, you better watch it then, or I\u2019ll beat you up hehe."
+        line: I heard! You know Andre?
         variantGroups: []
         lastSticks: 0
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: "Beat the freakin\u2019 crap outta me."
+        line: Oh no, not Andre! I like that guy!
         variantGroups: []
         lastSticks: 0
-      - character: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "He plays forward, or, no\u2026 anyway, he and Jazmine are kind of
+          going out\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
         confidenceImpact: 1
         charmImpact: 0
-        line: "Haha. I\u2019ll be on my best behavior."
+        line: Phew.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "\u2026 and she said HE said the team is really good, too."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 1
+        line: I hope I can make it to a game.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: I will score a million goals for you.
         variantGroups: []
         lastSticks: 0
       tags: 
     - charmState: 4
       dialogue:
       - character: 1
-        confidenceImpact: 1
+        confidenceImpact: -1
         charmImpact: -1
-        line: If you thought THAT was bad-ass, you should come to our next match.
+        line: Oh yeah, cool guy?
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "We\u2019re gonna wipe the floor with Marshall High."
+        line: "Jazmine said she\u2019s gonna go to all of Andre\u2019s games."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: "Maybe I\u2019ll go with her to one."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 1
+        line: Watch you show off a little, hehe.
         variantGroups: []
         lastSticks: 0
       - character: 2
-        confidenceImpact: 3
+        confidenceImpact: 0
         charmImpact: 0
-        line: That was totally an invitation!
+        line: AHH! I gotta start two-a-days!
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    deathReactions:
+    - lines:
+      - "Oh man, that stung! She\u2019s usually so nice."
+      - I must have been really annoying her.
+  - branchName: High
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I don\u2019t know if you like soccer, but the team is looking good this
+        season."
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: The freshman team, I mean.
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: You should come watch us play.
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: My schedule is pretty busy right now. Sorry.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 1
+        line: I like soccer okay.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: -1
+        line: But yeah, no, that could be fun.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Oof, she\u2019s not gonna come to a game."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: Yeah, I heard! Jazmine has been asking me to go, too.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: "I\u2019ll do my best to make it to a game!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Gotta show up for our class and show some school pride!
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: -1
+        charmImpact: 0
+        line: I want you to show up for ME, not school pride.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 1
+        line: "I\u2019d love to come to a game!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Ahh, you didn\u2019t think this through! Now you have to be GOOD!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: If that was an invitation.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: 0
+        line: "Ooh, that\u2019s some big talk, Luke."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: You better have some moves out on the field then, hehe.
         variantGroups: []
         lastSticks: 0
       - character: 0
         confidenceImpact: -1
         charmImpact: 0
-        line: "I\u2019ll be there. I\u2019ll a sign that says \u201C#1 Winfield Fan!\u201D"
+        line: "I, uh\u2026 I\u2019ve got some moves."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: -1
+        charmImpact: 0
+        line: You have NO moves!
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 2
         charmImpact: 1
-        line: "Oh no! Hehe. I\u2019d be so nervous."
+        line: "I\u2019m just teasing. I\u2019d love to watch you play."
         variantGroups: []
         lastSticks: 0
       tags: 
     deathReactions: []
   draftLines:
-  - line: "You did see her at practice the other day\u2026"
-  - line: Maybe tell her how good she loo- I mean, played?
-  - line: "Just don\u2019t say it in a creepy way."
+  - line: "The freshman soccer team is BASICALLY a walk-on\u2026"
+  - line: "\u2026but still, I\u2019m KIND OF a jock."
+  - line: AND she plays volleyball, so she might like a jock-ish kind of guy.
   availableUpgrades: []
   upgradeCondition:
-    type: 0
+    type: 1
     playThreshold: 3
     tag: 0

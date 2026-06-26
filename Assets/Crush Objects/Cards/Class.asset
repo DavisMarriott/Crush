@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Class
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
-  isDance: 0
+  category: 1
+  unlockCondition:
+    type: 0
+    tag: 0
+    loop: 0
   revealed: 1
   previewText: Class was boring
   cost: 0
@@ -338,4 +342,7 @@ MonoBehaviour:
   - line: Something easy
   - line: Just talk about how boring 4th period was
   availableUpgrades: []
-  upgradeThreshold: 3
+  upgradeCondition:
+    type: 0
+    playThreshold: 3
+    tag: 0

@@ -13,7 +13,77 @@ MonoBehaviour:
   m_Name: Music_CostUpgrade
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCardUpgrade
   costDelta: -1
-  branchOverrides: []
+  branchOverrides:
+  - branchName: Normal
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Have you heard that new Penny Farthing song yet?
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 4
+    - state: 2
+      impact: 3
+    - state: 3
+      impact: 2
+    - state: 4
+      impact: 1
+    daisyBranches:
+    - charmState: 1
+      dialogue:
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: Oh you like them too?? Yeah, it's really good. I've been playing it
+          a bunch.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 3
+        charmImpact: 0
+        line: It's soooo good! OMG, I didn't know you liked them.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 3
+      dialogue:
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: OMG I'm obsessed with the new song! It has like 2 million plays already.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: But at least a million are me.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: 0
+        line: They're SO good! I totally knew about them like 3 years ago, before
+          they blew up.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 4
+        charmImpact: 0
+        line: That's cool you like them too! We should listen to the new album together.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    deathReactions: []
   branchAdditions: []
   previewTextOverride: 
   visualPrefab: {fileID: 5626390890515017851, guid: 839aeaaca1feb4c979b9da13f5ff988e, type: 3}

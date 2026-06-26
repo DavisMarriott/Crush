@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
-  m_Name: I Like You
+  m_Name: HowsYourDay
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   category: 0
   unlockCondition:
@@ -18,8 +18,8 @@ MonoBehaviour:
     tag: 0
     loop: 0
   revealed: 0
-  previewText: I Like You.
-  cost: 9
+  previewText: "How\u2019s Your Day Going?"
+  cost: 1
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
@@ -28,7 +28,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "I LOVE YOU\u2013"
+      line: "How YOU doin\u2013"
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -36,43 +36,16 @@ MonoBehaviour:
     daisyBranches: []
     deathReactions:
     - lines:
-      - "Ahh! You can\u2019t tell her you LOVE her!"
-      - Tell her you LIKE her!
-      - "What\u2019s the matter with me?"
+      - "Well if I hadn\u2019t died, I probably would have BORED Daisy to death."
     - lines:
-      - This is so embarrassing. Thank GOD nobody will remember that.
-    - lines:
-      - Stop saying LOVE!
+      - "Did I die quoting \u201CFriends?\u201D"
+      - That SUCKS!
   - branchName: Awkward
     dialogue:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "Daisy\u2026 I, uh\u2026"
-      variantGroups: []
-      lastSticks: 0
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: "Well, I like\u2026 you\u2013"
-      variantGroups: []
-      lastSticks: 0
-    - character: 2
-      confidenceImpact: 0
-      charmImpact: 0
-      line: Get outta there!
-      variantGroups: []
-      lastSticks: 0
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: "\u2013kuleles! I like ukuleles."
-      variantGroups: []
-      lastSticks: 0
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: "They\u2019re like guitars. But smaller. So\u2026"
+      line: "How\u2019s your\u2026 uh\u2026 day going?"
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -91,7 +64,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: Yeah, I know what a ukulele is.
+        line: "It\u2019s going okay."
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -100,19 +73,13 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "Yeah, they are small\u2026"
+        line: "Going okay. How\u2019s yours?"
         variantGroups: []
         lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
+      - character: 0
+        confidenceImpact: 1
         charmImpact: 0
-        line: "What\u2019s the matter with you?!?"
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: Well, thanks for telling me, I guess.
+        line: Yeah. Okay, too.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -120,26 +87,20 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 0
-        charmImpact: 0
-        line: Yeah, that IS true.
+        charmImpact: -1
+        line: "It\u2019s been okay. Nothing too exciting"
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 2
         charmImpact: 0
-        line: "Do you\u2026 PLAY the ukulele?"
+        line: "How\u2019s yours been?"
         variantGroups: []
         lastSticks: 0
       - character: 0
         confidenceImpact: 0
         charmImpact: 0
-        line: No.
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: REAL smooth, doofus.
+        line: Same.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -147,32 +108,20 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 0
-        charmImpact: 0
-        line: Uh, yeah. Ukuleles are cute.
+        charmImpact: -1
+        line: Just another Tuesday.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 2
         charmImpact: 0
-        line: Do you play?
+        line: "How\u2019d yours?"
         variantGroups: []
         lastSticks: 0
       - character: 0
         confidenceImpact: 0
         charmImpact: 0
-        line: No, not really.
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "Aw, that\u2019s too bad."
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: 'Note to self: learn to play an instrument.'
+        line: "Yep\u2026 just another Tuesday."
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -180,26 +129,26 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 0
-        charmImpact: 0
-        line: Oh, ukuleles.
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "Wait! Is she disappointed that I didn\u2019t say \u201CI like YOU?\u201D"
+        charmImpact: -1
+        line: Going alright.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 1
         charmImpact: 0
-        line: "Sure, they\u2019re\u2026 cool I guess."
+        line: A little better now.
         variantGroups: []
         lastSticks: 0
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: Did I blow it? Am I crazy?
+        line: Whoa! Because of me?!?
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Cool cool.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -209,25 +158,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "Daisy\u2026 I, uh\u2026"
-      variantGroups: []
-      lastSticks: 0
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: "Well, I\u2026 like\u2026 you\u2013"
-      variantGroups: []
-      lastSticks: 0
-    - character: 2
-      confidenceImpact: 0
-      charmImpact: 0
-      line: BAIL!
-      variantGroups: []
-      lastSticks: 0
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: "I, like, USUALLY am not this\u2026 awkward."
+      line: "How\u2019s your day been so far?"
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -246,7 +177,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: Yes you are, Luke.
+        line: Fine.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -255,13 +186,13 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: I mean, you ARE being a little shifty.
+        line: Been alright. How about yours?
         variantGroups: []
         lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
+      - character: 0
+        confidenceImpact: 1
         charmImpact: 0
-        line: "She thinks you\u2019re a total SKETCH-ball!"
+        line: Yeah. Been alright, too.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -270,19 +201,19 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "Oh. Um\u2026 it\u2019s okay."
+        line: "It\u2019s been okay. Nothing too exciting"
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 1
         charmImpact: 0
-        line: We all have off days.
+        line: "How\u2019s yours been?"
         variantGroups: []
         lastSticks: 0
-      - character: 2
+      - character: 0
         confidenceImpact: 0
         charmImpact: 0
-        line: "You don\u2019t know the HALF of it, Daisy!"
+        line: Same.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -290,26 +221,20 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 0
-        charmImpact: 0
-        line: Oh. Okay.
+        charmImpact: -1
+        line: Just another Tuesday.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 1
         charmImpact: 0
-        line: "You\u2019re not being THAT awkward, Luke."
+        line: "How\u2019s yours?"
         variantGroups: []
         lastSticks: 0
-      - character: 2
+      - character: 0
         confidenceImpact: 0
         charmImpact: 0
-        line: "Yes I am. You\u2019re just too nice, Daisy."
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: I like a little awkward, anyway.
+        line: "Yep\u2026 just another Tuesday."
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -317,21 +242,21 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 0
-        charmImpact: 0
-        line: Oh. Okay.
+        charmImpact: -1
+        line: "It\u2019s been another thrilling Tuesday!"
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 1
         charmImpact: 0
-        line: I, like, Usually am not this awkward either.
+        line: "It\u2019s been fine, hehe. How\u2019s yours?"
         variantGroups: []
         lastSticks: 0
-      - character: 1
+      - character: 0
         confidenceImpact: 0
         charmImpact: 0
-        line: "But a little awkwardness is\u2026 you know\u2026 a little charming,
-          too."
+        line: "I wouldn\u2019t say it\u2019s been THRILLING, exactly. Interesting,
+          maybe."
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -341,25 +266,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "Daisy\u2026 I, uh\u2026"
-      variantGroups: []
-      lastSticks: 0
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: "I kinda\u2026 like\u2026 you."
-      variantGroups: []
-      lastSticks: 0
-    - character: 2
-      confidenceImpact: 0
-      charmImpact: 0
-      line: KINDA?!?!
-      variantGroups: []
-      lastSticks: 0
-    - character: 0
-      confidenceImpact: 0
-      charmImpact: 0
-      line: I like you.
+      line: "How\u2019s YOUR day going?"
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -378,50 +285,56 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "Let\u2019s talk about this another time, Luke."
+        line: "It\u2019s fine."
         variantGroups: []
         lastSticks: 0
-      tags: 00000000
+      tags: 
     - charmState: 1
       dialogue:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: You do?!?
+        line: "Going okay. How\u2019s yours?"
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 1
+        charmImpact: 0
+        line: "It\u2019s been one of the more interesting days I\u2019ve had in a
+          while."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Sounds like a story for another time.
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 2
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: Going alight. Nothing too exciting.
         variantGroups: []
         lastSticks: 0
       - character: 0
         confidenceImpact: 0
         charmImpact: 0
-        line: "Well, I mean, I \u2013"
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "Sorry. You just haven't really been putting an \u201CI like you\u201D
-          vibe out there."
+        line: "Yeah\u2026 nothing TOO exciting here, either."
         variantGroups: []
         lastSticks: 0
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: '#&@%!'
+        line: If you only knew, Daisy.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 2
         charmImpact: 0
-        line: "I, uh\u2026 kinda like you, too."
-        variantGroups: []
-        lastSticks: 0
-      tags: 0000000000000000
-    - charmState: 2
-      dialogue:
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: Really?
+        line: "Well, then at least we\u2019re BOTH boring."
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -429,69 +342,69 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 0
-        charmImpact: 0
-        line: I kinda thought so.
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: '#&@%!'
-        variantGroups: []
-        lastSticks: 0
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: I like you, too.
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: WOOHOOOO!!! OH MY GOD OH MY GOD WHAT DO I DO NOW?!?!
+        charmImpact: -1
+        line: Just another Tuesday.
         variantGroups: []
         lastSticks: 0
       - character: 0
         confidenceImpact: 0
         charmImpact: 0
-        line: Cool cool.
+        line: Another TACO Tuesday!
         variantGroups: []
         lastSticks: 0
-      tags: 0000000000000000
-    - charmState: 4
-      dialogue:
       - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: I LIKE YOU, TOO!
+        confidenceImpact: 1
+        charmImpact: 1
+        line: "Hehe. We mustn\u2019t forget!"
         variantGroups: []
         lastSticks: 0
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: WHAT?!?
+        line: "I\u2019m gonna house so many tacos at lunch! If I get out of this
+          loop."
+        variantGroups: []
+        lastSticks: 0
+      tags: 
+    - charmState: 4
+      dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "It\u2019s been another thrilling Tuesday!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: -1
+        line: "I\u2019m detecting a little sarcasm, Daisy."
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Are you forgetting about TACO Tuesday?
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "I, uh\u2026 sorry, I didn\u2019t mean to blurt that out."
+        confidenceImpact: 1
+        charmImpact: 1
+        line: Hehehe. How could I forget?
         variantGroups: []
         lastSticks: 0
-      - character: 1
+      - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: But I do. Like you, I mean.
+        line: I just realized how hungry I am. Ugh!
         variantGroups: []
         lastSticks: 0
-      tags: 0000000000000000
+      tags: 
     deathReactions: []
   draftLines:
-  - line: Just say it. Just tell her you like her.
-  - line: "You\u2019re already stuck in a time loop. What\u2019s the worst that could
-      happen?"
+  - line: Just some small talk.
+  - line: A little small talk never killed anyone.
   availableUpgrades: []
   upgradeCondition:
     type: 0
-    playThreshold: 3
+    playThreshold: 1
     tag: 0

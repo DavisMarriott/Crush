@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Weekend
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
-  isDance: 0
+  category: 0
+  unlockCondition:
+    type: 0
+    tag: 0
+    loop: 0
   revealed: 1
   previewText: Weekend
   cost: 3
@@ -233,4 +237,7 @@ MonoBehaviour:
   - line: Right?
   - line: Their plans for the weekend?
   availableUpgrades: []
-  upgradeThreshold: 3
+  upgradeCondition:
+    type: 0
+    playThreshold: 3
+    tag: 0

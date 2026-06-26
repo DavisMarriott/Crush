@@ -9,4 +9,6 @@ public enum DialogueTag
     Likesher,
     Likeshim,
     Partysaturday,
+    Ms_dorky,
+    Cu_likeshim,
 }
