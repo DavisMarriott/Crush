@@ -1953,10 +1953,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TextAudio
       objectReference: {fileID: 0}
-    - target: {fileID: 3062493015039339872, guid: 2cefe7e2dc4324e41858807c4e770ee0, type: 3}
-      propertyPath: soundClips.Array.size
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 7093592459281351448, guid: 2cefe7e2dc4324e41858807c4e770ee0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2699,6 +2695,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character_Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3609913239899647806, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
+      propertyPath: animationTriggerCrush
+      value: 
+      objectReference: {fileID: 1561869875}
     - target: {fileID: 4400308429686677114, guid: 1d4ddeb5f244044e9a2cf3cc66d48d9b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1369.6357

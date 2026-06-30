@@ -44,7 +44,7 @@ public class AnimationTriggerCrush : MonoBehaviour
         {
         animator.Play("Crush_Neutral_CYCLE", 0);
         }
-}
+    }
     
     public void NegativeOne()
     {
@@ -139,6 +139,39 @@ public class AnimationTriggerCrush : MonoBehaviour
             PositiveTwo();
     }
     
+    // Luke's Death Reaction //
+    
+    public void DeathReaction()
+    {
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+
+        if (stateInfo.IsName("Crush_Positive02_CYCLE"))
+        {
+            animator.Play("Crush_Positive02_to_Positive01", 0);
+        }
+        
+        else if (stateInfo.IsName("Crush_Positive01_CYCLE"))
+        {
+            animator.Play("Crush_Positive01_to_Neutral", 0);
+        }
+        
+        else if (stateInfo.IsName("Crush_Neutral_CYCLE"))
+        {
+            animator.Play("Crush_Neutral_to_Negative01", 0);
+        }
+
+        else if (stateInfo.IsName("Crush_Negative01_CYCLE"))
+        {
+            animator.Play("Crush_Negative01_to_Negative02", 0);
+        }
+
+        else if (stateInfo.IsName("Crush_Negative02_CYCLE"))
+        {
+            animator.Play("Crush_Negative02_to_Negative01", 0);
+        }
+
+    }
+    
     
     // Particle Systems //
     
@@ -156,6 +189,8 @@ public class AnimationTriggerCrush : MonoBehaviour
     {
         particlesCharmedState.Play("Particles_CharmedState_TurnOff", 0);
     }
+    
+    
     
     
 }

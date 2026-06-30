@@ -46,7 +46,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -144,27 +144,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RandomSoundPlayer
   audioSource: {fileID: 8538808968906655466}
   soundClips:
-  - {fileID: 8300000, guid: 5ef8a6534b7a34035b308775851abafa, type: 3}
-  - {fileID: 8300000, guid: 815f5c91b7f5e44a2886a01535d97fbc, type: 3}
-  - {fileID: 8300000, guid: 7ebf4749dbea6428593b7cbbdf21e3b4, type: 3}
-  - {fileID: 8300000, guid: 740df935c3c7945c5b42f6506b9db2bf, type: 3}
-  - {fileID: 8300000, guid: 9e7b5fed9dcda43baa1fc78147d7ffec, type: 3}
-  - {fileID: 8300000, guid: a0c363b6f8f584a37b3775eaf13f587e, type: 3}
-  - {fileID: 8300000, guid: 75f9d22c6650446ab8aabfc81fdd5ff5, type: 3}
-  - {fileID: 8300000, guid: fe3cee00d3f4347e99e4a915b6be9e38, type: 3}
-  - {fileID: 8300000, guid: 3dc1cee04439e44978b75a12c1d23a4c, type: 3}
-  - {fileID: 8300000, guid: c1cb20de1d1824fe69374df418793ffe, type: 3}
-  - {fileID: 8300000, guid: 2bf65fb72bf9746858b646396aefba5f, type: 3}
-  - {fileID: 8300000, guid: 471276e2c096c42a2947d807924c8b48, type: 3}
-  - {fileID: 8300000, guid: 97848122342d04f999fdb1dfba9ad0f3, type: 3}
-  minDelay: 0.07
-  maxDelay: 0.12
+  - {fileID: 8300000, guid: 1423f1ec916c146049bebdf82f0cd8b8, type: 3}
+  - {fileID: 8300000, guid: 28e3f894b6a8d494cb8e8edb085adfa0, type: 3}
+  - {fileID: 8300000, guid: 2b0346642b1cf47819e3c16f6803e759, type: 3}
+  minDelay: 0.085
+  maxDelay: 0.1
   timeBetweenClips: 0
   nextPlayTime: 0
-  minPitchLuke: 0.8
-  maxPitchLuke: 1.2
-  minPitchLukeSelf: 0.4
-  maxPitchLukeSelf: 0.8
-  minPitchDaisy: 2
-  maxPitchDaisy: 2.3
+  minPitchLuke: 0.9
+  maxPitchLuke: 1.1
+  minPitchLukeSelf: 0.7
+  maxPitchLukeSelf: 0.9
+  minPitchDaisy: 1.3
+  maxPitchDaisy: 1.5
   speakingCharacter: 0
+  muted: 0
