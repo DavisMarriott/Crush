@@ -253,16 +253,16 @@ MonoBehaviour:
         variantGroups: []
         lastSticks: 0
       - character: 2
-        confidenceImpact: 0
+        confidenceImpact: 2
         charmImpact: 0
         line: 
         variantGroups:
         - lines:
-          - "[+2 conf] Internal: Whoa\u2026 did I just do a flirt?"
+          - "Whoa\u2026 did I just do a flirt?"
         - lines:
-          - "[+2 conf] Internal: Dude\u2026 I think you\u2019re flirting!"
+          - "Dude\u2026 I think you\u2019re flirting!"
         - lines:
-          - "[+2 conf] Internal: You\u2019re a natural, Luke. A freakin\u2019 casanova!"
+          - "You\u2019re a natural, Luke. A freakin\u2019 casanova!"
         lastSticks: 0
       - character: 1
         confidenceImpact: 3

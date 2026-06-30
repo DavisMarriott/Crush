@@ -31,6 +31,18 @@ MonoBehaviour:
       line: You are soooo hot
       variantGroups: []
       lastSticks: 0
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: -1
+      line: What?!
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: What?!
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts: []
     daisyBranches: []
@@ -101,14 +113,14 @@ MonoBehaviour:
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 1
+        confidenceImpact: 0
         charmImpact: 0
         line: I mean - thanks! That's really nice.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 4
-        charmImpact: 0
+        confidenceImpact: 6
+        charmImpact: -1
         line: "You look cu- uhh\u2026 nice.. too"
         variantGroups: []
         lastSticks: 0

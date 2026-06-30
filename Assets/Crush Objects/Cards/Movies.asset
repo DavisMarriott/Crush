@@ -55,14 +55,33 @@ MonoBehaviour:
       line: I haven't seen anything in a while. I could use a good recommendation.
       variantGroups: []
       lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: I just scroll on Netflix and can never pick anything.
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Half the time I just add a few things to my list and never actually watch
+        a movie.
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Shut uppp Luke\u2026.."
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts:
     - state: 1
-      impact: 1
+      impact: 0
     - state: 2
-      impact: 2
+      impact: 0
     - state: 3
-      impact: 1
+      impact: 0
     daisyBranches:
     - charmState: 0
       dialogue: []
@@ -70,16 +89,22 @@ MonoBehaviour:
     - charmState: 1
       dialogue:
       - character: 1
-        confidenceImpact: -2
+        confidenceImpact: 0
         charmImpact: 0
-        line: "Nooo\u2026. not that I can remember."
+        line: Haha umm
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Geez, did I say something wrong?
         variantGroups: []
         lastSticks: 0
       tags: 
     - charmState: 2
       dialogue:
       - character: 1
-        confidenceImpact: 1
+        confidenceImpact: 0
         charmImpact: 0
         line: Yeah I did actually!
         variantGroups: []
@@ -100,13 +125,13 @@ MonoBehaviour:
     - charmState: 3
       dialogue:
       - character: 1
-        confidenceImpact: 1
+        confidenceImpact: 0
         charmImpact: 0
         line: Yeah I did actually!
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 1
+        confidenceImpact: 0
         charmImpact: 0
         line: It was this really old movie about these two cops.
         variantGroups: []
@@ -127,7 +152,7 @@ MonoBehaviour:
     - charmState: 4
       dialogue:
       - character: 1
-        confidenceImpact: 1
+        confidenceImpact: 0
         charmImpact: 0
         line: Yeah I did actually!
         variantGroups: []
@@ -145,7 +170,7 @@ MonoBehaviour:
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 3
+        confidenceImpact: 1
         charmImpact: 0
         line: We should watch it together!
         variantGroups: []
@@ -154,6 +179,12 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: 0
         line: "I mean - if you want to\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "I\u2019d watch paint dry with her."
         variantGroups: []
         lastSticks: 0
       tags: 

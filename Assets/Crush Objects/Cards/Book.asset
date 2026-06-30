@@ -113,7 +113,25 @@ MonoBehaviour:
       dialogue: []
       tags: 
     - charmState: 2
-      dialogue: []
+      dialogue:
+      - character: 1
+        confidenceImpact: -1
+        charmImpact: 0
+        line: hehe thanks?
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "It\u2019s this whole series."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 1
+        charmImpact: 0
+        line: Kind of a guilty pleasure.
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 3
       dialogue: []
@@ -133,7 +151,7 @@ MonoBehaviour:
     tags: 
     charmImpacts:
     - state: 1
-      impact: 2
+      impact: 1
     - state: 2
       impact: 2
     - state: 3

@@ -410,6 +410,24 @@ namespace Crush.EditorTools
                         if (!string.IsNullOrEmpty(slotMarker.remainder))
                         {
                             var lineText = slotMarker.remainder;
+
+                            // A second [..] annotation after the slot marker (e.g. "[1st] [0 conf] Internal: ...")
+                            // carries this line's conf/charm - fold it into the slot's impacts and strip it,
+                            // otherwise the "[0 conf] Internal:" prefix leaks into the rendered text.
+                            var annot = Regex.Match(lineText, @"^\[([^\]]+)\]\s*");
+                            if (annot.Success)
+                            {
+                                foreach (var piece in annot.Groups[1].Value.Split(','))
+                                {
+                                    var im = Regex.Match(piece.Trim(), @"^([+\-]?\d+)\s*(conf|charm)$", RegexOptions.IgnoreCase);
+                                    if (!im.Success) continue;
+                                    int.TryParse(im.Groups[1].Value, out int val);
+                                    if (im.Groups[2].Value.Equals("conf", StringComparison.OrdinalIgnoreCase)) currentSlot.confidenceImpact = val;
+                                    else currentSlot.charmImpact = val;
+                                }
+                                lineText = lineText.Substring(annot.Length);
+                            }
+
                             var sp = Regex.Match(lineText, @"^(Luke|Internal|Daisy):\s*(.+)$", RegexOptions.IgnoreCase);
                             if (sp.Success)
                             {

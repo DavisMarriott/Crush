@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
   m_Name: Weekend
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
-  category: 0
+  category: 1
   unlockCondition:
     type: 0
     tag: 0

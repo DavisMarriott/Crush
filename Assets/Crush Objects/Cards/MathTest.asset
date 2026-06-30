@@ -56,7 +56,7 @@ MonoBehaviour:
     - state: 2
       impact: 0
     - state: 3
-      impact: 0
+      impact: -1
     daisyBranches:
     - charmState: 0
       dialogue:
@@ -94,8 +94,14 @@ MonoBehaviour:
     - charmState: 3
       dialogue:
       - character: 1
-        confidenceImpact: 3
+        confidenceImpact: 0
         charmImpact: 0
+        line: I think I did pretty well.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 2
+        charmImpact: -1
         line: I could help you study for the next one.
         variantGroups: []
         lastSticks: 0

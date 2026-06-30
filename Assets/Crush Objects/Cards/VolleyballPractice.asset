@@ -64,6 +64,8 @@ MonoBehaviour:
     - state: 1
       impact: 0
     - state: 2
+      impact: 1
+    - state: 3
       impact: 0
     - state: 4
       impact: 0
@@ -200,6 +202,18 @@ MonoBehaviour:
         confidenceImpact: 0
         charmImpact: -1
         line: The team looked good, I mean.
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "You looked good too\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: You really are going to die alone.
         variantGroups: []
         lastSticks: 0
       tags: 

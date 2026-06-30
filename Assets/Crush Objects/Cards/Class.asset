@@ -67,9 +67,9 @@ MonoBehaviour:
       line: 
       variantGroups:
       - lines:
-        - "[0 conf] Internal: Wow\u2026 good one Luke."
+        - "Wow\u2026 good one Luke."
       - lines:
-        - "[0 conf] Internal: I should stop trying to be funny when I\u2019m nervous."
+        - "I should stop trying to be funny when I\u2019m nervous."
       lastSticks: 0
     tags: 
     charmImpacts:
@@ -146,9 +146,9 @@ MonoBehaviour:
     - state: 2
       impact: 0
     - state: 3
-      impact: 1
-    - state: 4
       impact: 0
+    - state: 4
+      impact: -1
     daisyBranches:
     - charmState: 0
       dialogue:
@@ -183,7 +183,7 @@ MonoBehaviour:
     - charmState: 2
       dialogue:
       - character: 1
-        confidenceImpact: 2
+        confidenceImpact: 1
         charmImpact: 0
         line: Seriously, hehe. Ugh! Fifth period is the absolute WORST.
         variantGroups: []
@@ -214,14 +214,14 @@ MonoBehaviour:
     - charmState: 4
       dialogue:
       - character: 1
-        confidenceImpact: 2
+        confidenceImpact: 1
         charmImpact: 0
         line: HEHE. Right?! He is SO boring I want to DIE every time fifth period
           rolls around.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 2
+        confidenceImpact: 1
         charmImpact: 0
         line: You're hilarious! HEHE.
         variantGroups: []

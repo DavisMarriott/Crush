@@ -19,7 +19,7 @@ MonoBehaviour:
     loop: 0
   revealed: 1
   previewText: "\u201CFavorite band\u201D"
-  cost: 3
+  cost: 2
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
@@ -46,16 +46,16 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: 'So, have you listened to that new Farthing Penny song yet? [cu_farthingpenny]'
+      line: So, have you listened to that new Farthing Penny song yet?
       variantGroups: []
       lastSticks: 0
-    tags: 
+    tags: 0e000000
     charmImpacts: []
     daisyBranches:
     - charmState: 0
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: -1
         charmImpact: 0
         line: HEHE! Farthing Penny? You mean Penny Farthing? Some fan you are! Hehehe.
         variantGroups: []
@@ -74,7 +74,7 @@ MonoBehaviour:
     - charmState: 2
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: -1
         charmImpact: 0
         line: I think you mean Penny Farthing. But of course I've listened to it!
         variantGroups: []
@@ -137,7 +137,7 @@ MonoBehaviour:
     - charmState: 1
       dialogue:
       - character: 1
-        confidenceImpact: 2
+        confidenceImpact: 1
         charmImpact: 0
         line: Oh you like them too?? Yeah, it's really good. I've been playing it
           a bunch.
@@ -147,7 +147,7 @@ MonoBehaviour:
     - charmState: 2
       dialogue:
       - character: 1
-        confidenceImpact: 3
+        confidenceImpact: 1
         charmImpact: 0
         line: It's soooo good! OMG, I didn't know you liked them.
         variantGroups: []
@@ -156,13 +156,13 @@ MonoBehaviour:
     - charmState: 3
       dialogue:
       - character: 1
-        confidenceImpact: 2
+        confidenceImpact: 1
         charmImpact: 0
         line: OMG I'm obsessed with the new song! It has like 2 million plays already.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 2
+        confidenceImpact: 1
         charmImpact: 0
         line: But at least a million are me.
         variantGroups: []
@@ -171,14 +171,14 @@ MonoBehaviour:
     - charmState: 4
       dialogue:
       - character: 1
-        confidenceImpact: 2
+        confidenceImpact: 1
         charmImpact: 0
         line: They're SO good! I totally knew about them like 3 years ago, before
           they blew up.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 4
+        confidenceImpact: 3
         charmImpact: 0
         line: That's cool you like them too! We should listen to the new album together.
         variantGroups: []
@@ -193,4 +193,4 @@ MonoBehaviour:
   upgradeCondition:
     type: 1
     playThreshold: 3
-    tag: 0
+    tag: 14

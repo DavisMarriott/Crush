@@ -477,14 +477,14 @@ MonoBehaviour:
         variantGroups: []
         lastSticks: 0
       - character: 2
-        confidenceImpact: 0
+        confidenceImpact: 5
         charmImpact: 0
         line: 
         variantGroups:
         - lines:
-          - "[+5 conf] Internal: AHHH! I can\u2019t believe it!"
+          - "AHHH! I can\u2019t believe it!"
         - lines:
-          - "[+5 conf] Internal: I\u2019ll NEVER get tired of hearing that!"
+          - "I\u2019ll NEVER get tired of hearing that!"
         lastSticks: 0
       tags: 0a000000
     - charmState: 3
@@ -508,14 +508,14 @@ MonoBehaviour:
         variantGroups: []
         lastSticks: 0
       - character: 2
-        confidenceImpact: 0
+        confidenceImpact: 3
         charmImpact: 0
         line: 
         variantGroups:
         - lines:
-          - '[+3 conf] Internal: WOOHOOOO!!! OH MY GOD OH MY GOD. WHAT DO I DO NOW?!?!'
+          - WOOHOOOO!!! OH MY GOD OH MY GOD. WHAT DO I DO NOW?!?!
         - lines:
-          - '[+3 conf] Internal: Feels great to hear EVERY time!'
+          - Feels great to hear EVERY time!
         lastSticks: 0
       - character: 0
         confidenceImpact: 0

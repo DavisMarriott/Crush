@@ -313,6 +313,12 @@ MonoBehaviour:
       line: "WHY AREN\u2019T YOU SAYING ANYTHING?!??"
       variantGroups: []
       lastSticks: 0
+    - character: 1
+      confidenceImpact: -1
+      charmImpact: 0
+      line: "Earth to Luke\u2026"
+      variantGroups: []
+      lastSticks: 0
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
