@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 18606921563167967}
   - component: {fileID: 5805964240269692727}
   - component: {fileID: 6199569698405733649}
+  - component: {fileID: 3609913239899647806}
   m_Layer: 0
   m_Name: Character_Player
   m_TagString: Player
@@ -467,6 +468,19 @@ MonoBehaviour:
   blink02: {fileID: 0}
   lockerOpen: {fileID: 8300000, guid: 9c20c010948e3466a9cd0333f34e1a3d, type: 3}
   lockerClose: {fileID: 8300000, guid: 924bf82fe1def4b7895828c3d10c0971, type: 3}
+--- !u!114 &3609913239899647806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288216823463544167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501b980aa4d594015986c548b5f05ae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  animationTriggerCrush: {fileID: 0}
 --- !u!1 &2305240783736307181
 GameObject:
   m_ObjectHideFlags: 0
