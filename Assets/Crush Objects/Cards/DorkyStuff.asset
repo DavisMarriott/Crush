@@ -116,19 +116,13 @@ MonoBehaviour:
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: Wait, live with HER being dorky?
+        line: Wait, live with HER being dorky, or ME being dorky?
         variantGroups: []
         lastSticks: 0
       - character: 0
         confidenceImpact: -1
         charmImpact: -1
         line: "Yeah, uh\u2026 haha. Sure."
-        variantGroups: []
-        lastSticks: 0
-      - character: 2
-        confidenceImpact: 0
-        charmImpact: 0
-        line: Or ME being dorky?
         variantGroups: []
         lastSticks: 0
       - character: 0

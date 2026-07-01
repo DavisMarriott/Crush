@@ -115,7 +115,6 @@ MonoBehaviour:
   draftLines:
   - line: She was out on Monday. I could offer her my notes.
   - line: But is it creepy that I remembered that she was out?
-  - line: Is it good to know things about her??
   availableUpgrades: []
   upgradeCondition:
     type: 0

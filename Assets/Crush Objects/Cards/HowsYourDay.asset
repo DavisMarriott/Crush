@@ -259,6 +259,12 @@ MonoBehaviour:
           maybe."
         variantGroups: []
         lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "You don\u2019t know the half of it\u2026"
+        variantGroups: []
+        lastSticks: 0
       tags: 
     deathReactions: []
   - branchName: High

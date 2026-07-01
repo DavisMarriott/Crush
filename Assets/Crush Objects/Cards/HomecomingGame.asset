@@ -347,8 +347,13 @@ MonoBehaviour:
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: "It\u2019s not cool she\u2019s going with friends!\rInternal: She should
-          go with me!"
+        line: "It\u2019s not cool she\u2019s going with friends!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: She should go with me!
         variantGroups: []
         lastSticks: 0
       - character: 2
@@ -496,7 +501,7 @@ MonoBehaviour:
   - line: Yeah, this is smart.
   - line: "\u201CAre you going to the homecoming game?\u201D"
   - line: "\u201CBy the way, did you know there\u2019s a homecoming DANCE?\u201D"
-  - line: "It\u2019s an S-tier segue!"
+  - line: A fool-proof plan.
   availableUpgrades: []
   upgradeCondition:
     type: 0

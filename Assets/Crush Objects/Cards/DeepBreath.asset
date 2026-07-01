@@ -21,7 +21,7 @@ MonoBehaviour:
   previewText: '*TAKE A DEEP BREATH*'
   cost: 0
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
-  visualPrefab: {fileID: 0}
+  visualPrefab: {fileID: 7103731856190732949, guid: ef2b44a1854d647608718f1ce86cd8f3, type: 3}
   lukeBranches:
   - branchName: Death
     dialogue: []

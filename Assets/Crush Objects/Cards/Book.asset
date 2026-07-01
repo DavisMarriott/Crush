@@ -83,6 +83,8 @@ MonoBehaviour:
     charmImpacts:
     - state: 1
       impact: -1
+    - state: 2
+      impact: 1
     - state: 3
       impact: -1
     daisyBranches:
@@ -223,6 +225,18 @@ MonoBehaviour:
       tags: 09000000
     - charmState: 4
       dialogue:
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Oh it's nothing.
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Just this fantasy series I've been reading.
+        variantGroups: []
+        lastSticks: 0
       - character: 2
         confidenceImpact: 0
         charmImpact: 0

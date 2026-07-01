@@ -335,7 +335,7 @@ MonoBehaviour:
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
-        charmImpact: -2
+        charmImpact: -1
         line: "I hope you didn\u2019t see me mess up my serve."
         variantGroups: []
         lastSticks: 0

@@ -574,7 +574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1161810281762307539, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6001167
+      value: -0.99227667
       objectReference: {fileID: 0}
     - target: {fileID: 1161810281762307539, guid: 27f0a880dc0be4bd1bdf4d7975298fcb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3324,7 +3324,7 @@ PrefabInstance:
       objectReference: {fileID: 2696648771307027886}
     - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: allCards.Array.size
-      value: 17
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: animationTriggerIcon
@@ -3390,6 +3390,14 @@ PrefabInstance:
       propertyPath: 'allCards.Array.data[16]'
       value: 
       objectReference: {fileID: 11400000, guid: e0daa4f92aa6e4a58a4a277aa4182840, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'allCards.Array.data[17]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 44f5536b8bb244a55b7c65d613bf1093, type: 2}
+    - target: {fileID: 8103496132465409120, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
+      propertyPath: 'allCards.Array.data[18]'
+      value: 
+      objectReference: {fileID: 11400000, guid: c4a6d2c02a4fe4f149513daede281f6e, type: 2}
     - target: {fileID: 8415773379507266724, guid: 111c8e2434591496892bf0cef80f249a, type: 3}
       propertyPath: confidenceState
       value: 
