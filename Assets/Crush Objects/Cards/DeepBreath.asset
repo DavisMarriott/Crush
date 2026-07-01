@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
-  m_Name: PepTalk
+  m_Name: DeepBreath
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
   category: 4
   unlockCondition:
     type: 1
     tag: 0
-    loop: 10
-  revealed: 1
-  previewText: '*GIVE YOURSELF A PEP TALK*'
+    loop: 7
+  revealed: 0
+  previewText: '*TAKE A DEEP BREATH*'
   cost: 0
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
-  visualPrefab: {fileID: 7103731856190732949, guid: ef2b44a1854d647608718f1ce86cd8f3, type: 3}
+  visualPrefab: {fileID: 0}
   lukeBranches:
   - branchName: Death
     dialogue: []
@@ -32,15 +32,15 @@ MonoBehaviour:
   - branchName: Awkward
     dialogue:
     - character: 2
-      confidenceImpact: 0
+      confidenceImpact: 1
       charmImpact: 0
-      line: "Don\u2019t sweat this, dude."
+      line: "Breathe IN\u2026"
       variantGroups: []
       lastSticks: 0
     - character: 2
-      confidenceImpact: 2
+      confidenceImpact: 1
       charmImpact: 0
-      line: You can do this!
+      line: "\u2026and OUT."
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -73,15 +73,15 @@ MonoBehaviour:
   - branchName: Normal
     dialogue:
     - character: 2
-      confidenceImpact: 0
+      confidenceImpact: 1
       charmImpact: 0
-      line: "Hang in there. It\u2019s going fine."
+      line: "Deep breath in\u2026"
       variantGroups: []
       lastSticks: 0
     - character: 2
-      confidenceImpact: 2
+      confidenceImpact: 1
       charmImpact: 0
-      line: You got this!
+      line: "\u2026and exhale."
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -116,13 +116,13 @@ MonoBehaviour:
     - character: 2
       confidenceImpact: 0
       charmImpact: 0
-      line: "You\u2019re doing great!"
+      line: "Breathe in\u2026"
       variantGroups: []
       lastSticks: 0
     - character: 2
       confidenceImpact: 1
       charmImpact: 0
-      line: You got this.
+      line: "\u2026breathe out."
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -153,11 +153,9 @@ MonoBehaviour:
       tags: 
     deathReactions: []
   draftLines:
-  - line: "I\u2019m pretty bad at talking to Daisy."
-  - line: But I can talk to myself all day!
-  - line: Maybe I can hype myself up a little.
-  availableUpgrades:
-  - {fileID: 11400000, guid: 7ecf01a170e2c42b0976635bc3497c44, type: 2}
+  - line: "I can\u2019t panic. When I panic, I blow it."
+  - line: I should remember to breathe.
+  availableUpgrades: []
   upgradeCondition:
     type: 0
     playThreshold: 2

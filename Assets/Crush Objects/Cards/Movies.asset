@@ -91,7 +91,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: Haha umm
+        line: "Haha umm\u2026 no not really"
         variantGroups: []
         lastSticks: 0
       - character: 2
@@ -177,7 +177,7 @@ MonoBehaviour:
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
-        charmImpact: 0
+        charmImpact: -1
         line: "I mean - if you want to\u2026"
         variantGroups: []
         lastSticks: 0

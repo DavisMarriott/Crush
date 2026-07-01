@@ -108,6 +108,14 @@ public class DraftUI : MonoBehaviour
                 cardOptions.RemoveAt(idx);
             }
         }
+
+        // Safety net: if nothing actually rendered, close cleanly so the Upgrade/Draft phase can't
+        // hang waiting on a draft UI that will never be dismissed (DeathRespawn blocks on it closing).
+        if (draftContainer.childCount == 0)
+        {
+            deckManager.ResetDeck();
+            CloseDraftUI();
+        }
     }
 
     // Forced single-card draft (e.g. the loop-1 DANCE draft): offers exactly one card, one pick.
@@ -251,7 +259,13 @@ public class DraftUI : MonoBehaviour
 
     private void SpawnUpgradeButton(DeckManager.DraftableUpgrade dup)
     {
-        var btn = Instantiate(dup.upgrade.visualPrefab, draftContainer);
+        // Upgrades normally carry their own visualPrefab, but a missing one used to throw on Instantiate
+        // and soft-lock the draft (hit deep-loop, ~loop 18, when an upgrade was the only option left).
+        // Fall back to the default thought button so the upgrade stays draftable; flag the data gap.
+        var prefab = dup.upgrade != null && dup.upgrade.visualPrefab != null ? dup.upgrade.visualPrefab : thoughtButtonPrefab;
+        if (dup.upgrade == null || dup.upgrade.visualPrefab == null)
+            Debug.LogWarning($"[DraftUI] Upgrade '{dup.upgrade?.name ?? "(null)"}' has no visualPrefab — using the default button. Assign one to fix its look.");
+        var btn = Instantiate(prefab, draftContainer);
     
         var rectTransform = btn.GetComponent<RectTransform>();
         rectTransform.anchorMin = new Vector2(0.5f, 0.5f);

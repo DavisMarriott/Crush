@@ -99,7 +99,7 @@ MonoBehaviour:
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: "Ouch\u2026"
+        line: "I didn\u2019t know she was such a fan of Mr. Miller\u2026."
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -144,7 +144,7 @@ MonoBehaviour:
     - state: 1
       impact: 0
     - state: 2
-      impact: 0
+      impact: 1
     - state: 3
       impact: 0
     - state: 4
@@ -181,13 +181,7 @@ MonoBehaviour:
         lastSticks: 0
       tags: 
     - charmState: 2
-      dialogue:
-      - character: 1
-        confidenceImpact: 1
-        charmImpact: 0
-        line: Seriously, hehe. Ugh! Fifth period is the absolute WORST.
-        variantGroups: []
-        lastSticks: 0
+      dialogue: []
       tags: 00000000
     - charmState: 3
       dialogue:
@@ -199,7 +193,7 @@ MonoBehaviour:
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 2
+        confidenceImpact: 1
         charmImpact: 0
         line: He needs some new hobbies.
         variantGroups: []

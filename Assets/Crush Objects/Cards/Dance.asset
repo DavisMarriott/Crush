@@ -267,6 +267,42 @@ MonoBehaviour:
         line: Cool
         variantGroups: []
         lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: What do I do now??
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Should we hug?
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Maybe just play it cool.
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "So\u2026 ummm\u2026 I\u2019ll see you later?"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: That was cool, right?
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 1
+        line: "hehe\u2026 yeah, I guess you will."
+        variantGroups: []
+        lastSticks: 0
       tags: 
     deathReactions: []
   - branchName: FirstLoop

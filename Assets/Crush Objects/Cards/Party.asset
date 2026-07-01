@@ -17,7 +17,7 @@ MonoBehaviour:
     type: 0
     tag: 0
     loop: 0
-  revealed: 0
+  revealed: 1
   previewText: "\u201CHow was that party?\u201D"
   cost: 3
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
@@ -52,10 +52,22 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "Did you go? I was super busy on Friday night, so I couldn\u2019t. [cu_partysaturday]"
+      line: Did you go?
       variantGroups: []
       lastSticks: 0
-    tags: 
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I was super busy on Friday night, so I couldn\u2019t."
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Those video games weren\u2019t going to play themselves."
+      variantGroups: []
+      lastSticks: 0
+    tags: 0f000000
     charmImpacts:
     - state: 1
       impact: 0
@@ -467,4 +479,4 @@ MonoBehaviour:
   upgradeCondition:
     type: 1
     playThreshold: 3
-    tag: 0
+    tag: 15

@@ -241,6 +241,7 @@ public class DeckManager : MonoBehaviour
         if (!upgradeTracker.IsUpgradeAvailable(card)) return;
         foreach (var upgrade in card.availableUpgrades)
         {
+            if (upgrade == null) continue;   // empty array slot - skip so it can't spawn a null draft option
             list.Add(new DraftableUpgrade { card = card, upgrade = upgrade });
         }
     }

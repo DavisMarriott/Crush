@@ -17,7 +17,7 @@ MonoBehaviour:
     type: 0
     tag: 0
     loop: 0
-  revealed: 0
+  revealed: 1
   previewText: "\u201CHow\u2019s your day going?\u201D"
   cost: 1
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
@@ -87,7 +87,7 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 0
-        charmImpact: -1
+        charmImpact: 0
         line: "It\u2019s been okay. Nothing too exciting"
         variantGroups: []
         lastSticks: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
         lastSticks: 0
       - character: 0
         confidenceImpact: 0
-        charmImpact: 0
+        charmImpact: -1
         line: Same.
         variantGroups: []
         lastSticks: 0

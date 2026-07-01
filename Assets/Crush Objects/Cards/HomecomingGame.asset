@@ -17,7 +17,7 @@ MonoBehaviour:
     type: 0
     tag: 0
     loop: 0
-  revealed: 0
+  revealed: 1
   previewText: "\u201CHomecoming game?\u201D"
   cost: 4
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
@@ -90,7 +90,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: -1
         charmImpact: 1
-        line: You sound like Principal Miller, hehe.
+        line: You sound like Principal Daniels, hehe.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -99,7 +99,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: -1
         charmImpact: 0
-        line: "Yes, Principal Miller, ma\u2019am. Let\u2019s go Hammerheads!"
+        line: You sound like Principal Daniels with that school spirit talk!
         variantGroups: []
         lastSticks: 0
       - character: 2
@@ -108,13 +108,19 @@ MonoBehaviour:
         line: Huh?
         variantGroups: []
         lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Hehe. I\u2019ll be there!"
+        variantGroups: []
+        lastSticks: 0
       tags: 
     - charmState: 3
       dialogue:
       - character: 1
         confidenceImpact: -1
         charmImpact: 0
-        line: You sound JUST like Principal Miller, hehe.
+        line: You sound JUST like Principal Daniels, hehe.
         variantGroups: []
         lastSticks: 0
       - character: 1
@@ -135,7 +141,7 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: -1
-        line: "I\u2019ll be there, Principal Miller!"
+        line: "I\u2019ll be there, Principal Daniels!"
         variantGroups: []
         lastSticks: 0
       - character: 0
@@ -255,10 +261,24 @@ MonoBehaviour:
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 3
+        confidenceImpact: 1
         charmImpact: 0
-        line: I DO want to go to the homecoming dance, too.
+        line: "And then the girls who don\u2019t have dates are going as a group."
         variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "So it looks like I\u2019m joining them\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: 
+        variantGroups:
+        - lines:
+          - "You hear that Brett? She doesn\u2019t have a date."
         lastSticks: 0
       - character: 1
         confidenceImpact: 1
@@ -269,7 +289,7 @@ MonoBehaviour:
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: NO $#%&!
+        line: You can say that again.
         variantGroups: []
         lastSticks: 0
       tags: 0d000000
@@ -282,27 +302,67 @@ MonoBehaviour:
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 2
-        charmImpact: 0
+        confidenceImpact: 1
+        charmImpact: -1
         line: "AND I\u2019m kind of excited for the homecoming dance."
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: -1
-        line: "Just trying to, like\u2026 finalize plans and stuff."
+        line: "And I haven\u2019t been asked yet\u2026."
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "So I think I\u2019m going to join them if nothing else comes up."
         variantGroups: []
         lastSticks: 0
       - character: 2
-        confidenceImpact: 2
+        confidenceImpact: 1
         charmImpact: 0
-        line: "Okay, does that mean she DOESN\u2019T have a date?!?"
+        line: "PHEW. She DEFINITELY doesn\u2019t have a date."
         variantGroups: []
         lastSticks: 0
       - character: 0
         confidenceImpact: 0
+        charmImpact: -1
+        line: "Oh, that\u2019s cool that you\u2019re going with friends."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
         charmImpact: 0
-        line: "Yeah. I, uh\u2026 I need to do that, too."
+        line: 
+        variantGroups:
+        - lines: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Why would you say that?!
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "It\u2019s not cool she\u2019s going with friends!\rInternal: She should
+          go with me!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: 
+        variantGroups:
+        - lines: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Good to know she hasn\u2019t found a date since the last loop she
+          said that\u2026"
         variantGroups: []
         lastSticks: 0
       tags: 0d000000

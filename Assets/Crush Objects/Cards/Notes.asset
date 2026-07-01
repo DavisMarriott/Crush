@@ -52,9 +52,9 @@ MonoBehaviour:
     tags: 
     charmImpacts:
     - state: 1
-      impact: 2
+      impact: 0
     - state: 2
-      impact: 2
+      impact: 1
     - state: 3
       impact: 0
     daisyBranches:
@@ -115,7 +115,7 @@ MonoBehaviour:
   draftLines:
   - line: She was out on Monday. I could offer her my notes.
   - line: But is it creepy that I remembered that she was out?
-  - line: '[!] Is it good to know things about her??'
+  - line: Is it good to know things about her??
   availableUpgrades: []
   upgradeCondition:
     type: 0

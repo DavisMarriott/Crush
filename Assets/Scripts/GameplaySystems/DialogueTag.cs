@@ -15,4 +15,5 @@ public enum DialogueTag
     Cu_cockydork,
     Ms_nodate,
     Cu_farthingpenny,
+    Cu_partysaturday,
 }
