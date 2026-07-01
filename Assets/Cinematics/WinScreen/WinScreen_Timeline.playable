@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Clips:
   - m_Version: 1
     m_Start: 0
-    m_ClipIn: 0
-    m_Asset: {fileID: 1660336512789765552}
-    m_Duration: 9.733333333333333
+    m_ClipIn: 156.8842461904509
+    m_Asset: {fileID: 14532824240411863}
+    m_Duration: 29.00310074832435
     m_TimeScale: 1
     m_ParentTrack: {fileID: -4067753193231379582}
     m_EaseInDuration: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Crushing_MainTheme_v001
+    m_DisplayName: Crushing_MainTheme_v002
   m_Markers:
     m_Objects: []
   m_TrackProperties:
@@ -143,7 +143,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -4689536447909185226}
-    m_Duration: 9.733333333333333
+    m_Duration: 14.833333333333334
     m_TimeScale: 1
     m_ParentTrack: {fileID: -4060613603333960946}
     m_EaseInDuration: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
     m_ScenePreview: 1
   m_DurationMode: 0
   m_MarkerTrack: {fileID: -2705858528444872746}
---- !u!114 &1660336512789765552
+--- !u!114 &14532824240411863
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f10dd60657c6004587f237a7e90f8e4, type: 3}
   m_Name: AudioPlayableAsset
   m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.AudioPlayableAsset
-  m_Clip: {fileID: 8300000, guid: 5748ea010e90f4255a2550d67e7cdaa9, type: 3}
+  m_Clip: {fileID: 8300000, guid: 382c205ffeb1e4c3d872969fe841e7b5, type: 3}
   m_Loop: 0
   m_bufferingTime: 0.1
   m_ClipProperties:
