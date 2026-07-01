@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acded0d660c6143a58a646a883d11c26, type: 3}
+  m_Name: tut_03_draft02
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialStep
+  id: draft02
+  text: "COST:\nEach Dialogue Card has a Confidence Cost to play. With the exception
+    of \u201CDance,\u201D that cost is displayed on the card. \n\nMore expensive
+    cards are more difficult for Luke to say, and are usually riskier in how they\u2019ll
+    be received by Daisy.\n\nBRANCHES:\nLuke\u2019s Confidence level also affects
+    HOW his words come out,\nand Luke\u2019s words affect how Daisy responds."
+  boxSize: {x: 600, y: 300}
+  boxAnchoredPosition: {x: 0, y: 0}
+  dismissMode: 0
+  showBackdrop: 1

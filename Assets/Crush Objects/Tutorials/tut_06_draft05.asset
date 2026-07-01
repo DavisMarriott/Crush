@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acded0d660c6143a58a646a883d11c26, type: 3}
-  m_Name: tut_firstdraft
+  m_Name: tut_06_draft05
   m_EditorClassIdentifier: Assembly-CSharp::TutorialStep
-  id: firstdraft
-  text: '"Crushing" is a coming-of-age conversational deck builder, and cards are
-    your dialogue options. Click on your first card to draft it into your deck.'
+  id: draft05
+  text: "Luke needs high enough Confidence to ask Daisy to the dance. \nDaisy needs
+    to be Charmed enough to say yes."
   boxSize: {x: 600, y: 300}
   boxAnchoredPosition: {x: 0, y: 0}
   dismissMode: 0

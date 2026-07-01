@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acded0d660c6143a58a646a883d11c26, type: 3}
+  m_Name: tut_05_conversation02
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialStep
+  id: conversation02
+  text: "CHARM:\nIn the same way Luke\u2019s Confidence level affects how HE talks
+    to Daisy, Daisy\u2019s Charm level affects how SHE responds to Luke.\n\nDaisy\u2019s
+    responses can further impact Luke\u2019s Confidence \u2013 positively or negatively..
+    \n\nCharm is only indicated by Daisy\u2019s body language and responses to Luke,
+    so pay attention! \n\nIf Daisy\u2019s Charm hits zero, the loop resets."
+  boxSize: {x: 600, y: 300}
+  boxAnchoredPosition: {x: 0, y: 0}
+  dismissMode: 0
+  showBackdrop: 1
