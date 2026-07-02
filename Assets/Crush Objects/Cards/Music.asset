@@ -178,9 +178,60 @@ MonoBehaviour:
         variantGroups: []
         lastSticks: 0
       - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: That's cool you like them too!
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
         confidenceImpact: 3
         charmImpact: 0
-        line: That's cool you like them too! We should listen to the new album together.
+        line: We should listen to the album together when it comes out.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: 
+        variantGroups:
+        - lines: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Figure out when that album comes out\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: 
+        variantGroups:
+        - lines: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "I\u2019ve never been so excited for an album."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: 
+        variantGroups:
+        - lines: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Would a Penny Farthing poster in my room be too much?
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Yeah, that\u2019d be fun."
         variantGroups: []
         lastSticks: 0
       tags: 

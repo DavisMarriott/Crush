@@ -102,11 +102,11 @@ public class DialogueBox : MonoBehaviour
     private IEnumerator PlayIntroLine(string line, DialogueCard.DialogueCharacter speaker)
     {
         if (string.IsNullOrEmpty(line)) yield break;
-        SetSpeakerIndicator(speaker);
+        bool opened = SetSpeakerIndicator(speaker);
         if (speaker == DialogueCard.DialogueCharacter.Boy)
             playerMovement.PlayerTalk();
         textSound.speakingCharacter = SpeakingCharacter.Luke;
-        yield return dialogueTiming.Run(line, dialogueText);
+        yield return dialogueTiming.Run(line, dialogueText, opened);
         yield return new WaitUntil(() => DialogueAdvance.Pressed(nextLineAction.action));
         dialogueText.text = "";
     }
@@ -166,17 +166,17 @@ public class DialogueBox : MonoBehaviour
     {
         foreach (var text in group.lines)
         {
-            SetSpeakerIndicator(character);
+            bool opened = SetSpeakerIndicator(character);
             if (character == DialogueCard.DialogueCharacter.BoyInternal)
             {
                 textSound.speakingCharacter = SpeakingCharacter.LukeSelf;
-                yield return dialogueTiming.Run(text, hallwaySelfTalk.selfTalkText);
+                yield return dialogueTiming.Run(text, hallwaySelfTalk.selfTalkText, opened);
             }
             else
             {
                 // textSound.speakingCharacter = SpeakingCharacter.Luke;
                 playerMovement.PlayerTalk();
-                yield return dialogueTiming.Run(text, dialogueText);
+                yield return dialogueTiming.Run(text, dialogueText, opened);
             }
             yield return new WaitUntil(() => DialogueAdvance.Pressed(nextLineAction.action));
             hallwaySelfTalk.selfTalkText.text = "";
@@ -220,19 +220,19 @@ public class DialogueBox : MonoBehaviour
                 continue;
             }
 
-            SetSpeakerIndicator(line.character);
+            bool opened = SetSpeakerIndicator(line.character);
             if (line.character == DialogueCard.DialogueCharacter.BoyInternal)
             {
                 textSound.speakingCharacter = SpeakingCharacter.LukeSelf;
-                yield return dialogueTiming.Run(line.line, hallwaySelfTalk.selfTalkText);
+                yield return dialogueTiming.Run(line.line, hallwaySelfTalk.selfTalkText, opened);
                 animationTriggerSpeechBubblePlayer.SpeechBubbleHide();
-                animationTriggerSpeechBubbleCrush.SpeechBubbleHide();   
+                animationTriggerSpeechBubbleCrush.SpeechBubbleHide();
             }
             else
             {
                 // textSound.speakingCharacter = SpeakingCharacter.Luke;
                 playerMovement.PlayerTalk();
-                yield return dialogueTiming.Run(line.line, dialogueText);
+                yield return dialogueTiming.Run(line.line, dialogueText, opened);
             }
             confidenceState.confidence += line.confidenceImpact;
             charmState.charm += line.charmImpact;
@@ -334,17 +334,17 @@ public class DialogueBox : MonoBehaviour
                     continue;
                 }
 
-                SetSpeakerIndicator(line.character);
+                bool opened = SetSpeakerIndicator(line.character);
                 animationTriggerCrush.GetCharmPose();
                 if (line.character == DialogueCard.DialogueCharacter.BoyInternal)
                 {
-                    yield return dialogueTiming.Run(line.line, hallwaySelfTalk.selfTalkText);
+                    yield return dialogueTiming.Run(line.line, hallwaySelfTalk.selfTalkText, opened);
                     animationTriggerSpeechBubblePlayer.SpeechBubbleHide();
-                    animationTriggerSpeechBubbleCrush.SpeechBubbleHide(); 
+                    animationTriggerSpeechBubbleCrush.SpeechBubbleHide();
                 }
                 else
                 {
-                    yield return dialogueTiming.Run(line.line, dialogueText);
+                    yield return dialogueTiming.Run(line.line, dialogueText, opened);
                 }
                 confidenceState.confidence += line.confidenceImpact;
                 
@@ -413,29 +413,32 @@ public class DialogueBox : MonoBehaviour
         return DialogueCard.CharmState.Neutral;
     }
 
-    private void SetSpeakerIndicator(DialogueCard.DialogueCharacter character)
+    // returns true when the active speaker's bubble actually opened this call, so the caller can
+    // hold the text a beat for the open anim. BoyInternal/default: no speech bubble -> false.
+    private bool SetSpeakerIndicator(DialogueCard.DialogueCharacter character)
     {
         switch (character)
         {
             case DialogueCard.DialogueCharacter.Boy:
-                animationTriggerSpeechBubblePlayer.SpeechBubbleShow();
-                animationTriggerSpeechBubbleCrush.SpeechBubbleHide(); 
+                bool boyOpened = animationTriggerSpeechBubblePlayer.TryShowSpeechBubble();
+                animationTriggerSpeechBubbleCrush.SpeechBubbleHide();
                 textSound.speakingCharacter = SpeakingCharacter.Luke;
                 dialogueText.alignment = TMPro.TextAlignmentOptions.MidlineLeft;
                 // dialogueText.color = boyTextColor;
                 leftArrow.SetActive(false);
                 rightArrow.SetActive(false);
-                break;
+                return boyOpened;
             case DialogueCard.DialogueCharacter.Girl:
                 animationTriggerSpeechBubblePlayer.SpeechBubbleHide();
-                animationTriggerSpeechBubbleCrush.SpeechBubbleShow();
+                bool girlOpened = animationTriggerSpeechBubbleCrush.TryShowSpeechBubble();
                 textSound.speakingCharacter = SpeakingCharacter.Daisy;
                 dialogueText.alignment = TMPro.TextAlignmentOptions.MidlineRight;
                 // dialogueText.color = girlTextColor;
                 leftArrow.SetActive(false);
                 rightArrow.SetActive(false);
-                break;
+                return girlOpened;
         }
+        return false;
     }
 
     public void CloseDialogueBox()

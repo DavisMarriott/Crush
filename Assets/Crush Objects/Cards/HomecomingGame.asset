@@ -498,7 +498,6 @@ MonoBehaviour:
       tags: 
     deathReactions: []
   draftLines:
-  - line: Yeah, this is smart.
   - line: "\u201CAre you going to the homecoming game?\u201D"
   - line: "\u201CBy the way, did you know there\u2019s a homecoming DANCE?\u201D"
   - line: A fool-proof plan.

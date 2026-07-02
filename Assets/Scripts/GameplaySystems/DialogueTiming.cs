@@ -7,18 +7,32 @@ public class DialogueTiming : MonoBehaviour
 {
    [SerializeField] float typeSpeed = 30f;
    [SerializeField] RandomSoundPlayer textSound;
+   [Tooltip("Beat held before text starts typing, but ONLY when the bubble is actually opening. Gives the open anim time to play so text doesn't beat it.")]
+   [SerializeField] float openAnimDelay = 0.35f;
+
    public Coroutine Run(string textToType, TMP_Text textLabel)
    {
-      return StartCoroutine(TypeText(textToType, textLabel));
+      return Run(textToType, textLabel, false);
    }
 
-   private IEnumerator TypeText(string textToType, TMP_Text textLabel)
+   // waitForOpen: true on the line where the bubble just opened - hold openAnimDelay before
+   // typing. Continuation lines (bubble already open) pass false and type right away.
+   public Coroutine Run(string textToType, TMP_Text textLabel, bool waitForOpen)
+   {
+      return StartCoroutine(TypeText(textToType, textLabel, waitForOpen));
+   }
+
+   private IEnumerator TypeText(string textToType, TMP_Text textLabel, bool waitForOpen)
    {
       //bake line breaks in up front so the typewriter doesn't reflow mid-word
       string baked = PreBakeLineBreaks(textToType, textLabel);
 
       //clears any preview/placeholder text
       textLabel.text = string.Empty;
+
+      //hold a beat for the bubble's open anim before typing - only on a real open
+      if (waitForOpen && openAnimDelay > 0f)
+         yield return new WaitForSeconds(openAnimDelay);
 
       //variables for speed and indexing single characters in lines
       float t = 0;

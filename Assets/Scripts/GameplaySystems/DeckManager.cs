@@ -119,6 +119,17 @@ public class DeckManager : MonoBehaviour
         DrawOpeningHand(startingHandSize);
     }
 
+    // test mode - dump every card into the deck (IsDraftable skips what's already owned),
+    // then ResetDeck to reshuffle and deal a fresh hand. Straight into _deck on purpose -
+    // AddCardToDeck would fire the deck-size icon anim once per card.
+    public void GiveAllCards()
+    {
+        if (allCards == null) return;
+        foreach (var c in allCards)
+            if (IsDraftable(c)) _deck.Add(c);
+        ResetDeck();
+    }
+
     private void Shuffle()
     {
         for (int i = _deck.Count - 1; i > 0; i--)

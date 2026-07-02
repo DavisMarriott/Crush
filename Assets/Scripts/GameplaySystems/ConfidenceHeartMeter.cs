@@ -132,6 +132,19 @@ public class ConfidenceHeartMeter : MonoBehaviour
 
    }
 
+   // TestMode - force the meter to match a confidence value RIGHT NOW. Kills pending
+   // spawn/break ramps, wipes, respawns instantly. Restarts can't leave the meter
+   // decoupled this way (e.g. T pressed before the loop-1 SpawnHeartMeter ever ran).
+   public void SyncHearts(int confidence)
+   {
+      StopAllCoroutines();
+      ClearAllHearts();
+      for (int i = 0; i < confidence; i++)
+         SpawnHeart();
+      // no LowConfidenceCheck here - it counts children, and the just-Destroyed ones
+      // are still children until end of frame. It self-corrects on the next conf change.
+   }
+
    // Wipe every heart immediately. Called on death so any stragglers (a break anim that got
    // interrupted, etc.) don't carry into the next loop - the respawn re-adds startingConfidence
    // hearts from a clean 0.

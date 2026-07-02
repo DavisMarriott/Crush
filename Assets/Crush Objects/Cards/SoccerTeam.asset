@@ -19,7 +19,7 @@ MonoBehaviour:
     loop: 0
   revealed: 1
   previewText: "\u201CSoccer team\u201D"
-  cost: 4
+  cost: 3
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
@@ -526,7 +526,7 @@ MonoBehaviour:
       tags: 
     deathReactions: []
   draftLines:
-  - line: "It\u2019s just the freshman team, but technically an athlete.."
+  - line: "It\u2019s just the freshman team, but I\u2019m technically an athlete."
   - line: "AND she plays volleyball, so she\u2019s probably into athletes."
   availableUpgrades:
   - {fileID: 11400000, guid: 67e2b022638624c28b2d25fa2aaa13f0, type: 2}

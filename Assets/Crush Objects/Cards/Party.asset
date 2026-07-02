@@ -320,6 +320,19 @@ MonoBehaviour:
         line: You could have made fun of the dumb drunk kids with me.
         variantGroups: []
         lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: 
+        variantGroups:
+        - lines: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: DRUNK KIDS?!?!
+        variantGroups: []
+        lastSticks: 0
       tags: 
     deathReactions: []
   - branchName: High

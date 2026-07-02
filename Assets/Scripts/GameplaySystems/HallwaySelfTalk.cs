@@ -64,16 +64,16 @@ public class HallwaySelfTalk : MonoBehaviour
     {
         // First line
         yield return new WaitForSeconds(Random.Range(minFirstTimer, maxFirstTimer));
-        animationTriggerThoughtBubble.ThoughtBubbleOn();
-        yield return dialogueTiming.Run(genericHallwayLines[Random.Range(0, genericHallwayLines.Length)], selfTalkText);
+        bool opened1 = animationTriggerThoughtBubble.TryThoughtBubbleOn();
+        yield return dialogueTiming.Run(genericHallwayLines[Random.Range(0, genericHallwayLines.Length)], selfTalkText, opened1);
         yield return new WaitForSeconds(thoughtTimer);
         selfTalkText.text = "";
         animationTriggerThoughtBubble.ThoughtBubbleHalf();
 
         // Second line
         yield return new WaitForSeconds(Random.Range(minSecondTimer, maxSecondTimer));
-        animationTriggerThoughtBubble.ThoughtBubbleOn();
-        yield return dialogueTiming.Run(genericHallwayLines[Random.Range(0, genericHallwayLines.Length)], selfTalkText);
+        bool opened2 = animationTriggerThoughtBubble.TryThoughtBubbleOn();
+        yield return dialogueTiming.Run(genericHallwayLines[Random.Range(0, genericHallwayLines.Length)], selfTalkText, opened2);
         yield return new WaitForSeconds(thoughtTimer);
         selfTalkText.text = "";
         animationTriggerThoughtBubble.ThoughtBubbleHalf();
@@ -122,9 +122,8 @@ public class HallwaySelfTalk : MonoBehaviour
         TMP_Text target = draftSelfTalkText != null ? draftSelfTalkText : selfTalkText;
         foreach (DialogueCard.DraftLine draftLine in draftLines)
         {
-            animationTriggerThoughtBubble.ThoughtBubbleOn();
-            yield return new WaitForSeconds(0.5f);
-            yield return dialogueTiming.Run(draftLine.line, target);
+            bool opened = animationTriggerThoughtBubble.TryThoughtBubbleOn();
+            yield return dialogueTiming.Run(draftLine.line, target, opened);
             // manual advance (space/click) - draft lines now wait on the player like convo
             yield return new WaitUntil(() => DialogueAdvance.Pressed());
             //clear per-line so the final line's text doesn't linger if the coroutine gets

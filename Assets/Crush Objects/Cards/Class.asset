@@ -333,8 +333,8 @@ MonoBehaviour:
       tags: 00000000
     deathReactions: []
   draftLines:
-  - line: Something easy
-  - line: Just talk about how boring 4th period was
+  - line: Something easy.
+  - line: Just talk about how boring 5th period was.
   availableUpgrades: []
   upgradeCondition:
     type: 0

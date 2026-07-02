@@ -38,7 +38,7 @@ MonoBehaviour:
       variantGroups: []
       lastSticks: 0
     - character: 2
-      confidenceImpact: 1
+      confidenceImpact: 2
       charmImpact: 0
       line: "\u2026and OUT."
       variantGroups: []

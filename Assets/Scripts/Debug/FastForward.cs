@@ -10,8 +10,8 @@ using TMPro;
 // animations and physics all speed up together — nothing desyncs.
 //
 // Time.timeScale itself is the source of truth (no cached speed field), so this never drifts out
-// of sync with the DebugMenu, which also drives timeScale for pausing. While paused (timeScale 0)
-// the keys are ignored so we can't accidentally un-pause the debug menu.
+// of sync with anything else driving timeScale (e.g. the main-menu pause). While paused
+// (timeScale 0) the keys are ignored so we can't accidentally un-pause.
 //
 // This is a debug component — attach it to an always-on object (e.g. Systems). Don't ship it on a
 // live GameObject in a release build (or ask me to add a UNITY_EDITOR/DEVELOPMENT_BUILD guard).

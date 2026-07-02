@@ -19,14 +19,30 @@ MonoBehaviour:
     - lines:
       - What even IS a time loop?
       - Like, scientifically, how do these work?
-      - I should pay more attention in science class.
-  - minLoop: 10
-    maxLoop: 999
+      - "I should pay more attention in Ms. Stewart\u2019s class."
+    - lines:
+      - "8 billion people in the world and I\u2019m the one time looping."
+      - "Mom always says I\u2019m special."
+      - "But I didn\u2019t think she meant it like this."
+    - lines:
+      - "I\u2019m getting kind of hungry."
+      - How is that possible?
+      - Is my stomach time looping?
+    - lines:
+      - How long has today been?
+      - Have I lived two full days worth of loops yet?
+      - This is a mind $*%!
+    - lines:
+      - Does this time count towards my life?
+      - "Like, if I get stuck in here for a month\u2026"
+      - Am I a month older when I get out?
+  - minLoop: 11
+    maxLoop: 19
     groups:
     - lines:
       - Okay, you got this.
       - This is the one. I can feel it.
-      - "And there\u2019s always NEXT loop."
+      - "And if not, there\u2019s always the NEXT loop."
     - lines:
       - She likes you.
       - Right?
@@ -35,6 +51,22 @@ MonoBehaviour:
       - "When I get out of this\u2026"
       - Should I tell Mitch?
       - "He\u2019d never believe me\u2026"
+    - lines:
+      - "You\u2019d think I\u2019d be good at this by now."
+      - "But nope. I still can\u2019t talk to girls."
+      - "This is getting embarrassing\u2026"
+    - lines:
+      - "Why couldn\u2019t I get stuck in a time loop during that math text?"
+      - That would have actually been USEFUL.
+      - I definitely would have gotten an A if I could take it 20 times.
+    - lines:
+      - How long has today been?
+      - Have I lived two full days worth of loops yet?
+      - This is a mind $*%!
+    - lines:
+      - Does this time count towards my life?
+      - "Like, if I get stuck in here for a month\u2026"
+      - Am I a month older when I get out?
   genericClusters: []
   lines:
   - What even is a time loop?

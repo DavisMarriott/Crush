@@ -57,50 +57,36 @@ MonoBehaviour:
       lastSticks: 0
     tags: 
     charmImpacts:
+    - state: 1
+      impact: 2
+    - state: 2
+      impact: 1
     - state: 3
       impact: 1
     - state: 4
       impact: 0
     daisyBranches:
     - charmState: 0
-      dialogue:
-      - character: 1
-        confidenceImpact: -6
-        charmImpact: 0
-        line: "Ohh - ummm\u2026. thanks? I guess\u2026"
-        variantGroups: []
-        lastSticks: 0
+      dialogue: []
       tags: 
     - charmState: 1
-      dialogue:
-      - character: 1
-        confidenceImpact: -1
-        charmImpact: 0
-        line: "Ohh - ummm\u2026. thanks."
-        variantGroups: []
-        lastSticks: 0
+      dialogue: []
       tags: 
     - charmState: 2
-      dialogue:
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: "Thanks\u2026 that's nice of you."
-        variantGroups: []
-        lastSticks: 0
+      dialogue: []
       tags: 
     - charmState: 3
       dialogue:
       - character: 1
-        confidenceImpact: 3
+        confidenceImpact: 0
         charmImpact: 0
         line: Aww thanks!
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 1
+        confidenceImpact: 0
         charmImpact: 0
-        line: "That umm\u2026 means a lot"
+        line: "That\u2019s\u2026 ummm\u2026really nice of you to say."
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -119,9 +105,54 @@ MonoBehaviour:
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 6
+        confidenceImpact: 0
         charmImpact: 1
-        line: "You look cu- uhh\u2026 nice.. too"
+        line: "You look cu- uhh\u2026 nice.. Too"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: 
+        variantGroups:
+        - lines: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 4
+        charmImpact: 0
+        line: "Did she almost just say I\u2019m cute?"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: 
+        variantGroups:
+        - lines: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 4
+        charmImpact: 0
+        line: I liked hearing that even more the second time.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: 
+        variantGroups:
+        - lines: []
+        lastSticks: 1
+      - character: 2
+        confidenceImpact: 4
+        charmImpact: 0
+        line: "I\u2019ll never get tired of that."
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Almost makes dying in front of her worth it.
         variantGroups: []
         lastSticks: 0
       tags: 

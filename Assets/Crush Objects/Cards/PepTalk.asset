@@ -79,7 +79,7 @@ MonoBehaviour:
       variantGroups: []
       lastSticks: 0
     - character: 2
-      confidenceImpact: 2
+      confidenceImpact: 3
       charmImpact: 0
       line: You got this!
       variantGroups: []

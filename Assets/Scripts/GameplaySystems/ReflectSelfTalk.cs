@@ -72,8 +72,8 @@ public class ReflectSelfTalk : MonoBehaviour
 
         foreach (string line in lines)
         {
-            animationTriggerThoughtBubble.ThoughtBubbleOn();
-            yield return dialogueTiming.Run(line, selfTalkText);
+            bool opened = animationTriggerThoughtBubble.TryThoughtBubbleOn();
+            yield return dialogueTiming.Run(line, selfTalkText, opened);
             // manual advance (space/click) - reflect + commit lines now wait on the player like convo
             yield return new WaitUntil(() => DialogueAdvance.Pressed());
             selfTalkText.text = "";

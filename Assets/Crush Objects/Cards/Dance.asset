@@ -310,7 +310,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: -1
       charmImpact: 0
-      line: "...\u2026"
+      line: "\u2026\u2026"
       variantGroups: []
       lastSticks: 0
     - character: 2
@@ -322,7 +322,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "...\u2026"
+      line: "\u2026\u2026"
       variantGroups: []
       lastSticks: 0
     - character: 2

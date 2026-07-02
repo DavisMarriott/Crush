@@ -18,7 +18,6 @@ MonoBehaviour:
     threshold: 10
     tag: 0
   reflectLines:
-  - I was actually feeling okay there for a second
-  - Do I...
-  - know how to talk to girls now?
+  - That loop actually felt kind of good for a little bit.
+  - I thought I might actually do it for a second.
   characterUpgrade: {fileID: 11400000, guid: 2babad58a1e5643b9a3a713940aaad6e, type: 2}

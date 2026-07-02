@@ -33,19 +33,32 @@ public class AnimationTriggerThoughtBubble : MonoBehaviour
         // thoughtBubbleAnimator.Play("ThoughtBubble_Half_CYCLE");
     }
 
+    // Wired to debug buttons via UnityEvent (OnClick) - keep this void signature so the wiring
+    // stays valid. Code that needs to know if it actually opened calls TryThoughtBubbleOn.
     public void ThoughtBubbleOn()
+    {
+        TryThoughtBubbleOn();
+    }
+
+    // Same open, but true when it actually starts an open transition (from Half or Off) so
+    // callers can wait for the bubble to finish opening before text starts typing.
+    public bool TryThoughtBubbleOn()
     {
         AnimatorStateInfo stateInfo = thoughtBubbleAnimator.GetCurrentAnimatorStateInfo(0);
 
         if (stateInfo.IsName("ThoughtBubble_Half_CYCLE"))
         {
             thoughtBubbleAnimator.Play("ThoughtBubble_Half_to_Full");
+            return true;
         }
-        
+
         else if (stateInfo.IsName("ThoughtBubble_Off_CYCLE"))
         {
             thoughtBubbleAnimator.Play("ThoughtBubble_Off_to_Full");
+            return true;
         }
+
+        return false;
     }
     
     public void ThoughtBubbleHalf()

@@ -19,7 +19,7 @@ MonoBehaviour:
     loop: 0
   revealed: 1
   previewText: "\u201CWeekend plans?\u201D"
-  cost: 3
+  cost: 2
   buttonColor: {r: 1, g: 1, b: 1, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:

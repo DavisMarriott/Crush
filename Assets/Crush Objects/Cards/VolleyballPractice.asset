@@ -19,7 +19,7 @@ MonoBehaviour:
     loop: 0
   revealed: 1
   previewText: "\u201CVolleyball practice\u201D"
-  cost: 4
+  cost: 3
   buttonColor: {r: 0, g: 0, b: 0, a: 1}
   visualPrefab: {fileID: 0}
   lukeBranches:
@@ -155,26 +155,20 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 1
-        charmImpact: 0
+        charmImpact: -1
         line: I hope I was playing well. My serve has been off.
         variantGroups: []
         lastSticks: 0
       - character: 0
         confidenceImpact: 0
         charmImpact: 0
-        line: Oh, you can serve!
-        variantGroups: []
-        lastSticks: 0
-      - character: 0
-        confidenceImpact: 0
-        charmImpact: -1
-        line: "I mean you\u2019re a great server\u2026"
+        line: "Really? Well, I don\u2019t know much about volleyball\u2026"
         variantGroups: []
         lastSticks: 0
       - character: 0
         confidenceImpact: 0
         charmImpact: 0
-        line: At volleyball. I mean.
+        line: "\u2026but you looked good. Your SERVE looked good."
         variantGroups: []
         lastSticks: 0
       - character: 1
@@ -307,8 +301,8 @@ MonoBehaviour:
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 2
-        charmImpact: -1
+        confidenceImpact: 3
+        charmImpact: 1
         line: I would have gotten too nervous and messed up my serve.
         variantGroups: []
         lastSticks: 0

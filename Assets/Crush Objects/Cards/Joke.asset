@@ -1,0 +1,302 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04235be0f83cf46399a9a97a7a0c8a88, type: 3}
+  m_Name: Joke
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueCard
+  category: 4
+  unlockCondition:
+    type: 0
+    tag: 0
+    loop: 0
+  revealed: 0
+  previewText: "\u201CJoke\u201D"
+  cost: 2
+  buttonColor: {r: 0, g: 0, b: 0, a: 1}
+  visualPrefab: {fileID: 0}
+  lukeBranches:
+  - branchName: Death
+    dialogue:
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Knock knock.
+      variantGroups: []
+      lastSticks: 0
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Uh, who\u2019s there\u2013"
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts: []
+    daisyBranches: []
+    deathReactions:
+    - lines:
+      - "Knock knock. Who\u2019s there?"
+      - Luke. Luke who?
+      - LOOK who died AGAIN!
+    - lines:
+      - "Knock knock. Who\u2019s there?"
+      - Luke. Luke who?
+      - "LOOK at this loser who can\u2019t talk to girls!"
+    - lines:
+      - "Knock knock. Who\u2019s there?"
+      - Luke. Luke who?
+      - Exactly. Luke who.
+  - branchName: Normal
+    dialogue:
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: 
+      variantGroups:
+      - lines: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Let\u2019s try this one."
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Hey, uh\u2026 how did the hammerhead do on his test?"
+      variantGroups: []
+      lastSticks: 0
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I don\u2019t know."
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: He nailed it.
+      variantGroups: []
+      lastSticks: 0
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "\u2026"
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Because he\u2019s\u2026 his head is like a\u2013"
+      variantGroups: []
+      lastSticks: 0
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: No, I get it.
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: That joke sucked. I suck!
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I\u2019ll think of a better joke next time."
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: 
+      variantGroups:
+      - lines:
+        - 'Internal:'
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Why did the hammerhead cross the street?
+      variantGroups: []
+      lastSticks: 0
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Hmm\u2026 I don\u2019t know. Why?"
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I don\u2019t know either, but he looked both ways."
+      variantGroups: []
+      lastSticks: 0
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Heh. Did you get that out of a kids\u2019 joke book?"
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Okay, scratch this one off the list.
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "We\u2019ll try a different joke next time."
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: 
+      variantGroups:
+      - lines: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Why do hammerheads live in salt water?
+      variantGroups: []
+      lastSticks: 0
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "I don\u2019t know. Why?"
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Because pepper water makes them sneeze!
+      variantGroups: []
+      lastSticks: 0
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Hehe, that\u2019s so dumb."
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: A tiny giggle, but not the ideal response.
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Maybe I should think of a joke at my locker before I try this again.
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: 
+      variantGroups:
+      - lines: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Did you hear some hammerheads got caught playing poker?
+      variantGroups: []
+      lastSticks: 0
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: They did?
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: It turns out they were card sharks!
+      variantGroups: []
+      lastSticks: 0
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Wait, what?
+      variantGroups: []
+      lastSticks: 0
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "Oh! Hehe, I was so confused! I was like\u2026"
+      variantGroups: []
+      lastSticks: 0
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "\u201COh my god, did some players get in trouble for gambling?!?\u201D"
+      variantGroups: []
+      lastSticks: 0
+    - character: 0
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Haha, no. It was just a bad joke.
+      variantGroups: []
+      lastSticks: 0
+    - character: 1
+      confidenceImpact: 0
+      charmImpact: 0
+      line: "No, hehe. I\u2019m just dumb."
+      variantGroups: []
+      lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Gotta think of a joke at my locker before I try this again.
+      variantGroups: []
+      lastSticks: 0
+    tags: 
+    charmImpacts:
+    - state: 1
+      impact: 0
+    - state: 2
+      impact: 0
+    - state: 3
+      impact: 0
+    - state: 4
+      impact: 0
+    daisyBranches:
+    - charmState: 0
+      dialogue: []
+      tags: 
+    - charmState: 1
+      dialogue: []
+      tags: 
+    - charmState: 2
+      dialogue: []
+      tags: 
+    - charmState: 3
+      dialogue: []
+      tags: 
+    - charmState: 4
+      dialogue: []
+      tags: 
+    deathReactions: []
+  draftLines:
+  - line: Girls like funny guys.
+  - line: "Grandpa showed me Seinfeld\u2026"
+  - line: Jerry was always dating hot girls, and look at him!
+  availableUpgrades: []
+  upgradeCondition:
+    type: 0
+    playThreshold: 3
+    tag: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Cinemachine;
 
 public class DeathRespawn : MonoBehaviour
 {
@@ -25,11 +26,12 @@ public class DeathRespawn : MonoBehaviour
     [SerializeField] private Animator letterBoxAnimator;
     [SerializeField] private ReflectSelfTalk reflectSelfTalk;
     [SerializeField] private MilestoneTracker milestoneTracker;
+
+    [Tooltip("TestMode only - nudge Luke's landing spot left(-)/right(+) if the computed stop point looks off.")]
+    [SerializeField] private float testModeConvoXOffset = 0f;
     
     //variables hidden in inspector
     [HideInInspector] public bool isDead = false;
-    [HideInInspector] public bool testMode = false;
-    [HideInInspector] public DebugMenu debugMenu;
 
     // Update is called once per frame
     public void Update()
@@ -100,11 +102,11 @@ public class DeathRespawn : MonoBehaviour
         deathScreen.SetActive(false);
         
 
-        if (testMode)
+        if (TestMode.Active)
         {
-            // in test mode, skip draft and reopen debug menu
-            if (debugMenu != null)
-                debugMenu.OpenMenu();
+            // test mode: skip reflect/draft/hallway entirely - straight back into the convo.
+            // Milestones/upgrades deliberately skipped.
+            TestModeRestartToConversation();
             yield break;
         }
         
@@ -229,5 +231,87 @@ public class DeathRespawn : MonoBehaviour
     {
         PhaseManager.Instance.TransitionTo(GamePhase.Hallway);
     }
-    
+
+    // TestMode - hard restart into the conversation from wherever the game currently is.
+    // Called on T-activation (any phase) and after the death screen on test-mode deaths.
+    // Lives here because this component already holds every ref the reset needs.
+    public void TestModeRestartToConversation()
+    {
+        // kill whatever owns the game right now - reflect playback, draft waits, the loop-1
+        // opening, mid-convo dialogue, pending hallway-transition Invokes. Restart, not transition.
+        StopAllCoroutines();
+        CancelInvoke();
+        gameProgression.StopAllCoroutines();
+        gameProgression.CancelInvoke();
+        reflectSelfTalk.StopAllCoroutines();
+        hallwaySelfTalk.StopAllCoroutines();
+        dialogueBox.StopAllCoroutines();
+
+        // clear leftover UI from the interrupted phase
+        deathScreen.SetActive(false);
+        draftUI.CloseDraftUI();
+        dialogueBox.CloseDialogueBox();
+        isDead = false;
+
+        // same per-loop reset a normal respawn does (minus reflect/draft/milestones)
+        animationTriggerPlayer.EnterStart();
+        charmState.ResetCharm();
+        deckManager.ResetDeck();
+        confidenceState.peakConfidence = 0;
+        charmState.peakCharm = 0;
+        confidenceState.confidence = confidenceState.startingConfidence;
+        confidenceState.introMade = false;
+        confidenceState.daisyIntroMade = false;
+        thoughtSpawner.SpawnButtons();
+
+        // force the heart meter to match - covers T pressed before loop 1's SpawnHeartMeter
+        // ever ran, and kills the slow-ramp AddHearts the confidence setter just queued
+        gameProgression.confidenceHeartMeter.SyncHearts(confidenceState.confidence);
+
+        // re-arm the convo entry: disable the trigger, put the player inside it, then
+        // SetLoopConditions re-enables it -> physics refires the real entry (camera zone,
+        // InConversation, Daisy's intro). Local-space math instead of bounds because the
+        // collider may already be disabled here (death path) and disabled bounds lie.
+        //
+        // Landing spot = where a walking player ACTUALLY stops: the game locks movement the
+        // frame his leading edge crosses the trigger's left boundary, so his center sits a
+        // player-half-width LEFT of that edge (trigger center and edge+0.25 both parked him
+        // too deep - 7/1 playtests). Tiny overlap kept so the re-enabled trigger still fires.
+        float leftEdge;
+        if (inConversationTrigger is BoxCollider2D box)
+            leftEdge = box.transform.TransformPoint(new Vector3(box.offset.x - box.size.x * 0.5f, box.offset.y, 0f)).x;
+        else
+            leftEdge = inConversationTrigger.transform.TransformPoint(inConversationTrigger.offset).x;
+        var playerCol = playerTransform.GetComponent<Collider2D>();
+        if (playerCol == null) playerCol = playerTransform.GetComponentInChildren<Collider2D>();
+        float playerHalf = playerCol != null ? playerCol.bounds.extents.x : 0f;
+        float convoX = leftEdge - playerHalf + 0.15f + testModeConvoXOffset;
+        inConversationTrigger.enabled = false;
+        playerTransform.position = new Vector3(convoX, playerTransform.position.y, playerTransform.position.z);
+        gameProgression.SetLoopConditions();
+        PhaseManager.Instance.TransitionTo(GamePhase.Hallway);
+
+        // that transition just made ReflectDraftCameraController cut to HallCam - and the convo
+        // camera zone won't refire if we were already standing in it. Force ConvoCam back.
+        var convoCam = FindConvoCam();
+        if (convoCam != null)
+            CameraManager.SwitchCamera(convoCam);
+        else
+            Debug.LogWarning("[TestMode] Couldn't find a camera named 'ConvoCam' - camera may be stuck on HallCam");
+
+        var rb = playerTransform.GetComponent<Rigidbody2D>();
+        if (rb != null) rb.WakeUp();   // sleeping body won't re-register the trigger overlap
+    }
+
+    // name-based lookup (no serialized ref to keep TestMode wiring-free) - if the convo
+    // camera ever gets renamed, update this string
+    private CinemachineCamera _convoCam;
+    private CinemachineCamera FindConvoCam()
+    {
+        if (_convoCam != null) return _convoCam;
+        foreach (var cam in FindObjectsByType<CinemachineCamera>(FindObjectsSortMode.None))
+            if (cam.name == "ConvoCam") { _convoCam = cam; break; }
+        return _convoCam;
+    }
+
 }

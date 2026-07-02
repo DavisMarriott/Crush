@@ -268,16 +268,43 @@ MonoBehaviour:
         charmImpact: 0
         line: 
         variantGroups:
-        - lines:
-          - Hell yeah!
-        - lines:
-          - "Wait\u2026 is it cute that I draw Naruto, or is Naruto cute?"
-        - lines:
-          - "He\u2019s good at fighting and he\u2019s ALWAYS there for his friends\u2026"
-        - lines:
-          - But is he CUTE??
-        - lines:
-          - Get your head in the game, Luke!
+        - lines: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Hell yeah!
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Wait\u2026 is it cute that I draw Naruto, or is Naruto cute?"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "He\u2019s good at fighting and he\u2019s ALWAYS there for his friends\u2026"
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: But is he CUTE??
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Get your head in the game, Luke!
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: 
+        variantGroups:
         - lines:
           - "Don\u2019t get hung up on Naruto again. She thinks it\u2019s cute that
             you draw!"

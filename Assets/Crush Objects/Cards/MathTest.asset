@@ -59,13 +59,7 @@ MonoBehaviour:
       impact: -1
     daisyBranches:
     - charmState: 0
-      dialogue:
-      - character: 1
-        confidenceImpact: 0
-        charmImpact: 0
-        line: walks away
-        variantGroups: []
-        lastSticks: 0
+      dialogue: []
       tags: 
     - charmState: 1
       dialogue:
@@ -79,13 +73,13 @@ MonoBehaviour:
     - charmState: 2
       dialogue:
       - character: 1
-        confidenceImpact: 0
+        confidenceImpact: 1
         charmImpact: 0
         line: Yeah.. it can be pretty hard.
         variantGroups: []
         lastSticks: 0
       - character: 1
-        confidenceImpact: 1
+        confidenceImpact: 0
         charmImpact: 0
         line: I think I did okay though.
         variantGroups: []
@@ -117,7 +111,7 @@ MonoBehaviour:
       tags: 
     deathReactions: []
   draftLines:
-  - line: She probably got an A on Ms. Parsons test.
+  - line: "She probably got an A on Ms. Parsons\u2019 test."
   - line: She's, like, a genius.
   availableUpgrades: []
   upgradeCondition:

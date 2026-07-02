@@ -45,35 +45,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1482845423214645118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a88ebe1d69a54164af2a61c787a11cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DebugMenu
-  testMode: 0
-  conversationCamera: {fileID: 0}
-  hallwayCamera: {fileID: 0}
-  dialogueUI: {fileID: 0}
-  testSpawnPoint: {fileID: 9214780869026318599}
-  normalSpawnPoint: {fileID: 8706701293874008316}
-  playerTransform: {fileID: 0}
-  deathRespawn: {fileID: 0}
-  confidenceState: {fileID: 0}
-  charmState: {fileID: 0}
-  deckManager: {fileID: 8103496132465409120}
-  thoughtSpawner: {fileID: 0}
-  dialogueBox: {fileID: 0}
-  thoughtBubble: {fileID: 0}
-  debugMenuPanel: {fileID: 0}
-  startingConfidenceInput: {fileID: 0}
-  startingCharmInput: {fileID: 0}
-  handSizeInput: {fileID: 0}
-  deckListContainer: {fileID: 0}
-  availableCardsContainer: {fileID: 0}
-  cardButtonPrefab: {fileID: 9170688242427651408, guid: 1e132207801144c08a418efe78abca47, type: 3}
-  cardEditorPanel: {fileID: 0}
-  cardEditorTitle: {fileID: 0}
-  costInput: {fileID: 0}
-  saveCardButton: {fileID: 0}
-  startButton: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 42f6a89508824db0aeda5cc1842924dc, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::TestMode
 --- !u!1 &1775347153733585314
 GameObject:
   m_ObjectHideFlags: 0

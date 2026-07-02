@@ -18,6 +18,6 @@ MonoBehaviour:
     threshold: 1
     tag: 13
   reflectLines:
-  - I don't think Daisy has a date for the dance yet.
-  - At least I think that's what she was implying.
-  characterUpgrade: {fileID: 11400000, guid: 2babad58a1e5643b9a3a713940aaad6e, type: 2}
+  - It's not like I thought Haley had a date already...
+  - But still, hearing her say she isn't going with anyone is such a relief.
+  characterUpgrade: {fileID: 11400000, guid: e133446fbe28a4c07b37145815ed06f5, type: 2}

@@ -249,7 +249,7 @@ MonoBehaviour:
     - character: 0
       confidenceImpact: 0
       charmImpact: 0
-      line: "I, like, USUALLY am not this\u2026 awkward."
+      line: UNIFORMS. I like uniforms. It would be cool if we had them.
       variantGroups: []
       lastSticks: 0
     tags: 
@@ -276,20 +276,26 @@ MonoBehaviour:
       dialogue:
       - character: 1
         confidenceImpact: 0
-        charmImpact: 1
-        line: You kind of are, Luke.
+        charmImpact: 0
+        line: Like, school uniforms?
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Sounds a little bland and boring to me.
         variantGroups: []
         lastSticks: 0
       - character: 2
         confidenceImpact: -1
         charmImpact: 0
-        line: "She thinks you\u2019re a total lame-o!"
+        line: You must sound SO lame to her!
         variantGroups: []
         lastSticks: 0
-      - character: 1
+      - character: 0
         confidenceImpact: 0
-        charmImpact: -1
-        line: "It\u2019s okay, though. Sorry."
+        charmImpact: 0
+        line: Yeah. Good point.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -298,19 +304,25 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: -1
-        line: "Oh. Um\u2026 it\u2019s okay."
+        line: School uniforms?
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: -1
         charmImpact: 0
-        line: We all have off days.
+        line: I like that we get to express ourselves with our clothes a bit.
         variantGroups: []
         lastSticks: 0
       - character: 2
         confidenceImpact: 0
         charmImpact: 0
-        line: "You don\u2019t know the HALF of it, Daisy!"
+        line: "I DON\u2019T like school uniforms! I\u2019m just a coward!"
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Yeah. Good point.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -319,25 +331,25 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: -1
-        line: Oh. Okay.
+        line: School uniforms?
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 0
         charmImpact: 0
-        line: "You\u2019re not being THAT awkward, Luke."
+        line: Uh, that could be okay.
         variantGroups: []
         lastSticks: 0
       - character: 2
         confidenceImpact: -1
         charmImpact: 0
-        line: "Yes I am. You\u2019re just too nice, Daisy."
+        line: No it wouldn't. It would suck!
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 2
         charmImpact: 1
-        line: I like a little awkward, anyway.
+        line: But I think we can express ourselves more by choosing our own clothes.
         variantGroups: []
         lastSticks: 0
       tags: 
@@ -346,20 +358,31 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 0
         charmImpact: -1
-        line: Oh. Okay.
+        line: You mean school uniforms?
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 1
         charmImpact: -1
-        line: I, like, Usually am not this awkward either.
+        line: "I\u2019d rather wear my own clothes."
+        variantGroups: []
+        lastSticks: 0
+      - character: 0
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Yeah, me too, I guess. Just a random thought.
         variantGroups: []
         lastSticks: 0
       - character: 1
         confidenceImpact: 3
         charmImpact: 1
-        line: "But a little awkwardness is\u2026 you know\u2026 a little charming,
-          too."
+        line: But I can picture you in a shirt and tie. Maybe a sport coat, hehe.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: Like the kind of thing you might wear to A DANCE!?!
         variantGroups: []
         lastSticks: 0
       tags: 

@@ -15,4 +15,5 @@ MonoBehaviour:
   upgradeName: Hallway Upgrade 2
   effect: 2
   intValue: 3
-  bannerText: '[TEMP] +2 Hallway Approach Confidence'
+  bannerText: +2 Hallway Approach Confidence
+  iconPrefab: {fileID: 8220373668078900622, guid: 525fdc3e8f544444d9c6d89683fbdd3c, type: 3}

@@ -32,7 +32,7 @@ MonoBehaviour:
   - branchName: Awkward
     dialogue:
     - character: 2
-      confidenceImpact: 2
+      confidenceImpact: 1
       charmImpact: 0
       line: "\u201CThe hardest thing you did today was walk through those doors.\u201D"
       variantGroups: []
@@ -72,6 +72,12 @@ MonoBehaviour:
       line: "\u201CLeave it all out on the field.\u201D"
       variantGroups: []
       lastSticks: 0
+    - character: 2
+      confidenceImpact: 0
+      charmImpact: 0
+      line: Today, this hallway is the field.
+      variantGroups: []
+      lastSticks: 0
     tags: 
     charmImpacts:
     - state: 1
@@ -102,7 +108,7 @@ MonoBehaviour:
   - branchName: High
     dialogue:
     - character: 2
-      confidenceImpact: 1
+      confidenceImpact: 3
       charmImpact: 0
       line: "\u201CYou don\u2019t need to gimme a LOT, but you gotta give it your
         ALL.\u201D"

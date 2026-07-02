@@ -107,7 +107,26 @@ MonoBehaviour:
       - character: 1
         confidenceImpact: 2
         charmImpact: 0
-        line: You're the best! That would be awesome! You are such a life saver.
+        line: You're the best! That would be awesome!
+        variantGroups: []
+        lastSticks: 0
+      - character: 1
+        confidenceImpact: 0
+        charmImpact: 0
+        line: You are such a life saver.
+        variantGroups: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: 
+        variantGroups:
+        - lines: []
+        lastSticks: 0
+      - character: 2
+        confidenceImpact: 0
+        charmImpact: 0
+        line: "Wait, that means she\u2019s going to see my handwriting!"
         variantGroups: []
         lastSticks: 0
       tags: 

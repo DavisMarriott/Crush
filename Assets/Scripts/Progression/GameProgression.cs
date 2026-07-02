@@ -223,7 +223,7 @@ public class GameProgression : MonoBehaviour
     public void HallwayTriggerHit(int triggerIndex)
     {
         // Bring the thought bubble to Full so the trigger line is visible
-        animationTriggerThoughtBubble.ThoughtBubbleOn();
+        bool opened = animationTriggerThoughtBubble.TryThoughtBubbleOn();
 
         // Per-loop priority: if this loop has a scripted LoopHallway, fire its line for this
         // trigger zone. Otherwise it's a "base loop" — pull a random line from the generic pool.
@@ -250,7 +250,7 @@ public class GameProgression : MonoBehaviour
 
         if (line != null)
         {
-            dialogueTiming.Run(line, selfTalkText);
+            dialogueTiming.Run(line, selfTalkText, opened);
 
             // Only drain if this trigger hasn't been disabled by the upgrade.
             // approachDrainDisabledCount of 2 means triggers 1 and 2 skip drain.
