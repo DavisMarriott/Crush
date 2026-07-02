@@ -75,10 +75,8 @@ MonoBehaviour:
   hallwaySelfTalk: {fileID: 0}
   leftArrow: {fileID: 6056971300233798366}
   rightArrow: {fileID: 5691706059927431106}
-  boyTextColor: {r: 0.8349056, g: 1, b: 0.9760347, a: 1}
-  girlTextColor: {r: 1, g: 0.8443396, b: 0.89690024, a: 1}
-  boyInternalTextColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  lukeIntroLine: Uhh - hey Daisy
+  textSound: {fileID: 0}
+  lukeIntroLine: Uhh... hey Daisy.
   daisyIntroLine: Oh, hey Luke!
   deathFinalLineHold: 2
   daisyIntroDelay: 0.25

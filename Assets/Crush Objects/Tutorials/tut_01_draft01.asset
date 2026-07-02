@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: tut_01_draft01
   m_EditorClassIdentifier: Assembly-CSharp::TutorialStep
   id: draft01
-  text: "DRAFTING:\n\"Crushing\" is a coming-of-age conversational deck builder.
-    \nCards are your dialogue options. \nClick on your first card to draft it into
-    your deck."
+  text: "\"Crushing\" is a coming-of-age conversational deck builder. \nCards are
+    your dialogue options. \nClick on your first card to draft it into your deck."
   boxSize: {x: 600, y: 300}
   boxAnchoredPosition: {x: 0, y: 0}
   dismissMode: 0

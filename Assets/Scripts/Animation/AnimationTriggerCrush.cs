@@ -30,14 +30,14 @@ public class AnimationTriggerCrush : MonoBehaviour
             animator.Play("Crush_Start_to_Neutral", 0);
         }
 
-        else if (stateInfo.IsName("Crush_Negative01_CYCLE"))
-        {
-            animator.Play("Crush_Negative01_to_Neutral", 0);
-        }
-        
         else if (stateInfo.IsName("Crush_Negative02_CYCLE"))
         {
             animator.Play("Crush_Negative02_to_Neutral", 0);
+        }
+        
+        else if (stateInfo.IsName("Crush_Negative01_CYCLE"))
+        {
+            animator.Play("Crush_Negative01_to_Neutral", 0);
         }
 
         else if (stateInfo.IsName("Crush_Positive01_CYCLE"))
@@ -60,14 +60,14 @@ public class AnimationTriggerCrush : MonoBehaviour
     {
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         
-        if (stateInfo.IsName("Crush_Neutral_CYCLE"))
-        {
-            animator.Play("Crush_Neutral_to_Negative01", 0);
-        }
-        
-        else if (stateInfo.IsName("Crush_Negative02_CYCLE")) 
+        if (stateInfo.IsName("Crush_Negative02_CYCLE")) 
         {
             animator.Play("Crush_Negative02_to_Negative01", 0);
+        }
+        
+        else if (stateInfo.IsName("Crush_Neutral_CYCLE"))
+        {
+            animator.Play("Crush_Neutral_to_Negative01", 0);
         }
         
         else if (stateInfo.IsName("Crush_Positive01_CYCLE")) 
@@ -91,7 +91,7 @@ public class AnimationTriggerCrush : MonoBehaviour
             animator.Play("Crush_Negative01_to_Negative02", 0);
         }
         
-        if (stateInfo.IsName("Crush_Neutral_CYCLE"))
+        else if (stateInfo.IsName("Crush_Neutral_CYCLE"))
         {
             animator.Play("Crush_Neutral_to_Negative02", 0);
         }
@@ -106,7 +106,12 @@ public class AnimationTriggerCrush : MonoBehaviour
     {
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         
-        if (stateInfo.IsName("Crush_Neutral_CYCLE"))
+        if (stateInfo.IsName("Crush_Negative01_CYCLE")) 
+        {
+            animator.Play("Crush_Negative01_to_Positive01", 0);
+        }
+        
+        else if (stateInfo.IsName("Crush_Neutral_CYCLE"))
         {
             animator.Play("Crush_Neutral_to_Positive01", 0);
         }
@@ -114,11 +119,6 @@ public class AnimationTriggerCrush : MonoBehaviour
         else if (stateInfo.IsName("Crush_Positive02_CYCLE")) 
         {
             animator.Play("Crush_Positive02_to_Positive01", 0);
-        }
-        
-        if (stateInfo.IsName("Crush_Negative01_CYCLE")) 
-        {
-            animator.Play("Crush_Negative01_to_Positive01", 0);
         }
         
         else
@@ -131,14 +131,14 @@ public class AnimationTriggerCrush : MonoBehaviour
     {
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         
-        if (stateInfo.IsName("Crush_Positive01_CYCLE")) 
-        {
-            animator.Play("Crush_Positive01_to_Positive02", 0);
-        }
-        
         if (stateInfo.IsName("Crush_Neutral_CYCLE"))
         {
             animator.Play("Crush_Neutral_to_Positive02", 0);
+        }
+        
+        else if (stateInfo.IsName("Crush_Positive01_CYCLE")) 
+        {
+            animator.Play("Crush_Positive01_to_Positive02", 0);
         }
         
         else
@@ -165,6 +165,7 @@ public class AnimationTriggerCrush : MonoBehaviour
              
         else if (charmState.charm <= 3)
             PositiveOne();
+        
         else
             PositiveTwo();
     }

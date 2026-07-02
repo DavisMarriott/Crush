@@ -313,9 +313,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Thanks for playing!
-
-    - Davis Marriott & Patrick Ian Moss'
+  m_text: "Luke and Daisy went to the Homecoming Dance together.\nAfter a lot of
+    convincing, Daisy eventually got Luke to dance. \nA little.\nHe was terrible.\nDaisy
+    didn't mind at all.\n\nBrett Kissinger probably isn't going to die alone.\nHe's
+    actually a really good kid.\n\n\nThanks for playing!\n- Davis Marriott & Patrick
+    Ian Moss"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce46503b67fc04d4ead5f4dcf89ea1a2, type: 2}
   m_sharedMaterial: {fileID: -6875868866237193346, guid: ce46503b67fc04d4ead5f4dcf89ea1a2, type: 2}
@@ -348,7 +350,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 32
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1692,7 +1694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7364797480527597571, guid: aa2144a227e934a6b8c27385b3bde093, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7364797480527597571, guid: aa2144a227e934a6b8c27385b3bde093, type: 3}
       propertyPath: m_AnchorMin.x
@@ -1700,15 +1702,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7364797480527597571, guid: aa2144a227e934a6b8c27385b3bde093, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7364797480527597571, guid: aa2144a227e934a6b8c27385b3bde093, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7364797480527597571, guid: aa2144a227e934a6b8c27385b3bde093, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7364797480527597571, guid: aa2144a227e934a6b8c27385b3bde093, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1740,11 +1742,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7364797480527597571, guid: aa2144a227e934a6b8c27385b3bde093, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 7364797480527597571, guid: aa2144a227e934a6b8c27385b3bde093, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 7364797480527597571, guid: aa2144a227e934a6b8c27385b3bde093, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

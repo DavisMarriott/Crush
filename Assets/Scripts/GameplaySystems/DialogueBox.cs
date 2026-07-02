@@ -291,12 +291,12 @@ public class DialogueBox : MonoBehaviour
             animationTriggerCrush.ParticlesCharmUp();
         }
         
-        if (charmState.charm >= 10)
+        if (charmState.charm >= 4)
         {
             animationTriggerCrush.ParticlesCharmedStateTurnOn();
         }
         
-        if (charmState.charm < 10)
+        if (charmState.charm < 4)
         {
             animationTriggerCrush.ParticlesCharmedStateTurnOff();
         }
